@@ -1,26 +1,83 @@
-\documentclass[a4paper,12pt,openany]{book}
+\documentclass[12pt,a4paper]{article}
+
+% Tiếng Việt
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+
+% Căn lề
+\usepackage[
+left=3cm,
+right=2cm,
+top=2.5cm,
+bottom=2.5cm
+]{geometry}
+
+% Hình ảnh
 \usepackage{graphicx}
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+
+% Link
+\usepackage{hyperref}
+
+% Khoảng cách dòng
+\usepackage{setspace}
+\onehalfspacing
 
 \begin{document}
-
-\author{SRS - Group 6}
-\title{Scientific Journal Publication Trend Tracking System}
-\date{Jun 2026}
-
-\frontmatter
-\maketitle
-\tableofcontents
-\mainmatter
-\include{./TeX_files/chapter01}
-\include{./TeX_files/chapter02}
-\include{./TeX_files/chapter03}
-\include{./TeX_files/chapter04}
-\include{./TeX_files/chapter05}
-\include{./TeX_files/chapter06}
-
-\backmatter
-% bibliography, glossary and index would go here.
-
+	
+	\begin{center}
+		{\LARGE\textbf{SCIENTIFIC JOURNAL PUBLICATION TREND TRACKING SYSTEM}}
+		
+		\vspace{0.5cm}
+		
+		{\large Group 6}
+	\end{center}
+	
+	\vspace{1cm}
+	
+	\section{Overview}
+	
+	\subsection{Project Information}
+	
+	\begin{itemize}
+		\item Project Name: Scientific Journal Publication Trend Tracking System
+		\item Group Name: Group 6
+		\item Software Type: Web Application
+		\item GitHub Repository:
+		
+		\url{https://github.com/NguyenNgocBaoTram10/Scientific-Journal-Publication-Trend-Tracking-System}
+	\end{itemize}
+	
+	\section{Project Background}
+	
+	Describe the motivation and background of the project.
+	
+	\section{Scope}
+	
+	Describe the scope of the project.
+	
+	\section{Objectives}
+	
+	Describe the objectives of the project.
+	
+	\section{System Requirements}
+	
+	List the functional and non-functional requirements.
+	
+	\section{System Design}
+	
+	Describe the architecture, database design, and diagrams.
+	
+	\section{Implementation}
+	
+	Describe technologies, APIs, and key features implemented.
+	
+	\section{Testing}
+	
+	Describe test cases and testing results.
+	
+	\section{Conclusion}
+	
+	Summarize the project outcomes and future improvements.
+	
 \end{document}
