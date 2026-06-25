@@ -5,6 +5,23 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+
+\definecolor{HeaderGray}{RGB}{220,220,220}
+\definecolor{Simple}{RGB}{198,239,206}
+\definecolor{Medium}{RGB}{255,242,204}
+\definecolor{Complex}{RGB}{244,204,204}
+
+\renewcommand{\arraystretch}{1.3}
+
+
 % Căn lề
 \usepackage[
 left=3cm,
@@ -22,6 +39,11 @@ bottom=2.5cm
 % Khoảng cách dòng
 \usepackage{setspace}
 \onehalfspacing
+\newcommand{\chapter}[1]{
+	\clearpage
+	\section*{#1}
+	\addcontentsline{toc}{section}{#1}
+}
 
 \begin{document}
 	
@@ -31,12 +53,15 @@ bottom=2.5cm
 		\vspace{0.5cm}
 		
 		{\large Group 6}
+		
 	\end{center}
 	
 	\vspace{1cm}
 	
+	\vspace{1cm}
+	\chapter{\centering\Large\bfseries I. INTRODUCTION}
+	\addcontentsline{toc}{chapter}{I. INTRODUCTION}
 	\section{Overview}
-	
 	\subsection{Project Information}
 	
 	\begin{itemize}
@@ -47,6 +72,7 @@ bottom=2.5cm
 		
 		\url{https://github.com/NguyenNgocBaoTram10/Scientific-Journal-Publication-Trend-Tracking-System}
 	\end{itemize}
+	
 	
 	\section{Project Background}
 	
@@ -80,4 +106,296 @@ bottom=2.5cm
 	
 	Summarize the project outcomes and future improvements.
 	
+	
+	\subsection{Project team}
+	
+	\begin{table}[h]
+		\centering
+		\small
+		
+		\begin{tabularx}{\textwidth}{
+				|>{\raggedright\arraybackslash}p{4cm}
+				|>{\centering\arraybackslash}p{2cm}
+				|>{\centering\arraybackslash}p{3cm}
+				|>{\raggedright\arraybackslash}X|}
+			\hline
+			
+			\rowcolor{gray!25}
+			\textbf{Full Name} &
+			\textbf{Role} &
+			\textbf{Student ID} &
+			\textbf{Email} \\
+			\hline
+			
+			Lê Thanh Tú &
+			Leader &
+			049206004778 &
+			tult4778@ut.edu.vn \\
+			\hline
+			
+			Nguyễn Ngọc Bảo Trâm &
+			Member &
+			082306008015 &
+			tramnnb8015@ut.edu.vn \\
+			\hline
+			
+			Lê Thị Huyền Trân &
+			Member &
+			077306003635 &
+			tranlth3635@ut.edu.vn \\
+			\hline
+			
+			Trần Trung Hiếu &
+			Member &
+			089206008473 &
+			hieutt8473@ut.edu.vn \\
+			\hline
+			
+			Trần Văn Học &
+			Member &
+			&
+			hoctv5618@ut.edu.vn \\
+			\hline
+			
+			Nguyễn Đoàn Nhật Quang &
+			Member &
+			079206010585 &
+			quangndn0585@ut.edu.vn \\
+			\hline
+			
+		\end{tabularx}
+		
+		\caption{Project Team Information}
+	\end{table}
+	
+	\clearpage
+	
+	\setcounter{section}{1}
+	
+	\section{Functional Requirements}
+	
+	\subsection{User Authentication and Authorization}
+	\begin{itemize}
+		\item Users can register a new account.
+		\item Users can log in using a valid username and password.
+		\item The system assigns permissions based on user roles.
+		\item Administrators can manage user accounts and roles.
+	\end{itemize}
+	
+	\subsection{Research Paper Search}
+	\begin{itemize}
+		\item Users can search research papers by keyword, author name, or journal name.
+		\item The system displays matching publication results.
+		\item Users can view detailed publication information.
+	\end{itemize}
+	
+	\subsection{Bookmark Management}
+	\begin{itemize}
+		\item Users can save research papers to personal bookmarks.
+		\item The system prevents duplicate bookmarks.
+		\item Users can access bookmarked papers later.
+	\end{itemize}
+	\subsection{Publication Trend Analysis}
+	\begin{itemize}
+		\item Users can analyze publication trends based on keywords, topics, authors, or journals.
+		\item The system generates trend statistics from publication metadata.
+		\item The system visualizes trends using charts and dashboards.
+	\end{itemize}
+	\subsection{Dashboard Visualization}
+	\begin{itemize}
+		\item Users can view publication statistics through dashboards.
+		\item The dashboard displays publication counts, topic distributions, journal distributions, and growth trends.
+	\end{itemize}
+	\subsection{Trending Topics}
+	\begin{itemize}
+		\item Users can view trending research topics.
+		\item The system ranks topics according to publication frequency and growth rate.
+	\end{itemize}
+	\subsection{Topic Following}
+	\begin{itemize}
+		\item Users can follow research topics of interest.
+		\item The system stores followed topics for each user.
+		\item Users may follow multiple topics.
+	\end{itemize}
+	\subsection{Notification Management}
+	\begin{itemize}
+		\item Users receive notifications related to followed topics.
+		\item Notifications include new publications, trend changes, and emerging topics.
+		\item Users can view notification details.
+	\end{itemize}
+	\subsection{Report Generation}
+	\begin{itemize}
+		\item Users can generate analytical reports based on publication trends.
+		\item Reports summarize publication statistics and research trends.
+		\item Reports are generated from publication metadata.
+	\end{itemize}
+	\subsection{System Administration}
+	\begin{itemize}
+		\item Administrators can manage system operations.
+		\item Administrators can manage user accounts.
+		\item Administrators can configure academic API sources.
+		\item Administrators can synchronize publication metadata from external APIs.
+	\end{itemize}
+	\subsection{Academic Data Synchronization}
+	\begin{itemize}
+		\item The system synchronizes publication metadata from external academic APIs.
+		\item The system validates retrieved metadata.
+		\item The system inserts new records and updates existing records.
+		\item The system records synchronization logs and statistics.
+	\end{itemize}
+	
+	
+	
+	\section{Non-Functional Requirements}
+	
+	\subsection{Usability}
+	The interface is intuitive and accessible for all user types.
+	
+	\subsection{Performance}
+	Search results must be returned within 2 seconds.\\
+	The system must support at least 500 concurrent users.
+	
+	\subsection{Reliability}
+	System uptime must be at least 99\% during business hours.\\
+	Data must be backed up daily.
+	
+	\subsection{Security}
+	User passwords must be hashed before storage.\\
+	Role-based access control must be enforced for all features.
+	
+	\subsection{Maintainability \& Scalability}
+	The system must use a modular architecture for easy maintenance.\\
+	New data sources can be added without redesigning the existing system.
+	
+	\section{Limitations of the Project}
+	
+	\subsection{Limited Use of Full-Text Data}
+	\begin{itemize}
+		\item The system only uses publication metadata such as title, abstract, keywords, authors, and publication year.
+		\item It does not process full-text content, which limits the depth of analysis and understanding of research papers.
+	\end{itemize}
+	
+	\subsection{Restricted Data Scope}
+	\begin{itemize}
+		\item The system focuses only on selected research fields (e.g., Computer Science and Artificial Intelligence).
+		\item Therefore, it does not fully represent trends across all scientific disciplines.
+	\end{itemize}
+	
+	\subsection{Dependence on External APIs}
+	\begin{itemize}
+		\item The system relies on external APIs such as Semantic Scholar, OpenAlex, and Crossref.
+		\item Any API downtime, structural changes, or request limitations may affect system stability and data collection performance.
+	\end{itemize}
+	
+	\subsection{Simplified Trend Analysis and Update Frequency}
+	\begin{itemize}
+		\item Trend analysis is mainly based on publication frequency and growth rate.
+		\item It does not apply advanced Machine Learning or AI models for prediction.
+		\item Data is synchronized periodically (daily or weekly), so real-time trends may not be immediately reflected.
+	\end{itemize}
+	
+	\chapter{\centering\Large\bfseries II. PROJECT MANAGEMENT PLAN}
+	\addcontentsline{toc}{chapter}{II. PROJECT MANAGEMENT PLAN}
+	\addcontentsline{toc}{chapter}{ II. PROJECT MANAGEMENT PLAN}
+	\setcounter{section}{0}
+	\setcounter{subsection}{0}
+	
+	\section{Overview}
+	\subsection{Scope and estimation}
+	
+	\begin{longtable}{|c|p{9cm}|c|c|}
+		\hline
+		\rowcolor{HeaderGray}
+		\textbf{\#} & \textbf{WBS Item} & \textbf{Complexity} & \textbf{Duration (Days)}\\
+		\hline
+		\endfirsthead
+		
+		\hline
+		\rowcolor{HeaderGray}
+		\textbf{\#} & \textbf{WBS Item} & \textbf{Complexity} & \textbf{Duration (Days)}\\
+		\hline
+		\endhead
+		
+		\multicolumn{4}{|l|}{\textbf{1. Project Initiation}}\\
+		\hline
+		1.1 & Define project scope & \cellcolor{Medium} Medium & 1\\
+		\hline
+		1.2 & Collect and analyze requirements & \cellcolor{Complex} Complex & 2\\
+		\hline
+		
+		\multicolumn{4}{|l|}{\textbf{2. Project Management and Environment Setup}}\\
+		\hline
+		2.1 & Set up development environment (GitHub, Database, Backend, Frontend) & \cellcolor{Simple} Simple & 1\\
+		\hline
+		2.2 & Design database (ERD, Database Schema) & \cellcolor{Complex} Complex & 2\\
+		\hline
+		2.3 & Configure security (JWT, RBAC, Password Hashing) & \cellcolor{Complex} Complex & 2\\
+		\hline
+		
+		\multicolumn{4}{|l|}{\textbf{3. System Design}}\\
+		\hline
+		3.1 & Design Use Case Diagram and Activity Diagram & \cellcolor{Medium} Medium & 1\\
+		\hline
+		3.2 & Design Sequence Diagram & \cellcolor{Medium} Medium & 1\\
+		\hline
+		3.3 & Design DFD and ERD & \cellcolor{Medium} Medium & 1\\
+		\hline
+		
+		\multicolumn{4}{|l|}{\textbf{4. System Development}}\\
+		\hline
+		4.1 & User Registration and Login & \cellcolor{Medium} Medium & 2\\
+		\hline
+		4.2 & Search Scientific Publications & \cellcolor{Complex} Complex & 2\\
+		\hline
+		4.3 & View Publication Details & \cellcolor{Medium} Medium & 1\\
+		\hline
+		4.4 & Bookmark Management & \cellcolor{Medium} Medium & 1\\
+		\hline
+		4.5 & Research Topic Following & \cellcolor{Medium} Medium & 1\\
+		\hline
+		4.6 & Notification Management & \cellcolor{Medium} Medium & 1\\
+		\hline
+		4.7 & Publication Trend Analysis & \cellcolor{Complex} Complex & 3\\
+		\hline
+		4.8 & Develop Statistical Dashboard & \cellcolor{Complex} Complex & 2\\
+		\hline
+		4.9 & Display Trending Topics & \cellcolor{Medium} Medium & 1\\
+		\hline
+		4.10 & Generate Statistical Reports (PDF/CSV) & \cellcolor{Complex} Complex & 2\\
+		\hline
+		
+		\multicolumn{4}{|l|}{\textbf{5. Administration Functions}}\\
+		\hline
+		5.1 & User Management & \cellcolor{Complex} Complex & 2\\
+		\hline
+		5.2 & Configure Academic API Sources & \cellcolor{Complex} Complex & 2\\
+		\hline
+		5.3 & Synchronize Data from Semantic Scholar, OpenAlex, and Crossref & \cellcolor{Complex} Complex & 3\\
+		\hline
+		
+		\multicolumn{4}{|l|}{\textbf{6. Testing}}\\
+		\hline
+		6.1 & Prepare Test Plan & \cellcolor{Medium} Medium & 1\\
+		\hline
+		6.2 & Design Test Cases & \cellcolor{Medium} Medium & 2\\
+		\hline
+		6.3 & Execute Testing & \cellcolor{Complex} Complex & 2\\
+		\hline
+		6.4 & Fix Defects After Testing & \cellcolor{Complex} Complex & 2\\
+		\hline
+		
+		\multicolumn{4}{|l|}{\textbf{7. Project Finalization}}\\
+		\hline
+		7.1 & Complete Project Documentation & \cellcolor{Medium} Medium & 2\\
+		\hline
+		7.2 & Deploy the System & \cellcolor{Medium} Medium & 1\\
+		\hline
+		7.3 & Prepare Presentation Slides & \cellcolor{Simple} Simple & 1\\
+		\hline
+		
+		\rowcolor{HeaderGray}
+		\multicolumn{3}{|r|}{\textbf{Total Duration}} & \textbf{46 Working Days}\\
+		\hline
+		
+	\end{longtable}
 \end{document}
