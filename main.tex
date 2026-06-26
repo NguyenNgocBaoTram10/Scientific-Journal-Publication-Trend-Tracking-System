@@ -13,6 +13,13 @@
 \usepackage{array}
 \usepackage[table]{xcolor}
 \usepackage{colortbl}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{float}
+\definecolor{headerblue}{HTML}{1F4E79}
+\definecolor{rowblue}{HTML}{EBF3FB}
+\definecolor{rowwhite}{HTML}{FFFFFF}
 
 \definecolor{HeaderGray}{RGB}{220,220,220}
 \definecolor{Simple}{RGB}{198,239,206}
@@ -53,14 +60,14 @@ bottom=2.5cm
 		\vspace{0.5cm}
 		
 		{\large Group 6}
-		
+
 	\end{center}
 	
 	\vspace{1cm}
-	
+
 	\vspace{1cm}
-	\chapter{\centering\Large\bfseries I. INTRODUCTION}
-	\addcontentsline{toc}{chapter}{I. INTRODUCTION}
+\chapter{\centering\Large\bfseries I. INTRODUCTION}
+\addcontentsline{toc}{chapter}{I. INTRODUCTION}
 	\section{Overview}
 	\subsection{Project Information}
 	
@@ -73,42 +80,9 @@ bottom=2.5cm
 		\url{https://github.com/NguyenNgocBaoTram10/Scientific-Journal-Publication-Trend-Tracking-System}
 	\end{itemize}
 	
-	
-	\section{Project Background}
-	
-	Describe the motivation and background of the project.
-	
-	\section{Scope}
-	
-	Describe the scope of the project.
-	
-	\section{Objectives}
-	
-	Describe the objectives of the project.
-	
-	\section{System Requirements}
-	
-	List the functional and non-functional requirements.
-	
-	\section{System Design}
-	
-	Describe the architecture, database design, and diagrams.
-	
-	\section{Implementation}
-	
-	Describe technologies, APIs, and key features implemented.
-	
-	\section{Testing}
-	
-	Describe test cases and testing results.
-	
-	\section{Conclusion}
-	
-	Summarize the project outcomes and future improvements.
-	
-	
+
 	\subsection{Project team}
-	
+
 	\begin{table}[h]
 		\centering
 		\small
@@ -151,16 +125,16 @@ bottom=2.5cm
 			hieutt8473@ut.edu.vn \\
 			\hline
 			
-			Trần Văn Học &
+		    Trần Văn Học &
 			Member &
-			&
+			 &
 			hoctv5618@ut.edu.vn \\
 			\hline
 			
 			Nguyễn Đoàn Nhật Quang &
 			Member &
-			079206010585 &
-			quangndn0585@ut.edu.vn \\
+		    079206010585 &
+		    quangndn0585@ut.edu.vn \\
 			\hline
 			
 		\end{tabularx}
@@ -168,134 +142,66 @@ bottom=2.5cm
 		\caption{Project Team Information}
 	\end{table}
 	
-	\clearpage
-	
-	\setcounter{section}{1}
-	
-	\section{Functional Requirements}
-	
-	\subsection{User Authentication and Authorization}
-	\begin{itemize}
-		\item Users can register a new account.
-		\item Users can log in using a valid username and password.
-		\item The system assigns permissions based on user roles.
-		\item Administrators can manage user accounts and roles.
-	\end{itemize}
-	
-	\subsection{Research Paper Search}
-	\begin{itemize}
-		\item Users can search research papers by keyword, author name, or journal name.
-		\item The system displays matching publication results.
-		\item Users can view detailed publication information.
-	\end{itemize}
-	
-	\subsection{Bookmark Management}
-	\begin{itemize}
-		\item Users can save research papers to personal bookmarks.
-		\item The system prevents duplicate bookmarks.
-		\item Users can access bookmarked papers later.
-	\end{itemize}
-	\subsection{Publication Trend Analysis}
-	\begin{itemize}
-		\item Users can analyze publication trends based on keywords, topics, authors, or journals.
-		\item The system generates trend statistics from publication metadata.
-		\item The system visualizes trends using charts and dashboards.
-	\end{itemize}
-	\subsection{Dashboard Visualization}
-	\begin{itemize}
-		\item Users can view publication statistics through dashboards.
-		\item The dashboard displays publication counts, topic distributions, journal distributions, and growth trends.
-	\end{itemize}
-	\subsection{Trending Topics}
-	\begin{itemize}
-		\item Users can view trending research topics.
-		\item The system ranks topics according to publication frequency and growth rate.
-	\end{itemize}
-	\subsection{Topic Following}
-	\begin{itemize}
-		\item Users can follow research topics of interest.
-		\item The system stores followed topics for each user.
-		\item Users may follow multiple topics.
-	\end{itemize}
-	\subsection{Notification Management}
-	\begin{itemize}
-		\item Users receive notifications related to followed topics.
-		\item Notifications include new publications, trend changes, and emerging topics.
-		\item Users can view notification details.
-	\end{itemize}
-	\subsection{Report Generation}
-	\begin{itemize}
-		\item Users can generate analytical reports based on publication trends.
-		\item Reports summarize publication statistics and research trends.
-		\item Reports are generated from publication metadata.
-	\end{itemize}
-	\subsection{System Administration}
-	\begin{itemize}
-		\item Administrators can manage system operations.
-		\item Administrators can manage user accounts.
-		\item Administrators can configure academic API sources.
-		\item Administrators can synchronize publication metadata from external APIs.
-	\end{itemize}
-	\subsection{Academic Data Synchronization}
-	\begin{itemize}
-		\item The system synchronizes publication metadata from external academic APIs.
-		\item The system validates retrieved metadata.
-		\item The system inserts new records and updates existing records.
-		\item The system records synchronization logs and statistics.
-	\end{itemize}
-	
-	
-	
-	\section{Non-Functional Requirements}
-	
-	\subsection{Usability}
-	The interface is intuitive and accessible for all user types.
-	
-	\subsection{Performance}
-	Search results must be returned within 2 seconds.\\
-	The system must support at least 500 concurrent users.
-	
-	\subsection{Reliability}
-	System uptime must be at least 99\% during business hours.\\
-	Data must be backed up daily.
-	
-	\subsection{Security}
-	User passwords must be hashed before storage.\\
-	Role-based access control must be enforced for all features.
-	
-	\subsection{Maintainability \& Scalability}
-	The system must use a modular architecture for easy maintenance.\\
-	New data sources can be added without redesigning the existing system.
-	
-	\section{Limitations of the Project}
-	
-	\subsection{Limited Use of Full-Text Data}
+\section{Project Scope and Limitations}
+
+\subsection{Major Features}
+
+\subsubsection{Major Features for User}
+
+\begin{itemize}
+	\item Register and log in to the system.
+	\item Search scientific publications using keywords, authors, journals, or research fields.
+	\item View detailed publication information.
+	\item Save publications to bookmarks.
+	\item Follow research topics of interest.
+	\item Receive notifications about new publications and research trends.
+	\item View publication trend analysis and statistical dashboards.
+	\item Generate and export analytical reports (PDF/CSV).
+\end{itemize}
+
+\subsubsection{Major Features for Administrator}
+
+\begin{itemize}
+	\item Log in and log out.
+	\item Manage user accounts.
+	\item Configure academic API sources (Semantic Scholar, OpenAlex, and Crossref).
+	\item Synchronize publication data from external APIs.
+	\item Monitor the data synchronization process.
+	\item Manage system notifications.
+	\item Generate system reports.
+	\item Configure system settings.
+\end{itemize}
+\subsection{Project Limitations}
+
+\subsubsection{Limited Use of Full-Text Data}
+
 	\begin{itemize}
 		\item The system only uses publication metadata such as title, abstract, keywords, authors, and publication year.
 		\item It does not process full-text content, which limits the depth of analysis and understanding of research papers.
 	\end{itemize}
 	
-	\subsection{Restricted Data Scope}
+	\subsubsection{Restricted Data Scope}
+
 	\begin{itemize}
 		\item The system focuses only on selected research fields (e.g., Computer Science and Artificial Intelligence).
 		\item Therefore, it does not fully represent trends across all scientific disciplines.
 	\end{itemize}
-	
-	\subsection{Dependence on External APIs}
+		\subsubsection{Dependence on External APIs}
+
 	\begin{itemize}
 		\item The system relies on external APIs such as Semantic Scholar, OpenAlex, and Crossref.
 		\item Any API downtime, structural changes, or request limitations may affect system stability and data collection performance.
 	\end{itemize}
-	
-	\subsection{Simplified Trend Analysis and Update Frequency}
+		\subsubsection{Simplified Trend Analysis and Update Frequency}
+
 	\begin{itemize}
 		\item Trend analysis is mainly based on publication frequency and growth rate.
 		\item It does not apply advanced Machine Learning or AI models for prediction.
 		\item Data is synchronized periodically (daily or weekly), so real-time trends may not be immediately reflected.
 	\end{itemize}
 	
-	\chapter{\centering\Large\bfseries II. PROJECT MANAGEMENT PLAN}
-	\addcontentsline{toc}{chapter}{II. PROJECT MANAGEMENT PLAN}
+\chapter{\centering\Large\bfseries II. PROJECT MANAGEMENT PLAN}
+\addcontentsline{toc}{chapter}{II. PROJECT MANAGEMENT PLAN}
 	\addcontentsline{toc}{chapter}{ II. PROJECT MANAGEMENT PLAN}
 	\setcounter{section}{0}
 	\setcounter{subsection}{0}
@@ -398,4 +304,869 @@ bottom=2.5cm
 		\hline
 		
 	\end{longtable}
+	\subsection{Project Objective}
+	
+	\begin{itemize}
+		\item \textbf{Timeline:} The project must be completed before \textbf{July 3, 2026}.
+		\item \textbf{Allocated Effort:} 46 man-days.
+	\end{itemize}
+	\subsection{Project Risks}
+	\begin{longtable}{|c|p{5cm}|p{5cm}|c|p{6cm}|}
+		\hline
+		\rowcolor{HeaderGray}
+		\textbf{\#} &
+		\textbf{Risk Description} &
+		\textbf{Impact} &
+		\textbf{Possibility} &
+		\textbf{Response Plan}\\
+		\hline
+		\endfirsthead
+		
+		\hline
+		\rowcolor{HeaderGray}
+		\textbf{\#} &
+		\textbf{Risk Description} &
+		\textbf{Impact} &
+		\textbf{Possibility} &
+		\textbf{Response Plan}\\
+		\hline
+		\endhead
+		
+		1 &
+		External academic APIs (Semantic Scholar, OpenAlex, Crossref) become unavailable or change their endpoints. &
+		The system cannot retrieve publication data, causing incomplete search results and inaccurate trend analysis. &
+		High &
+		Implement API fallback mechanisms, monitor API status regularly, and cache previously retrieved data whenever possible.\\
+		\hline
+		
+		2 &
+		Large volumes of publication data lead to slow system performance. &
+		Users experience long response times when searching publications or viewing dashboards. &
+		Medium &
+		Optimize database indexing, implement pagination, caching, and asynchronous background synchronization.\\
+		\hline
+		
+		3 &
+		Security vulnerabilities expose user accounts or stored data. &
+		Unauthorized access, data leakage, and loss of user trust. &
+		Medium &
+		Use JWT authentication, RBAC authorization, password hashing, HTTPS, and regular security testing.\\
+		\hline
+		
+		4 &
+		Trend analysis results become inaccurate because of outdated or incomplete datasets. &
+		Generated reports and statistics may mislead users' research decisions. &
+		Medium &
+		Schedule automatic data synchronization and validate collected data before analysis.\\
+		\hline
+		
+		5 &
+		System integration between frontend, backend, and database encounters compatibility issues. &
+		Development delays and unexpected system failures during deployment. &
+		Medium &
+		Perform integration testing continuously and maintain version compatibility among all components.\\
+		\hline
+		
+		6 &
+		Insufficient testing before deployment leaves critical defects unresolved. &
+		System crashes, incorrect functionality, and poor user experience. &
+		High &
+		Prepare comprehensive Test Plans, Test Cases, conduct functional, integration, and user acceptance testing before release.\\
+		\hline
+		
+		7 &
+		Project schedule delays due to underestimated implementation effort. &
+		Failure to complete the project within the planned timeline. &
+		Medium &
+		Monitor project progress weekly, prioritize critical features, and adjust the implementation schedule when necessary.\\
+		\hline
+		
+	\end{longtable}
+	\section{Project Deliverables}
+	{
+		\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+		\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+		\renewcommand{\arraystretch}{1.6}
+		\setlength{\tabcolsep}{6pt}
+		
+		\noindent
+		\begin{tabular}{C{2cm} C{1.6cm} C{3.8cm} L{6cm} L{5cm}}
+			
+			\rowcolor{headerblue}
+			{\color{white}\bfseries Sprint} &
+			{\color{white}\bfseries Week} &
+			{\color{white}\bfseries Duration} &
+			{\color{white}\bfseries Deliverables} &
+			{\color{white}\bfseries Note} \\
+			
+			\rowcolor{rowblue}
+			\textbf{Sprint 1} & Week 1 & 14/05 -- 20/05/2026 &
+			{$\bullet$ Define project scope \newline
+				$\bullet$ Analysis requirement} & {} \\
+			
+			\rowcolor{rowwhite}
+			\textbf{Sprint 2} & Week 2 & 21/05 -- 27/05/2026 &
+			{$\bullet$ Finish Product Overview \newline
+				$\bullet$ Finish User Requirement \newline
+				$\bullet$ Finish Functional Requirement} & {} \\
+			
+			\rowcolor{rowblue}
+			\textbf{Sprint 3} & Week 3 & 28/05 -- 03/06/2026 &
+			{$\bullet$ Finish Database Design \newline
+				$\bullet$ Finish Software design description} & {} \\
+			
+			\rowcolor{rowwhite}
+			\textbf{Sprint 4} & Week 4 & 04/06 -- 10/06/2026 &
+			{$\bullet$ Finish Software requirement specification} & {} \\
+			
+			\rowcolor{rowblue}
+			\textbf{Sprint 5} & Week 5 & 11/06 -- 17/06/2026 &
+			{$\bullet$ Finish Software design description (continued)} & {} \\
+			
+			\rowcolor{rowwhite}
+			\textbf{Sprint 6} & Week 6 & 18/06 -- 24/06/2026 &
+			{$\bullet$ Finish Software testing document \newline
+				$\bullet$ Finish Release package and user guide} & {} \\
+			
+			\rowcolor{rowblue}
+			\textbf{Sprint 7} & Week 7 & 25/06 -- 01/07/2026 &
+			{$\bullet$ Testing \newline
+				$\bullet$ Finish document \newline
+				$\bullet$ Submitting} & {} \\
+			
+		\end{tabular}
+	}
+	{
+		\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+		\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+		\renewcommand{\arraystretch}{1.6}
+		\setlength{\tabcolsep}{6pt}
+		
+		\noindent
+		\small 3. \textbf{Responsibility Assignment}
+		
+		\noindent
+		\small \textit{Do\textasciitilde D; Review\textasciitilde R; Support\textasciitilde S}
+		
+		\vspace{6pt}
+		
+		\begin{tabular}{L{4cm} C{1.8cm} C{1.8cm} C{1.8cm} C{1.8cm} C{1.8cm} C{1.8cm}}
+			
+			\rowcolor{headerblue}
+			{\color{white}\bfseries Responsibility} &
+			{\color{white}\bfseries Thanh Tú \newline } &
+			{\color{white}\bfseries Bảo Trâm \newline } &
+			{\color{white}\bfseries Huyền Trân \newline } &
+			{\color{white}\bfseries Trung Hiếu \newline } &
+			{\color{white}\bfseries Văn 
+				 Học \newline } &
+			{\color{white}\bfseries Nhật Quang \newline } \\
+			
+			\rowcolor{rowblue}
+			Project Planning \& Tracking & S & D & S & S & S & S \\
+			
+			\rowcolor{rowwhite}
+			Prepare Project Introduction Document & R & D & R & R & R & R \\
+			
+			\rowcolor{rowblue}
+			Prepare Software Requirement Document & S & D & S & S & S & S \\
+			
+			\rowcolor{rowwhite}
+			Prepare Software Design Document & D & D & D & D & D & D \\
+			
+			\rowcolor{rowblue}
+			Prepare Test Document & D & D & D & D & D & D \\
+			
+			\rowcolor{rowwhite}
+			Prepare Software User Guides & D & D & D & D & D & D \\
+			
+			\rowcolor{rowblue}
+			Prepare Final Report & D & D & D & D & D & D \\
+			
+		\end{tabular}
+	}
+	{
+		\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+		\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+		\renewcommand{\arraystretch}{1.6}
+		\setlength{\tabcolsep}{6pt}
+		
+		\noindent
+		\small 4. \textbf{Project Communications}
+		
+		\vspace{6pt}
+		
+		\begin{tabular}{L{3cm} C{2cm} L{6cm} C{2.5cm} C{3cm}}
+			
+			\rowcolor{headerblue}
+			{\color{white}\bfseries Communication Item} &
+			{\color{white}\bfseries Who} &
+			{\color{white}\bfseries Purpose} &
+			{\color{white}\bfseries When} &
+			{\color{white}\bfseries Type} \\
+			
+			\rowcolor{rowblue}
+			Team Weekly Meeting & Group &
+			{$\bullet$ Report work project \newline
+				$\bullet$ Assign work for next week \newline
+				$\bullet$ Control project deadline} &
+			Every Sunday & Meeting on Google Meet \\
+			
+			\rowcolor{rowwhite}
+			Weekly Report & Member &
+			{$\bullet$ Report work process} &
+			1 day / week & Report via Zalo \\
+			
+			\rowcolor{rowblue}
+			Group Meeting & Group &
+			{$\bullet$ Report work process} &
+			Every Friday & Offline on class \\
+			
+		\end{tabular}
+	}
+	\subsection*{5. Configuration Management}
+	
+	\subsubsection*{5.1 Document Management}
+	\begin{itemize}
+		\item Document tool: Confluence
+		\item Task management tool: Jira
+	\end{itemize}
+	
+	\subsubsection*{5.2 Source Code Management}
+	\begin{itemize}
+		\item Source code management tool: GitHub
+	\end{itemize}
+	\subsubsection*{5.3 Tools \& Infrastructure}
+	
+	{
+		\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+		\renewcommand{\arraystretch}{1.6}
+		\setlength{\tabcolsep}{6pt}
+		
+		\begin{tabular}{L{4cm} L{8cm}}
+			
+			\rowcolor{headerblue}
+			{\color{white}\bfseries Category} &
+			{\color{white}\bfseries Tools / Infrastructure} \\
+			
+			\rowcolor{rowblue}
+			Programming Languages & PHP, HTML5, CSS3, JavaScript \\
+			
+			\rowcolor{rowwhite}
+			Database & MySQL \\
+			
+			\rowcolor{rowblue}
+			Database Administration & phpMyAdmin \\
+			
+			\rowcolor{rowwhite}
+			Academic APIs & Semantic Scholar API, OpenAlex API, Crossref REST API \\
+			
+			\rowcolor{rowblue}
+			API Testing & Postman \\
+			
+			\rowcolor{rowwhite}
+			Version Control & Git, GitHub \\
+			
+			\rowcolor{rowblue}
+			Project Management & Jira, Confluence \\
+			
+			\rowcolor{rowwhite}
+			Diagramming & Draw.io, PlantUML \\
+			
+			\rowcolor{rowblue}
+			IDE / Code Editor & Visual Studio Code \\
+			
+			\rowcolor{rowwhite}
+			Local Server & WAMP Server \\
+			
+		\end{tabular}
+	}
+	\chapter{\centering\Large\bfseries III. SOFTWARE REQUIREMENT SPECIFICATION}
+	\addcontentsline{toc}{chapter}{ III. SOFTWARE REQUIREMENT SPECIFICATION}
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+
+\section{Product Overview}
+	
+
+
+The Scientific Journal Publication Trend Tracking System (SJPTTS) is a web-based application developed to help researchers, students, lecturers, and academic institutions search, monitor, and analyze scientific publication trends. The system integrates academic data from Semantic Scholar, OpenAlex, and Crossref to provide comprehensive and up-to-date publication information.
+
+The system allows users to search scientific publications using keywords, authors, journals, research fields, or publication years. Users can view detailed publication information, bookmark publications, follow research topics, receive notifications about newly published papers, analyze publication trends through interactive dashboards, and export reports in PDF or CSV format.
+
+Administrators can manage user accounts, configure academic API sources, synchronize publication data, monitor system operations, and maintain the overall performance of the platform. The system aims to provide an efficient solution for discovering scientific literature and supporting research through publication trend analysis.
+
+\section{User Requirements}
+
+\subsection{Actors}
+\subsection{Use Cases}
+
+\subsubsection{Diagram(s)}
+\subsubsection{Descriptions}
+\subsection{Functional Requirements}
+
+
+\subsubsection{User Authentication and Authorization}
+
+\begin{itemize}
+	\item Users can register a new account.
+	\item Users can log in using a valid username and password.
+	\item The system assigns permissions based on user roles.
+	\item Administrators can manage user accounts and roles.
+\end{itemize}
+
+\subsubsection{Research Paper Search}
+
+\begin{itemize}
+	\item Users can search research papers by keyword, author name, or journal name.
+	\item The system displays matching publication results.
+	\item Users can view detailed publication information.
+\end{itemize}
+
+\subsubsection{Bookmark Management}
+
+\begin{itemize}
+	\item Users can save research papers to personal bookmarks.
+	\item The system prevents duplicate bookmarks.
+	\item Users can access bookmarked papers later.
+\end{itemize}
+\subsubsection{Publication Trend Analysis}
+
+\begin{itemize}
+	\item Users can analyze publication trends based on keywords, topics, authors, or journals.
+	\item The system generates trend statistics from publication metadata.
+	\item The system visualizes trends using charts and dashboards.
+\end{itemize}
+\subsubsection{Dashboard Visualization}
+
+
+\begin{itemize}
+	\item Users can view publication statistics through dashboards.
+	\item The dashboard displays publication counts, topic distributions, journal distributions, and growth trends.
+\end{itemize}
+\subsubsection{Trending Topics}
+
+\begin{itemize}
+	\item Users can view trending research topics.
+	\item The system ranks topics according to publication frequency and growth rate.
+\end{itemize}
+\subsubsection{Topic Following}
+
+\begin{itemize}
+	\item Users can follow research topics of interest.
+	\item The system stores followed topics for each user.
+	\item Users may follow multiple topics.
+\end{itemize}
+\subsubsection{Notification Management}
+
+\begin{itemize}
+	\item Users receive notifications related to followed topics.
+	\item Notifications include new publications, trend changes, and emerging topics.
+	\item Users can view notification details.
+\end{itemize}
+\subsubsection{Report Generation}
+
+\begin{itemize}
+	\item Users can generate analytical reports based on publication trends.
+	\item Reports summarize publication statistics and research trends.
+	\item Reports are generated from publication metadata.
+\end{itemize}
+\subsubsection{System Administration}
+
+\begin{itemize}
+	\item Administrators can manage system operations.
+	\item Administrators can manage user accounts.
+	\item Administrators can configure academic API sources.
+	\item Administrators can synchronize publication metadata from external APIs.
+\end{itemize}
+\subsubsection{Academic Data Synchronization}
+
+\begin{itemize}
+	\item The system synchronizes publication metadata from external academic APIs.
+	\item The system validates retrieved metadata.
+	\item The system inserts new records and updates existing records.
+	\item The system records synchronization logs and statistics.
+\end{itemize}
+
+
+\subsection{Non-Functional Requirements}
+
+\subsubsection{Usability}
+
+The interface is intuitive and accessible for all user types.
+\subsubsection{Performance}
+
+Search results must be returned within 2 seconds.\\
+The system must support at least 500 concurrent users.
+\subsubsection{Reliability}
+
+System uptime must be at least 99\% during business hours.\\
+Data must be backed up daily.
+\subsubsection{Security}
+
+User passwords must be hashed before storage.\\
+Role-based access control must be enforced for all features.
+\subsubsection{Maintainability \& Scalability}
+
+The system must use a modular architecture for easy maintenance.\\
+New data sources can be added without redesigning the existing system.
+\subsection{Screen Authorization}
+{
+	\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+	\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+	\renewcommand{\arraystretch}{1.6}
+	\setlength{\tabcolsep}{6pt}
+	
+
+	
+	\vspace{6pt}
+	
+	\begin{tabular}{L{5cm} C{3cm} C{3cm} C{3.5cm}}
+		
+		\rowcolor{headerblue}
+		{\color{white}\bfseries Screen} &
+		{\color{white}\bfseries Researcher} &
+		{\color{white}\bfseries Lecturer/Student} &
+		{\color{white}\bfseries System Administrator} \\
+		
+		\rowcolor{rowblue}
+		Login & x & x & x \\
+		
+		\rowcolor{rowwhite}
+		Register & x & x & \\
+		
+		\rowcolor{rowblue}
+		Search Research Papers & x & x & \\
+		
+		\rowcolor{rowwhite}
+		View Paper Details & x & x & \\
+		
+		\rowcolor{rowblue}
+		Save Bookmarks & x & x & \\
+		
+		\rowcolor{rowwhite}
+		Track Publication Trends & x & x & \\
+		
+		\rowcolor{rowblue}
+		View Dashboard & x & x & \\
+		
+		\rowcolor{rowwhite}
+		Generate Reports & x & x & \\
+		
+		\rowcolor{rowblue}
+		View Trending Topics & x & x & \\
+		
+		\rowcolor{rowwhite}
+		Follow Topics & x & x & \\
+		
+		\rowcolor{rowblue}
+		Receive Notifications & x & x & \\
+		
+		\rowcolor{rowwhite}
+		Manage System & & & x \\
+		
+		\rowcolor{rowblue}
+		Manage Users & & & x \\
+		
+		\rowcolor{rowwhite}
+		Configure API Sources & & & x \\
+		
+		\rowcolor{rowblue}
+		Sync Academic Data & & & x \\
+		
+	\end{tabular}
+}
+
+\subsection{ Non-Screen Functions
+}
+{
+	\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+	\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+	\renewcommand{\arraystretch}{1.6}
+	\setlength{\tabcolsep}{6pt}
+	
+
+	
+	\vspace{6pt}
+	
+	\begin{tabular}{C{0.8cm} L{3.5cm} C{2.5cm} L{7cm}}
+		
+		\rowcolor{headerblue}
+		{\color{white}\bfseries \#} &
+		{\color{white}\bfseries Feature} &
+		{\color{white}\bfseries System Function} &
+		{\color{white}\bfseries Description} \\
+		
+		\rowcolor{rowblue}
+		1 & Automated Academic Data Synchronization & Scheduled Job &
+		Scheduled job that automatically retrieves publication metadata from external academic APIs (Semantic Scholar, OpenAlex, Crossref). Inserts new records, updates existing ones, removes duplicates, and logs synchronization statistics in the database. \\
+		
+		\rowcolor{rowwhite}
+		2 & Automated Notification Generation & Scheduled Job &
+		Scheduled job that monitors followed topics for each user. When new publications related to followed topics are detected after synchronization, the system automatically generates and stores notifications in the database for the relevant users. \\
+		
+		\rowcolor{rowblue}
+		3 & Automated Trend Calculation & Scheduled Job &
+		Scheduled job that recalculates publication trend statistics after each data synchronization. Updates keyword frequency, topic growth rate, and journal distribution data used by the dashboard and trending topics features. \\
+		
+	\end{tabular}
+}
+\subsection{ Entity Relationship Diagram 
+}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{erd.png}
+	\caption{Entity Relationship Diagram (ERD)}
+	\label{fig:erd}
+\end{figure}
+\subsection{ Class Diagram 
+}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{class.png}
+	\caption{Class Diagram}
+	\label{fig:erd}
+\end{figure}
+
+	\chapter{\centering\Large\bfseries IV. Software Design Description}
+\addcontentsline{toc}{chapter}{ IV. Software Design Description}
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+
+\section{System Design}
+\subsection{System Architecture}
+\subsection{Package Diagram}
+\subsubsection{Front End }
+\subsubsection{Back End }
+\section{ Database Design}
+\begin{figure}[H]
+	\centering
+\includegraphics[width=\textwidth]{database.png}
+	\caption{Database Design}
+	\label{fig:database}
+\end{figure}
+\noindent\textbf{\underline{Entities Description}}
+
+\vspace{200pt}
+\subsection{Role Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	roleId & INT & Role ID & Yes & No \\
+	roleName & NVARCHAR(100) & Role name & No & No \\
+	description & NVARCHAR(255) & Description & No & No \\
+	\hline
+\end{longtable}
+
+% ================= USER =================
+\subsection{User Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	userId & INT & User ID & Yes & No \\
+	fullName & NVARCHAR(150) & Full name & No & No \\
+	email & NVARCHAR(150) & Email & No & No \\
+	password & NVARCHAR(255) & Password & No & No \\
+	status & NVARCHAR(50) & Status & No & No \\
+	createdAt & DATETIME2 & Created time & No & No \\
+	roleId & INT & Role reference & No & Yes → Role \\
+	\hline
+\end{longtable}
+
+% ================= JOURNAL =================
+\subsection{Journal Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	journalId & INT & Journal ID & Yes & No \\
+	journalName & NVARCHAR(200) & Journal name & No & No \\
+	publisher & NVARCHAR(150) & Publisher & No & No \\
+	issn & NVARCHAR(20) & ISSN & No & No \\
+	\hline
+\end{longtable}
+
+% ================= USER FOLLOW JOURNAL =================
+\subsection{UserFollowJournal (M:N)}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	userId & INT & User & Yes (Composite) & Yes → User \\
+	journalId & INT & Journal & Yes (Composite) & Yes → Journal \\
+	\hline
+\end{longtable}
+
+% ================= TOPIC =================
+\subsection{Topic Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	topicId & INT & Topic ID & Yes & No \\
+	topicName & NVARCHAR(150) & Topic name & No & No \\
+	description & NVARCHAR(MAX) & Description & No & No \\
+	journalId & INT & Journal reference & No & Yes → Journal \\
+	\hline
+\end{longtable}
+
+% ================= USER FOLLOW TOPIC =================
+\subsection{UserFollowTopic (M:N)}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	userId & INT & User & Yes (Composite) & Yes → User \\
+	topicId & INT & Topic & Yes (Composite) & Yes → Topic \\
+	\hline
+\end{longtable}
+
+% ================= APISOURCE =================
+\subsection{APISource Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	sourceId & INT & Source ID & Yes & No \\
+	sourceName & NVARCHAR(150) & Source name & No & No \\
+	endpointUrl & NVARCHAR(500) & API URL & No & No \\
+	syncSchedule & NVARCHAR(100) & Sync schedule & No & No \\
+	\hline
+\end{longtable}
+
+% ================= AUTHOR =================
+\subsection{Author Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	authorId & INT & Author ID & Yes & No \\
+	fullName & NVARCHAR(150) & Full name & No & No \\
+	affiliation & NVARCHAR(255) & Affiliation & No & No \\
+	\hline
+\end{longtable}
+
+% ================= KEYWORD =================
+\subsection{Keyword Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	keywordId & INT & Keyword ID & Yes & No \\
+	keywordName & NVARCHAR(100) & Keyword & No & No \\
+	\hline
+\end{longtable}
+
+% ================= RESEARCH PAPER =================
+\subsection{Research Paper Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	articleId & INT & Paper ID & Yes & No \\
+	title & NVARCHAR(500) & Title & No & No \\
+	abstract & NVARCHAR(MAX) & Abstract & No & No \\
+	doi & NVARCHAR(200) & DOI & No & No \\
+	publicationYear & INT & Year & No & No \\
+	sourceId & INT & API Source & No & Yes → APISource \\
+	\hline
+\end{longtable}
+
+% ================= PAPER TOPIC =================
+\subsection{PaperTopic (M:N)}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	articleId & INT & Paper & Yes (Composite) & Yes → ResearchPaper \\
+	topicId & INT & Topic & Yes (Composite) & Yes → Topic \\
+	\hline
+\end{longtable}
+
+% ================= PAPER KEYWORD =================
+\subsection{PaperKeyword (M:N)}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	articleId & INT & Paper & Yes (Composite) & Yes → ResearchPaper \\
+	keywordId & INT & Keyword & Yes (Composite) & Yes → Keyword \\
+	\hline
+\end{longtable}
+
+% ================= PAPER AUTHOR =================
+\subsection{PaperAuthor (M:N)}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	articleId & INT & Paper & Yes (Composite) & Yes → ResearchPaper \\
+	authorId & INT & Author & Yes (Composite) & Yes → Author \\
+	authorOrder & INT & Author order & No & No \\
+	\hline
+\end{longtable}
+
+% ================= PUBLICATION TREND =================
+\subsection{PublicationTrend Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	trendId & INT & Trend ID & Yes & No \\
+	year & INT & Year & No & No \\
+	publicationCount & INT & Count & No & No \\
+	growthRate & FLOAT & Growth rate & No & No \\
+	keywordId & INT & Keyword & No & Yes → Keyword \\
+	\hline
+\end{longtable}
+
+% ================= REPORT =================
+\subsection{Report Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	reportId & INT & Report ID & Yes & No \\
+	title & NVARCHAR(300) & Title & No & No \\
+	keyword & NVARCHAR(200) & Keyword & No & No \\
+	yearFrom & INT & From year & No & No \\
+	yearTo & INT & To year & No & No \\
+	generatedAt & DATETIME2 & Created time & No & No \\
+	userId & INT & User & No & Yes → User \\
+	\hline
+\end{longtable}
+
+% ================= NOTIFICATION =================
+\subsection{Notification Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	notificationId & INT & Notification ID & Yes & No \\
+	title & NVARCHAR(300) & Title & No & No \\
+	content & NVARCHAR(MAX) & Content & No & No \\
+	isRead & BIT & Read status & No & No \\
+	createdAt & DATETIME2 & Created time & No & No \\
+	userId & INT & User & No & Yes → User \\
+	\hline
+\end{longtable}
+
+% ================= NOTIFICATION PAPER =================
+\subsection{NotificationPaper (M:N)}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	notificationId & INT & Notification & Yes (Composite) & Yes → Notification \\
+	articleId & INT & Paper & Yes (Composite) & Yes → ResearchPaper \\
+	\hline
+\end{longtable}
+
+% ================= BOOKMARK =================
+\subsection{Bookmark Table}
+\begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
+	\hline
+	Field & Type & Description & PK & FK \\
+	\hline
+	bookmarkId & INT & Bookmark ID & Yes & No \\
+	bookmarkedAt & DATETIME2 & Time saved & No & No \\
+	userId & INT & User & No & Yes → User \\
+	articleId & INT & Paper & No & Yes → ResearchPaper \\
+	topicId & INT & Topic & No & Yes → Topic \\
+	\hline
+\end{longtable}
+\section{ Detail Design}
+\subsection{Register
+}
+\subsubsection{Activity diagram }
+\subsubsection{Sequence Diagram }
+\subsubsection{State}
+
+\subsection{Login}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{Search Research Papers}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{View Paper Details}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{Save Bookmarks}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{Track Publication Trends}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{View Dashboard}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{Generate Reports}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{View Trending Topics}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{Follow Topics}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{Receive Notifications}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{Manage System}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{Manage User}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{Configure API Sources}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+
+%-------------------------------------------------
+\subsection{Sync Academic Data}
+\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
+\subsubsection{State Diagram}
+\end{document}
 \end{document}
