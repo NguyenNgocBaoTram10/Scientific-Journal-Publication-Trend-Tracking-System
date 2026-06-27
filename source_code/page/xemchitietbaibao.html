@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ScholarTrend - Article View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f7f9fb",
+                    "secondary-fixed": "#d3e4ff",
+                    "on-surface-variant": "#43474e",
+                    "on-primary-fixed-variant": "#2d476f",
+                    "secondary-fixed-dim": "#a2c9ff",
+                    "outline": "#74777f",
+                    "tertiary": "#321b00",
+                    "surface-tint": "#455f88",
+                    "surface-container": "#eceef0",
+                    "surface-bright": "#f7f9fb",
+                    "inverse-surface": "#2d3133",
+                    "inverse-primary": "#adc7f7",
+                    "primary-fixed": "#d6e3ff",
+                    "on-secondary-container": "#00477f",
+                    "on-error": "#ffffff",
+                    "background": "#f7f9fb",
+                    "on-primary-container": "#86a0cd",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e6e8ea",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#633f0f",
+                    "surface-variant": "#e0e3e5",
+                    "on-secondary-fixed-variant": "#004881",
+                    "primary": "#002045",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#001c38",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary-fixed": "#2b1700",
+                    "on-tertiary-container": "#c6955e",
+                    "secondary-container": "#7db6ff",
+                    "primary-container": "#1a365d",
+                    "primary-fixed-dim": "#adc7f7",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#c4c6cf",
+                    "on-surface": "#191c1e",
+                    "tertiary-container": "#4f2e00",
+                    "secondary": "#1960a3",
+                    "tertiary-fixed": "#ffddba",
+                    "on-background": "#191c1e",
+                    "tertiary-fixed-dim": "#f2bc82",
+                    "on-primary-fixed": "#001b3c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "container-max": "1280px",
+                    "md": "16px",
+                    "sidebar-width": "280px",
+                    "xxl": "48px",
+                    "sm": "8px",
+                    "base": "4px",
+                    "xl": "32px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "caption": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "headline-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-md": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "title-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline fixed full-width top-0 z-50 w-full h-16">
+<div class="flex justify-between items-center w-full px-lg h-full max-w-container-max mx-auto">
+<div class="flex items-center gap-xl">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary cursor-pointer">ScholarTrend</span>
+<nav class="hidden md:flex gap-lg items-center">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-70" href="#">Analytics</a>
+<a class="font-body-md text-body-md text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 cursor-pointer active:opacity-70" href="#">Library</a>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<div class="relative hidden sm:block">
+<input class="bg-surface-container border border-outline-variant rounded-full px-lg py-1.5 w-64 text-body-md focus:outline-none focus:border-primary transition-all" placeholder="Tìm kiếm tài liệu học thuật..." type="text">
+<span class="material-symbols-outlined absolute right-3 top-1.5 text-on-surface-variant">search</span>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-all cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center overflow-hidden ml-2 cursor-pointer border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional academic researcher in a clean, modern laboratory setting. The background shows blurred scientific equipment and digital monitors with data visualizations. Soft, natural light illuminates the subject's face, creating a trustworthy and intellectual atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbLt7jOwax4iqGNB-Gy5i-OHUmyXEUssL3mTcfZwPhBXwOhDE4-FKuqkdhyrqkiAaxx9zhYVQPavPX8ST4rEqD0AERSpSmcFBDzu3Kyg5hUkOcvCRQ_MeaojDKwAHDds8N6fEu-Gg5kcHLxr4IDf-BOJ2QhUHZLyTZVQAiv3NShYDwtYiRk-xvgfpivbc4-no_znEMFaHVHz2OWauQWR3GGZNWCgHUg3J8GYDOILrewpL2qllkJR81gq_pHI3ecfuFFLGaazYHZG6L">
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-xxl px-lg max-w-container-max mx-auto">
+<div class="grid grid-cols-12 gap-xl">
+<!-- Article Body -->
+<article class="col-span-12 lg:col-span-8">
+<!-- Meta Information -->
+<div class="mb-lg">
+<nav class="flex items-center gap-sm text-on-surface-variant mb-md font-label-md text-label-md">
+<a class="hover:text-primary transition-colors" href="#">Y sinh</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">AI &amp; Học sâu</a>
+</nav>
+<h1 class="font-display-lg text-display-lg text-primary mb-md leading-tight">
+                        Phát triển hệ thống AI dự đoán sớm rủi ro tim mạch thông qua dữ liệu ECG thời gian thực
+                    </h1>
+<div class="flex flex-wrap items-center gap-md mb-lg">
+<div class="flex flex-wrap gap-xs font-body-md text-body-md text-secondary font-medium">
+<span>Nguyễn Văn A,</span>
+<span>Trần Thị B,</span>
+<span>Lê Hoàng C,</span>
+<span>Smith, J.</span>
+</div>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                            Nature Biomedical Engineering, Vol 12, Issue 4
+                        </div>
+</div>
+<div class="flex flex-wrap items-center gap-lg py-md border-y border-outline-variant">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Ngày công bố</span>
+<span class="font-body-md text-body-md font-semibold">15 Tháng 4, 2023</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">DOI</span>
+<a class="font-body-md text-body-md text-secondary hover:underline" href="#">10.1038/s41551-023-01025-x</a>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Trích dẫn</span>
+<span class="font-body-md text-body-md font-semibold">248 trích dẫn</span>
+</div>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="flex flex-wrap items-center gap-md mb-xl">
+<button class="bg-primary text-on-primary flex items-center gap-sm px-lg py-2.5 rounded-lg font-label-md text-label-md hover:opacity-90 transition-all shadow-sm">
+<span class="material-symbols-outlined">download</span>
+                        Tải xuống PDF
+                    </button>
+<button class="bg-surface-container-low border border-outline-variant text-primary flex items-center gap-sm px-lg py-2.5 rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">format_quote</span>
+                        Xuất trích dẫn
+                    </button>
+<button class="bg-surface-container-low border border-outline-variant text-primary flex items-center gap-sm px-lg py-2.5 rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+                        Lưu bài báo
+                    </button>
+<button class="bg-surface-container-low border border-outline-variant text-primary flex items-center gap-sm px-lg py-2.5 rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">share</span>
+                        Chia sẻ
+                    </button>
+</div>
+<!-- Abstract Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-xl mb-xl">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-md">Tóm tắt (Abstract)</h2>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed mb-lg">
+                        Bài báo này trình bày về một hệ thống trí tuệ nhân tạo (AI) tiên tiến được thiết kế để theo dõi và dự đoán các rủi ro tim mạch thông qua việc phân tích dữ liệu điện tâm đồ (ECG) thời gian thực. Bằng cách sử dụng các kiến trúc học sâu (Deep Learning) mới nhất, hệ thống có khả năng nhận diện các thay đổi tinh vi trong nhịp tim mà mắt thường khó nhận biết, từ đó đưa ra các cảnh báo sớm lên đến 24 giờ trước khi một biến cố tim mạch xảy ra. Nghiên cứu thực nghiệm trên 10,000 bệnh nhân cho thấy độ chính xác đạt trên 94%, mở ra triển vọng mới trong việc tích hợp AI vào các thiết bị đeo thông minh để bảo vệ sức khỏe cộng đồng.
+                    </p>
+<div class="flex flex-wrap items-center gap-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Keywords:</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">Trí tuệ nhân tạo</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">Y sinh</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">Học sâu</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">ECG</span>
+</div>
+</div>
+<!-- Main Content Visualization Placeholder -->
+<div class="mb-xl">
+<div class="bg-surface-container-high rounded-xl overflow-hidden relative aspect-[16/9]">
+<img class="w-full h-full object-cover" data-alt="A high-tech scientific data visualization screen showing real-time ECG waveforms being analyzed by a neural network. Complex mathematical graphs, probability heatmaps, and 3D wireframe models of a human heart are displayed in a clean, minimalist UI with a professional deep blue and white color scheme. The lighting is soft and clinical, suggesting an advanced medical research facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOEsKdxpG3Rol7qOtmvlhYme5TENMOEhHA3LcQ38SIvLfhywX96mTQ3rs1iYznKXna1Blt0inxLh7MUWeeL5PgiBw3rYrslnMdUfUiBm7IMRsReOmf0k6MYnn9ubrS8aHgoXJY-5aRpEF-AMLQt1i3TJPHrrdC-i-ju1DO7fbjO6fsPnT_g4hzn1R3O63mbog9ecf3GiF_21BFizwBJ1UnsRxmkNf8YQgPBG5c9S8I-6w0jubSgAYgDayfZgIZdKrQa3A5DHBNAJgC">
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-lg">
+<span class="text-white font-caption text-caption">Hình 1: Kiến trúc mạng nơ-ron đa tầng và quá trình xử lý tín hiệu ECG động.</span>
+</div>
+</div>
+</div>
+<!-- References List -->
+<div class="border-t border-outline-variant pt-xl">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-lg">Danh mục tham khảo</h2>
+<div class="space-y-lg">
+<div class="flex gap-md">
+<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[1]</span>
+<p class="font-body-md text-body-md text-on-surface">Wang, L., et al. (2022). "Convolutional Neural Networks for Heart Sound Analysis: A Review." IEEE Reviews in Biomedical Engineering.</p>
+</div>
+<div class="flex gap-md">
+<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[2]</span>
+<p class="font-body-md text-body-md text-on-surface">Johnson, M. R. (2021). "Real-time health monitoring systems: Challenges and opportunities." Journal of Medical Systems.</p>
+</div>
+<div class="flex gap-md">
+<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[3]</span>
+<p class="font-body-md text-body-md text-on-surface">Chen, Y. &amp; Li, X. (2020). "Deep Learning for Healthcare Applications." Springer Nature.</p>
+</div>
+<div class="flex gap-md">
+<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[4]</span>
+<p class="font-body-md text-body-md text-on-surface">Zhang, J. (2023). "Advancements in Wearable Sensor Technology." Nature Materials.</p>
+</div>
+<div class="flex gap-md">
+<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[5]</span>
+<p class="font-body-md text-body-md text-on-surface">Smith, A. B. (2019). "Predictive Analytics in Cardiovascular Medicine." Circulation Research.</p>
+</div>
+<div class="flex gap-md">
+<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[6]</span>
+<p class="font-body-md text-body-md text-on-surface">Lee, K. (2022). "Signal Processing for Electrocardiography: A Comprehensive Guide." Academic Press.</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Sidebar -->
+<aside class="col-span-12 lg:col-span-4 space-y-lg">
+<!-- Citation Stats Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
+<h3 class="font-title-lg text-title-lg text-primary mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary">trending_up</span>
+                        Thống kê trích dẫn
+                    </h3>
+<div class="flex items-end justify-between h-32 gap-sm mb-md px-2">
+<div class="bg-secondary-fixed-dim w-full rounded-t" style="height: 20%"></div>
+<div class="bg-secondary-fixed-dim w-full rounded-t" style="height: 35%"></div>
+<div class="bg-secondary-fixed-dim w-full rounded-t" style="height: 50%"></div>
+<div class="bg-secondary w-full rounded-t" style="height: 85%"></div>
+</div>
+<div class="flex justify-between font-caption text-caption text-on-surface-variant">
+<span>2020</span>
+<span>2021</span>
+<span>2022</span>
+<span class="font-bold text-primary">2023</span>
+</div>
+<div class="mt-md pt-md border-t border-outline-variant flex justify-between items-center">
+<span class="font-label-md text-label-md">Tổng trích dẫn:</span>
+<span class="font-headline-sm text-headline-sm text-primary">248</span>
+</div>
+</div>
+<!-- Related Articles Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
+<h3 class="font-title-lg text-title-lg text-primary mb-md">Bài báo liên quan</h3>
+<div class="space-y-lg">
+<a class="group block" href="#">
+<p class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary transition-colors mb-xs">Ứng dụng CNN trong phân loại nhịp tim bất thường</p>
+<p class="font-caption text-caption text-on-surface-variant">IEEE Trans. on AI, 2022</p>
+</a>
+<a class="group block" href="#">
+<p class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary transition-colors mb-xs">Phân tích tín hiệu ECG với mô hình LSTM</p>
+<p class="font-caption text-caption text-on-surface-variant">Bioinformatics, 2021</p>
+</a>
+<a class="group block" href="#">
+<p class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary transition-colors mb-xs">Hệ thống hỗ trợ chẩn đoán tim mạch dựa trên Cloud</p>
+<p class="font-caption text-caption text-on-surface-variant">Digital Health, 2023</p>
+</a>
+<a class="group block" href="#">
+<p class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary transition-colors mb-xs">Bảo mật dữ liệu y sinh trong kỷ nguyên AI</p>
+<p class="font-caption text-caption text-on-surface-variant">Journal of Cybersecurity, 2023</p>
+</a>
+</div>
+</div>
+<!-- Similar Topics Cloud -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
+<h3 class="font-title-lg text-title-lg text-primary mb-md">Chủ đề tương tự</h3>
+<div class="flex flex-wrap gap-sm">
+<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Deep Learning</a>
+<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Cardiology</a>
+<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Signal Processing</a>
+<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Wearables</a>
+<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Predictive Modeling</a>
+<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Big Data in Health</a>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant dark:border-outline mt-xxl">
+<div class="w-full py-xl px-lg flex flex-col md:flex-row justify-between items-center gap-md max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-xs">
+<span class="font-title-lg text-title-lg font-bold text-primary dark:text-inverse-primary">ScholarTrend</span>
+<p class="font-caption text-caption text-on-surface-variant dark:text-surface-variant">© 2024 ScholarTrend Academic Research Platform</p>
+</div>
+<div class="flex flex-wrap justify-center gap-lg">
+<a class="font-caption text-caption text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all" href="#">Terms of Service</a>
+<a class="font-caption text-caption text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all" href="#">Contact Support</a>
+<a class="font-caption text-caption text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all" href="#">Institutional Access</a>
+</div>
+</div>
+</footer>
+<!-- Simple Interactivity -->
+<script>
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('scale-95');
+                setTimeout(() => btn.classList.remove('scale-95'), 100);
+            });
+        });
+    </script>
+</body></html>
