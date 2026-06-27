@@ -131,7 +131,10 @@
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Tài nguyên</a>
 </div>
 </div>
-<div class="flex items-center gap-md"><div class="h-6 w-[1px] bg-outline-variant mx-sm"></div><button class="flex items-center justify-center p-sm rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant"><span class="material-symbols-outlined">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed cursor-pointer hover:shadow-sm transition-all"><span class="material-symbols-outlined text-[20px]">person</span></div></div>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed cursor-pointer hover:shadow-sm transition-all"
+     onclick="window.location.href='hosocanhan.html'">
+    <span class="material-symbols-outlined text-[20px]">person</span>
+</div>
 </nav>
 </header>
 <main class="mt-16">
@@ -352,6 +355,11 @@
                 }
             });
         });
+       
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("hidden");
+}
+
     </script>
 
 

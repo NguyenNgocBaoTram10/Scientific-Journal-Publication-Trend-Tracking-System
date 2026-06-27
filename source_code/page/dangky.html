@@ -1,4 +1,5 @@
-<!DOCTYPE html><html class="light" lang="vi" style=""><head>
+<!DOCTYPE html>
+<html class="light" lang="vi">
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Đăng ký - ScholarTrend</title>
@@ -120,23 +121,9 @@
 <div class="flex justify-between items-center h-16 px-lg max-w-container-max mx-auto w-full">
 <div class="flex items-center gap-xl">
 <a class="text-headline-md font-bold text-primary" href="#">ScholarTrend</a>
-<div class="hidden md:flex bg-surface-container-low rounded-lg px-md py-1.5 items-center border border-outline-variant w-64">
-<span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-2">search</span>
-<input class="bg-transparent border-none p-0 text-label-md focus:ring-0 w-full placeholder:text-on-surface-variant" placeholder="Tìm kiếm nhanh..." type="text">
-</div>
-<nav class="hidden lg:flex items-center gap-lg">
-<a class="text-on-surface-variant font-medium text-label-md hover:text-primary transition-colors" href="#">Dashboard</a>
-<a class="text-on-surface-variant font-medium text-label-md hover:text-primary transition-colors" href="#">Trends</a>
-<a class="text-on-surface-variant font-medium text-label-md hover:text-primary transition-colors" href="#">Resources</a>
+
 </nav>
-</div>
-<div class="flex items-center gap-md">
-<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors scale-95 active:scale-90">notifications</button>
-<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors scale-95 active:scale-90">account_circle</button>
-<div class="h-6 w-px bg-outline-variant mx-1"></div>
-<a class="text-label-md font-bold text-on-surface-variant hover:text-primary px-2 py-1" href="#">Login</a>
-<a class="bg-primary text-on-primary px-lg py-2 rounded-lg text-label-md font-bold hover:opacity-90 transition-opacity scale-95 active:scale-90 ring-2 ring-secondary ring-offset-2" href="{{DATA:SCREEN:SCREEN_10}}">Register</a>
-</div>
+
 </div>
 </header>
 <!-- Main Content Canvas -->
@@ -164,21 +151,43 @@
 <label class="text-label-md font-bold text-on-surface-variant block px-1">Họ và tên</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline">badge</span>
-<input class="w-full pl-11 pr-md py-3 bg-surface-container-low border border-outline-variant rounded-xl text-body-md form-input-focus placeholder:text-outline transition-all" placeholder="Nguyễn Văn A" type="text">
+<input
+    id="fullName"
+    name="fullName"
+    class="w-full pl-11 pr-md py-3 bg-surface-container-low border border-outline-variant rounded-xl text-body-md form-input-focus placeholder:text-outline transition-all"
+    type="text"
+    placeholder="Nguyễn Văn A"
+    pattern="^[A-Za-zÀ-ỹà-ỹ]+(\s+[A-Za-zÀ-ỹà-ỹ]+)+$"
+    title="Vui lòng nhập đầy đủ họ và tên (ít nhất 2 từ)."
+    required>
 </div>
 </div>
 <div class="space-y-base">
 <label class="text-label-md font-bold text-on-surface-variant block px-1">Email</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline">mail</span>
-<input class="w-full pl-11 pr-md py-3 bg-surface-container-low border border-outline-variant rounded-xl text-body-md form-input-focus placeholder:text-outline transition-all" placeholder="example@scholar.edu" type="email">
+<input
+    id="email"
+    name="email"
+    class="w-full pl-11 pr-md py-3 bg-surface-container-low border border-outline-variant rounded-xl text-body-md form-input-focus placeholder:text-outline transition-all"
+    type="email"
+    placeholder="example@email.com"
+    required>
 </div>
 </div>
 <div class="space-y-base">
 <label class="text-label-md font-bold text-on-surface-variant block px-1">Tên đăng nhập</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline">person</span>
-<input class="w-full pl-11 pr-md py-3 bg-surface-container-low border border-outline-variant rounded-xl text-body-md form-input-focus placeholder:text-outline transition-all" placeholder="scholar_user" type="text">
+<input
+    id="username"
+    name="username"
+    class="w-full pl-11 pr-md py-3 bg-surface-container-low border border-outline-variant rounded-xl text-body-md form-input-focus placeholder:text-outline transition-all"
+    type="text"
+    placeholder="Username"
+    pattern="^[A-Za-z0-9_]{4,20}$"
+    title="Tên đăng nhập từ 4 đến 20 ký tự, chỉ gồm chữ, số và dấu gạch dưới (_)."
+    required>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
@@ -186,63 +195,110 @@
 <label class="text-label-md font-bold text-on-surface-variant block px-1">Mật khẩu</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline">lock</span>
-<input class="w-full pl-11 pr-md py-3 bg-surface-container-low border border-outline-variant rounded-xl text-body-md form-input-focus placeholder:text-outline transition-all" placeholder="••••••••" type="password">
+<input
+    id="password"
+    name="password"
+    class="w-full pl-11 pr-md py-3 bg-surface-container-low border border-outline-variant rounded-xl text-body-md form-input-focus placeholder:text-outline transition-all"
+    type="password"
+    placeholder="Password"
+    pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$"
+    title="Mật khẩu phải có ít nhất 8 ký tự, bao gồm ít nhất 1 chữ và 1 số."
+    required>
 </div>
 </div>
-<div class="space-y-base">
-<label class="text-label-md font-bold text-on-surface-variant block px-1">Xác nhận</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-outline">verified_user</span>
-<input class="w-full pl-11 pr-md py-3 bg-surface-container-low border border-outline-variant rounded-xl text-body-md form-input-focus placeholder:text-outline transition-all" placeholder="••••••••" type="password">
-</div>
+
+
 </div>
 </div>
 <div class="flex items-start gap-sm py-2">
-<input class="mt-1 w-4 h-4 rounded text-secondary border-outline-variant focus:ring-secondary" id="terms" type="checkbox">
-<label class="text-label-md text-on-surface-variant" for="terms">Tôi đồng ý với <a class="text-secondary font-bold hover:underline" href="#">Điều khoản dịch vụ</a> và <a class="text-secondary font-bold hover:underline" href="#">Chính sách bảo mật</a>.</label>
+
+
 </div>
-<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-body-md shadow-md hover:opacity-95 transition-all transform active:scale-[0.98] mt-xl" onclick="handleRegister()" type="button">Đăng ký</button>
+<button
+    type="button"
+    onclick="handleRegister(event)"
+    class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-body-md shadow-md hover:opacity-95 transition-all transform active:scale-[0.98] mt-xl">
+    Đăng ký
+</button>
 <div class="text-center pt-md border-t border-outline-variant mt-xl">
 <p class="text-label-md text-on-surface-variant">
                             Đã có tài khoản? 
-                            <a class="text-secondary font-bold hover:underline ml-1" href="#">Đăng nhập</a>
+                            <a class="text-secondary font-bold hover:underline ml-1" href="#"><a href="dangnhap.html">Đăng nhập</a></a>
 </p>
 </div>
 </form>
 </div>
 <!-- Additional Contextual Link -->
 <div class="mt-xl text-center">
-<a class="inline-flex items-center gap-xs text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-[18px]">help_outline</span>
-                    Bạn cần trợ giúp đăng ký tổ chức?
-                </a>
+
 </div>
 </div>
 </main>
 <!-- Footer (Shared Component) -->
 
 <script>
-        function handleRegister() {
-            const errorMsg = document.getElementById('errorMessage');
-            const successMsg = document.getElementById('successMessage');
-            const form = document.getElementById('registrationForm');
+async function handleRegister(event) {
 
-            // Simple demo logic: toggle error or success
-            // In a real app, this would perform validation and API calls
-            
-            // For demo purposes, we'll just show the error first, then hide it and show success after 2 seconds
-            errorMsg.classList.remove('hidden');
-            successMsg.classList.add('hidden');
+    event.preventDefault();
 
+    const errorMsg = document.getElementById("errorMessage");
+    const successMsg = document.getElementById("successMessage");
+
+    errorMsg.classList.add("hidden");
+    successMsg.classList.add("hidden");
+
+    const fullName = document.getElementById("fullName").value.trim();
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    try {
+
+        const response = await fetch("../api/dangky.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fullName: fullName,
+                username: username,
+                email: email,
+                password: password
+            })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+
+            successMsg.innerHTML = result.message;
+            successMsg.classList.remove("hidden");
+
+            document.getElementById("registrationForm").reset();
+
+            // Chuyển sang trang đăng nhập sau 2 giây
             setTimeout(() => {
-                errorMsg.classList.add('hidden');
-                successMsg.classList.remove('hidden');
-                // Optional: reset form after "success"
-                // form.reset();
-            }, 1500);
-        }
-    </script>
+                window.location.href = "dangnhap.html";
+            }, 2000);
 
+        } else {
+
+            errorMsg.innerHTML = result.message;
+            errorMsg.classList.remove("hidden");
+
+        }
+
+    } catch (error) {
+
+        errorMsg.innerHTML = "Không thể kết nối đến máy chủ.";
+        errorMsg.classList.remove("hidden");
+
+        console.error(error);
+
+    }
+
+}
+</script>
 
 
 
