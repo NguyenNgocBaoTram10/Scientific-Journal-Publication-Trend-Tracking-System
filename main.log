@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  27 JUN 2026 12:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.27)  27 JUN 2026 15:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,6 +661,33 @@ Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 
 LaTeX Warning: Label `fig:erd' multiply defined.
 
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -746,7 +773,7 @@ Package hyperref Info: Link coloring OFF on input line 57.
 
  [1
 
-{C:/Users/baotr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\<let>-command' on input line 71.
@@ -1947,11 +1974,100 @@ Overfull \hbox (19.72076pt too wide) in alignment at lines 1073--1083
  [] [] [] [] [] 
  []
 
-[24] [25]
-Overfull \vbox (933.13663pt too high) has occurred while \output is active []
+<ac1.png, id=671, 1286.8075pt x 578.16pt>
+File: ac1.png Graphic file (type png)
+<use ac1.png>
+Package pdftex.def Info: ac1.png  used on input line 1089.
+(pdftex.def)             Requested size: 469.47049pt x 210.934pt.
+[24]
+<tt1.png, id=677, 729.72626pt x 950.55125pt>
+File: tt1.png Graphic file (type png)
+<use tt1.png>
+Package pdftex.def Info: tt1.png  used on input line 1096.
+(pdftex.def)             Requested size: 469.47049pt x 611.54166pt.
+ [25 <./ac1.png>]
+<sta1.png, id=685, 444.66125pt x 804.00375pt>
+File: sta1.png Graphic file (type png)
+<use sta1.png>
+Package pdftex.def Info: sta1.png  used on input line 1103.
+(pdftex.def)             Requested size: 349.8062pt x 632.50047pt.
+ [26 <./tt1.png>]
+<ac2.png, id=692, 744.7825pt x 612.2875pt>
+File: ac2.png Graphic file (type png)
+<use ac2.png>
+Package pdftex.def Info: ac2.png  used on input line 1111.
+(pdftex.def)             Requested size: 469.47049pt x 385.96739pt.
+ [27 <./sta1.png>]
+<tt2.png, id=699, 653.44125pt x 708.6475pt>
+File: tt2.png Graphic file (type png)
+<use tt2.png>
+Package pdftex.def Info: tt2.png  used on input line 1118.
+(pdftex.def)             Requested size: 469.47049pt x 509.1337pt.
+ [28 <./ac2.png>]
+<sta2.png, id=706, 524.96124pt x 629.35126pt>
+File: sta2.png Graphic file (type png)
+<use sta2.png>
+Package pdftex.def Info: sta2.png  used on input line 1125.
+(pdftex.def)             Requested size: 469.47049pt x 562.84814pt.
+
+[29 <./tt2.png>]
+<ac3.png, id=713, 1102.1175pt x 699.61375pt>
+File: ac3.png Graphic file (type png)
+<use ac3.png>
+Package pdftex.def Info: ac3.png  used on input line 1135.
+(pdftex.def)             Requested size: 469.47049pt x 298.02046pt.
+ [30 <./sta2.png>]
+<tt3.png, id=720, 712.6625pt x 900.36375pt>
+File: tt3.png Graphic file (type png)
+<use tt3.png>
+Package pdftex.def Info: tt3.png  used on input line 1142.
+(pdftex.def)             Requested size: 469.47049pt x 593.11537pt.
+ [31 <./ac3.png>]
+<sta3.png, id=728, 554.07pt x 915.42pt>
+File: sta3.png Graphic file (type png)
+<use sta3.png>
+Package pdftex.def Info: sta3.png  used on input line 1149.
+(pdftex.def)             Requested size: 382.84134pt x 632.50047pt.
+ [32 <./tt3.png>]
+<con1ac.png, id=735, 966.61125pt x 660.4675pt>
+File: con1ac.png Graphic file (type png)
+<use con1ac.png>
+Package pdftex.def Info: con1ac.png  used on input line 1219.
+(pdftex.def)             Requested size: 469.47049pt x 320.77986pt.
+ [33 <./sta3.png>] [34]
+Overfull \vbox (776.79065pt too high) has occurred while \output is active []
 
 
-[26] (main.aux)
+[35 <./con1ac.png>]
+<con1tt.png, id=752, 867.24pt x 826.08624pt>
+File: con1tt.png Graphic file (type png)
+<use con1tt.png>
+Package pdftex.def Info: con1tt.png  used on input line 1226.
+(pdftex.def)             Requested size: 469.47049pt x 447.20177pt.
+<con1sta.png, id=753, 518.93875pt x 829.0975pt>
+File: con1sta.png Graphic file (type png)
+<use con1sta.png>
+Package pdftex.def Info: con1sta.png  used on input line 1233.
+(pdftex.def)             Requested size: 395.90204pt x 632.50047pt.
+ [36 <./con1tt.png>]
+<cyac1.png, id=760, 817.0525pt x 834.11626pt>
+File: cyac1.png Graphic file (type png)
+<use cyac1.png>
+Package pdftex.def Info: cyac1.png  used on input line 1243.
+(pdftex.def)             Requested size: 469.47049pt x 479.28221pt.
+ [37 <./con1sta.png>]
+<sytt1.png, id=768, 904.37875pt x 795.97375pt>
+File: sytt1.png Graphic file (type png)
+<use sytt1.png>
+Package pdftex.def Info: sytt1.png  used on input line 1250.
+(pdftex.def)             Requested size: 469.47049pt x 413.19215pt.
+ [38 <./cyac1.png>]
+<systa1.png, id=775, 647.41875pt x 835.12pt>
+File: systa1.png Graphic file (type png)
+<use systa1.png>
+Package pdftex.def Info: systa1.png  used on input line 1257.
+(pdftex.def)             Requested size: 469.47049pt x 605.58029pt.
+[39 <./sytt1.png>] [40 <./systa1.png>] (main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
@@ -1961,26 +2077,26 @@ L3 programming layer <2026-05-26>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EC84A91E51CC32E7D0B5CF575B01947D;21477.
+(rerunfilecheck)             Checksum: 17F7BB3F12134D29E2FA62F96323FA8B;21496.
  ) 
 Here is how much of TeX's memory you used:
- 12073 strings out of 467509
- 188010 string characters out of 5418889
- 659429 words of memory out of 5000000
- 40992 multiletter control sequences out of 15000+600000
+ 12207 strings out of 467509
+ 189804 string characters out of 5418889
+ 659431 words of memory out of 5000000
+ 41097 multiletter control sequences out of 15000+600000
  642612 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,10n,83p,411b,586s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\baotr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+ <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
 Program Files/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Program Files/MiKTeX/
 fonts/type1/vntex/vnr/vnbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr
 /vnr10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Program
  Files/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program Files/MiKTeX/fonts/t
 ype1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (26 pages, 593526 bytes).
+Output written on main.pdf (40 pages, 1374483 bytes).
 PDF statistics:
- 756 PDF objects out of 1000 (max. 8388607)
- 167 named destinations out of 1000 (max. 500000)
- 1128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 867 PDF objects out of 1000 (max. 8388607)
+ 196 named destinations out of 1000 (max. 500000)
+ 1203 words of extra memory for PDF output out of 10000 (max. 10000000)
 
