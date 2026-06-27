@@ -129,7 +129,7 @@ bottom=2.5cm
 			
 		    Trần Văn Học &
 			Member &
-			 &
+			052206005618 &
 			hoctv5618@ut.edu.vn \\
 			\hline
 			
@@ -313,77 +313,77 @@ bottom=2.5cm
 		\item \textbf{Allocated Effort:} 46 man-days.
 	\end{itemize}
 	\subsection{Project Risks}
-	\begin{longtable}{|c|p{5cm}|p{5cm}|c|p{6cm}|}
-		\hline
-		\rowcolor{HeaderGray}
-		\textbf{\#} &
-		\textbf{Risk Description} &
-		\textbf{Impact} &
-		\textbf{Possibility} &
-		\textbf{Response Plan}\\
-		\hline
-		\endfirsthead
-		
-		\hline
-		\rowcolor{HeaderGray}
-		\textbf{\#} &
-		\textbf{Risk Description} &
-		\textbf{Impact} &
-		\textbf{Possibility} &
-		\textbf{Response Plan}\\
-		\hline
-		\endhead
-		
-		1 &
-		External academic APIs (Semantic Scholar, OpenAlex, Crossref) become unavailable or change their endpoints. &
-		The system cannot retrieve publication data, causing incomplete search results and inaccurate trend analysis. &
-		High &
-		Implement API fallback mechanisms, monitor API status regularly, and cache previously retrieved data whenever possible.\\
-		\hline
-		
-		2 &
-		Large volumes of publication data lead to slow system performance. &
-		Users experience long response times when searching publications or viewing dashboards. &
-		Medium &
-		Optimize database indexing, implement pagination, caching, and asynchronous background synchronization.\\
-		\hline
-		
-		3 &
-		Security vulnerabilities expose user accounts or stored data. &
-		Unauthorized access, data leakage, and loss of user trust. &
-		Medium &
-		Use JWT authentication, RBAC authorization, password hashing, HTTPS, and regular security testing.\\
-		\hline
-		
-		4 &
-		Trend analysis results become inaccurate because of outdated or incomplete datasets. &
-		Generated reports and statistics may mislead users' research decisions. &
-		Medium &
-		Schedule automatic data synchronization and validate collected data before analysis.\\
-		\hline
-		
-		5 &
-		System integration between frontend, backend, and database encounters compatibility issues. &
-		Development delays and unexpected system failures during deployment. &
-		Medium &
-		Perform integration testing continuously and maintain version compatibility among all components.\\
-		\hline
-		
-		6 &
-		Insufficient testing before deployment leaves critical defects unresolved. &
-		System crashes, incorrect functionality, and poor user experience. &
-		High &
-		Prepare comprehensive Test Plans, Test Cases, conduct functional, integration, and user acceptance testing before release.\\
-		\hline
-		
-		7 &
-		Project schedule delays due to underestimated implementation effort. &
-		Failure to complete the project within the planned timeline. &
-		Medium &
-		Monitor project progress weekly, prioritize critical features, and adjust the implementation schedule when necessary.\\
-		\hline
-		
-	\end{longtable}
+\begin{longtable}{|c|p{3.5cm}|p{3.8cm}|p{1.8cm}|p{4.5cm}|}
+	\hline
+	\rowcolor{HeaderGray}
+	\textbf{\#} &
+	\textbf{Risk Description} &
+	\textbf{Impact} &
+	\textbf{Possibility} &
+	\textbf{Response Plan}\\
+	\hline
+	\endfirsthead
+	
+	\hline
+	\rowcolor{HeaderGray}
+	\textbf{\#} &
+	\textbf{Risk Description} &
+	\textbf{Impact} &
+	\textbf{Possibility} &
+	\textbf{Response Plan}\\
+	\hline
+	\endhead
+	
+	1 &
+	External academic APIs (Semantic Scholar, OpenAlex, Crossref) become unavailable or change their endpoints. &
+	The system cannot retrieve publication data, causing incomplete search results and inaccurate trend analysis. &
+	High &
+	Implement API fallback mechanisms, monitor API status regularly, and cache previously retrieved data whenever possible.\\
+	\hline
+	
+	2 &
+	Large volumes of publication data lead to slow system performance. &
+	Users experience long response times when searching publications or viewing dashboards. &
+	Medium &
+	Optimize database indexing, implement pagination, caching, and asynchronous background synchronization.\\
+	\hline
+	
+	3 &
+	Security vulnerabilities expose user accounts or stored data. &
+	Unauthorized access, data leakage, and loss of user trust. &
+	Medium &
+	Use JWT authentication, RBAC authorization, password hashing, HTTPS, and regular security testing.\\
+	\hline
+	
+	4 &
+	Trend analysis results become inaccurate because of outdated or incomplete datasets. &
+	Generated reports and statistics may mislead users' research decisions. &
+	Medium &
+	Schedule automatic data synchronization and validate collected data before analysis.\\
+	\hline
+	
+	5 &
+	System integration between frontend, backend, and database encounters compatibility issues. &
+	Development delays and unexpected system failures during deployment. &
+	Medium &
+	Perform integration testing continuously and maintain version compatibility among all components.\\
+	\hline
+	
+	6 &
+	Insufficient testing before deployment leaves critical defects unresolved. &
+	System crashes, incorrect functionality, and poor user experience. &
+	High &
+	Prepare comprehensive Test Plans, Test Cases, conduct functional, integration, and user acceptance testing before release.\\
+	\hline
+	
+	7 &
+	Project schedule delays due to underestimated implementation effort. &
+	Failure to complete the project within the planned timeline. &
+	Medium &
+	Monitor project progress weekly, prioritize critical features, and adjust the implementation schedule when necessary.\\
+	\hline
+	
+\end{longtable}
 	\section{Project Deliverables}
 	{
 		\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}

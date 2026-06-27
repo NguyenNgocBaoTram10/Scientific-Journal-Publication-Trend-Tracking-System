@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  26 JUN 2026 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  27 JUN 2026 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -906,143 +906,253 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
                    \relax 
 l.309 	\subsection{Project Objective}
                                      
-Overfull \hbox (120.34064pt too wide) in alignment at lines 316--325
- [] [] [] [] [] 
+Overfull \hbox (9.70479pt too wide) in paragraph at lines 322--322
+[]|\T5/cmr/bx/n/12 Possibility| 
  []
 
 
-Overfull \hbox (120.34064pt too wide) in alignment at lines 325--335
- [] [] [] [] [] 
+Overfull \hbox (9.70479pt too wide) in paragraph at lines 332--332
+[]|\T5/cmr/bx/n/12 Possibility| 
+ []
+
+
+Underfull \hbox (badness 1184) in paragraph at lines 338--338
+[]|\T5/cmr/m/n/12 External aca-demic
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 338--338
-[]|\T5/cmr/m/n/12 External aca-demic APIs
+\T5/cmr/m/n/12 APIs (Se-man-tic
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 338--338
-\T5/cmr/m/n/12 (Se-man-tic Scholar, Ope-
+\T5/cmr/m/n/12 Scholar, Ope-
  []
 
 
-Underfull \hbox (badness 7925) in paragraph at lines 338--338
-\T5/cmr/m/n/12 nAlex, Cross-ref) be-come
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+\T5/cmr/m/n/12 nAlex, Cross-ref)
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 339--339
-\T5/cmr/m/n/12 pub-li-ca-tion data, caus-ing
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+\T5/cmr/m/n/12 or change their
  []
 
 
-Underfull \hbox (badness 4391) in paragraph at lines 339--339
-\T5/cmr/m/n/12 in-com-plete search re-sults
+Underfull \hbox (badness 1881) in paragraph at lines 339--339
+[]|\T5/cmr/m/n/12 The sys-tem can-not
  []
 
 
-Underfull \hbox (badness 1320) in paragraph at lines 346--346
-[]|\T5/cmr/m/n/12 Users ex-pe-ri-ence long re-
+Underfull \hbox (badness 7522) in paragraph at lines 339--339
+\T5/cmr/m/n/12 re-trieve pub-li-ca-tion
  []
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 348--349
-\T5/cmr/m/n/12 asyn-chronous back-ground syn-
+Underfull \hbox (badness 1845) in paragraph at lines 339--339
+\T5/cmr/m/n/12 plete search re-sults
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 353--353
-\T5/cmr/m/n/12 leak-age, and loss of user
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+\T5/cmr/m/n/12 mech-a-nisms, mon-i-tor
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 355--356
-\T5/cmr/m/n/12 HTTPS, and reg-u-lar se-cu-rity
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+\T5/cmr/m/n/12 API sta-tus reg-u-larly,
  []
 
 
-Underfull \hbox (badness 6708) in paragraph at lines 359--359
-\T5/cmr/m/n/12 come in-ac-cu-rate be-cause
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+\T5/cmr/m/n/12 and cache pre-vi-ously
+ []
+
+
+Underfull \hbox (badness 3039) in paragraph at lines 345--345
+[]|\T5/cmr/m/n/12 Large vol-umes of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--345
+\T5/cmr/m/n/12 pub-li-ca-tion data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
+[]|\T5/cmr/m/n/12 Users ex-pe-ri-ence
+ []
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 346--346
+\T5/cmr/m/n/12 li-ca-tions or view-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
+[]|\T5/cmr/m/n/12 Optimize database
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
+\T5/cmr/m/n/12 in-dex-ing, im-ple-ment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
+\T5/cmr/m/n/12 pag-i-na-tion, caching,
+ []
+
+
+Underfull \hbox (badness 6625) in paragraph at lines 352--352
+\T5/cmr/m/n/12 i-ties ex-pose user
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+\T5/cmr/m/n/12 data leak-age, and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
+[]|\T5/cmr/m/n/12 Use JWT au-then-ti-ca-
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 355--356
+\T5/cmr/m/n/12 tion, RBAC au-tho-riza-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
+\T5/cmr/m/n/12 HTTPS, and reg-u-lar
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 359--359
+\T5/cmr/m/n/12 cu-rate be-cause of
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 360--360
-[]|\T5/cmr/m/n/12 Generated re-ports and
+[]|\T5/cmr/m/n/12 Generated re-ports
+ []
+
+
+Underfull \hbox (badness 5175) in paragraph at lines 360--360
+\T5/cmr/m/n/12 and statis-tics may
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 360--360
-\T5/cmr/m/n/12 statis-tics may mis-lead
+\T5/cmr/m/n/12 mis-lead users' re-
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 362--363
-\T5/cmr/m/n/12 niza-tion and val-i-date col-lected
+Underfull \hbox (badness 6542) in paragraph at lines 366--366
+\T5/cmr/m/n/12 be-tween fron-tend,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 366--366
-[]|\T5/cmr/m/n/12 System in-te-gra-tion be-
+\T5/cmr/m/n/12 back-end, and
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 366--366
-\T5/cmr/m/n/12 tween fron-tend, back-end,
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+\T5/cmr/m/n/12 database en-coun-
  []
 
 
-Underfull \hbox (badness 6625) in paragraph at lines 366--366
-\T5/cmr/m/n/12 and database en-coun-ters
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+\T5/cmr/m/n/12 ters com-pat-i-bil-ity
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--367
-[]|\T5/cmr/m/n/12 Development de-lays and
+Underfull \hbox (badness 3000) in paragraph at lines 367--367
+[]|\T5/cmr/m/n/12 Development de-lays
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 373--373
-[]|\T5/cmr/m/n/12 Insufficient test-ing be-fore
+Underfull \hbox (badness 1917) in paragraph at lines 367--367
+\T5/cmr/m/n/12 tem fail-ures dur-ing
  []
 
 
-Underfull \hbox (badness 1852) in paragraph at lines 373--373
-\T5/cmr/m/n/12 de-ploy-ment leaves crit-i-cal
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+[]|\T5/cmr/m/n/12 Perform in-te-gra-tion
  []
 
 
-Underfull \hbox (badness 3260) in paragraph at lines 374--374
-[]|\T5/cmr/m/n/12 System crashes, in-cor-rect
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+\T5/cmr/m/n/12 test-ing con-tin-u-ously
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+\T5/cmr/m/n/12 and main-tain ver-sion
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 373--373
+\T5/cmr/m/n/12 be-fore de-ploy-ment
+ []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 373--373
+\T5/cmr/m/n/12 leaves crit-i-cal de-
+ []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 374--374
+[]|\T5/cmr/m/n/12 System crashes, in-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 376--377
-[]|\T5/cmr/m/n/12 Prepare com-pre-hen-sive Test
+[]|\T5/cmr/m/n/12 Prepare com-pre-hen-sive
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 376--377
-\T5/cmr/m/n/12 Plans, Test Cases, con-duct
+\T5/cmr/m/n/12 con-duct func-tional,
  []
 
 
-Underfull \hbox (badness 3635) in paragraph at lines 380--380
-\T5/cmr/m/n/12 to un-der-es-ti-mated im-ple-
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
+\T5/cmr/m/n/12 in-te-gra-tion, and user
  []
 
 
-Underfull \hbox (badness 5741) in paragraph at lines 381--381
-[]|\T5/cmr/m/n/12 Failure to com-plete the
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
+[]|\T5/cmr/m/n/12 Project sched-ule
  []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 383--384
-\T5/cmr/m/n/12 pri-or-i-tize crit-i-cal fea-tures, and
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
+\T5/cmr/m/n/12 de-lays due to
  []
 
 
-Overfull \hbox (120.34064pt too wide) in alignment at lines 335--386
- [] [] [] [] [] 
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
+\T5/cmr/m/n/12 un-der-es-ti-mated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
+\T5/cmr/m/n/12 im-ple-men-ta-tion
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 381--381
+[]|\T5/cmr/m/n/12 Failure to com-plete
+ []
+
+
+Underfull \hbox (badness 5756) in paragraph at lines 381--381
+\T5/cmr/m/n/12 the project within
  []
 
 [6]
@@ -1856,7 +1966,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  12073 strings out of 467509
  188010 string characters out of 5418889
- 659430 words of memory out of 5000000
+ 659429 words of memory out of 5000000
  40992 multiletter control sequences out of 15000+600000
  642612 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1868,7 +1978,7 @@ fonts/type1/vntex/vnr/vnbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr
 /vnr10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Program
  Files/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program Files/MiKTeX/fonts/t
 ype1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (26 pages, 593475 bytes).
+Output written on main.pdf (26 pages, 593526 bytes).
 PDF statistics:
  756 PDF objects out of 1000 (max. 8388607)
  167 named destinations out of 1000 (max. 500000)
