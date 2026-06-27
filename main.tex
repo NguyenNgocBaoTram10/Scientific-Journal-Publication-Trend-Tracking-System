@@ -602,10 +602,1491 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \section{User Requirements}
 
 \subsection{Actors}
-\subsection{Use Cases}
+\subsubsection{User}
+User is the primary actor of the system. A user interacts with the system to access research-related functionalities such as searching papers, tracking publication trends, saving bookmarks, following topics, and receiving notifications.
 
-\subsubsection{Diagram(s)}
-\subsubsection{Descriptions}
+\textbf{Responsibilities:}
+\begin{itemize}
+	\item Access research-related features
+	\item Search scientific publications
+	\item Track research trends
+	\item Manage bookmarks
+	\item Follow research topics
+	\item Receive notifications
+	\item Generate reports
+\end{itemize}
+
+\subsubsection{Student}
+Student is a specialized type of User. Students use the system to search for research papers, follow topics of interest, and monitor publication trends for academic learning and study purposes.
+
+\textbf{Responsibilities:}
+\begin{itemize}
+	\item Search research papers
+	\item Save bookmarks
+	\item Follow topics
+	\item Analyze publication trends
+\end{itemize}
+
+\subsubsection{Researcher}
+Researcher is a specialized type of User. Researchers use the system for research analysis, trend monitoring, and report generation to support academic and scientific activities.
+
+\textbf{Responsibilities:}
+\begin{itemize}
+	\item Search research papers
+	\item Analyze research trends
+	\item Generate analytical reports
+	\item Monitor emerging research topics
+\end{itemize}
+
+\subsubsection{Admin}
+Admin manages the overall system configuration, user management, and synchronization processes.
+
+\textbf{Responsibilities:}
+\begin{itemize}
+	\item Manage users
+	\item Configure API sources
+	\item Synchronize academic data
+	\item Monitor system operations
+\end{itemize}
+
+\subsubsection{Academic API}
+
+Academic API is an external system that provides publication metadata and research-related data.
+
+\textbf{Examples:}
+\begin{itemize}
+	\item Semantic Scholar
+	\item OpenAlex
+	\item Crossref
+\end{itemize}
+
+\textbf{Responsibilities:}
+\begin{itemize}
+	\item Provide publication metadata
+	\item Support synchronization requests
+	\item Return academic data to the system
+\end{itemize}
+
+\subsection{Use Case Diagrams}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ucd.png}
+	\caption{Use Case Diagram}
+	\label{fig:usecase}
+\end{figure}
+\subsection{Use Case Descriptions}
+\subsubsection{Register}
+\textbf{Summary:}
+This use case allows a new user to create an account in the Scientific Journal Publication Trend Tracking System. The user provides personal information and account credentials. The system validates the information, creates a new account, and stores the user data for future authentication and access to system functionalities.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user accesses the registration page.
+	\item The system displays the registration form.
+	\item The user enters the required information, including:
+	\begin{itemize}
+		\item Full Name
+		\item Email Address
+		\item Username
+		\item Password
+	\end{itemize}
+	\item The user submits the registration form.
+	\item The system validates the entered information.
+	\item The system verifies that the username and email address are not already registered.
+	\item The system creates a new user account.
+	\item The system stores the account information in the database.
+	\item The system displays a registration success message.
+	\item The system prompts the user to proceed to the Login page.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{Email Already Exists}
+\begin{enumerate}
+	\item The user submits the registration form.
+	\item The system detects that the email address is already registered.
+	\item The system displays: ``This email address is already registered.''
+	\item The user enters a different email address.
+	\item The main flow resumes from Step 4.
+\end{enumerate}
+
+\textbf{Username Already Exists}
+\begin{enumerate}
+	\item The user submits the registration form.
+	\item The system detects that the username already exists.
+	\item The system displays: ``This username is already in use.''
+	\item The user enters a different username.
+	\item The main flow resumes from Step 4.
+\end{enumerate}
+
+\textbf{Invalid Input Information}
+\begin{enumerate}
+	\item The system validates the submitted information.
+	\item One or more fields contain invalid data.
+	\item The system highlights the invalid fields.
+	\item The system displays validation error messages.
+	\item The user corrects the information.
+	\item The main flow resumes from Step 4.
+\end{enumerate}
+
+\textbf{Database Error}
+\begin{enumerate}
+	\item The system attempts to create the user account.
+	\item A database error occurs.
+	\item The system displays: ``Unable to create account. Please try again later.''
+	\item The account is not created.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Registration Cancelled}
+\begin{enumerate}
+	\item The user starts the registration process.
+	\item The user cancels the registration.
+	\item The system returns to the home page.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item Each email address must be unique.
+	\item Each username must be unique.
+	\item Passwords shall be stored securely using encryption or hashing mechanisms.
+	\item Required fields shall be validated before account creation.
+	\item Registration data shall be stored securely.
+	\item The registration process should be completed within an acceptable response time.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user does not already have an authenticated session.
+	\item The registration service is available.
+	\item The system database is operational.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item A new user account is successfully created.
+	\item User information is stored in the database.
+	\item The user is eligible to access the Login function.
+	\item The system records the registration event.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{Login}
+
+After successful registration, the user may proceed to log into the system.
+
+\subsubsection{Login}
+
+\textbf{Summary:}
+This use case allows users to authenticate themselves and access the Scientific Journal Publication Trend Tracking System according to their assigned roles.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user opens the system login page.
+	\item The user enters a valid username and password.
+	\item The user clicks the ``Login'' button.
+	\item The system verifies the user’s credentials.
+	\item The system identifies the user’s role.
+	\item The system grants access to the appropriate functions.
+	\item The system displays the main dashboard.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{Invalid Credentials}
+\begin{enumerate}
+	\item The user enters an incorrect username or password.
+	\item The system displays an error message.
+	\item The user is prompted to re-enter login information.
+\end{enumerate}
+
+\textbf{Empty Input Fields}
+\begin{enumerate}
+	\item The user leaves the username or password field blank.
+	\item The system displays a validation message.
+	\item The user must complete the required fields before proceeding.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item User passwords must be stored securely.
+	\item Only authenticated users can access system functions.
+	\item User sessions must be protected from unauthorized access.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user has a registered account in the system.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item The user is successfully authenticated.
+	\item A valid user session is created.
+	\item The user gains access to authorized system functions.
+\end{itemize}
+
+\textbf{Extension Point}
+
+None
+
+\subsubsection{Search Research Papers}
+
+\textbf{Summary:}
+This use case allows users to search for scientific publications using keywords, author names, or journal names. The system retrieves and displays publication metadata collected from synchronized academic data sources.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user accesses the Search Research Papers function.
+	\item The user enters one or more search criteria:
+	\begin{itemize}
+		\item Keyword
+		\item Author name
+		\item Journal name
+	\end{itemize}
+	\item The user submits the search request.
+	\item The system validates the search criteria.
+	\item The system searches publication metadata stored in the system database.
+	\item The system retrieves matching records.
+	\item The system displays a list of matching publications, including:
+	\begin{itemize}
+		\item Title
+		\item Authors
+		\item Journal
+		\item Publication Year
+	\end{itemize}
+	\item The user selects a publication from the result list.
+	\item The system invokes the View Paper Details use case.
+	\item The publication details are displayed to the user.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{Empty Search Criteria}
+\begin{enumerate}
+	\item The user submits the search form without entering any criteria.
+	\item The system displays a validation message.
+	\item The user is requested to enter at least one search criterion.
+\end{enumerate}
+
+\textbf{No Matching Publications Found}
+\begin{enumerate}
+	\item The system performs the search.
+	\item No matching publications are found.
+	\item The system displays a ``No results found'' message.
+	\item The user may modify the search criteria and perform another search.
+\end{enumerate}
+
+\textbf{Data Retrieval Error}
+\begin{enumerate}
+	\item The system attempts to retrieve publication data.
+	\item The publication database is temporarily unavailable.
+	\item The system displays an error message.
+	\item The user is informed to try again later.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item The system shall support searching by keyword, author, and journal.
+	\item Search results should be returned within an acceptable response time.
+	\item Search results should be ranked by relevance.
+	\item Only publication metadata shall be displayed.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user has successfully logged into the system.
+	\item Publication metadata has been synchronized from external academic sources.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item A list of matching publications is displayed.
+	\item The selected publication can be viewed in detail through the ``View Paper Details'' use case.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{View Paper Details}
+
+After selecting a publication from the search results, the ``View Paper Details'' use case may be invoked to display detailed publication metadata.
+
+\subsubsection{View Paper Details}
+
+\textbf{Summary:}
+This use case allows users to view detailed information about a selected research paper, including metadata such as title, authors, abstract, keywords, publication year, and journal information. Users can review the paper before deciding to save it as a bookmark or use it for trend analysis.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user performs Search Research Papers.
+	\item The system displays a list of matching research papers.
+	\item The user selects a paper from the search results.
+	\item The system retrieves the paper metadata from the database or external academic API.
+	\item The system displays detailed information including:
+	\begin{itemize}
+		\item Paper title
+		\item Authors
+		\item Abstract
+		\item Keywords
+		\item Publication year
+		\item Journal name
+		\item Citation information (if available)
+	\end{itemize}
+	\item The user reviews the paper information.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{Paper Information Not Available}
+\begin{enumerate}
+	\item The user selects a paper.
+	\item The system cannot retrieve the paper information.
+	\item The system displays an error message.
+	\item The user returns to the search results.
+\end{enumerate}
+
+\textbf{External API Unavailable}
+\begin{enumerate}
+	\item The system attempts to retrieve paper information from an external academic API.
+	\item The API does not respond or returns an error.
+	\item The system displays a notification indicating that paper details cannot be loaded.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Save Bookmark}
+\begin{enumerate}
+	\item The user is viewing paper details.
+	\item The user chooses to save the paper.
+	\item The system invokes the Save Bookmarks use case.
+	\item The bookmark is stored successfully.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item Paper details must be displayed within 3 seconds under normal conditions.
+	\item The system shall display only metadata and not the full-text content of papers.
+	\item Information retrieved from external APIs must be validated before display.
+	\item The user interface should present paper information in a readable format.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user has successfully logged into the system.
+	\item The user has completed Search Research Papers and obtained search results.
+	\item At least one paper exists in the result list.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item The selected paper’s information is displayed.
+	\item The user can continue to:
+	\begin{itemize}
+		\item Save the paper as a bookmark
+		\item Return to search results
+		\item Continue exploring other papers
+	\end{itemize}
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{Save Bookmarks}
+
+The user may save the currently viewed paper to a personal bookmark list.
+
+\subsubsection{Save Bookmarks}
+
+\textbf{Summary:}
+This use case allows users to save research papers of interest to their personal bookmark collection for future reference and quick access.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user opens the details of a research paper through View Paper Details.
+	\item The user selects the Save Bookmark option.
+	\item The system verifies that the paper is not already bookmarked.
+	\item The system stores the paper information in the user’s bookmark collection.
+	\item The system displays a confirmation message.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{Paper Already Bookmarked}
+\begin{enumerate}
+	\item The user selects Save Bookmark.
+	\item The system detects that the paper already exists in the bookmark collection.
+	\item The system displays a notification: ``This paper is already bookmarked.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{User Session Expired}
+\begin{enumerate}
+	\item The user attempts to save a bookmark.
+	\item The system detects that the session has expired.
+	\item The system redirects the user to the Login page.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Database Error}
+\begin{enumerate}
+	\item The system attempts to save the bookmark.
+	\item A database error occurs.
+	\item The system displays an error message.
+	\item The bookmark is not saved.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item A user cannot save duplicate bookmarks.
+	\item Bookmark data must be associated with the correct user account.
+	\item The system should confirm successful bookmark creation immediately.
+	\item The bookmark operation should complete within 2 seconds under normal conditions.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user has successfully logged into the system.
+	\item The user has accessed ``View Paper Details''.
+	\item The selected paper exists in the system.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item The selected paper is stored in the user’s bookmark collection.
+	\item The bookmark list is updated.
+	\item The user can access the bookmarked paper later.
+\end{itemize}
+
+\textbf{Extension Point}
+
+None
+
+\subsubsection{Track Publication Trends}
+
+\textbf{Summary:}
+This use case allows users to analyze publication trends based on keywords, research topics, authors, or journals. The system collects publication metadata from academic data sources and visualizes publication trends over time through charts and dashboards. This functionality helps researchers, lecturers, and students identify emerging research topics and understand the development of scientific fields.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user logs into the system.
+	\item The user selects ``Track Publication Trends''.
+	\item The system displays a trend analysis interface.
+	\item The user enters one or more:
+	\begin{itemize}
+		\item Keywords
+		\item Research topics
+		\item Author names
+		\item Journal names
+	\end{itemize}
+	\item The user specifies a time range for analysis.
+	\item The system retrieves related publication metadata from the database.
+	\item The system aggregates publication data by year.
+	\item The system analyzes publication frequency and growth patterns.
+	\item The system generates trend statistics.
+	\item The system invokes:
+	\begin{itemize}
+		\item View Dashboard
+		\item View Trending Topics
+	\end{itemize}
+	\item The system displays visual charts and analytical results.
+	\item The user reviews the trend information.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{No Matching Publications Found}
+\begin{enumerate}
+	\item The user submits a trend analysis request.
+	\item The system cannot find matching publications.
+	\item The system displays: ``No publication data found for the selected criteria.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Invalid Time Range}
+\begin{enumerate}
+	\item The user selects an invalid time range.
+	\item The system validates the input.
+	\item The system displays an error message.
+	\item The user enters a valid time range.
+	\item The main flow resumes from Step 5.
+\end{enumerate}
+
+\textbf{Insufficient Data}
+\begin{enumerate}
+	\item The system retrieves only a small number of publications.
+	\item The system generates limited statistics.
+	\item The system displays: ``Limited data available for trend analysis.''
+	\item The use case continues.
+\end{enumerate}
+
+\textbf{Data Synchronization Failure}
+\begin{enumerate}
+	\item The system attempts to access publication data.
+	\item Required data is unavailable.
+	\item The system displays an error message.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Generate Report}
+\begin{enumerate}
+	\item The user reviews trend results.
+	\item The user selects ``Generate Reports''.
+	\item The system invokes ``Generate Reports''.
+	\item A report is generated based on the current trend analysis.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item The system shall support trend analysis using:
+	\begin{itemize}
+		\item Keywords
+		\item Topics
+		\item Authors
+		\item Journals
+	\end{itemize}
+	\item The system shall visualize results using charts and dashboards.
+	\item The system shall support analysis across multiple years.
+	\item Trend calculations shall be based on publication metadata only.
+	\item The system shall process trend queries within 5 seconds under normal conditions.
+	\item The system shall support data collected from:
+	\begin{itemize}
+		\item Semantic Scholar
+		\item OpenAlex
+		\item Crossref
+	\end{itemize}
+	\item The system shall provide clear visual indicators of increasing or decreasing publication trends.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user has successfully logged into the system.
+	\item Publication metadata exists in the database.
+	\item Academic data sources have been synchronized previously.
+	\item The user has permission to access trend analysis features.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item Trend analysis results are generated.
+	\item Publication statistics are displayed.
+	\item Dashboard visualizations are available.
+	\item Trending topics are identified.
+	\item The user may generate reports based on the analysis.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{View Dashboard}
+
+The system may display statistical dashboards showing publication counts and trend charts.
+
+\textbf{View Trending Topics}
+
+The system may identify and display currently popular research topics.
+
+\textbf{Generate Reports}
+
+The user may export or generate analytical reports from trend analysis results.
+
+\subsubsection{View Dashboard}
+
+\textbf{Summary:}
+This use case allows users to view dashboard statistics and visual representations of publication data. The dashboard provides an overview of publication trends, research activity, and topic popularity through charts and statistical indicators.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user accesses ``Track Publication Trends''.
+	\item The system completes trend analysis.
+	\item The system invokes ``View Dashboard''.
+	\item The system retrieves statistical data.
+	\item The system generates visual components, including:
+	\begin{itemize}
+		\item Publication count by year
+		\item Topic distribution
+		\item Journal distribution
+		\item Growth trends
+	\end{itemize}
+	\item The system displays the dashboard.
+	\item The user reviews charts and statistics.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{No Statistical Data Available}
+\begin{enumerate}
+	\item The system attempts to generate the dashboard.
+	\item No statistical data is available.
+	\item The system displays: ``No statistical data available.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Visualization Generation Failure}
+\begin{enumerate}
+	\item The system attempts to generate charts.
+	\item An internal error occurs.
+	\item The system displays an error message.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item Dashboard information must be presented visually.
+	\item Charts should be easy to understand.
+	\item Statistical information must be updated according to synchronized publication data.
+	\item Dashboard loading time should not exceed 5 seconds under normal conditions.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user has successfully logged into the system.
+	\item Trend analysis has been performed.
+	\item Publication statistics are available.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item Statistical charts are displayed.
+	\item Users gain an overview of publication trends.
+	\item Users may continue to view trending topics or generate reports.
+\end{itemize}
+
+\textbf{Extension Point}
+
+None
+
+\subsubsection{View Trending Topics}
+
+\textbf{Summary:}
+This use case allows users to identify research topics that are currently gaining attention based on publication trends and topic frequency analysis.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user accesses ``Track Publication Trends''.
+	\item The system analyzes publication metadata.
+	\item The system identifies frequently occurring topics.
+	\item The system ranks topics according to popularity and growth rate.
+	\item The system displays a list of trending research topics.
+	\item For each topic, the system displays:
+	\begin{itemize}
+		\item Topic name
+		\item Number of related publications
+		\item Trend direction
+	\end{itemize}
+	\item The user reviews the trending topics.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{No Trending Topics Identified}
+\begin{enumerate}
+	\item The system performs trend analysis.
+	\item No significant topic trends are found.
+	\item The system displays: ``No trending topics identified.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Insufficient Publication Data}
+\begin{enumerate}
+	\item The system analyzes available data.
+	\item The amount of data is insufficient.
+	\item The system displays a warning message.
+	\item The use case continues with limited results.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item Topic ranking should be based on publication frequency and growth rate.
+	\item Trending topics should be updated whenever publication data is synchronized.
+	\item Results should be displayed clearly and intuitively.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user has successfully logged into the system.
+	\item Publication metadata exists in the database.
+	\item Trend analysis has been performed.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item Trending research topics are displayed.
+	\item Users can identify emerging research areas.
+	\item Users may choose to follow topics for future updates.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{Follow Topics}
+
+Users may choose to follow a trending topic for future notifications.
+
+\subsubsection{Follow Topics}
+
+\textbf{Summary:}
+This use case allows users to follow research topics of interest. The system records the user’s preferences and monitors future publication activities related to those topics. Users can receive updates and notifications when new publications or significant trend changes occur.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user accesses the list of trending topics or trend analysis results.
+	\item The system displays available research topics.
+	\item The user selects a research topic.
+	\item The user clicks the Follow Topic button.
+	\item The system verifies that the topic is not already being followed by the user.
+	\item The system stores the topic in the user’s followed-topic list.
+	\item The system confirms the follow action.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{Topic Already Followed}
+\begin{enumerate}
+	\item The user selects a topic that is already followed.
+	\item The system detects the duplicate subscription.
+	\item The system displays: ``You are already following this topic.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Invalid Topic Selection}
+\begin{enumerate}
+	\item The user selects an unavailable topic.
+	\item The system cannot locate the topic.
+	\item The system displays an error message.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Database Storage Failure}
+\begin{enumerate}
+	\item The system attempts to save the followed topic.
+	\item A storage error occurs.
+	\item The system displays an error message.
+	\item The follow request is not completed.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item A user cannot follow the same topic multiple times.
+	\item Followed topics must be associated with the correct user account.
+	\item The system shall support following multiple topics simultaneously.
+	\item Follow information must persist between user sessions.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user has successfully logged into the system.
+	\item The user has accessed trend analysis results or trending topics.
+	\item The selected topic exists in the system.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item The selected topic is added to the user’s followed-topic list.
+	\item The system begins monitoring publication activities related to the topic.
+	\item The user becomes eligible to receive notifications related to the topic.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{Receive Notifications}
+
+The system may send notifications when new publications related to followed topics become available.
+
+\subsubsection{Receive Notifications}
+
+\textbf{Summary:}
+This use case allows users to receive notifications about newly published research papers, emerging research trends, and updates related to topics they follow. Notifications help users stay informed without manually checking publication databases.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user follows one or more research topics using ``Follow Topics''.
+	\item The system continuously monitors publication metadata during synchronization processes.
+	\item The system detects:
+	\begin{itemize}
+		\item Newly published papers related to followed topics
+		\item Significant increases in publication activity
+		\item Emerging research trends
+	\end{itemize}
+	\item The system generates notification messages.
+	\item The system stores notifications in the user’s notification center.
+	\item The user accesses the notification section.
+	\item The system displays available notifications.
+	\item The user selects a notification.
+	\item The system displays the related publication or trend information.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{No New Notifications}
+\begin{enumerate}
+	\item The user accesses the notification center.
+	\item The system finds no new notifications.
+	\item The system displays: ``No new notifications available.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Notification References Deleted Data}
+\begin{enumerate}
+	\item The user opens a notification.
+	\item The related publication information is unavailable.
+	\item The system displays: ``The referenced publication is no longer available.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Notification Generation Failure}
+\begin{enumerate}
+	\item The system detects new publication activity.
+	\item A notification generation error occurs.
+	\item The system logs the error.
+	\item The notification is not delivered.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item Notifications shall only be generated for topics followed by the user.
+	\item Notification information must be accurate and up-to-date.
+	\item Duplicate notifications should be avoided.
+	\item Notifications should remain accessible until viewed or removed by the user.
+	\item The system shall support multiple notifications for different topics.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user has successfully logged into the system.
+	\item The user has followed at least one research topic.
+	\item Publication metadata has been synchronized from external academic sources.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item Relevant notifications are generated and stored.
+	\item Users are informed about new publications and trend updates.
+	\item Users may access related publication details or trend information.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{View Paper Details}
+
+The user may open a notification related to a newly published paper.
+
+\textbf{Track Publication Trends}
+
+The user may open a notification related to trend changes.
+
+\subsubsection{Generate Reports}
+
+\textbf{Summary:}
+This use case allows users to generate analytical reports based on publication trend analysis. The generated reports summarize publication statistics, trending topics, research growth patterns, and other relevant insights within a specified time period.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The user completes Track Publication Trends.
+	\item The system displays trend analysis results.
+	\item The user selects ``Generate Reports''.
+	\item The system displays report generation options.
+	\item The user specifies report parameters:
+	\begin{itemize}
+		\item Research topic
+		\item Keyword
+		\item Journal
+		\item Time range
+	\end{itemize}
+	\item The user submits the report request.
+	\item The system retrieves relevant publication statistics.
+	\item The system compiles analytical information.
+	\item The system generates the report.
+	\item The system displays the generated report.
+	\item The user reviews the report.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{No Data Available}
+\begin{enumerate}
+	\item The user requests report generation.
+	\item The system finds no matching publication data.
+	\item The system displays: ``No data available for report generation.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Invalid Report Parameters}
+\begin{enumerate}
+	\item The user enters invalid report criteria.
+	\item The system validates the input.
+	\item The system displays an error message.
+	\item The user corrects the parameters.
+	\item The main flow resumes from Step 5.
+\end{enumerate}
+
+\textbf{Report Generation Failure}
+\begin{enumerate}
+	\item The system begins generating the report.
+	\item An internal processing error occurs.
+	\item The system displays an error message.
+	\item The report is not generated.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Insufficient Data for Analysis}
+\begin{enumerate}
+	\item The system retrieves limited publication data.
+	\item The system generates a report with limited findings.
+	\item The system displays: ``The report contains limited analytical results due to insufficient data.''
+	\item The use case continues.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item Reports shall be generated from publication metadata only.
+	\item Reports shall include statistical summaries and trend analysis results.
+	\item Reports shall clearly present publication growth patterns.
+	\item Report generation should complete within an acceptable response time.
+	\item Generated reports should be readable and suitable for academic reference.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The user has successfully logged into the system.
+	\item Trend analysis has been completed through Track Publication Trends.
+	\item Relevant publication data exists in the system database.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item An analytical report is generated successfully.
+	\item The report is displayed to the user.
+	\item The report summarizes publication trends and research insights.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{Track Publication Trends}
+
+This use case is initiated after trend analysis results become available.
+
+\subsubsection{Manage System}
+
+\textbf{Summary:}
+This use case allows the System Administrator to manage system operations, including user account management, configuration of academic data sources, and synchronization of publication metadata from external academic APIs. The administrator ensures that the system operates correctly and that publication data remains up-to-date.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The System Administrator logs into the system.
+	\item The administrator accesses the Manage System function.
+	\item The system displays available administration options:
+	\begin{itemize}
+		\item Manage Users
+		\item Configure API Sources
+		\item Synchronize Academic Data
+	\end{itemize}
+	\item The administrator selects an administrative task.
+	\item The system executes the selected operation.
+	\item The system updates the corresponding configuration or data.
+	\item The system confirms successful completion.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{Unauthorized Access}
+\begin{enumerate}
+	\item A non-administrator user attempts to access the ``Manage System'' function.
+	\item The system verifies user permissions.
+	\item The system denies access.
+	\item An authorization error message is displayed.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Invalid Configuration}
+\begin{enumerate}
+	\item The administrator enters invalid API configuration information.
+	\item The system validates the configuration.
+	\item The system displays validation errors.
+	\item The administrator corrects the configuration.
+	\item The main flow resumes from Step 4.
+\end{enumerate}
+
+\textbf{Data Synchronization Failure}
+\begin{enumerate}
+	\item The administrator initiates data synchronization.
+	\item The external academic API is unavailable.
+	\item The synchronization process fails.
+	\item The system logs the error.
+	\item The system notifies the administrator.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{User Management Error}
+\begin{enumerate}
+	\item The administrator performs a user management operation.
+	\item The operation cannot be completed.
+	\item The system displays an error message.
+	\item No changes are applied.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item Only users with administrator privileges can access this functionality.
+	\item All administrative actions shall be logged for auditing purposes.
+	\item API configuration changes must be validated before being applied.
+	\item Synchronization processes shall not affect system availability.
+	\item The system shall support integration with:
+	\begin{itemize}
+		\item Semantic Scholar API
+		\item OpenAlex API
+		\item Crossref API
+	\end{itemize}
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The administrator has successfully logged into the system.
+	\item The administrator account has valid administrative privileges.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item System settings are updated if modifications are made.
+	\item User information is updated if user management operations are performed.
+	\item Academic publication metadata is synchronized if synchronization is executed.
+	\item Administrative actions are recorded in the system log.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{Manage Users}
+
+The administrator may manage user accounts, roles, and permissions.
+
+\textbf{Configure API Sources}
+
+The administrator may configure external academic data sources used by the system.
+
+\textbf{Synchronize Academic Data}
+
+The administrator may initiate synchronization of publication metadata from external APIs.
+
+\subsubsection{Manage Users}
+
+\textbf{Summary:}
+This use case allows the System Administrator to manage user accounts within the Scientific Journal Publication Trend Tracking System. The administrator can view user information, update account details, activate accounts, deactivate accounts, and manage user roles and permissions. This functionality ensures proper access control and system security.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The System Administrator logs into the system.
+	\item The administrator accesses the Manage Users function from the administration panel.
+	\item The system displays a list of registered users.
+	\item The administrator searches for or selects a specific user account.
+	\item The system displays detailed user information, including:
+	\begin{itemize}
+		\item User ID
+		\item Username
+		\item Email address
+		\item Assigned role
+		\item Account status
+		\item Registration date
+	\end{itemize}
+	\item The administrator chooses a management operation:
+	\begin{itemize}
+		\item View user
+		\item Update user information
+		\item Change user role
+		\item Activate account
+		\item Deactivate account
+	\end{itemize}
+	\item The administrator submits the requested changes.
+	\item The system validates the submitted information.
+	\item The system updates the user account.
+	\item The system records the administrative action in the audit log.
+	\item The system displays a success confirmation message.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{User Not Found}
+\begin{enumerate}
+	\item The administrator searches for a user.
+	\item The system cannot locate the specified account.
+	\item The system displays: ``User account not found.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Invalid User Information}
+\begin{enumerate}
+	\item The administrator updates account information.
+	\item The system validates the input.
+	\item Invalid or incomplete information is detected.
+	\item The system displays validation errors.
+	\item The administrator corrects the information.
+	\item The main flow resumes from Step 7.
+\end{enumerate}
+
+\textbf{Role Assignment Conflict}
+\begin{enumerate}
+	\item The administrator attempts to assign an invalid role.
+	\item The system detects a role conflict.
+	\item The system displays an authorization error.
+	\item The role change is rejected.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Database Update Failure}
+\begin{enumerate}
+	\item The system attempts to update user information.
+	\item A database error occurs.
+	\item The system displays an error message.
+	\item No changes are applied.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Unauthorized Access}
+\begin{enumerate}
+	\item A non-administrator attempts to access Manage Users.
+	\item The system verifies permissions.
+	\item Access is denied.
+	\item The system displays: ``Access denied. Administrator privileges required.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item Only administrators may perform user management operations.
+	\item All administrative actions shall be recorded in audit logs.
+	\item User role modifications shall be validated before being applied.
+	\item Account status changes shall take effect immediately.
+	\item The system shall prevent unauthorized privilege escalation.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The administrator has successfully logged into the system.
+	\item The administrator possesses valid administrative privileges.
+	\item User accounts exist within the system.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item User information is updated successfully.
+	\item User roles and permissions are modified if required.
+	\item Account status changes are applied.
+	\item Administrative actions are recorded in system logs.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{Manage System}
+
+``Manage Users'' is invoked as part of ``Manage System''.
+
+\subsubsection{Configure API Sources}
+
+\textbf{Summary:}
+This use case allows the System Administrator to configure, update, test, and manage external academic data sources used by the Scientific Journal Publication Trend Tracking System. These sources provide publication metadata that supports paper searching, trend analysis, trending topic identification, and report generation. The administrator can manage API connections such as Semantic Scholar, OpenAlex, and Crossref to ensure reliable and accurate data acquisition.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The System Administrator logs into the system.
+	\item The administrator accesses the Configure API Sources function.
+	\item The system displays a list of currently configured academic APIs.
+	\item The administrator selects one of the following actions:
+	\begin{itemize}
+		\item Add API Source
+		\item Update API Configuration
+		\item Remove API Source
+		\item Test API Connection
+	\end{itemize}
+	\item The administrator enters or modifies API configuration information, including:
+	\begin{itemize}
+		\item API Name
+		\item API Endpoint URL
+		\item Authentication Key (if required)
+		\item Synchronization Settings
+	\end{itemize}
+	\item The administrator submits the configuration.
+	\item The system validates the configuration parameters.
+	\item The system attempts to establish a connection with the specified API.
+	\item The API responds successfully.
+	\item The system saves the configuration settings.
+	\item The system records the action in the administration log.
+	\item The system displays a success confirmation message.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{Invalid Configuration Data}
+\begin{enumerate}
+	\item The administrator enters incomplete or incorrect API information.
+	\item The system validates the submitted data.
+	\item Validation fails.
+	\item The system displays detailed validation errors.
+	\item The administrator corrects the information.
+	\item The main flow resumes from Step 6.
+\end{enumerate}
+
+\textbf{API Connection Failure}
+\begin{enumerate}
+	\item The system attempts to establish a connection.
+	\item The API server is unavailable or unreachable.
+	\item The connection test fails.
+	\item The system displays: ``Unable to connect to the selected API source.''
+	\item The configuration is not activated.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Authentication Failure}
+\begin{enumerate}
+	\item The system attempts to authenticate with the API.
+	\item The API key or authentication credentials are invalid.
+	\item The API rejects the request.
+	\item The system displays: ``Authentication failed. Please verify API credentials.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Duplicate API Source}
+\begin{enumerate}
+	\item The administrator attempts to add an API source that already exists.
+	\item The system detects duplication.
+	\item The system displays: ``This API source is already configured.''
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Database Storage Error}
+\begin{enumerate}
+	\item The system attempts to save API configuration settings.
+	\item A database error occurs.
+	\item The system displays an error message.
+	\item The configuration is not saved.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item Only administrators shall be allowed to configure API sources.
+	\item API credentials must be stored securely.
+	\item API endpoint validation must be performed before activation.
+	\item All configuration changes must be logged.
+	\item The system shall support integration with:
+	\begin{itemize}
+		\item Semantic Scholar API
+		\item OpenAlex API
+		\item Crossref API
+	\end{itemize}
+	\item Configuration updates should not interrupt existing system operations.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The administrator has successfully logged into the system.
+	\item The administrator has valid administrative privileges.
+	\item The system administration module is available.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item API source configurations are successfully stored.
+	\item New or updated API sources become available for synchronization.
+	\item Configuration changes are recorded in the system log.
+	\item The system is prepared to retrieve publication metadata from configured sources.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{Synchronize Academic Data}
+
+After a successful API configuration, the administrator may initiate data synchronization.
+
+\subsubsection{Synchronize Academic Data}
+
+\textbf{Summary:}
+This use case allows the System Administrator to synchronize publication metadata from external academic data sources into the system database. The synchronization process retrieves updated publication information and ensures that the system contains the latest data required for paper searching, trend analysis, dashboard visualization, trending topic identification, and report generation.
+
+The system supports synchronization with external academic APIs such as Semantic Scholar, OpenAlex, and Crossref.
+
+\textbf{Flow of Events}
+
+\textbf{Main Flow}
+\begin{enumerate}
+	\item The System Administrator logs into the system.
+	\item The administrator accesses the Synchronize Academic Data function.
+	\item The system displays available academic data sources.
+	\item The administrator selects one or more configured API sources.
+	\item The administrator initiates the synchronization process.
+	\item The system establishes connections to the selected APIs.
+	\item The system sends data retrieval requests.
+	\item The external APIs return publication metadata.
+	\item The system validates the received data.
+	\item The system identifies:
+	\begin{itemize}
+		\item New publications
+		\item Updated publication records
+		\item Existing records
+	\end{itemize}
+	\item The system processes the retrieved metadata.
+	\item The system inserts new publication records into the database.
+	\item The system updates modified publication records.
+	\item The system removes duplicate records.
+	\item The system records synchronization statistics, including:
+	\begin{itemize}
+		\item Number of records retrieved
+		\item Number of new records added
+		\item Number of updated records
+		\item Number of duplicate records detected
+	\end{itemize}
+	\item The system stores synchronization logs.
+	\item The system displays a synchronization summary report.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Alternative Flow}
+
+\textbf{API Source Unavailable}
+\begin{enumerate}
+	\item The system attempts to connect to an academic API.
+	\item The API server is unavailable.
+	\item The connection request fails.
+	\item The system records the error.
+	\item The administrator is notified.
+	\item The synchronization process continues with other available sources.
+	\item The use case continues.
+\end{enumerate}
+
+\textbf{Network Connection Failure}
+\begin{enumerate}
+	\item The synchronization process begins.
+	\item A network interruption occurs.
+	\item The system cannot retrieve data.
+	\item The system displays: ``Synchronization failed due to network connectivity issues.''
+	\item The synchronization process stops.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{Invalid Retrieved Data}
+\begin{enumerate}
+	\item The system receives incomplete or malformed metadata.
+	\item The system validates incoming records.
+	\item Invalid records are rejected.
+	\item The system logs validation errors.
+	\item Valid records continue to be processed.
+	\item The use case resumes from Step 10.
+\end{enumerate}
+
+\textbf{Duplicate Publication Records}
+\begin{enumerate}
+	\item The system retrieves metadata already stored in the database.
+	\item The system identifies duplicate records.
+	\item Duplicate entries are ignored or merged.
+	\item The synchronization process continues.
+\end{enumerate}
+
+\textbf{Database Update Failure}
+\begin{enumerate}
+	\item The system attempts to store synchronized data.
+	\item A database error occurs.
+	\item The system logs the error.
+	\item The administrator is notified.
+	\item The synchronization process is terminated.
+	\item The use case ends.
+\end{enumerate}
+
+\textbf{No New Data Available}
+\begin{enumerate}
+	\item The system completes synchronization.
+	\item No new publication metadata is found.
+	\item The system displays: ``No new publication data available.''
+	\item The synchronization summary is generated.
+	\item The use case ends successfully.
+\end{enumerate}
+
+\textbf{Special Requirements}
+\begin{itemize}
+	\item Only publication metadata shall be synchronized.
+	\item Full-text articles or PDF files shall not be stored.
+	\item Synchronization operations shall be logged for auditing purposes.
+	\item Duplicate publication records shall be automatically detected and handled.
+	\item The synchronization process shall support:
+	\begin{itemize}
+		\item Semantic Scholar API
+		\item OpenAlex API
+		\item Crossref API
+	\end{itemize}
+	\item Synchronization should be executable on a scheduled basis (daily or weekly).
+	\item The synchronization process shall not affect normal user operations.
+\end{itemize}
+
+\textbf{Pre-condition}
+\begin{itemize}
+	\item The administrator has successfully logged into the system.
+	\item Academic API sources have been configured successfully.
+	\item Network connectivity is available.
+	\item External academic APIs are accessible.
+\end{itemize}
+
+\textbf{Post-condition}
+\begin{itemize}
+	\item Publication metadata is updated in the system database.
+	\item New publications become available for searching.
+	\item Trend analysis data is refreshed.
+	\item Dashboard statistics are updated.
+	\item Trending topic calculations can use the latest data.
+	\item Synchronization logs are stored for future reference.
+\end{itemize}
+
+\textbf{Extension Point}
+
+\textbf{Search Research Papers}
+
+After synchronization, users can search newly imported publications.
+
+\textbf{Track Publication Trends}
+
+Updated metadata can be used for trend analysis.
+
+\textbf{View Trending Topics}
+
+Newly synchronized data may affect topic popularity rankings.
+
 \subsection{Functional Requirements}
 
 
@@ -1083,20 +2564,80 @@ New data sources can be added without redesigning the existing system.
 \end{longtable}
 \section{ Detail Design}
 \subsection{Register}
+<<<<<<< HEAD
 \subsubsection{Activity diagram }
 \subsubsection{Sequence Diagram }
 \subsubsection{State}
 
+=======
+\subsubsection{Activity diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ac1.png}
+	\caption{Activity diagram}
+	\label{fig:erd}
+\end{figure}
+\subsubsection{Sequence Diagram} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{tt1.png}
+	\caption{Sequence Diagram }
+	\label{fig:erd}
+\end{figure}
+\subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.9\textheight,keepaspectratio]{sta1.png}
+	\caption{State diagram}
+	\label{fig:erd}
+\end{figure}
+>>>>>>> 39f02b8aae44ab1f2d299b47c5feccaddb8974f2
 \subsection{Login}
 \subsubsection{Activity Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ac2.png}
+	\caption{Activity diagram}
+	\label{fig:erd}
+\end{figure}
 \subsubsection{Sequence Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{tt2.png}
+	\caption{Sequence Diagram }
+	\label{fig:erd}
+\end{figure}
 \subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{sta2.png}
+	\caption{State diagram}
+	\label{fig:erd}
+\end{figure}
 
 %-------------------------------------------------
 \subsection{Search Research Papers}
 \subsubsection{Activity Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ac3.png}
+	\caption{Activity diagram}
+	\label{fig:erd}
+\end{figure}
 \subsubsection{Sequence Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{tt3.png}
+	\caption{Sequence Diagram }
+	\label{fig:erd}
+\end{figure}
 \subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.9\textheight,keepaspectratio]{sta3.png}
+	\caption{State diagram}
+	\label{fig:erd}
+\end{figure}
 
 %-------------------------------------------------
 \subsection{View Paper Details}
@@ -1157,14 +2698,51 @@ New data sources can be added without redesigning the existing system.
 %-------------------------------------------------
 \subsection{Follow Topics}
 \subsubsection{Activity Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{follow topics.png}
+	\caption{Activity diagram}
+	\label{fig:erd}
+\end{figure}
 \subsubsection{Sequence Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{follow topice 2.png}
+	\caption{Sequence diagram}
+	\label{fig:erd}
+\end{figure}
 \subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{follow topice 3.png}
+	\caption{State diagram}
+	\label{fig:erd}
+\end{figure}
 
 %-------------------------------------------------
 \subsection{Receive Notifications}
 \subsubsection{Activity Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Receive notifications.png}
+	\caption{Activity diagram}
+	\label{fig:erd}
+\end{figure}
+
 \subsubsection{Sequence Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Receive notifications 1.png}
+	\caption{Sequence diagram}
+	\label{fig:erd}
+\end{figure}
 \subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Receive notifications 2.png}
+	\caption{State diagram}
+	\label{fig:erd}
+\end{figure}
 
 %-------------------------------------------------
 \subsection{Manage System}
@@ -1199,12 +2777,48 @@ New data sources can be added without redesigning the existing system.
 %-------------------------------------------------
 \subsection{Configure API Sources}
 \subsubsection{Activity Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{con1ac.png}
+	\caption{Configure API Sources}
+	\label{fig:erd}
+\end{figure}
 \subsubsection{Sequence Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{con1tt.png}
+	\caption{Configure API Sources}
+	\label{fig:erd}
+\end{figure}
 \subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.9\textheight,keepaspectratio]{con1sta.png}
+	\caption{State diagram}
+	\label{fig:erd}
+\end{figure}
 
 %-------------------------------------------------
 \subsection{Sync Academic Data}
 \subsubsection{Activity Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{cyac1.png}
+	\caption{Sync Academic Data}
+	\label{fig:erd}
+\end{figure}
 \subsubsection{Sequence Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{sytt1.png}
+	\caption{Sync Academic Data}
+	\label{fig:erd}
+\end{figure}
 \subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{systa1.png}
+	\caption{Sync Academic Data}
+	\label{fig:erd}
+\end{figure}
 \end{document}

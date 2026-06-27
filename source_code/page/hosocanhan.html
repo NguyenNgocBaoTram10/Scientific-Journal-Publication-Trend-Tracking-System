@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ScholarTrend - Thông tin tài khoản</title>
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            primary: '#0f172a', // Deep Navy/Dark Blue
+            secondary: '#64748b',
+            accent: '#3b82f6',
+            surface: '#f8fafc',
+            border: '#e2e8f0',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    body {
+      background-color: #f1f5f9;
+      color: #1e293b;
+    }
+    .main-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .card-shadow {
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased">
+<!-- BEGIN: MainHeader -->
+<header class="bg-white border-b border-border h-16 sticky top-0 z-50">
+<div class="main-container px-6 h-full flex items-center justify-between">
+<!-- Logo and Nav -->
+<div class="flex items-center space-x-10">
+<div class="text-2xl font-bold tracking-tight text-primary" data-purpose="brand-logo">
+          ScholarTrend
+        </div>
+<nav class="hidden md:flex space-x-8 text-sm font-medium text-secondary">
+
+
+
+</nav>
+</div>
+<!-- User Actions -->
+<div class="flex items-center space-x-4">
+<!-- Notification Icon -->
+<button class="p-2 text-secondary hover:bg-gray-100 rounded-full transition-colors">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- User Profile Avatar (Requested Update) -->
+<div class="flex items-center space-x-2 pl-2 border-l border-border">
+<div class="relative w-10 h-10 rounded-full bg-[#dbeafe] flex items-center justify-center border border-blue-200" data-purpose="user-avatar-container"><div class="w-full h-full rounded-full flex items-center justify-center overflow-hidden"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIFtB26omjq1myMZ_Bz2_-D07tRS0_wiINZVS-YgLbcaZnVZsBo8OhYvwW4rDil_hxX0r2m5FIARnc6b8KwLI4iKliF3NuMx_kFkOdP42LfOyWtGgHuwuqB9mUkA1K997X-JAeOILGKDTOi-3scn4dYWwuQB508lb2bb8K0X8ATMQkNWzKCqyuA2CtAPLTXRP734_sx8R088PFvRcTy7csCosQlR_qMwda44Sc77aUGPZyfI23jnmKZ7lGhtyJfKcMP0vnIWaZ6g" alt="User Avatar" class="w-full h-full object-cover"></div></div>
+
+</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="main-container px-6 py-8 flex gap-8">
+<!-- BEGIN: Sidebar -->
+<aside class="w-64 flex-shrink-0" data-purpose="sidebar">
+<div class="bg-white rounded-xl border border-border overflow-hidden card-shadow">
+<!-- Sidebar Header -->
+
+<!-- Sidebar Navigation Items -->
+<nav class="p-2 space-y-1">
+
+
+
+
+<a class="flex items-center space-x-3 p-3 text-sm text-slate-700 hover:bg-slate-50 rounded-lg" href="#">
+
+
+</a>
+</nav></div>
+<div class="mt-4 pt-4 border-t border-border p-2 space-y-1">
+<a class="flex items-center space-x-3 p-3 text-sm text-slate-700 hover:bg-slate-50 rounded-lg" href="#"><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span class="">Yêu thích</span></a>
+
+</div>
+</aside>
+<!-- END: Sidebar -->
+<!-- BEGIN: AccountManagement -->
+<div class="flex-1 space-y-6">
+<!-- Main Information Card -->
+<section class="bg-white rounded-xl border border-border card-shadow overflow-hidden" data-purpose="account-info-card">
+<!-- Card Header -->
+<div class="p-8 border-b border-border bg-slate-50/30 flex justify-between items-start">
+<div>
+<h1 class="text-3xl font-bold text-primary">Thông tin tài khoản</h1>
+<p class="text-secondary mt-1">Quản lý hồ sơ cá nhân và cài đặt bảo mật của bạn.</p>
+</div>
+<!-- Large Profile Icon Decor -->
+<div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100 shadow-inner">
+<svg class="h-10 w-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="color: rgb(15, 43, 91);">
+<path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Form Section -->
+<div class="p-8 space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+<!-- Full Name -->
+<div class="space-y-2">
+<label class="block text-xs font-bold text-secondary tracking-wider uppercase">Họ và tên</label>
+<div class="relative">
+<input
+    id="fullName"
+    class="w-full bg-slate-100 border-none rounded-lg py-3.5 pl-4 pr-12 text-primary font-medium focus:ring-0 cursor-default"
+    readonly
+    type="text"
+    value="Nguyễn Văn A">
+<div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-slate-400">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</div>
+<!-- Email -->
+<div class="space-y-2">
+<label class="block text-xs font-bold text-secondary tracking-wider uppercase">Email</label>
+<div class="relative">
+<input
+  id="email"
+  class="w-full bg-transparent border-none outline-none p-0 text-primary font-medium"
+  readonly
+  type="text"
+/>
+<div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-slate-400">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</div>
+<!-- Username -->
+<div class="space-y-2">
+<label class="block text-xs font-bold text-secondary tracking-wider uppercase">Tên đăng nhập</label>
+<input
+    id="username"
+    class="w-full bg-slate-100 border-none rounded-lg py-3.5 pl-4 pr-12 text-primary font-medium focus:ring-0 cursor-default"
+    readonly
+    type="text"
+    value="vancv123">
+<input class="w-full bg-slate-100 border-none rounded-lg py-3.5 pl-4 pr-12 text-primary font-medium focus:ring-0 cursor-default" readonly="" type="text" value="vancv123">
+<div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-slate-400">
+<span class="text-lg font-medium">@</span>
+</div>
+</div>
+</div>
+<!-- Account Created Date -->
+
+<!-- Status Badge -->
+<div class="space-y-2">
+<label class="block text-xs font-bold text-secondary tracking-wider uppercase">Trạng thái email</label>
+<div class="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-sm font-semibold">
+<svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path>
+</svg>
+                Đã xác minh
+              </div>
+</div>
+</div>
+</div>
+<!-- Action Buttons Footer -->
+<div class="px-8 py-6 border-t border-border bg-slate-50/30 flex space-x-4">
+<button class="flex items-center px-6 py-2.5 bg-white border border-primary text-primary font-bold rounded-lg hover:bg-slate-50 transition-all">
+<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Chỉnh sửa thông tin
+          </button>
+
+<button class="flex items-center px-6 py-2.5 bg-primary text-white font-bold rounded-lg hover:bg-slate-800 transition-all">
+<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Đăng xuất
+          </button>
+</div>
+</section>
+<!-- BEGIN: SecurityInfo -->
+<section class="bg-[#f1f5f9] border border-border rounded-xl p-6 flex items-start space-x-4" data-purpose="privacy-footer">
+<div class="text-slate-600 mt-1">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-800">Bảo mật thông tin</h3>
+<p class="text-sm text-slate-600 mt-1">
+            Thông tin tài khoản của bạn được mã hóa và bảo mật theo tiêu chuẩn học thuật cao nhất. Đừng bao giờ chia sẻ thông tin đăng nhập của bạn với bất kỳ ai.
+          </p>
+</div>
+</section>
+<!-- END: SecurityInfo -->
+</div>
+<!-- END: AccountManagement -->
+</main>
+<!-- END: MainContent -->
+
+
+<script>
+window.onload = function () {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!user) {
+        alert("Bạn chưa đăng nhập!");
+        window.location.href = "login.html";
+        return;
+    }
+
+    // Gán dữ liệu lên giao diện
+    document.querySelector("[data-name]").innerText = user.fullName;
+    document.querySelector("[data-email]").innerText = user.email;
+    document.querySelector("[data-username]").innerText = user.username;
+};
+</script>
+
+
+</body></html>

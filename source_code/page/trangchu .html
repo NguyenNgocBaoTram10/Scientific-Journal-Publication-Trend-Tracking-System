@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ScholarTrend - Hệ thống Theo dõi Xu hướng Xuất bản Khoa học</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f2f4f6",
+                    "surface-tint": "#455f88",
+                    "on-tertiary-container": "#90a0b9",
+                    "on-secondary-container": "#00714d",
+                    "surface-container-highest": "#e0e3e5",
+                    "inverse-surface": "#2d3133",
+                    "primary-fixed": "#d6e3ff",
+                    "secondary": "#006c49",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-primary-container": "#86a0cd",
+                    "on-background": "#191c1e",
+                    "primary-fixed-dim": "#adc7f7",
+                    "tertiary": "#112235",
+                    "surface-variant": "#e0e3e5",
+                    "on-error-container": "#93000a",
+                    "surface": "#f7f9fb",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "surface-container": "#eceef0",
+                    "tertiary-fixed": "#d3e4fe",
+                    "on-primary-fixed-variant": "#2d476f",
+                    "inverse-primary": "#adc7f7",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "outline": "#74777f",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c4c6cf",
+                    "on-primary-fixed": "#001b3c",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-secondary-fixed": "#002113",
+                    "background": "#f7f9fb",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#005236",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-container": "#1a365d",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "secondary-container": "#6cf8bb",
+                    "surface-bright": "#f7f9fb",
+                    "primary": "#002045",
+                    "surface-dim": "#d8dadc",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#27374b",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-surface-variant": "#43474e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "sm": "8px",
+                    "xl": "32px",
+                    "container-max": "1440px",
+                    "margin": "40px",
+                    "xs": "4px",
+                    "gutter": "24px",
+                    "lg": "24px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .zebra-stripe:nth-child(even) { background-color: #f1f5f9; }
+        .sparkline-svg { width: 100px; height: 30px; stroke-width: 2; fill: none; }
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed-dim selection:text-primary">
+<!-- Header (Shared Component: TopNavBar) -->
+<header class="bg-surface-container-lowest border-b border-outline-variant fixed top-0 w-full z-50">
+<nav class="flex justify-between items-center w-full px-margin max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-xl">
+<span class="font-headline-md text-headline-md font-bold text-primary">ScholarTrend</span>
+<div class="hidden lg:flex items-center bg-surface-container-low px-md py-xs rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant mr-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-48" placeholder="Tìm kiếm nhanh..." type="text">
+</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-200" href="#">Trang chủ</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Bảng điều khiển</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Xu hướng</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Tài nguyên</a>
+</div>
+</div>
+<div class="flex items-center gap-md">
+
+
+<div class="h-6 w-[1px] bg-outline-variant mx-sm"></div>
+<button class="font-label-md text-label-md text-primary hover:opacity-80 transition-all">Đăng nhập</button>
+<button class="font-label-md text-label-md bg-primary text-on-primary px-lg py-sm rounded-lg hover:shadow-lg transition-all active:scale-95 origin-bottom" style="transition: transform 0.2s ease-out;">Đăng ký</button>
+</div>
+</nav>
+</header>
+<main class="mt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-margin bg-white overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+<!-- Abstract geometric background pattern -->
+<div class="w-full h-full" style="background-image: radial-gradient(#1a365d 1px, transparent 1px); background-size: 40px 40px;"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto fade-in">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-md block">Dữ liệu học thuật thời gian thực</span>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-primary mb-lg leading-tight">
+                    Giải mã xu hướng <br>
+<span class="text-surface-tint">Khoa học toàn cầu</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-2xl mx-auto">
+                    Theo dõi hàng triệu ấn phẩm, phân tích tốc độ phát triển của các lĩnh vực và đón đầu những đột phá nghiên cứu quan trọng nhất.
+                </p>
+<!-- Large Search Bar -->
+<div class="w-full max-w-3xl mx-auto flex items-center p-xs bg-white border border-outline-variant rounded-xl shadow-xl focus-within:border-primary transition-all group">
+<span class="material-symbols-outlined text-on-surface-variant px-md">search</span>
+<input class="flex-grow border-none focus:ring-0 font-body-md text-body-md py-lg" placeholder="Tìm kiếm bài báo nghiên cứu, tác giả hoặc từ khóa..." type="text">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-xl py-lg rounded-lg flex items-center gap-sm group-hover:px-xl transition-all origin-bottom" style="transition: transform 0.2s ease-out;">
+                        Khám phá ngay
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+<div class="mt-lg flex flex-wrap justify-center gap-md">
+<span class="text-body-sm text-on-surface-variant">Phổ biến:</span>
+<a class="text-body-sm font-semibold text-primary hover:underline" href="#">#AI_Y_tế</a>
+<a class="text-body-sm font-semibold text-primary hover:underline" href="#">#Biến_đổi_khí_hậu</a>
+<a class="text-body-sm font-semibold text-primary hover:underline" href="#">#Vật_lý_lượng_tử</a>
+</div>
+</div>
+</section>
+<!-- Trending Topics Bento Grid -->
+<section class="py-xl px-margin max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Chủ đề đang nổi bật</h2>
+<p class="text-on-surface-variant font-body-md">Các lĩnh vực nghiên cứu có tốc độ tăng trưởng nhanh nhất trong 30 ngày qua.</p>
+</div>
+<button class="flex items-center gap-xs font-label-md text-label-md text-primary border border-primary px-lg py-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all">
+                    Xem tất cả xu hướng
+                    <span class="material-symbols-outlined text-[18px]">trending_up</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Trending Card 1 -->
+<div class="bg-white p-lg border border-outline-variant rounded-xl hover:shadow-md transition-all group">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container" data-weight="fill">psychology</span>
+</div>
+<span class="font-label-md text-label-md text-secondary bg-secondary-container px-sm py-xs rounded-full">+42% so với cùng kỳ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">AI trong Y tế</h3>
+<p class="text-body-sm text-on-surface-variant mb-lg">Ứng dụng Deep Learning trong chẩn đoán hình ảnh và phát triển thuốc.</p>
+<div class="flex items-end justify-between border-t border-outline-variant pt-lg">
+<div class="text-body-sm">
+<span class="block font-bold text-primary">12.450+</span>
+<span class="text-on-surface-variant">Bài báo mới</span>
+</div>
+<svg class="sparkline-svg text-secondary" viewBox="0 0 100 30">
+<path d="M0,25 Q10,20 20,22 T40,15 T60,18 T80,5 T100,2" stroke="currentColor"></path>
+</svg>
+</div>
+</div>
+<!-- Trending Card 2 -->
+<div class="bg-white p-lg border border-outline-variant rounded-xl hover:shadow-md transition-all group">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container" data-weight="fill">eco</span>
+</div>
+<span class="font-label-md text-label-md text-secondary bg-secondary-container px-sm py-xs rounded-full">+28% so với cùng kỳ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Thu giữ Carbon</h3>
+<p class="text-body-sm text-on-surface-variant mb-lg">Công nghệ thu giữ carbon trực tiếp từ không khí và lưu trữ địa chất.</p>
+<div class="flex items-end justify-between border-t border-outline-variant pt-lg">
+<div class="text-body-sm">
+<span class="block font-bold text-primary">8.120+</span>
+<span class="text-on-surface-variant">Bài báo mới</span>
+</div>
+<svg class="sparkline-svg text-secondary" viewBox="0 0 100 30">
+<path d="M0,28 L20,20 L40,25 L60,10 L80,15 L100,5" stroke="currentColor"></path>
+</svg>
+</div>
+</div>
+<!-- Trending Card 3 -->
+<div class="bg-white p-lg border border-outline-variant rounded-xl hover:shadow-md transition-all group">
+<div class="flex justify-between items-start mb-md">
+<div class="p-sm bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container" data-weight="fill">biotech</span>
+</div>
+<span class="font-label-md text-label-md text-secondary bg-secondary-container px-sm py-xs rounded-full">+15% so với cùng kỳ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-xs">Máy tính Lượng tử</h3>
+<p class="text-body-sm text-on-surface-variant mb-lg">Giải thuật lượng tử và khả năng sửa lỗi trong hệ thống thực tế.</p>
+<div class="flex items-end justify-between border-t border-outline-variant pt-lg">
+<div class="text-body-sm">
+<span class="block font-bold text-primary">5.630+</span>
+<span class="text-on-surface-variant">Bài báo mới</span>
+</div>
+<svg class="sparkline-svg text-secondary" viewBox="0 0 100 30">
+<path d="M0,15 Q25,18 50,12 T100,8" stroke="currentColor"></path>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- Trend Dashboard Preview -->
+<section class="py-xl bg-surface-container-low border-y border-outline-variant overflow-hidden">
+<div class="px-margin max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="order-2 lg:order-1">
+<div class="bg-white p-xl rounded-xl border border-outline-variant shadow-sm relative">
+<div class="flex justify-between items-center mb-xl">
+<h4 class="font-headline-sm text-headline-sm text-primary">Tần suất xuất bản theo năm</h4>
+<div class="flex gap-sm">
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<span class="w-3 h-3 bg-primary-fixed rounded-full"></span>
+</div>
+</div>
+<!-- Visual Mock of a Trend Chart -->
+<div class="h-64 flex items-end justify-between gap-sm border-b border-l border-outline-variant pl-sm pb-sm">
+<div class="bg-surface-tint opacity-20 w-full h-[40%]" title="2019"></div>
+<div class="bg-surface-tint opacity-40 w-full h-[55%] origin-bottom" title="2020" style="transition: transform 0.2s ease-out;"></div>
+<div class="bg-surface-tint opacity-60 w-full h-[70%] origin-bottom" title="2021" style="transition: transform 0.2s ease-out;"></div>
+<div class="bg-surface-tint opacity-80 w-full h-[85%] origin-bottom" title="2022" style="transition: transform 0.2s ease-out;"></div>
+<div class="bg-primary w-full h-[100%] origin-bottom" title="2023" style="transition: transform 0.2s ease-out;"></div>
+<div class="bg-secondary-fixed-dim w-full h-[110%] animate-pulse" title="2024 Dự báo"></div>
+</div>
+<div class="flex justify-between mt-md text-label-md text-on-surface-variant">
+<span class="">2019</span>
+<span class="">2020</span>
+<span class="">2021</span>
+<span class="">2022</span>
+<span class="">2023</span>
+<span class="font-bold text-primary">2024 (Dự báo)</span>
+</div>
+<div class="absolute -top-6 -right-6 bg-secondary-container text-on-secondary-container p-lg rounded-xl shadow-lg border border-secondary/20">
+<p class="font-label-md uppercase tracking-wider mb-1">Tỉ lệ tăng trưởng</p>
+<p class="font-headline-md font-bold">14,8%</p>
+<p class="text-body-sm opacity-80">Trung bình năm</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">Phân tích xu hướng chuyên sâu</h2>
+<p class="text-body-lg text-on-surface-variant">ScholarTrend sử dụng mô hình AI tiên tiến để tổng hợp dữ liệu từ hàng ngàn tạp chí khoa học uy tín, giúp bạn nhận diện sớm các chủ đề đang hình thành (Emerging Topics) và các mối liên kết liên ngành.</p>
+<ul class="space-y-md">
+<li class="flex items-center gap-md">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-body-md">Theo dõi số lượng trích dẫn và tầm ảnh hưởng (Impact Factor).</span>
+</li>
+<li class="flex items-center gap-md">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-body-md">Phân tích phân phối địa lý của các nhóm nghiên cứu.</span>
+</li>
+<li class="flex items-center gap-md">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-body-md">Dự báo hướng đi tiếp theo của công nghệ trong 3-5 năm.</span>
+</li>
+</ul>
+<div class="pt-md">
+<button class="bg-primary-container text-on-primary-container px-xl py-lg rounded-lg font-label-md hover:brightness-110 transition-all flex items-center gap-sm">
+                            Bắt đầu theo dõi xu hướng
+                            <span class="material-symbols-outlined">query_stats</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Follow Topics & Notifications -->
+<section class="py-xl px-margin max-w-container-max mx-auto text-center">
+<div class="max-w-3xl mx-auto space-y-lg">
+<div class="inline-flex items-center justify-center p-lg bg-primary/5 rounded-full mb-md">
+<span class="material-symbols-outlined text-[48px] text-primary">notifications_active</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Đừng bỏ lỡ bất kỳ đột phá nào</h2>
+<p class="text-body-lg text-on-surface-variant">
+                    Đăng ký theo dõi các chủ đề bạn quan tâm và nhận thông báo ngay lập tức khi có bài báo mới được xuất bản hoặc có sự thay đổi lớn trong xu hướng trích dẫn.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-md mt-xl">
+<input class="w-full sm:w-80 border-outline-variant focus:border-primary rounded-lg font-body-md px-lg py-lg" placeholder="Nhập email của bạn..." type="email">
+<button class="w-full sm:w-auto bg-primary text-on-primary px-xl py-lg rounded-lg font-label-md hover:shadow-xl transition-all origin-bottom" style="transition: transform 0.2s ease-out;">Nhận thông báo miễn phí</button>
+</div>
+<p class="text-body-sm text-on-surface-variant italic">Chúng tôi tôn trọng quyền riêng tư và chỉ gửi những cập nhật giá trị nhất.</p>
+</div>
+</section>
+<!-- API / Partner Section -->
+
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container border-t border-outline-variant">
+
+</footer>
+<script>
+        // Micro-interaction for hover effects on charts
+        const chartBars = document.querySelectorAll('.bg-surface-tint, .bg-primary');
+        chartBars.forEach(bar => {
+            bar.addEventListener('mouseenter', () => {
+                bar.classList.add('scale-x-110', 'origin-bottom');
+                bar.style.transition = 'transform 0.2s ease-out';
+            });
+            bar.addEventListener('mouseleave', () => {
+                bar.classList.remove('scale-x-110');
+            });
+        });
+
+        // Simple scroll reveal
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight * 0.8) {
+                    section.classList.add('opacity-100');
+                    section.style.transition = 'opacity 0.6s ease-out';
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
