@@ -2564,6 +2564,12 @@ New data sources can be added without redesigning the existing system.
 \end{longtable}
 \section{ Detail Design}
 \subsection{Register}
+<<<<<<< HEAD
+\subsubsection{Activity diagram }
+\subsubsection{Sequence Diagram }
+\subsubsection{State}
+
+=======
 \subsubsection{Activity diagram}
 \begin{figure}[H]
 	\centering
@@ -2585,6 +2591,7 @@ New data sources can be added without redesigning the existing system.
 	\caption{State diagram}
 	\label{fig:erd}
 \end{figure}
+>>>>>>> 39f02b8aae44ab1f2d299b47c5feccaddb8974f2
 \subsection{Login}
 \subsubsection{Activity Diagram}
 \begin{figure}[H]
@@ -2711,11 +2718,31 @@ New data sources can be added without redesigning the existing system.
 \subsubsection{State Diagram}
 
 %-------------------------------------------------
+\clearpage
 \subsection{Generate Reports}
 \subsubsection{Activity Diagram}
-\subsubsection{Sequence Diagram}
-\subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{activity_Generate-reports.png}
+	\caption{Activity Diagram - Generate reports}
+	\label{fig:activity_generate_reports}
+\end{figure}
 
+\subsubsection{Sequence Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.9\textheight,keepaspectratio]{sequence_Generate-reports.png}
+	\caption{Sequence diagram - Generate reports}
+	\label{fig:sequence_generate_repoclearpagerts}
+\end{figure}
+
+\subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.9\textheight,keepaspectratio]{state_Generate-reports.png}
+	\caption{State diagram - Generate reports}
+	\label{fig:state_generate_reports}
+\end{figure}
 %-------------------------------------------------
 \subsection{View Trending Topics}
 \subsubsection{Activity Diagram}
@@ -2780,9 +2807,27 @@ New data sources can be added without redesigning the existing system.
 %-------------------------------------------------
 \subsection{Manage User}
 \subsubsection{Activity Diagram}
-\subsubsection{Sequence Diagram}
-\subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{activity_Manage-Users.png}
+	\caption{Activity Diagram - Manage Users}
+	\label{fig:activity_manage_users}
+\end{figure}
 
+\subsubsection{Sequence Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.9\textheight,keepaspectratio]{sequence_Manage-Users.png}
+	\caption{Sequence diagram - Manage Users}
+	\label{fig:sequence_manage_users}
+\end{figure}
+\subsubsection{State Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.9\textheight,keepaspectratio]{state_Manage-Users.png}
+	\caption{State diagram - Manage Users}
+	\label{fig:state_manage_users}
+\end{figure}
 %-------------------------------------------------
 \subsection{Configure API Sources}
 \subsubsection{Activity Diagram}
@@ -2830,5 +2875,4 @@ New data sources can be added without redesigning the existing system.
 	\caption{Sync Academic Data}
 	\label{fig:erd}
 \end{figure}
-\end{document}
 \end{document}
