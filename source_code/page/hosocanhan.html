@@ -192,26 +192,66 @@
 <div class="p-xl grid grid-cols-1 md:grid-cols-2 gap-xl">
 <!-- Field 1 -->
 <div class="flex flex-col gap-xs">
-<label class="text-label-sm text-on-surface-variant uppercase tracking-wider">Họ và tên</label>
-<div class="p-md bg-surface-container rounded-lg border border-outline-variant flex items-center justify-between">
-<span class="text-body-md font-semibold text-on-surface">Nguyễn Văn A</span>
-<span class="material-symbols-outlined text-outline" data-icon="badge">badge</span>
+
+
+<label class="text-label-sm text-on-surface-variant uppercase tracking-wider">
+ <!-- HỌ VÀ TÊN -->
+<div class="mb-6">
+    <label class="block text-label-sm text-on-surface-variant uppercase tracking-wider mb-3">
+        HỌ VÀ TÊN
+    </label>
+
+    <div class="w-[650px] p-4 bg-surface-container rounded-lg border border-outline-variant flex items-center justify-between">
+        <span id="fullName"
+              class="text-body-md font-semibold text-on-surface normal-case whitespace-nowrap">
+            Nguyễn Văn A
+        </span>
+
+        <span class="material-symbols-outlined text-outline">
+            badge
+        </span>
+    </div>
 </div>
+
+<!-- EMAIL -->
+<div class="mb-6">
+    <label class="block text-label-sm text-on-surface-variant uppercase tracking-wider mb-3">
+        EMAIL
+    </label>
+
+    <div class="w-[650px] p-4 bg-surface-container rounded-lg border border-outline-variant flex items-center justify-between">
+        <span id="email"
+              class="text-body-md font-semibold text-on-surface normal-case whitespace-nowrap">
+            nguyenvana@gmail.com
+        </span>
+
+        <span class="material-symbols-outlined text-outline">
+            mail
+        </span>
+    </div>
 </div>
-<!-- Field 2 -->
-<div class="flex flex-col gap-xs">
-<label class="text-label-sm text-on-surface-variant uppercase tracking-wider">Email</label>
-<div class="p-md bg-surface-container rounded-lg border border-outline-variant flex items-center justify-between">
-<span class="text-body-md font-semibold text-on-surface">nguyenvana@example.com</span>
-<span class="material-symbols-outlined text-outline" data-icon="mail">mail</span>
+
+<!-- TÊN ĐĂNG NHẬP -->
+<div class="mb-6">
+    <label class="block text-label-sm text-on-surface-variant uppercase tracking-wider mb-3">
+        TÊN ĐĂNG NHẬP
+    </label>
+
+    <div class="w-[650px] p-4 bg-surface-container rounded-lg border border-outline-variant flex items-center justify-between">
+        <span id="username"
+              class="text-body-md font-semibold text-on-surface normal-case whitespace-nowrap">
+            vancv123
+        </span>
+
+        <span class="material-symbols-outlined text-outline">
+            alternate_email
+        </span>
+    </div>
 </div>
+    </div>
 </div>
-<!-- Field 3 -->
-<div class="flex flex-col gap-xs">
-<label class="text-label-sm text-on-surface-variant uppercase tracking-wider">Tên đăng nhập</label>
-<div class="p-md bg-surface-container rounded-lg border border-outline-variant flex items-center justify-between">
-<span class="text-body-md font-semibold text-on-surface">vancv123</span>
-<span class="material-symbols-outlined text-outline" data-icon="alternate_email">alternate_email</span>
+    </span>
+</div>
 </div>
 </div>
 <!-- Field 4 -->
@@ -223,13 +263,7 @@
 </div>
 </div>
 <!-- Field 5: Status -->
-<div class="md:col-span-2 flex flex-col gap-xs">
-<label class="text-label-sm text-on-surface-variant uppercase tracking-wider">Trạng thái Email</label>
-<div class="flex items-center gap-sm p-md bg-tertiary-fixed/10 border border-tertiary-fixed rounded-lg w-fit">
-<div class="bg-tertiary-container text-on-tertiary-container w-6 h-6 rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-[16px]" data-icon="check" data-weight="fill">check</span>
-</div>
-<span class="text-body-md font-bold text-on-tertiary-fixed-variant">Đã xác minh</span>
+
 </div>
 </div>
 </div>
