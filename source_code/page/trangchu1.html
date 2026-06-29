@@ -349,35 +349,15 @@ function doSearch() {
 <footer class="bg-surface-container border-t border-outline-variant">
 
 </footer>
-<script>
-        // Micro-interaction for hover effects on charts
-        const chartBars = document.querySelectorAll('.bg-surface-tint, .bg-primary');
-        chartBars.forEach(bar => {
-            bar.addEventListener('mouseenter', () => {
-                bar.classList.add('scale-x-110', 'origin-bottom');
-                bar.style.transition = 'transform 0.2s ease-out';
-            });
-            bar.addEventListener('mouseleave', () => {
-                bar.classList.remove('scale-x-110');
-            });
-        });
 
-        // Simple scroll reveal
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < window.innerHeight * 0.8) {
-                    section.classList.add('opacity-100');
-                    section.style.transition = 'opacity 0.6s ease-out';
-                }
-            });
-        });
-       
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("hidden");
-}
 
+    <script>
+    function doSearch() {
+      var q = document.getElementById('search-input').value.trim();
+      if (q) {
+        window.location.href = 'xemchitietbaibao.html?q=' + encodeURIComponent(q);
+      }
+    }
     </script>
 
 

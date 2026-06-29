@@ -1,482 +1,507 @@
-<!DOCTYPE html><html lang="vi"><head>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
 <meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>ScholarTrend - Article View</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScholarTrend - Tìm kiếm bài báo</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<!-- Tailwind Configuration -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface": "#f7f9fb",
-                    "secondary-fixed": "#d3e4ff",
-                    "on-surface-variant": "#43474e",
-                    "on-primary-fixed-variant": "#2d476f",
-                    "secondary-fixed-dim": "#a2c9ff",
-                    "outline": "#74777f",
-                    "tertiary": "#321b00",
-                    "surface-tint": "#455f88",
-                    "surface-container": "#eceef0",
-                    "surface-bright": "#f7f9fb",
-                    "inverse-surface": "#2d3133",
-                    "inverse-primary": "#adc7f7",
-                    "primary-fixed": "#d6e3ff",
-                    "on-secondary-container": "#00477f",
-                    "on-error": "#ffffff",
-                    "background": "#f7f9fb",
-                    "on-primary-container": "#86a0cd",
-                    "inverse-on-surface": "#eff1f3",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-container-high": "#e6e8ea",
-                    "error": "#ba1a1a",
-                    "on-error-container": "#93000a",
-                    "on-tertiary": "#ffffff",
-                    "on-tertiary-fixed-variant": "#633f0f",
-                    "surface-variant": "#e0e3e5",
-                    "on-secondary-fixed-variant": "#004881",
-                    "primary": "#002045",
-                    "on-primary": "#ffffff",
-                    "on-secondary-fixed": "#001c38",
-                    "error-container": "#ffdad6",
-                    "surface-container-low": "#f2f4f6",
-                    "surface-container-highest": "#e0e3e5",
-                    "on-tertiary-fixed": "#2b1700",
-                    "on-tertiary-container": "#c6955e",
-                    "secondary-container": "#7db6ff",
-                    "primary-container": "#1a365d",
-                    "primary-fixed-dim": "#adc7f7",
-                    "surface-dim": "#d8dadc",
-                    "on-secondary": "#ffffff",
-                    "outline-variant": "#c4c6cf",
-                    "on-surface": "#191c1e",
-                    "tertiary-container": "#4f2e00",
-                    "secondary": "#1960a3",
-                    "tertiary-fixed": "#ffddba",
-                    "on-background": "#191c1e",
-                    "tertiary-fixed-dim": "#f2bc82",
-                    "on-primary-fixed": "#001b3c"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "xs": "4px",
-                    "container-max": "1280px",
-                    "md": "16px",
-                    "sidebar-width": "280px",
-                    "xxl": "48px",
-                    "sm": "8px",
-                    "base": "4px",
-                    "xl": "32px",
-                    "lg": "24px"
-            },
-            "fontFamily": {
-                    "body-md": ["Inter"],
-                    "label-md": ["Inter"],
-                    "headline-md": ["Inter"],
-                    "display-lg": ["Inter"],
-                    "caption": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "title-lg": ["Inter"],
-                    "headline-sm": ["Inter"]
-            },
-            "fontSize": {
-                    "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                    "label-md": ["13px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
-                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                    "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
-                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "title-lg": ["18px", {"lineHeight": "1.5", "fontWeight": "600"}],
-                    "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
-            }
-          },
-        },
-      }
-    </script>
+tailwind.config = {
+  darkMode:"class",
+  theme:{extend:{
+    colors:{
+      "surface":"#f7f9fb","secondary-fixed":"#d3e4ff","on-surface-variant":"#43474e",
+      "on-primary-fixed-variant":"#2d476f","secondary-fixed-dim":"#a2c9ff","outline":"#74777f",
+      "surface-container":"#eceef0","surface-bright":"#f7f9fb","inverse-primary":"#adc7f7",
+      "primary-fixed":"#d6e3ff","on-secondary-container":"#00477f","on-error":"#ffffff",
+      "background":"#f7f9fb","inverse-on-surface":"#eff1f3",
+      "surface-container-lowest":"#ffffff","surface-container-high":"#e6e8ea","error":"#ba1a1a",
+      "on-error-container":"#93000a","surface-variant":"#e0e3e5","on-secondary-fixed-variant":"#004881",
+      "primary":"#002045","on-primary":"#ffffff","on-secondary-fixed":"#001c38","error-container":"#ffdad6",
+      "surface-container-low":"#f2f4f6","surface-container-highest":"#e0e3e5",
+      "on-tertiary-container":"#c6955e","secondary-container":"#7db6ff",
+      "primary-container":"#1a365d","primary-fixed-dim":"#adc7f7","surface-dim":"#d8dadc",
+      "on-secondary":"#ffffff","outline-variant":"#c4c6cf","on-surface":"#191c1e",
+      "secondary":"#1960a3","on-background":"#191c1e","on-primary-fixed":"#001b3c"
+    },
+    borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
+    spacing:{"xs":"4px","container-max":"1280px","md":"16px","sidebar-width":"280px","xxl":"48px","sm":"8px","base":"4px","xl":"32px","lg":"24px"},
+    fontSize:{
+      "body-md":["14px",{"lineHeight":"1.5","fontWeight":"400"}],
+      "label-md":["13px",{"lineHeight":"1.4","letterSpacing":"0.01em","fontWeight":"500"}],
+      "headline-md":["24px",{"lineHeight":"1.3","letterSpacing":"-0.01em","fontWeight":"600"}],
+      "display-lg":["36px",{"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"700"}],
+      "caption":["12px",{"lineHeight":"1.4","fontWeight":"400"}],
+      "body-lg":["16px",{"lineHeight":"1.6","fontWeight":"400"}],
+      "title-lg":["18px",{"lineHeight":"1.5","fontWeight":"600"}],
+      "headline-sm":["20px",{"lineHeight":"1.4","fontWeight":"600"}]
+    }
+  }}
+}
+</script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body { font-family: 'Inter', sans-serif; }
-        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-    </style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+  body{font-family:'Inter',sans-serif}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .spin{animation:spin 1s linear infinite;display:inline-block}
+  mark{background:#fff3cd;color:#856404;border-radius:2px;padding:0 2px}
+  .paper-card{transition:box-shadow .18s,transform .18s}
+  .paper-card:hover{box-shadow:0 4px 20px rgba(0,32,69,.10);transform:translateY(-1px)}
+  .filter-chip{transition:all .15s}
+  .filter-chip.active{background:#002045;color:#fff;border-color:#002045}
+  input[type=number]::-webkit-inner-spin-button{opacity:1}
+</style>
 </head>
 <body class="bg-surface text-on-surface">
-<!-- TopNavBar -->
-<header class="bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline fixed full-width top-0 z-50 w-full h-16">
-<div class="flex justify-between items-center w-full px-lg h-full max-w-container-max mx-auto">
-<div class="flex items-center gap-xl">
-<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary cursor-pointer">ScholarTrend</span>
-<nav class="hidden md:flex gap-lg items-center">
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-70" href="#">Analytics</a>
-<a class="font-body-md text-body-md text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 cursor-pointer active:opacity-70" href="#">Library</a>
-</nav>
-</div>
-<div class="flex items-center gap-md">
-<div class="relative hidden sm:block">
-<input class="bg-surface-container border border-outline-variant rounded-full px-lg py-1.5 w-64 text-body-md focus:outline-none focus:border-primary transition-all" placeholder="Tìm kiếm tài liệu học thuật..." type="text">
-<span class="material-symbols-outlined absolute right-3 top-1.5 text-on-surface-variant">search</span>
-</div>
-<div class="flex items-center gap-sm">
-<button class="p-2 hover:bg-surface-container-high rounded-full transition-all cursor-pointer">
-<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
-</button>
-<button class="p-2 hover:bg-surface-container-high rounded-full transition-all cursor-pointer">
-<span class="material-symbols-outlined text-on-surface-variant">settings</span>
-</button>
-<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center overflow-hidden ml-2 cursor-pointer border border-outline-variant">
-<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional academic researcher in a clean, modern laboratory setting. The background shows blurred scientific equipment and digital monitors with data visualizations. Soft, natural light illuminates the subject's face, creating a trustworthy and intellectual atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbLt7jOwax4iqGNB-Gy5i-OHUmyXEUssL3mTcfZwPhBXwOhDE4-FKuqkdhyrqkiAaxx9zhYVQPavPX8ST4rEqD0AERSpSmcFBDzu3Kyg5hUkOcvCRQ_MeaojDKwAHDds8N6fEu-Gg5kcHLxr4IDf-BOJ2QhUHZLyTZVQAiv3NShYDwtYiRk-xvgfpivbc4-no_znEMFaHVHz2OWauQWR3GGZNWCgHUg3J8GYDOILrewpL2qllkJR81gq_pHI3ecfuFFLGaazYHZG6L">
-</div>
-</div>
-</div>
-</div>
+
+<!-- Header -->
+<header class="bg-surface border-b border-outline-variant fixed top-0 z-50 w-full h-16">
+  <div class="flex justify-between items-center w-full px-lg h-full max-w-container-max mx-auto">
+    <span class="font-headline-md text-headline-md font-bold text-primary cursor-pointer"
+          onclick="window.location.href='trangchu1.html'">ScholarTrend</span>
+    <nav class="hidden md:flex items-center gap-lg text-body-md text-on-surface-variant">
+      <a href="trangchu1.html" class="hover:text-primary transition-colors">Trang chủ</a>
+      <a href="timkiem.html" class="text-primary font-medium border-b-2 border-primary pb-0.5">Tìm kiếm</a>
+      <a href="phantichxuhuong.html" class="hover:text-primary transition-colors">Xu hướng</a>
+    </nav>
+  </div>
 </header>
-<!-- Main Content Canvas -->
-<main class="pt-24 pb-xxl px-lg max-w-container-max mx-auto">
-<div class="grid grid-cols-12 gap-xl">
-<!-- Article Body -->
-<article class="col-span-12 lg:col-span-8">
-<!-- Meta Information -->
-<div class="mb-lg">
-<nav class="flex items-center gap-sm text-on-surface-variant mb-md font-label-md text-label-md">
-<a class="hover:text-primary transition-colors" href="#">Y sinh</a>
-<span class="material-symbols-outlined text-[14px]">chevron_right</span>
-<a class="hover:text-primary transition-colors" href="#">AI &amp; Học sâu</a>
-</nav>
-<h1 class="font-display-lg text-display-lg text-primary mb-md leading-tight">
-                        Phát triển hệ thống AI dự đoán sớm rủi ro tim mạch thông qua dữ liệu ECG thời gian thực
-                    </h1>
-<div class="flex flex-wrap items-center gap-md mb-lg">
-<div class="flex flex-wrap gap-xs font-body-md text-body-md text-secondary font-medium">
-<span>Nguyễn Văn A,</span>
-<span>Trần Thị B,</span>
-<span>Lê Hoàng C,</span>
-<span>Smith, J.</span>
-</div>
-<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
-<div class="font-body-md text-body-md text-on-surface-variant">
-                            Nature Biomedical Engineering, Vol 12, Issue 4
-                        </div>
-</div>
-<div class="flex flex-wrap items-center gap-lg py-md border-y border-outline-variant">
-<div class="flex flex-col">
-<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Ngày công bố</span>
-<span class="font-body-md text-body-md font-semibold">15 Tháng 4, 2023</span>
-</div>
-<div class="flex flex-col">
-<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">DOI</span>
-<a class="font-body-md text-body-md text-secondary hover:underline" href="#">10.1038/s41551-023-01025-x</a>
-</div>
-<div class="flex flex-col">
-<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Trích dẫn</span>
-<span class="font-body-md text-body-md font-semibold">248 trích dẫn</span>
-</div>
-</div>
-</div>
-<!-- Action Bar -->
-<div class="flex flex-wrap items-center gap-md mb-xl">
-<button class="bg-primary text-on-primary flex items-center gap-sm px-lg py-2.5 rounded-lg font-label-md text-label-md hover:opacity-90 transition-all shadow-sm">
-<span class="material-symbols-outlined">download</span>
-                        Tải xuống PDF
-                    </button>
-<button class="bg-surface-container-low border border-outline-variant text-primary flex items-center gap-sm px-lg py-2.5 rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-all">
-<span class="material-symbols-outlined">format_quote</span>
-                        Xuất trích dẫn
-                    </button>
-<button class="bg-surface-container-low border border-outline-variant text-primary flex items-center gap-sm px-lg py-2.5 rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-all">
-<span class="material-symbols-outlined">bookmark</span>
-                        Lưu bài báo
-                    </button>
-<button class="bg-surface-container-low border border-outline-variant text-primary flex items-center gap-sm px-lg py-2.5 rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-all">
-<span class="material-symbols-outlined">share</span>
-                        Chia sẻ
-                    </button>
-</div>
-<!-- Abstract Card -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-xl mb-xl">
-<h2 class="font-headline-sm text-headline-sm text-primary mb-md">Tóm tắt (Abstract)</h2>
-<p class="font-body-lg text-body-lg text-on-surface leading-relaxed mb-lg">
-                        Bài báo này trình bày về một hệ thống trí tuệ nhân tạo (AI) tiên tiến được thiết kế để theo dõi và dự đoán các rủi ro tim mạch thông qua việc phân tích dữ liệu điện tâm đồ (ECG) thời gian thực. Bằng cách sử dụng các kiến trúc học sâu (Deep Learning) mới nhất, hệ thống có khả năng nhận diện các thay đổi tinh vi trong nhịp tim mà mắt thường khó nhận biết, từ đó đưa ra các cảnh báo sớm lên đến 24 giờ trước khi một biến cố tim mạch xảy ra. Nghiên cứu thực nghiệm trên 10,000 bệnh nhân cho thấy độ chính xác đạt trên 94%, mở ra triển vọng mới trong việc tích hợp AI vào các thiết bị đeo thông minh để bảo vệ sức khỏe cộng đồng.
-                    </p>
-<div class="flex flex-wrap items-center gap-sm">
-<span class="font-label-md text-label-md text-on-surface-variant">Keywords:</span>
-<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">Trí tuệ nhân tạo</span>
-<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">Y sinh</span>
-<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">Học sâu</span>
-<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">ECG</span>
-</div>
-</div>
-<!-- Main Content Visualization Placeholder -->
-<div class="mb-xl">
-<div class="bg-surface-container-high rounded-xl overflow-hidden relative aspect-[16/9]">
-<img class="w-full h-full object-cover" data-alt="A high-tech scientific data visualization screen showing real-time ECG waveforms being analyzed by a neural network. Complex mathematical graphs, probability heatmaps, and 3D wireframe models of a human heart are displayed in a clean, minimalist UI with a professional deep blue and white color scheme. The lighting is soft and clinical, suggesting an advanced medical research facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOEsKdxpG3Rol7qOtmvlhYme5TENMOEhHA3LcQ38SIvLfhywX96mTQ3rs1iYznKXna1Blt0inxLh7MUWeeL5PgiBw3rYrslnMdUfUiBm7IMRsReOmf0k6MYnn9ubrS8aHgoXJY-5aRpEF-AMLQt1i3TJPHrrdC-i-ju1DO7fbjO6fsPnT_g4hzn1R3O63mbog9ecf3GiF_21BFizwBJ1UnsRxmkNf8YQgPBG5c9S8I-6w0jubSgAYgDayfZgIZdKrQa3A5DHBNAJgC">
-<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-lg">
-<span class="text-white font-caption text-caption">Hình 1: Kiến trúc mạng nơ-ron đa tầng và quá trình xử lý tín hiệu ECG động.</span>
-</div>
-</div>
-</div>
-<!-- References List -->
-<div class="border-t border-outline-variant pt-xl">
-<h2 class="font-headline-sm text-headline-sm text-primary mb-lg">Danh mục tham khảo</h2>
-<div class="space-y-lg">
-<div class="flex gap-md">
-<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[1]</span>
-<p class="font-body-md text-body-md text-on-surface">Wang, L., et al. (2022). "Convolutional Neural Networks for Heart Sound Analysis: A Review." IEEE Reviews in Biomedical Engineering.</p>
-</div>
-<div class="flex gap-md">
-<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[2]</span>
-<p class="font-body-md text-body-md text-on-surface">Johnson, M. R. (2021). "Real-time health monitoring systems: Challenges and opportunities." Journal of Medical Systems.</p>
-</div>
-<div class="flex gap-md">
-<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[3]</span>
-<p class="font-body-md text-body-md text-on-surface">Chen, Y. &amp; Li, X. (2020). "Deep Learning for Healthcare Applications." Springer Nature.</p>
-</div>
-<div class="flex gap-md">
-<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[4]</span>
-<p class="font-body-md text-body-md text-on-surface">Zhang, J. (2023). "Advancements in Wearable Sensor Technology." Nature Materials.</p>
-</div>
-<div class="flex gap-md">
-<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[5]</span>
-<p class="font-body-md text-body-md text-on-surface">Smith, A. B. (2019). "Predictive Analytics in Cardiovascular Medicine." Circulation Research.</p>
-</div>
-<div class="flex gap-md">
-<span class="font-label-md text-label-md text-on-surface-variant min-w-[24px]">[6]</span>
-<p class="font-body-md text-body-md text-on-surface">Lee, K. (2022). "Signal Processing for Electrocardiography: A Comprehensive Guide." Academic Press.</p>
-</div>
-</div>
-</div>
-</article>
-<!-- Sidebar -->
-<aside class="col-span-12 lg:col-span-4 space-y-lg">
-<!-- Citation Stats Card -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
-<h3 class="font-title-lg text-title-lg text-primary mb-md flex items-center gap-sm">
-<span class="material-symbols-outlined text-secondary">trending_up</span>
-                        Thống kê trích dẫn
-                    </h3>
-<div class="flex items-end justify-between h-32 gap-sm mb-md px-2">
-<div class="bg-secondary-fixed-dim w-full rounded-t" style="height: 20%"></div>
-<div class="bg-secondary-fixed-dim w-full rounded-t" style="height: 35%"></div>
-<div class="bg-secondary-fixed-dim w-full rounded-t" style="height: 50%"></div>
-<div class="bg-secondary w-full rounded-t" style="height: 85%"></div>
-</div>
-<div class="flex justify-between font-caption text-caption text-on-surface-variant">
-<span>2020</span>
-<span>2021</span>
-<span>2022</span>
-<span class="font-bold text-primary">2023</span>
-</div>
-<div class="mt-md pt-md border-t border-outline-variant flex justify-between items-center">
-<span class="font-label-md text-label-md">Tổng trích dẫn:</span>
-<span class="font-headline-sm text-headline-sm text-primary">248</span>
-</div>
-</div>
-<!-- Related Articles Card -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
-<h3 class="font-title-lg text-title-lg text-primary mb-md">Bài báo liên quan</h3>
-<div class="space-y-lg">
-<a class="group block" href="#">
-<p class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary transition-colors mb-xs">Ứng dụng CNN trong phân loại nhịp tim bất thường</p>
-<p class="font-caption text-caption text-on-surface-variant">IEEE Trans. on AI, 2022</p>
-</a>
-<a class="group block" href="#">
-<p class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary transition-colors mb-xs">Phân tích tín hiệu ECG với mô hình LSTM</p>
-<p class="font-caption text-caption text-on-surface-variant">Bioinformatics, 2021</p>
-</a>
-<a class="group block" href="#">
-<p class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary transition-colors mb-xs">Hệ thống hỗ trợ chẩn đoán tim mạch dựa trên Cloud</p>
-<p class="font-caption text-caption text-on-surface-variant">Digital Health, 2023</p>
-</a>
-<a class="group block" href="#">
-<p class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary transition-colors mb-xs">Bảo mật dữ liệu y sinh trong kỷ nguyên AI</p>
-<p class="font-caption text-caption text-on-surface-variant">Journal of Cybersecurity, 2023</p>
-</a>
-</div>
-</div>
-<!-- Similar Topics Cloud -->
-<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
-<h3 class="font-title-lg text-title-lg text-primary mb-md">Chủ đề tương tự</h3>
-<div class="flex flex-wrap gap-sm">
-<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Deep Learning</a>
-<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Cardiology</a>
-<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Signal Processing</a>
-<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Wearables</a>
-<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Predictive Modeling</a>
-<a class="bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant px-3 py-1.5 rounded-lg font-label-md text-label-md transition-all" href="#">Big Data in Health</a>
-</div>
-</div>
-</aside>
-</div>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant dark:border-outline mt-xxl">
-<div class="w-full py-xl px-lg flex flex-col md:flex-row justify-between items-center gap-md max-w-container-max mx-auto">
-<div class="flex flex-col items-center md:items-start gap-xs">
-<span class="font-title-lg text-title-lg font-bold text-primary dark:text-inverse-primary">ScholarTrend</span>
-<p class="font-caption text-caption text-on-surface-variant dark:text-surface-variant">© 2024 ScholarTrend Academic Research Platform</p>
-</div>
-<div class="flex flex-wrap justify-center gap-lg">
-<a class="font-caption text-caption text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all" href="#">Privacy Policy</a>
-<a class="font-caption text-caption text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all" href="#">Terms of Service</a>
-<a class="font-caption text-caption text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all" href="#">Contact Support</a>
-<a class="font-caption text-caption text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-all" href="#">Institutional Access</a>
-</div>
-</div>
-</footer>
-<!-- Simple Interactivity -->
-<!-- Vùng hiển thị kết quả tìm kiếm -->
-<div id="search-results" class="hidden py-xl px-margin max-w-container-max mx-auto mt-16">
-  <div class="flex items-center justify-between mb-xl">
-    <div>
-      <h2 class="font-headline-lg text-headline-lg text-primary">Kết quả tìm kiếm</h2>
-      <p class="text-body-md text-on-surface-variant">Từ khóa: <strong id="query-display" class="text-primary"></strong></p>
+
+<main class="pt-20 pb-xxl px-lg max-w-container-max mx-auto">
+
+  <!-- ===== HERO (khi chưa có query) ===== -->
+  <div id="hero-section" class="py-xl">
+    <h1 class="font-display-lg text-display-lg text-primary mb-sm text-center">Tìm kiếm bài báo khoa học</h1>
+    <p class="text-body-lg text-on-surface-variant text-center mb-xl">Tra cứu hàng triệu bài báo từ OpenAlex</p>
+    <div class="max-w-2xl mx-auto">
+      <div class="flex gap-sm">
+        <div class="relative flex-1">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+          <input id="search-input"
+            class="w-full bg-surface-container-lowest border border-outline-variant rounded-xl pl-10 pr-4 py-3 text-body-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+            placeholder="Ví dụ: deep learning, climate change, ECG..."
+            type="text" autocomplete="off"
+            onkeydown="if(event.key==='Enter') doSearch(1)">
+        </div>
+        <button onclick="doSearch(1)"
+          class="bg-primary text-on-primary px-lg py-3 rounded-xl font-label-md text-label-md hover:opacity-90 transition-all flex items-center gap-sm whitespace-nowrap">
+          <span class="material-symbols-outlined text-[18px]">search</span>Tìm kiếm
+        </button>
+      </div>
+      <div class="flex flex-wrap gap-sm mt-md justify-center">
+        <span class="text-body-md text-on-surface-variant self-center">Gợi ý:</span>
+        <button onclick="quickSearch('artificial intelligence')" class="bg-surface-container border border-outline-variant text-on-surface-variant px-3 py-1 rounded-full text-label-md hover:bg-secondary-fixed transition-all">Artificial Intelligence</button>
+        <button onclick="quickSearch('climate change')" class="bg-surface-container border border-outline-variant text-on-surface-variant px-3 py-1 rounded-full text-label-md hover:bg-secondary-fixed transition-all">Climate Change</button>
+        <button onclick="quickSearch('machine learning healthcare')" class="bg-surface-container border border-outline-variant text-on-surface-variant px-3 py-1 rounded-full text-label-md hover:bg-secondary-fixed transition-all">ML in Healthcare</button>
+        <button onclick="quickSearch('quantum computing')" class="bg-surface-container border border-outline-variant text-on-surface-variant px-3 py-1 rounded-full text-label-md hover:bg-secondary-fixed transition-all">Quantum Computing</button>
+      </div>
     </div>
-    <span id="result-count" class="font-label-md text-label-md text-on-surface-variant"></span>
   </div>
-  <div id="results-list" class="space-y-lg"></div>
-  <div id="loading" class="hidden text-center py-xl">
-    <span class="material-symbols-outlined text-[48px] text-primary animate-spin">progress_activity</span>
-    <p class="text-body-md text-on-surface-variant mt-md">Đang tìm kiếm...</p>
-  </div>
-</div>
 
-<script>
-(function() {
-  const params = new URLSearchParams(window.location.search);
-  const query  = params.get('q') || '';
-  if (!query) return;
+  <!-- ===== TRANG KẾT QUẢ ===== -->
+  <div id="results-section" style="display:none;">
 
-  // Hiện section và query
-  document.getElementById('search-results').classList.remove('hidden');
-  document.getElementById('query-display').textContent = query;
-  document.getElementById('loading').classList.remove('hidden');
+    <div class="grid grid-cols-12 gap-xl">
 
-  // Cuộn xuống kết quả
-  setTimeout(() => document.getElementById('search-results').scrollIntoView({ behavior: 'smooth' }), 300);
+      <!-- ===== CỘT TRÁI: BỘ LỌC ===== -->
+      <aside class="col-span-12 lg:col-span-3">
+        <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg sticky top-20">
+          <h3 class="font-title-lg text-title-lg text-primary mb-lg flex items-center gap-sm">
+            <span class="material-symbols-outlined text-[20px]">tune</span>Bộ lọc
+          </h3>
 
-  const url = `https://api.semanticscholar.org/graph/v1/paper/search`
-    + `?query=${encodeURIComponent(query)}`
-    + `&limit=10`
-    + `&fields=title,abstract,year,authors,journal,citationCount,externalIds,openAccessPdf`;
-
-  fetch(url)
-    .then(r => r.json())
-    .then(data => {
-      document.getElementById('loading').classList.add('hidden');
-      const papers = data.data || [];
-
-      document.getElementById('result-count').textContent =
-        papers.length > 0 ? `${(data.total || 0).toLocaleString()} kết quả` : '';
-
-      if (papers.length === 0) {
-        document.getElementById('results-list').innerHTML = `
-          <div class="text-center py-xl text-on-surface-variant">
-            <span class="material-symbols-outlined text-[48px] opacity-30">search_off</span>
-            <p class="font-body-lg mt-md">Không tìm thấy kết quả cho "<strong>${query}</strong>"</p>
-          </div>`;
-        return;
-      }
-
-      document.getElementById('results-list').innerHTML = papers.map(p => {
-        const authors = (p.authors || []).slice(0, 4).map(a => a.name).join(', ')
-          + ((p.authors || []).length > 4 ? ' et al.' : '');
-        const abstract = p.abstract ? p.abstract.slice(0, 250) + '…' : '';
-        const doi     = p.externalIds?.DOI || '';
-        const pdf     = p.openAccessPdf?.url || '';
-        const detail  = p.paperId ? `xemchitietbaibao.html?id=${p.paperId}` : '#';
-
-        return `
-        <div class="bg-white border border-outline-variant rounded-xl p-lg hover:shadow-md hover:border-primary transition-all group">
-          <div class="flex items-start justify-between gap-md">
-            <div class="flex-1 min-w-0">
-
-              <!-- Journal + Year -->
-              <div class="flex flex-wrap gap-sm mb-sm">
-                ${p.journal?.name ? `<span class="font-label-md text-label-md bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full">${p.journal.name.slice(0,60)}</span>` : ''}
-                ${p.year ? `<span class="font-label-md text-label-md text-on-surface-variant">${p.year}</span>` : ''}
-              </div>
-
-              <!-- Title -->
-              <h3 class="font-headline-sm text-headline-sm text-primary mb-xs group-hover:underline leading-snug">
-                <a href="${detail}">${p.title || 'Không có tiêu đề'}</a>
-              </h3>
-
-              <!-- Authors -->
-              ${authors ? `<p class="font-body-sm text-body-sm text-on-surface-variant mb-sm">${authors}</p>` : ''}
-
-              <!-- Abstract -->
-              ${abstract ? `<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">${abstract}</p>` : ''}
-
-              <!-- Footer links -->
-              <div class="mt-md flex flex-wrap gap-md items-center text-body-sm">
-                ${p.citationCount > 0 ? `
-                  <span class="flex items-center gap-xs text-on-surface-variant">
-                    <span class="material-symbols-outlined text-[16px]">format_quote</span>
-                    ${p.citationCount.toLocaleString()} trích dẫn
-                  </span>` : ''}
-                ${doi ? `
-                  <a href="https://doi.org/${doi}" target="_blank" rel="noopener"
-                     class="flex items-center gap-xs text-primary hover:underline">
-                    <span class="material-symbols-outlined text-[16px]">link</span>DOI
-                  </a>` : ''}
-                ${pdf ? `
-                  <a href="${pdf}" target="_blank" rel="noopener"
-                     class="flex items-center gap-xs text-secondary font-semibold hover:underline">
-                    <span class="material-symbols-outlined text-[16px]">download</span>PDF miễn phí
-                  </a>` : ''}
-              </div>
+          <!-- Năm xuất bản -->
+          <div class="mb-lg">
+            <p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">Năm xuất bản</p>
+            <div class="flex items-center gap-sm">
+              <input id="year-from" type="number" min="1900" max="2025" placeholder="Từ"
+                class="w-full border border-outline-variant rounded-lg px-3 py-2 text-body-md focus:outline-none focus:border-primary transition-all bg-surface-container-lowest"
+                onchange="doSearch(1)" onkeydown="if(event.key==='Enter') doSearch(1)">
+              <span class="text-on-surface-variant shrink-0">—</span>
+              <input id="year-to" type="number" min="1900" max="2025" placeholder="Đến"
+                class="w-full border border-outline-variant rounded-lg px-3 py-2 text-body-md focus:outline-none focus:border-primary transition-all bg-surface-container-lowest"
+                onchange="doSearch(1)" onkeydown="if(event.key==='Enter') doSearch(1)">
             </div>
+            <!-- Gợi ý nhanh năm -->
+            <div class="flex flex-wrap gap-xs mt-sm">
+              <button onclick="setYearRange(2020,2025)" class="filter-chip text-caption border border-outline-variant rounded-full px-2 py-0.5 hover:bg-surface-container transition-all" id="chip-2020">2020–2025</button>
+              <button onclick="setYearRange(2015,2019)" class="filter-chip text-caption border border-outline-variant rounded-full px-2 py-0.5 hover:bg-surface-container transition-all" id="chip-2015">2015–2019</button>
+              <button onclick="setYearRange(2010,2014)" class="filter-chip text-caption border border-outline-variant rounded-full px-2 py-0.5 hover:bg-surface-container transition-all" id="chip-2010">2010–2014</button>
+            </div>
+          </div>
 
-            <!-- Save button -->
-            <button onclick="savePaper('${p.paperId}', this)"
-                    title="Lưu bài báo"
-                    class="shrink-0 p-sm border border-outline-variant rounded-lg hover:border-primary hover:bg-primary/5 transition-all text-on-surface-variant hover:text-primary">
-              <span class="material-symbols-outlined text-[20px]">bookmark</span>
+          <div class="border-t border-outline-variant my-md"></div>
+
+          <!-- Open Access -->
+          <div class="mb-lg">
+            <p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">Truy cập</p>
+            <label class="flex items-center gap-sm cursor-pointer group">
+              <div class="relative">
+                <input type="checkbox" id="oa-only" class="sr-only" onchange="doSearch(1)">
+                <div id="oa-track" class="w-10 h-5 bg-surface-container-high border border-outline-variant rounded-full transition-all"></div>
+                <div id="oa-thumb" class="absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full shadow transition-all"></div>
+              </div>
+              <span class="text-body-md flex items-center gap-xs">
+                <span class="text-[#1e7e34]">🔓</span> Chỉ Open Access
+              </span>
+            </label>
+          </div>
+
+          <div class="border-t border-outline-variant my-md"></div>
+
+          <!-- Loại bài -->
+          <div class="mb-lg">
+            <p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-sm">Loại bài báo</p>
+            <div class="space-y-xs">
+              <label class="flex items-center gap-sm cursor-pointer">
+                <input type="radio" name="doc-type" value="" checked onchange="doSearch(1)" class="accent-primary"> <span class="text-body-md">Tất cả</span>
+              </label>
+              <label class="flex items-center gap-sm cursor-pointer">
+                <input type="radio" name="doc-type" value="article" onchange="doSearch(1)" class="accent-primary"> <span class="text-body-md">Bài báo (Article)</span>
+              </label>
+              <label class="flex items-center gap-sm cursor-pointer">
+                <input type="radio" name="doc-type" value="review" onchange="doSearch(1)" class="accent-primary"> <span class="text-body-md">Tổng quan (Review)</span>
+              </label>
+              <label class="flex items-center gap-sm cursor-pointer">
+                <input type="radio" name="doc-type" value="book-chapter" onchange="doSearch(1)" class="accent-primary"> <span class="text-body-md">Chương sách</span>
+              </label>
+              <label class="flex items-center gap-sm cursor-pointer">
+                <input type="radio" name="doc-type" value="preprint" onchange="doSearch(1)" class="accent-primary"> <span class="text-body-md">Preprint</span>
+              </label>
+              <label class="flex items-center gap-sm cursor-pointer">
+                <input type="radio" name="doc-type" value="dataset" onchange="doSearch(1)" class="accent-primary"> <span class="text-body-md">Dữ liệu (Dataset)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Reset -->
+          <button onclick="resetFilters()"
+            class="w-full flex items-center justify-center gap-sm border border-outline-variant rounded-lg py-2 text-label-md text-on-surface-variant hover:bg-surface-container transition-all mt-sm">
+            <span class="material-symbols-outlined text-[16px]">restart_alt</span>Xoá bộ lọc
+          </button>
+        </div>
+      </aside>
+
+      <!-- ===== CỘT PHẢI: KẾT QUẢ ===== -->
+      <div class="col-span-12 lg:col-span-9">
+
+        <!-- Thanh search + info -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-md mb-lg">
+          <div>
+            <h2 class="font-headline-md text-headline-md text-primary">Kết quả tìm kiếm</h2>
+            <p class="text-body-md text-on-surface-variant mt-xs">
+              "<strong id="query-display" class="text-primary"></strong>"
+              &nbsp;—&nbsp;
+              <span id="result-count" class="text-secondary font-medium"></span>
+            </p>
+            <!-- Active filter chips -->
+            <div id="active-filters" class="flex flex-wrap gap-xs mt-sm"></div>
+          </div>
+          <div class="flex gap-sm shrink-0">
+            <div class="relative">
+              <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+              <input id="search-input-top"
+                class="bg-surface-container-lowest border border-outline-variant rounded-xl pl-9 pr-3 py-2 text-body-md w-52 focus:outline-none focus:border-primary transition-all"
+                placeholder="Tìm lại..." type="text"
+                onkeydown="if(event.key==='Enter') doSearch(1)">
+            </div>
+            <button onclick="doSearch(1)"
+              class="bg-primary text-on-primary px-md py-2 rounded-xl text-label-md hover:opacity-90 transition-all">
+              <span class="material-symbols-outlined text-[18px]">search</span>
             </button>
           </div>
-        </div>`;
-      }).join('');
+        </div>
 
-      // Đánh dấu bài đã lưu
-      const saved = new Set(JSON.parse(localStorage.getItem('scholartrend_bookmarks') || '[]').map(x => x.id));
-      document.querySelectorAll('[onclick^="savePaper"]').forEach(btn => {
-        const id = btn.getAttribute('onclick').match(/savePaper\('([^']+)'/)?.[1];
-        if (id && saved.has(id)) btn.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 1";
-      });
-    })
-    .catch(() => {
-      document.getElementById('loading').classList.add('hidden');
-      document.getElementById('results-list').innerHTML = `
-        <div class="bg-error-container text-on-error-container p-lg rounded-xl text-body-md">
-          Lỗi kết nối API. Vui lòng thử lại sau.
-        </div>`;
-    });
+        <!-- Loading -->
+        <div id="loading" class="text-center py-xl" style="display:none;">
+          <span class="material-symbols-outlined spin text-primary" style="font-size:40px;">progress_activity</span>
+          <p class="text-body-md text-on-surface-variant mt-sm">Đang tìm kiếm...</p>
+        </div>
 
-  function savePaper(id, btn) {
-    let saved = JSON.parse(localStorage.getItem('scholartrend_bookmarks') || '[]');
-    const icon = btn.querySelector('.material-symbols-outlined');
-    if (saved.find(x => x.id === id)) {
-      saved = saved.filter(x => x.id !== id);
-      icon.style.fontVariationSettings = "'FILL' 0";
-    } else {
-      saved.push({ id, savedAt: new Date().toISOString() });
-      icon.style.fontVariationSettings = "'FILL' 1";
-    }
-    localStorage.setItem('scholartrend_bookmarks', JSON.stringify(saved));
+        <!-- Lỗi -->
+        <div id="error-box" class="bg-error-container text-on-error-container rounded-xl p-lg mb-lg items-center gap-sm" style="display:none;">
+          <span class="material-symbols-outlined">error</span>
+          <span id="error-msg" class="font-label-md text-label-md"></span>
+        </div>
+
+        <!-- Danh sách -->
+        <div id="results-list" class="space-y-md"></div>
+
+        <!-- Phân trang -->
+        <div id="pagination" class="flex justify-center items-center gap-sm mt-xl flex-wrap"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-surface-container-low border-t border-outline-variant mt-xxl">
+  <div class="w-full py-xl px-lg flex flex-col md:flex-row justify-between items-center gap-md max-w-container-max mx-auto">
+    <span class="font-title-lg text-title-lg font-bold text-primary">ScholarTrend</span>
+    <p class="font-caption text-caption text-on-surface-variant">© 2024 ScholarTrend Academic Research Platform</p>
+  </div>
+</footer>
+
+<script>
+var state = { query:'', page:1, total:0, limit:10 };
+
+// ── Init ──
+(function init() {
+  var p = new URLSearchParams(window.location.search);
+  var q = p.get('q') || '';
+  if (q) {
+    document.getElementById('search-input').value = q;
+    document.getElementById('search-input-top').value = q;
+    // Restore filters từ URL
+    if (p.get('year_from')) document.getElementById('year-from').value = p.get('year_from');
+    if (p.get('year_to'))   document.getElementById('year-to').value   = p.get('year_to');
+    if (p.get('oa_only')==='1') { document.getElementById('oa-only').checked = true; syncToggle(); }
+    var t = p.get('type') || '';
+    document.querySelectorAll('input[name=doc-type]').forEach(function(r){ if(r.value===t) r.checked=true; });
+    doSearch(parseInt(p.get('page')||'1',10), q);
   }
-  window.savePaper = savePaper;
+
+  // Toggle OA switch UI
+  document.getElementById('oa-only').addEventListener('change', syncToggle);
 })();
+
+function syncToggle() {
+  var on = document.getElementById('oa-only').checked;
+  document.getElementById('oa-track').style.background = on ? '#002045' : '';
+  document.getElementById('oa-track').style.borderColor = on ? '#002045' : '';
+  document.getElementById('oa-thumb').style.transform = on ? 'translateX(20px)' : '';
+}
+
+function quickSearch(term) {
+  document.getElementById('search-input').value = term;
+  doSearch(1, term);
+}
+
+function setYearRange(from, to) {
+  document.getElementById('year-from').value = from;
+  document.getElementById('year-to').value   = to;
+  // Highlight chip
+  ['chip-2020','chip-2015','chip-2010'].forEach(function(id) {
+    document.getElementById(id).classList.remove('active');
+  });
+  var chipId = 'chip-' + from;
+  if (document.getElementById(chipId)) document.getElementById(chipId).classList.add('active');
+  doSearch(1);
+}
+
+function resetFilters() {
+  document.getElementById('year-from').value = '';
+  document.getElementById('year-to').value   = '';
+  document.getElementById('oa-only').checked = false;
+  syncToggle();
+  document.querySelector('input[name=doc-type][value=""]').checked = true;
+  ['chip-2020','chip-2015','chip-2010'].forEach(function(id){
+    document.getElementById(id).classList.remove('active');
+  });
+  doSearch(1);
+}
+
+// ── Tìm kiếm ──
+function doSearch(page, forceQuery) {
+  var q = forceQuery
+    || document.getElementById('search-input-top').value.trim()
+    || document.getElementById('search-input').value.trim();
+  if (!q) return;
+
+  state.query = q;
+  state.page  = page || 1;
+
+  var yearFrom = document.getElementById('year-from').value.trim();
+  var yearTo   = document.getElementById('year-to').value.trim();
+  var oaOnly   = document.getElementById('oa-only').checked ? '1' : '';
+  var docType  = (document.querySelector('input[name=doc-type]:checked') || {}).value || '';
+
+  // Sync inputs
+  document.getElementById('search-input').value     = q;
+  document.getElementById('search-input-top').value = q;
+
+  // Update URL
+  var urlParams = new URLSearchParams({ q: q });
+  if (state.page > 1)  urlParams.set('page', state.page);
+  if (yearFrom)        urlParams.set('year_from', yearFrom);
+  if (yearTo)          urlParams.set('year_to', yearTo);
+  if (oaOnly)          urlParams.set('oa_only', '1');
+  if (docType)         urlParams.set('type', docType);
+  history.pushState({}, '', '?' + urlParams.toString());
+
+  // UI
+  document.getElementById('hero-section').classList.add('hidden');
+  document.getElementById('results-section').style.display = 'block';
+  document.getElementById('query-display').textContent = q;
+  document.getElementById('result-count').textContent  = '';
+  document.getElementById('results-list').innerHTML    = '';
+  document.getElementById('error-box').style.display  = 'none';
+  document.getElementById('loading').style.display    = 'block';
+  document.getElementById('pagination').innerHTML     = '';
+  document.getElementById('active-filters').innerHTML  = '';
+
+  // Hiện active filter chips
+  renderActiveFilters(yearFrom, yearTo, oaOnly, docType);
+
+  // Gọi API
+  var apiUrl = '../api/timkiem.php?' + new URLSearchParams({
+    q: q, page: state.page,
+    ...(yearFrom && { year_from: yearFrom }),
+    ...(yearTo   && { year_to:   yearTo   }),
+    ...(oaOnly   && { oa_only:   '1'      }),
+    ...(docType  && { type:      docType  }),
+  }).toString();
+
+  fetch(apiUrl)
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(function(data) {
+      document.getElementById('loading').style.display = 'none';
+      if (!data.ok) { showError(data.error || 'Lỗi không xác định'); return; }
+      state.total = data.total || 0;
+      document.getElementById('result-count').textContent =
+        state.total.toLocaleString('vi-VN') + ' bài báo';
+      if (!data.data.length) {
+        document.getElementById('results-list').innerHTML =
+          '<div class="text-center py-xl text-on-surface-variant">' +
+          '<span class="material-symbols-outlined" style="font-size:48px;display:block;margin-bottom:12px">search_off</span>' +
+          '<p class="font-body-lg text-body-lg">Không tìm thấy kết quả với bộ lọc này.</p>' +
+          '<button onclick="resetFilters()" class="mt-md border border-outline-variant rounded-lg px-lg py-2 text-label-md hover:bg-surface-container transition-all">Xoá bộ lọc</button></div>';
+        return;
+      }
+      renderPapers(data.data, q);
+      renderPagination();
+    })
+    .catch(function(err) {
+      document.getElementById('loading').style.display = 'none';
+      showError('Không kết nối được API. (' + err.message + ')');
+    });
+}
+
+// ── Render active filter chips ──
+function renderActiveFilters(yearFrom, yearTo, oaOnly, docType) {
+  var chips = [];
+  if (yearFrom || yearTo) {
+    var label = (yearFrom||'…') + ' – ' + (yearTo||'nay');
+    chips.push('<span class="flex items-center gap-xs bg-primary-fixed text-on-primary-fixed-variant text-caption px-2 py-0.5 rounded-full">'
+      + '<span class="material-symbols-outlined text-[13px]">calendar_today</span>' + label
+      + '<button onclick="clearYearFilter()" class="ml-1 hover:text-primary transition-colors"><span class="material-symbols-outlined text-[13px]">close</span></button></span>');
+  }
+  if (oaOnly) {
+    chips.push('<span class="flex items-center gap-xs bg-[#e6f4ea] text-[#1e7e34] text-caption px-2 py-0.5 rounded-full">'
+      + '🔓 Open Access'
+      + '<button onclick="clearOA()" class="ml-1"><span class="material-symbols-outlined text-[13px]">close</span></button></span>');
+  }
+  var typeLabels = {article:'Bài báo',review:'Tổng quan','book-chapter':'Chương sách',preprint:'Preprint',dataset:'Dataset'};
+  if (docType && typeLabels[docType]) {
+    chips.push('<span class="flex items-center gap-xs bg-secondary-fixed text-on-secondary-fixed-variant text-caption px-2 py-0.5 rounded-full">'
+      + '<span class="material-symbols-outlined text-[13px]">article</span>' + typeLabels[docType]
+      + '<button onclick="clearType()" class="ml-1"><span class="material-symbols-outlined text-[13px]">close</span></button></span>');
+  }
+  document.getElementById('active-filters').innerHTML = chips.join('');
+}
+
+function clearYearFilter() {
+  document.getElementById('year-from').value='';
+  document.getElementById('year-to').value='';
+  ['chip-2020','chip-2015','chip-2010'].forEach(function(id){document.getElementById(id).classList.remove('active');});
+  doSearch(1);
+}
+function clearOA() { document.getElementById('oa-only').checked=false; syncToggle(); doSearch(1); }
+function clearType() { document.querySelector('input[name=doc-type][value=""]').checked=true; doSearch(1); }
+
+// ── Render bài báo ──
+function renderPapers(papers, query) {
+  document.getElementById('results-list').innerHTML = papers.map(function(p, i) {
+    var authors = (p.authors||[]).slice(0,4).map(function(a){return escHtml(a.name);}).join(', ')
+      + ((p.authors||[]).length>4?' <em>et al.</em>':'');
+
+    var abstract = p.abstract
+      ? highlight(p.abstract.slice(0,300)+(p.abstract.length>300?'…':''), query) : '';
+
+    var concepts = (p.concepts||[]).map(function(c){
+      return '<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-0.5 rounded-full text-caption">'+escHtml(c)+'</span>';
+    }).join(' ');
+
+    // Type badge
+    var typeBadgeMap = {
+      'article':      'bg-[#e8f0fe] text-[#1a56db]',
+      'review':       'bg-[#fef3c7] text-[#92400e]',
+      'book-chapter': 'bg-[#ede9fe] text-[#5b21b6]',
+      'preprint':     'bg-[#fce7f3] text-[#9d174d]',
+      'dataset':      'bg-[#d1fae5] text-[#065f46]',
+    };
+    var typeCls = typeBadgeMap[p.type] || 'bg-surface-container text-on-surface-variant';
+    var typeBadge = p.type_label
+      ? '<span class="'+typeCls+' px-2 py-0.5 rounded-full text-caption font-medium">'+escHtml(p.type_label)+'</span>' : '';
+
+    var journalBadge = (p.journal&&p.journal.name)
+      ? '<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full text-caption font-medium">'+escHtml(p.journal.name.slice(0,55))+'</span>' : '';
+
+    var yearBadge = p.year
+      ? '<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full text-caption">'+p.year+'</span>' : '';
+
+    var oaBadge = p.is_oa
+      ? '<span class="bg-[#e6f4ea] text-[#1e7e34] px-2 py-0.5 rounded-full text-caption font-medium">🔓 Open Access</span>' : '';
+
+    var actions = '';
+    if (p.doi_url) actions += '<a href="'+p.doi_url+'" target="_blank" rel="noopener" class="flex items-center gap-xs text-secondary border border-outline-variant rounded-lg px-3 py-1.5 text-label-md hover:bg-secondary-fixed transition-all"><span class="material-symbols-outlined text-[15px]">open_in_new</span>DOI</a>';
+    if (p.pdf_url) actions += '<a href="'+p.pdf_url+'" target="_blank" rel="noopener" class="flex items-center gap-xs text-[#1e7e34] border border-[#1e7e34] rounded-lg px-3 py-1.5 text-label-md hover:bg-[#e6f4ea] transition-all"><span class="material-symbols-outlined text-[15px]">download</span>PDF</a>';
+
+    var rank = (state.page-1)*state.limit+i+1;
+
+    return '<div class="paper-card bg-surface-container-lowest border border-outline-variant rounded-xl p-xl">'
+      +'<div class="flex flex-wrap items-center gap-sm mb-sm">'
+      +'<span class="text-caption text-on-surface-variant font-medium w-6 shrink-0">'+rank+'</span>'
+      +typeBadge+journalBadge+yearBadge+oaBadge
+      +'</div>'
+      +'<h3 class="font-title-lg text-title-lg text-primary mb-xs leading-snug">'+highlight(p.title||'Không có tiêu đề',query)+'</h3>'
+      +(authors?'<p class="text-body-md text-secondary mb-sm">'+authors+'</p>':'')
+      +(abstract?'<p class="text-body-md text-on-surface-variant leading-relaxed mb-sm">'+abstract+'</p>':'')
+      +(concepts?'<div class="flex flex-wrap gap-xs mb-md">'+concepts+'</div>':'')
+      +'<div class="flex flex-wrap items-center justify-between gap-md pt-sm border-t border-outline-variant">'
+      +'<div class="flex items-center gap-md text-caption text-on-surface-variant">'
+      +(p.citations>0?'<span class="flex items-center gap-xs"><span class="material-symbols-outlined text-[14px]">format_quote</span>'+p.citations.toLocaleString('vi-VN')+' trích dẫn</span>':'')
+      +(p.doi?'<span class="font-mono hidden sm:inline">'+escHtml(p.doi.slice(0,40))+'</span>':'')
+      +'</div>'
+      +'<div class="flex items-center gap-sm flex-wrap">'+actions+'</div>'
+      +'</div></div>';
+  }).join('');
+}
+
+// ── Phân trang ──
+function renderPagination() {
+  var total = Math.ceil(state.total/state.limit);
+  if (total<=1) return;
+  var cur=state.page, html='';
+  if(cur>1) html+='<button onclick="doSearch('+(cur-1)+')" class="flex items-center gap-xs border border-outline-variant rounded-lg px-md py-2 text-label-md hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[18px]">chevron_left</span>Trước</button>';
+  var s=Math.max(1,cur-2), e=Math.min(total,cur+2);
+  if(s>1){html+='<button onclick="doSearch(1)" class="border border-outline-variant rounded-lg px-3 py-2 text-label-md hover:bg-surface-container transition-all">1</button>';if(s>2)html+='<span class="text-on-surface-variant">…</span>';}
+  for(var i=s;i<=e;i++){
+    if(i===cur) html+='<button class="bg-primary text-on-primary rounded-lg px-3 py-2 text-label-md font-medium">'+i+'</button>';
+    else html+='<button onclick="doSearch('+i+')" class="border border-outline-variant rounded-lg px-3 py-2 text-label-md hover:bg-surface-container transition-all">'+i+'</button>';
+  }
+  if(e<total){if(e<total-1)html+='<span class="text-on-surface-variant">…</span>';html+='<button onclick="doSearch('+total+')" class="border border-outline-variant rounded-lg px-3 py-2 text-label-md hover:bg-surface-container transition-all">'+total+'</button>';}
+  if(cur<total) html+='<button onclick="doSearch('+(cur+1)+')" class="flex items-center gap-xs border border-outline-variant rounded-lg px-md py-2 text-label-md hover:bg-surface-container transition-all">Tiếp<span class="material-symbols-outlined text-[18px]">chevron_right</span></button>';
+  document.getElementById('pagination').innerHTML=html;
+}
+
+// ── Helpers ──
+function showError(msg){
+  var el=document.getElementById('error-box');
+  document.getElementById('error-msg').textContent=msg;
+  el.style.display='flex';
+}
+function escHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function highlight(text,query){
+  var safe=escHtml(text);
+  if(!query)return safe;
+  query.trim().split(/\s+/).forEach(function(w){
+    if(!w)return;
+    safe=safe.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>');
+  });
+  return safe;
+}
 </script>
-</body></html>
+</body>
+</html>
