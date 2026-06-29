@@ -121,14 +121,13 @@
 <nav class="flex justify-between items-center w-full px-margin max-w-container-max mx-auto h-16">
 <div class="flex items-center gap-xl">
 <span class="font-headline-md text-headline-md font-bold text-primary">ScholarTrend</span>
-<div class="hidden lg:flex items-center bg-surface-container-low px-md py-xs rounded-lg border border-outline-variant">
-<span class="material-symbols-outlined text-on-surface-variant mr-sm">search</span>
-<input class="bg-transparent border-none focus:ring-0 text-body-sm w-48" placeholder="Tìm kiếm nhanh..." type="text">
+
+
 </div>
 <div class="hidden md:flex items-center gap-lg">
 <a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-200" href="#">Trang chủ</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Bảng điều khiển</a>
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Xu hướng</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Tài nguyên</a>
+
 </div>
 </div>
 <div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed cursor-pointer hover:shadow-sm transition-all"
@@ -155,12 +154,31 @@
                 </p>
 <!-- Large Search Bar -->
 <div class="w-full max-w-3xl mx-auto flex items-center p-xs bg-white border border-outline-variant rounded-xl shadow-xl focus-within:border-primary transition-all group">
-<span class="material-symbols-outlined text-on-surface-variant px-md">search</span>
-<input class="flex-grow border-none focus:ring-0 font-body-md text-body-md py-lg" placeholder="Tìm kiếm bài báo nghiên cứu, tác giả hoặc từ khóa..." type="text">
-<button class="bg-primary text-on-primary font-label-md text-label-md px-xl py-lg rounded-lg flex items-center gap-sm group-hover:px-xl transition-all origin-bottom" style="transition: transform 0.2s ease-out;">
-                        Khám phá ngay
-                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</button>
+  <span class="material-symbols-outlined text-on-surface-variant px-md">search</span>
+  <input 
+    id="search-input"
+    class="flex-grow border-none focus:ring-0 font-body-md text-body-md py-lg" 
+    placeholder="Tìm kiếm bài báo nghiên cứu, tác giả hoặc từ khóa..." 
+    type="text"
+    onkeydown="if(event.key==='Enter') doSearch()"
+  >
+  <button 
+    onclick="doSearch()"
+    class="bg-primary text-on-primary font-label-md text-label-md px-xl py-lg rounded-lg flex items-center gap-sm transition-all origin-bottom" 
+    style="transition: transform 0.2s ease-out;">
+    Khám phá ngay
+    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+  </button>
+</div>
+
+<script>
+function doSearch() {
+  var q = document.getElementById('search-input').value.trim();
+  if (q) {
+    window.location.href = 'xemchitietbaibao.html?q=' + encodeURIComponent(q);
+  }
+}
+</script>
 </div>
 <div class="mt-lg flex flex-wrap justify-center gap-md">
 <span class="text-body-sm text-on-surface-variant">Phổ biến:</span>

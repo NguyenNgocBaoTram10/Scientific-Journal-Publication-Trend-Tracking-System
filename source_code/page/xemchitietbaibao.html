@@ -336,12 +336,147 @@
 </div>
 </footer>
 <!-- Simple Interactivity -->
+<!-- Vùng hiển thị kết quả tìm kiếm -->
+<div id="search-results" class="hidden py-xl px-margin max-w-container-max mx-auto mt-16">
+  <div class="flex items-center justify-between mb-xl">
+    <div>
+      <h2 class="font-headline-lg text-headline-lg text-primary">Kết quả tìm kiếm</h2>
+      <p class="text-body-md text-on-surface-variant">Từ khóa: <strong id="query-display" class="text-primary"></strong></p>
+    </div>
+    <span id="result-count" class="font-label-md text-label-md text-on-surface-variant"></span>
+  </div>
+  <div id="results-list" class="space-y-lg"></div>
+  <div id="loading" class="hidden text-center py-xl">
+    <span class="material-symbols-outlined text-[48px] text-primary animate-spin">progress_activity</span>
+    <p class="text-body-md text-on-surface-variant mt-md">Đang tìm kiếm...</p>
+  </div>
+</div>
+
 <script>
-        document.querySelectorAll('button').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.classList.add('scale-95');
-                setTimeout(() => btn.classList.remove('scale-95'), 100);
-            });
-        });
-    </script>
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const query  = params.get('q') || '';
+  if (!query) return;
+
+  // Hiện section và query
+  document.getElementById('search-results').classList.remove('hidden');
+  document.getElementById('query-display').textContent = query;
+  document.getElementById('loading').classList.remove('hidden');
+
+  // Cuộn xuống kết quả
+  setTimeout(() => document.getElementById('search-results').scrollIntoView({ behavior: 'smooth' }), 300);
+
+  const url = `https://api.semanticscholar.org/graph/v1/paper/search`
+    + `?query=${encodeURIComponent(query)}`
+    + `&limit=10`
+    + `&fields=title,abstract,year,authors,journal,citationCount,externalIds,openAccessPdf`;
+
+  fetch(url)
+    .then(r => r.json())
+    .then(data => {
+      document.getElementById('loading').classList.add('hidden');
+      const papers = data.data || [];
+
+      document.getElementById('result-count').textContent =
+        papers.length > 0 ? `${(data.total || 0).toLocaleString()} kết quả` : '';
+
+      if (papers.length === 0) {
+        document.getElementById('results-list').innerHTML = `
+          <div class="text-center py-xl text-on-surface-variant">
+            <span class="material-symbols-outlined text-[48px] opacity-30">search_off</span>
+            <p class="font-body-lg mt-md">Không tìm thấy kết quả cho "<strong>${query}</strong>"</p>
+          </div>`;
+        return;
+      }
+
+      document.getElementById('results-list').innerHTML = papers.map(p => {
+        const authors = (p.authors || []).slice(0, 4).map(a => a.name).join(', ')
+          + ((p.authors || []).length > 4 ? ' et al.' : '');
+        const abstract = p.abstract ? p.abstract.slice(0, 250) + '…' : '';
+        const doi     = p.externalIds?.DOI || '';
+        const pdf     = p.openAccessPdf?.url || '';
+        const detail  = p.paperId ? `xemchitietbaibao.html?id=${p.paperId}` : '#';
+
+        return `
+        <div class="bg-white border border-outline-variant rounded-xl p-lg hover:shadow-md hover:border-primary transition-all group">
+          <div class="flex items-start justify-between gap-md">
+            <div class="flex-1 min-w-0">
+
+              <!-- Journal + Year -->
+              <div class="flex flex-wrap gap-sm mb-sm">
+                ${p.journal?.name ? `<span class="font-label-md text-label-md bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full">${p.journal.name.slice(0,60)}</span>` : ''}
+                ${p.year ? `<span class="font-label-md text-label-md text-on-surface-variant">${p.year}</span>` : ''}
+              </div>
+
+              <!-- Title -->
+              <h3 class="font-headline-sm text-headline-sm text-primary mb-xs group-hover:underline leading-snug">
+                <a href="${detail}">${p.title || 'Không có tiêu đề'}</a>
+              </h3>
+
+              <!-- Authors -->
+              ${authors ? `<p class="font-body-sm text-body-sm text-on-surface-variant mb-sm">${authors}</p>` : ''}
+
+              <!-- Abstract -->
+              ${abstract ? `<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">${abstract}</p>` : ''}
+
+              <!-- Footer links -->
+              <div class="mt-md flex flex-wrap gap-md items-center text-body-sm">
+                ${p.citationCount > 0 ? `
+                  <span class="flex items-center gap-xs text-on-surface-variant">
+                    <span class="material-symbols-outlined text-[16px]">format_quote</span>
+                    ${p.citationCount.toLocaleString()} trích dẫn
+                  </span>` : ''}
+                ${doi ? `
+                  <a href="https://doi.org/${doi}" target="_blank" rel="noopener"
+                     class="flex items-center gap-xs text-primary hover:underline">
+                    <span class="material-symbols-outlined text-[16px]">link</span>DOI
+                  </a>` : ''}
+                ${pdf ? `
+                  <a href="${pdf}" target="_blank" rel="noopener"
+                     class="flex items-center gap-xs text-secondary font-semibold hover:underline">
+                    <span class="material-symbols-outlined text-[16px]">download</span>PDF miễn phí
+                  </a>` : ''}
+              </div>
+            </div>
+
+            <!-- Save button -->
+            <button onclick="savePaper('${p.paperId}', this)"
+                    title="Lưu bài báo"
+                    class="shrink-0 p-sm border border-outline-variant rounded-lg hover:border-primary hover:bg-primary/5 transition-all text-on-surface-variant hover:text-primary">
+              <span class="material-symbols-outlined text-[20px]">bookmark</span>
+            </button>
+          </div>
+        </div>`;
+      }).join('');
+
+      // Đánh dấu bài đã lưu
+      const saved = new Set(JSON.parse(localStorage.getItem('scholartrend_bookmarks') || '[]').map(x => x.id));
+      document.querySelectorAll('[onclick^="savePaper"]').forEach(btn => {
+        const id = btn.getAttribute('onclick').match(/savePaper\('([^']+)'/)?.[1];
+        if (id && saved.has(id)) btn.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 1";
+      });
+    })
+    .catch(() => {
+      document.getElementById('loading').classList.add('hidden');
+      document.getElementById('results-list').innerHTML = `
+        <div class="bg-error-container text-on-error-container p-lg rounded-xl text-body-md">
+          Lỗi kết nối API. Vui lòng thử lại sau.
+        </div>`;
+    });
+
+  function savePaper(id, btn) {
+    let saved = JSON.parse(localStorage.getItem('scholartrend_bookmarks') || '[]');
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (saved.find(x => x.id === id)) {
+      saved = saved.filter(x => x.id !== id);
+      icon.style.fontVariationSettings = "'FILL' 0";
+    } else {
+      saved.push({ id, savedAt: new Date().toISOString() });
+      icon.style.fontVariationSettings = "'FILL' 1";
+    }
+    localStorage.setItem('scholartrend_bookmarks', JSON.stringify(saved));
+  }
+  window.savePaper = savePaper;
+})();
+</script>
 </body></html>
