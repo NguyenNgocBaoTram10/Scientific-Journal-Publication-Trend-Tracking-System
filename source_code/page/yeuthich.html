@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScholarTrend - Yêu thích</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode:"class",
+  theme:{extend:{
+    colors:{
+      "surface":"#f7f9fb","secondary-fixed":"#d3e4ff","on-surface-variant":"#43474e",
+      "on-primary-fixed-variant":"#2d476f","secondary-fixed-dim":"#a2c9ff","outline":"#74777f",
+      "surface-container":"#eceef0","surface-bright":"#f7f9fb","inverse-primary":"#adc7f7",
+      "primary-fixed":"#d6e3ff","on-secondary-container":"#00477f","on-error":"#ffffff",
+      "background":"#f7f9fb","inverse-on-surface":"#eff1f3",
+      "surface-container-lowest":"#ffffff","surface-container-high":"#e6e8ea","error":"#ba1a1a",
+      "on-error-container":"#93000a","surface-variant":"#e0e3e5","on-secondary-fixed-variant":"#004881",
+      "primary":"#002045","on-primary":"#ffffff","on-secondary-fixed":"#001c38","error-container":"#ffdad6",
+      "surface-container-low":"#f2f4f6","surface-container-highest":"#e0e3e5",
+      "on-tertiary-container":"#c6955e","secondary-container":"#7db6ff",
+      "primary-container":"#1a365d","primary-fixed-dim":"#adc7f7","surface-dim":"#d8dadc",
+      "on-secondary":"#ffffff","outline-variant":"#c4c6cf","on-surface":"#191c1e",
+      "secondary":"#1960a3","on-background":"#191c1e","on-primary-fixed":"#001b3c"
+    },
+    borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
+    spacing:{"xs":"4px","container-max":"1280px","md":"16px","sidebar-width":"280px","xxl":"48px","sm":"8px","base":"4px","xl":"32px","lg":"24px"},
+    fontSize:{
+      "body-md":["14px",{"lineHeight":"1.5","fontWeight":"400"}],
+      "label-md":["13px",{"lineHeight":"1.4","letterSpacing":"0.01em","fontWeight":"500"}],
+      "headline-md":["24px",{"lineHeight":"1.3","letterSpacing":"-0.01em","fontWeight":"600"}],
+      "display-lg":["36px",{"lineHeight":"1.2","letterSpacing":"-0.02em","fontWeight":"700"}],
+      "caption":["12px",{"lineHeight":"1.4","fontWeight":"400"}],
+      "body-lg":["16px",{"lineHeight":"1.6","fontWeight":"400"}],
+      "title-lg":["18px",{"lineHeight":"1.5","fontWeight":"600"}],
+      "headline-sm":["20px",{"lineHeight":"1.4","fontWeight":"600"}]
+    }
+  }}
+}
+</script>
+<style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+  body{font-family:'Inter',sans-serif}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .spin{animation:spin 1s linear infinite;display:inline-block}
+  .paper-card{transition:box-shadow .18s,transform .18s}
+  .paper-card:hover{box-shadow:0 4px 20px rgba(0,32,69,.10);transform:translateY(-1px)}
+  #toast{
+    position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:#191c1e; color:#fff; padding:10px 20px; border-radius:10px;
+    font-size:14px; opacity:0; pointer-events:none; transition:all .25s; z-index:100; max-width:90vw; text-align:center;
+  }
+  #toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+  #toast.toast-error{background:#ba1a1a;}
+  #toast.toast-success{background:#1e7e34;}
+</style>
+</head>
+<body class="bg-surface text-on-surface">
+
+<!-- Header -->
+<header class="bg-surface border-b border-outline-variant fixed top-0 z-50 w-full h-16">
+  <div class="flex justify-between items-center w-full px-lg h-full max-w-container-max mx-auto">
+    <span class="font-headline-md text-headline-md font-bold text-primary cursor-pointer"
+          onclick="window.location.href='trangchu1.html'">ScholarTrend</span>
+    <nav class="hidden md:flex items-center gap-lg text-body-md text-on-surface-variant">
+      <a href="trangchu1.html" class="hover:text-primary transition-colors">Trang chủ</a>
+      <a href="timkiem.html" class="hover:text-primary transition-colors">Tìm kiếm</a>
+      <a href="phantichxuhuong.html" class="hover:text-primary transition-colors">Xu hướng</a>
+      <a href="yeuthich.html" class="text-primary font-medium border-b-2 border-primary pb-0.5 flex items-center gap-xs">
+        <span class="material-symbols-outlined text-[18px]">bookmark</span>Yêu thích
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main class="pt-24 pb-xxl px-lg max-w-container-max mx-auto">
+
+  <div class="mb-xl flex items-center justify-between flex-wrap gap-md">
+    <div>
+      <h1 class="font-headline-md text-headline-md text-primary flex items-center gap-sm">
+        <span class="material-symbols-outlined text-[26px]">bookmark</span>
+        Bài báo yêu thích
+      </h1>
+      <p class="text-body-md text-on-surface-variant mt-xs">
+        Danh sách các bài báo bạn đã lưu lại để xem sau.
+        <span id="result-count" class="text-secondary font-medium"></span>
+      </p>
+    </div>
+    <a href="timkiem.html"
+       class="flex items-center gap-xs bg-primary text-on-primary px-lg py-2 rounded-xl text-label-md hover:opacity-90 transition-all">
+      <span class="material-symbols-outlined text-[18px]">search</span>Tìm thêm bài báo
+    </a>
+  </div>
+
+  <!-- Loading -->
+  <div id="loading" class="text-center py-xl">
+    <span class="material-symbols-outlined spin text-primary" style="font-size:40px;">progress_activity</span>
+    <p class="text-body-md text-on-surface-variant mt-sm">Đang tải danh sách...</p>
+  </div>
+
+  <!-- Lỗi -->
+  <div id="error-box" class="bg-error-container text-on-error-container rounded-xl p-lg mb-lg items-center gap-sm" style="display:none;">
+    <span class="material-symbols-outlined">error</span>
+    <span id="error-msg" class="font-label-md text-label-md"></span>
+  </div>
+
+  <!-- Rỗng -->
+  <div id="empty-box" class="text-center py-xl text-on-surface-variant" style="display:none;">
+    <span class="material-symbols-outlined" style="font-size:56px;display:block;margin-bottom:12px">bookmark_border</span>
+    <p class="font-body-lg text-body-lg mb-md">Bạn chưa lưu bài báo nào.</p>
+    <a href="timkiem.html" class="inline-flex items-center gap-xs border border-outline-variant rounded-lg px-lg py-2 text-label-md hover:bg-surface-container transition-all">
+      <span class="material-symbols-outlined text-[16px]">search</span>Đi tìm bài báo ngay
+    </a>
+  </div>
+
+  <!-- Danh sách -->
+  <div id="results-list" class="space-y-md"></div>
+
+</main>
+
+<footer class="bg-surface-container-low border-t border-outline-variant mt-xxl">
+  <div class="w-full py-xl px-lg flex flex-col md:flex-row justify-between items-center gap-md max-w-container-max mx-auto">
+    <span class="font-title-lg text-title-lg font-bold text-primary">ScholarTrend</span>
+    <p class="font-caption text-caption text-on-surface-variant">© 2024 ScholarTrend Academic Research Platform</p>
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+// ⚠️ Sửa lại đường dẫn này cho đúng với máy bạn nếu cấu trúc thư mục khác
+var BOOKMARK_API = '../api/yeuthich.php';
+
+var bookmarks = [];
+
+document.addEventListener('DOMContentLoaded', loadBookmarks);
+
+function loadBookmarks() {
+  document.getElementById('loading').style.display   = 'block';
+  document.getElementById('error-box').style.display = 'none';
+  document.getElementById('empty-box').style.display  = 'none';
+  document.getElementById('results-list').innerHTML   = '';
+
+  fetch(BOOKMARK_API + '?action=list', { credentials: 'include' })
+    .then(function(res) {
+      if (res.status === 401) {
+        showToast('Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.', 'error');
+        setTimeout(function(){ window.location.href = 'dangnhap.php'; }, 1200);
+        return null;
+      }
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function(json) {
+      if (!json) return;
+      document.getElementById('loading').style.display = 'none';
+
+      if (!json.ok) {
+        showError(json.error || 'Không thể tải danh sách bookmark.');
+        return;
+      }
+
+      bookmarks = json.data || [];
+      document.getElementById('result-count').textContent =
+        bookmarks.length ? '— ' + bookmarks.length.toLocaleString('vi-VN') + ' bài báo' : '';
+
+      if (bookmarks.length === 0) {
+        document.getElementById('empty-box').style.display = 'block';
+        return;
+      }
+
+      renderBookmarks(bookmarks);
+    })
+    .catch(function(err) {
+      document.getElementById('loading').style.display = 'none';
+      showError('Không kết nối được API. (' + err.message + ')');
+    });
+}
+
+function renderBookmarks(list) {
+  document.getElementById('results-list').innerHTML = list.map(function(b, i) {
+    var authors = b.authors ? escHtml(b.authors) : '';
+    var journalBadge = b.journal_name
+      ? '<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full text-caption font-medium">'+escHtml(b.journal_name.slice(0,55))+'</span>' : '';
+    var yearBadge = b.year
+      ? '<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full text-caption">'+b.year+'</span>' : '';
+    var sourceBadge = b.source
+      ? '<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full text-caption">'+escHtml(b.source)+'</span>' : '';
+    var savedDate = b.created_at
+      ? '<span class="text-caption text-on-surface-variant">Lưu lúc: '+escHtml(b.created_at)+'</span>' : '';
+
+    var actions = '';
+    if (b.doi_url) actions += '<a href="'+b.doi_url+'" target="_blank" rel="noopener" class="flex items-center gap-xs text-secondary border border-outline-variant rounded-lg px-3 py-1.5 text-label-md hover:bg-secondary-fixed transition-all"><span class="material-symbols-outlined text-[15px]">open_in_new</span>DOI</a>';
+    if (b.pdf_url) actions += '<a href="'+b.pdf_url+'" target="_blank" rel="noopener" class="flex items-center gap-xs text-[#1e7e34] border border-[#1e7e34] rounded-lg px-3 py-1.5 text-label-md hover:bg-[#e6f4ea] transition-all"><span class="material-symbols-outlined text-[15px]">download</span>PDF</a>';
+
+    actions += '<button type="button" data-id="'+b.id+'" onclick="onDeleteClick(this)" '
+      + 'class="flex items-center gap-xs text-error border border-error rounded-lg px-3 py-1.5 text-label-md hover:bg-error-container transition-all">'
+      + '<span class="material-symbols-outlined text-[15px]">delete</span>Xoá</button>';
+
+    return '<div class="paper-card bg-surface-container-lowest border border-outline-variant rounded-xl p-xl" id="bookmark-'+b.id+'">'
+      +'<div class="flex flex-wrap items-center gap-sm mb-sm">'
+      +'<span class="text-caption text-on-surface-variant font-medium w-6 shrink-0">'+(i+1)+'</span>'
+      +journalBadge+yearBadge+sourceBadge
+      +'</div>'
+      +'<h3 class="font-title-lg text-title-lg text-primary mb-xs leading-snug">'+escHtml(b.title||'Không có tiêu đề')+'</h3>'
+      +(authors?'<p class="text-body-md text-secondary mb-sm">'+authors+'</p>':'')
+      +'<div class="flex flex-wrap items-center justify-between gap-md pt-sm border-t border-outline-variant">'
+      +'<div class="flex items-center gap-md">'+savedDate+'</div>'
+      +'<div class="flex items-center gap-sm flex-wrap">'+actions+'</div>'
+      +'</div></div>';
+  }).join('');
+}
+
+function onDeleteClick(btn) {
+  var id = btn.getAttribute('data-id');
+  if (!confirm('Xoá bài báo này khỏi danh sách yêu thích?')) return;
+
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+
+  fetch(BOOKMARK_API + '?action=delete', {
+    method: 'POST',
+    credentials: 'include',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ id: id }),
+  })
+  .then(function(res) {
+    if (res.status === 401) {
+      showToast('Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.', 'error');
+      setTimeout(function(){ window.location.href = 'dangnhap.php'; }, 1200);
+      return null;
+    }
+    return res.json();
+  })
+  .then(function(json) {
+    if (!json) return;
+    if (!json.ok) {
+      showToast('Lỗi: ' + json.error, 'error');
+      btn.disabled = false; btn.style.opacity = '1';
+      return;
+    }
+    showToast('Đã xoá khỏi danh sách yêu thích.', 'success');
+    var el = document.getElementById('bookmark-' + id);
+    if (el) el.remove();
+
+    bookmarks = bookmarks.filter(function(b){ return String(b.id) !== String(id); });
+    document.getElementById('result-count').textContent =
+      bookmarks.length ? '— ' + bookmarks.length.toLocaleString('vi-VN') + ' bài báo' : '';
+    if (bookmarks.length === 0) document.getElementById('empty-box').style.display = 'block';
+  })
+  .catch(function(err) {
+    btn.disabled = false; btn.style.opacity = '1';
+    showToast('Không kết nối được tới server: ' + err.message, 'error');
+  });
+}
+
+// ── Helpers ──
+function showError(msg){
+  var el=document.getElementById('error-box');
+  document.getElementById('error-msg').textContent=msg;
+  el.style.display='flex';
+}
+function escHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+var toastTimer = null;
+function showToast(msg, type) {
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'show' + (type ? ' toast-' + type : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+</script>
+</body>
+</html>
