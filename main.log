@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.18)  1 JUL 2026 04:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.18)  1 JUL 2026 05:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,6 +710,21 @@ LaTeX Warning: Label `fig:class-track-publication-trends' multiply defined.
 
 
 LaTeX Warning: Label `fig:class-track-publication-trends' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
 
 
 LaTeX Warning: Label `fig:erd' multiply defined.
@@ -2602,141 +2617,176 @@ Package pdftex.def Info: Track-Publication-Trend_class-diagram.jpg  used on inp
 ut line 1413.
 (pdftex.def)             Requested size: 452.9679pt x 636.48892pt.
  [52 <./stpt.png>]
-<View-Dashboard_class-diagram.jpg, id=849, 925.4575pt x 901.3675pt>
+<ac7.png, id=849, 1075.01625pt x 1577.895pt>
+File: ac7.png Graphic file (type png)
+<use ac7.png>
+Package pdftex.def Info: ac7.png  used on input line 1422.
+(pdftex.def)             Requested size: 407.66833pt x 598.35435pt.
+ [53 <./Track-Publication-Trend_class-diagram.jpg>]
+<sevdb.png, id=855, 896.34875pt x 617.30624pt>
+File: sevdb.png Graphic file (type png)
+<use sevdb.png>
+Package pdftex.def Info: sevdb.png  used on input line 1429.
+(pdftex.def)             Requested size: 452.9679pt x 311.94913pt.
+ [54 <./ac7.png (PNG copy)>]
+<sta7.png, id=861, 825.0825pt x 951.555pt>
+File: sta7.png Graphic file (type png)
+<use sta7.png>
+Package pdftex.def Info: sta7.png  used on input line 1436.
+(pdftex.def)             Requested size: 452.9679pt x 522.39857pt.
+ [55 <./sevdb.png (PNG copy)>]
+<View-Dashboard_class-diagram.jpg, id=868, 925.4575pt x 901.3675pt>
 File: View-Dashboard_class-diagram.jpg Graphic file (type jpg)
 <use View-Dashboard_class-diagram.jpg>
 Package pdftex.def Info: View-Dashboard_class-diagram.jpg  used on input line 1
-425.
+443.
 (pdftex.def)             Requested size: 452.9679pt x 441.1788pt.
- [53 <./Track-Publication-Trend_class-diagram.jpg>]
-<activity_Generate-reports.png, id=855, 1445.4pt x 1139.25626pt>
+ [56 <./sta7.png (PNG copy)>]
+<activity_Generate-reports.png, id=874, 1445.4pt x 1139.25626pt>
 File: activity_Generate-reports.png Graphic file (type png)
 <use activity_Generate-reports.png>
-Package pdftex.def Info: activity_Generate-reports.png  used on input line 1434
+Package pdftex.def Info: activity_Generate-reports.png  used on input line 1452
 .
 (pdftex.def)             Requested size: 452.9679pt x 357.02495pt.
- [54 <./View-Dashboard_class-diagram.jpg>]
-<sequence_Generate-reports.png, id=861, 628.3475pt x 750.805pt>
+ [57 <./View-Dashboard_class-diagram.jpg>]
+<sequence_Generate-reports.png, id=880, 628.3475pt x 750.805pt>
 File: sequence_Generate-reports.png Graphic file (type png)
 <use sequence_Generate-reports.png>
-Package pdftex.def Info: sequence_Generate-reports.png  used on input line 1441
+Package pdftex.def Info: sequence_Generate-reports.png  used on input line 1459
 .
 (pdftex.def)             Requested size: 527.65489pt x 630.45189pt.
 
-Overfull \hbox (74.687pt too wide) in paragraph at lines 1441--1442
+Overfull \hbox (74.687pt too wide) in paragraph at lines 1459--1460
  [][] 
  []
 
-[55 <./activity_Generate-reports.png (PNG copy)>]
-<state_Generate-reports.png, id=868, 937.5025pt x 1690.315pt>
+[58 <./activity_Generate-reports.png (PNG copy)>]
+<state_Generate-reports.png, id=886, 937.5025pt x 1690.315pt>
 File: state_Generate-reports.png Graphic file (type png)
 <use state_Generate-reports.png>
-Package pdftex.def Info: state_Generate-reports.png  used on input line 1448.
+Package pdftex.def Info: state_Generate-reports.png  used on input line 1466.
 (pdftex.def)             Requested size: 349.6743pt x 630.45189pt.
- [56 <./sequence_Generate-reports.png (PNG copy)>]
-<Generate-Reports_class-diagram.jpg, id=874, 1146.2825pt x 973.6375pt>
+ [59 <./sequence_Generate-reports.png (PNG copy)>]
+<Generate-Reports_class-diagram.jpg, id=892, 1146.2825pt x 973.6375pt>
 File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
 <use Generate-Reports_class-diagram.jpg>
 Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
- 1455.
+ 1473.
 (pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
- [57 <./state_Generate-reports.png (PNG copy)>]
-<follow topics.png, id=880, 1387.1825pt x 728.7225pt>
+ [60 <./state_Generate-reports.png (PNG copy)>]
+<ac8.png, id=898, 1264.725pt x 2044.63875pt>
+File: ac8.png Graphic file (type png)
+<use ac8.png>
+Package pdftex.def Info: ac8.png  used on input line 1482.
+(pdftex.def)             Requested size: 362.37569pt x 585.81677pt.
+ [61 <./Generate-Reports_class-diagram.jpg>]
+<sevtt.png, id=905, 993.7125pt x 761.84625pt>
+File: sevtt.png Graphic file (type png)
+<use sevtt.png>
+Package pdftex.def Info: sevtt.png  used on input line 1489.
+(pdftex.def)             Requested size: 452.9679pt x 347.27995pt.
+ [62 <./ac8.png (PNG copy)>]
+<sta8.png, id=911, 661.47125pt x 1072.005pt>
+File: sta8.png Graphic file (type png)
+<use sta8.png>
+Package pdftex.def Info: sta8.png  used on input line 1496.
+(pdftex.def)             Requested size: 362.37569pt x 587.26547pt.
+ [63 <./sevtt.png (PNG copy)>]
+<follow topics.png, id=917, 1387.1825pt x 728.7225pt>
 File: follow topics.png Graphic file (type png)
 <use follow topics.png>
-Package pdftex.def Info: follow topics.png  used on input line 1470.
+Package pdftex.def Info: follow topics.png  used on input line 1506.
 (pdftex.def)             Requested size: 452.9679pt x 237.95506pt.
- [58 <./Generate-Reports_class-diagram.jpg>]
-<follow topice 2.png, id=886, 914.41624pt x 416.55624pt>
+ [64 <./sta8.png (PNG copy)>]
+<follow topice 2.png, id=923, 914.41624pt x 416.55624pt>
 File: follow topice 2.png Graphic file (type png)
 <use follow topice 2.png>
-Package pdftex.def Info: follow topice 2.png  used on input line 1477.
+Package pdftex.def Info: follow topice 2.png  used on input line 1513.
 (pdftex.def)             Requested size: 452.9679pt x 206.34534pt.
- [59 <./follow topics.png (PNG copy)>]
-<follow topice 3.png, id=892, 262.9825pt x 780.9175pt>
+<follow topice 3.png, id=924, 262.9825pt x 780.9175pt>
 File: follow topice 3.png Graphic file (type png)
 <use follow topice 3.png>
-Package pdftex.def Info: follow topice 3.png  used on input line 1484.
+Package pdftex.def Info: follow topice 3.png  used on input line 1520.
 (pdftex.def)             Requested size: 452.9679pt x 1345.12996pt.
- [60 <./follow topice 2.png (PNG copy)>] [61]
+ [65 <./follow topics.png (PNG copy)> <./follow topice 2.png (PNG copy)>] [66]
 Overfull \vbox (703.85875pt too high) has occurred while \output is active []
 
 
-[62 <./follow topice 3.png (PNG copy)>]
-<Receive notifications.png, id=908, 1589.94pt x 837.1275pt>
+[67 <./follow topice 3.png (PNG copy)>]
+<Receive notifications.png, id=941, 1589.94pt x 837.1275pt>
 File: Receive notifications.png Graphic file (type png)
 <use Receive notifications.png>
-Package pdftex.def Info: Receive notifications.png  used on input line 1494.
+Package pdftex.def Info: Receive notifications.png  used on input line 1530.
 (pdftex.def)             Requested size: 452.9679pt x 238.4944pt.
-<Receive notifications 1.png, id=909, 1128.215pt x 431.6125pt>
+<Receive notifications 1.png, id=942, 1128.215pt x 431.6125pt>
 File: Receive notifications 1.png Graphic file (type png)
 <use Receive notifications 1.png>
-Package pdftex.def Info: Receive notifications 1.png  used on input line 1502.
+Package pdftex.def Info: Receive notifications 1.png  used on input line 1538.
 (pdftex.def)             Requested size: 452.9679pt x 173.28735pt.
-<Receive notifications 2.png, id=910, 400.49625pt x 468.75125pt>
+<Receive notifications 2.png, id=943, 400.49625pt x 468.75125pt>
 File: Receive notifications 2.png Graphic file (type png)
 <use Receive notifications 2.png>
-Package pdftex.def Info: Receive notifications 2.png  used on input line 1509.
+Package pdftex.def Info: Receive notifications 2.png  used on input line 1545.
 (pdftex.def)             Requested size: 452.9679pt x 530.19772pt.
- [63 <./Receive notifications.png (PNG copy)> <./Receive notifications 1.png (P
+ [68 <./Receive notifications.png (PNG copy)> <./Receive notifications 1.png (P
 NG copy)>]
-<activity_Manage-Users.png, id=917, 1445.4pt x 655.44875pt>
+<activity_Manage-Users.png, id=950, 1445.4pt x 655.44875pt>
 File: activity_Manage-Users.png Graphic file (type png)
 <use activity_Manage-Users.png>
-Package pdftex.def Info: activity_Manage-Users.png  used on input line 1525.
+Package pdftex.def Info: activity_Manage-Users.png  used on input line 1561.
 (pdftex.def)             Requested size: 452.9679pt x 205.4073pt.
- [64 <./Receive notifications 2.png (PNG copy)>]
-<sequence_Manage-Users.png, id=923, 529.98pt x 949.5475pt>
+ [69 <./Receive notifications 2.png (PNG copy)>]
+<sequence_Manage-Users.png, id=956, 529.98pt x 949.5475pt>
 File: sequence_Manage-Users.png Graphic file (type png)
 <use sequence_Manage-Users.png>
-Package pdftex.def Info: sequence_Manage-Users.png  used on input line 1532.
+Package pdftex.def Info: sequence_Manage-Users.png  used on input line 1568.
 (pdftex.def)             Requested size: 452.9679pt x 811.58177pt.
- [65 <./activity_Manage-Users.png>] [66]
+ [70 <./activity_Manage-Users.png>] [71]
 Overfull \vbox (170.31056pt too high) has occurred while \output is active []
 
 
-[67 <./sequence_Manage-Users.png (PNG copy)>]
-<state_Manage-Users.png, id=940, 1036.87375pt x 1528.71124pt>
+[72 <./sequence_Manage-Users.png (PNG copy)>]
+<state_Manage-Users.png, id=972, 1036.87375pt x 1528.71124pt>
 File: state_Manage-Users.png Graphic file (type png)
 <use state_Manage-Users.png>
-Package pdftex.def Info: state_Manage-Users.png  used on input line 1539.
+Package pdftex.def Info: state_Manage-Users.png  used on input line 1575.
 (pdftex.def)             Requested size: 427.60495pt x 630.45189pt.
-<con1ac.png, id=941, 966.61125pt x 660.4675pt>
+<con1ac.png, id=973, 966.61125pt x 660.4675pt>
 File: con1ac.png Graphic file (type png)
 <use con1ac.png>
-Package pdftex.def Info: con1ac.png  used on input line 1548.
+Package pdftex.def Info: con1ac.png  used on input line 1584.
 (pdftex.def)             Requested size: 452.9679pt x 309.50267pt.
- [68 <./state_Manage-Users.png (PNG copy)>]
-<con1tt.png, id=947, 867.24pt x 826.08624pt>
+ [73 <./state_Manage-Users.png (PNG copy)>]
+<con1tt.png, id=980, 867.24pt x 826.08624pt>
 File: con1tt.png Graphic file (type png)
 <use con1tt.png>
-Package pdftex.def Info: con1tt.png  used on input line 1555.
+Package pdftex.def Info: con1tt.png  used on input line 1591.
 (pdftex.def)             Requested size: 452.9679pt x 431.47067pt.
- [69 <./con1ac.png>]
-<con1sta.png, id=954, 518.93875pt x 829.0975pt>
+ [74 <./con1ac.png>]
+<con1sta.png, id=987, 518.93875pt x 829.0975pt>
 File: con1sta.png Graphic file (type png)
 <use con1sta.png>
-Package pdftex.def Info: con1sta.png  used on input line 1562.
+Package pdftex.def Info: con1sta.png  used on input line 1598.
 (pdftex.def)             Requested size: 394.61926pt x 630.45189pt.
- [70 <./con1tt.png>]
-<cyac1.png, id=961, 817.0525pt x 834.11626pt>
+ [75 <./con1tt.png>]
+<cyac1.png, id=994, 817.0525pt x 834.11626pt>
 File: cyac1.png Graphic file (type png)
 <use cyac1.png>
-Package pdftex.def Info: cyac1.png  used on input line 1572.
+Package pdftex.def Info: cyac1.png  used on input line 1608.
 (pdftex.def)             Requested size: 452.9679pt x 462.43091pt.
- [71 <./con1sta.png>]
-<sytt1.png, id=968, 904.37875pt x 795.97375pt>
+ [76 <./con1sta.png>]
+<sytt1.png, id=1001, 904.37875pt x 795.97375pt>
 File: sytt1.png Graphic file (type png)
 <use sytt1.png>
-Package pdftex.def Info: sytt1.png  used on input line 1579.
+Package pdftex.def Info: sytt1.png  used on input line 1615.
 (pdftex.def)             Requested size: 452.9679pt x 398.66605pt.
- [72 <./cyac1.png>]
-<systa1.png, id=975, 647.41875pt x 835.12pt>
+ [77 <./cyac1.png>]
+<systa1.png, id=1008, 647.41875pt x 835.12pt>
 File: systa1.png Graphic file (type png)
 <use systa1.png>
-Package pdftex.def Info: systa1.png  used on input line 1586.
+Package pdftex.def Info: systa1.png  used on input line 1622.
 (pdftex.def)             Requested size: 452.9679pt x 584.29967pt.
- [73 <./sytt1.png>] [74 <./systa1.png>] (main.aux)
+ [78 <./sytt1.png>] [79 <./systa1.png>] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -2749,10 +2799,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AF7BA1E3D0B4F870F17E04DA9617ACAA;20215.
  ) 
 Here is how much of TeX's memory you used:
- 12465 strings out of 467871
- 197929 string characters out of 5418376
- 651290 words of memory out of 5000000
- 40934 multiletter control sequences out of 15000+600000
+ 12519 strings out of 467871
+ 198677 string characters out of 5418376
+ 651354 words of memory out of 5000000
+ 40977 multiletter control sequences out of 15000+600000
  642953 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,83p,478b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2766,9 +2816,9 @@ amsfonts/cm/cmsy10.pfb><C:/Users/ndnqu/AppData/Local/Programs/MiKTeX/fonts/type
 /vntex/vnr/vnr12.pfb><C:/Users/ndnqu/AppData/Local/Programs/MiKTeX/fonts/type1/
 vntex/vnr/vnti10.pfb><C:/Users/ndnqu/AppData/Local/Programs/MiKTeX/fonts/type1/
 vntex/vnr/vntt12.pfb>
-Output written on main.pdf (74 pages, 8268908 bytes).
+Output written on main.pdf (79 pages, 8993301 bytes).
 PDF statistics:
- 1086 PDF objects out of 1200 (max. 8388607)
- 257 named destinations out of 1000 (max. 500000)
- 1315 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1121 PDF objects out of 1200 (max. 8388607)
+ 268 named destinations out of 1000 (max. 500000)
+ 1345 words of extra memory for PDF output out of 10000 (max. 10000000)
 
