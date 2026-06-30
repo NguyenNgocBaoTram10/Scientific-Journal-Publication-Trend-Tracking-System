@@ -121,13 +121,12 @@
 <nav class="flex justify-between items-center w-full px-margin max-w-container-max mx-auto h-16">
 <div class="flex items-center gap-xl">
 <span class="font-headline-md text-headline-md font-bold text-primary">ScholarTrend</span>
-<div class="hidden lg:flex items-center bg-surface-container-low px-md py-xs rounded-lg border border-outline-variant">
-<span class="material-symbols-outlined text-on-surface-variant mr-sm">search</span>
-<input class="bg-transparent border-none focus:ring-0 text-body-sm w-48" placeholder="Tìm kiếm nhanh..." type="text">
+
+
 </div>
 <div class="hidden md:flex items-center gap-lg">
-<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-200" href="#">Trang chủ</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Bảng điều khiển</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Xu hướng</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-200" href="#">Trang chủ</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#"><a href="bangdieukhien.html">Bảng điều khiển</a></a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#"><a href="phantichxuhuong.html">Xu hướng</a></a>
 
 </div>
 </div>
@@ -135,8 +134,8 @@
 
 
 <div class="h-6 w-[1px] bg-outline-variant mx-sm"></div>
-<button class="font-label-md text-label-md text-primary hover:opacity-80 transition-all">Đăng nhập</button>
-<button class="font-label-md text-label-md bg-primary text-on-primary px-lg py-sm rounded-lg hover:shadow-lg transition-all active:scale-95 origin-bottom" style="transition: transform 0.2s ease-out;">Đăng ký</button>
+<button class="font-label-md text-label-md text-primary hover:opacity-80 transition-all"><a href="dangnhap.html">Đăng nhập</a></button>
+<button class="font-label-md text-label-md bg-primary text-on-primary px-lg py-sm rounded-lg hover:shadow-lg transition-all active:scale-95 origin-bottom" style="transition: transform 0.2s ease-out;"><a href="dangky.html">Đăng ký</a></button>
 </div>
 </nav>
 </header>
@@ -156,20 +155,35 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-2xl mx-auto">
                     Theo dõi hàng triệu ấn phẩm, phân tích tốc độ phát triển của các lĩnh vực và đón đầu những đột phá nghiên cứu quan trọng nhất.
                 </p>
-<!-- Large Search Bar -->
 <div class="w-full max-w-3xl mx-auto flex items-center p-xs bg-white border border-outline-variant rounded-xl shadow-xl focus-within:border-primary transition-all group">
-<span class="material-symbols-outlined text-on-surface-variant px-md">search</span>
-<input class="flex-grow border-none focus:ring-0 font-body-md text-body-md py-lg" placeholder="Tìm kiếm bài báo nghiên cứu, tác giả hoặc từ khóa..." type="text">
-<button class="bg-primary text-on-primary font-label-md text-label-md px-xl py-lg rounded-lg flex items-center gap-sm group-hover:px-xl transition-all origin-bottom" style="transition: transform 0.2s ease-out;">
-                        Khám phá ngay
-                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</button>
+  <span class="material-symbols-outlined text-on-surface-variant px-md">search</span>
+  <input 
+    id="search-input"
+    class="flex-grow border-none focus:ring-0 font-body-md text-body-md py-lg" 
+    placeholder="Tìm kiếm bài báo nghiên cứu, tác giả hoặc từ khóa..." 
+    type="text"
+    onkeydown="if(event.key==='Enter') doSearch()"
+  >
+  <button 
+    onclick="doSearch()"
+    class="bg-primary text-on-primary font-label-md text-label-md px-xl py-lg rounded-lg flex items-center gap-sm transition-all origin-bottom" 
+    style="transition: transform 0.2s ease-out;">
+    Khám phá ngay
+    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+  </button>
+</div>
+
+<script>
+function doSearch() {
+  var q = document.getElementById('search-input').value.trim();
+  if (q) {
+    window.location.href = 'xemchitietbaibao.html?q=' + encodeURIComponent(q);
+  }
+}
+</script>
 </div>
 <div class="mt-lg flex flex-wrap justify-center gap-md">
-<span class="text-body-sm text-on-surface-variant">Phổ biến:</span>
-<a class="text-body-sm font-semibold text-primary hover:underline" href="#">#AI_Y_tế</a>
-<a class="text-body-sm font-semibold text-primary hover:underline" href="#">#Biến_đổi_khí_hậu</a>
-<a class="text-body-sm font-semibold text-primary hover:underline" href="#">#Vật_lý_lượng_tử</a>
+
 </div>
 </div>
 </section>
@@ -178,10 +192,10 @@
 <div class="flex justify-between items-end mb-xl">
 <div>
 <h2 class="font-headline-lg text-headline-lg text-primary">Chủ đề đang nổi bật</h2>
-<p class="text-on-surface-variant font-body-md">Các lĩnh vực nghiên cứu có tốc độ tăng trưởng nhanh nhất trong 30 ngày qua.</p>
+
 </div>
 <button class="flex items-center gap-xs font-label-md text-label-md text-primary border border-primary px-lg py-sm rounded-lg hover:bg-primary hover:text-on-primary transition-all">
-                    Xem tất cả xu hướng
+                    <a href="phantichxuhuong.html">Xem tất cả xu hướng</a>
                     <span class="material-symbols-outlined text-[18px]">trending_up</span>
 </button>
 </div>
@@ -262,7 +276,7 @@
 </div>
 <!-- Visual Mock of a Trend Chart -->
 <div class="h-64 flex items-end justify-between gap-sm border-b border-l border-outline-variant pl-sm pb-sm">
-<div class="bg-surface-tint opacity-20 w-full h-[40%]" title="2019"></div>
+<div class="bg-surface-tint opacity-20 w-full h-[40%] origin-bottom" title="2019" style="transition: transform 0.2s ease-out;"></div>
 <div class="bg-surface-tint opacity-40 w-full h-[55%] origin-bottom" title="2020" style="transition: transform 0.2s ease-out;"></div>
 <div class="bg-surface-tint opacity-60 w-full h-[70%] origin-bottom" title="2021" style="transition: transform 0.2s ease-out;"></div>
 <div class="bg-surface-tint opacity-80 w-full h-[85%] origin-bottom" title="2022" style="transition: transform 0.2s ease-out;"></div>
@@ -286,25 +300,23 @@
 </div>
 <div class="order-1 lg:order-2 space-y-lg">
 <h2 class="font-headline-lg text-headline-lg text-primary">Phân tích xu hướng chuyên sâu</h2>
-<p class="text-body-lg text-on-surface-variant">ScholarTrend sử dụng mô hình AI tiên tiến để tổng hợp dữ liệu từ hàng ngàn tạp chí khoa học uy tín, giúp bạn nhận diện sớm các chủ đề đang hình thành (Emerging Topics) và các mối liên kết liên ngành.</p>
+<p class="text-body-lg text-on-surface-variant">ScholarTrend hỗ trợ thu thập và phân tích metadata bài báo khoa học từ các nguồn học thuật uy tín. Hệ thống giúp người dùng theo dõi xu hướng nghiên cứu, khám phá các chủ đề nổi bật và hỗ trợ quá trình tìm kiếm, phân tích tài liệu khoa học.</p>
 <ul class="space-y-md">
 <li class="flex items-center gap-md">
 <span class="material-symbols-outlined text-secondary">check_circle</span>
-<span class="text-body-md">Theo dõi số lượng trích dẫn và tầm ảnh hưởng (Impact Factor).</span>
+<span class="text-body-md">Theo dõi số lượng bài báo theo từng năm và xu hướng xuất bản.</span>
 </li>
 <li class="flex items-center gap-md">
 <span class="material-symbols-outlined text-secondary">check_circle</span>
-<span class="text-body-md">Phân tích phân phối địa lý của các nhóm nghiên cứu.</span>
+<span class="text-body-md">Phân tích các chủ đề nghiên cứu nổi bật dựa trên dữ liệu học thuật.</span>
 </li>
 <li class="flex items-center gap-md">
 <span class="material-symbols-outlined text-secondary">check_circle</span>
-<span class="text-body-md">Dự báo hướng đi tiếp theo của công nghệ trong 3-5 năm.</span>
+<span class="text-body-md">Hiển thị Dashboard trực quan với biểu đồ thống kê và kết quả phân tích.</span>
 </li>
 </ul>
 <div class="pt-md">
-<button class="bg-primary-container text-on-primary-container px-xl py-lg rounded-lg font-label-md hover:brightness-110 transition-all flex items-center gap-sm">
-                            Bắt đầu theo dõi xu hướng
-                            <span class="material-symbols-outlined">query_stats</span>
+
 </button>
 </div>
 </div>
@@ -318,13 +330,9 @@
 </div>
 <h2 class="font-headline-lg text-headline-lg text-primary">Đừng bỏ lỡ bất kỳ đột phá nào</h2>
 <p class="text-body-lg text-on-surface-variant">
-                    Đăng ký theo dõi các chủ đề bạn quan tâm và nhận thông báo ngay lập tức khi có bài báo mới được xuất bản hoặc có sự thay đổi lớn trong xu hướng trích dẫn.
+                  Theo dõi các chủ đề nghiên cứu để nhận thông báo khi có bài báo mới hoặc khi xu hướng xuất bản của chủ đề thay đổi.
                 </p>
-<div class="flex flex-col sm:flex-row justify-center items-center gap-md mt-xl">
-<input class="w-full sm:w-80 border-outline-variant focus:border-primary rounded-lg font-body-md px-lg py-lg" placeholder="Nhập email của bạn..." type="email">
-<button class="w-full sm:w-auto bg-primary text-on-primary px-xl py-lg rounded-lg font-label-md hover:shadow-xl transition-all origin-bottom" style="transition: transform 0.2s ease-out;">Nhận thông báo miễn phí</button>
-</div>
-<p class="text-body-sm text-on-surface-variant italic">Chúng tôi tôn trọng quyền riêng tư và chỉ gửi những cập nhật giá trị nhất.</p>
+
 </div>
 </section>
 <!-- API / Partner Section -->
@@ -334,31 +342,18 @@
 <footer class="bg-surface-container border-t border-outline-variant">
 
 </footer>
-<script>
-        // Micro-interaction for hover effects on charts
-        const chartBars = document.querySelectorAll('.bg-surface-tint, .bg-primary');
-        chartBars.forEach(bar => {
-            bar.addEventListener('mouseenter', () => {
-                bar.classList.add('scale-x-110', 'origin-bottom');
-                bar.style.transition = 'transform 0.2s ease-out';
-            });
-            bar.addEventListener('mouseleave', () => {
-                bar.classList.remove('scale-x-110');
-            });
-        });
 
-        // Simple scroll reveal
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < window.innerHeight * 0.8) {
-                    section.classList.add('opacity-100');
-                    section.style.transition = 'opacity 0.6s ease-out';
-                }
-            });
-        });
+
+    <script>
+    function doSearch() {
+      var q = document.getElementById('search-input').value.trim();
+      if (q) {
+        window.location.href = 'xemchitietbaibao.html?q=' + encodeURIComponent(q);
+      }
+    }
     </script>
+
+
 
 
 </body></html>
