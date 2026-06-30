@@ -612,6 +612,12 @@ The Scientific Journal Publication Trend Tracking System (SJPTTS) is a web-based
 The system allows users to search scientific publications using keywords, authors, journals, research fields, or publication years. Users can view detailed publication information, bookmark publications, follow research topics, receive notifications about newly published papers, analyze publication trends through interactive dashboards, and export reports in PDF or CSV format.
 
 Administrators can manage user accounts, configure academic API sources, synchronize publication data, monitor system operations, and maintain the overall performance of the platform. The system aims to provide an efficient solution for discovering scientific literature and supporting research through publication trend analysis.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{Overview_Diagram.png}
+	\caption{Architecture Diagram of the Publication Trend Tracking System}
+	\label{fig: usecase}
+\end{figure}
 
 \section{User Requirements}
 
@@ -1224,12 +1230,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \end{longtable}
 \section{ Detail Design}
 \subsection{Register}
-<<<<<<< HEAD
-\subsubsection{Activity diagram }
-\subsubsection{Sequence Diagram }
-\subsubsection{State}
-
-=======
 \subsubsection{Activity diagram}
 \begin{figure}[H]
 	\centering
@@ -1251,7 +1251,14 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\caption{State diagram}
 	\label{fig:erd}
 \end{figure}
->>>>>>> 39f02b8aae44ab1f2d299b47c5feccaddb8974f2
+\subsubsection{Class Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{CDRegister.png}
+	\caption{Class Diagram: Register}
+	\label{fig:class-track-publication-trends}
+\end{figure}
+
 \subsection{Login}
 \subsubsection{Activity Diagram}
 \begin{figure}[H]
@@ -1273,6 +1280,13 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\includegraphics[width=\textwidth]{sta2.png}
 	\caption{State diagram}
 	\label{fig:erd}
+\end{figure}
+\subsubsection{Class Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{CDLogin.png}
+	\caption{Class Diagram: Login}
+	\label{fig:class-track-publication-trends}
 \end{figure}
 
 %-------------------------------------------------
@@ -1298,6 +1312,14 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\caption{State diagram}
 	\label{fig:erd}
 \end{figure}
+\subsubsection{Class Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{CDSearchResearchPaper.png}
+	\caption{Class Diagram: Search Research Papers}
+	\label{fig:class-track-publication-trends}
+\end{figure}
+
 
 %-------------------------------------------------
 \subsection{View Paper Details}
@@ -1322,6 +1344,14 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\caption{State Diagram: View Paper Details}
 	\label{fig:state-view-paper-details}
 \end{figure}
+\subsubsection{Class Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{CDPaperDetail.png}
+	\caption{Class Diagram: View Paper Detail}
+	\label{fig:class-track-publication-trends}
+\end{figure}
+
 
 %-------------------------------------------------
 \subsection{Save Bookmarks}
@@ -1346,6 +1376,14 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\caption{State Diagram: Save Bookmarks}
 	\label{fig:state-save-bookmarks}
 \end{figure}
+\subsubsection{Class Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{CDBookmark.png}
+	\caption{Class Diagram: Save Bookmarks}
+	\label{fig:class-track-publication-trends}
+\end{figure}
+
 %-------------------------------------------------
 \subsection{Track Publication Trends}
 \subsubsection{Activity Diagram}
