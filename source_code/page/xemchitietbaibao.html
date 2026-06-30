@@ -52,6 +52,20 @@ tailwind.config = {
   .filter-chip{transition:all .15s}
   .filter-chip.active{background:#002045;color:#fff;border-color:#002045}
   input[type=number]::-webkit-inner-spin-button{opacity:1}
+  .bookmark-btn{transition:all .15s}
+  .bookmark-btn.is-saved{background:#fff3cd;color:#856404;border-color:#f0d68a}
+  .bookmark-btn .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400}
+  .bookmark-btn.is-saved .material-symbols-outlined{font-variation-settings:'FILL' 1}
+
+  /* Toast nhỏ thông báo lưu bookmark thành công/lỗi */
+  #toast{
+    position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:#191c1e; color:#fff; padding:10px 20px; border-radius:10px;
+    font-size:14px; opacity:0; pointer-events:none; transition:all .25s; z-index:100; max-width:90vw; text-align:center;
+  }
+  #toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+  #toast.toast-error{background:#ba1a1a;}
+  #toast.toast-success{background:#1e7e34;}
 </style>
 </head>
 <body class="bg-surface text-on-surface">
@@ -65,6 +79,9 @@ tailwind.config = {
       <a href="trangchu1.html" class="hover:text-primary transition-colors">Trang chủ</a>
       <a href="timkiem.html" class="text-primary font-medium border-b-2 border-primary pb-0.5">Tìm kiếm</a>
       <a href="phantichxuhuong.html" class="hover:text-primary transition-colors">Xu hướng</a>
+      <a href="yeuthich.html" class="hover:text-primary transition-colors flex items-center gap-xs">
+        <span class="material-symbols-outlined text-[18px]">bookmark</span>Yêu thích
+      </a>
     </nav>
   </div>
 </header>
@@ -243,8 +260,14 @@ tailwind.config = {
   </div>
 </footer>
 
+<!-- Toast thông báo -->
+<div id="toast"></div>
+
 <script>
-var state = { query:'', page:1, total:0, limit:10 };
+// ⚠️ Sửa lại đường dẫn này cho đúng với máy bạn nếu cấu trúc thư mục khác
+var BOOKMARK_API = '../api/bookmark.php';
+
+var state = { query:'', page:1, total:0, limit:10, papers:[] };
 
 // ── Init ──
 (function init() {
@@ -360,7 +383,8 @@ function doSearch(page, forceQuery) {
       if (!data.ok) { showError(data.error || 'Lỗi không xác định'); return; }
       state.total = data.total || 0;
       document.getElementById('result-count').textContent =
-        state.total.toLocaleString('vi-VN') + ' bài báo';
+        state.total.toLocaleString('vi-VN') + ' bài báo'
+        + (data.source === 'crossref' ? ' (nguồn: Crossref)' : '');
       if (!data.data.length) {
         document.getElementById('results-list').innerHTML =
           '<div class="text-center py-xl text-on-surface-variant">' +
@@ -369,6 +393,7 @@ function doSearch(page, forceQuery) {
           '<button onclick="resetFilters()" class="mt-md border border-outline-variant rounded-lg px-lg py-2 text-label-md hover:bg-surface-container transition-all">Xoá bộ lọc</button></div>';
         return;
       }
+      state.papers = data.data; // lưu lại để nút bookmark dùng
       renderPapers(data.data, q);
       renderPagination();
     })
@@ -448,6 +473,11 @@ function renderPapers(papers, query) {
     if (p.doi_url) actions += '<a href="'+p.doi_url+'" target="_blank" rel="noopener" class="flex items-center gap-xs text-secondary border border-outline-variant rounded-lg px-3 py-1.5 text-label-md hover:bg-secondary-fixed transition-all"><span class="material-symbols-outlined text-[15px]">open_in_new</span>DOI</a>';
     if (p.pdf_url) actions += '<a href="'+p.pdf_url+'" target="_blank" rel="noopener" class="flex items-center gap-xs text-[#1e7e34] border border-[#1e7e34] rounded-lg px-3 py-1.5 text-label-md hover:bg-[#e6f4ea] transition-all"><span class="material-symbols-outlined text-[15px]">download</span>PDF</a>';
 
+    // ⭐ Nút Yêu thích / Lưu bookmark — i = vị trí trong mảng state.papers hiện tại
+    actions += '<button type="button" data-idx="'+i+'" onclick="onBookmarkClick(this)" '
+      + 'class="bookmark-btn flex items-center gap-xs border border-outline-variant rounded-lg px-3 py-1.5 text-label-md hover:bg-[#fff8e1] transition-all">'
+      + '<span class="material-symbols-outlined text-[15px]">bookmark</span>Yêu thích</button>';
+
     var rank = (state.page-1)*state.limit+i+1;
 
     return '<div class="paper-card bg-surface-container-lowest border border-outline-variant rounded-xl p-xl">'
@@ -501,6 +531,66 @@ function highlight(text,query){
     safe=safe.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>');
   });
   return safe;
+}
+
+// ── Toast ──
+var toastTimer = null;
+function showToast(msg, type) {
+  var el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'show' + (type ? ' toast-' + type : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+// ── Xử lý click nút Yêu thích ──
+function onBookmarkClick(btn) {
+  var idx = parseInt(btn.getAttribute('data-idx'), 10);
+  var paper = state.papers[idx];
+  if (!paper) return;
+  saveBookmark(paper, btn);
+}
+
+// ── Gọi bookmark.php để lưu bài báo (Use case: Save Bookmarks) ──
+function saveBookmark(paper, btnEl) {
+  if (btnEl) { btnEl.disabled = true; btnEl.style.opacity = '0.6'; }
+
+  fetch(BOOKMARK_API + '?action=save', {
+    method: 'POST',
+    credentials: 'include', // bắt buộc để gửi kèm cookie session đăng nhập
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(paper),
+  })
+  .then(function(res) {
+    if (res.status === 401) {
+      showToast('Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.', 'error');
+      setTimeout(function(){ window.location.href = 'dangnhap.php'; }, 1200);
+      return null;
+    }
+    return res.json();
+  })
+  .then(function(json) {
+    if (!json) return;
+    if (btnEl) { btnEl.disabled = false; btnEl.style.opacity = '1'; }
+
+    if (!json.ok) {
+      showToast('Lỗi: ' + json.error, 'error');
+      return;
+    }
+    if (json.already) {
+      showToast('Bài báo này đã có trong mục Yêu thích.', 'error');
+    } else {
+      showToast('Đã lưu vào mục Yêu thích!', 'success');
+      if (btnEl) {
+        btnEl.classList.add('is-saved');
+        btnEl.innerHTML = '<span class="material-symbols-outlined text-[15px]">bookmark</span>Đã lưu';
+      }
+    }
+  })
+  .catch(function(err) {
+    if (btnEl) { btnEl.disabled = false; btnEl.style.opacity = '1'; }
+    showToast('Không kết nối được tới server: ' + err.message, 'error');
+  });
 }
 </script>
 </body>
