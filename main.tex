@@ -718,7 +718,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	Follow Topics &
 	User &
 	Follow Topics, Receive Notifications &
-	Users follow research topics to receive notifications about newly published papers and changes in publication trends. &
+	Users follow research topics to receive notifications about tracked activities &
 	The selected topic is added to the user's followed-topic list and notifications become available. \\
 	\hline
 	
@@ -945,27 +945,23 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	
 	\vspace{6pt}
 	
-	\begin{tabular}{C{0.8cm} L{3.5cm} C{2.5cm} L{7cm}}
-		
-		\rowcolor{headerblue}
-		{\color{white}\bfseries \#} &
-		{\color{white}\bfseries Feature} &
-		{\color{white}\bfseries System Function} &
-		{\color{white}\bfseries Description} \\
-		
-		\rowcolor{rowblue}
-		1 & Automated Academic Data Synchronization & Scheduled Job &
-		Scheduled job that automatically retrieves publication metadata from external academic APIs (Semantic Scholar, OpenAlex, Crossref). Inserts new records, updates existing ones, removes duplicates, and logs synchronization statistics in the database. \\
-		
-		\rowcolor{rowwhite}
-		2 & Automated Notification Generation & Scheduled Job &
-		Scheduled job that monitors followed topics for each user. When new publications related to followed topics are detected after synchronization, the system automatically generates and stores notifications in the database for the relevant users. \\
-		
-		\rowcolor{rowblue}
-		3 & Automated Trend Calculation & Scheduled Job &
-		Scheduled job that recalculates publication trend statistics after each data synchronization. Updates keyword frequency, topic growth rate, and journal distribution data used by the dashboard and trending topics features. \\
-		
-	\end{tabular}
+\begin{tabular}{C{0.8cm} L{3.5cm} C{2.5cm} L{7cm}}
+	
+	\rowcolor{headerblue}
+	{\color{white}\bfseries \#} &
+	{\color{white}\bfseries Feature} &
+	{\color{white}\bfseries System Function} &
+	{\color{white}\bfseries Description} \\
+	
+	\rowcolor{rowblue}
+	1 & Automated Academic Data Synchronization & Scheduled Job &
+	Scheduled job that automatically retrieves publication metadata directly from external academic APIs (OpenAlex and Crossref). The retrieved data is used for publication search, statistical analysis, and publication trend tracking. \\
+	
+	\rowcolor{rowwhite}
+	2 & Automated Trend Calculation & Scheduled Job &
+	Scheduled job that automatically recalculates publication trend statistics after each data synchronization from external academic APIs. The system analyzes total publications, total citations, Open Access rate, and research topic trends, then updates the data displayed on the dashboard and Trending Topics. \\
+	
+\end{tabular}
 }
 \subsection{ Entity Relationship Diagram }
 \begin{figure}[H]
@@ -983,7 +979,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\label{fig:erd}
 \end{figure}
 
-	\chapter{\centering\Large\bfseries IV. Software Design Description}
+\chapter{\centering\Large\bfseries IV. Software Design Description}
 \addcontentsline{toc}{chapter}{ IV. Software Design Description}
 \setcounter{section}{0}
 \setcounter{subsection}{0}

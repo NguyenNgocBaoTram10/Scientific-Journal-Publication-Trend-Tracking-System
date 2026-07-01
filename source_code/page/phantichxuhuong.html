@@ -5,6 +5,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
 <style>
   body { font-family:'Inter',sans-serif; }
   .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle;}
@@ -61,24 +62,21 @@ tailwind.config={darkMode:"class",theme:{extend:{
 <aside class="fixed left-0 top-0 h-screen w-sidebar-width bg-surface border-r border-outline-variant z-50 flex flex-col py-md hidden md:flex">
   <div class="px-lg mb-xxl">
     <div class="flex items-center gap-sm">
-      <div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
-        <span class="material-symbols-outlined text-white" style="font-variation-settings:'FILL' 1;">auto_graph</span>
+
       </div>
       <div>
         <h1 class="font-title-lg text-title-lg font-bold text-primary">ScholarTrend</h1>
-        <p class="font-label-md text-label-md text-on-surface-variant">Academic Analytics</p>
+
       </div>
     </div>
   </div>
   <nav class="flex-1 space-y-xs px-sm">
-    <a class="flex items-center gap-md py-sm rounded-lg text-on-surface-variant pl-4 hover:bg-surface-container-high transition-all" href="dashboard.html">
-      <span class="material-symbols-outlined">dashboard</span><span class="font-label-md text-label-md">Dashboard</span>
+
     </a>
     <a class="flex items-center gap-md py-sm rounded-lg text-primary font-bold border-l-4 border-primary pl-3 bg-surface-container-low" href="#">
       <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">trending_up</span><span class="font-label-md text-label-md">Phân tích Xu hướng</span>
     </a>
-    <a class="flex items-center gap-md py-sm rounded-lg text-on-surface-variant pl-4 hover:bg-surface-container-high transition-all" href="trangchu1.html">
-      <span class="material-symbols-outlined">home</span><span class="font-label-md text-label-md">Trang chủ</span>
+
     </a>
   </nav>
 </aside>
@@ -144,10 +142,41 @@ tailwind.config={darkMode:"class",theme:{extend:{
       </button>
     </div>
 
-    <!-- Tabs -->
-    <div class="flex gap-lg border-b border-outline-variant mb-xl" role="tablist">
-      <button id="tab-btn-dashboard" class="tab-btn pb-sm px-1 font-label-md text-label-md text-primary border-b-2 border-primary font-bold" onclick="switchTab('dashboard')">Bảng điều khiển</button>
-      <button id="tab-btn-trending" class="tab-btn pb-sm px-1 font-label-md text-label-md text-on-surface-variant border-b-2 border-transparent" onclick="switchTab('trending')">Chủ đề xu hướng</button>
+    <!-- Tabs + Report action -->
+    <div class="flex items-center justify-between border-b border-outline-variant mb-xl">
+      <div class="flex gap-lg" role="tablist">
+        <button id="tab-btn-dashboard" class="tab-btn pb-sm px-1 font-label-md text-label-md text-primary border-b-2 border-primary font-bold" onclick="switchTab('dashboard')">Bảng điều khiển</button>
+        <button id="tab-btn-trending" class="tab-btn pb-sm px-1 font-label-md text-label-md text-on-surface-variant border-b-2 border-transparent" onclick="switchTab('trending')">Chủ đề xu hướng</button>
+      </div>
+      <div class="relative pb-sm">
+        <button id="report-btn" onclick="toggleReportMenu()" disabled title="Chạy phân tích trước để tạo báo cáo" class="hidden items-center gap-xs bg-primary text-white px-md py-2 rounded-lg font-label-md text-label-md hover:opacity-90 transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+          <span class="material-symbols-outlined text-[18px]">description</span>Tạo báo cáo
+          <span class="material-symbols-outlined text-[16px]">expand_more</span>
+        </button>
+        <div id="report-menu" class="notif-dropdown hidden absolute right-0 top-11 w-72 bg-surface-container-lowest border border-outline-variant rounded-xl shadow-xl z-50 overflow-hidden">
+          <button onclick="openPrintReport()" class="w-full text-left px-lg py-md flex items-start gap-sm hover:bg-surface-container-low transition-all">
+            <span class="material-symbols-outlined text-primary text-[20px]">print</span>
+            <span>
+              <span class="block font-body-md text-body-md font-semibold text-on-background">Xem trước &amp; In / Lưu PDF</span>
+              <span class="block text-caption text-on-surface-variant">Mở bản báo cáo để in hoặc lưu thành PDF</span>
+            </span>
+          </button>
+          <button id="pdf-download-btn" onclick="openPdfOptionsModal()" class="w-full text-left px-lg py-md flex items-start gap-sm hover:bg-surface-container-low transition-all border-t border-outline-variant">
+            <span class="material-symbols-outlined text-primary text-[20px]">picture_as_pdf</span>
+            <span>
+              <span class="block font-body-md text-body-md font-semibold text-on-background">Tải PDF trực tiếp</span>
+              <span class="block text-caption text-on-surface-variant">Tạo và tải file PDF ngay, không cần thao tác in</span>
+            </span>
+          </button>
+          <button onclick="downloadReportHtml()" class="w-full text-left px-lg py-md flex items-start gap-sm hover:bg-surface-container-low transition-all border-t border-outline-variant">
+            <span class="material-symbols-outlined text-primary text-[20px]">download</span>
+            <span>
+              <span class="block font-body-md text-body-md font-semibold text-on-background">Tải file báo cáo (HTML)</span>
+              <span class="block text-caption text-on-surface-variant">Lưu về máy để xem lại hoặc chia sẻ</span>
+            </span>
+          </button>
+        </div>
+      </div>
     </div>
 
     <div id="error-box" class="hidden bg-error-container text-error p-md rounded-xl mb-xl"></div>
@@ -183,8 +212,19 @@ tailwind.config={darkMode:"class",theme:{extend:{
             <h3 id="stat-trend" class="font-headline-md text-headline-md flex items-center gap-xs">--</h3>
           </div>
         </div>
+
         <div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm mb-xl">
-          <h4 class="font-title-lg text-title-lg text-primary mb-lg">Số lượng tác phẩm theo năm</h4>
+          <div class="flex items-center justify-between mb-lg">
+            <h4 class="font-title-lg text-title-lg text-primary">Số lượng tác phẩm theo năm</h4>
+            <div class="flex items-center bg-surface-container-low rounded-full p-1 gap-1">
+              <button id="chart-type-bar" onclick="setChartType('bar')" class="px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1 transition-all bg-primary text-white">
+                <span class="material-symbols-outlined text-[16px]">bar_chart</span>Cột
+              </button>
+              <button id="chart-type-line" onclick="setChartType('line')" class="px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1 transition-all text-on-surface-variant">
+                <span class="material-symbols-outlined text-[16px]">show_chart</span>Đường
+              </button>
+            </div>
+          </div>
           <div id="growth-chart" class="flex items-end justify-between px-md pb-sm border-l border-b border-outline-variant gap-1" style="height:240px;"></div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-lg mb-xl">
@@ -252,6 +292,54 @@ tailwind.config={darkMode:"class",theme:{extend:{
   </div>
 </div>
 
+<!-- ==================== PDF OPTIONS MODAL ==================== -->
+<div id="pdf-options-overlay" class="modal-overlay hidden fixed inset-0 bg-black/40 z-[60] flex items-center justify-center p-md" style="opacity:0;">
+  <div id="pdf-options-box" class="modal-box bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-lg max-h-[85vh] flex flex-col" style="transform:scale(.96);opacity:0;">
+    <div class="flex items-center justify-between px-lg py-md border-b border-outline-variant">
+      <div class="flex items-center gap-sm">
+        <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">picture_as_pdf</span>
+        <h3 class="font-title-lg text-title-lg text-primary">Tùy chọn báo cáo PDF</h3>
+      </div>
+      <button onclick="closePdfOptionsModal()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-high">
+        <span class="material-symbols-outlined text-on-surface-variant">close</span>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto px-lg py-md space-y-lg">
+      <div>
+        <label class="block font-label-md text-label-md text-on-surface-variant mb-1">Tên đơn vị / người thực hiện (tuỳ chọn)</label>
+        <input id="pdf-opt-author" type="text" placeholder="VD: Phòng Nghiên cứu Khoa học" class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-3 py-2 text-body-md focus:outline-none focus:ring-2 focus:ring-primary">
+      </div>
+      <div>
+        <label class="block font-label-md text-label-md text-on-surface-variant mb-1">Nhận xét / ghi chú bổ sung (tuỳ chọn)</label>
+        <textarea id="pdf-opt-note" rows="3" placeholder="Ghi chú sẽ hiển thị ở đầu báo cáo, vd: mục đích sử dụng, phạm vi phân tích..." class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-3 py-2 text-body-md focus:outline-none focus:ring-2 focus:ring-primary resize-none"></textarea>
+      </div>
+      <div>
+        <p class="font-label-md text-label-md text-on-surface-variant mb-sm">Nội dung đưa vào báo cáo</p>
+        <div class="space-y-2">
+          <label class="flex items-center gap-2 text-body-md"><input type="checkbox" id="pdf-opt-cover" checked class="rounded"> Trang bìa riêng</label>
+          <label class="flex items-center gap-2 text-body-md"><input type="checkbox" id="pdf-opt-overview" checked class="rounded"> Tổng quan (số liệu chính)</label>
+          <label class="flex items-center gap-2 text-body-md"><input type="checkbox" id="pdf-opt-chart" checked class="rounded"> Biểu đồ cột theo năm</label>
+          <label class="flex items-center gap-2 text-body-md"><input type="checkbox" id="pdf-opt-linechart" checked class="rounded"> Biểu đồ đường xu hướng theo thời gian</label>
+          <label class="flex items-center gap-2 text-body-md"><input type="checkbox" id="pdf-opt-breakdown" checked class="rounded"> Phân bổ chủ đề con &amp; tạp chí</label>
+          <label class="flex items-center gap-2 text-body-md"><input type="checkbox" id="pdf-opt-authors" checked class="rounded"> Tác giả nổi bật</label>
+          <label class="flex items-center gap-2 text-body-md"><input type="checkbox" id="pdf-opt-highlights" checked class="rounded"> Tác phẩm nổi bật</label>
+          <label class="flex items-center gap-2 text-body-md"><input type="checkbox" id="pdf-opt-trending" checked class="rounded"> Chủ đề đang xu hướng liên quan</label>
+        </div>
+      </div>
+      <div>
+        <p class="font-label-md text-label-md text-on-surface-variant mb-sm">Số & chân trang</p>
+        <label class="flex items-center gap-2 text-body-md"><input type="checkbox" id="pdf-opt-pagenum" checked class="rounded"> Hiển thị số trang ở chân mỗi trang</label>
+      </div>
+    </div>
+    <div class="px-lg py-md border-t border-outline-variant flex justify-end gap-sm">
+      <button onclick="closePdfOptionsModal()" class="px-md py-2 rounded-lg font-label-md text-label-md border border-outline-variant hover:bg-surface-container-high">Hủy</button>
+      <button id="pdf-generate-btn" onclick="downloadReportPdf()" class="px-md py-2 rounded-lg font-label-md text-label-md bg-primary text-white hover:opacity-90 flex items-center gap-xs">
+        <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>Tạo PDF
+      </button>
+    </div>
+  </div>
+</div>
+
 <!-- ==================== TOAST CONTAINER ==================== -->
 <div id="toast-container" class="fixed bottom-lg right-lg z-50 flex flex-col gap-sm pointer-events-none"></div>
 
@@ -266,6 +354,14 @@ var _followingBtn   = null;   // button DOM đang xử lý
 var _selectedFreq   = 'immediate';
 var _notifPanelOpen = false;
 var _followingModalOpen = false;
+var _reportMenuOpen = false;
+var _pdfOptionsOpen  = false;
+var _chartType       = 'bar';
+
+/* Dữ liệu của lần phân tích gần nhất — dùng để tạo báo cáo */
+var lastAnalysisData  = null;
+var lastTrendingData  = null;
+var lastQuery         = {};
 
 /* ── format numbers ── */
 function fmt(n){ n=n||0; if(n>=1e6)return(n/1e6).toFixed(1)+'M'; if(n>=1000)return(n/1000).toFixed(0)+'K'; return n.toLocaleString(); }
@@ -308,6 +404,14 @@ document.addEventListener('click', function(e){
   if(_notifPanelOpen && !document.getElementById('notif-bell').contains(e.target) && !document.getElementById('notif-dropdown').contains(e.target)){
     _notifPanelOpen = false;
     document.getElementById('notif-dropdown').classList.add('hidden');
+  }
+  if(_reportMenuOpen){
+    var menu = document.getElementById('report-menu');
+    var btn  = document.getElementById('report-btn');
+    if(menu && btn && !btn.contains(e.target) && !menu.contains(e.target)){
+      _reportMenuOpen = false;
+      menu.classList.add('hidden');
+    }
   }
 });
 
@@ -573,6 +677,510 @@ function handleFollowClick(btn){
   else { doFollow(btn); }
 }
 
+/* ────────── BÁO CÁO (TẠO / XEM / TẢI) ────────── */
+function showReportButton(){
+  var btn = document.getElementById('report-btn');
+  if(!btn) return;
+  btn.classList.remove('hidden');
+  btn.classList.add('flex');
+  btn.disabled = false;
+  btn.title = 'Tạo báo cáo từ dữ liệu phân tích hiện tại';
+}
+
+function hideReportButton(){
+  var btn = document.getElementById('report-btn');
+  if(!btn) return;
+  btn.classList.add('hidden');
+  btn.classList.remove('flex');
+  btn.disabled = true;
+  _reportMenuOpen = false;
+  document.getElementById('report-menu').classList.add('hidden');
+}
+
+function toggleReportMenu(){
+  if(document.getElementById('report-btn').disabled) return;
+  _reportMenuOpen = !_reportMenuOpen;
+  document.getElementById('report-menu').classList.toggle('hidden', !_reportMenuOpen);
+}
+
+function trendMeta(trend, rate){
+  var map = {
+    rising:  {label:'Tăng trưởng', color:'#1c9d6b'},
+    falling: {label:'Suy giảm',    color:'#ba1a1a'},
+    stable:  {label:'Ổn định',     color:'#43474e'}
+  };
+  var m = map[trend] || map.stable;
+  var label = m.label + (trend!=='stable' ? ' ('+(rate||0)+'%)' : '');
+  return {label:label, color:m.color};
+}
+
+function safeFilename(topic){
+  return (topic||'scholartrend').toString().trim().toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'') || 'scholartrend';
+}
+
+/* ────────── BIỂU ĐỒ: CỘT / ĐƯỜNG (dashboard) ────────── */
+function setChartType(type){
+  _chartType = type;
+  var barBtn  = document.getElementById('chart-type-bar');
+  var lineBtn = document.getElementById('chart-type-line');
+  var onCls  = 'px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1 transition-all bg-primary text-white';
+  var offCls = 'px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1 transition-all text-on-surface-variant';
+  barBtn.className  = type==='bar'  ? onCls : offCls;
+  lineBtn.className = type==='line' ? onCls : offCls;
+  if(lastAnalysisData) renderGrowthChart(lastAnalysisData.yearly || []);
+}
+
+function renderGrowthChart(yearly){
+  var c = document.getElementById('growth-chart');
+  c.innerHTML = '';
+  if(!yearly || !yearly.length){
+    c.innerHTML = '<div class="w-full text-center text-on-surface-variant pb-4 self-center">Không có dữ liệu theo năm.</div>';
+    return;
+  }
+  if(_chartType === 'line') renderGrowthChartLine(c, yearly);
+  else renderGrowthChartBar(c, yearly);
+}
+
+function renderGrowthChartBar(c, yearly){
+  c.className = 'flex items-end justify-between px-md pb-sm border-l border-b border-outline-variant gap-1';
+  c.style.display = '';
+  var max = Math.max.apply(null, yearly.map(function(y){return y.count;})) || 1;
+  yearly.forEach(function(y,i){
+    var pct = Math.round((y.count/max)*90)+5;
+    var isLast = i===yearly.length-1;
+    var col = document.createElement('div');
+    col.className = 'flex-1 flex flex-col items-center relative px-1 h-full justify-end group';
+    col.innerHTML = '<div class="w-full rounded-t transition-all duration-700 '+(isLast?'bg-primary':'bg-primary-fixed group-hover:bg-primary')+'" style="height:'+pct+'%;" title="'+y.year+': '+fmt(y.count)+'">'
+      +'<span class="hidden group-hover:flex absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded whitespace-nowrap z-10">'+fmt(y.count)+'</span></div>'
+      +'<span class="text-[10px] absolute -bottom-6 whitespace-nowrap'+(isLast?' font-bold':'')+'">'+y.year+'</span>';
+    c.appendChild(col);
+  });
+}
+
+/* Vẽ biểu đồ đường bằng SVG thuần — dùng chung logic cho cả dashboard (tương tác) và báo cáo (tĩnh) */
+function buildLineChartSvg(yearly, opts){
+  opts = opts || {};
+  var W = opts.width || 760, H = opts.height || 220;
+  var padL = 36, padR = 12, padT = 16, padB = 26;
+  var innerW = W - padL - padR, innerH = H - padT - padB;
+  var counts = yearly.map(function(y){return y.count||0;});
+  var max = Math.max.apply(null, counts.concat([1]));
+  var min = 0;
+  var n = yearly.length;
+  var stepX = n>1 ? innerW/(n-1) : 0;
+  var pts = yearly.map(function(y,i){
+    var x = padL + (n>1 ? i*stepX : innerW/2);
+    var y2 = padT + innerH - ((y.count||0)-min)/(max-min||1)*innerH;
+    return {x:x, y:y2, year:y.year, count:y.count||0};
+  });
+  var linePath = pts.map(function(p,i){ return (i===0?'M':'L')+p.x.toFixed(1)+','+p.y.toFixed(1); }).join(' ');
+  var areaPath = linePath + ' L'+pts[pts.length-1].x.toFixed(1)+','+(padT+innerH)+' L'+pts[0].x.toFixed(1)+','+(padT+innerH)+' Z';
+
+  // đường lưới ngang (grid) đơn giản, 4 mốc
+  var gridLines = '';
+  for(var g=0; g<=3; g++){
+    var gy = padT + innerH - (g/3)*innerH;
+    gridLines += '<line x1="'+padL+'" y1="'+gy.toFixed(1)+'" x2="'+(padL+innerW)+'" y2="'+gy.toFixed(1)+'" stroke="#e0e3e5" stroke-width="1"/>';
+    var val = Math.round((max*(g/3)));
+    gridLines += '<text x="'+(padL-6)+'" y="'+(gy+3).toFixed(1)+'" font-size="9" fill="#43474e" text-anchor="end">'+fmt(val)+'</text>';
+  }
+
+  var dots = pts.map(function(p){
+    return '<circle cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="3.2" fill="#002045" stroke="#fff" stroke-width="1.2"><title>'+p.year+': '+fmt(p.count)+'</title></circle>';
+  }).join('');
+
+  var labels = pts.map(function(p){
+    return '<text x="'+p.x.toFixed(1)+'" y="'+(padT+innerH+18)+'" font-size="9" fill="#43474e" text-anchor="middle">'+escHtml(String(p.year))+'</text>';
+  }).join('');
+
+  return '<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:'+(opts.cssHeight||'220px')+';">'
+    + '<defs><linearGradient id="lineArea" x1="0" y1="0" x2="0" y2="1">'
+      + '<stop offset="0%" stop-color="#1960a3" stop-opacity="0.28"/>'
+      + '<stop offset="100%" stop-color="#1960a3" stop-opacity="0"/>'
+    + '</linearGradient></defs>'
+    + gridLines
+    + '<path d="'+areaPath+'" fill="url(#lineArea)"/>'
+    + '<path d="'+linePath+'" fill="none" stroke="#1960a3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>'
+    + dots
+    + labels
+    + '</svg>';
+}
+
+function renderGrowthChartLine(c, yearly){
+  c.className = 'px-md pb-sm border-l border-b border-outline-variant';
+  c.style.display = 'block';
+  c.innerHTML = buildLineChartSvg(yearly, {cssHeight:'220px'});
+  // khôi phục layout flex cho lần vẽ cột kế tiếp
+  c.setAttribute('data-line-mode','1');
+}
+
+/* ────────── PDF OPTIONS MODAL ────────── */
+function openPdfOptionsModal(){
+  if(!lastAnalysisData){ showToast('Vui lòng chạy phân tích trước khi tạo báo cáo.','error'); return; }
+  _reportMenuOpen = false;
+  document.getElementById('report-menu').classList.add('hidden');
+  _pdfOptionsOpen = true;
+  var overlay = document.getElementById('pdf-options-overlay');
+  var box     = document.getElementById('pdf-options-box');
+  overlay.classList.remove('hidden');
+  requestAnimationFrame(function(){ overlay.style.opacity='1'; box.style.transform='scale(1)'; box.style.opacity='1'; });
+}
+
+function closePdfOptionsModal(){
+  _pdfOptionsOpen = false;
+  var overlay = document.getElementById('pdf-options-overlay');
+  var box     = document.getElementById('pdf-options-box');
+  overlay.style.opacity='0'; box.style.transform='scale(.96)'; box.style.opacity='0';
+  setTimeout(function(){ overlay.classList.add('hidden'); }, 200);
+}
+
+document.getElementById('pdf-options-overlay').addEventListener('click', function(e){
+  if(e.target === this) closePdfOptionsModal();
+});
+
+/* CSS nội tuyến cho trang báo cáo — độc lập với Tailwind để in/tải ổn định */
+function reportStyles(){
+  return "*{box-sizing:border-box;}"
+    + "body{font-family:'Inter',Arial,sans-serif;color:#191c1e;background:#eceef0;margin:0;padding:24px;}"
+    + ".page{max-width:860px;margin:0 auto;background:#fff;padding:48px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.08);}"
+    + ".toolbar{display:flex;gap:8px;justify-content:flex-end;max-width:860px;margin:0 auto 12px;}"
+    + ".toolbar button{background:#002045;color:#fff;border:none;padding:10px 18px;border-radius:8px;font-size:14px;cursor:pointer;font-family:inherit;}"
+    + ".toolbar button:last-child{background:#e0e3e5;color:#191c1e;}"
+    + ".rp-header{border-bottom:3px solid #002045;padding-bottom:16px;margin-bottom:24px;}"
+    + ".brand{color:#1960a3;font-weight:700;letter-spacing:.05em;font-size:13px;text-transform:uppercase;}"
+    + ".rp-header h1{margin:6px 0 0;font-size:24px;color:#002045;}"
+    + ".meta-table{width:100%;border-collapse:collapse;margin-bottom:28px;font-size:14px;}"
+    + ".meta-table td{padding:6px 0;border-bottom:1px solid #e0e3e5;}"
+    + ".meta-label{color:#43474e;width:220px;font-weight:600;}"
+    + ".sec-title{font-size:16px;color:#002045;border-left:4px solid #002045;padding-left:10px;margin:28px 0 14px;}"
+    + ".stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}"
+    + ".stat-card{border:1px solid #e0e3e5;border-radius:8px;padding:14px;}"
+    + ".stat-label{font-size:11px;color:#43474e;margin:0 0 6px;}"
+    + ".stat-val{font-size:20px;font-weight:700;color:#002045;margin:0;}"
+    + ".chart{display:flex;align-items:flex-end;gap:6px;height:180px;border-left:1px solid #c4c6cf;border-bottom:1px solid #c4c6cf;padding:8px 8px 0;}"
+    + ".bar-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;position:relative;}"
+    + ".bar{width:70%;background:#1960a3;border-radius:3px 3px 0 0;}"
+    + ".bar-val{font-size:10px;color:#43474e;margin-bottom:4px;}"
+    + ".bar-label{font-size:10px;color:#43474e;margin-top:6px;}"
+    + ".line-chart-wrap{border:1px solid #e0e3e5;border-radius:8px;padding:12px;}"
+    + ".two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;}"
+    + ".prow{margin-bottom:12px;}"
+    + ".prow-top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;}"
+    + ".prow-count{font-weight:700;}"
+    + ".prow-track{height:6px;background:#eceef0;border-radius:4px;overflow:hidden;}"
+    + ".prow-fill{height:100%;border-radius:4px;}"
+    + ".rtable{width:100%;border-collapse:collapse;font-size:13px;}"
+    + ".rtable th{text-align:left;font-size:11px;text-transform:uppercase;color:#43474e;border-bottom:2px solid #e0e3e5;padding:8px 6px;}"
+    + ".rtable td{padding:8px 6px;border-bottom:1px solid #eceef0;}"
+    + ".rtable .num{text-align:right;}"
+    + ".hl-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}"
+    + ".hl-card{border:1px solid #e0e3e5;border-radius:8px;padding:14px;}"
+    + ".hl-title{font-size:13px;font-weight:600;color:#002045;margin:0 0 6px;}"
+    + ".hl-meta{font-size:11px;color:#43474e;margin:0 0 6px;}"
+    + ".oa-badge{font-size:9px;font-weight:700;color:#1c9d6b;margin-left:6px;}"
+    + ".doi-link{font-size:11px;color:#1960a3;text-decoration:none;}"
+    + ".empty-note{color:#43474e;font-size:13px;}"
+    + ".rp-footer{margin-top:40px;padding-top:16px;border-top:1px solid #e0e3e5;font-size:11px;color:#43474e;text-align:center;}"
+    + ".note-box{background:#f0f4ff;border:1px solid #d6e3ff;border-radius:8px;padding:12px 14px;font-size:13px;color:#002045;margin-bottom:24px;white-space:pre-wrap;}"
+    + ".note-box b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#1960a3;margin-bottom:4px;}"
+    + ".cover-page{min-height:700px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;page-break-after:always;}"
+    + ".cover-brand{color:#1960a3;font-weight:700;letter-spacing:.08em;font-size:14px;text-transform:uppercase;margin-bottom:24px;}"
+    + ".cover-title{font-size:32px;font-weight:800;color:#002045;line-height:1.25;margin:0 0 12px;}"
+    + ".cover-sub{font-size:16px;color:#43474e;margin:0 0 40px;}"
+    + ".cover-meta{border-top:2px solid #002045;padding-top:20px;width:100%;font-size:13px;color:#43474e;}"
+    + ".cover-meta div{margin-bottom:6px;}"
+    + ".cover-meta b{color:#191c1e;}"
+    + ".section-block{page-break-inside:avoid;}"
+    + "@media print{.toolbar{display:none;} body{background:#fff;padding:0;} .page{box-shadow:none;padding:12mm;max-width:100%;border-radius:0;}}";
+}
+
+/* Xây dựng nội dung trang bìa riêng (chỉ dùng cho PDF khi bật tuỳ chọn "Trang bìa riêng") */
+function buildCoverPageHtml(opts, q, generatedStr){
+  var yearRangeStr = (q.yearFrom || q.yearTo) ? ((q.yearFrom||'…') + ' – ' + (q.yearTo||'…')) : 'Toàn bộ thời gian';
+  return '<div class="cover-page">'
+    + '<div class="cover-brand">ScholarTrend</div>'
+    + '<h1 class="cover-title">Báo cáo Phân tích<br>Xu hướng Nghiên cứu</h1>'
+    + '<p class="cover-sub">Chủ đề / tác giả: <b>'+escHtml(q.topic||'—')+'</b></p>'
+    + '<div class="cover-meta">'
+      + '<div><b>Khoảng thời gian:</b> '+escHtml(yearRangeStr)+'</div>'
+      + (opts.author ? '<div><b>Thực hiện bởi:</b> '+escHtml(opts.author)+'</div>' : '')
+      + '<div><b>Ngày tạo báo cáo:</b> '+generatedStr+'</div>'
+    + '</div>'
+    + '</div>';
+}
+
+/* Xây dựng nội dung BÊN TRONG khối .page — dùng chung cho bản xem/in (buildReportHtml)
+   và cho bản xuất PDF trực tiếp (downloadReportPdf) để tránh lặp code.
+   opts (tuỳ chọn, chỉ áp dụng khi gọi từ PDF): {author, note, overview, chart, linechart, breakdown, authors, highlights, trending} */
+function buildReportPageContent(opts){
+  opts = opts || {};
+  var showOverview  = opts.overview  !== false;
+  var showChart     = opts.chart     !== false;
+  var showLineChart = opts.linechart !== false;
+  var showBreakdown = opts.breakdown !== false;
+  var showAuthors   = opts.authors   !== false;
+  var showHighlights= opts.highlights!== false;
+  var showTrending  = opts.trending  !== false;
+
+  var d  = lastAnalysisData || {};
+  var td = lastTrendingData || {topics:[]};
+  var q  = lastQuery || {};
+  var now = new Date();
+  var generatedStr = now.toLocaleDateString('vi-VN') + ' ' + now.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'});
+
+  var tm = trendMeta(d.trend, d.growth_rate_percent);
+
+  // Biểu đồ số lượng theo năm (cột)
+  var yearly = d.yearly || [];
+  var maxY = Math.max.apply(null, [1].concat(yearly.map(function(y){return y.count||0;})));
+  var barsHtml = yearly.map(function(y){
+    var pct = Math.max(3, Math.round(((y.count||0)/maxY)*100));
+    return '<div class="bar-col"><div class="bar-val">'+fmt(y.count)+'</div><div class="bar" style="height:'+pct+'%;"></div><div class="bar-label">'+escHtml(y.year)+'</div></div>';
+  }).join('');
+
+  // Biểu đồ đường xu hướng (SVG tĩnh, dùng chung hàm với dashboard)
+  var lineChartHtml = yearly.length ? buildLineChartSvg(yearly, {width:760, height:200, cssHeight:'200px'}) : '';
+
+  function progressRows(arr, color){
+    if(!arr || !arr.length) return '<p class="empty-note">Không có dữ liệu.</p>';
+    var max = Math.max.apply(null, [1].concat(arr.map(function(x){return x.count||0;})));
+    return arr.map(function(x){
+      var pct = Math.round(((x.count||0)/max)*100);
+      return '<div class="prow"><div class="prow-top"><span>'+escHtml(x.name)+'</span><span class="prow-count">'+fmt(x.count)+'</span></div>'
+        +'<div class="prow-track"><div class="prow-fill" style="width:'+pct+'%;background:'+color+';"></div></div></div>';
+    }).join('');
+  }
+  var subtopicsHtml = progressRows(d.top_subtopics, '#002045');
+  var journalsHtml  = progressRows(d.top_journals, '#1960a3');
+
+  var authorsHtml = (d.top_authors && d.top_authors.length) ? (
+    '<table class="rtable"><thead><tr><th>Tác giả</th><th class="num">Số bài</th><th class="num">Trích dẫn</th></tr></thead><tbody>'
+    + d.top_authors.map(function(a){ return '<tr><td>'+escHtml(a.name)+'</td><td class="num">'+a.works+'</td><td class="num">'+fmt(a.citations)+'</td></tr>'; }).join('')
+    + '</tbody></table>'
+  ) : '<p class="empty-note">Không có dữ liệu.</p>';
+
+  var highlightsHtml = (d.highlights && d.highlights.length) ? (
+    '<div class="hl-grid">' + d.highlights.map(function(h){
+      var oa = h.is_oa ? '<span class="oa-badge">OPEN ACCESS</span>' : '';
+      var link = h.doi ? '<a class="doi-link" href="'+escHtml(h.doi)+'">Xem DOI →</a>' : '';
+      return '<div class="hl-card"><p class="hl-title">'+escHtml(h.title||'')+' '+oa+'</p>'
+        +'<p class="hl-meta">'+escHtml(h.year||'—')+' · '+fmt(h.citations)+' trích dẫn</p>'+link+'</div>';
+    }).join('') + '</div>'
+  ) : '<p class="empty-note">Không có dữ liệu.</p>';
+
+  var topics = td.topics || [];
+  var trendingHtml = topics.length ? (
+    '<table class="rtable"><thead><tr><th>#</th><th>Chủ đề</th><th class="num">Số bài báo</th><th>Xu hướng</th></tr></thead><tbody>'
+    + topics.map(function(t,i){
+      var dirLabel = t.trend_direction==='rising' ? '+'+(t.change_percent||0)+'%' : t.trend_direction==='falling' ? '-'+Math.abs(t.change_percent||0)+'%' : 'Ổn định';
+      var dirColor = t.trend_direction==='rising' ? '#1c9d6b' : t.trend_direction==='falling' ? '#ba1a1a' : '#43474e';
+      return '<tr><td>'+(i+1)+'</td><td>'+escHtml(t.name)+'</td><td class="num">'+fmt(t.article_count)+'</td><td style="color:'+dirColor+';font-weight:600;">'+dirLabel+'</td></tr>';
+    }).join('') + '</tbody></table>'
+  ) : '<p class="empty-note">Không có dữ liệu.</p>';
+
+  var authorModeNote = (d.mode==='author' && d.matched_author)
+    ? '<tr><td class="meta-label">Tác giả nhận diện</td><td>'+escHtml(d.matched_author)+'</td></tr>' : '';
+
+  var yearRangeStr = (q.yearFrom || q.yearTo) ? ((q.yearFrom||'…') + ' – ' + (q.yearTo||'…')) : 'Toàn bộ thời gian';
+
+  var noteHtml = opts.note ? ('<div class="note-box"><b>Ghi chú bổ sung</b>'+escHtml(opts.note)+'</div>') : '';
+  var authorMetaRow = opts.author ? ('<tr><td class="meta-label">Thực hiện bởi</td><td>'+escHtml(opts.author)+'</td></tr>') : '';
+
+  var html = '<header class="rp-header"><div class="brand">ScholarTrend</div><h1>BÁO CÁO PHÂN TÍCH XU HƯỚNG NGHIÊN CỨU</h1></header>'
+      + '<table class="meta-table"><tbody>'
+        + '<tr><td class="meta-label">Chủ đề / tác giả tìm kiếm</td><td>'+escHtml(q.topic||'—')+'</td></tr>'
+        + '<tr><td class="meta-label">Khoảng thời gian</td><td>'+escHtml(yearRangeStr)+'</td></tr>'
+        + authorModeNote
+        + authorMetaRow
+        + '<tr><td class="meta-label">Ngày tạo báo cáo</td><td>'+generatedStr+'</td></tr>'
+      + '</tbody></table>'
+      + noteHtml;
+
+  if(showOverview){
+    html += '<div class="section-block"><h2 class="sec-title">Tổng quan</h2>'
+      + '<div class="stat-grid">'
+        + '<div class="stat-card"><p class="stat-label">Tổng số tác phẩm</p><p class="stat-val">'+fmt(d.total_works)+'</p></div>'
+        + '<div class="stat-card"><p class="stat-label">Tổng trích dẫn (mẫu top 50)</p><p class="stat-val">'+fmt(d.total_citations)+'</p></div>'
+        + '<div class="stat-card"><p class="stat-label">Tỉ lệ Open Access</p><p class="stat-val">'+(d.oa_percent!=null?d.oa_percent:0)+'%</p></div>'
+        + '<div class="stat-card"><p class="stat-label">Xu hướng</p><p class="stat-val" style="color:'+tm.color+';">'+tm.label+'</p></div>'
+      + '</div></div>';
+  }
+
+  if(showChart){
+    html += '<div class="section-block"><h2 class="sec-title">Số lượng tác phẩm theo năm (biểu đồ cột)</h2>'
+      + '<div class="chart">'+(barsHtml || '')+'</div>'
+      + (barsHtml ? '' : '<p class="empty-note">Không có dữ liệu theo năm.</p>')
+      + '</div>';
+  }
+
+  if(showLineChart){
+    html += '<div class="section-block"><h2 class="sec-title">Biểu đồ đường xu hướng theo thời gian</h2>'
+      + '<div class="line-chart-wrap">'+(lineChartHtml || '<p class="empty-note">Không có dữ liệu theo năm.</p>')+'</div>'
+      + '</div>';
+  }
+
+  if(showBreakdown){
+    html += '<div class="two-col section-block">'
+        + '<div><h2 class="sec-title">Phân bổ chủ đề con</h2>'+subtopicsHtml+'</div>'
+        + '<div><h2 class="sec-title">Phân bổ tạp chí</h2>'+journalsHtml+'</div>'
+      + '</div>';
+  }
+
+  if(showAuthors){
+    html += '<div class="section-block"><h2 class="sec-title">Tác giả nổi bật</h2>'+authorsHtml+'</div>';
+  }
+
+  if(showHighlights){
+    html += '<div class="section-block"><h2 class="sec-title">Tác phẩm nổi bật</h2>'+highlightsHtml+'</div>';
+  }
+
+  if(showTrending){
+    html += '<div class="section-block"><h2 class="sec-title">Chủ đề đang xu hướng liên quan</h2>'+trendingHtml+'</div>';
+  }
+
+  html += '<footer class="rp-footer">Báo cáo được tạo tự động bởi ScholarTrend · '+generatedStr+'</footer>';
+
+  return html;
+}
+
+function buildReportHtml(){
+  var content = buildReportPageContent();
+  return '<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8">'
+    + '<title>Báo cáo phân tích xu hướng - '+escHtml((lastQuery||{}).topic||'')+'</title>'
+    + '<style>' + reportStyles() + '</style></head><body>'
+    + '<div class="toolbar"><button onclick="window.print()">🖨️ In / Lưu PDF</button><button onclick="window.close()">Đóng</button></div>'
+    + '<div class="page">' + content + '</div>'
+    + '</body></html>';
+}
+
+function openPrintReport(){
+  if(!lastAnalysisData){ showToast('Vui lòng chạy phân tích trước khi tạo báo cáo.','error'); return; }
+  _reportMenuOpen = false;
+  document.getElementById('report-menu').classList.add('hidden');
+  var html = buildReportHtml();
+  var w = window.open('', '_blank');
+  if(!w){ showToast('Trình duyệt đã chặn cửa sổ mới. Vui lòng cho phép popup để xem báo cáo.','error'); return; }
+  w.document.open();
+  w.document.write(html);
+  w.document.close();
+  showToast('Đã mở bản xem trước báo cáo.','success');
+}
+
+function downloadReportHtml(){
+  if(!lastAnalysisData){ showToast('Vui lòng chạy phân tích trước khi tạo báo cáo.','error'); return; }
+  _reportMenuOpen = false;
+  document.getElementById('report-menu').classList.add('hidden');
+  var html = buildReportHtml();
+  var blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  var url  = URL.createObjectURL(blob);
+  var safeTopic = safeFilename(lastQuery.topic);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'bao-cao-xu-huong-' + safeTopic + '.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 2000);
+  showToast('Đã tải file báo cáo.','success');
+}
+
+/* Tải PDF trực tiếp — render nội dung báo cáo (kèm trang bìa & tuỳ chọn nội dung từ modal)
+   trong một khối ẩn rồi dùng html2pdf (html2canvas + jsPDF) để xuất file .pdf ngay,
+   không cần thao tác "In" thủ công. Sau khi render xong, đóng dấu số trang ở chân mỗi trang. */
+async function downloadReportPdf(){
+  if(!lastAnalysisData){ showToast('Vui lòng chạy phân tích trước khi tạo báo cáo.','error'); return; }
+  if(typeof html2pdf === 'undefined'){ showToast('Không tải được thư viện xuất PDF. Vui lòng thử lại hoặc dùng "In / Lưu PDF".','error'); return; }
+
+  // Đọc tuỳ chọn từ modal (nếu có mở), ngược lại dùng mặc định đầy đủ
+  var opts = {
+    author:     (document.getElementById('pdf-opt-author')||{}).value ? document.getElementById('pdf-opt-author').value.trim() : '',
+    note:       (document.getElementById('pdf-opt-note')||{}).value ? document.getElementById('pdf-opt-note').value.trim() : '',
+    cover:      document.getElementById('pdf-opt-cover')      ? document.getElementById('pdf-opt-cover').checked      : true,
+    overview:   document.getElementById('pdf-opt-overview')   ? document.getElementById('pdf-opt-overview').checked   : true,
+    chart:      document.getElementById('pdf-opt-chart')      ? document.getElementById('pdf-opt-chart').checked      : true,
+    linechart:  document.getElementById('pdf-opt-linechart')  ? document.getElementById('pdf-opt-linechart').checked  : true,
+    breakdown:  document.getElementById('pdf-opt-breakdown')  ? document.getElementById('pdf-opt-breakdown').checked  : true,
+    authors:    document.getElementById('pdf-opt-authors')    ? document.getElementById('pdf-opt-authors').checked    : true,
+    highlights: document.getElementById('pdf-opt-highlights') ? document.getElementById('pdf-opt-highlights').checked: true,
+    trending:   document.getElementById('pdf-opt-trending')   ? document.getElementById('pdf-opt-trending').checked  : true,
+    pagenum:    document.getElementById('pdf-opt-pagenum')    ? document.getElementById('pdf-opt-pagenum').checked   : true
+  };
+
+  closePdfOptionsModal();
+  _reportMenuOpen = false;
+  var menuEl = document.getElementById('report-menu');
+  if(menuEl) menuEl.classList.add('hidden');
+
+  var genBtn = document.getElementById('pdf-generate-btn');
+  var originalHtml = genBtn ? genBtn.innerHTML : null;
+  if(genBtn){
+    genBtn.disabled = true;
+    genBtn.style.opacity = '0.6';
+    genBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>Đang tạo...';
+  }
+  showToast('Đang tạo PDF, vui lòng đợi...', 'info');
+
+  var content   = buildReportPageContent(opts);
+  var safeTopic = safeFilename(lastQuery.topic);
+  var now       = new Date();
+  var generatedStr = now.toLocaleDateString('vi-VN') + ' ' + now.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'});
+  var coverHtml = opts.cover ? buildCoverPageHtml(opts, lastQuery||{}, generatedStr) : '';
+
+  // Container ẩn, đặt ngoài khung nhìn (không dùng display:none để html2canvas render đúng layout)
+  var container = document.createElement('div');
+  container.id = 'pdf-render-container';
+  container.style.position = 'fixed';
+  container.style.left = '-10000px';
+  container.style.top = '0';
+  container.style.width = '860px';
+  container.style.zIndex = '-1';
+  container.innerHTML = '<style>' + reportStyles() + '</style>'
+    + '<div class="page" style="box-shadow:none;max-width:860px;margin:0;">' + coverHtml + content + '</div>';
+  document.body.appendChild(container);
+
+  var opt = {
+    margin: [8, 8, 14, 8],
+    filename: 'bao-cao-xu-huong-' + safeTopic + '.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    pagebreak: { mode: ['css', 'legacy'], avoid: ['.stat-card', '.hl-card', 'tr', '.section-block', '.cover-page'] }
+  };
+
+  try{
+    var worker = html2pdf().set(opt).from(container.querySelector('.page'));
+    if(opts.pagenum){
+      // Chèn số trang ở chân mỗi trang trước khi lưu file
+      await worker.toPdf().get('pdf').then(function(pdf){
+        var totalPages = pdf.internal.getNumberOfPages();
+        var pageW = pdf.internal.pageSize.getWidth();
+        var pageH = pdf.internal.pageSize.getHeight();
+        for(var i=1;i<=totalPages;i++){
+          pdf.setPage(i);
+          pdf.setFontSize(8.5);
+          pdf.setTextColor(140,144,150);
+          pdf.text('ScholarTrend · Báo cáo xu hướng', 8, pageH-6);
+          pdf.text('Trang '+i+' / '+totalPages, pageW-8, pageH-6, {align:'right'});
+        }
+      }).save();
+    } else {
+      await worker.save();
+    }
+    showToast('Đã tải file PDF.', 'success');
+  }catch(e){
+    showToast('Lỗi tạo PDF: ' + e.message, 'error');
+  }finally{
+    document.body.removeChild(container);
+    if(genBtn){
+      genBtn.disabled = false;
+      genBtn.style.opacity = '';
+      if(originalHtml!=null) genBtn.innerHTML = originalHtml;
+    }
+  }
+}
+
 /* ────────── MAIN ANALYSIS ────────── */
 async function runAnalysis(){
   var topic = document.getElementById('topic-input').value.trim();
@@ -580,6 +1188,10 @@ async function runAnalysis(){
   var yearTo   = document.getElementById('year-to').value.trim();
   ['error-box','author-mode-box','fallback-box'].forEach(function(id){ document.getElementById(id).classList.add('hidden'); });
   if(!topic){ alert('Vui lòng nhập chủ đề hoặc tên tác giả.'); return; }
+
+  hideReportButton();
+  lastAnalysisData = null;
+  lastTrendingData = {topics:[]};
 
   document.getElementById('empty-state').classList.add('hidden');
   document.getElementById('dashboard-content').classList.remove('hidden');
@@ -625,22 +1237,8 @@ async function runAnalysis(){
     tEl.innerHTML = '<span class="material-symbols-outlined">'+t.icon+'</span>'+t.label;
     ['stat-total','stat-citations','stat-oa','stat-trend'].forEach(function(id){ document.getElementById(id).classList.remove('loading-pulse'); });
 
-    // Bar chart
-    var c = document.getElementById('growth-chart'); c.innerHTML='';
-    var yearly = d.yearly||[];
-    if(yearly.length){
-      var max = Math.max.apply(null,yearly.map(function(y){return y.count;}))||1;
-      yearly.forEach(function(y,i){
-        var pct = Math.round((y.count/max)*90)+5;
-        var isLast = i===yearly.length-1;
-        var col = document.createElement('div');
-        col.className = 'flex-1 flex flex-col items-center relative px-1 h-full justify-end group';
-        col.innerHTML = '<div class="w-full rounded-t transition-all duration-700 '+(isLast?'bg-primary':'bg-primary-fixed group-hover:bg-primary')+'" style="height:'+pct+'%;" title="'+y.year+': '+fmt(y.count)+'">'
-          +'<span class="hidden group-hover:flex absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded whitespace-nowrap z-10">'+fmt(y.count)+'</span></div>'
-          +'<span class="text-[10px] absolute -bottom-6 whitespace-nowrap'+(isLast?' font-bold':'')+'">'+y.year+'</span>';
-        c.appendChild(col);
-      });
-    } else { c.innerHTML='<div class="w-full text-center text-on-surface-variant pb-4 self-center">Không có dữ liệu theo năm.</div>'; }
+    // Bar / line chart (theo _chartType hiện tại)
+    renderGrowthChart(d.yearly || []);
 
     // Subtopics
     var sc = document.getElementById('subtopics-list'); var st = d.top_subtopics||[];
@@ -660,6 +1258,11 @@ async function runAnalysis(){
     var hl = document.getElementById('highlights'); var hi = d.highlights||[];
     hl.innerHTML = hi.length ? hi.map(function(h){ var ob=h.is_oa?'<span class="text-success text-[11px] font-bold ml-2">OPEN ACCESS</span>':''; var lk=h.doi?'<a href="'+h.doi+'" target="_blank" class="text-secondary text-[12px] hover:underline">Xem DOI →</a>':''; return '<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg"><p class="font-body-md text-body-md font-semibold text-primary mb-xs">'+h.title+ob+'</p><p class="text-caption text-on-surface-variant mb-sm">'+(h.year||'—')+' · '+fmt(h.citations)+' trích dẫn</p>'+lk+'</div>'; }).join('') : '<p class="text-on-surface-variant col-span-3 text-center py-xl">Không có dữ liệu.</p>';
 
+    // Lưu dữ liệu cho chức năng tạo báo cáo
+    lastAnalysisData = d;
+    lastQuery = {topic: topic, yearFrom: yearFrom, yearTo: yearTo};
+    showReportButton();
+
   }catch(e){
     document.getElementById('error-box').textContent='Lỗi: '+e.message;
     document.getElementById('error-box').classList.remove('hidden');
@@ -672,6 +1275,7 @@ async function runAnalysis(){
     var td = await tr.json();
     if(td.error) throw new Error(td.error);
     renderTrending(td.topics||[]);
+    lastTrendingData = td;
   }catch(e2){
     document.getElementById('trending-list').innerHTML='<div class="p-lg text-center text-on-surface-variant">Không tải được dữ liệu chủ đề xu hướng.</div>';
   }
