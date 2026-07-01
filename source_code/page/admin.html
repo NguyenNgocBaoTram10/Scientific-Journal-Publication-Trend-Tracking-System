@@ -2,6 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin - ScholarTrend</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -11,10 +12,9 @@
     <a href="trangchu1.html" class="text-blue-600 font-semibold">Về trang chủ</a>
   </header>
 
-  <main class="p-8">
+  <main class="p-8 space-y-8">
     <section class="bg-white rounded-xl shadow border p-6">
       <h2 class="text-xl font-bold mb-4">Quản lý người dùng</h2>
-
       <div id="message" class="hidden mb-4 p-3 rounded-lg"></div>
 
       <table class="w-full border-collapse">
@@ -32,6 +32,138 @@
         <tbody id="userTable"></tbody>
       </table>
     </section>
+
+    <section class="bg-white rounded-xl shadow border p-6">
+      <h2 class="text-xl font-bold mb-4">Quản lý chủ đề</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+        <input id="topicName" class="border rounded-lg p-3" placeholder="Tên chủ đề">
+        <input id="topicDescription" class="border rounded-lg p-3 md:col-span-2" placeholder="Mô tả">
+      </div>
+
+      <div class="flex gap-2 mb-4">
+        <button id="addTopicBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold">Thêm chủ đề</button>
+        <button id="cancelTopicBtn" class="hidden px-4 py-2 bg-slate-200 rounded-lg font-semibold">Hủy sửa</button>
+      </div>
+
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-slate-100 text-left">
+            <th class="p-3 border">ID</th>
+            <th class="p-3 border">Tên chủ đề</th>
+            <th class="p-3 border">Mô tả</th>
+            <th class="p-3 border">Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="topicTable"></tbody>
+      </table>
+    </section>
+
+    <section class="bg-white rounded-xl shadow border p-6">
+      <h2 class="text-xl font-bold mb-4">Quản lý nguồn API</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mb-4">
+        <input id="sourceName" class="border rounded-lg p-3" placeholder="Tên nguồn API">
+        <input id="baseUrl" class="border rounded-lg p-3" placeholder="Base URL">
+        <input id="sourcePriority" class="border rounded-lg p-3" placeholder="Ưu tiên" type="number" value="1">
+        <select id="sourceActive" class="border rounded-lg p-3">
+          <option value="1">Đang bật</option>
+          <option value="0">Đang tắt</option>
+        </select>
+        <input id="sourceDescription" class="border rounded-lg p-3 md:col-span-4" placeholder="Mô tả nguồn API">
+      </div>
+
+      <div class="flex gap-2 mb-4">
+        <button id="addSourceBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold">Thêm nguồn API</button>
+        <button id="cancelSourceBtn" class="hidden px-4 py-2 bg-slate-200 rounded-lg font-semibold">Hủy sửa</button>
+      </div>
+
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-slate-100 text-left">
+            <th class="p-3 border">ID</th>
+            <th class="p-3 border">Tên nguồn</th>
+            <th class="p-3 border">Base URL</th>
+            <th class="p-3 border">Trạng thái</th>
+            <th class="p-3 border">Ưu tiên</th>
+            <th class="p-3 border">Mô tả</th>
+            <th class="p-3 border">Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="sourceTable"></tbody>
+      </table>
+    </section>
+
+    <section class="bg-white rounded-xl shadow border p-6">
+      <h2 class="text-xl font-bold mb-4">Quản lý bài báo</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+        <input id="paperTitle" class="border rounded-lg p-3 md:col-span-2" placeholder="Tiêu đề bài báo">
+        <select id="paperTopic" class="border rounded-lg p-3"></select>
+        <input id="paperAuthors" class="border rounded-lg p-3" placeholder="Tác giả">
+        <input id="paperJournal" class="border rounded-lg p-3" placeholder="Tạp chí">
+        <input id="paperYear" class="border rounded-lg p-3" placeholder="Năm xuất bản" type="number">
+        <input id="paperDoi" class="border rounded-lg p-3" placeholder="DOI">
+        <input id="paperUrl" class="border rounded-lg p-3 md:col-span-2" placeholder="URL">
+        <textarea id="paperAbstract" class="border rounded-lg p-3 md:col-span-3" placeholder="Tóm tắt"></textarea>
+      </div>
+
+      <div class="flex gap-2 mb-4">
+        <button id="addPaperBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold">Thêm bài báo</button>
+        <button id="cancelPaperBtn" class="hidden px-4 py-2 bg-slate-200 rounded-lg font-semibold">Hủy sửa</button>
+      </div>
+
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-slate-100 text-left">
+            <th class="p-3 border">ID</th>
+            <th class="p-3 border">Tiêu đề</th>
+            <th class="p-3 border">Tác giả</th>
+            <th class="p-3 border">Tạp chí</th>
+            <th class="p-3 border">Năm</th>
+            <th class="p-3 border">Chủ đề</th>
+            <th class="p-3 border">Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="paperTable"></tbody>
+      </table>
+    </section>
+
+    <section class="bg-white rounded-xl shadow border p-6">
+        <h2 class="text-xl font-bold mb-4">Quản lý thông báo</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+            <input id="notificationTitle" class="border rounded-lg p-3" placeholder="Tiêu đề thông báo">
+            <input id="notificationType" class="border rounded-lg p-3" placeholder="Loại thông báo" value="system">
+            <input id="notificationLink" class="border rounded-lg p-3" placeholder="Link liên quan">
+            <select id="notificationUser" class="border rounded-lg p-3 md:col-span-2"></select>
+            <label class="flex items-center gap-2 border rounded-lg p-3">
+                <input id="notificationSendAll" type="checkbox">
+                <span>Gửi cho tất cả user đang active</span>
+            </label>
+            <textarea id="notificationContent" class="border rounded-lg p-3 md:col-span-3" placeholder="Nội dung thông báo"></textarea>
+        </div>
+
+        <button id="addNotificationBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold mb-4">
+            Gửi thông báo
+        </button>
+
+        <table class="w-full border-collapse">
+            <thead>
+                <tr class="bg-slate-100 text-left">
+                    <th class="p-3 border">ID</th>
+                    <th class="p-3 border">Tiêu đề</th>
+                    <th class="p-3 border">Nội dung</th>
+                    <th class="p-3 border">User</th>
+                    <th class="p-3 border">Đã đọc</th>
+                    <th class="p-3 border">Ngày tạo</th>
+                    <th class="p-3 border">Hành động</th>
+                </tr>
+            </thead>
+            <tbody id="notificationTable"></tbody>
+        </table>
+    </section>
+
   </main>
 
 <script>
@@ -43,6 +175,15 @@ function showMessage(text, ok = true) {
     ? "mb-4 p-3 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100"
     : "mb-4 p-3 rounded-lg bg-red-50 text-red-700 border border-red-100";
   messageBox.textContent = text;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 async function loadUsers() {
@@ -67,10 +208,10 @@ async function loadUsers() {
     userTable.innerHTML += `
       <tr>
         <td class="p-3 border">${user.userId}</td>
-        <td class="p-3 border">${user.fullName}</td>
-        <td class="p-3 border">${user.username}</td>
-        <td class="p-3 border">${user.email}</td>
-        <td class="p-3 border">${user.status}</td>
+        <td class="p-3 border">${escapeHtml(user.fullName)}</td>
+        <td class="p-3 border">${escapeHtml(user.username)}</td>
+        <td class="p-3 border">${escapeHtml(user.email)}</td>
+        <td class="p-3 border">${escapeHtml(user.status)}</td>
         <td class="p-3 border">${roleText}</td>
         <td class="p-3 border space-x-2">
           <button onclick="updateUser(${user.userId}, '${lockAction}')" class="px-3 py-1 bg-slate-800 text-white rounded">${lockText}</button>
@@ -99,7 +240,538 @@ async function updateUser(userId, action) {
   loadUsers();
 }
 
+const topicTable = document.getElementById("topicTable");
+const topicNameInput = document.getElementById("topicName");
+const topicDescriptionInput = document.getElementById("topicDescription");
+const addTopicBtn = document.getElementById("addTopicBtn");
+const cancelTopicBtn = document.getElementById("cancelTopicBtn");
+let editingTopicId = null;
+let topicList = [];
+
+async function loadTopics() {
+  const response = await fetch("../api/admin_topics.php");
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Không tải được danh sách chủ đề.", false);
+    return;
+  }
+
+  topicList = result.topics;
+  topicTable.innerHTML = "";
+
+  result.topics.forEach(topic => {
+    topicTable.innerHTML += `
+      <tr>
+        <td class="p-3 border">${topic.topicId}</td>
+        <td class="p-3 border">${escapeHtml(topic.topicName)}</td>
+        <td class="p-3 border">${escapeHtml(topic.description)}</td>
+        <td class="p-3 border space-x-2">
+          <button onclick="editTopic(${topic.topicId})" class="px-3 py-1 bg-slate-800 text-white rounded">Sửa</button>
+          <button onclick="deleteTopic(${topic.topicId})" class="px-3 py-1 bg-red-600 text-white rounded">Xóa</button>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+async function saveTopic() {
+  const topicName = topicNameInput.value.trim();
+  const description = topicDescriptionInput.value.trim();
+
+  if (!topicName) {
+    showMessage("Tên chủ đề không được để trống.", false);
+    return;
+  }
+
+  const response = await fetch("../api/admin_topics.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      action: editingTopicId ? "update" : "create",
+      topicId: editingTopicId,
+      topicName,
+      description
+    })
+  });
+
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Lưu chủ đề thất bại.", false);
+    return;
+  }
+
+  showMessage(result.message || "Lưu chủ đề thành công.");
+  resetTopicForm();
+  await loadTopics();
+  await loadPaperTopics();
+}
+
+function editTopic(topicId) {
+  const topic = topicList.find(item => Number(item.topicId) === Number(topicId));
+  if (!topic) return;
+
+  editingTopicId = topicId;
+  topicNameInput.value = topic.topicName || "";
+  topicDescriptionInput.value = topic.description || "";
+  addTopicBtn.textContent = "Lưu chủ đề";
+  cancelTopicBtn.classList.remove("hidden");
+}
+
+function resetTopicForm() {
+  editingTopicId = null;
+  topicNameInput.value = "";
+  topicDescriptionInput.value = "";
+  addTopicBtn.textContent = "Thêm chủ đề";
+  cancelTopicBtn.classList.add("hidden");
+}
+
+async function deleteTopic(topicId) {
+  if (!confirm("Xóa chủ đề này?")) return;
+
+  const response = await fetch("../api/admin_topics.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ action: "delete", topicId })
+  });
+
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Xóa chủ đề thất bại.", false);
+    return;
+  }
+
+  showMessage(result.message || "Xóa chủ đề thành công.");
+  await loadTopics();
+  await loadPaperTopics();
+}
+
+addTopicBtn.addEventListener("click", saveTopic);
+cancelTopicBtn.addEventListener("click", resetTopicForm);
+
+const sourceTable = document.getElementById("sourceTable");
+const sourceNameInput = document.getElementById("sourceName");
+const baseUrlInput = document.getElementById("baseUrl");
+const sourcePriorityInput = document.getElementById("sourcePriority");
+const sourceActiveInput = document.getElementById("sourceActive");
+const sourceDescriptionInput = document.getElementById("sourceDescription");
+const addSourceBtn = document.getElementById("addSourceBtn");
+const cancelSourceBtn = document.getElementById("cancelSourceBtn");
+let editingSourceId = null;
+let sourceList = [];
+
+async function loadSources() {
+  const response = await fetch("../api/admin_api_sources.php");
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Không tải được danh sách nguồn API.", false);
+    return;
+  }
+
+  sourceList = result.sources;
+  sourceTable.innerHTML = "";
+
+  result.sources.forEach(source => {
+    const statusText = source.isActive == 1 ? "Đang bật" : "Đang tắt";
+    const toggleText = source.isActive == 1 ? "Tắt" : "Bật";
+
+    sourceTable.innerHTML += `
+      <tr>
+        <td class="p-3 border">${source.sourceId}</td>
+        <td class="p-3 border">${escapeHtml(source.sourceName)}</td>
+        <td class="p-3 border">${escapeHtml(source.baseUrl)}</td>
+        <td class="p-3 border">${statusText}</td>
+        <td class="p-3 border">${source.priority}</td>
+        <td class="p-3 border">${escapeHtml(source.description)}</td>
+        <td class="p-3 border space-x-2">
+          <button onclick="editSource(${source.sourceId})" class="px-3 py-1 bg-slate-800 text-white rounded">Sửa</button>
+          <button onclick="toggleSource(${source.sourceId})" class="px-3 py-1 bg-yellow-600 text-white rounded">${toggleText}</button>
+          <button onclick="deleteSource(${source.sourceId})" class="px-3 py-1 bg-red-600 text-white rounded">Xóa</button>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+async function saveSource() {
+  const sourceName = sourceNameInput.value.trim();
+  const baseUrl = baseUrlInput.value.trim();
+  const description = sourceDescriptionInput.value.trim();
+  const priority = parseInt(sourcePriorityInput.value || "1", 10);
+  const isActive = parseInt(sourceActiveInput.value, 10);
+
+  if (!sourceName || !baseUrl) {
+    showMessage("Tên nguồn và Base URL không được để trống.", false);
+    return;
+  }
+
+  const response = await fetch("../api/admin_api_sources.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      action: editingSourceId ? "update" : "create",
+      sourceId: editingSourceId,
+      sourceName,
+      baseUrl,
+      description,
+      priority,
+      isActive
+    })
+  });
+
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Lưu nguồn API thất bại.", false);
+    return;
+  }
+
+  showMessage(result.message || "Lưu nguồn API thành công.");
+  resetSourceForm();
+  loadSources();
+}
+
+function editSource(sourceId) {
+  const source = sourceList.find(item => Number(item.sourceId) === Number(sourceId));
+  if (!source) return;
+
+  editingSourceId = sourceId;
+  sourceNameInput.value = source.sourceName || "";
+  baseUrlInput.value = source.baseUrl || "";
+  sourceDescriptionInput.value = source.description || "";
+  sourceActiveInput.value = source.isActive;
+  sourcePriorityInput.value = source.priority;
+  addSourceBtn.textContent = "Lưu nguồn API";
+  cancelSourceBtn.classList.remove("hidden");
+}
+
+function resetSourceForm() {
+  editingSourceId = null;
+  sourceNameInput.value = "";
+  baseUrlInput.value = "";
+  sourceDescriptionInput.value = "";
+  sourcePriorityInput.value = "1";
+  sourceActiveInput.value = "1";
+  addSourceBtn.textContent = "Thêm nguồn API";
+  cancelSourceBtn.classList.add("hidden");
+}
+
+async function toggleSource(sourceId) {
+  const response = await fetch("../api/admin_api_sources.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ action: "toggle", sourceId })
+  });
+
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Đổi trạng thái thất bại.", false);
+    return;
+  }
+
+  showMessage(result.message || "Đã đổi trạng thái nguồn API.");
+  loadSources();
+}
+
+async function deleteSource(sourceId) {
+  if (!confirm("Xóa nguồn API này?")) return;
+
+  const response = await fetch("../api/admin_api_sources.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ action: "delete", sourceId })
+  });
+
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Xóa nguồn API thất bại.", false);
+    return;
+  }
+
+  showMessage(result.message || "Xóa nguồn API thành công.");
+  loadSources();
+}
+
+addSourceBtn.addEventListener("click", saveSource);
+cancelSourceBtn.addEventListener("click", resetSourceForm);
+
+const paperTable = document.getElementById("paperTable");
+const paperTitleInput = document.getElementById("paperTitle");
+const paperTopicInput = document.getElementById("paperTopic");
+const paperAuthorsInput = document.getElementById("paperAuthors");
+const paperJournalInput = document.getElementById("paperJournal");
+const paperYearInput = document.getElementById("paperYear");
+const paperDoiInput = document.getElementById("paperDoi");
+const paperUrlInput = document.getElementById("paperUrl");
+const paperAbstractInput = document.getElementById("paperAbstract");
+const addPaperBtn = document.getElementById("addPaperBtn");
+const cancelPaperBtn = document.getElementById("cancelPaperBtn");
+let editingPaperId = null;
+let paperList = [];
+
+async function loadPaperTopics() {
+  const response = await fetch("../api/admin_topics.php");
+  const result = await response.json();
+
+  paperTopicInput.innerHTML = `<option value="">Chọn chủ đề</option>`;
+
+  if (result.success) {
+    result.topics.forEach(topic => {
+      paperTopicInput.innerHTML += `<option value="${topic.topicId}">${escapeHtml(topic.topicName)}</option>`;
+    });
+  }
+}
+
+async function loadPapers() {
+  const response = await fetch("../api/admin_papers.php");
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Không tải được danh sách bài báo.", false);
+    return;
+  }
+
+  paperList = result.papers;
+  paperTable.innerHTML = "";
+
+  result.papers.forEach(paper => {
+    paperTable.innerHTML += `
+      <tr>
+        <td class="p-3 border">${paper.articleId}</td>
+        <td class="p-3 border">${escapeHtml(paper.title)}</td>
+        <td class="p-3 border">${escapeHtml(paper.authors)}</td>
+        <td class="p-3 border">${escapeHtml(paper.journal)}</td>
+        <td class="p-3 border">${paper.publishedYear || ""}</td>
+        <td class="p-3 border">${escapeHtml(paper.topicName)}</td>
+        <td class="p-3 border space-x-2">
+          <button onclick="editPaper(${paper.articleId})" class="px-3 py-1 bg-slate-800 text-white rounded">Sửa</button>
+          <button onclick="deletePaper(${paper.articleId})" class="px-3 py-1 bg-red-600 text-white rounded">Xóa</button>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+async function savePaper() {
+  const title = paperTitleInput.value.trim();
+
+  if (!title) {
+    showMessage("Tiêu đề bài báo không được để trống.", false);
+    return;
+  }
+
+  const response = await fetch("../api/admin_papers.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      action: editingPaperId ? "update" : "create",
+      articleId: editingPaperId,
+      title,
+      authors: paperAuthorsInput.value.trim(),
+      journal: paperJournalInput.value.trim(),
+      publishedYear: paperYearInput.value,
+      doi: paperDoiInput.value.trim(),
+      url: paperUrlInput.value.trim(),
+      abstract: paperAbstractInput.value.trim(),
+      topicId: paperTopicInput.value
+    })
+  });
+
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Lưu bài báo thất bại.", false);
+    return;
+  }
+
+  showMessage(result.message || "Lưu bài báo thành công.");
+  resetPaperForm();
+  loadPapers();
+}
+
+function editPaper(articleId) {
+  const paper = paperList.find(item => Number(item.articleId) === Number(articleId));
+  if (!paper) return;
+
+  editingPaperId = articleId;
+  paperTitleInput.value = paper.title || "";
+  paperAuthorsInput.value = paper.authors || "";
+  paperJournalInput.value = paper.journal || "";
+  paperYearInput.value = paper.publishedYear || "";
+  paperDoiInput.value = paper.doi || "";
+  paperUrlInput.value = paper.url || "";
+  paperAbstractInput.value = paper.abstract || "";
+  paperTopicInput.value = paper.topicId || "";
+  addPaperBtn.textContent = "Lưu bài báo";
+  cancelPaperBtn.classList.remove("hidden");
+}
+
+function resetPaperForm() {
+  editingPaperId = null;
+  paperTitleInput.value = "";
+  paperAuthorsInput.value = "";
+  paperJournalInput.value = "";
+  paperYearInput.value = "";
+  paperDoiInput.value = "";
+  paperUrlInput.value = "";
+  paperAbstractInput.value = "";
+  paperTopicInput.value = "";
+  addPaperBtn.textContent = "Thêm bài báo";
+  cancelPaperBtn.classList.add("hidden");
+}
+
+async function deletePaper(articleId) {
+  if (!confirm("Xóa bài báo này?")) return;
+
+  const response = await fetch("../api/admin_papers.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ action: "delete", articleId })
+  });
+
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Xóa bài báo thất bại.", false);
+    return;
+  }
+
+  showMessage(result.message || "Xóa bài báo thành công.");
+  loadPapers();
+}
+
+addPaperBtn.addEventListener("click", savePaper);
+cancelPaperBtn.addEventListener("click", resetPaperForm);
+const notificationTable = document.getElementById("notificationTable");
+const notificationTitleInput = document.getElementById("notificationTitle");
+const notificationTypeInput = document.getElementById("notificationType");
+const notificationLinkInput = document.getElementById("notificationLink");
+const notificationUserInput = document.getElementById("notificationUser");
+const notificationSendAllInput = document.getElementById("notificationSendAll");
+const notificationContentInput = document.getElementById("notificationContent");
+const addNotificationBtn = document.getElementById("addNotificationBtn");
+
+async function loadNotificationUsers() {
+  const response = await fetch("../api/admin_users.php");
+  const result = await response.json();
+
+  notificationUserInput.innerHTML = `<option value="">Chọn user nhận thông báo</option>`;
+
+  if (result.success) {
+    result.users.forEach(user => {
+      if (user.status === "active") {
+        notificationUserInput.innerHTML += `
+          <option value="${user.userId}">${user.fullName} (${user.username})</option>
+        `;
+      }
+    });
+  }
+}
+
+async function loadNotifications() {
+  const response = await fetch("../api/admin_notifications.php");
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Không tải được danh sách thông báo.", false);
+    return;
+  }
+
+  notificationTable.innerHTML = "";
+
+  result.notifications.forEach(item => {
+    notificationTable.innerHTML += `
+      <tr>
+        <td class="p-3 border">${item.notificationId}</td>
+        <td class="p-3 border">${item.title}</td>
+        <td class="p-3 border">${item.content}</td>
+        <td class="p-3 border">${item.fullName || item.username || ""}</td>
+        <td class="p-3 border">${item.isRead == 1 ? "Rồi" : "Chưa"}</td>
+        <td class="p-3 border">${item.createdAt}</td>
+        <td class="p-3 border">
+          <button onclick="deleteNotification(${item.notificationId})" class="px-3 py-1 bg-red-600 text-white rounded">Xóa</button>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+async function saveNotification() {
+  const title = notificationTitleInput.value.trim();
+  const content = notificationContentInput.value.trim();
+
+  if (!title || !content) {
+    showMessage("Tiêu đề và nội dung không được để trống.", false);
+    return;
+  }
+
+  const response = await fetch("../api/admin_notifications.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      action: "create",
+      title,
+      content,
+      type: notificationTypeInput.value.trim(),
+      link: notificationLinkInput.value.trim(),
+      userId: notificationUserInput.value,
+      sendAll: notificationSendAllInput.checked ? 1 : 0
+    })
+  });
+
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Gửi thông báo thất bại.", false);
+    return;
+  }
+
+  showMessage(result.message || "Gửi thông báo thành công.");
+  notificationTitleInput.value = "";
+  notificationContentInput.value = "";
+  notificationLinkInput.value = "";
+  notificationTypeInput.value = "system";
+  notificationUserInput.value = "";
+  notificationSendAllInput.checked = false;
+  loadNotifications();
+}
+
+async function deleteNotification(notificationId) {
+  if (!confirm("Xóa thông báo này?")) return;
+
+  const response = await fetch("../api/admin_notifications.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      action: "delete",
+      notificationId
+    })
+  });
+
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Xóa thông báo thất bại.", false);
+    return;
+  }
+
+  showMessage(result.message || "Xóa thông báo thành công.");
+  loadNotifications();
+}
+
+addNotificationBtn.addEventListener("click", saveNotification);
 loadUsers();
+loadTopics();
+loadSources();
+loadPaperTopics();
+loadPapers();
+loadNotificationUsers();
+loadNotifications();
 </script>
 </body>
 </html>

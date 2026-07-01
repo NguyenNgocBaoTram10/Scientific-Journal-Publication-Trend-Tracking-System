@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông báo - ScholarTrend</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen">
+  <header class="bg-white border-b px-8 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Thông báo</h1>
+    <a href="trangchu1.html" class="text-blue-600 font-semibold">Về trang chủ</a>
+  </header>
+
+  <main class="p-8 max-w-5xl mx-auto">
+    <section class="bg-white rounded-xl shadow border p-6">
+      <div class="flex justify-between items-center mb-6">
+        <div>
+          <h2 class="text-xl font-bold">Danh sách thông báo</h2>
+          <p id="unreadText" class="text-slate-500 mt-1">Đang tải...</p>
+        </div>
+
+        <button
+          id="markAllBtn"
+          class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold">
+          Đánh dấu tất cả đã đọc
+        </button>
+      </div>
+
+      <div id="messageBox" class="hidden mb-4 p-3 rounded-lg"></div>
+
+      <div id="notificationList" class="space-y-3"></div>
+    </section>
+  </main>
+
+<script>
+const notificationList = document.getElementById("notificationList");
+const unreadText = document.getElementById("unreadText");
+const markAllBtn = document.getElementById("markAllBtn");
+const messageBox = document.getElementById("messageBox");
+
+function showMessage(text, ok = true) {
+  messageBox.className = ok
+    ? "mb-4 p-3 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100"
+    : "mb-4 p-3 rounded-lg bg-red-50 text-red-700 border border-red-100";
+  messageBox.textContent = text;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+async function loadNotifications() {
+  const response = await fetch("../api/thongbao.php");
+  const result = await response.json();
+
+  if (result.error) {
+    alert(result.error);
+    window.location.href = "dangnhap.html";
+    return;
+  }
+
+  unreadText.textContent = `Bạn có ${result.unread_count} thông báo chưa đọc.`;
+  notificationList.innerHTML = "";
+
+  if (!result.notifications || result.notifications.length === 0) {
+    notificationList.innerHTML = `
+      <div class="text-center p-10 border border-dashed rounded-xl text-slate-500">
+        Chưa có thông báo nào.
+      </div>
+    `;
+    return;
+  }
+
+  result.notifications.forEach(item => {
+    const unreadClass = item.is_read ? "bg-white" : "bg-blue-50 border-blue-200";
+    const readText = item.is_read ? "Đã đọc" : "Chưa đọc";
+    const button = item.is_read
+      ? ""
+      : `<button onclick="markRead(${item.id})" class="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm">Đánh dấu đã đọc</button>`;
+
+    const link = item.link
+      ? `<a href="${escapeHtml(item.link)}" class="text-blue-600 font-semibold">Mở liên kết</a>`
+      : "";
+
+    notificationList.innerHTML += `
+      <div class="border rounded-xl p-4 ${unreadClass}">
+        <div class="flex justify-between gap-4">
+          <div>
+            <h3 class="font-bold text-lg">${escapeHtml(item.title)}</h3>
+            <p class="text-slate-700 mt-1">${escapeHtml(item.message)}</p>
+            <div class="text-sm text-slate-500 mt-2">
+              ${escapeHtml(item.type)} • ${escapeHtml(item.time_ago)} • ${readText}
+            </div>
+            <div class="mt-2">${link}</div>
+          </div>
+          <div class="shrink-0">${button}</div>
+        </div>
+      </div>
+    `;
+  });
+}
+
+async function markRead(id) {
+  const response = await fetch("../api/thongbao.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      action: "mark_read",
+      id
+    })
+  });
+
+  const result = await response.json();
+
+  if (result.error) {
+    showMessage(result.error, false);
+    return;
+  }
+
+  showMessage("Đã đánh dấu thông báo là đã đọc.");
+  loadNotifications();
+}
+
+async function markAllRead() {
+  const response = await fetch("../api/thongbao.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      action: "mark_all_read"
+    })
+  });
+
+  const result = await response.json();
+
+  if (result.error) {
+    showMessage(result.error, false);
+    return;
+  }
+
+  showMessage("Đã đánh dấu tất cả thông báo là đã đọc.");
+  loadNotifications();
+}
+
+markAllBtn.addEventListener("click", markAllRead);
+loadNotifications();
+</script>
+</body>
+</html>

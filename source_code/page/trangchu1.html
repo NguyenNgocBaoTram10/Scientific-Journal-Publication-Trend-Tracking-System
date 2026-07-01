@@ -171,6 +171,21 @@
   </div>
 
 </div>
+<a href="xemthongbao.html"
+   class="relative w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-all"
+   title="Thông báo">
+    <span class="material-symbols-outlined text-[22px]">notifications</span>
+    <span id="notification-badge"
+          class="hidden absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full min-w-5 h-5 px-1 flex items-center justify-center">
+        0
+    </span>
+</a>
+
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed cursor-pointer hover:shadow-sm transition-all"
+     onclick="window.location.href='hosocanhan.html'">
+    <span class="material-symbols-outlined text-[20px]">person</span>
+(Add admin management modules and notifications)
+</div>
 </nav>
 </header>
 <main class="mt-16">
@@ -500,7 +515,28 @@ function doSearch() {
     });
     </script>
 
+    <script>
+    async function loadNotificationCount() {
+        try {
+            const response = await fetch('../api/thongbao.php');
+            const data = await response.json();
+            
+            const badge = document.getElementById('notification-badge');
+            const count = Number(data.unread_count || 0);
 
-
+            if (count > 0) {
+                badge.textContent = count > 99 ? '99+' : count;
+                badge.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+            }
+        } catch (error) {
+            console.error('Không tải được thông báo:', error);
+        }
+    }
+    
+    loadNotificationCount();
+    setInterval(loadNotificationCount, 30000);
+    </script>
 
 </body></html>
