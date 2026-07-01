@@ -1,226 +1,303 @@
 <?php
 /**
- * xuhuong_api.php
- * Backend cho trang "Phân tích Xu hướng" (phantichxuhuong.html).
- * Gọi OpenAlex API, tổng hợp dữ liệu và trả JSON đúng cấu trúc mà frontend cần.
+ * API: Phân tích Xu hướng Nghiên cứu
+ * Nguồn dữ liệu: CrossRef (primary) — không dùng OpenAlex
+ * Endpoint: GET /api/phantichxuhuong.php
  *
  * Params:
- *   topic      (bắt buộc) : chủ đề cần phân tích
- *   year_from  (tuỳ chọn) : năm bắt đầu, mặc định = năm hiện tại - 9
- *   year_to    (tuỳ chọn) : năm kết thúc, mặc định = năm hiện tại
+ *   topic     string  Từ khóa / tên tác giả / tên tạp chí
+ *   year_from int     (tuỳ chọn)
+ *   year_to   int     (tuỳ chọn)
  */
+
+// Bắt mọi output ngoài ý muốn (warning, notice, BOM...) để JSON luôn sạch
+ob_start();
+error_reporting(E_ALL);
+ini_set('display_errors', '0');
 
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 
-$topic    = isset($_GET['topic']) ? trim($_GET['topic']) : '';
-$yearFrom = isset($_GET['year_from']) ? preg_replace('/[^0-9]/', '', $_GET['year_from']) : '';
-$yearTo   = isset($_GET['year_to'])   ? preg_replace('/[^0-9]/', '', $_GET['year_to'])   : '';
+/* ═══════════════ INPUT ═══════════════ */
+$topic    = trim($_GET['topic']    ?? '');
+$yearFrom = (int)($_GET['year_from'] ?? 0);
+$yearTo   = (int)($_GET['year_to']   ?? 0);
 
 if ($topic === '') {
     http_response_code(400);
-    echo json_encode(['error' => 'Thiếu tham số topic.']);
+    ob_clean();
+    echo json_encode(['error' => 'Thiếu tham số "topic".']);
     exit;
 }
 
-$currentYear = (int)date('Y');
-if ($yearFrom === '') $yearFrom = $currentYear - 9;
-if ($yearTo === '')   $yearTo   = $currentYear;
-$yearFrom = (int)$yearFrom;
-$yearTo   = (int)$yearTo;
-if ($yearFrom > $yearTo) { $tmp = $yearFrom; $yearFrom = $yearTo; $yearTo = $tmp; }
+if ($yearTo   === 0) $yearTo   = (int)date('Y');
+if ($yearFrom === 0) $yearFrom = $yearTo - 9;   // mặc định 10 năm
 
-$yearFilter = 'publication_year:' . $yearFrom . '-' . $yearTo;
+/* ═══════════════ HELPERS ═══════════════ */
 
-function openAlexGet($params) {
-    $params['mailto'] = 'contact@scholartrend.example';
-    $url = 'https://api.openalex.org/works?' . http_build_query($params);
+/**
+ * Gọi CrossRef API, trả về mảng PHP hoặc null nếu lỗi.
+ * Dùng email trong User-Agent để vào "polite pool" — tốc độ cao hơn.
+ */
+function crossrefGet(string $url): ?array {
+    $ctx = stream_context_create([
+        'http' => [
+            'method'  => 'GET',
+            'header'  => "User-Agent: ScholarTrend/1.0 (mailto:admin@scholartrend.vn)\r\n",
+            'timeout' => 15,
+            'ignore_errors' => true,
+        ],
+    ]);
+    $raw = @file_get_contents($url, false, $ctx);
+    if ($raw === false) return null;
 
-    $ch = curl_init($url);
-    $opts = [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_TIMEOUT        => 15,
-        CURLOPT_USERAGENT      => 'ScholarTrendDashboard/1.0 (contact@scholartrend.example)',
-        CURLOPT_HTTPHEADER     => ['Accept: application/json'],
-    ];
-
-    // Nếu có sẵn file cacert.pem trong cùng thư mục api/, dùng nó để xác thực SSL
-    // (giải pháp không cần sửa php.ini của WAMPP).
-    $localCaBundle = __DIR__ . '/cacert.pem';
-    if (file_exists($localCaBundle)) {
-        $opts[CURLOPT_CAINFO] = $localCaBundle;
-    } else {
-        // Fallback cho môi trường local/dev khi chưa có cacert.pem:
-        // tắt xác thực SSL để tránh lỗi "unable to get local issuer certificate".
-        // KHÔNG dùng trên production.
-        $opts[CURLOPT_SSL_VERIFYPEER] = false;
-        $opts[CURLOPT_SSL_VERIFYHOST] = 0;
+    // Kiểm tra HTTP status
+    if (isset($http_response_header)) {
+        $statusLine = $http_response_header[0] ?? '';
+        preg_match('/\d{3}/', $statusLine, $m);
+        $status = (int)($m[0] ?? 200);
+        if ($status >= 400) return null;
     }
 
-    curl_setopt_array($ch, $opts);
-    $response = curl_exec($ch);
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    $err      = curl_error($ch);
-    curl_close($ch);
-
-    if ($response === false) {
-        throw new Exception('Không thể kết nối tới OpenAlex: ' . $err);
-    }
-    if ($httpCode !== 200) {
-        throw new Exception('OpenAlex trả về lỗi HTTP ' . $httpCode);
-    }
-    $data = json_decode($response, true);
-    if (!is_array($data)) {
-        throw new Exception('Phản hồi từ OpenAlex không hợp lệ.');
-    }
-    return $data;
+    $data = json_decode($raw, true);
+    return (json_last_error() === JSON_ERROR_NONE) ? $data : null;
 }
 
-try {
-    // 1. Tổng số công trình
-    $countResp  = openAlexGet([
-        'search'   => $topic,
-        'filter'   => $yearFilter,
-        'per-page' => 1,
-    ]);
-    $totalWorks = (int)($countResp['meta']['count'] ?? 0);
+/** Nhận diện tên tác giả (2–4 từ, chữ cái đầu hoa) */
+function isAuthorQuery(string $q): bool {
+    $parts = preg_split('/\s+/', trim($q));
+    if (count($parts) < 2 || count($parts) > 4) return false;
+    foreach ($parts as $p) {
+        if (!preg_match('/^\p{Lu}/u', $p)) return false;
+    }
+    return true;
+}
 
-    // 2. Mẫu top 50 theo trích dẫn
-    $sampleResp = openAlexGet([
-        'search'   => $topic,
-        'filter'   => $yearFilter,
-        'per-page' => 50,
-        'sort'     => 'cited_by_count:desc',
-    ]);
-    $works = $sampleResp['results'] ?? [];
+/** Tính tần suất trong mảng giá trị */
+function countFreq(array $values): array {
+    $freq = [];
+    foreach ($values as $v) {
+        if (!$v) continue;
+        $freq[$v] = ($freq[$v] ?? 0) + 1;
+    }
+    arsort($freq);
+    return $freq;
+}
 
-    $totalCitations = 0;
-    $oaCount        = 0;
-    $authorMap      = [];
+/**
+ * Fallback khi bài báo không có trường "subject" (rất phổ biến với IEEE...):
+ * trích các từ khóa "có ý nghĩa" từ tiêu đề để dùng thay cho subtopic.
+ */
+function extractKeywords(string $title, int $max = 4): array {
+    static $stop = ['the','a','an','of','and','for','in','on','with','to','is','are',
+        'using','based','study','analysis','review','approach','via','toward','towards',
+        'vs','this','that','its','from','by','as','into','at','or','new','novel','can',
+        'we','their','our','how','what','when','where'];
+    $title = strtolower(preg_replace('/[^\p{L}\p{N}\s-]/u', ' ', $title));
+    $words = array_filter(preg_split('/\s+/', trim($title)), function ($w) use ($stop) {
+        return mb_strlen($w) > 3 && !in_array($w, $stop, true);
+    });
+    return array_slice(array_values($words), 0, $max);
+}
 
-    foreach ($works as $w) {
-        $cites = $w['cited_by_count'] ?? 0;
-        $totalCitations += $cites;
-        if (!empty($w['open_access']['is_oa'])) $oaCount++;
+/* ═══════════════ XÂY DỰNG QUERY ═══════════════ */
 
-        if (!empty($w['authorships']) && is_array($w['authorships'])) {
-            foreach ($w['authorships'] as $a) {
-                $name = $a['author']['display_name'] ?? null;
-                if (!$name) continue;
-                if (!isset($authorMap[$name])) $authorMap[$name] = ['works' => 0, 'citations' => 0];
-                $authorMap[$name]['works']++;
-                $authorMap[$name]['citations'] += $cites;
-            }
+$isAuthor = isAuthorQuery($topic);
+$baseUrl  = 'https://api.crossref.org/works';
+$mailto   = 'mailto=admin@scholartrend.vn';
+
+// Filter năm
+$yearFilter = '';
+if ($yearFrom) $yearFilter .= ',from-pub-date:' . $yearFrom;
+if ($yearTo)   $yearFilter .= ',until-pub-date:' . $yearTo;
+if ($yearFilter) $yearFilter = 'filter=' . ltrim($yearFilter, ',') . '&';
+
+/* ═══════════════ 1. TỔNG SỐ & FACET THEO NĂM ═══════════════ */
+if ($isAuthor) {
+    $queryParam = 'query.author=' . urlencode($topic);
+} else {
+    $queryParam = 'query=' . urlencode($topic);
+}
+
+$facetUrl = $baseUrl . '?' . $queryParam . '&' . $yearFilter
+          . 'facet=published:*&rows=0&' . $mailto;
+
+$facetData = crossrefGet($facetUrl);
+if (!$facetData) {
+    http_response_code(502);
+    ob_clean();
+    echo json_encode(['error' => 'Không kết nối được CrossRef. Vui lòng thử lại sau.']);
+    exit;
+}
+
+$totalWorks = (int)($facetData['message']['total-results'] ?? 0);
+
+// Yearly counts từ facet
+$yearlyRaw = $facetData['message']['facets']['published']['values'] ?? [];
+$yearly = [];
+foreach ($yearlyRaw as $y => $cnt) {
+    $yr = (int)$y;
+    if ($yearFrom && $yr < $yearFrom) continue;
+    if ($yearTo   && $yr > $yearTo)   continue;
+    $yearly[$yr] = (int)$cnt;
+}
+ksort($yearly);
+
+$yearlyArr = [];
+foreach ($yearly as $yr => $cnt) {
+    $yearlyArr[] = ['year' => $yr, 'count' => $cnt];
+}
+
+/* Nếu facet không trả dữ liệu, ước tính bằng query từng năm (tối đa 5 năm) */
+if (empty($yearlyArr) && ($yearTo - $yearFrom) <= 5) {
+    for ($yr = $yearFrom; $yr <= $yearTo; $yr++) {
+        $yUrl = $baseUrl . '?' . $queryParam
+              . '&filter=from-pub-date:' . $yr . ',until-pub-date:' . $yr
+              . '&rows=0&' . $mailto;
+        $yData = crossrefGet($yUrl);
+        $yearlyArr[] = ['year' => $yr, 'count' => (int)($yData['message']['total-results'] ?? 0)];
+    }
+}
+
+/* ═══════════════ 2. MẪU 50 BÀI — trích dẫn, OA, journal, subtopic, authors ═══════════════ */
+$sampleUrl = $baseUrl . '?' . $queryParam . '&' . $yearFilter
+           . 'rows=50&select=DOI,title,author,published,container-title,'
+           . 'is-referenced-by-count,subject,link&sort=is-referenced-by-count&order=desc&'
+           . $mailto;
+
+$sampleData = crossrefGet($sampleUrl);
+$items = $sampleData['message']['items'] ?? [];
+
+$totalCitations = 0;
+$oaCount        = 0;
+$journals       = [];
+$subjects       = [];
+$authorCounts   = [];   // name => [works, citations]
+$highlights     = [];
+
+foreach ($items as $item) {
+    $cite  = (int)($item['is-referenced-by-count'] ?? 0);
+    $totalCitations += $cite;
+
+    // Open Access: có link với content-version=vor hoặc link không null
+    $links = $item['link'] ?? [];
+    $isOA  = false;
+    foreach ($links as $lk) {
+        if (($lk['content-version'] ?? '') === 'vor' || ($lk['intended-application'] ?? '') === 'text-mining') {
+            $isOA = true; break;
+        }
+    }
+    if ($isOA) $oaCount++;
+
+    // Journal
+    $journal = $item['container-title'][0] ?? '';
+    if ($journal) $journals[$journal] = ($journals[$journal] ?? 0) + 1;
+
+    // Tiêu đề (dùng cho cả highlights lẫn fallback subject)
+    $titleStr = is_array($item['title'] ?? null) ? ($item['title'][0] ?? '') : ($item['title'] ?? '');
+
+    // Subjects — nếu CrossRef không cung cấp (rất phổ biến với IEEE),
+    // fallback sang trích từ khóa từ tiêu đề bài báo.
+    if (!empty($item['subject'])) {
+        foreach ($item['subject'] as $s) {
+            $s = trim($s);
+            if (!$s) continue;
+            $subjects[$s] = ($subjects[$s] ?? 0) + 1;
+        }
+    } else {
+        foreach (extractKeywords($titleStr) as $kw) {
+            $subjects[$kw] = ($subjects[$kw] ?? 0) + 1;
         }
     }
 
-    $oaPercent = count($works) > 0 ? round(($oaCount / count($works)) * 100) : 0;
-
-    $topAuthors = [];
-    foreach ($authorMap as $name => $info) {
-        $topAuthors[] = ['name' => $name, 'works' => $info['works'], 'citations' => $info['citations']];
+    // Authors
+    foreach (($item['author'] ?? []) as $a) {
+        $name = trim(($a['given'] ?? '') . ' ' . ($a['family'] ?? ''));
+        if (!$name || $name === ' ') continue;
+        if (!isset($authorCounts[$name])) $authorCounts[$name] = ['works' => 0, 'citations' => 0];
+        $authorCounts[$name]['works']++;
+        $authorCounts[$name]['citations'] += $cite;
     }
-    usort($topAuthors, function ($a, $b) { return $b['citations'] - $a['citations']; });
-    $topAuthors = array_slice($topAuthors, 0, 8);
 
-    $highlights = [];
-    foreach (array_slice($works, 0, 3) as $w) {
+    // Highlights (top 3 được trích dẫn nhiều nhất)
+    if (count($highlights) < 3) {
+        $doi  = $item['DOI'] ?? '';
+        $year = $item['published']['date-parts'][0][0] ?? null;
         $highlights[] = [
-            'title'     => $w['display_name'] ?? ($w['title'] ?? 'Untitled'),
-            'year'      => $w['publication_year'] ?? null,
-            'citations' => $w['cited_by_count'] ?? 0,
-            'is_oa'     => !empty($w['open_access']['is_oa']),
-            'doi'       => $w['doi'] ?? null,
+            'title'     => $titleStr,
+            'year'      => $year,
+            'citations' => $cite,
+            'doi'       => $doi ? 'https://doi.org/' . $doi : '',
+            'is_oa'     => $isOA,
         ];
     }
-
-    // 3. Số lượng công trình theo năm
-    $yearlyResp = openAlexGet([
-        'search'   => $topic,
-        'filter'   => $yearFilter,
-        'group_by' => 'publication_year',
-    ]);
-    $yearlyRaw = $yearlyResp['group_by'] ?? [];
-
-    $yearly = [];
-    foreach ($yearlyRaw as $g) {
-        $y = (int)($g['key'] ?? 0);
-        if ($y >= $yearFrom && $y <= $yearTo) {
-            $yearly[] = ['year' => $y, 'count' => (int)($g['count'] ?? 0)];
-        }
-    }
-    usort($yearly, function ($a, $b) { return $a['year'] - $b['year']; });
-
-    // 4. Xu hướng
-    $trend = 'stable';
-    $growthRate = 0;
-    if (count($yearly) >= 2) {
-        $half = (int)floor(count($yearly) / 2);
-        $firstHalf  = array_slice($yearly, 0, max($half, 1));
-        $secondHalf = array_slice($yearly, -max($half, 1));
-
-        $sumFirst  = array_sum(array_column($firstHalf, 'count'));
-        $sumSecond = array_sum(array_column($secondHalf, 'count'));
-
-        if ($sumFirst > 0) {
-            $growthRate = round((($sumSecond - $sumFirst) / $sumFirst) * 100);
-        } elseif ($sumSecond > 0) {
-            $growthRate = 100;
-        }
-
-        if ($growthRate > 5) {
-            $trend = 'rising';
-        } elseif ($growthRate < -5) {
-            $trend = 'falling';
-        } else {
-            $trend = 'stable';
-        }
-    }
-
-    // 5. Chủ đề con liên quan
-    $topicsResp = openAlexGet([
-        'search'   => $topic,
-        'filter'   => $yearFilter,
-        'group_by' => 'primary_topic.id',
-    ]);
-    $topicsRaw = $topicsResp['group_by'] ?? [];
-
-    $topSubtopics = [];
-    foreach ($topicsRaw as $g) {
-        if (empty($g['key']) || empty($g['key_display_name'])) continue;
-        $topSubtopics[] = ['name' => $g['key_display_name'], 'count' => (int)($g['count'] ?? 0)];
-    }
-    usort($topSubtopics, function ($a, $b) { return $b['count'] - $a['count']; });
-    $topSubtopics = array_slice($topSubtopics, 0, 6);
-
-    // Phân bổ tạp chí
-    $journalsResp = openAlexGet([
-        'search'   => $topic,
-        'filter'   => $yearFilter,
-        'group_by' => 'primary_location.source.id',
-    ]);
-    $journalsRaw = $journalsResp['group_by'] ?? [];
-
-    $topJournals = [];
-    foreach ($journalsRaw as $g) {
-        if (empty($g['key']) || empty($g['key_display_name'])) continue;
-        $topJournals[] = ['name' => $g['key_display_name'], 'count' => (int)($g['count'] ?? 0)];
-    }
-    usort($topJournals, function ($a, $b) { return $b['count'] - $a['count']; });
-    $topJournals = array_slice($topJournals, 0, 8);
-    echo json_encode([
-        'total_works'          => $totalWorks,
-        'total_citations'      => $totalCitations,
-        'oa_percent'           => $oaPercent,
-        'trend'                => $trend,
-        'growth_rate_percent'  => $growthRate,
-        'yearly'               => $yearly,
-        'top_subtopics'        => $topSubtopics,
-        'top_authors'          => $topAuthors,
-        'highlights'           => $highlights,
-    ], JSON_UNESCAPED_UNICODE);
-
-} catch (Exception $e) {
-    http_response_code(502);
-    echo json_encode(['error' => $e->getMessage()]);
 }
+
+$oaPercent = count($items) > 0 ? round($oaCount / count($items) * 100) : 0;
+
+// Top subtopics
+arsort($subjects);
+$topSubtopics = [];
+foreach (array_slice($subjects, 0, 6, true) as $name => $cnt) {
+    $topSubtopics[] = ['name' => $name, 'count' => $cnt];
+}
+
+// Top journals
+arsort($journals);
+$topJournals = [];
+foreach (array_slice($journals, 0, 6, true) as $name => $cnt) {
+    $topJournals[] = ['name' => $name, 'count' => $cnt];
+}
+
+// Top authors
+uasort($authorCounts, fn($a, $b) => $b['citations'] <=> $a['citations']);
+$topAuthors = [];
+foreach (array_slice($authorCounts, 0, 8, true) as $name => $stat) {
+    $topAuthors[] = ['name' => $name, 'works' => $stat['works'], 'citations' => $stat['citations']];
+}
+
+/* ═══════════════ 3. XU HƯỚNG (so sánh nửa đầu vs nửa cuối chuỗi thời gian) ═══════════════ */
+$trend             = 'stable';
+$growthRatePercent = 0;
+
+if (count($yearlyArr) >= 4) {
+    $half   = (int)(count($yearlyArr) / 2);
+    $first  = array_slice($yearlyArr, 0, $half);
+    $second = array_slice($yearlyArr, $half);
+    $avgFirst  = array_sum(array_column($first,  'count')) / max(count($first),  1);
+    $avgSecond = array_sum(array_column($second, 'count')) / max(count($second), 1);
+
+    if ($avgFirst > 0) {
+        $growthRatePercent = round(($avgSecond - $avgFirst) / $avgFirst * 100);
+        if ($growthRatePercent >  10) $trend = 'rising';
+        if ($growthRatePercent < -10) $trend = 'falling';
+    }
+}
+
+/* ═══════════════ 4. NHẬN DIỆN TÁC GIẢ ═══════════════ */
+$matchedAuthor = null;
+if ($isAuthor && !empty($topAuthors)) {
+    // Ưu tiên tên gần nhất với input
+    foreach ($topAuthors as $a) {
+        similar_text(strtolower($topic), strtolower($a['name']), $pct);
+        if ($pct > 60) { $matchedAuthor = $a['name']; break; }
+    }
+}
+
+/* ═══════════════ RESPONSE ═══════════════ */
+ob_clean();
+echo json_encode([
+    'source'              => 'crossref',
+    'mode'                => $isAuthor ? 'author' : 'topic',
+    'matched_author'      => $matchedAuthor,
+    'total_works'         => $totalWorks,
+    'total_citations'     => $totalCitations,
+    'oa_percent'          => $oaPercent,
+    'trend'               => $trend,
+    'growth_rate_percent' => abs($growthRatePercent),
+    'yearly'              => $yearlyArr,
+    'top_subtopics'       => $topSubtopics,
+    'top_journals'        => $topJournals,
+    'top_authors'         => $topAuthors,
+    'highlights'          => $highlights,
+], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);

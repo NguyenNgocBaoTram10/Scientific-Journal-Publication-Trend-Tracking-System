@@ -1,688 +1,562 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ScholarTrend — Phân tích Xu hướng Nghiên cứu</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<!DOCTYPE html><html class="light" lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ScholarTrend | Phân tích Xu hướng</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:#16213d;
-    --navy-2:#1b2a4d;
-    --blue-accent:#3a5fd9;
-    --blue-tint:#e7edfb;
-    --blue-tint-2:#dde6fb;
-    --blue-bar:#c7d4f6;
-    --blue-bar-strong:#7f96e0;
-    --bg-page:#f5f6f8;
-    --bg-sidebar:#f7f8fa;
-    --border:#e4e6eb;
-    --text-primary:#16213d;
-    --text-secondary:#6b7280;
-    --text-muted:#9aa1ad;
-    --green:#1c9d6b;
-    --green-tint:#e3f7ee;
-    --amber:#b97a17;
-    --amber-tint:#fbf0dc;
-    --red:#c23a3a;
-    --red-tint:#fbe7e7;
-    --radius:10px;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-    background:var(--bg-page);
-    color:var(--text-primary);
-  }
-  .app{display:flex;min-height:100vh;}
-
-  /* Sidebar */
-  .sidebar{
-    width:248px;
-    background:var(--bg-sidebar);
-    border-right:1px solid var(--border);
-    flex-shrink:0;
-    padding:20px 14px;
-  }
-  .brand{display:flex;align-items:center;gap:12px;padding:6px 10px 22px;}
-  .brand-icon{
-    width:40px;height:40px;border-radius:10px;background:var(--navy-2);
-    display:flex;align-items:center;justify-content:center;color:#fff;font-size:19px;flex-shrink:0;
-  }
-  .brand-text strong{display:block;font-size:15px;font-weight:600;line-height:1.25;}
-  .brand-text span{display:block;font-size:12px;color:var(--text-secondary);}
-  .nav{display:flex;flex-direction:column;gap:2px;margin-top:6px;}
-  .nav-item{
-    display:flex;align-items:center;gap:11px;padding:11px 12px;border-radius:8px;
-    font-size:14.5px;color:#4b5160;text-decoration:none;cursor:pointer;
-    border-left:3px solid transparent;font-weight:500;
-  }
-  .nav-item i{font-size:18px;width:20px;text-align:center;color:#8d93a0;}
-  .nav-item:hover{background:#eef0f3;}
-  .nav-item.active{background:var(--blue-tint);color:var(--navy);border-left-color:var(--navy);}
-  .nav-item.active i{color:var(--navy);}
-
-  /* Main */
-  .main{flex:1;min-width:0;}
-  .topbar{
-    padding:22px 36px;border-bottom:1px solid var(--border);background:#fff;
-  }
-  .topbar h1{margin:0;font-size:22px;font-weight:600;color:var(--navy);}
-  .content{padding:28px 36px 56px;}
-
-  .panel{
-    background:#fff;border:1px solid var(--border);border-radius:14px;
-    padding:20px 22px;margin-bottom:22px;
-  }
-
-  /* search row */
-  .search-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
-  .search-field{
-    flex:1 1 320px;display:flex;align-items:center;gap:10px;
-    background:#f6f7f9;border:1px solid var(--border);border-radius:9px;
-    padding:0 14px;height:46px;
-  }
-  .search-field i{color:var(--text-muted);font-size:17px;}
-  .search-field input{
-    border:none;outline:none;background:transparent;font-size:14.5px;flex:1;color:var(--text-primary);
-  }
-  .filter-select{display:flex;align-items:center;gap:8px;}
-  .filter-select i{color:var(--text-muted);font-size:17px;}
-  .year-input{
-    width:78px;height:46px;border:1px solid var(--border);border-radius:9px;
-    text-align:center;font-size:14.5px;color:var(--text-primary);outline:none;
-  }
-  .year-sep{color:var(--text-muted);}
-  .btn-analyze{
-    height:46px;padding:0 20px;background:var(--navy);color:#fff;border:none;
-    border-radius:9px;font-size:14.5px;font-weight:600;display:flex;align-items:center;gap:8px;
-    cursor:pointer;
-  }
-  .btn-analyze:hover{background:#0f1830;}
-  .btn-analyze:disabled{opacity:.6;cursor:not-allowed;}
-  .btn-analyze i{font-size:17px;}
-
-  .topic-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
-  .topic-tag{
-    font-size:13px;padding:6px 12px;border-radius:999px;background:#f3f4f6;
-    color:var(--text-secondary);cursor:pointer;border:1px solid var(--border);
-  }
-  .topic-tag:hover{background:var(--blue-tint);color:var(--navy);border-color:var(--blue-tint-2);}
-
-  .info-banner{
-    background:var(--blue-tint);border-radius:12px;padding:16px 20px;
-    display:none;align-items:center;gap:12px;color:var(--navy);font-size:14.5px;margin-bottom:22px;
-  }
-  .info-banner i{font-size:18px;}
-  .info-banner b{font-weight:600;}
-
-  .warn-banner{
-    background:var(--amber-tint);border-radius:12px;padding:16px 20px;
-    display:none;align-items:center;gap:12px;color:#7a5a12;font-size:14px;margin-bottom:22px;
-  }
-  .warn-banner i{font-size:18px;flex-shrink:0;}
-
-  .error-banner{
-    background:var(--red-tint);border-radius:12px;padding:16px 20px;
-    display:none;align-items:center;gap:12px;color:var(--red);font-size:14.5px;margin-bottom:22px;
-  }
-  .error-banner i{font-size:18px;}
-
-  /* empty state */
-  .empty-state{
-    background:#fff;border:1px dashed var(--border);border-radius:14px;
-    padding:64px 24px;text-align:center;color:var(--text-secondary);
-  }
-  .empty-state i{font-size:38px;color:var(--text-muted);margin-bottom:14px;display:block;}
-  .empty-state p.title{font-size:16px;font-weight:600;color:var(--navy);margin:0 0 6px;}
-  .empty-state p.sub{font-size:14px;margin:0;max-width:420px;margin-inline:auto;}
-
-  /* metric cards */
-  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:22px;}
-  .metric-card{
-    background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px 20px;
-  }
-  .metric-label{font-size:13.5px;color:var(--text-secondary);margin-bottom:10px;}
-  .metric-value{font-size:30px;font-weight:700;color:var(--navy);}
-  .metric-value.trend{display:flex;align-items:center;gap:8px;font-size:22px;}
-  .metric-value.trend i{font-size:20px;}
-  .trend-up{color:var(--green);}
-  .trend-down{color:var(--red);}
-  .trend-flat{color:var(--amber);}
-
-  /* dashboard section */
-  .section-title{font-size:17px;font-weight:600;color:var(--navy);margin:0 0 4px;}
-  .section-sub{font-size:13.5px;color:var(--text-secondary);margin:0 0 18px;}
-  .charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-  .chart-card{
-    background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px 22px;
-  }
-  .chart-card.full{grid-column:1 / -1;}
-  .chart-card h3{font-size:15px;font-weight:600;margin:0 0 4px;color:var(--navy);}
-  .chart-card .chart-note{font-size:12.5px;color:var(--text-muted);margin:0 0 14px;}
-  .chart-wrap{position:relative;width:100%;height:240px;}
-  .chart-wrap.tall{height:280px;}
-  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:12.5px;color:var(--text-secondary);}
-  .legend span{display:flex;align-items:center;gap:6px;}
-  .dot{width:9px;height:9px;border-radius:2px;flex-shrink:0;}
-  .chart-empty{
-    height:100%;display:flex;align-items:center;justify-content:center;
-    color:var(--text-muted);font-size:13px;
-  }
-
-  table.simple-table{width:100%;border-collapse:collapse;font-size:13.5px;}
-  table.simple-table th{
-    text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.03em;
-    color:var(--text-secondary);padding:8px 10px;border-bottom:1px solid var(--border);
-  }
-  table.simple-table td{padding:10px 10px;border-bottom:1px solid var(--border);color:var(--text-primary);}
-  table.simple-table td.num{text-align:right;}
-  table.simple-table tr:last-child td{border-bottom:none;}
-
-  .highlights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:6px;}
-  .highlight-card{
-    border:1px solid var(--border);border-radius:12px;padding:16px;background:#fbfbfc;
-  }
-  .highlight-card .ttl{font-size:13.5px;font-weight:600;color:var(--navy);margin:0 0 8px;line-height:1.4;}
-  .highlight-card .meta{font-size:12px;color:var(--text-secondary);margin:0 0 8px;}
-  .highlight-card a{font-size:12.5px;color:var(--blue-accent);text-decoration:none;}
-  .highlight-card a:hover{text-decoration:underline;}
-  .oa-badge{font-size:10.5px;font-weight:700;color:var(--green);margin-left:6px;}
-
-  /* trending topics */
-  .topics-list{display:flex;flex-direction:column;gap:0;}
-  .topic-row{
-    display:flex;align-items:center;gap:16px;padding:16px 4px;
-    border-bottom:1px solid var(--border);
-  }
-  .topic-row:last-child{border-bottom:none;}
-  .topic-rank{
-    width:30px;height:30px;border-radius:8px;background:#f3f4f6;color:var(--text-secondary);
-    font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  }
-  .topic-info{flex:1;min-width:0;}
-  .topic-name{font-size:14.5px;font-weight:600;color:var(--text-primary);margin:0 0 3px;}
-  .topic-count{font-size:13px;color:var(--text-secondary);margin:0;}
-  .topic-direction{
-    display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;
-    padding:6px 11px;border-radius:999px;flex-shrink:0;
-  }
-  .dir-up{color:var(--green);background:var(--green-tint);}
-  .dir-down{color:var(--red);background:var(--red-tint);}
-  .dir-flat{color:var(--amber);background:var(--amber-tint);}
-  .btn-follow{
-    height:34px;padding:0 16px;border-radius:8px;border:1px solid var(--border);
-    background:#fff;color:var(--text-primary);font-size:13px;font-weight:600;cursor:pointer;
-    flex-shrink:0;display:flex;align-items:center;gap:6px;
-  }
-  .btn-follow i{font-size:14px;}
-  .btn-follow:hover{border-color:var(--navy);}
-  .btn-follow.followed{background:var(--navy);color:#fff;border-color:var(--navy);}
-  .btn-follow:disabled{opacity:.6;cursor:not-allowed;}
-
-  .tabs{display:flex;gap:4px;margin-bottom:20px;border-bottom:1px solid var(--border);}
-  .tab{
-    padding:11px 6px;margin-right:22px;font-size:14.5px;font-weight:600;color:var(--text-secondary);
-    cursor:pointer;border-bottom:2px solid transparent;
-  }
-  .tab.active{color:var(--navy);border-bottom-color:var(--navy);}
-
-  .loading-pulse{animation:pulse-load 1.4s ease-in-out infinite;}
-  @keyframes pulse-load{0%,100%{opacity:.45}50%{opacity:1}}
-
-  @media (max-width:900px){
-    .metrics{grid-template-columns:repeat(2,1fr);}
-    .charts-grid{grid-template-columns:1fr;}
-    .highlights-grid{grid-template-columns:1fr;}
-    .sidebar{display:none;}
-  }
+  body { font-family:'Inter',sans-serif; }
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle;}
+  @keyframes pulse-load{0%,100%{opacity:.4}50%{opacity:1}}
+  .loading-pulse{animation:pulse-load 1.5s ease-in-out infinite;}
+  ::-webkit-scrollbar{width:6px;}
+  ::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:10px;}
+  @keyframes slide-in-right{from{transform:translateX(120%);opacity:0}to{transform:translateX(0);opacity:1}}
+  @keyframes fade-out{from{opacity:1}to{opacity:0}}
+  .toast-enter{animation:slide-in-right .3s ease forwards;}
+  .toast-leave{animation:fade-out .4s ease forwards;}
+  .notif-dropdown{transition:opacity .15s,transform .15s;}
+  .notif-dropdown.hidden{opacity:0;pointer-events:none;transform:translateY(-8px);}
+  .modal-overlay{transition:opacity .2s;}
+  .modal-box{transition:transform .2s,opacity .2s;}
+  input[type=radio]:checked + label .radio-dot{background:#002045;}
+  input[type=radio]:checked + label{border-color:#002045;background:#f0f4ff;}
 </style>
+<script id="tailwind-config">
+tailwind.config={darkMode:"class",theme:{extend:{
+  colors:{
+    "primary-fixed":"#d6e3ff","on-primary":"#ffffff","surface-tint":"#455f88",
+    "secondary-container":"#7db6ff","on-secondary":"#ffffff","outline":"#74777f",
+    "on-tertiary-fixed":"#2b1700","tertiary-fixed":"#ffddba","on-secondary-container":"#00477f",
+    "error-container":"#ffdad6","on-surface-variant":"#43474e","on-background":"#191c1e",
+    "tertiary":"#321b00","secondary-fixed-dim":"#a2c9ff","primary-container":"#1a365d",
+    "surface-container":"#eceef0","on-primary-fixed":"#001b3c","surface-container-high":"#e6e8ea",
+    "surface-container-lowest":"#ffffff","surface-bright":"#f7f9fb","inverse-on-surface":"#eff1f3",
+    "primary":"#002045","tertiary-container":"#4f2e00","error":"#ba1a1a","on-tertiary":"#ffffff",
+    "on-primary-fixed-variant":"#2d476f","tertiary-fixed-dim":"#f2bc82","surface":"#f7f9fb",
+    "inverse-surface":"#2d3133","surface-variant":"#e0e3e5","secondary-fixed":"#d3e4ff",
+    "background":"#f7f9fb","primary-fixed-dim":"#adc7f7","surface-container-highest":"#e0e3e5",
+    "secondary":"#1960a3","outline-variant":"#c4c6cf","surface-container-low":"#f2f4f6",
+    "on-surface":"#191c1e","on-primary-container":"#86a0cd","on-error":"#ffffff","surface-dim":"#d8dadc",
+    "success":"#1c9d6b","success-container":"#e3f7ee"
+  },
+  borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
+  spacing:{"sidebar-width":"280px","lg":"24px","md":"16px","xs":"4px","xl":"32px","container-max":"1280px","xxl":"48px","sm":"8px"},
+  fontSize:{
+    "headline-sm":["20px",{"lineHeight":"1.4","fontWeight":"600"}],
+    "body-lg":["16px",{"lineHeight":"1.6","fontWeight":"400"}],
+    "label-md":["13px",{"lineHeight":"1.4","letterSpacing":"0.01em","fontWeight":"500"}],
+    "body-md":["14px",{"lineHeight":"1.5","fontWeight":"400"}],
+    "title-lg":["18px",{"lineHeight":"1.5","fontWeight":"600"}],
+    "headline-md":["24px",{"lineHeight":"1.3","letterSpacing":"-0.01em","fontWeight":"600"}],
+    "caption":["12px",{"lineHeight":"1.4","fontWeight":"400"}]
+  }
+}}}
+</script>
 </head>
-<body>
-<div class="app">
+<body class="bg-background text-on-background min-h-screen">
 
-  <aside class="sidebar">
-    <div class="brand">
-      <div class="brand-icon"><i class="ti ti-chart-dots-3"></i></div>
-      <div class="brand-text">
-        <strong>ScholarTrend</strong>
-        <span>Academic Analytics</span>
+<!-- ==================== SIDEBAR ==================== -->
+<aside class="fixed left-0 top-0 h-screen w-sidebar-width bg-surface border-r border-outline-variant z-50 flex flex-col py-md hidden md:flex">
+  <div class="px-lg mb-xxl">
+    <div class="flex items-center gap-sm">
+      <div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
+        <span class="material-symbols-outlined text-white" style="font-variation-settings:'FILL' 1;">auto_graph</span>
+      </div>
+      <div>
+        <h1 class="font-title-lg text-title-lg font-bold text-primary">ScholarTrend</h1>
+        <p class="font-label-md text-label-md text-on-surface-variant">Academic Analytics</p>
       </div>
     </div>
-    <nav class="nav">
-      <a class="nav-item" href="dashboard.html"><i class="ti ti-layout-dashboard"></i>Dashboard</a>
-      <a class="nav-item active"><i class="ti ti-trending-up"></i>Phân tích Xu hướng</a>
-      <a class="nav-item" href="trangchu1.html"><i class="ti ti-home"></i>Trang chủ</a>
-    </nav>
-  </aside>
+  </div>
+  <nav class="flex-1 space-y-xs px-sm">
+    <a class="flex items-center gap-md py-sm rounded-lg text-on-surface-variant pl-4 hover:bg-surface-container-high transition-all" href="dashboard.html">
+      <span class="material-symbols-outlined">dashboard</span><span class="font-label-md text-label-md">Dashboard</span>
+    </a>
+    <a class="flex items-center gap-md py-sm rounded-lg text-primary font-bold border-l-4 border-primary pl-3 bg-surface-container-low" href="#">
+      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">trending_up</span><span class="font-label-md text-label-md">Phân tích Xu hướng</span>
+    </a>
+    <a class="flex items-center gap-md py-sm rounded-lg text-on-surface-variant pl-4 hover:bg-surface-container-high transition-all" href="trangchu1.html">
+      <span class="material-symbols-outlined">home</span><span class="font-label-md text-label-md">Trang chủ</span>
+    </a>
+  </nav>
+</aside>
 
-  <main class="main">
-    <div class="topbar"><h1>Phân tích Xu hướng Nghiên cứu</h1></div>
+<!-- ==================== MAIN WRAPPER ==================== -->
+<div class="md:ml-sidebar-width flex flex-col min-h-screen">
 
-    <div class="content">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 w-full bg-surface-container-lowest border-b border-outline-variant h-16 flex items-center px-lg justify-between">
+    <h2 class="font-title-lg text-title-lg text-primary">Phân tích Xu hướng Nghiên cứu</h2>
 
-      <!-- Search / filter panel -->
-      <div class="panel">
-        <div class="search-row">
-          <div class="search-field">
-            <i class="ti ti-search"></i>
-            <input id="queryInput" type="text" placeholder="Nhập từ khóa, chủ đề, tác giả hoặc tạp chí…">
-          </div>
-          <div class="filter-select">
-            <i class="ti ti-calendar"></i>
-            <input class="year-input" id="yearFrom" type="number" placeholder="Từ năm">
-            <span class="year-sep">–</span>
-            <input class="year-input" id="yearTo" type="number" placeholder="Đến năm">
-          </div>
-          <button class="btn-analyze" id="analyzeBtn"><i class="ti ti-chart-line"></i>Phân tích</button>
+    <!-- Notification Bell -->
+    <div class="relative">
+      <button id="notif-bell" onclick="toggleNotifPanel()" class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-all">
+        <span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings:'FILL' 0;">notifications</span>
+        <span id="notif-badge" class="hidden absolute top-1 right-1 w-4 h-4 bg-error rounded-full flex items-center justify-center text-[9px] text-white font-bold leading-none">0</span>
+      </button>
+
+      <!-- Notification Dropdown -->
+      <div id="notif-dropdown" class="notif-dropdown hidden absolute right-0 top-12 w-96 bg-surface-container-lowest border border-outline-variant rounded-xl shadow-xl z-50 overflow-hidden">
+        <div class="flex items-center justify-between px-lg py-md border-b border-outline-variant">
+          <h3 class="font-title-lg text-title-lg text-primary">Thông báo</h3>
+          <button onclick="markAllRead()" class="text-secondary text-caption hover:underline">Đánh dấu đã đọc</button>
         </div>
-        <div class="topic-tags">
-          <span class="topic-tag" data-q="CRISPR gene editing">CRISPR gene editing</span>
-          <span class="topic-tag" data-q="machine learning healthcare">Machine learning healthcare</span>
-          <span class="topic-tag" data-q="Nature">Nature (tạp chí)</span>
-          <span class="topic-tag" data-q="climate change adaptation">Climate change adaptation</span>
-        </div>
-      </div>
-
-      <div class="info-banner" id="infoBanner">
-        <i class="ti ti-user-check"></i>
-        <span>Đã nhận diện là tác giả: <b id="authorName"></b> — số liệu bên dưới chỉ tính riêng tác phẩm của tác giả này.</span>
-      </div>
-
-      <div class="warn-banner" id="warnBanner">
-        <i class="ti ti-info-circle"></i>
-        <span>OpenAlex đang bị giới hạn tốc độ truy vấn, hệ thống đã tự động chuyển sang nguồn dữ liệu dự phòng (CrossRef). Một số chỉ số là số liệu ước lượng từ mẫu 50 bài, không phải con số chính xác tuyệt đối.</span>
-      </div>
-
-      <div class="error-banner" id="errorBanner">
-        <i class="ti ti-alert-triangle"></i>
-        <span id="errorText"></span>
-      </div>
-
-      <!-- Trạng thái rỗng ban đầu -->
-      <div class="empty-state" id="emptyState">
-        <i class="ti ti-chart-bubble"></i>
-        <p class="title">Chưa có dữ liệu</p>
-        <p class="sub">Nhập chủ đề, tên tác giả hoặc tên tạp chí ở trên rồi nhấn "Phân tích" để xem thống kê.</p>
-      </div>
-
-      <div id="resultsWrap" style="display:none;">
-
-        <!-- Metric cards -->
-        <div class="metrics" id="metrics">
-          <div class="metric-card">
-            <div class="metric-label">Tổng số tác phẩm</div>
-            <div class="metric-value" id="mTotal">--</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-label">Tổng trích dẫn (mẫu top 50)</div>
-            <div class="metric-value" id="mCitations">--</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-label">Tỉ lệ Open Access</div>
-            <div class="metric-value" id="mOpenAccess">--</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-label">Xu hướng</div>
-            <div class="metric-value trend trend-flat" id="mTrend">--</div>
+        <div id="notif-list" class="max-h-80 overflow-y-auto divide-y divide-outline-variant">
+          <div class="px-lg py-xl text-center text-on-surface-variant text-body-md flex flex-col items-center gap-sm">
+            <span class="material-symbols-outlined" style="font-size:32px;">notifications_none</span>
+            <span>Chưa có thông báo nào.<br><span class="text-caption">Theo dõi chủ đề để nhận thông báo mới.</span></span>
           </div>
         </div>
-
-        <!-- Tabs -->
-        <div class="tabs">
-          <div class="tab active" data-tab="dashboard">Bảng điều khiển</div>
-          <div class="tab" data-tab="topics">Chủ đề xu hướng</div>
-        </div>
-
-        <!-- Dashboard tab -->
-        <div id="tab-dashboard">
-          <div class="charts-grid">
-            <div class="chart-card full">
-              <h3>Số lượng tác phẩm theo năm</h3>
-              <p class="chart-note">Số ấn phẩm xuất bản mỗi năm trong khoảng thời gian đã chọn</p>
-              <div class="chart-wrap tall"><canvas id="byYearChart" role="img" aria-label="Biểu đồ cột số lượng tác phẩm theo năm"></canvas></div>
-            </div>
-
-            <div class="chart-card">
-              <h3>Phân bổ chủ đề con</h3>
-              <p class="chart-note">Tỉ trọng các chủ đề nghiên cứu chính trong tập kết quả</p>
-              <div class="chart-wrap"><canvas id="topicChart" role="img" aria-label="Biểu đồ tròn phân bổ chủ đề nghiên cứu"></canvas></div>
-              <div class="legend" id="topicLegend"></div>
-            </div>
-
-            <div class="chart-card">
-              <h3>Phân bổ tạp chí</h3>
-              <p class="chart-note">Số tác phẩm theo tạp chí xuất bản hàng đầu</p>
-              <div class="chart-wrap"><canvas id="journalChart" role="img" aria-label="Biểu đồ cột ngang phân bổ theo tạp chí"></canvas></div>
-            </div>
-
-            <div class="chart-card full">
-              <h3>Tác giả nổi bật</h3>
-              <p class="chart-note">Xếp hạng theo tổng số trích dẫn trong tập kết quả</p>
-              <table class="simple-table" id="authorsTable">
-                <thead><tr><th>Tác giả</th><th class="num">Số bài</th><th class="num">Trích dẫn</th></tr></thead>
-                <tbody></tbody>
-              </table>
-            </div>
-
-            <div class="chart-card full">
-              <h3>Tác phẩm nổi bật</h3>
-              <p class="chart-note">Các bài báo được trích dẫn nhiều nhất trong tập kết quả</p>
-              <div class="highlights-grid" id="highlightsGrid"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Trending topics tab -->
-        <div id="tab-topics" style="display:none;">
-          <div class="panel">
-            <div class="section-title">Chủ đề nghiên cứu nổi bật</div>
-            <p class="section-sub">Xếp hạng theo số lượng bài báo gần đây liên quan đến kết quả tìm kiếm của bạn</p>
-            <div class="topics-list" id="topicsList"></div>
-          </div>
-        </div>
-
       </div>
-
     </div>
+  </header>
+
+  <main class="flex-1 p-lg max-w-container-max w-full mx-auto">
+
+    <!-- Search bar -->
+    <div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl mb-lg flex flex-wrap items-center gap-md shadow-sm">
+      <div class="relative flex-1 min-w-[220px]">
+        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+        <input id="topic-input" class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-body-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Nhập chủ đề, tác giả hoặc tạp chí, vd: artificial intelligence">
+      </div>
+      <div class="flex items-center gap-sm">
+        <span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+        <input id="year-from" type="number" class="w-20 bg-surface-container-low border border-outline-variant rounded-lg px-2 py-2 text-body-md" placeholder="Từ năm">
+        <span class="text-on-surface-variant">–</span>
+        <input id="year-to" type="number" class="w-20 bg-surface-container-low border border-outline-variant rounded-lg px-2 py-2 text-body-md" placeholder="Đến năm">
+      </div>
+      <button onclick="runAnalysis()" class="bg-primary text-white px-md py-2 rounded-lg font-label-md text-label-md hover:opacity-90 transition-all flex items-center gap-xs">
+        <span class="material-symbols-outlined text-[18px]">insights</span>Phân tích
+      </button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex gap-lg border-b border-outline-variant mb-xl" role="tablist">
+      <button id="tab-btn-dashboard" class="tab-btn pb-sm px-1 font-label-md text-label-md text-primary border-b-2 border-primary font-bold" onclick="switchTab('dashboard')">Bảng điều khiển</button>
+      <button id="tab-btn-trending" class="tab-btn pb-sm px-1 font-label-md text-label-md text-on-surface-variant border-b-2 border-transparent" onclick="switchTab('trending')">Chủ đề xu hướng</button>
+    </div>
+
+    <div id="error-box" class="hidden bg-error-container text-error p-md rounded-xl mb-xl"></div>
+    <div id="author-mode-box" class="hidden bg-primary-fixed text-primary p-md rounded-xl mb-xl flex items-center gap-sm">
+      <span class="material-symbols-outlined">person_check</span><span id="author-mode-text"></span>
+    </div>
+    <!-- fallback-box đã bỏ — CrossRef là nguồn chính -->
+    <div id="fallback-box" class="hidden"></div>
+
+    <!-- ========== DASHBOARD TAB ========== -->
+    <div id="panel-dashboard">
+      <div id="empty-state" class="bg-surface-container-lowest border border-dashed border-outline-variant rounded-xl py-xxl flex flex-col items-center text-center mb-xl">
+        <span class="material-symbols-outlined text-on-surface-variant" style="font-size:40px;">query_stats</span>
+        <p class="font-title-lg text-title-lg text-primary mt-md">Chưa có dữ liệu</p>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-xs max-w-md">Nhập chủ đề, tên tác giả hoặc tên tạp chí ở trên rồi nhấn "Phân tích" để xem thống kê.</p>
+      </div>
+      <div id="dashboard-content" class="hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg mb-xl">
+          <div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+            <p class="font-label-md text-label-md text-on-surface-variant mb-xs">Tổng số tác phẩm</p>
+            <h3 id="stat-total" class="font-headline-md text-headline-md text-primary">--</h3>
+          </div>
+          <div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+            <p class="font-label-md text-label-md text-on-surface-variant mb-xs">Tổng trích dẫn (mẫu top 50)</p>
+            <h3 id="stat-citations" class="font-headline-md text-headline-md text-primary">--</h3>
+          </div>
+          <div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+            <p class="font-label-md text-label-md text-on-surface-variant mb-xs">Tỉ lệ Open Access</p>
+            <h3 id="stat-oa" class="font-headline-md text-headline-md text-primary">--</h3>
+          </div>
+          <div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+            <p class="font-label-md text-label-md text-on-surface-variant mb-xs">Xu hướng</p>
+            <h3 id="stat-trend" class="font-headline-md text-headline-md flex items-center gap-xs">--</h3>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm mb-xl">
+          <h4 class="font-title-lg text-title-lg text-primary mb-lg">Số lượng tác phẩm theo năm</h4>
+          <div id="growth-chart" class="flex items-end justify-between px-md pb-sm border-l border-b border-outline-variant gap-1" style="height:240px;"></div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-lg mb-xl">
+          <div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+            <h4 class="font-title-lg text-title-lg text-primary mb-lg">Phân bổ chủ đề con</h4>
+            <div id="subtopics-list" class="space-y-md"></div>
+          </div>
+          <div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+            <h4 class="font-title-lg text-title-lg text-primary mb-lg">Phân bổ tạp chí</h4>
+            <div id="journals-list" class="space-y-md"></div>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm mb-xl">
+          <h4 class="font-title-lg text-title-lg text-primary mb-lg">Tác giả nổi bật</h4>
+          <table class="w-full text-left">
+            <thead><tr>
+              <th class="px-md py-sm font-label-md text-label-md text-primary uppercase">Tác giả</th>
+              <th class="px-md py-sm font-label-md text-label-md text-primary uppercase text-right">Số bài</th>
+              <th class="px-md py-sm font-label-md text-label-md text-primary uppercase text-right">Trích dẫn</th>
+            </tr></thead>
+            <tbody id="authors-table" class="divide-y divide-outline-variant"></tbody>
+          </table>
+        </div>
+        <div class="mb-xxl">
+          <h4 class="font-title-lg text-title-lg text-primary mb-lg">Tác phẩm nổi bật</h4>
+          <div id="highlights" class="grid grid-cols-1 md:grid-cols-3 gap-lg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== TRENDING TOPICS TAB ========== -->
+    <div id="panel-trending" class="hidden">
+      <div id="trending-empty" class="bg-surface-container-lowest border border-dashed border-outline-variant rounded-xl py-xxl flex flex-col items-center text-center mb-xl">
+        <span class="material-symbols-outlined text-on-surface-variant" style="font-size:40px;">local_fire_department</span>
+        <p class="font-title-lg text-title-lg text-primary mt-md">Chưa có dữ liệu</p>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-xs max-w-md">Nhấn "Phân tích" để xem các chủ đề nghiên cứu nổi bật liên quan đến tìm kiếm của bạn.</p>
+      </div>
+      <div id="trending-content" class="hidden bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm divide-y divide-outline-variant">
+        <div class="p-lg">
+          <h4 class="font-title-lg text-title-lg text-primary">Chủ đề nghiên cứu nổi bật</h4>
+          <p class="font-body-md text-body-md text-on-surface-variant mt-xs">Xếp hạng theo số lượng bài báo gần đây · Nhấn "Theo dõi" để nhận thông báo khi có bài mới</p>
+        </div>
+        <div id="trending-list"></div>
+      </div>
+    </div>
+
   </main>
 </div>
 
+<!-- ==================== TOAST CONTAINER ==================== -->
+<div id="toast-container" class="fixed bottom-lg right-lg z-50 flex flex-col gap-sm pointer-events-none"></div>
+
+<!-- ==================== SCRIPTS ==================== -->
 <script>
 var API          = '../api/phantichxuhuong.php';
 var API_TRENDING = '../api/xuhuongchude.php';
 var API_FOLLOW   = '../api/theodoichude.php';
+var API_NOTIF    = '../api/thongbao.php';
 
-var charts = {};
+var _followingBtn   = null;   // button DOM đang xử lý
+var _selectedFreq   = 'immediate';
+var _notifPanelOpen = false;
 
-function destroyCharts(){
-  Object.values(charts).forEach(function(c){ c.destroy(); });
-  charts = {};
+/* ── format numbers ── */
+function fmt(n){ n=n||0; if(n>=1e6)return(n/1e6).toFixed(1)+'M'; if(n>=1000)return(n/1000).toFixed(0)+'K'; return n.toLocaleString(); }
+
+/* ────────── TAB ────────── */
+function switchTab(tab){
+  var isDash = tab==='dashboard';
+  document.getElementById('panel-dashboard').classList.toggle('hidden',!isDash);
+  document.getElementById('panel-trending').classList.toggle('hidden',isDash);
+  var cls = {on:'tab-btn pb-sm px-1 font-label-md text-label-md text-primary border-b-2 border-primary font-bold',
+             off:'tab-btn pb-sm px-1 font-label-md text-label-md text-on-surface-variant border-b-2 border-transparent'};
+  document.getElementById('tab-btn-dashboard').className = isDash  ? cls.on : cls.off;
+  document.getElementById('tab-btn-trending').className  = !isDash ? cls.on : cls.off;
 }
 
-function fmt(n){
-  n = n || 0;
-  if (n >= 1000000) return (n/1000000).toFixed(1) + 'M';
-  if (n >= 1000) return (n/1000).toFixed(0) + 'K';
-  return n.toLocaleString('vi-VN');
+/* ────────── TOAST ────────── */
+function showToast(msg, type){
+  type = type || 'success';
+  var el = document.createElement('div');
+  var colors = {success:'bg-success-container text-success border-success/30',
+                error:'bg-error-container text-error border-error/30',
+                info:'bg-primary-fixed text-primary border-primary/20'};
+  var icons  = {success:'check_circle',error:'error',info:'info'};
+  el.className = 'toast-enter pointer-events-auto flex items-center gap-sm px-md py-sm rounded-xl border shadow-md text-body-md ' + (colors[type]||colors.info);
+  el.innerHTML = '<span class="material-symbols-outlined text-[18px]" style="font-variation-settings:\'FILL\' 1;">'+icons[type||'info']+'</span><span>'+msg+'</span>';
+  var container = document.getElementById('toast-container');
+  container.appendChild(el);
+  setTimeout(function(){ el.classList.replace('toast-enter','toast-leave'); setTimeout(function(){ el.remove(); }, 400); }, 3200);
 }
 
-function setLoadingState(){
-  document.getElementById('emptyState').style.display = 'none';
-  document.getElementById('errorBanner').style.display = 'none';
-  document.getElementById('infoBanner').style.display = 'none';
-  document.getElementById('warnBanner').style.display = 'none';
-  document.getElementById('resultsWrap').style.display = 'block';
+/* ────────── NOTIFICATION BELL ────────── */
+function toggleNotifPanel(){
+  _notifPanelOpen = !_notifPanelOpen;
+  var dd = document.getElementById('notif-dropdown');
+  dd.classList.toggle('hidden', !_notifPanelOpen);
+  if(_notifPanelOpen) loadNotifications();
+}
 
-  ['mTotal','mCitations','mOpenAccess'].forEach(function(id){
-    var el = document.getElementById(id);
-    el.textContent = '--';
-    el.classList.add('loading-pulse');
+document.addEventListener('click', function(e){
+  if(_notifPanelOpen && !document.getElementById('notif-bell').contains(e.target) && !document.getElementById('notif-dropdown').contains(e.target)){
+    _notifPanelOpen = false;
+    document.getElementById('notif-dropdown').classList.add('hidden');
+  }
+});
+
+async function loadNotifications(){
+  var list = document.getElementById('notif-list');
+  list.innerHTML = '<div class="px-lg py-md text-on-surface-variant text-caption loading-pulse">Đang tải...</div>';
+  try{
+    var res = await fetch(API_NOTIF);
+    var d   = await res.json();
+    renderNotifications(d.notifications || []);
+    updateBadge(d.unread_count || 0);
+  }catch(e){
+    list.innerHTML = '<div class="px-lg py-md text-on-surface-variant text-body-md">Không tải được thông báo.</div>';
+  }
+}
+
+/* Escape để tránh lỗi HTML khi title/message/topic có ký tự đặc biệt */
+function escHtml(s){
+  return String(s==null?'':s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
   });
-  var trendEl = document.getElementById('mTrend');
-  trendEl.textContent = '--';
-  trendEl.className = 'metric-value trend loading-pulse';
-
-  document.getElementById('topicLegend').innerHTML = '';
-  document.getElementById('authorsTable').querySelector('tbody').innerHTML = '';
-  document.getElementById('highlightsGrid').innerHTML = '';
-  document.getElementById('topicsList').innerHTML = '<div style="padding:24px 4px;color:var(--text-secondary);text-align:center;">Đang tải...</div>';
-
-  destroyCharts();
 }
 
-function showError(message){
-  document.getElementById('resultsWrap').style.display = 'none';
-  document.getElementById('emptyState').style.display = 'none';
-  var box = document.getElementById('errorBanner');
-  box.style.display = 'flex';
-  document.getElementById('errorText').textContent = message;
-}
-
-async function runAnalysis(){
-  var query = document.getElementById('queryInput').value.trim();
-  var yFrom = document.getElementById('yearFrom').value.trim();
-  var yTo   = document.getElementById('yearTo').value.trim();
-
-  if (!query){
-    alert('Vui lòng nhập chủ đề, tên tác giả hoặc tên tạp chí.');
+function renderNotifications(notifs){
+  var list = document.getElementById('notif-list');
+  if(!notifs.length){
+    list.innerHTML = '<div class="px-lg py-xl text-center text-on-surface-variant text-body-md flex flex-col items-center gap-sm"><span class="material-symbols-outlined" style="font-size:32px;">notifications_none</span><span>Chưa có thông báo nào.<br><span class="text-caption">Theo dõi chủ đề để nhận thông báo mới.</span></span></div>';
     return;
   }
+  list.innerHTML = notifs.map(function(n){
+    var unreadCls = n.is_read ? '' : 'bg-primary-fixed/40';
+    var dot = n.is_read ? '' : '<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0 mt-1"></span>';
 
-  var btn = document.getElementById('analyzeBtn');
-  btn.disabled = true;
+    // Icon theo loại thông báo: bài mới vs thay đổi xu hướng
+    var icon = n.type === 'trend_change' ? 'trending_up' : 'notifications';
 
-  setLoadingState();
+    // Nếu có topic, hiển thị như một badge nhỏ bên dưới tiêu đề
+    var topicBadge = n.topic
+      ? '<span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-surface-container-high text-[10px] text-on-surface-variant">'+escHtml(n.topic)+'</span>'
+      : '';
 
-  var params = { topic: query };
-  if (yFrom) params.year_from = yFrom;
-  if (yTo)   params.year_to   = yTo;
-  var qs = new URLSearchParams(params).toString();
+    // Nếu có link (DOI bài báo), hiển thị nút mở bài báo — không kích hoạt markRead của div cha
+    var linkBtn = n.link
+      ? '<a href="'+escHtml(n.link)+'" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="inline-flex items-center gap-1 text-secondary text-[11px] hover:underline mt-1">Xem bài báo <span class="material-symbols-outlined text-[12px]">open_in_new</span></a>'
+      : '';
 
-  try {
-    var res = await fetch(API + '?' + qs);
-    var d = await res.json();
-    if (d.error) throw new Error(d.error);
-
-    renderDashboard(d);
-
-    try {
-      var tres = await fetch(API_TRENDING + '?' + qs);
-      var td = await tres.json();
-      if (td.error) throw new Error(td.error);
-      renderTrendingTopics(td.topics || []);
-    } catch (e2){
-      document.getElementById('topicsList').innerHTML =
-        '<div style="padding:24px 4px;color:var(--text-secondary);text-align:center;">Không tải được dữ liệu chủ đề xu hướng.</div>';
-    }
-
-  } catch (e) {
-    showError('Lỗi: ' + e.message);
-  } finally {
-    btn.disabled = false;
-  }
-}
-
-function renderDashboard(d){
-  ['mTotal','mCitations','mOpenAccess'].forEach(function(id){
-    document.getElementById(id).classList.remove('loading-pulse');
-  });
-
-  document.getElementById('mTotal').textContent = fmt(d.total_works);
-  document.getElementById('mCitations').textContent = fmt(d.total_citations);
-  document.getElementById('mOpenAccess').textContent = (d.oa_percent != null ? d.oa_percent : 0) + '%';
-
-  var trendMap = {
-    rising:  { icon:'ti-trending-up',   cls:'trend-up',   label:'Tăng' + (d.growth_rate_percent != null ? ' (' + d.growth_rate_percent + '%)' : '') },
-    falling: { icon:'ti-trending-down', cls:'trend-down', label:'Giảm' + (d.growth_rate_percent != null ? ' (' + d.growth_rate_percent + '%)' : '') },
-    stable:  { icon:'ti-arrow-right',   cls:'trend-flat', label:'Ổn định' }
-  };
-  var t = trendMap[d.trend] || trendMap.stable;
-  var trendEl = document.getElementById('mTrend');
-  trendEl.className = 'metric-value trend ' + t.cls;
-  trendEl.innerHTML = '<i class="ti ' + t.icon + '"></i>' + t.label;
-
-  if (d.mode === 'author' && d.matched_author){
-    document.getElementById('authorName').textContent = d.matched_author;
-    document.getElementById('infoBanner').style.display = 'flex';
-  }
-  if (d.source === 'crossref' || d.is_estimated){
-    document.getElementById('warnBanner').style.display = 'flex';
-  }
-
-  var fg = { muted:'#9aa1ad', grid:'#eceef1', colors:['#3a5fd9','#1c9d6b','#b97a17','#c23a3a','#7f4fd9','#1c8fa0'] };
-
-  // Biểu đồ theo năm
-  var yearly = d.yearly || [];
-  var byYearCanvas = document.getElementById('byYearChart');
-  if (yearly.length){
-    charts.byYear = new Chart(byYearCanvas, {
-      type: 'bar',
-      data: {
-        labels: yearly.map(function(y){ return y.year; }),
-        datasets: [{ data: yearly.map(function(y){ return y.count; }), backgroundColor:'#c7d4f6', hoverBackgroundColor:'#7f96e0', borderRadius:4, maxBarThickness:26 }]
-      },
-      options: {
-        responsive:true, maintainAspectRatio:false,
-        plugins:{ legend:{ display:false } },
-        scales:{
-          x:{ grid:{ display:false }, ticks:{ color:fg.muted, maxRotation:45, autoSkip: yearly.length > 20 } },
-          y:{ grid:{ color:fg.grid }, ticks:{ color:fg.muted } }
-        }
-      }
-    });
-  } else {
-    var ctx = byYearCanvas.getContext('2d');
-    ctx.clearRect(0,0,byYearCanvas.width, byYearCanvas.height);
-  }
-
-  // Phân bổ chủ đề con
-  var subtopics = d.top_subtopics || [];
-  var topicCanvas = document.getElementById('topicChart');
-  var topicLegend = document.getElementById('topicLegend');
-  if (subtopics.length){
-    charts.topic = new Chart(topicCanvas, {
-      type:'doughnut',
-      data:{
-        labels: subtopics.map(function(s){ return s.name; }),
-        datasets:[{ data: subtopics.map(function(s){ return s.count; }), backgroundColor: fg.colors, borderColor:'#fff', borderWidth:2 }]
-      },
-      options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ display:false } }, cutout:'62%' }
-    });
-    topicLegend.innerHTML = subtopics.map(function(s,i){
-      return '<span><span class="dot" style="background:' + fg.colors[i % fg.colors.length] + '"></span>' + s.name + ' (' + s.count + ')</span>';
-    }).join('');
-  } else {
-    topicLegend.innerHTML = '<span style="color:var(--text-muted);">Không có dữ liệu.</span>';
-  }
-
-  // Phân bổ tạp chí
-  var journals = d.top_journals || [];
-  var journalCanvas = document.getElementById('journalChart');
-  if (journals.length){
-    charts.journal = new Chart(journalCanvas, {
-      type:'bar',
-      data:{
-        labels: journals.map(function(j){ return j.name; }),
-        datasets:[{ data: journals.map(function(j){ return j.count; }), backgroundColor:'#7f96e0', borderRadius:4, maxBarThickness:18 }]
-      },
-      options:{
-        indexAxis:'y', responsive:true, maintainAspectRatio:false,
-        plugins:{ legend:{ display:false } },
-        scales:{
-          x:{ grid:{ color:fg.grid }, ticks:{ color:fg.muted } },
-          y:{ grid:{ display:false }, ticks:{ color:fg.muted } }
-        }
-      }
-    });
-  }
-
-  // Tác giả nổi bật
-  var authorsBody = document.getElementById('authorsTable').querySelector('tbody');
-  var topAuthors = d.top_authors || [];
-  if (topAuthors.length){
-    authorsBody.innerHTML = topAuthors.map(function(a){
-      return '<tr><td>' + a.name + '</td><td class="num">' + a.works + '</td><td class="num">' + fmt(a.citations) + '</td></tr>';
-    }).join('');
-  } else {
-    authorsBody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:var(--text-muted);">Không có dữ liệu.</td></tr>';
-  }
-
-  // Tác phẩm nổi bật
-  var hlGrid = document.getElementById('highlightsGrid');
-  var highlights = d.highlights || [];
-  if (highlights.length){
-    hlGrid.innerHTML = highlights.map(function(h){
-      var oaBadge = h.is_oa ? '<span class="oa-badge">OPEN ACCESS</span>' : '';
-      var link = h.doi ? '<a href="' + h.doi + '" target="_blank" rel="noopener">Xem DOI →</a>' : '';
-      return '<div class="highlight-card">'
-        + '<p class="ttl">' + h.title + oaBadge + '</p>'
-        + '<p class="meta">' + (h.year || '—') + ' · ' + fmt(h.citations) + ' trích dẫn</p>'
-        + link
-        + '</div>';
-    }).join('');
-  } else {
-    hlGrid.innerHTML = '<p style="color:var(--text-muted);grid-column:1/-1;text-align:center;">Không có dữ liệu.</p>';
-  }
-}
-
-function renderTrendingTopics(topics){
-  var list = document.getElementById('topicsList');
-  if (!topics.length){
-    list.innerHTML = '<div style="padding:24px 4px;color:var(--text-secondary);text-align:center;">Không có dữ liệu.</div>';
-    return;
-  }
-  var dirMap = {
-    rising:  { cls:'dir-up',   icon:'ti-trending-up' },
-    falling: { cls:'dir-down', icon:'ti-trending-down' },
-    stable:  { cls:'dir-flat', icon:'ti-arrow-right' }
-  };
-  list.innerHTML = topics.map(function(tp, i){
-    var dir = dirMap[tp.trend_direction] || dirMap.stable;
-    var dirLabel = tp.trend_direction === 'rising' ? '+' + (tp.change_percent || 0) + '%'
-      : tp.trend_direction === 'falling' ? '-' + Math.abs(tp.change_percent || 0) + '%'
-      : 'Ổn định';
-    return '<div class="topic-row">'
-      + '<div class="topic-rank">' + (i+1) + '</div>'
-      + '<div class="topic-info">'
-        + '<p class="topic-name">' + tp.name + '</p>'
-        + '<p class="topic-count">' + fmt(tp.article_count) + ' bài báo</p>'
-      + '</div>'
-      + '<div class="topic-direction ' + dir.cls + '"><i class="ti ' + dir.icon + '"></i>' + dirLabel + '</div>'
-      + '<button class="btn-follow' + (tp.is_followed ? ' followed' : '') + '" data-topic="' + tp.name.replace(/"/g,'&quot;') + '" data-followed="' + (tp.is_followed ? '1':'0') + '">'
-        + (tp.is_followed ? '<i class="ti ti-check"></i>Đang theo dõi' : '<i class="ti ti-plus"></i>Theo dõi')
-      + '</button>'
-    + '</div>';
+    return '<div class="px-lg py-md flex items-start gap-sm hover:bg-surface-container-low cursor-pointer '+unreadCls+'" onclick="markRead('+n.id+',this)">'
+      +'<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 flex-shrink-0" style="font-variation-settings:\'FILL\' 1;">'+icon+'</span>'
+      +'<div class="flex-1 min-w-0">'
+        +'<p class="font-body-md text-body-md font-semibold text-on-background">'+escHtml(n.title||'')+'</p>'
+        +'<p class="text-caption text-on-surface-variant mt-0.5">'+escHtml(n.message||'')+'</p>'
+        + topicBadge
+        + linkBtn
+        +'<p class="text-[10px] text-on-surface-variant mt-1">'+escHtml(n.time_ago||'')+'</p>'
+      +'</div>'
+      + dot
+    +'</div>';
   }).join('');
-
-  list.querySelectorAll('.btn-follow').forEach(function(btn){
-    btn.addEventListener('click', function(){ toggleFollow(btn); });
-  });
 }
 
-async function toggleFollow(btn){
+function updateBadge(count){
+  var badge = document.getElementById('notif-badge');
+  if(count>0){ badge.textContent = count>9?'9+':count; badge.classList.remove('hidden'); }
+  else badge.classList.add('hidden');
+}
+
+async function markRead(id, el){
+  el.classList.remove('bg-primary-fixed/40');
+  var dot = el.querySelector('.rounded-full.bg-secondary');
+  if(dot) dot.remove();
+  try{ await fetch(API_NOTIF, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'mark_read',id:id})}); }catch(e){}
+  var badge = document.getElementById('notif-badge');
+  var cur = parseInt(badge.textContent)||0;
+  if(cur>1){ badge.textContent=cur-1; } else badge.classList.add('hidden');
+}
+
+async function markAllRead(){
+  document.querySelectorAll('#notif-list .bg-primary-fixed\\/40').forEach(function(el){ el.classList.remove('bg-primary-fixed/40'); var dot = el.querySelector('.rounded-full.bg-secondary'); if(dot)dot.remove(); });
+  document.getElementById('notif-badge').classList.add('hidden');
+  try{ await fetch(API_NOTIF, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'mark_all_read'})}); }catch(e){}
+}
+
+/* ────────── FOLLOW (đơn giản — 1 click, không cần modal) ────────── */
+async function doFollow(btn){
   var topic = btn.getAttribute('data-topic');
-  var followed = btn.getAttribute('data-followed') === '1';
   btn.disabled = true;
-  try {
+  var originalHtml = btn.innerHTML;
+  btn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">progress_activity</span>Đang lưu...';
+  try{
     var res = await fetch(API_FOLLOW, {
       method:'POST',
-      headers:{ 'Content-Type':'application/json' },
-      body: JSON.stringify({ topic: topic, follow: !followed })
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ topic: topic, follow: true })
     });
     var d = await res.json();
-    if (d.error) throw new Error(d.error);
-    var nowFollowed = !followed;
-    btn.setAttribute('data-followed', nowFollowed ? '1' : '0');
-    btn.classList.toggle('followed', nowFollowed);
-    btn.innerHTML = nowFollowed ? '<i class="ti ti-check"></i>Đang theo dõi' : '<i class="ti ti-plus"></i>Theo dõi';
-  } catch (e){
-    alert('Không thể cập nhật theo dõi: ' + e.message);
-  } finally {
+    if(d.error) throw new Error(d.error);
+    btn.setAttribute('data-followed','1');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span>Đang theo dõi';
+    btn.classList.add('bg-success-container','text-success','border-success/30');
+    pushLocalNotif(topic);
+    showToast('Đang theo dõi "'+topic+'"', 'success');
+  }catch(e){
+    btn.innerHTML = originalHtml;
+    showToast('Lỗi: '+e.message,'error');
+  }finally{
     btn.disabled = false;
   }
 }
 
-document.getElementById('analyzeBtn').addEventListener('click', runAnalysis);
-document.getElementById('queryInput').addEventListener('keydown', function(e){ if (e.key === 'Enter') runAnalysis(); });
-document.querySelectorAll('.topic-tag').forEach(function(tag){
-  tag.addEventListener('click', function(){
-    document.getElementById('queryInput').value = tag.dataset.q;
-    runAnalysis();
-  });
-});
-document.querySelectorAll('.tab').forEach(function(tab){
-  tab.addEventListener('click', function(){
-    document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
-    tab.classList.add('active');
-    document.getElementById('tab-dashboard').style.display = tab.dataset.tab === 'dashboard' ? 'block' : 'none';
-    document.getElementById('tab-topics').style.display = tab.dataset.tab === 'topics' ? 'block' : 'none';
-  });
-});
+function pushLocalNotif(topic){
+  var list = document.getElementById('notif-list');
+  // remove empty state
+  list.querySelectorAll('.flex-col').forEach(function(el){ el.remove(); });
+  var div = document.createElement('div');
+  div.className = 'px-lg py-md flex items-start gap-sm hover:bg-surface-container-low bg-primary-fixed/40 border-b border-outline-variant';
+  div.innerHTML = '<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 flex-shrink-0" style="font-variation-settings:\'FILL\' 1;">notifications</span>'
+    +'<div class="flex-1 min-w-0"><p class="font-body-md text-body-md font-semibold text-on-background">' + escHtml(topic) + '</p>'
+    +'<p class="text-caption text-on-surface-variant mt-0.5">Bạn sẽ nhận thông báo khi có bài mới hoặc xu hướng thay đổi.</p>'
+    +'<p class="text-[10px] text-on-surface-variant mt-1">Vừa xong</p></div>'
+    +'<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0 mt-1"></span>';
+  list.prepend(div);
+  updateBadge(list.querySelectorAll('.bg-primary-fixed\\/40').length);
+}
 
-// Không tự chạy phân tích nào khi tải trang — chờ người dùng nhập và bấm "Phân tích".
+/* ────────── UNFOLLOW ────────── */
+async function confirmUnfollow(btn){
+  var topic = btn.getAttribute('data-topic');
+  btn.disabled = true;
+  try{
+    var res = await fetch(API_FOLLOW, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic:topic,follow:false})});
+    var d = await res.json();
+    if(d.error) throw new Error(d.error);
+    btn.setAttribute('data-followed','0');
+    btn.className = btn.className.replace('bg-success-container text-success border-success/30','');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">add</span>Theo dõi';
+    showToast('Đã hủy theo dõi "'+topic+'"','info');
+  }catch(e){ showToast('Lỗi: '+e.message,'error'); }
+  finally{ btn.disabled = false; }
+}
+
+/* ────────── TRENDING RENDER ────────── */
+function renderTrending(topics){
+  var list = document.getElementById('trending-list');
+  if(!topics.length){
+    list.innerHTML = '<div class="p-lg text-center text-on-surface-variant">Không có dữ liệu.</div>'; return;
+  }
+  var dirMap = {
+    rising:{icon:'trending_up',  bg:'bg-success-container',color:'text-success'},
+    falling:{icon:'trending_down',bg:'bg-error-container', color:'text-error'},
+    stable:{icon:'trending_flat',bg:'bg-surface-container-high',color:'text-on-surface-variant'},
+  };
+  list.innerHTML = topics.map(function(tp,i){
+    var dir = dirMap[tp.trend_direction]||dirMap.stable;
+    var dirLabel = tp.trend_direction==='rising'?'+'+((tp.change_percent||0))+'%'
+      : tp.trend_direction==='falling'?'-'+Math.abs(tp.change_percent||0)+'%':'Ổn định';
+    var followed = tp.is_followed;
+    var followBtnCls = 'follow-btn flex-shrink-0 border rounded-lg px-md py-1.5 font-label-md text-label-md flex items-center gap-1 transition-all '
+      +(followed?'bg-success-container text-success border-success/30':'border-outline-variant hover:border-primary');
+    var followBtnContent = followed
+      ?'<span class="material-symbols-outlined text-[16px]">check</span>Đang theo dõi'
+      :'<span class="material-symbols-outlined text-[16px]">add</span>Theo dõi';
+    return '<div class="px-lg py-md flex items-center gap-md border-b border-outline-variant last:border-0">'
+      +'<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center font-label-md text-label-md text-on-surface-variant flex-shrink-0">'+(i+1)+'</div>'
+      +'<div class="flex-1 min-w-0"><p class="font-body-md text-body-md font-semibold text-primary truncate">'+tp.name+'</p>'
+        +'<p class="text-caption text-on-surface-variant">'+fmt(tp.article_count)+' bài báo</p></div>'
+      +'<div class="'+dir.bg+' '+dir.color+' px-sm py-1 rounded-full flex items-center gap-1 font-label-md text-label-md flex-shrink-0">'
+        +'<span class="material-symbols-outlined text-[16px]">'+dir.icon+'</span>'+dirLabel+'</div>'
+      +'<button class="'+followBtnCls+'" data-topic="'+tp.name.replace(/"/g,'&quot;')+'" data-followed="'+(followed?'1':'0')+'" onclick="handleFollowClick(this)">'
+        +followBtnContent+'</button>'
+    +'</div>';
+  }).join('');
+}
+
+function handleFollowClick(btn){
+  if(btn.getAttribute('data-followed')==='1'){ confirmUnfollow(btn); }
+  else { doFollow(btn); }
+}
+
+/* ────────── MAIN ANALYSIS ────────── */
+async function runAnalysis(){
+  var topic = document.getElementById('topic-input').value.trim();
+  var yearFrom = document.getElementById('year-from').value.trim();
+  var yearTo   = document.getElementById('year-to').value.trim();
+  ['error-box','author-mode-box','fallback-box'].forEach(function(id){ document.getElementById(id).classList.add('hidden'); });
+  if(!topic){ alert('Vui lòng nhập chủ đề hoặc tên tác giả.'); return; }
+
+  document.getElementById('empty-state').classList.add('hidden');
+  document.getElementById('dashboard-content').classList.remove('hidden');
+  document.getElementById('trending-empty').classList.add('hidden');
+  document.getElementById('trending-content').classList.remove('hidden');
+
+  ['stat-total','stat-citations','stat-oa','stat-trend'].forEach(function(id){
+    var el = document.getElementById(id); el.classList.add('loading-pulse'); el.textContent='--';
+  });
+  document.getElementById('growth-chart').innerHTML = '<div class="w-full text-center text-on-surface-variant loading-pulse pb-4 self-center">Đang phân tích...</div>';
+  document.getElementById('subtopics-list').innerHTML = '';
+  document.getElementById('journals-list').innerHTML = '';
+  document.getElementById('authors-table').innerHTML = '';
+  document.getElementById('highlights').innerHTML = '';
+  document.getElementById('trending-list').innerHTML = '<div class="p-lg text-center text-on-surface-variant loading-pulse">Đang phân tích...</div>';
+
+  var params = {topic:topic};
+  if(yearFrom) params.year_from = yearFrom;
+  if(yearTo)   params.year_to   = yearTo;
+  var qs = new URLSearchParams(params).toString();
+
+  try{
+    var res = await fetch(API+'?'+qs);
+    var d   = await res.json();
+    if(d.error) throw new Error(d.error);
+
+    if(d.mode==='author'&&d.matched_author){
+      document.getElementById('author-mode-text').textContent = 'Đã nhận diện là tác giả: '+d.matched_author+' — số liệu bên dưới chỉ tính riêng tác phẩm của tác giả này.';
+      document.getElementById('author-mode-box').classList.remove('hidden');
+    }
+    // CrossRef là nguồn chính — không hiện banner fallback
+
+    document.getElementById('stat-total').textContent     = fmt(d.total_works);
+    document.getElementById('stat-citations').textContent = fmt(d.total_citations);
+    document.getElementById('stat-oa').textContent        = (d.oa_percent!=null?d.oa_percent:0)+'%';
+
+    var tEl = document.getElementById('stat-trend');
+    var tm  = {rising:{icon:'trending_up',color:'text-success',label:'Tăng ('+(d.growth_rate_percent||0)+'%)'},
+               falling:{icon:'trending_down',color:'text-error',label:'Giảm ('+(d.growth_rate_percent||0)+'%)'},
+               stable:{icon:'trending_flat',color:'text-on-surface-variant',label:'Ổn định'}};
+    var t = tm[d.trend]||tm.stable;
+    tEl.className = 'font-headline-md text-headline-md flex items-center gap-xs '+t.color;
+    tEl.innerHTML = '<span class="material-symbols-outlined">'+t.icon+'</span>'+t.label;
+    ['stat-total','stat-citations','stat-oa','stat-trend'].forEach(function(id){ document.getElementById(id).classList.remove('loading-pulse'); });
+
+    // Bar chart
+    var c = document.getElementById('growth-chart'); c.innerHTML='';
+    var yearly = d.yearly||[];
+    if(yearly.length){
+      var max = Math.max.apply(null,yearly.map(function(y){return y.count;}))||1;
+      yearly.forEach(function(y,i){
+        var pct = Math.round((y.count/max)*90)+5;
+        var isLast = i===yearly.length-1;
+        var col = document.createElement('div');
+        col.className = 'flex-1 flex flex-col items-center relative px-1 h-full justify-end group';
+        col.innerHTML = '<div class="w-full rounded-t transition-all duration-700 '+(isLast?'bg-primary':'bg-primary-fixed group-hover:bg-primary')+'" style="height:'+pct+'%;" title="'+y.year+': '+fmt(y.count)+'">'
+          +'<span class="hidden group-hover:flex absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2 py-1 rounded whitespace-nowrap z-10">'+fmt(y.count)+'</span></div>'
+          +'<span class="text-[10px] absolute -bottom-6 whitespace-nowrap'+(isLast?' font-bold':'')+'">'+y.year+'</span>';
+        c.appendChild(col);
+      });
+    } else { c.innerHTML='<div class="w-full text-center text-on-surface-variant pb-4 self-center">Không có dữ liệu theo năm.</div>'; }
+
+    // Subtopics
+    var sc = document.getElementById('subtopics-list'); var st = d.top_subtopics||[];
+    if(st.length){ var ms=Math.max.apply(null,st.map(function(s){return s.count;}))||1; st.forEach(function(s){ var p=Math.round((s.count/ms)*90)+5; var dv=document.createElement('div'); dv.innerHTML='<div class="flex justify-between mb-1"><span class="font-label-md text-label-md">'+s.name+'</span><span class="font-label-md text-label-md font-bold">'+s.count+'</span></div><div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden"><div class="bg-primary h-full" style="width:'+p+'%;"></div></div>'; sc.appendChild(dv); }); }
+    else sc.innerHTML='<p class="text-on-surface-variant text-body-md">Không có dữ liệu.</p>';
+
+    // Journals
+    var jc = document.getElementById('journals-list'); var jl = d.top_journals||[];
+    if(jl.length){ var mj=Math.max.apply(null,jl.map(function(j){return j.count;}))||1; jl.forEach(function(j){ var p=Math.round((j.count/mj)*90)+5; var dv=document.createElement('div'); dv.innerHTML='<div class="flex justify-between mb-1"><span class="font-label-md text-label-md">'+j.name+'</span><span class="font-label-md text-label-md font-bold">'+j.count+'</span></div><div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden"><div class="bg-secondary h-full" style="width:'+p+'%;"></div></div>'; jc.appendChild(dv); }); }
+    else jc.innerHTML='<p class="text-on-surface-variant text-body-md">Không có dữ liệu.</p>';
+
+    // Authors
+    var ab = document.getElementById('authors-table'); var ta = d.top_authors||[];
+    ab.innerHTML = ta.length ? ta.map(function(a){ return '<tr class="hover:bg-surface-container-low"><td class="px-md py-sm font-body-md text-body-md font-medium text-primary">'+a.name+'</td><td class="px-md py-sm text-right">'+a.works+'</td><td class="px-md py-sm text-right">'+fmt(a.citations)+'</td></tr>'; }).join('') : '<tr><td colspan="3" class="px-md py-md text-center text-on-surface-variant">Không có dữ liệu.</td></tr>';
+
+    // Highlights
+    var hl = document.getElementById('highlights'); var hi = d.highlights||[];
+    hl.innerHTML = hi.length ? hi.map(function(h){ var ob=h.is_oa?'<span class="text-success text-[11px] font-bold ml-2">OPEN ACCESS</span>':''; var lk=h.doi?'<a href="'+h.doi+'" target="_blank" class="text-secondary text-[12px] hover:underline">Xem DOI →</a>':''; return '<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg"><p class="font-body-md text-body-md font-semibold text-primary mb-xs">'+h.title+ob+'</p><p class="text-caption text-on-surface-variant mb-sm">'+(h.year||'—')+' · '+fmt(h.citations)+' trích dẫn</p>'+lk+'</div>'; }).join('') : '<p class="text-on-surface-variant col-span-3 text-center py-xl">Không có dữ liệu.</p>';
+
+  }catch(e){
+    document.getElementById('error-box').textContent='Lỗi: '+e.message;
+    document.getElementById('error-box').classList.remove('hidden');
+    ['stat-total','stat-citations','stat-oa','stat-trend'].forEach(function(id){ document.getElementById(id).classList.remove('loading-pulse'); });
+  }
+
+  // Trending topics
+  try{
+    var tr = await fetch(API_TRENDING+'?'+qs);
+    var td = await tr.json();
+    if(td.error) throw new Error(td.error);
+    renderTrending(td.topics||[]);
+  }catch(e2){
+    document.getElementById('trending-list').innerHTML='<div class="p-lg text-center text-on-surface-variant">Không tải được dữ liệu chủ đề xu hướng.</div>';
+  }
+}
 </script>
-</body>
-</html>
+</body></html>
