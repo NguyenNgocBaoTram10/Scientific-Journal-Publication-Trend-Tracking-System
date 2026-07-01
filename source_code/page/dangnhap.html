@@ -290,7 +290,11 @@ async function handleLogin(event) {
 
             // Chuyển sang trang chính
             setTimeout(function () {
-                window.location.href = "trangchu1.html";
+                if (result.user.roleId ==1) {
+                    window.location.href = "admin.html";
+                } else {
+                    window.location.href = "trangchu1.html";
+                }
             }, 1000);
 
         } else {
