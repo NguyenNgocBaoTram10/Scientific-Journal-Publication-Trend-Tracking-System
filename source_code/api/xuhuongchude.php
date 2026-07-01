@@ -94,25 +94,38 @@ foreach (array_unique(array_merge(array_keys($first), array_keys($second))) as $
 arsort($all);
 $topSubjects = array_slice($all, 0, 10, true);
 
+/* ═══════════════ Lấy danh sách chủ đề user đã theo dõi ═══════════════
+ * BUG CŨ: $userId chưa từng được gán giá trị (thiếu session_start() +
+ *         lấy từ $_SESSION), và execute() bị gọi 2 lần (lần 2 không có
+ *         tham số), khiến truy vấn luôn thất bại âm thầm trong catch
+ *         → $followed luôn rỗng → is_followed luôn = false dù đã theo dõi.
+ * ĐÃ SỬA: lấy userId đúng từ session, chỉ gọi execute() một lần.
+ */
 $followed = [];
 try {
     $dbFile = __DIR__ . '/../config/database.php';
     if (file_exists($dbFile)) {
         require_once $dbFile;
-$stmt = $conn->prepare(
-    "SELECT t.topicName
-     FROM userfollowtopic uft
-     JOIN topic t ON t.topicId = uft.topicId
-     WHERE uft.userId = :uid"
-);
-$stmt->execute([':uid' => $userId]);
-        $stmt->execute();
-        foreach ($stmt->fetchAll(PDO::FETCH_COLUMN) as $t) {
-            $followed[strtolower(trim($t))] = true;
+
+        if (session_status() === PHP_SESSION_NONE) session_start();
+        $userId = (int)($_SESSION['userId'] ?? 0);
+
+        if ($userId > 0) {
+            $stmt = $conn->prepare(
+                "SELECT t.topicName
+                 FROM userfollowtopic uft
+                 JOIN topic t ON t.topicId = uft.topicId
+                 WHERE uft.userId = :uid"
+            );
+            $stmt->execute([':uid' => $userId]);
+            foreach ($stmt->fetchAll(PDO::FETCH_COLUMN) as $t) {
+                $followed[strtolower(trim($t))] = true;
+            }
         }
     }
 } catch (Throwable $e) {
-    // Bỏ qua
+    // Bỏ qua — nếu cần debug, tạm thời mở dòng dưới để ghi log:
+    // error_log('xuhuongchude.php followed-lookup error: ' . $e->getMessage());
 }
 
 $topics = [];

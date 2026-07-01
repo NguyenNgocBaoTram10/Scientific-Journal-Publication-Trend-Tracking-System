@@ -90,6 +90,12 @@ tailwind.config={darkMode:"class",theme:{extend:{
   <header class="sticky top-0 z-40 w-full bg-surface-container-lowest border-b border-outline-variant h-16 flex items-center px-lg justify-between">
     <h2 class="font-title-lg text-title-lg text-primary">Phân tích Xu hướng Nghiên cứu</h2>
 
+    <div class="flex items-center gap-sm">
+    <!-- Following (bookmark) shortcut -->
+    <button id="following-btn" onclick="openFollowingModal()" title="Chủ đề đã theo dõi" class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-all">
+      <span class="material-symbols-outlined text-on-surface-variant">bookmark</span>
+    </button>
+
     <!-- Notification Bell -->
     <div class="relative">
       <button id="notif-bell" onclick="toggleNotifPanel()" class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-all">
@@ -109,7 +115,13 @@ tailwind.config={darkMode:"class",theme:{extend:{
             <span>Chưa có thông báo nào.<br><span class="text-caption">Theo dõi chủ đề để nhận thông báo mới.</span></span>
           </div>
         </div>
+        <div class="px-lg py-sm border-t border-outline-variant text-center">
+          <button onclick="openFollowingModal()" class="text-secondary text-caption hover:underline flex items-center justify-center gap-1 w-full">
+            <span class="material-symbols-outlined text-[16px]">bookmark</span>Xem tất cả chủ đề đã theo dõi
+          </button>
+        </div>
       </div>
+    </div>
     </div>
   </header>
 
@@ -222,6 +234,24 @@ tailwind.config={darkMode:"class",theme:{extend:{
   </main>
 </div>
 
+<!-- ==================== FOLLOWING MODAL ==================== -->
+<div id="following-modal-overlay" class="modal-overlay hidden fixed inset-0 bg-black/40 z-[60] flex items-center justify-center p-md" style="opacity:0;">
+  <div id="following-modal-box" class="modal-box bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-lg max-h-[80vh] flex flex-col" style="transform:scale(.96);opacity:0;">
+    <div class="flex items-center justify-between px-lg py-md border-b border-outline-variant">
+      <div class="flex items-center gap-sm">
+        <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">bookmark</span>
+        <h3 class="font-title-lg text-title-lg text-primary">Chủ đề đã theo dõi</h3>
+      </div>
+      <button onclick="closeFollowingModal()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-high">
+        <span class="material-symbols-outlined text-on-surface-variant">close</span>
+      </button>
+    </div>
+    <div id="following-modal-list" class="flex-1 overflow-y-auto divide-y divide-outline-variant">
+      <div class="px-lg py-md text-on-surface-variant text-caption loading-pulse">Đang tải...</div>
+    </div>
+  </div>
+</div>
+
 <!-- ==================== TOAST CONTAINER ==================== -->
 <div id="toast-container" class="fixed bottom-lg right-lg z-50 flex flex-col gap-sm pointer-events-none"></div>
 
@@ -235,6 +265,7 @@ var API_NOTIF    = '../api/thongbao.php';
 var _followingBtn   = null;   // button DOM đang xử lý
 var _selectedFreq   = 'immediate';
 var _notifPanelOpen = false;
+var _followingModalOpen = false;
 
 /* ── format numbers ── */
 function fmt(n){ n=n||0; if(n>=1e6)return(n/1e6).toFixed(1)+'M'; if(n>=1000)return(n/1000).toFixed(0)+'K'; return n.toLocaleString(); }
@@ -310,8 +341,9 @@ function renderNotifications(notifs){
     var unreadCls = n.is_read ? '' : 'bg-primary-fixed/40';
     var dot = n.is_read ? '' : '<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0 mt-1"></span>';
 
-    // Icon theo loại thông báo: bài mới vs thay đổi xu hướng
-    var icon = n.type === 'trend_change' ? 'trending_up' : 'notifications';
+    // Icon theo loại thông báo: theo dõi mới, bài mới, hay thay đổi xu hướng
+    var iconMap = {trend_change:'trending_up', follow:'bookmark_added', new_paper:'article'};
+    var icon = iconMap[n.type] || 'notifications';
 
     // Nếu có topic, hiển thị như một badge nhỏ bên dưới tiêu đề
     var topicBadge = n.topic
@@ -359,6 +391,92 @@ async function markAllRead(){
   try{ await fetch(API_NOTIF, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'mark_all_read'})}); }catch(e){}
 }
 
+/* ────────── FOLLOWING MODAL (danh sách tất cả chủ đề đã theo dõi) ────────── */
+function openFollowingModal(){
+  _followingModalOpen = true;
+  var overlay = document.getElementById('following-modal-overlay');
+  var box     = document.getElementById('following-modal-box');
+  overlay.classList.remove('hidden');
+  // đóng dropdown thông báo nếu đang mở, để tránh chồng UI
+  if(_notifPanelOpen){ _notifPanelOpen = false; document.getElementById('notif-dropdown').classList.add('hidden'); }
+  requestAnimationFrame(function(){ overlay.style.opacity = '1'; box.style.transform='scale(1)'; box.style.opacity='1'; });
+  loadFollowingList();
+}
+
+function closeFollowingModal(){
+  _followingModalOpen = false;
+  var overlay = document.getElementById('following-modal-overlay');
+  var box     = document.getElementById('following-modal-box');
+  overlay.style.opacity = '0'; box.style.transform='scale(.96)'; box.style.opacity='0';
+  setTimeout(function(){ overlay.classList.add('hidden'); }, 200);
+}
+
+document.getElementById('following-modal-overlay').addEventListener('click', function(e){
+  if(e.target === this) closeFollowingModal();
+});
+
+async function loadFollowingList(){
+  var list = document.getElementById('following-modal-list');
+  list.innerHTML = '<div class="px-lg py-md text-on-surface-variant text-caption loading-pulse">Đang tải...</div>';
+  try{
+    var res = await fetch(API_FOLLOW);
+    var d   = await res.json();
+    if(d.error) throw new Error(d.error);
+    // Chấp nhận nhiều dạng response: {topics:[...]} hoặc {followed:[...]} hoặc mảng thuần
+    var topics = d.topics || d.followed || (Array.isArray(d) ? d : []);
+    renderFollowingList(topics);
+  }catch(e){
+    list.innerHTML = '<div class="px-lg py-xl text-center text-on-surface-variant text-body-md">Không tải được danh sách theo dõi.</div>';
+  }
+}
+
+function renderFollowingList(topics){
+  var list = document.getElementById('following-modal-list');
+  if(!topics || !topics.length){
+    list.innerHTML = '<div class="px-lg py-xl text-center text-on-surface-variant text-body-md flex flex-col items-center gap-sm">'
+      +'<span class="material-symbols-outlined" style="font-size:32px;">bookmark_border</span>'
+      +'<span>Bạn chưa theo dõi chủ đề nào.<br><span class="text-caption">Vào tab "Chủ đề xu hướng" và nhấn "Theo dõi".</span></span></div>';
+    return;
+  }
+  list.innerHTML = topics.map(function(t){
+    // t có thể là string hoặc object {topic|name, followed_at, frequency}
+    var name = (typeof t === 'string') ? t : (t.topic || t.name || '');
+    var since = (typeof t === 'object' && t.followed_at) ? t.followed_at : '';
+    return '<div class="px-lg py-md flex items-center gap-md">'
+      +'<span class="material-symbols-outlined text-primary flex-shrink-0" style="font-variation-settings:\'FILL\' 1;">bookmark</span>'
+      +'<div class="flex-1 min-w-0"><p class="font-body-md text-body-md font-semibold text-on-background truncate">'+escHtml(name)+'</p>'
+      + (since ? '<p class="text-[10px] text-on-surface-variant mt-0.5">Theo dõi từ '+escHtml(since)+'</p>' : '')
+      +'</div>'
+      +'<button class="flex-shrink-0 border border-outline-variant rounded-lg px-md py-1.5 font-label-md text-label-md flex items-center gap-1 hover:border-error hover:text-error transition-all" data-topic="'+escHtml(name).replace(/"/g,'&quot;')+'" onclick="unfollowFromModal(this)">'
+        +'<span class="material-symbols-outlined text-[16px]">bookmark_remove</span>Bỏ theo dõi</button>'
+    +'</div>';
+  }).join('');
+}
+
+async function unfollowFromModal(btn){
+  var topic = btn.getAttribute('data-topic');
+  btn.disabled = true;
+  var row = btn.closest('div.flex.items-center.gap-md');
+  try{
+    var res = await fetch(API_FOLLOW, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic:topic,follow:false})});
+    var d = await res.json();
+    if(d.error) throw new Error(d.error);
+    if(row) row.remove();
+    // đồng bộ lại nút "Theo dõi" ở tab Chủ đề xu hướng nếu đang hiển thị
+    document.querySelectorAll('.follow-btn[data-topic="'+CSS.escape(topic)+'"]').forEach(function(b){
+      b.setAttribute('data-followed','0');
+      b.className = b.className.replace('bg-success-container text-success border-success/30','')
+                                 + ' border-outline-variant hover:border-primary';
+      b.innerHTML = '<span class="material-symbols-outlined text-[16px]">add</span>Theo dõi';
+    });
+    if(!document.getElementById('following-modal-list').children.length){
+      renderFollowingList([]);
+    }
+    showToast('Đã hủy theo dõi "'+topic+'"','info');
+  }catch(e){ showToast('Lỗi: '+e.message,'error'); }
+  finally{ btn.disabled = false; }
+}
+
 /* ────────── FOLLOW (đơn giản — 1 click, không cần modal) ────────── */
 async function doFollow(btn){
   var topic = btn.getAttribute('data-topic');
@@ -392,8 +510,8 @@ function pushLocalNotif(topic){
   list.querySelectorAll('.flex-col').forEach(function(el){ el.remove(); });
   var div = document.createElement('div');
   div.className = 'px-lg py-md flex items-start gap-sm hover:bg-surface-container-low bg-primary-fixed/40 border-b border-outline-variant';
-  div.innerHTML = '<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 flex-shrink-0" style="font-variation-settings:\'FILL\' 1;">notifications</span>'
-    +'<div class="flex-1 min-w-0"><p class="font-body-md text-body-md font-semibold text-on-background">' + escHtml(topic) + '</p>'
+  div.innerHTML = '<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 flex-shrink-0" style="font-variation-settings:\'FILL\' 1;">bookmark_added</span>'
+    +'<div class="flex-1 min-w-0"><p class="font-body-md text-body-md font-semibold text-on-background">Đã theo dõi: ' + escHtml(topic) + '</p>'
     +'<p class="text-caption text-on-surface-variant mt-0.5">Bạn sẽ nhận thông báo khi có bài mới hoặc xu hướng thay đổi.</p>'
     +'<p class="text-[10px] text-on-surface-variant mt-1">Vừa xong</p></div>'
     +'<span class="w-2 h-2 rounded-full bg-secondary flex-shrink-0 mt-1"></span>';

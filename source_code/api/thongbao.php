@@ -7,6 +7,9 @@
  *   notificationId  INT  AUTO_INCREMENT PK
  *   title           VARCHAR(300)
  *   content         TEXT  nullable
+ *   type            VARCHAR(20)   default 'system'   ('follow' | 'new_paper' | 'trend_change' | 'system')
+ *   topicId         INT           nullable  (FK -> topic.topicId)
+ *   link            VARCHAR(500)  nullable  (link đến bài báo / kết quả phân tích)
  *   isRead          TINYINT(1)  default 0
  *   createdAt       DATETIME    default CURRENT_TIMESTAMP
  *   userId          INT
@@ -32,7 +35,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { http_response_code(204); ob_end_clean(); exit; }
 
 require_once __DIR__ . '/../config/database.php';
-// $pdo được tạo trong config/database.php, kết nối database "sjptts"
+// $conn được tạo trong config/database.php, kết nối database "sjptts"
 
 /* ── Helper: user hiện tại ── */
 function getCurrentUserId(): int {
@@ -66,11 +69,15 @@ try {
     ══════════════════════════════════════ */
     if ($method === 'GET') {
 
+        // BUG: bảng notification không có cột topicId (dù comment đầu file mô tả có),
+        // nên JOIN với bảng topic gây lỗi "Unknown column 'n.topicId'" và làm hỏng
+        // toàn bộ query. Tên chủ đề đã được nhúng sẵn trong content khi insert
+        // (xem theodoichude.php) nên bỏ JOIN, không cần lấy topicName riêng.
         $stmt = $conn->prepare("
-            SELECT notificationId, title, content, isRead, createdAt
-            FROM   notification
-            WHERE  userId = :uid
-            ORDER  BY createdAt DESC
+            SELECT n.notificationId, n.title, n.content, n.type, n.link, n.isRead, n.createdAt
+            FROM   notification n
+            WHERE  n.userId = :uid
+            ORDER  BY n.createdAt DESC
             LIMIT  50
         ");
         $stmt->execute([':uid' => $userId]);
@@ -81,6 +88,9 @@ try {
                 'id'       => (int)  $row['notificationId'],
                 'title'    =>        $row['title'],
                 'message'  =>        $row['content'] ?? '',
+                'type'     =>        $row['type'] ?? 'system',
+                'topic'    =>        null,
+                'link'     =>        $row['link'] ?? null,
                 'is_read'  => (bool) $row['isRead'],
                 'time_ago' => timeAgo($row['createdAt']),
             ];
@@ -98,7 +108,7 @@ try {
         echo json_encode([
             'notifications' => $notifications,
             'unread_count'  => $unread,
-        ]);
+        ], JSON_UNESCAPED_UNICODE);
 
     /* ══════════════════════════════════════
        POST — Đánh dấu đã đọc
@@ -151,4 +161,10 @@ try {
     http_response_code(500);
     ob_clean();
     echo json_encode(['error' => 'Lỗi cơ sở dữ liệu: ' . $e->getMessage()]);
+} catch (\Throwable $e) {
+    // Bắt luôn các lỗi không phải PDOException (ví dụ biến kết nối sai tên,
+    // gọi hàm không tồn tại, v.v.) để không bao giờ trả về trang trắng/500 câm lặng
+    http_response_code(500);
+    ob_clean();
+    echo json_encode(['error' => 'Lỗi hệ thống: ' . $e->getMessage()]);
 }
