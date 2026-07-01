@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ScholarTrend - Thông tin tài khoản</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'sans-serif'] },
+        colors: {
+          primary: '#0f172a',
+          secondary: '#64748b',
+          accent: '#3b82f6',
+          surface: '#f8fafc',
+          border: '#e2e8f0'
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { background-color: #f1f5f9; color: #1e293b; }
+  .main-container { max-width: 1400px; margin: 0 auto; }
+  .card-shadow { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); }
+  input[readonly] { cursor: default; }
+  input:not([readonly]) { background-color: #fff; box-shadow: inset 0 0 0 1px #3b82f6; }
+</style>
+</head>
+<body class="font-sans antialiased">
+<header class="bg-white border-b border-border h-16 sticky top-0 z-50">
+  <div class="main-container px-6 h-full flex items-center justify-between">
+    <div class="text-2xl font-bold tracking-tight text-primary">ScholarTrend</div>
+    <div class="flex items-center space-x-4">
+      <button class="p-2 text-secondary hover:bg-gray-100 rounded-full transition-colors" type="button">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+      </button>
+      <div class="relative w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center border border-blue-200">
+        <svg class="h-7 w-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main-container px-6 py-8 flex gap-8">
+  <aside class="w-64 flex-shrink-0">
+    <div class="bg-white rounded-xl border border-border overflow-hidden card-shadow p-3">
+      <div class="h-10 rounded-lg bg-slate-50 border border-border"></div>
+      <div class="mt-5 pt-4 border-t border-border">
+        <a class="flex items-center space-x-3 p-3 text-sm text-slate-700 hover:bg-slate-50 rounded-lg" href="#">
+          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+          <span>Yêu thích</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="flex-1 space-y-6">
+    <section class="bg-white rounded-xl border border-border card-shadow overflow-hidden">
+      <div class="p-8 border-b border-border bg-slate-50/30 flex justify-between items-start">
+        <div>
+          <h1 class="text-3xl font-bold text-primary">Thông tin tài khoản</h1>
+          <p class="text-secondary mt-1">Quản lý hồ sơ cá nhân và cài đặt bảo mật của bạn.</p>
+        </div>
+        <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100 shadow-inner">
+          <svg class="h-10 w-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </div>
+      </div>
+
+      <div class="p-8 space-y-8">
+        <div id="profileMessage" class="hidden rounded-lg border px-4 py-3 text-sm font-medium"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-secondary tracking-wider uppercase">Họ và tên</label>
+            <input id="fullName" class="w-full bg-slate-100 border-none rounded-lg py-3.5 px-4 text-primary font-medium focus:ring-0" readonly type="text">
+          </div>
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-secondary tracking-wider uppercase">Email</label>
+            <input id="email" class="w-full bg-slate-100 border-none rounded-lg py-3.5 px-4 text-primary font-medium focus:ring-0" readonly type="email">
+          </div>
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-secondary tracking-wider uppercase">Tên đăng nhập</label>
+            <input id="username" class="w-full bg-slate-100 border-none rounded-lg py-3.5 px-4 text-primary font-medium focus:ring-0" readonly type="text">
+          </div>
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-secondary tracking-wider uppercase">Trạng thái email</label>
+            <div class="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-sm font-semibold">Đã xác minh</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-8 py-6 border-t border-border bg-slate-50/30 flex flex-wrap gap-3">
+        <button id="editBtn" class="px-6 py-2.5 bg-white border border-primary text-primary font-bold rounded-lg hover:bg-slate-50 transition-all" type="button">Chỉnh sửa thông tin</button>
+        <button id="saveBtn" class="hidden px-6 py-2.5 bg-primary text-white font-bold rounded-lg hover:bg-slate-800 transition-all" type="button">Lưu thay đổi</button>
+        <button id="cancelBtn" class="hidden px-6 py-2.5 bg-white border border-border text-slate-700 font-bold rounded-lg hover:bg-slate-50 transition-all" type="button">Hủy</button>
+        <button id="logoutBtn" class="ml-auto px-6 py-2.5 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-all" type="button">Đăng xuất</button>
+      </div>
+    </section>
+
+    <section class="bg-[#f1f5f9] border border-border rounded-xl p-6 flex items-start space-x-4">
+      <div class="text-slate-600 mt-1">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+      </div>
+      <div>
+        <h3 class="text-sm font-bold text-slate-800">Bảo mật thông tin</h3>
+        <p class="text-sm text-slate-600 mt-1">Thông tin tài khoản của bạn được mã hóa và bảo mật theo tiêu chuẩn học thuật cao nhất. Đừng bao giờ chia sẻ thông tin đăng nhập của bạn với bất kỳ ai.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+let originalUser = null;
+
+const fields = ["fullName", "email", "username"];
+const messageBox = document.getElementById("profileMessage");
+const editBtn = document.getElementById("editBtn");
+const saveBtn = document.getElementById("saveBtn");
+const cancelBtn = document.getElementById("cancelBtn");
+const logoutBtn = document.getElementById("logoutBtn");
+
+function setMessage(message, type = "success") {
+  messageBox.textContent = message;
+  messageBox.className = type === "success"
+    ? "rounded-lg border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700"
+    : "rounded-lg border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-red-700";
+}
+
+function hideMessage() {
+  messageBox.classList.add("hidden");
+}
+
+function fillUser(user) {
+  originalUser = { ...user };
+  document.getElementById("fullName").value = user.fullName || "";
+  document.getElementById("email").value = user.email || "";
+  document.getElementById("username").value = user.username || "";
+}
+
+function setEditMode(isEditing) {
+  fields.forEach((id) => {
+    const input = document.getElementById(id);
+    input.readOnly = !isEditing;
+  });
+  editBtn.classList.toggle("hidden", isEditing);
+  saveBtn.classList.toggle("hidden", !isEditing);
+  cancelBtn.classList.toggle("hidden", !isEditing);
+  hideMessage();
+}
+
+async function loadProfile() {
+  const response = await fetch("../api/hosocanhan.php");
+  const result = await response.json();
+
+  if (!result.success) {
+    alert(result.message || "Bạn chưa đăng nhập!");
+    window.location.href = "dangnhap.html";
+    return;
+  }
+
+  fillUser(result.user);
+}
+
+editBtn.addEventListener("click", function () {
+  setEditMode(true);
+  document.getElementById("fullName").focus();
+});
+
+cancelBtn.addEventListener("click", function () {
+  fillUser(originalUser);
+  setEditMode(false);
+});
+
+saveBtn.addEventListener("click", async function () {
+  try {
+    const response = await fetch("../api/capnhathoso.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        fullName: document.getElementById("fullName").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        username: document.getElementById("username").value.trim()
+      })
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+      setMessage(result.message || "Cập nhật thất bại.", "error");
+      return;
+    }
+
+    fillUser(result.user);
+    localStorage.setItem("user", JSON.stringify(result.user));
+    setEditMode(false);
+    setMessage(result.message || "Cập nhật thông tin thành công.");
+  } catch (error) {
+    console.error(error);
+    setMessage("Không cập nhật được thông tin tài khoản.", "error");
+  }
+});
+
+logoutBtn.addEventListener("click", async function () {
+  await fetch("../api/dangxuat.php");
+  localStorage.removeItem("user");
+  window.location.href = "dangnhap.html";
+});
+
+window.onload = loadProfile;
+</script>
+</body>
+</html>
