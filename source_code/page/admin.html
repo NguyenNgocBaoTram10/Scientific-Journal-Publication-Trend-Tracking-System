@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - ScholarTrend</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen">
+  <header class="bg-white border-b px-8 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">ScholarTrend Admin</h1>
+    <a href="trangchu1.html" class="text-blue-600 font-semibold">Về trang chủ</a>
+  </header>
+
+  <main class="p-8">
+    <section class="bg-white rounded-xl shadow border p-6">
+      <h2 class="text-xl font-bold mb-4">Quản lý người dùng</h2>
+
+      <div id="message" class="hidden mb-4 p-3 rounded-lg"></div>
+
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-slate-100 text-left">
+            <th class="p-3 border">ID</th>
+            <th class="p-3 border">Họ tên</th>
+            <th class="p-3 border">Username</th>
+            <th class="p-3 border">Email</th>
+            <th class="p-3 border">Trạng thái</th>
+            <th class="p-3 border">Quyền</th>
+            <th class="p-3 border">Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+      </table>
+    </section>
+  </main>
+
+<script>
+const userTable = document.getElementById("userTable");
+const messageBox = document.getElementById("message");
+
+function showMessage(text, ok = true) {
+  messageBox.className = ok
+    ? "mb-4 p-3 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100"
+    : "mb-4 p-3 rounded-lg bg-red-50 text-red-700 border border-red-100";
+  messageBox.textContent = text;
+}
+
+async function loadUsers() {
+  const response = await fetch("../api/admin_users.php");
+  const result = await response.json();
+
+  if (!result.success) {
+    alert(result.message || "Không có quyền admin.");
+    window.location.href = "dangnhap.html";
+    return;
+  }
+
+  userTable.innerHTML = "";
+
+  result.users.forEach(user => {
+    const roleText = user.roleId == 1 ? "Admin" : "User";
+    const lockText = user.status === "active" ? "Khóa" : "Mở khóa";
+    const lockAction = user.status === "active" ? "lock" : "unlock";
+    const roleAction = user.roleId == 1 ? "make_user" : "make_admin";
+    const roleBtn = user.roleId == 1 ? "Hạ user" : "Đặt admin";
+
+    userTable.innerHTML += `
+      <tr>
+        <td class="p-3 border">${user.userId}</td>
+        <td class="p-3 border">${user.fullName}</td>
+        <td class="p-3 border">${user.username}</td>
+        <td class="p-3 border">${user.email}</td>
+        <td class="p-3 border">${user.status}</td>
+        <td class="p-3 border">${roleText}</td>
+        <td class="p-3 border space-x-2">
+          <button onclick="updateUser(${user.userId}, '${lockAction}')" class="px-3 py-1 bg-slate-800 text-white rounded">${lockText}</button>
+          <button onclick="updateUser(${user.userId}, '${roleAction}')" class="px-3 py-1 bg-blue-600 text-white rounded">${roleBtn}</button>
+        </td>
+      </tr>
+    `;
+  });
+}
+
+async function updateUser(userId, action) {
+  const response = await fetch("../api/admin_users.php", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ userId, action })
+  });
+
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Cập nhật thất bại.", false);
+    return;
+  }
+
+  showMessage(result.message || "Cập nhật thành công.");
+  loadUsers();
+}
+
+loadUsers();
+</script>
+</body>
+</html>
