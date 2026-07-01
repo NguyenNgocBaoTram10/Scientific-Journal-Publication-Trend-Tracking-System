@@ -1,5 +1,12 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+// api/dangnhap.php
+session_start(); // Luôn gọi đầu tiên, trước mọi output/header khác
+
+// ⚠️ Đổi lại đúng domain frontend thật của bạn khi lên hosting thật
+// Khi test trên localhost XAMPP, để "*" tạm được NHƯNG sẽ không gửi được cookie session
+// => bắt buộc phải ghi rõ origin (ví dụ http://localhost hoặc http://127.0.0.1:5500)
+header("Access-Control-Allow-Origin: http://localhost");
+header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 
@@ -49,6 +56,7 @@ if (empty($username) || empty($password)) {
 try {
 
     // Tìm tài khoản theo username
+    // Chỉ SELECT đúng 8 cột có thật trong bảng `user`
     $stmt = $conn->prepare("
         SELECT
             userId,
@@ -96,24 +104,24 @@ try {
         exit();
     }
 
-    // Đăng nhập thành công
-    session_start();
+    // Đăng nhập thành công -> chống session fixation
+    session_regenerate_id(true);
 
-    $_SESSION["userId"] = $user["userId"];
+    $_SESSION["userId"]   = $user["userId"];
     $_SESSION["fullName"] = $user["fullName"];
     $_SESSION["username"] = $user["username"];
-    $_SESSION["email"] = $user["email"];
-    $_SESSION["roleId"] = $user["roleId"];
+    $_SESSION["email"]    = $user["email"];
+    $_SESSION["roleId"]   = $user["roleId"];
 
     echo json_encode([
         "success" => true,
         "message" => "Đăng nhập thành công.",
         "user" => [
-            "userId" => $user["userId"],
+            "userId"   => $user["userId"],
             "fullName" => $user["fullName"],
             "username" => $user["username"],
-            "email" => $user["email"],
-            "roleId" => $user["roleId"]
+            "email"    => $user["email"],
+            "roleId"   => $user["roleId"]
         ]
     ]);
 
@@ -127,5 +135,3 @@ try {
         "error" => $e->getMessage()
     ]);
 }
-
-?>

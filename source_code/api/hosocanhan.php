@@ -1,30 +1,47 @@
 <?php
-session_start();
+// api/hosocanhan.php - Trả về thông tin của người dùng ĐANG đăng nhập (theo session)
+// Frontend gọi GET tới file này để đổ dữ liệu vào avatar/dropdown/trang hồ sơ
 
-header("Content-Type: application/json; charset=UTF-8");
-
+require_once("_cors.php");
 require_once("../config/database.php");
 
-if (!isset($_SESSION["userId"])) {
+if (empty($_SESSION["userId"])) {
     http_response_code(401);
-    echo json_encode([
-        "success" => false,
-        "message" => "Bạn chưa đăng nhập."
-    ]);
+    echo json_encode(["success" => false, "message" => "Bạn chưa đăng nhập."]);
     exit();
 }
 
-$stmt = $conn->prepare("
-    SELECT userId, fullName, username, email, status, roleId, createdAt
-    FROM user
-    WHERE userId = ?
-");
+try {
+    // Luôn truy vấn lại CSDL theo userId trong session để đảm bảo
+    // dữ liệu mới nhất và đúng đúng user đang đăng nhập.
+    $stmt = $conn->prepare("
+        SELECT userId, fullName, username, email, roleId, status
+        FROM user
+        WHERE userId = ?
+    ");
+    $stmt->execute([$_SESSION["userId"]]);
+    $user = $stmt->fetch();
 
-$stmt->execute([$_SESSION["userId"]]);
-$user = $stmt->fetch(PDO::FETCH_ASSOC);
+    if (!$user || $user["status"] != "active") {
+        session_unset();
+        session_destroy();
+        http_response_code(401);
+        echo json_encode(["success" => false, "message" => "Phiên đăng nhập không hợp lệ."]);
+        exit();
+    }
 
-echo json_encode([
-    "success" => true,
-    "user" => $user
-]);
-?>
+    echo json_encode([
+        "success" => true,
+        "user" => [
+            "userId"    => $user["userId"],
+            "fullName"  => $user["fullName"],
+            "username"  => $user["username"],
+            "email"     => $user["email"],
+            "roleId"    => $user["roleId"]
+        ]
+    ]);
+
+} catch (PDOException $e) {
+    http_response_code(500);
+    echo json_encode(["success" => false, "message" => "Lỗi cơ sở dữ liệu.", "error" => $e->getMessage()]);
+}

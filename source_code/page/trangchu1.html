@@ -129,10 +129,47 @@
 
 
 </div>
-</div>
-<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed cursor-pointer hover:shadow-sm transition-all"
-     onclick="window.location.href='hosocanhan.html'">
-    <span class="material-symbols-outlined text-[20px]">person</span>
+
+<!-- Khu vực tài khoản: động theo trạng thái đăng nhập -->
+<div class="flex items-center gap-md">
+
+  <!-- Chưa đăng nhập: nút Đăng nhập -->
+  <a href="dangnhap.html" id="login-link"
+     class="hidden font-label-md text-label-md px-lg py-sm bg-primary text-on-primary rounded-lg hover:bg-primary-container transition-all">
+    Đăng nhập
+  </a>
+
+  <!-- Đã đăng nhập: avatar + dropdown -->
+  <div class="relative group hidden" id="user-menu">
+    <button class="flex items-center gap-xs p-xs rounded-full hover:bg-surface-container transition-colors" id="profile-dropdown-trigger">
+      <img id="nav-avatar"
+           class="w-8 h-8 rounded-full object-cover border border-outline-variant"
+           src="https://ui-avatars.com/api/?name=User&background=002045&color=fff" alt="avatar">
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div class="absolute right-0 mt-2 w-64 bg-surface-container-lowest border border-outline-variant rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+      <div class="p-md border-b border-outline-variant flex items-center gap-sm">
+        <img id="dropdown-avatar" class="w-10 h-10 rounded-full object-cover"
+             src="https://ui-avatars.com/api/?name=User&background=002045&color=fff" alt="avatar">
+        <div class="min-w-0">
+          <p id="dropdown-fullname" class="font-body-md text-body-md font-semibold text-on-surface truncate">Đang tải...</p>
+          <p id="dropdown-email" class="text-body-sm text-on-surface-variant truncate">Đang tải...</p>
+        </div>
+      </div>
+      <div class="py-xs">
+        <a href="hosocanhan.html" class="flex items-center gap-sm px-md py-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[18px]">person</span>
+          Thông tin tài khoản
+        </a>
+        <button onclick="logout()" class="w-full flex items-center gap-sm px-md py-sm text-body-sm text-error hover:bg-error-container/30 transition-colors text-left">
+          <span class="material-symbols-outlined text-[18px]">logout</span>
+          Đăng xuất
+        </button>
+      </div>
+    </div>
+  </div>
+
 </div>
 </nav>
 </header>
@@ -399,6 +436,67 @@ function doSearch() {
     // Đảm bảo cũng chạy khi trang được khôi phục từ bộ nhớ đệm (back/forward cache)
     window.addEventListener('pageshow', function(event) {
       if (event.persisted) refreshDynamicData();
+    });
+
+    /* ================================================================
+       TRẠNG THÁI ĐĂNG NHẬP: kiểm tra session, đổ avatar & thông tin thật
+       ================================================================ */
+
+    // ⚠️ Đổi lại đúng đường dẫn API backend thật của bạn nếu domain/thư mục thay đổi
+    const API_BASE = "http://localhost/Scientific-Journal-Publication-Trend-Tracking-System/source_code/api";
+
+    async function loadHeaderUser() {
+      try {
+        const res = await fetch(`${API_BASE}/check_session.php`, {
+          method: "GET",
+          credentials: "include" // BẮT BUỘC để gửi cookie session
+        });
+        const data = await res.json();
+
+        if (!data.success) {
+          // Chưa đăng nhập -> hiện nút "Đăng nhập", ẩn avatar
+          document.getElementById("login-link").classList.remove("hidden");
+          document.getElementById("user-menu").classList.add("hidden");
+          return;
+        }
+
+        // Đã đăng nhập -> đổ đúng thông tin người dùng vào avatar/dropdown
+        const user = data.user;
+        const avatarUrl = user.avatarUrl
+          ? user.avatarUrl
+          : `https://ui-avatars.com/api/?name=${encodeURIComponent(user.fullName)}&background=002045&color=fff`;
+
+        document.getElementById("nav-avatar").src = avatarUrl;
+        document.getElementById("dropdown-avatar").src = avatarUrl;
+        document.getElementById("dropdown-fullname").textContent = user.fullName;
+        document.getElementById("dropdown-email").textContent = user.email;
+
+        document.getElementById("user-menu").classList.remove("hidden");
+        document.getElementById("login-link").classList.add("hidden");
+
+      } catch (err) {
+        console.error("Lỗi tải thông tin người dùng:", err);
+        document.getElementById("login-link").classList.remove("hidden");
+      }
+    }
+
+    async function logout() {
+      try {
+        // Gọi đúng API dangxuat.php để huỷ session
+        await fetch(`${API_BASE}/dangxuat.php`, {
+          method: "GET",
+          credentials: "include"
+        });
+      } catch (err) {
+        console.error("Lỗi đăng xuất:", err);
+      } finally {
+        window.location.href = "trangchu.html";
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadHeaderUser);
+    window.addEventListener('pageshow', function(event) {
+      if (event.persisted) loadHeaderUser();
     });
     </script>
 

@@ -1,215 +1,246 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html class="light" lang="vi">
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>ScholarTrend - Thông tin tài khoản</title>
+<title>Thông tin tài khoản - ScholarTrend</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: { sans: ['Inter', 'sans-serif'] },
-        colors: {
-          primary: '#0f172a',
-          secondary: '#64748b',
-          accent: '#3b82f6',
-          surface: '#f8fafc',
-          border: '#e2e8f0'
-        }
-      }
-    }
-  }
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
-  body { background-color: #f1f5f9; color: #1e293b; }
-  .main-container { max-width: 1400px; margin: 0 auto; }
-  .card-shadow { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); }
-  input[readonly] { cursor: default; }
-  input:not([readonly]) { background-color: #fff; box-shadow: inset 0 0 0 1px #3b82f6; }
+    body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(229, 231, 235, 0.5); }
+    .modal-overlay { background: rgba(0, 22, 60, 0.4); backdrop-filter: blur(4px); }
 </style>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "tertiary-fixed-dim": "#62dcad", "tertiary-fixed": "#80f9c8",
+                    "surface-container-high": "#e7e8e9", "primary-fixed-dim": "#afc6ff",
+                    "on-primary-fixed-variant": "#2d4677", "outline-variant": "#c4c6d0",
+                    "primary": "#00163c", "on-primary": "#ffffff", "surface-dim": "#d9dadb",
+                    "primary-fixed": "#d9e2ff", "on-error-container": "#93000a",
+                    "secondary": "#305da9", "on-tertiary-fixed-variant": "#00513a",
+                    "on-primary-container": "#7c94ca", "surface-variant": "#e1e3e4",
+                    "primary-container": "#0f2b5b", "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff", "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff", "secondary-fixed": "#d8e2ff",
+                    "on-tertiary-container": "#1fa87c", "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff", "on-tertiary-fixed": "#002115",
+                    "surface-container-highest": "#e1e3e4", "error": "#ba1a1a",
+                    "tertiary": "#001d12", "surface-tint": "#465e90",
+                    "on-surface-variant": "#44474f", "on-primary-fixed": "#001a43",
+                    "inverse-on-surface": "#f0f1f2", "surface": "#f8f9fa",
+                    "on-secondary-container": "#003f8a", "surface-bright": "#f8f9fa",
+                    "inverse-surface": "#2e3132", "tertiary-container": "#003424",
+                    "surface-container": "#edeeef", "outline": "#747780",
+                    "inverse-primary": "#afc6ff", "on-secondary-fixed": "#001a41",
+                    "background": "#f8f9fa", "secondary-fixed-dim": "#adc6ff",
+                    "on-secondary-fixed-variant": "#0c448f", "secondary-container": "#85adff",
+                    "on-background": "#191c1d", "on-surface": "#191c1d"
+                },
+                borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+                spacing: { xl: "32px", sm: "12px", "container-max": "1280px", base: "4px", lg: "24px", xs: "8px", section: "64px", md: "16px" },
+                fontFamily: { "label-md": ["Inter"], "display-md": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"] },
+                fontSize: {
+                    "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500"}],
+                    "display-md": ["36px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700"}],
+                    "label-sm": ["12px", {lineHeight: "16px", fontWeight: "600"}],
+                    "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}],
+                    "headline-lg": ["30px", {lineHeight: "38px", fontWeight: "600"}],
+                    "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}],
+                    "display-lg": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}],
+                    "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}]
+                }
+            }
+        }
+    }
+</script>
 </head>
-<body class="font-sans antialiased">
-<header class="bg-white border-b border-border h-16 sticky top-0 z-50">
-  <div class="main-container px-6 h-full flex items-center justify-between">
-    <div class="text-2xl font-bold tracking-tight text-primary">ScholarTrend</div>
-    <div class="flex items-center space-x-4">
-      <button class="p-2 text-secondary hover:bg-gray-100 rounded-full transition-colors" type="button">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-      </button>
-      <div class="relative w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center border border-blue-200">
-        <svg class="h-7 w-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-      </div>
-    </div>
-  </div>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+
+<header class="bg-surface border-b border-outline-variant shadow-sm sticky top-0 z-50">
+<div class="flex justify-between items-center h-16 px-lg max-w-container-max mx-auto w-full">
+<div class="flex items-center gap-xl">
+<span class="text-headline-md font-headline-md font-bold text-primary">ScholarTrend</span>
+</div>
+</div>
 </header>
 
-<main class="main-container px-6 py-8 flex gap-8">
-  <aside class="w-64 flex-shrink-0">
-    <div class="bg-white rounded-xl border border-border overflow-hidden card-shadow p-3">
-      <div class="h-10 rounded-lg bg-slate-50 border border-border"></div>
-      <div class="mt-5 pt-4 border-t border-border">
-        <a class="flex items-center space-x-3 p-3 text-sm text-slate-700 hover:bg-slate-50 rounded-lg" href="#">
-          <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-          <span>Yêu thích</span>
-        </a>
-      </div>
-    </div>
-  </aside>
+<main class="flex-grow max-w-container-max mx-auto w-full px-lg py-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg items-start">
+<aside class="md:col-span-3 bg-surface-container-low rounded-xl border border-outline-variant p-sm flex flex-col gap-xs shadow-sm h-fit">
+<div class="flex flex-col gap-xs">
 
-  <div class="flex-1 space-y-6">
-    <section class="bg-white rounded-xl border border-border card-shadow overflow-hidden">
-      <div class="p-8 border-b border-border bg-slate-50/30 flex justify-between items-start">
-        <div>
-          <h1 class="text-3xl font-bold text-primary">Thông tin tài khoản</h1>
-          <p class="text-secondary mt-1">Quản lý hồ sơ cá nhân và cài đặt bảo mật của bạn.</p>
-        </div>
-        <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100 shadow-inner">
-          <svg class="h-10 w-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-        </div>
-      </div>
+</div>
+</aside>
 
-      <div class="p-8 space-y-8">
-        <div id="profileMessage" class="hidden rounded-lg border px-4 py-3 text-sm font-medium"></div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-          <div class="space-y-2">
-            <label class="block text-xs font-bold text-secondary tracking-wider uppercase">Họ và tên</label>
-            <input id="fullName" class="w-full bg-slate-100 border-none rounded-lg py-3.5 px-4 text-primary font-medium focus:ring-0" readonly type="text">
-          </div>
-          <div class="space-y-2">
-            <label class="block text-xs font-bold text-secondary tracking-wider uppercase">Email</label>
-            <input id="email" class="w-full bg-slate-100 border-none rounded-lg py-3.5 px-4 text-primary font-medium focus:ring-0" readonly type="email">
-          </div>
-          <div class="space-y-2">
-            <label class="block text-xs font-bold text-secondary tracking-wider uppercase">Tên đăng nhập</label>
-            <input id="username" class="w-full bg-slate-100 border-none rounded-lg py-3.5 px-4 text-primary font-medium focus:ring-0" readonly type="text">
-          </div>
-          <div class="space-y-2">
-            <label class="block text-xs font-bold text-secondary tracking-wider uppercase">Trạng thái email</label>
-            <div class="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-sm font-semibold">Đã xác minh</div>
-          </div>
-        </div>
-      </div>
+<section class="md:col-span-9">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden">
+<div class="bg-primary-container/10 p-xl border-b border-outline-variant flex justify-between items-center">
+<div>
+<h1 class="text-headline-lg font-headline-lg text-primary">Thông tin tài khoản</h1>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">Quản lý hồ sơ cá nhân và cài đặt bảo mật của bạn.</p>
+</div>
+<div class="hidden lg:block">
+<div class="w-20 h-20 rounded-full border-4 border-surface shadow-md overflow-hidden">
+<img alt="User Profile Big" class="w-full h-full object-cover" id="profile-avatar-big"
+     src="https://ui-avatars.com/api/?name=User&background=00163c&color=fff">
+</div>
+</div>
+</div>
 
-      <div class="px-8 py-6 border-t border-border bg-slate-50/30 flex flex-wrap gap-3">
-        <button id="editBtn" class="px-6 py-2.5 bg-white border border-primary text-primary font-bold rounded-lg hover:bg-slate-50 transition-all" type="button">Chỉnh sửa thông tin</button>
-        <button id="saveBtn" class="hidden px-6 py-2.5 bg-primary text-white font-bold rounded-lg hover:bg-slate-800 transition-all" type="button">Lưu thay đổi</button>
-        <button id="cancelBtn" class="hidden px-6 py-2.5 bg-white border border-border text-slate-700 font-bold rounded-lg hover:bg-slate-50 transition-all" type="button">Hủy</button>
-        <button id="logoutBtn" class="ml-auto px-6 py-2.5 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-all" type="button">Đăng xuất</button>
-      </div>
-    </section>
+<div class="p-xl grid grid-cols-1 md:grid-cols-2 gap-xl">
+<div class="flex flex-col gap-xs">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-wider">Họ và tên</label>
+<div class="p-md bg-surface-container rounded-lg border border-outline-variant flex items-center justify-between">
+<span class="text-body-md font-semibold text-on-surface" id="field-fullname">Đang tải...</span>
+<span class="material-symbols-outlined text-outline">badge</span>
+</div>
+</div>
 
-    <section class="bg-[#f1f5f9] border border-border rounded-xl p-6 flex items-start space-x-4">
-      <div class="text-slate-600 mt-1">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-      </div>
-      <div>
-        <h3 class="text-sm font-bold text-slate-800">Bảo mật thông tin</h3>
-        <p class="text-sm text-slate-600 mt-1">Thông tin tài khoản của bạn được mã hóa và bảo mật theo tiêu chuẩn học thuật cao nhất. Đừng bao giờ chia sẻ thông tin đăng nhập của bạn với bất kỳ ai.</p>
-      </div>
-    </section>
-  </div>
+<div class="flex flex-col gap-xs">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-wider">Email</label>
+<div class="p-md bg-surface-container rounded-lg border border-outline-variant flex items-center justify-between">
+<span class="text-body-md font-semibold text-on-surface" id="field-email">Đang tải...</span>
+<span class="material-symbols-outlined text-outline">mail</span>
+</div>
+</div>
+
+<div class="flex flex-col gap-xs">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-wider">Tên đăng nhập</label>
+<div class="p-md bg-surface-container rounded-lg border border-outline-variant flex items-center justify-between">
+<span class="text-body-md font-semibold text-on-surface" id="field-username">Đang tải...</span>
+<span class="material-symbols-outlined text-outline">alternate_email</span>
+</div>
+</div>
+
+<div class="flex flex-col gap-xs">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-wider">Mã người dùng</label>
+<div class="p-md bg-surface-container rounded-lg border border-outline-variant flex items-center justify-between">
+<span class="text-body-md font-semibold text-on-surface" id="field-userid">Đang tải...</span>
+<span class="material-symbols-outlined text-outline">tag</span>
+</div>
+</div>
+
+<div class="md:col-span-2 flex flex-col gap-xs">
+<label class="text-label-sm text-on-surface-variant uppercase tracking-wider">Trạng thái Email</label>
+<div class="flex items-center gap-sm p-md bg-tertiary-fixed/10 border border-tertiary-fixed rounded-lg w-fit">
+<div class="bg-tertiary-container text-on-tertiary-container w-6 h-6 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="text-body-md font-bold text-on-tertiary-fixed-variant">Đã xác minh</span>
+</div>
+</div>
+</div>
+
+<div class="px-xl py-lg bg-surface-container-low border-t border-outline-variant flex flex-wrap items-center gap-md">
+<button class="px-lg py-sm border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary-fixed transition-all text-label-md font-label-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-[20px]">edit</span>Chỉnh sửa thông tin
+</button>
+<button class="px-lg py-sm bg-primary text-on-primary font-bold rounded-xl hover:bg-primary-container shadow-sm hover:shadow-md transition-all text-label-md font-label-md flex items-center gap-sm" onclick="openLogoutModal()">
+<span class="material-symbols-outlined text-[20px]">logout</span>Đăng xuất
+</button>
+</div>
+</div>
+
+<div class="mt-lg p-lg bg-on-primary-fixed-variant/5 border border-on-primary-fixed-variant/20 rounded-xl flex items-start gap-md">
+<span class="material-symbols-outlined text-on-primary-fixed-variant">info</span>
+<div>
+<h4 class="text-label-md font-bold text-on-primary-fixed-variant">Bảo mật thông tin</h4>
+<p class="text-body-md text-on-surface-variant">Thông tin tài khoản của bạn được mã hóa và bảo mật theo tiêu chuẩn học thuật cao nhất. Đừng bao giờ chia sẻ thông tin đăng nhập của bạn với bất kỳ ai.</p>
+</div>
+</div>
+</section>
+</div>
 </main>
 
+<footer class="bg-surface-container-lowest border-t border-outline-variant mt-section"></footer>
+
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-md hidden" id="logout-modal">
+<div class="absolute inset-0 modal-overlay" onclick="closeLogoutModal()"></div>
+<div class="relative bg-surface rounded-2xl shadow-2xl max-w-md w-full overflow-hidden border border-outline-variant">
+<div class="p-xl">
+<div class="w-16 h-16 bg-error-container text-on-error-container rounded-full flex items-center justify-center mb-xl mx-auto">
+<span class="material-symbols-outlined text-[32px]">logout</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-center text-primary mb-md">Xác nhận đăng xuất</h3>
+<p class="text-body-md font-body-md text-center text-on-surface-variant mb-xl">
+    Bạn có chắc chắn muốn đăng xuất khỏi ScholarTrend không? Phiên làm việc của bạn sẽ được kết thúc an toàn.
+</p>
+<div class="flex flex-col gap-sm">
+<button class="w-full py-md bg-primary text-on-primary font-bold rounded-xl hover:bg-primary-container transition-all text-label-md font-label-md shadow-sm" onclick="confirmLogout()">Đăng xuất</button>
+<button class="w-full py-md bg-surface-container-high text-on-surface-variant font-bold rounded-xl hover:bg-surface-variant transition-all text-label-md font-label-md" onclick="closeLogoutModal()">Hủy</button>
+</div>
+</div>
+</div>
+</div>
+
 <script>
-let originalUser = null;
+    // ⚠️ Đổi lại đúng đường dẫn API backend thật của bạn nếu domain/thư mục thay đổi
+    const API_BASE = "http://localhost/Scientific-Journal-Publication-Trend-Tracking-System/source_code/api";
 
-const fields = ["fullName", "email", "username"];
-const messageBox = document.getElementById("profileMessage");
-const editBtn = document.getElementById("editBtn");
-const saveBtn = document.getElementById("saveBtn");
-const cancelBtn = document.getElementById("cancelBtn");
-const logoutBtn = document.getElementById("logoutBtn");
+    async function loadUserProfile() {
+        try {
+            const res = await fetch(`${API_BASE}/check_session.php`, {
+                method: "GET",
+                credentials: "include" // BẮT BUỘC để gửi cookie session
+            });
+            const data = await res.json();
 
-function setMessage(message, type = "success") {
-  messageBox.textContent = message;
-  messageBox.className = type === "success"
-    ? "rounded-lg border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700"
-    : "rounded-lg border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-red-700";
-}
+            if (!data.success) {
+                // Chưa đăng nhập -> đưa về trang đăng nhập
+                window.location.href = "dangnhap.html";
+                return;
+            }
 
-function hideMessage() {
-  messageBox.classList.add("hidden");
-}
+            const user = data.user;
+            document.getElementById("field-fullname").textContent = user.fullName;
+            document.getElementById("field-email").textContent = user.email;
+            document.getElementById("field-username").textContent = user.username;
+            document.getElementById("field-userid").textContent = user.userId;
 
-function fillUser(user) {
-  originalUser = { ...user };
-  document.getElementById("fullName").value = user.fullName || "";
-  document.getElementById("email").value = user.email || "";
-  document.getElementById("username").value = user.username || "";
-}
+            if (user.avatarUrl) {
+                document.getElementById("profile-avatar-big").src = user.avatarUrl;
+            } else {
+                document.getElementById("profile-avatar-big").src =
+                    `https://ui-avatars.com/api/?name=${encodeURIComponent(user.fullName)}&background=00163c&color=fff`;
+            }
 
-function setEditMode(isEditing) {
-  fields.forEach((id) => {
-    const input = document.getElementById(id);
-    input.readOnly = !isEditing;
-  });
-  editBtn.classList.toggle("hidden", isEditing);
-  saveBtn.classList.toggle("hidden", !isEditing);
-  cancelBtn.classList.toggle("hidden", !isEditing);
-  hideMessage();
-}
-
-async function loadProfile() {
-  const response = await fetch("../api/hosocanhan.php");
-  const result = await response.json();
-
-  if (!result.success) {
-    alert(result.message || "Bạn chưa đăng nhập!");
-    window.location.href = "dangnhap.html";
-    return;
-  }
-
-  fillUser(result.user);
-}
-
-editBtn.addEventListener("click", function () {
-  setEditMode(true);
-  document.getElementById("fullName").focus();
-});
-
-cancelBtn.addEventListener("click", function () {
-  fillUser(originalUser);
-  setEditMode(false);
-});
-
-saveBtn.addEventListener("click", async function () {
-  try {
-    const response = await fetch("../api/capnhathoso.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        fullName: document.getElementById("fullName").value.trim(),
-        email: document.getElementById("email").value.trim(),
-        username: document.getElementById("username").value.trim()
-      })
-    });
-
-    const result = await response.json();
-
-    if (!result.success) {
-      setMessage(result.message || "Cập nhật thất bại.", "error");
-      return;
+        } catch (err) {
+            console.error("Lỗi tải thông tin người dùng:", err);
+        }
     }
 
-    fillUser(result.user);
-    localStorage.setItem("user", JSON.stringify(result.user));
-    setEditMode(false);
-    setMessage(result.message || "Cập nhật thông tin thành công.");
-  } catch (error) {
-    console.error(error);
-    setMessage("Không cập nhật được thông tin tài khoản.", "error");
-  }
-});
+    function openLogoutModal() {
+        document.getElementById('logout-modal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
 
-logoutBtn.addEventListener("click", async function () {
-  await fetch("../api/dangxuat.php");
-  localStorage.removeItem("user");
-  window.location.href = "dangnhap.html";
-});
+    function closeLogoutModal() {
+        document.getElementById('logout-modal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
 
-window.onload = loadProfile;
+    async function confirmLogout() {
+        try {
+            // Gọi đúng API dangxuat.php để huỷ session
+            await fetch(`${API_BASE}/dangxuat.php`, {
+                method: "GET",
+                credentials: "include"
+            });
+        } catch (err) {
+            console.error("Lỗi đăng xuất:", err);
+        } finally {
+            window.location.href = "dangnhap.html";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadUserProfile);
 </script>
 </body>
 </html>
