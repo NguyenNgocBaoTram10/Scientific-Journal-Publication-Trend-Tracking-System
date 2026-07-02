@@ -973,8 +973,45 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\caption{Entity Relationship Diagram (ERD)}
 	\label{fig:erd}
 \end{figure}
-\subsection{ Authentication
-}
+\subsection{Authentication}
+
+\subsubsection{Login}
+
+\textbf{Role:} User
+
+\textbf{Function trigger:}
+
+- The user enters a username and password to log in.
+
+\textbf{Function description:}
+
+- \textbf{Purpose:} Allow users to access the system.
+
+- \textbf{Data processing:} Authenticate the entered username and password against the system database.
+
+\textbf{Function Details:}
+
+- If the login is successful, redirect the user to the Home page.
+
+- If the login fails, display the error message: ``Tên đăng nhập hoặc mật khẩu không đúng.''
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{dk.jpg}
+\caption{}
+\label{fig:erd}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{dnl.jpg}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{gdc.jpg}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
 
 
 \chapter{\centering\Large\bfseries IV. Software Design Description}
