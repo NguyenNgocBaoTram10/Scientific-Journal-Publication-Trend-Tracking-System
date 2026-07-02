@@ -563,7 +563,7 @@ function saveBookmark(paper, btnEl) {
   .then(function(res) {
     if (res.status === 401) {
       showToast('Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.', 'error');
-      setTimeout(function(){ window.location.href = 'dangnhap.php'; }, 1200);
+      setTimeout(function(){ window.location.href = 'dangnhap.html'; }, 1200);
       return null;
     }
     return res.json();
