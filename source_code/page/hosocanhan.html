@@ -139,7 +139,7 @@
 </div>
 
 <div class="px-xl py-lg bg-surface-container-low border-t border-outline-variant flex flex-wrap items-center gap-md">
-<button class="px-lg py-sm border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary-fixed transition-all text-label-md font-label-md flex items-center gap-sm">
+<button onclick="openEditModal()" class="px-lg py-sm border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary-fixed transition-all text-label-md font-label-md flex items-center gap-sm">
 <span class="material-symbols-outlined text-[20px]">edit</span>Chỉnh sửa thông tin
 </button>
 <button class="px-lg py-sm bg-primary text-on-primary font-bold rounded-xl hover:bg-primary-container shadow-sm hover:shadow-md transition-all text-label-md font-label-md flex items-center gap-sm" onclick="openLogoutModal()">
@@ -175,6 +175,34 @@
 <div class="flex flex-col gap-sm">
 <button class="w-full py-md bg-primary text-on-primary font-bold rounded-xl hover:bg-primary-container transition-all text-label-md font-label-md shadow-sm" onclick="confirmLogout()">Đăng xuất</button>
 <button class="w-full py-md bg-surface-container-high text-on-surface-variant font-bold rounded-xl hover:bg-surface-variant transition-all text-label-md font-label-md" onclick="closeLogoutModal()">Hủy</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-md hidden" id="edit-modal">
+<div class="absolute inset-0 modal-overlay" onclick="closeEditModal()"></div>
+<div class="relative bg-surface rounded-2xl shadow-2xl max-w-md w-full overflow-hidden border border-outline-variant">
+<div class="p-xl">
+<h3 class="text-headline-md font-headline-md text-center text-primary mb-md">Chỉnh sửa thông tin</h3>
+<p class="text-body-md font-body-md text-center text-on-surface-variant mb-xl">Cập nhật họ tên và email của bạn.</p>
+<div class="flex flex-col gap-md">
+<label class="flex flex-col gap-xs text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">
+Họ và tên
+<input id="edit-fullname" class="rounded-lg border border-outline-variant bg-surface-container p-md text-body-md text-on-surface normal-case font-normal tracking-normal" type="text">
+</label>
+<label class="flex flex-col gap-xs text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">
+Tên đăng nhập
+<input id="edit-username" class="rounded-lg border border-outline-variant bg-surface-container p-md text-body-md text-on-surface normal-case font-normal tracking-normal" type="text">
+</label>
+<label class="flex flex-col gap-xs text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">
+Email
+<input id="edit-email" class="rounded-lg border border-outline-variant bg-surface-container p-md text-body-md text-on-surface normal-case font-normal tracking-normal" type="email">
+</label>
+<p class="hidden text-error text-label-md" id="edit-message"></p>
+<button class="w-full py-md bg-primary text-on-primary font-bold rounded-xl hover:bg-primary-container transition-all text-label-md font-label-md shadow-sm" onclick="saveProfile()">Lưu thay đổi</button>
+<button class="w-full py-md bg-surface-container-high text-on-surface-variant font-bold rounded-xl hover:bg-surface-variant transition-all text-label-md font-label-md" onclick="closeEditModal()">Hủy</button>
 </div>
 </div>
 </div>
@@ -226,6 +254,57 @@
         document.body.style.overflow = 'auto';
     }
 
+
+    function openEditModal() {
+        const user = window.currentUser || {};
+        document.getElementById('edit-fullname').value = user.fullName || document.getElementById('field-fullname').textContent.trim();
+        document.getElementById('edit-username').value = user.username || document.getElementById('field-username').textContent.trim();
+        document.getElementById('edit-email').value = user.email || document.getElementById('field-email').textContent.trim();
+        document.getElementById('edit-message').classList.add('hidden');
+        document.getElementById('edit-modal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeEditModal() {
+        document.getElementById('edit-modal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+
+    async function saveProfile() {
+        const fullName = document.getElementById('edit-fullname').value.trim();
+        const username = document.getElementById('edit-username').value.trim();
+        const email = document.getElementById('edit-email').value.trim();
+        const message = document.getElementById('edit-message');
+
+        if (!fullName || !username || !email) {
+            message.textContent = 'Vui lòng nhập đầy đủ họ tên, tên đăng nhập và email.';
+            message.classList.remove('hidden');
+            return;
+        }
+
+        try {
+            const res = await fetch(`${API_BASE}/capnhathoso.php`, {
+                method: 'POST',
+                credentials: 'include',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ fullName, username, email })
+            });
+            const data = await res.json();
+
+            if (!data.success) {
+                message.textContent = data.message || 'Cập nhật thất bại.';
+                message.classList.remove('hidden');
+                return;
+            }
+
+            closeEditModal();
+            await loadUserProfile();
+        } catch (err) {
+            console.error('Lỗi cập nhật hồ sơ:', err);
+            message.textContent = 'Không thể cập nhật hồ sơ.';
+            message.classList.remove('hidden');
+        }
+    }
     async function confirmLogout() {
         try {
             // Gọi đúng API dangxuat.php để huỷ session
