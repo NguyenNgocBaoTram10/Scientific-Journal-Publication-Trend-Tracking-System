@@ -897,64 +897,45 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	
 	\vspace{6pt}
 	
-	\begin{tabular}{L{5cm} C{3cm} C{3cm} C{3.5cm}}
-		
-		\rowcolor{headerblue}
-		{\color{white}\bfseries Screen} &
-		{\color{white}\bfseries Researcher} &
-		{\color{white}\bfseries Lecturer/Student} &
-		{\color{white}\bfseries System Administrator} \\
-		
-		\rowcolor{rowblue}
-		Login & x & x & x \\
-		
-		\rowcolor{rowwhite}
-		Logout & x & x & x \\
-		
-		\rowcolor{rowblue}
-		Register & x & x & \\
-		
-		\rowcolor{rowwhite}
-		Search Research Papers & x & x & \\
-		
-		\rowcolor{rowblue}
-		View Paper Details & x & x & \\
-		
-		\rowcolor{rowwhite}
-		Save Bookmarks & x & x & \\
-		
-		\rowcolor{rowblue}
-		Track Publication Trends & x & x & \\
-		
-		\rowcolor{rowwhite}
-		View Dashboard & x & x & \\
-		
-		\rowcolor{rowblue}
-		Generate Reports & x & x & \\
-		
-		\rowcolor{rowwhite}
-		View Trending Topics & x & x & \\
-		
-		\rowcolor{rowblue}
-		Follow Topics & x & x & \\
-		
-		\rowcolor{rowwhite}
-		Receive Notifications & x & x & \\
-		
-		\rowcolor{rowblue}
-		Manage System & & & x \\
-		
-		\rowcolor{rowwhite}
-		Manage Users & & & x \\
-		
-		\rowcolor{rowblue}
-		Configure API Sources & & & x \\
-		
-		\rowcolor{rowwhite}
-		Sync Academic Data & & & x \\
-		
-	\end{tabular}
-}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{longtable}{L{5.5cm} C{2.8cm} C{3.2cm} C{3.5cm}}
+	\rowcolor{headerblue}
+	\textcolor{white}{\textbf{Screen}} & \textcolor{white}{\textbf{Researcher}} & \textcolor{white}{\textbf{Lecturer/Student}} & \textcolor{white}{\textbf{System Administrator}} \\
+	\hline
+	\endfirsthead
+	
+	\rowcolor{headerblue}
+	\textcolor{white}{\textbf{Screen}} & \textcolor{white}{\textbf{Researcher}} & \textcolor{white}{\textbf{Lecturer/Student}} & \textcolor{white}{\textbf{System Administrator}} \\
+	\hline
+	\endhead
+	
+	\hline
+	\endfoot
+	
+	\rowcolor{rowblue} Login & x & x & x \\
+	Logout & x & x & x \\
+	\rowcolor{rowblue} Register & x & x & \\
+	Search Research Papers & x & x & \\
+	\rowcolor{rowblue} View Paper Details & x & x & \\
+	Save Bookmarks & x & x & \\
+	\rowcolor{rowblue} Track Publication Trends & x & x & \\
+	View Dashboard & x & x & \\
+	\rowcolor{rowblue} Generate Reports & x & x & \\
+	View Trending Topics & x & x & \\
+	\rowcolor{rowblue} Follow Topics & x & x & \\
+	Receive Notifications & x & x & \\
+	\rowcolor{rowblue} View Profile & x & x & \\
+	Edit Profile & x & x & \\
+	\rowcolor{rowblue} View Notifications & x & x & \\
+	Create Report & x & x & \\
+	\rowcolor{rowblue} Manage System & & & x \\
+	Manage Users & & & x \\
+	\rowcolor{rowblue} Configure API Sources & & & x \\
+	Sync Academic Data & & & x \\
+	
+\end{longtable}
 \subsubsection{Non-Screen Functions}
 
 {
