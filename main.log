@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.27)  2 JUL 2026 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.27)  2 JUL 2026 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -663,57 +663,32 @@ Package: setspace 2022/12/04 v6.7b set line spacing
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count315
-) (main.aux
-Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported on input line 8.
-
-
-LaTeX Warning: Label `fig:erd' multiply defined.
-
-
-LaTeX Warning: Label `fig:erd' multiply defined.
-
-
-LaTeX Warning: Label `fig:erd' multiply defined.
-
-
-LaTeX Warning: Label `fig:erd' multiply defined.
-
-)
-Runaway argument?
-{\contentsline {figure}{\numberline {13}{\ignorespaces Sequence Diagr\ETC.
-! File ended while scanning use of \@writefile.
-<inserted text> 
-                \par 
-l.74 \begin{document}
-                     
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
-
+) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
+(babel)             Reported on input line 76.
+
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count316
@@ -769,14 +744,14 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 74.
+Package hyperref Info: Link coloring OFF on input line 76.
 (main.out)
 Runaway argument?
 {\376\377\000A\000c\000t\000i\0 
 ! File ended while scanning use of \@@BOOKMARK.
 <inserted text> 
                 \par 
-l.74 \begin{document}
+l.76 \begin{document}
                      
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -789,7 +764,7 @@ Runaway argument?
 ! File ended while scanning use of \@@BOOKMARK.
 <inserted text> 
                 \par 
-l.74 \begin{document}
+l.76 \begin{document}
                      
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -804,517 +779,54 @@ you'd better type `E' or `X' now and fix your file.
 {C:/Users/Acer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 88.
+(hyperref)                removing `\<let>-command' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 88.
+(hyperref)                removing `\\' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 88.
+(hyperref)                removing `\@centercr' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 88.
+(hyperref)                removing `\rightskip' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 88.
+(hyperref)                removing `\@flushglue' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 88.
+(hyperref)                removing `\leftskip' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 88.
+(hyperref)                removing `\@flushglue' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 88.
+(hyperref)                removing `\finalhyphendemerits' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 88.
+(hyperref)                removing `\z@' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 88.
+(hyperref)                removing `\parindent' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 88.
+(hyperref)                removing `\z@' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 88.
+(hyperref)                removing `\parfillskip' on input line 90.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 88.
+(hyperref)                removing `\z@skip' on input line 90.
 
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 9
-9.
-(C:\Program Files\MiKTeX\tex/latex/vntex\t5cmtt.fd
-File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 99.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 99.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 99.
- [2
-
-] [3]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 215.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 215.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.221 	\section{Overview}
-                         
-pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
-1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.222 	\subsection{Scope and estimation}
-                                        
-Overfull \hbox (27.8644pt too wide) in alignment at lines 224--229
- [] [] [] [] 
- []
-
-
-Overfull \hbox (27.8644pt too wide) in alignment at lines 229--235
- [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--246
-[]|\T5/cmr/m/n/12 Set up de-vel-op-ment en-vi-ron-ment (GitHub,
- []
-
-
-Overfull \hbox (27.8644pt too wide) in alignment at lines 235--316
- [] [] [] [] 
- []
-
-[4
-
-]
-pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
-2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.317 	\subsection{Project Objective}
-                                     
-Overfull \hbox (9.70479pt too wide) in paragraph at lines 330--330
-[]|\T5/cmr/bx/n/12 Possibility| 
- []
-
-
-Overfull \hbox (9.70479pt too wide) in paragraph at lines 340--340
-[]|\T5/cmr/bx/n/12 Possibility| 
- []
-
-
-Underfull \hbox (badness 1184) in paragraph at lines 346--346
-[]|\T5/cmr/m/n/12 External aca-demic
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
-\T5/cmr/m/n/12 APIs (Se-man-tic
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
-\T5/cmr/m/n/12 Scholar, Ope-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
-\T5/cmr/m/n/12 nAlex, Cross-ref)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
-\T5/cmr/m/n/12 or change their
- []
-
-
-Underfull \hbox (badness 1881) in paragraph at lines 347--347
-[]|\T5/cmr/m/n/12 The sys-tem can-not
- []
-
-
-Underfull \hbox (badness 7522) in paragraph at lines 347--347
-\T5/cmr/m/n/12 re-trieve pub-li-ca-tion
- []
-
-
-Underfull \hbox (badness 1845) in paragraph at lines 347--347
-\T5/cmr/m/n/12 plete search re-sults
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
-\T5/cmr/m/n/12 mech-a-nisms, mon-i-tor
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
-\T5/cmr/m/n/12 API sta-tus reg-u-larly,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
-\T5/cmr/m/n/12 and cache pre-vi-ously
- []
-
-
-Underfull \hbox (badness 3039) in paragraph at lines 353--353
-[]|\T5/cmr/m/n/12 Large vol-umes of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 353--353
-\T5/cmr/m/n/12 pub-li-ca-tion data
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
-[]|\T5/cmr/m/n/12 Users ex-pe-ri-ence
- []
-
-
-Underfull \hbox (badness 1033) in paragraph at lines 354--354
-\T5/cmr/m/n/12 li-ca-tions or view-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
-[]|\T5/cmr/m/n/12 Optimize database
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
-\T5/cmr/m/n/12 in-dex-ing, im-ple-ment
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
-\T5/cmr/m/n/12 pag-i-na-tion, caching,
- []
-
-
-Underfull \hbox (badness 6625) in paragraph at lines 360--360
-\T5/cmr/m/n/12 i-ties ex-pose user
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--361
-\T5/cmr/m/n/12 data leak-age, and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
-[]|\T5/cmr/m/n/12 Use JWT au-then-ti-ca-
- []
-
-
-Underfull \hbox (badness 1968) in paragraph at lines 363--364
-\T5/cmr/m/n/12 tion, RBAC au-tho-riza-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
-\T5/cmr/m/n/12 HTTPS, and reg-u-lar
- []
-
-
-Underfull \hbox (badness 2073) in paragraph at lines 367--367
-\T5/cmr/m/n/12 cu-rate be-cause of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 368--368
-[]|\T5/cmr/m/n/12 Generated re-ports
- []
-
-
-Underfull \hbox (badness 5175) in paragraph at lines 368--368
-\T5/cmr/m/n/12 and statis-tics may
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 368--368
-\T5/cmr/m/n/12 mis-lead users' re-
- []
-
-
-Underfull \hbox (badness 6542) in paragraph at lines 374--374
-\T5/cmr/m/n/12 be-tween fron-tend,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 374--374
-\T5/cmr/m/n/12 back-end, and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 374--374
-\T5/cmr/m/n/12 database en-coun-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 374--374
-\T5/cmr/m/n/12 ters com-pat-i-bil-ity
- []
-
-
-Underfull \hbox (badness 3000) in paragraph at lines 375--375
-[]|\T5/cmr/m/n/12 Development de-lays
- []
-
-
-Underfull \hbox (badness 1917) in paragraph at lines 375--375
-\T5/cmr/m/n/12 tem fail-ures dur-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
-[]|\T5/cmr/m/n/12 Perform in-te-gra-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
-\T5/cmr/m/n/12 test-ing con-tin-u-ously
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
-\T5/cmr/m/n/12 and main-tain ver-sion
- []
-
-
-Underfull \hbox (badness 1960) in paragraph at lines 381--381
-\T5/cmr/m/n/12 be-fore de-ploy-ment
- []
-
-
-Underfull \hbox (badness 2269) in paragraph at lines 381--381
-\T5/cmr/m/n/12 leaves crit-i-cal de-
- []
-
-
-Underfull \hbox (badness 1521) in paragraph at lines 382--382
-[]|\T5/cmr/m/n/12 System crashes, in-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
-[]|\T5/cmr/m/n/12 Prepare com-pre-hen-sive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
-\T5/cmr/m/n/12 con-duct func-tional,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
-\T5/cmr/m/n/12 in-te-gra-tion, and user
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--388
-[]|\T5/cmr/m/n/12 Project sched-ule
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--388
-\T5/cmr/m/n/12 de-lays due to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--388
-\T5/cmr/m/n/12 un-der-es-ti-mated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 388--388
-\T5/cmr/m/n/12 im-ple-men-ta-tion
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 389--389
-[]|\T5/cmr/m/n/12 Failure to com-plete
- []
-
-
-Underfull \hbox (badness 5756) in paragraph at lines 389--389
-\T5/cmr/m/n/12 the project within
- []
-
-[5]
-pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.395 	\section{Project Deliverables}
-                                     
-! Missing } inserted.
-<inserted text> 
-                }
-l.447 		\end{tabular}
-                     
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-
-Overfull \hbox (130.56303pt too wide) in paragraph at lines 402--454
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 402--454
-
- []
-
-[6]
-Overfull \hbox (69.7582pt too wide) in paragraph at lines 463--503
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 463--503
-
- []
-
-[7]
-Overfull \hbox (1.54361pt too wide) in paragraph at lines 513--513
-[]|\T5/cmr/bx/n/10.95 Communication 
- []
-
-
-Overfull \hbox (55.67459pt too wide) in paragraph at lines 510--552
-[][] 
- []
-
-[8]
-
-Package array Warning: Column L is already defined on input line 567.
-
-[9]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 609.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 609.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax
+LaTeX Font Info:    Trying to load font information for T5+cmtt on inp
