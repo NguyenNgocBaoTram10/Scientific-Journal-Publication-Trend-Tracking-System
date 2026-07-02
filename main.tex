@@ -1012,7 +1012,23 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\caption{}
 	\label{fig:erd}
 \end{figure}
+\subsection{ Register }
 
+\textbf{Role:} User \\
+\textbf{Function trigger:} The user clicks Đăng kí. \\
+\textbf{Function description:}
+\begin{itemize}[label=-]
+	\item Purpose: Create a new user account.
+	\item Data processing: Validate user information and store it in the database.
+\end{itemize}
+\textbf{Function Details:}
+\begin{itemize}[label=-]
+	\item Whether the username already exists
+	\item Validate password requirements.
+	\item Create a new account.
+	\item Display a success message.
+	\item Sign up and check your email.
+\end{itemize}
 
 \chapter{\centering\Large\bfseries IV. Software Design Description}
 \addcontentsline{toc}{chapter}{ IV. Software Design Description}
