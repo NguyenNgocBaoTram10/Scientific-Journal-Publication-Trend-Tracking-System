@@ -51,6 +51,8 @@ bottom=2.5cm
 \definecolor{Simple}{RGB}{198,239,206}
 \definecolor{Medium}{RGB}{255,242,204}
 \definecolor{Complex}{RGB}{244,204,204}
+\definecolor{headerblue}{RGB}{41, 84, 144}
+\definecolor{rowblue}{RGB}{223, 234, 247}
 
 \renewcommand{\arraystretch}{1.3}
 
@@ -438,15 +440,15 @@ bottom=2.5cm
 			{$\bullet$ Finish Software testing document \newline
 				$\bullet$ Finish Release package and user guide} & {} \\
 			
-			\rowcolor{rowblue}
-			\textbf{Sprint 7} & Week 7 & 25/06 -- 01/07/2026 &
-			{$\bullet$ Testing \newline
-				$\bullet$ Finish document \newline
+		\textbf{Sprint 7} & Week 7 & 25/06 -- 01/07/2026 &
+		{$\bullet$ Testing \newline
+			$\bullet$ Finish document
+		} & {} \\
 			
 			
 		\end{tabular}
-	}
-	{
+	
+	
 		\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 		\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 		\renewcommand{\arraystretch}{1.6}
@@ -772,7 +774,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \subsubsection{Screens Flow}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{admn.jpg}
+	\includegraphics[width=\textwidth]{admin.jpg}
 	\caption{Screens Flow}
 	\label{fig:Screens Flow-view-paper-details}
 \end{figure}
@@ -783,6 +785,8 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\caption{Screen Description}
 	\label{fig:Screen Description-view-paper-details}
 \end{figure}
+
+
 % ========================================================================
 % PHẦN NÀY CHỈ CHỨA BẢNG - dán vào vị trí bạn muốn trong báo cáo đã có
 % Các package bên dưới cần thêm vào PHẦN PREAMBLE (trước \begin{document})
@@ -798,7 +802,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\renewcommand{\arraystretch}{1.3}
 	\rowcolors{2}{gray!8}{white}
 	
-	\begin{longtable}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{8.5cm}|}
+	\begin{longtable}{|>{\raggedright\arraybackslash}p{0.15\textwidth}|>{\raggedright\arraybackslash}p{0.20\textwidth}|>{\raggedright\arraybackslash}p{0.57\textwidth}|}
 		\toprule
 		\rowcolor{gray!25}
 		Functional Group &
