@@ -134,11 +134,19 @@
 <div class="flex items-center gap-md">
 
   <!-- Chưa đăng nhập: nút Đăng nhập -->
-  <a href="dangnhap.html" id="login-link"
-     class="hidden font-label-md text-label-md px-lg py-sm bg-primary text-on-primary rounded-lg hover:bg-primary-container transition-all">
-    Đăng nhập
-  </a>
+ 
 
+
+   
+<a href="xemthongbao.html"
+   class="relative w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-all"
+   title="Thông báo">
+    <span class="material-symbols-outlined text-[22px]">notifications</span>
+    <span id="notification-badge"
+          class="hidden absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full min-w-5 h-5 px-1 flex items-center justify-center">
+        0
+    </span>
+</a>
   <!-- Đã đăng nhập: avatar + dropdown -->
   <div class="relative group hidden" id="user-menu">
     <button class="flex items-center gap-xs p-xs rounded-full hover:bg-surface-container transition-colors" id="profile-dropdown-trigger">
@@ -166,25 +174,7 @@
           <span class="material-symbols-outlined text-[18px]">logout</span>
           Đăng xuất
         </button>
-      </div>
-    </div>
-  </div>
 
-</div>
-<a href="xemthongbao.html"
-   class="relative w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-all"
-   title="Thông báo">
-    <span class="material-symbols-outlined text-[22px]">notifications</span>
-    <span id="notification-badge"
-          class="hidden absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full min-w-5 h-5 px-1 flex items-center justify-center">
-        0
-    </span>
-</a>
-
-<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed cursor-pointer hover:shadow-sm transition-all"
-     onclick="window.location.href='hosocanhan.html'">
-    <span class="material-symbols-outlined text-[20px]">person</span>
-(Add admin management modules and notifications)
 </div>
 </nav>
 </header>
