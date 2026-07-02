@@ -987,6 +987,70 @@ Administrators can manage user accounts, configure academic API sources, synchro
 
 \section{System Design}
 \subsection{System Architecture}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Overview_Diagram.png}
+	\label{fig:Overview_Diagram}
+\end{figure}
+\subsubsection{Frontend App}
+
+\textbf{TypeScript (TS):} Core technology used for frontend development, enabling the implementation of scalable, maintainable, and type-safe user interfaces.
+
+\textbf{Pages:} Responsible for rendering the main user interfaces, including Login Page, Dashboard Page, Publication Search Page, and Trend Analysis Page.
+
+\textbf{Components:} Reusable user interface elements used to construct application pages, such as search bars, filter panels, tables, charts, and publication cards.
+
+\textbf{Services:} Responsible for handling communication between the frontend and backend through HTTP requests and responses.
+
+\subsubsection{Backend System}
+
+The backend system follows a layered architecture consisting of Controller Layer, Service Layer, and Repository Layer.
+
+\textbf{Controller Layer}
+
+
+\textbf{AuthController:} Handles authentication requests such as login, logout, and user authorization.
+
+\textbf{PublicationController:} Processes publication-related requests, including publication searching, filtering, and detailed information retrieval.
+
+\textbf{TrendController:} Handles requests related to publication trend analysis, dashboard visualization, and trend monitoring.
+
+\textbf{Service Layer}
+
+\textbf{AuthService:} Implements authentication logic, including user verification and access control.
+
+\textbf{PublicationService:} Handles publication-related business logic such as processing search queries, filtering publications, and managing publication metadata.
+
+\textbf{TrendAnalysisService:} Responsible for trend analysis, topic identification, dashboard analytics, and report generation.
+
+\textbf{Repository Layer}
+
+\textbf{UserRepository:} Manages data access operations related to user accounts and authentication data.
+
+\textbf{PublicationRepository:} Handles database operations related to publication metadata, authors, and research fields.
+
+\textbf{TrendRepository:} Responsible for storing and retrieving trend-related analytical data.
+
+\subsubsection{Database}
+
+\textbf{MySQL Database:} Relational database management system used to store system data, including user accounts, publication metadata, trend records, and system-generated reports.
+
+\subsubsection{External Services}
+
+\textbf{Academic APIs:} External academic data sources used to retrieve scientific publication metadata, including publication titles, authors, research fields, publication years, and citation-related information.
+
+Examples include:
+\begin{itemize}
+	\item OpenAlex
+	\item Crossref
+	\item Google Scholar
+\end{itemize}
+
+These APIs support publication synchronization and provide up-to-date research data for the system.
+
+\subsubsection{Cache Management}
+
+\textbf{Redis Cache:} In-memory caching system used to store frequently accessed data such as dashboard statistics, publication trends, and popular search results to improve system performance and reduce database workload.
 \subsection{Package Diagram}
 \subsubsection{Front End }
 \subsubsection{Back End }
