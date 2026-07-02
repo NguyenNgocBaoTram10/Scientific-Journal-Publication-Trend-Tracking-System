@@ -1,42 +1,46 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  2 JUL 2026 19:45
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.18)  2 JUL 2026 15:44
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./main.tex
 (main.tex
-LaTeX2e <2026-06-01>
-L3 programming layer <2026-05-26>
-(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Program Files\MiKTeX\tex/latex/base\size12.clo
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count276
-\c@section=\count277
-\c@subsection=\count278
-\c@subsubsection=\count279
-\c@paragraph=\count280
-\c@subparagraph=\count281
-\c@figure=\count282
-\c@table=\count283
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen150
+\bibindent=\dimen148
 )
-(C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
-(C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 
-(C:\Program Files\MiKTeX\tex/latex/vntex\t5enc.def
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
 Now handling font encoding T5 ...
 ... processing UTF-8 mapping file for font encoding T5
 
-(C:\Program Files\MiKTeX\tex/latex/vntex\t5enc.dfu
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.dfu
 File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+00AB (decimal 171)
    defining Unicode char U+00BB (decimal 187)
@@ -193,49 +197,51 @@ File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
 LaTeX Font Info:    Trying to load font information for T5+cmr on input line 11
 6.
 
-(C:\Program Files\MiKTeX\tex/latex/vntex\t5cmr.fd
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ))
-(C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2026/05/20 v26.8 The multilingual framework for LuaLaTeX, pdfLaT
-eX and XeLaTeX
-\babel@savecnt=\count284
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count283
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2084.
+ne 2068.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2086.
+ne 2070.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2088.
+e 2072.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2089.
+e 2073.
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2090.
+on input line 2074.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2092.
+on input line 2076.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2117.
-\U@D=\dimen151
+on input line 2101.
+\U@D=\dimen149
 \l@unhyphenated=\language79
 
-(C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count285
+\bbl@dirlevel=\count284
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
-(babel)             Reported on input line 4228.
+(babel)             Reported on input line 4196.
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(C:\Program Files\MiKTeX\tex/generic/babel/locale/vi\babel-vietnamese.tex)
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/vi\babel
+-vietnamese.tex)
 Package babel Info: Importing font and identification data for vietnamese
-(babel)             from babel-vi.ini. Reported on input line 4356.
+(babel)             from babel-vi.ini. Reported on input line 4320.
 
-(C:\Program Files\MiKTeX\tex/latex/babel-vietnamese\vietnamese.ldf
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/babel-vietnamese\vietna
+mese.ldf
 Language: vietnamese 
 
 
@@ -250,7 +256,7 @@ Package babel Info: Hyphen rules for 'vietnamese' set to \l@english
 Package babel Info: Hyphen rules for 'vietnam' set to \l@english
 (babel)             (\language0). Reported on input line 38.
 Loading definitions for the Vietnamese font encoding
-(C:\Program Files\MiKTeX\tex/latex/vntex\t5enc.def
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
 LaTeX Font Info:    Redeclaring font encoding T5 on input line 75.
 LaTeX Encoding Info:    Redeclaring text command \` (encoding T5) on input line
@@ -382,18 +388,18 @@ ine 432.
 )
 Package babel Info: Making " an active character on input line 147.
 ))
-(C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 )
-(C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -403,123 +409,123 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)
-(C:\Program Files\MiKTeX\tex/latex/colortbl\colortbl.sty
+) (C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
-
-(C:\Program Files\MiKTeX\tex/latex/tools\array.sty
-Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
-\col@sep=\dimen152
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen150
 \ar@mcellbox=\box53
-\extrarowheight=\dimen153
+\extrarowheight=\dimen151
 \NC@list=\toks19
 \extratabsurround=\skip51
 \backup@length=\skip52
 \ar@cellbox=\box54
 )
-new hooks used!!
+\everycr=\toks20
 \minrowclearance=\skip53
-\rownum=\count286
-) (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
+\rownum=\count285
+)
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen154
-\TX@old@table=\dimen155
-\TX@old@col=\dimen156
-\TX@target=\dimen157
-\TX@delta=\dimen158
-\TX@cols=\count287
-\TX@ftn=\toks20
+\TX@col@width=\dimen152
+\TX@old@table=\dimen153
+\TX@old@col=\dimen154
+\TX@target=\dimen155
+\TX@delta=\dimen156
+\TX@cols=\count286
+\TX@ftn=\toks21
 )
-(C:\Program Files\MiKTeX\tex/latex/booktabs\booktabs.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen159
-\lightrulewidth=\dimen160
-\cmidrulewidth=\dimen161
-\belowrulesep=\dimen162
-\belowbottomsep=\dimen163
-\aboverulesep=\dimen164
-\abovetopsep=\dimen165
-\cmidrulesep=\dimen166
-\cmidrulekern=\dimen167
-\defaultaddspace=\dimen168
-\@cmidla=\count288
-\@cmidlb=\count289
-\@aboverulesep=\dimen169
-\@belowrulesep=\dimen170
-\@thisruleclass=\count290
-\@lastruleclass=\count291
-\@thisrulewidth=\dimen171
+\heavyrulewidth=\dimen157
+\lightrulewidth=\dimen158
+\cmidrulewidth=\dimen159
+\belowrulesep=\dimen160
+\belowbottomsep=\dimen161
+\aboverulesep=\dimen162
+\abovetopsep=\dimen163
+\cmidrulesep=\dimen164
+\cmidrulekern=\dimen165
+\defaultaddspace=\dimen166
+\@cmidla=\count287
+\@cmidlb=\count288
+\@aboverulesep=\dimen167
+\@belowrulesep=\dimen168
+\@thisruleclass=\count289
+\@lastruleclass=\count290
+\@thisrulewidth=\dimen169
 )
-(C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty
-Package: longtable 2026-01-28 v4.27 Multi-page Table package (DPC)
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip54
 \LTright=\skip55
 \LTpre=\skip56
 \LTpost=\skip57
-\LTchunksize=\count292
-\LTcapwidth=\dimen172
+\LTchunksize=\count291
+\LTcapwidth=\dimen170
 \LT@head=\box55
 \LT@firsthead=\box56
 \LT@foot=\box57
 \LT@lastfoot=\box58
 \LT@gbox=\box59
-\LT@cols=\count293
-\LT@rows=\count294
-\c@LT@tables=\count295
-\c@LT@chunks=\count296
-\LT@p@ftn=\toks21
+\LT@cols=\count292
+\LT@rows=\count293
+\c@LT@tables=\count294
+\c@LT@chunks=\count295
+\LT@p@ftn=\toks22
 )
-(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
 )
-(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen173
-\Gin@req@width=\dimen174
-)
-(C:\Program Files\MiKTeX\tex/latex/float\float.sty
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
+) (C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count297
-\float@exts=\toks23
+\c@float@type=\count296
+\float@exts=\toks24
 \float@box=\box60
-\@float@everytoks=\toks24
+\@float@everytoks=\toks25
 \@floatcapt=\box61
 )
-(C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
 
-(C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count298
-\Gm@cntv=\count299
-\c@Gm@tempcnt=\count300
-\Gm@bindingoffset=\dimen175
-\Gm@wd@mp=\dimen176
-\Gm@odd@mp=\dimen177
-\Gm@even@mp=\dimen178
-\Gm@layoutwidth=\dimen179
-\Gm@layoutheight=\dimen180
-\Gm@layouthoffset=\dimen181
-\Gm@layoutvoffset=\dimen182
-\Gm@dimlist=\toks25
+\Gm@cnth=\count297
+\Gm@cntv=\count298
+\c@Gm@tempcnt=\count299
+\Gm@bindingoffset=\dimen173
+\Gm@wd@mp=\dimen174
+\Gm@odd@mp=\dimen175
+\Gm@even@mp=\dimen176
+\Gm@layoutwidth=\dimen177
+\Gm@layoutheight=\dimen178
+\Gm@layouthoffset=\dimen179
+\Gm@layoutvoffset=\dimen180
+\Gm@dimlist=\toks26
 
+<<<<<<< HEAD
 (C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Program Files\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
@@ -531,100 +537,140 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enitdp@description=\count302
 )
 (C:\Program Files\MiKTeX\tex/latex/xurl\xurl.sty
+=======
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 
-(C:\Program Files\MiKTeX\tex/latex/url\url.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ))
-(C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
-(C:\Program Files\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
-(C:\Program Files\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(C:\Program Files\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-(C:\Program Files\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(C:\Program Files\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ))
-(C:\Program Files\MiKTeX\tex/latex/hycolor\hycolor.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
 
-(C:\Program Files\MiKTeX\tex/latex/refcount\refcount.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 
-(C:\Program Files\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
+<<<<<<< HEAD
 \c@section@level=\count303
+=======
+\c@section@level=\count300
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 )
-(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+<<<<<<< HEAD
 \etb@tempcnta=\count304
+=======
+\etb@tempcnta=\count301
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 )
-(C:\Program Files\MiKTeX\tex/generic/stringenc\stringenc.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
+<<<<<<< HEAD
 \@linkdim=\dimen184
 \Hy@linkcounter=\count305
 \Hy@pagecounter=\count306
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+=======
+\@linkdim=\dimen181
+\Hy@linkcounter=\count302
+\Hy@pagecounter=\count303
+ (C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(C:\Program Files\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
+<<<<<<< HEAD
 \Hy@SavedSpaceFactor=\count307
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+=======
+\Hy@SavedSpaceFactor=\count304
+ (C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4199.
-Package hyperref Info: Link nesting OFF on input line 4204.
-Package hyperref Info: Hyper index ON on input line 4207.
-Package hyperref Info: Plain pages OFF on input line 4214.
-Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+<<<<<<< HEAD
 Package hyperref Info: Bookmarks ON on input line 4466.
 \c@Hy@tempcnt=\count308
 LaTeX Info: Redefining \url on input line 4805.
 \XeTeXLinkMargin=\dimen185
+=======
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count305
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen182
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 
-(C:\Program Files\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(C:\Program Files\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
+<<<<<<< HEAD
 \Fld@menulength=\count309
 \Field@Width=\dimen186
 \Fld@charsize=\dimen187
@@ -645,11 +691,35 @@ Package hyperref Info: Driver (autodetected): hpdftex.
 File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
 \Fld@listcount=\count313
 \c@bookmark@seq@number=\count314
+=======
+\Fld@menulength=\count306
+\Field@Width=\dimen183
+\Fld@charsize=\dimen184
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count307
+\c@Item=\count308
+\c@Hfootnote=\count309
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
 
-(C:\Program Files\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count310
+\c@bookmark@seq@number=\count311
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
+
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 
-(C:\Program Files\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -657,12 +727,19 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip59
 )
-(C:\Program Files\MiKTeX\tex/latex/setspace\setspace.sty
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
+<<<<<<< HEAD
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count315
+=======
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count312
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 ) (main.aux
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported on input line 8.
@@ -763,6 +840,7 @@ LaTeX Warning: Label `fig:erd' multiply defined.
 )
 \openout1 = `main.aux'.
 
+<<<<<<< HEAD
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
@@ -797,11 +875,52 @@ LaTeX Font Info:    ... okay on input line 74.
 \makeMPintoPDFobject=\count321
 \everyMPtoPDFconversion=\toks28
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+=======
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count313
+\scratchdimen=\dimen185
+\scratchbox=\box62
+\nofMPsegments=\count314
+\nofMParguments=\count315
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count316
+\MPscratchDim=\dimen186
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
+\everyMPtoPDFconversion=\toks28
+)
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 *geometry* driver: auto-detecting
@@ -845,7 +964,7 @@ Package hyperref Info: Link coloring OFF on input line 74.
 
  [1
 
-{C:/Users/baotr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/ndnqu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\<let>-command' on input line 88.
@@ -899,8 +1018,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\z@skip' on input line 88.
 
 LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 9
+<<<<<<< HEAD
 9.
 (C:\Program Files\MiKTeX\tex/latex/vntex\t5cmtt.fd
+=======
+8.
+(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -908,8 +1032,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 99.
 LaTeX Font Info:    External font `cmex10' loaded for size
+<<<<<<< HEAD
 (Font)              <6> on input line 99.
  [2
+=======
+(Font)              <6> on input line 98.
+
+[2
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 
 ] [3]
 
@@ -996,7 +1126,11 @@ Overfull \hbox (27.8644pt too wide) in alignment at lines 235--316
  [] [] [] [] 
  []
 
+<<<<<<< HEAD
 [4
+=======
+ignored error: Infinite glue shrinkage found in box being split [5
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
@@ -1254,7 +1388,11 @@ Underfull \hbox (badness 5756) in paragraph at lines 389--389
 \T5/cmr/m/n/12 the project within
  []
 
+<<<<<<< HEAD
 [5]
+=======
+ignored error: Infinite glue shrinkage found in box being split [6]
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
@@ -1364,7 +1502,11 @@ as been already used, duplicate ignored
                    \relax 
 l.615 \section{Product Overview}
                                 
+<<<<<<< HEAD
 <Context_Diagram.png, id=555, 1109.14375pt x 679.53876pt>
+=======
+<Context_Diagram.png, id=573, 1109.14375pt x 679.53876pt>
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 File: Context_Diagram.png Graphic file (type png)
 <use Context_Diagram.png>
 Package pdftex.def Info: Context_Diagram.png  used on input line 626.
@@ -1401,7 +1543,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.669 \subsubsection{Diagram}
                              
+<<<<<<< HEAD
 <ucd.png, id=566, 1035.87pt x 849.1725pt>
+=======
+<ucd.png, id=584, 1035.87pt x 849.1725pt>
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 File: ucd.png Graphic file (type png)
 <use ucd.png>
 Package pdftex.def Info: ucd.png  used on input line 672.
@@ -1702,21 +1848,45 @@ Overfull \hbox (74.59341pt too wide) in alignment at lines 697--769
  [] [] [] [] [] 
  []
 
+<<<<<<< HEAD
 [12
 
  <./ucd.png>] [13]
 <admin.jpg, id=580, 866.23625pt x 764.8575pt>
+=======
+ignored error: Infinite glue shrinkage found in box being split [13
+
+ <./ucd.png>]
+ignored error: Infinite glue shrinkage found in box being split [14]
+<admin.jpg, id=598, 866.23625pt x 764.8575pt>
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 File: admin.jpg Graphic file (type jpg)
 <use admin.jpg>
 Package pdftex.def Info: admin.jpg  used on input line 775.
 (pdftex.def)             Requested size: 452.9679pt x 399.9573pt.
+<<<<<<< HEAD
 <researcher.jpg, id=581, 1284.8pt x 522.95375pt>
+=======
+ [15]
+<researcher.jpg, id=603, 1284.8pt x 522.95375pt>
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 File: researcher.jpg Graphic file (type jpg)
 <use researcher.jpg>
 Package pdftex.def Info: researcher.jpg  used on input line 782.
 (pdftex.def)             Requested size: 452.9679pt x 184.36914pt.
+<<<<<<< HEAD
  [14 <./admin.jpg>]
 Overfull \hbox (5.4234pt too wide) in alignment at lines 801--808
+=======
+
+[16 <./admin.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 779--779
+[]|\T5/cmr/bx/n/10.95 Functional
+ []
+
+
+Overfull \hbox (27.87614pt too wide) in alignment at lines 777--783
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
  [] [] [] 
  []
 
@@ -1730,6 +1900,7 @@ Overfull \hbox (5.4234pt too wide) in alignment at lines 816--819
  [] [] [] 
  []
 
+<<<<<<< HEAD
 
 Overfull \hbox (5.4234pt too wide) in alignment at lines 819--822
  [] [] [] 
@@ -1749,6 +1920,12 @@ Package array Warning: Column C is already defined on input line 889.
 
 
 Overfull \hbox (11.09204pt too wide) in paragraph at lines 901--901
+=======
+ignored error: Infinite glue shrinkage found in box being split [17 <./research
+er.jpg>]
+ignored error: Infinite glue shrinkage found in box being split [18]
+Overfull \hbox (11.09204pt too wide) in paragraph at lines 885--885
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
  []|\T5/cmr/bx/n/10.95 Lecturer/Student[]| 
  []
 
@@ -1762,6 +1939,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 896--954
 
  []
 
+<<<<<<< HEAD
 [17]
 
 Package array Warning: Column L is already defined on input line 957.
@@ -1771,11 +1949,25 @@ Package array Warning: Column C is already defined on input line 958.
 
 [18]
 <erd.png, id=605, 541.27219pt x 371.13657pt>
+=======
+[19] [20]
+<erd.png, id=628, 541.27219pt x 371.13657pt>
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 File: erd.png Graphic file (type png)
 <use erd.png>
 Package pdftex.def Info: erd.png  used on input line 987.
 (pdftex.def)             Requested size: 452.9679pt x 310.5973pt.
+<<<<<<< HEAD
  [19] [20 <./erd.png>]
+=======
+ [21]
+<class.png, id=633, 541.27219pt x 491.58656pt>
+File: class.png Graphic file (type png)
+<use class.png>
+Package pdftex.def Info: class.png  used on input line 977.
+(pdftex.def)             Requested size: 452.9679pt x 411.39969pt.
+ [22 <./erd.png>] [23 <./class.png>]
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\<let>-command' on input line 995.
@@ -1839,24 +2031,53 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1002 \subsection{System Architecture}
                                        
+=======
+l.989 \subsection{System Architecture}
+                                      
+<Overview_Diagram.png, id=646, 978.65625pt x 372.64218pt>
+File: Overview_Diagram.png Graphic file (type png)
+<use Overview_Diagram.png>
+Package pdftex.def Info: Overview_Diagram.png  used on input line 992.
+(pdftex.def)             Requested size: 362.37569pt x 137.98347pt.
+
+Overfull \hbox (9.55814pt too wide) in paragraph at lines 1014--1015
+[]\T5/cmr/bx/n/10.95 PublicationController: \T5/cmr/m/n/10.95 Pro-cesses public
+ation-related re-quests, in-clud-ing pub-li-ca-tion search-
+ []
+
+[24
+
+ <./Overview_Diagram.png>]
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1003 \subsection{Package Diagram}
                                    
 <Backend-package.jpg, id=617, 1541.76pt x 1027.84pt>
 File: Backend-package.jpg Graphic file (type jpg)
 <use Backend-package.jpg>
 Package pdftex.def Info: Backend-package.jpg  used on input line 1008.
+=======
+l.1054 \subsection{Package Diagram}
+                                   
+<Backend-package.jpg, id=652, 1541.76pt x 1027.84pt>
+File: Backend-package.jpg Graphic file (type jpg)
+<use Backend-package.jpg>
+Package pdftex.def Info: Backend-package.jpg  used on input line 1059.
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 (pdftex.def)             Requested size: 452.9679pt x 301.97118pt.
-
+ [25]
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1013 \section{ Database Design}
                                  
 <database.png, id=618, 1127.21124pt x 732.7375pt>
@@ -1867,31 +2088,61 @@ Package pdftex.def Info: database.png  used on input line 1016.
  [21
 
  <./Backend-package.jpg>]
+=======
+l.1064 \section{ Database Design}
+                                 
+<database.png, id=662, 1127.21124pt x 732.7375pt>
+File: database.png Graphic file (type png)
+<use database.png>
+Package pdftex.def Info: database.png  used on input line 1067.
+(pdftex.def)             Requested size: 452.9679pt x 294.45384pt.
+ [26 <./Backend-package.jpg>]
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1023 \subsection{Role Table}
                               
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 1029--1029
+=======
+l.1074 \subsection{Role Table}
+                              
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1080--1080
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 []|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 1030--1030
+=======
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1081--1081
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 []|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (26.22336pt too wide) in alignment at lines 1024--1032
  [] [] [] [] [] 
  []
 
 [22 <./database.png>]
+=======
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1075--1083
+ [] [] [] [] [] 
+ []
+
+ignored error: Infinite glue shrinkage found in box being split [27 <./database
+.png>]
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1035 \subsection{User Table}
                               
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 1041--1041
@@ -1970,10 +2221,16 @@ Overfull \hbox (26.22336pt too wide) in alignment at lines 1065--1072
 
 
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 1081--1081
+=======
+l.1086 \subsection{User Table}
+                              
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1092--1092
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 []|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (13.1675pt too wide) in paragraph at lines 1082--1082
 []|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
  []
@@ -2025,10 +2282,14 @@ Overfull \hbox (26.22336pt too wide) in alignment at lines 1089--1096
 
 
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 1105--1105
+=======
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1093--1093
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 []|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 1106--1106
 []|\T5/cmr/m/n/10.95 NVARCHAR(500)| 
  []
@@ -2050,15 +2311,28 @@ Overfull \hbox (3.13245pt too wide) in paragraph at lines 1118--1118
 
 
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 1119--1119
+=======
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1094--1094
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 []|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (26.22336pt too wide) in alignment at lines 1113--1121
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1098
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1087--1099
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
  [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 1130--1130
 []|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
  []
@@ -2075,12 +2349,99 @@ Overfull \hbox (3.13245pt too wide) in paragraph at lines 1141--1141
 
 
 Overfull \hbox (13.1675pt too wide) in paragraph at lines 1142--1142
+=======
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1108--1108
+[]|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1109--1109
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1103--1112
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1120--1120
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1120--1120
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1121
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1121
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1116--1123
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1132--1132
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
+Overfull \hbox (13.1675pt too wide) in paragraph at lines 1133--1133
 []|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1143--1143
-[]|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
+Underfull \hbox (badness 10000) in paragraph at lines 1134--1135
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1127--1136
+ [] [] [] [] [] 
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1144
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1144
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1145
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1145
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1145
+\T5/cmr/m/n/10.95 (Com-
  []
 
 
@@ -2089,41 +2450,356 @@ Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
  []
 
 
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1140--1147
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1156--1156
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1157--1157
+[]|\T5/cmr/m/n/10.95 NVARCHAR(500)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1158--1158
+[]|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1151--1160
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1169--1169
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1170--1170
+[]|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1164--1172
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1181--1181
+[]|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1176--1183
+ [] [] [] [] [] 
+ []
+
+[29]
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1192--1192
+[]|\T5/cmr/m/n/10.95 NVARCHAR(500)| 
+ []
+
+
+Overfull \hbox (13.1675pt too wide) in paragraph at lines 1193--1193
+[]|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1194--1194
+[]|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1197
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (8.59073pt too wide) in paragraph at lines 1196--1197
+\T5/cmr/m/n/10.95 APISource| 
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1187--1198
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1206
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1206
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
+\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
+\T5/cmr/m/n/10.95 search-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1207
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1207
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1208
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1202--1209
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1217
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1217
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
+\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1218
+\T5/cmr/m/n/10.95 search-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1218
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1218
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1219
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1213--1220
+ [] [] [] [] [] 
+ []
+
+ignored error: Infinite glue shrinkage found in box being split [30]
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1228
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1228
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
+\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1228--1229
+\T5/cmr/m/n/10.95 search-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1229
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1229
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1229--1230
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1224--1232
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1236--1246
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1255--1255
+[]|\T5/cmr/m/n/10.95 NVARCHAR(300)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1256--1256
+[]|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1260--1261
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1250--1262
+ [] [] [] [] [] 
+ []
+
+ignored error: Infinite glue shrinkage found in box being split [31]
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1271--1271
+[]|\T5/cmr/m/n/10.95 NVARCHAR(300)| 
+ []
+
+
+Overfull \hbox (13.1675pt too wide) in paragraph at lines 1272--1272
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
+[]|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
+ []
+
+
+<<<<<<< HEAD
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1143--1143
+[]|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1275--1276
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+<<<<<<< HEAD
 Overfull \hbox (8.59073pt too wide) in paragraph at lines 1145--1146
 \T5/cmr/m/n/10.95 APISource| 
  []
 
 
 Overfull \hbox (26.22336pt too wide) in alignment at lines 1136--1147
+=======
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1266--1277
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
  [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1155--1155
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1285--1285
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1155--1155
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1285--1285
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1285--1286
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1285--1286
+\T5/cmr/m/n/10.95 No-ti-fi-ca-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1286
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1286
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1287
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1287
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 \TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1287
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 \T5/cmr/m/n/10.95 search-
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1156--1156
 []|\T5/cmr/m/n/10.95 Yes
  []
@@ -2140,10 +2816,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 1156--1157
 
 
 Overfull \hbox (26.22336pt too wide) in alignment at lines 1151--1158
+=======
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1281--1288
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
  [] [] [] [] [] 
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1166--1166
 []|\T5/cmr/m/n/10.95 Yes
  []
@@ -2295,10 +2975,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 1234--1234
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1298--1299
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
 \T5/cmr/m/n/10.95 No-ti-fi-ca-
  []
@@ -2315,30 +2999,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 1235--1235
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1235--1236
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1300
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1235--1236
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1300
 \TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1235--1236
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1300
 \T5/cmr/m/n/10.95 search-
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (26.22336pt too wide) in alignment at lines 1230--1237
  [] [] [] [] [] 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1301
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 1248--1249
 []|\T5/cmr/m/n/10.95 Yes
  []
@@ -2364,34 +3056,59 @@ Overfull \hbox (26.22336pt too wide) in alignment at lines 1241--1251
  []
 
 [27]
+=======
+Overfull \hbox (16.22336pt too wide) in alignment at lines 1292--1302
+ [] [] [] [] [] 
+ []
+
+ignored error: Infinite glue shrinkage found in box being split [32]
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 pdfTeX warning (ext4): destination with the same identifier (name{section.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1252 \section{ Detail Design}
+=======
+l.1303 \section{ Detail Design}
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
                                
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1253 \subsection{Register}
+=======
+l.1304 \subsection{Register}
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
                             
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1254 \subsubsection{Activity diagram}
                                        
 <ac1.png, id=668, 1286.8075pt x 578.16pt>
 File: ac1.png Graphic file (type png)
 <use ac1.png>
 Package pdftex.def Info: ac1.png  used on input line 1257.
+=======
+l.1305 \subsubsection{Activity diagram}
+                                       
+<ac1.png, id=712, 1286.8075pt x 578.16pt>
+File: ac1.png Graphic file (type png)
+<use ac1.png>
+Package pdftex.def Info: ac1.png  used on input line 1308.
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 (pdftex.def)             Requested size: 452.9679pt x 203.51471pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1261 \subsubsection{Sequence Diagram}
                                        
 <tt1.png, id=669, 729.72626pt x 950.55125pt>
@@ -2418,10 +3135,34 @@ File: CDRegister.png Graphic file (type png)
 Package pdftex.def Info: CDRegister.png  used on input line 1278.
 (pdftex.def)             Requested size: 452.9679pt x 374.998pt.
  [30 <./sta1.png>]
+=======
+l.1312 \subsubsection{Sequence Diagram}
+                                       
+<tt1.png, id=713, 729.72626pt x 950.55125pt>
+File: tt1.png Graphic file (type png)
+<use tt1.png>
+Package pdftex.def Info: tt1.png  used on input line 1315.
+(pdftex.def)             Requested size: 452.9679pt x 590.0464pt.
+ [33 <./ac1.png>]
+<sta1.png, id=720, 444.66125pt x 804.00375pt>
+File: sta1.png Graphic file (type png)
+<use sta1.png>
+Package pdftex.def Info: sta1.png  used on input line 1322.
+(pdftex.def)             Requested size: 348.6731pt x 630.45189pt.
+ [34 <./tt1.png>]
+<CDRegister.png, id=727, 886.31125pt x 733.74126pt>
+File: CDRegister.png Graphic file (type png)
+<use CDRegister.png>
+Package pdftex.def Info: CDRegister.png  used on input line 1329.
+(pdftex.def)             Requested size: 452.9679pt x 374.998pt.
+
+[35 <./sta1.png>]
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1283 \subsection{Login}
                          
 <ac2.png, id=690, 744.7825pt x 612.2875pt>
@@ -2448,10 +3189,39 @@ File: CDLogin.png Graphic file (type png)
 Package pdftex.def Info: CDLogin.png  used on input line 1308.
 (pdftex.def)             Requested size: 452.9679pt x 382.88365pt.
  [34 <./sta2.png>]
+=======
+l.1334 \subsection{Login}
+                         
+<ac2.png, id=734, 744.7825pt x 612.2875pt>
+File: ac2.png Graphic file (type png)
+<use ac2.png>
+Package pdftex.def Info: ac2.png  used on input line 1338.
+(pdftex.def)             Requested size: 452.9679pt x 372.3924pt.
+ [36 <./CDRegister.png>]
+<tt2.png, id=741, 653.44125pt x 708.6475pt>
+File: tt2.png Graphic file (type png)
+<use tt2.png>
+Package pdftex.def Info: tt2.png  used on input line 1345.
+(pdftex.def)             Requested size: 452.9679pt x 491.23805pt.
+ [37 <./ac2.png>]
+<sta2.png, id=749, 524.96124pt x 629.35126pt>
+File: sta2.png Graphic file (type png)
+<use sta2.png>
+Package pdftex.def Info: sta2.png  used on input line 1352.
+(pdftex.def)             Requested size: 452.9679pt x 543.05612pt.
+ [38 <./tt2.png>]
+<CDLogin.png, id=756, 882.29625pt x 745.78625pt>
+File: CDLogin.png Graphic file (type png)
+<use CDLogin.png>
+Package pdftex.def Info: CDLogin.png  used on input line 1359.
+(pdftex.def)             Requested size: 452.9679pt x 382.88365pt.
+ [39 <./sta2.png>]
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.1314 \subsection{Search Research Papers}
                                           
 <ac3.png, id=719, 1102.1175pt x 699.61375pt>
@@ -2721,9 +3491,293 @@ File: systa1.png Graphic file (type png)
 Package pdftex.def Info: systa1.png  used on input line 1643.
 (pdftex.def)             Requested size: 452.9679pt x 584.29967pt.
  [75 <./sytt1.png>] [76 <./systa1.png>] (main.aux)
+=======
+l.1365 \subsection{Search Research Papers}
+                                          
+<ac3.png, id=763, 1102.1175pt x 699.61375pt>
+File: ac3.png Graphic file (type png)
+<use ac3.png>
+Package pdftex.def Info: ac3.png  used on input line 1369.
+(pdftex.def)             Requested size: 452.9679pt x 287.53738pt.
+ [40 <./CDLogin.png>]
+<tt3.png, id=770, 712.6625pt x 900.36375pt>
+File: tt3.png Graphic file (type png)
+<use tt3.png>
+Package pdftex.def Info: tt3.png  used on input line 1376.
+(pdftex.def)             Requested size: 452.9679pt x 572.27417pt.
+ [41 <./ac3.png>]
+<sta3.png, id=777, 554.07pt x 915.42pt>
+File: sta3.png Graphic file (type png)
+<use sta3.png>
+Package pdftex.def Info: sta3.png  used on input line 1383.
+(pdftex.def)             Requested size: 381.607pt x 630.45189pt.
+ [42 <./tt3.png>]
+<CDSearchResearchPaper.png, id=784, 929.4725pt x 722.7pt>
+File: CDSearchResearchPaper.png Graphic file (type png)
+<use CDSearchResearchPaper.png>
+Package pdftex.def Info: CDSearchResearchPaper.png  used on input line 1390.
+(pdftex.def)             Requested size: 452.9679pt x 352.19627pt.
+ [43 <./sta3.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
+4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1397 \subsection{View Paper Details}
+                                      
+<avpd.png, id=792, 2673.99pt x 3043.37pt>
+File: avpd.png Graphic file (type png)
+<use avpd.png>
+Package pdftex.def Info: avpd.png  used on input line 1401.
+(pdftex.def)             Requested size: 452.9679pt x 515.50854pt.
+ [44 <./CDSearchResearchPaper.png>]
+<sevpd.png, id=799, 4641.34pt x 3276.24pt>
+File: sevpd.png Graphic file (type png)
+<use sevpd.png>
+Package pdftex.def Info: sevpd.png  used on input line 1408.
+(pdftex.def)             Requested size: 452.9679pt x 319.69456pt.
+
+[45 <./avpd.png>]
+<svpd.png, id=806, 2087.8pt x 2316.655pt>
+File: svpd.png Graphic file (type png)
+<use svpd.png>
+Package pdftex.def Info: svpd.png  used on input line 1415.
+(pdftex.def)             Requested size: 452.9679pt x 502.59583pt.
+ [46 <./sevpd.png>]
+<CDPaperDetail.png, id=813, 931.48pt x 699.61375pt>
+File: CDPaperDetail.png Graphic file (type png)
+<use CDPaperDetail.png>
+Package pdftex.def Info: CDPaperDetail.png  used on input line 1422.
+(pdftex.def)             Requested size: 452.9679pt x 340.20898pt.
+ [47 <./svpd.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
+5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1429 \subsection{Save Bookmarks}
+                                  
+<asb.png, id=820, 3681.755pt x 2710.125pt>
+File: asb.png Graphic file (type png)
+<use asb.png>
+Package pdftex.def Info: asb.png  used on input line 1433.
+(pdftex.def)             Requested size: 452.9679pt x 333.43024pt.
+ [48 <./CDPaperDetail.png>]
+<sesb.png, id=827, 4356.275pt x 3304.345pt>
+File: sesb.png Graphic file (type png)
+<use sesb.png>
+Package pdftex.def Info: sesb.png  used on input line 1440.
+(pdftex.def)             Requested size: 452.9679pt x 343.56311pt.
+ [49 <./asb.png>]
+<ssb.png, id=835, 2216.28pt x 2007.5pt>
+File: ssb.png Graphic file (type png)
+<use ssb.png>
+Package pdftex.def Info: ssb.png  used on input line 1447.
+(pdftex.def)             Requested size: 452.9679pt x 410.28426pt.
+
+[50 <./sesb.png>]
+<CDBookmark.png, id=842, 936.49875pt x 682.55pt>
+File: CDBookmark.png Graphic file (type png)
+<use CDBookmark.png>
+Package pdftex.def Info: CDBookmark.png  used on input line 1454.
+(pdftex.def)             Requested size: 452.9679pt x 330.14067pt.
+ [51 <./ssb.png>]
+<atpt.png, id=849, 3316.39pt x 5235.56pt>
+File: atpt.png Graphic file (type png)
+<use atpt.png>
+Package pdftex.def Info: atpt.png  used on input line 1464.
+(pdftex.def)             Requested size: 385.02547pt x 607.78874pt.
+ [52 <./CDBookmark.png>]
+<setpt.png, id=856, 5323.89pt x 4424.53pt>
+File: setpt.png Graphic file (type png)
+<use setpt.png>
+Package pdftex.def Info: setpt.png  used on input line 1471.
+(pdftex.def)             Requested size: 452.9679pt x 376.38388pt.
+ [53 <./atpt.png>]
+<stpt.png, id=863, 2356.805pt x 4300.065pt>
+File: stpt.png Graphic file (type png)
+<use stpt.png>
+Package pdftex.def Info: stpt.png  used on input line 1478.
+(pdftex.def)             Requested size: 345.52196pt x 630.45189pt.
+
+[54 <./setpt.png>]
+<Track-Publication-Trend_class-diagram.jpg, id=870, 857.2025pt x 1204.5pt>
+File: Track-Publication-Trend_class-diagram.jpg Graphic file (type jpg)
+<use Track-Publication-Trend_class-diagram.jpg>
+Package pdftex.def Info: Track-Publication-Trend_class-diagram.jpg  used on inp
+ut line 1485.
+(pdftex.def)             Requested size: 452.9679pt x 636.48892pt.
+ [55 <./stpt.png>]
+<ac7.png, id=878, 1075.01625pt x 1577.895pt>
+File: ac7.png Graphic file (type png)
+<use ac7.png>
+Package pdftex.def Info: ac7.png  used on input line 1494.
+(pdftex.def)             Requested size: 407.66833pt x 598.35435pt.
+ [56 <./Track-Publication-Trend_class-diagram.jpg>]
+<sevdb.png, id=884, 896.34875pt x 617.30624pt>
+File: sevdb.png Graphic file (type png)
+<use sevdb.png>
+Package pdftex.def Info: sevdb.png  used on input line 1501.
+(pdftex.def)             Requested size: 452.9679pt x 311.94913pt.
+ [57 <./ac7.png (PNG copy)>]
+<sta7.png, id=890, 825.0825pt x 951.555pt>
+File: sta7.png Graphic file (type png)
+<use sta7.png>
+Package pdftex.def Info: sta7.png  used on input line 1508.
+(pdftex.def)             Requested size: 452.9679pt x 522.39857pt.
+ [58 <./sevdb.png (PNG copy)>]
+<View-Dashboard_class-diagram.jpg, id=896, 925.4575pt x 901.3675pt>
+File: View-Dashboard_class-diagram.jpg Graphic file (type jpg)
+<use View-Dashboard_class-diagram.jpg>
+Package pdftex.def Info: View-Dashboard_class-diagram.jpg  used on input line 1
+515.
+(pdftex.def)             Requested size: 452.9679pt x 441.1788pt.
+ [59 <./sta7.png (PNG copy)>]
+<activity_Generate-reports.png, id=902, 1445.4pt x 1139.25626pt>
+File: activity_Generate-reports.png Graphic file (type png)
+<use activity_Generate-reports.png>
+Package pdftex.def Info: activity_Generate-reports.png  used on input line 1524
+.
+(pdftex.def)             Requested size: 452.9679pt x 357.02495pt.
+ [60 <./View-Dashboard_class-diagram.jpg>]
+<sequence_Generate-reports.png, id=908, 628.3475pt x 750.805pt>
+File: sequence_Generate-reports.png Graphic file (type png)
+<use sequence_Generate-reports.png>
+Package pdftex.def Info: sequence_Generate-reports.png  used on input line 1531
+.
+(pdftex.def)             Requested size: 527.65489pt x 630.45189pt.
+
+Overfull \hbox (74.687pt too wide) in paragraph at lines 1531--1532
+ [][] 
+ []
+
+[61 <./activity_Generate-reports.png (PNG copy)>]
+<state_Generate-reports.png, id=915, 937.5025pt x 1690.315pt>
+File: state_Generate-reports.png Graphic file (type png)
+<use state_Generate-reports.png>
+Package pdftex.def Info: state_Generate-reports.png  used on input line 1538.
+(pdftex.def)             Requested size: 349.6743pt x 630.45189pt.
+ [62 <./sequence_Generate-reports.png (PNG copy)>]
+<Generate-Reports_class-diagram.jpg, id=921, 1146.2825pt x 973.6375pt>
+File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
+<use Generate-Reports_class-diagram.jpg>
+Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
+ 1545.
+(pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
+ [63 <./state_Generate-reports.png (PNG copy)>]
+<ac8.png, id=927, 1264.725pt x 2044.63875pt>
+File: ac8.png Graphic file (type png)
+<use ac8.png>
+Package pdftex.def Info: ac8.png  used on input line 1554.
+(pdftex.def)             Requested size: 362.37569pt x 585.81677pt.
+ [64 <./Generate-Reports_class-diagram.jpg>]
+<sevtt.png, id=933, 993.7125pt x 761.84625pt>
+File: sevtt.png Graphic file (type png)
+<use sevtt.png>
+Package pdftex.def Info: sevtt.png  used on input line 1561.
+(pdftex.def)             Requested size: 452.9679pt x 347.27995pt.
+ [65 <./ac8.png (PNG copy)>]
+<sta8.png, id=939, 661.47125pt x 1072.005pt>
+File: sta8.png Graphic file (type png)
+<use sta8.png>
+Package pdftex.def Info: sta8.png  used on input line 1568.
+(pdftex.def)             Requested size: 362.37569pt x 587.26547pt.
+ [66 <./sevtt.png (PNG copy)>]
+<follow topics.png, id=945, 1387.1825pt x 728.7225pt>
+File: follow topics.png Graphic file (type png)
+<use follow topics.png>
+Package pdftex.def Info: follow topics.png  used on input line 1578.
+(pdftex.def)             Requested size: 452.9679pt x 237.95506pt.
+ [67 <./sta8.png (PNG copy)>]
+<follow topice 2.png, id=952, 914.41624pt x 416.55624pt>
+File: follow topice 2.png Graphic file (type png)
+<use follow topice 2.png>
+Package pdftex.def Info: follow topice 2.png  used on input line 1585.
+(pdftex.def)             Requested size: 452.9679pt x 206.34534pt.
+<follow topice 3.png, id=953, 262.9825pt x 780.9175pt>
+File: follow topice 3.png Graphic file (type png)
+<use follow topice 3.png>
+Package pdftex.def Info: follow topice 3.png  used on input line 1592.
+(pdftex.def)             Requested size: 203.83417pt x 605.30014pt.
+ [68 <./follow topics.png (PNG copy)> <./follow topice 2.png (PNG copy)>]
+<Receive notifications.png, id=960, 1589.94pt x 837.1275pt>
+File: Receive notifications.png Graphic file (type png)
+<use Receive notifications.png>
+Package pdftex.def Info: Receive notifications.png  used on input line 1602.
+(pdftex.def)             Requested size: 452.9679pt x 238.4944pt.
+ [69 <./follow topice 3.png (PNG copy)>]
+<Receive notifications 1.png, id=966, 1128.215pt x 431.6125pt>
+File: Receive notifications 1.png Graphic file (type png)
+<use Receive notifications 1.png>
+Package pdftex.def Info: Receive notifications 1.png  used on input line 1610.
+(pdftex.def)             Requested size: 452.9679pt x 173.28735pt.
+<Receive notifications 2.png, id=967, 400.49625pt x 468.75125pt>
+File: Receive notifications 2.png Graphic file (type png)
+<use Receive notifications 2.png>
+Package pdftex.def Info: Receive notifications 2.png  used on input line 1617.
+(pdftex.def)             Requested size: 452.9679pt x 530.19772pt.
+
+[70 <./Receive notifications.png (PNG copy)> <./Receive notifications 1.png (PN
+G copy)>]
+<activity_Manage-Users.png, id=974, 1445.4pt x 655.44875pt>
+File: activity_Manage-Users.png Graphic file (type png)
+<use activity_Manage-Users.png>
+Package pdftex.def Info: activity_Manage-Users.png  used on input line 1633.
+(pdftex.def)             Requested size: 452.9679pt x 205.4073pt.
+ [71 <./Receive notifications 2.png (PNG copy)>]
+<sequence_Manage-Users.png, id=980, 529.98pt x 949.5475pt>
+File: sequence_Manage-Users.png Graphic file (type png)
+<use sequence_Manage-Users.png>
+Package pdftex.def Info: sequence_Manage-Users.png  used on input line 1640.
+(pdftex.def)             Requested size: 362.37569pt x 649.26253pt.
+ [72 <./activity_Manage-Users.png>] [73]
+Overfull \vbox (7.99132pt too high) has occurred while \output is active []
+
+
+[74 <./sequence_Manage-Users.png (PNG copy)>]
+<state_Manage-Users.png, id=997, 1036.87375pt x 1528.71124pt>
+File: state_Manage-Users.png Graphic file (type png)
+<use state_Manage-Users.png>
+Package pdftex.def Info: state_Manage-Users.png  used on input line 1647.
+(pdftex.def)             Requested size: 427.60495pt x 630.45189pt.
+<con1ac.png, id=998, 966.61125pt x 660.4675pt>
+File: con1ac.png Graphic file (type png)
+<use con1ac.png>
+Package pdftex.def Info: con1ac.png  used on input line 1656.
+(pdftex.def)             Requested size: 452.9679pt x 309.50267pt.
+ [75 <./state_Manage-Users.png (PNG copy)>]
+<con1tt.png, id=1004, 867.24pt x 826.08624pt>
+File: con1tt.png Graphic file (type png)
+<use con1tt.png>
+Package pdftex.def Info: con1tt.png  used on input line 1663.
+(pdftex.def)             Requested size: 452.9679pt x 431.47067pt.
+ [76 <./con1ac.png>]
+<con1sta.png, id=1011, 518.93875pt x 829.0975pt>
+File: con1sta.png Graphic file (type png)
+<use con1sta.png>
+Package pdftex.def Info: con1sta.png  used on input line 1670.
+(pdftex.def)             Requested size: 394.61926pt x 630.45189pt.
+ [77 <./con1tt.png>]
+<cyac1.png, id=1018, 817.0525pt x 834.11626pt>
+File: cyac1.png Graphic file (type png)
+<use cyac1.png>
+Package pdftex.def Info: cyac1.png  used on input line 1680.
+(pdftex.def)             Requested size: 452.9679pt x 462.43091pt.
+ [78 <./con1sta.png>]
+<sytt1.png, id=1025, 904.37875pt x 795.97375pt>
+File: sytt1.png Graphic file (type png)
+<use sytt1.png>
+Package pdftex.def Info: sytt1.png  used on input line 1687.
+(pdftex.def)             Requested size: 452.9679pt x 398.66605pt.
+ [79 <./cyac1.png>]
+<systa1.png, id=1033, 647.41875pt x 835.12pt>
+File: systa1.png Graphic file (type png)
+<use systa1.png>
+Package pdftex.def Info: systa1.png  used on input line 1694.
+(pdftex.def)             Requested size: 452.9679pt x 584.29967pt.
+ [80 <./sytt1.png>] [81 <./systa1.png>] (main.aux)
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
  ***********
-LaTeX2e <2026-06-01>
-L3 programming layer <2026-05-26>
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
  ***********
 
 
@@ -2734,6 +3788,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  )
 (\end occurred inside a group at level 1)
 
+<<<<<<< HEAD
 ### simple group (level 1) entered at line 498 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
@@ -2757,4 +3812,37 @@ PDF statistics:
  1102 PDF objects out of 1200 (max. 8388607)
  265 named destinations out of 1000 (max. 500000)
  1334 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 37F8EE7244B5805D28DC5507F5DD5685;20489
+(rerunfilecheck)             After:  99A4FD772ADE2A45D93E66D377BA19D3;20907.
+ ) 
+Here is how much of TeX's memory you used:
+ 12554 strings out of 467871
+ 199386 string characters out of 5418376
+ 651456 words of memory out of 5000000
+ 41003 multiletter control sequences out of 15000+600000
+ 642953 words of font info for 66 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,11n,83p,478b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\ndnqu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1095.pk> <C:\Users\ndnqu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1200.pk><C:/Users/ndnqu/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb><C:/Users/ndnqu/AppData/Local/Programs/MiKTeX/fonts/type
+1/vntex/vnr/vnbx10.pfb><C:/Users/ndnqu/AppData/Local/Programs/MiKTeX/fonts/type
+1/vntex/vnr/vnbx12.pfb><C:/Users/ndnqu/AppData/Local/Programs/MiKTeX/fonts/type
+1/vntex/vnr/vnr10.pfb><C:/Users/ndnqu/AppData/Local/Programs/MiKTeX/fonts/type1
+/vntex/vnr/vnr12.pfb><C:/Users/ndnqu/AppData/Local/Programs/MiKTeX/fonts/type1/
+vntex/vnr/vnti10.pfb><C:/Users/ndnqu/AppData/Local/Programs/MiKTeX/fonts/type1/
+vntex/vnr/vntt12.pfb>
+Output written on main.pdf (81 pages, 9318978 bytes).
+PDF statistics:
+ 1148 PDF objects out of 1200 (max. 8388607)
+ 277 named destinations out of 1000 (max. 500000)
+ 1376 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 
