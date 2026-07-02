@@ -93,6 +93,49 @@
         <tbody id="sourceTable"></tbody>
       </table>
     </section>
+    <section class="bg-white rounded-xl shadow border p-6">
+      <h2 class="text-xl font-bold mb-4">Đồng bộ dữ liệu từ API</h2>
+      <p class="text-slate-600 mb-4">Nhấn Đồng bộ hóa để lấy dữ liệu từ nguồn API, cập nhật cơ sở dữ liệu và ghi nhật ký kết quả.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mb-4">
+        <select id="syncSource" class="border rounded-lg p-3"></select>
+        <input id="syncQuery" class="border rounded-lg p-3 md:col-span-2" placeholder="Từ khóa đồng bộ" value="artificial intelligence">
+        <input id="syncLimit" class="border rounded-lg p-3" placeholder="Số lượng" type="number" min="1" max="25" value="10">
+      </div>
+
+      <button id="syncBtn" class="px-4 py-2 bg-emerald-600 text-white rounded-lg font-semibold mb-6">Đồng bộ hóa</button>
+
+      <h3 class="text-lg font-bold mb-3">Danh sách API</h3>
+      <table class="w-full border-collapse mb-6">
+        <thead>
+          <tr class="bg-slate-100 text-left">
+            <th class="p-3 border">ID</th>
+            <th class="p-3 border">Tên nguồn</th>
+            <th class="p-3 border">Base URL</th>
+            <th class="p-3 border">Trạng thái</th>
+            <th class="p-3 border">Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="syncSourceTable"></tbody>
+      </table>
+
+      <h3 class="text-lg font-bold mb-3">Nhật ký đồng bộ</h3>
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-slate-100 text-left">
+            <th class="p-3 border">ID</th>
+            <th class="p-3 border">Nguồn API</th>
+            <th class="p-3 border">Trạng thái</th>
+            <th class="p-3 border">Lấy</th>
+            <th class="p-3 border">Thêm</th>
+            <th class="p-3 border">Cập nhật</th>
+            <th class="p-3 border">Thông báo</th>
+            <th class="p-3 border">Thời gian</th>
+          </tr>
+        </thead>
+        <tbody id="syncLogTable"></tbody>
+      </table>
+    </section>
 
     <section class="bg-white rounded-xl shadow border p-6">
       <h2 class="text-xl font-bold mb-4">Quản lý bài báo</h2>
@@ -432,6 +475,7 @@ async function saveSource() {
   showMessage(result.message || "Lưu nguồn API thành công.");
   resetSourceForm();
   loadSources();
+loadSyncDashboard();
 }
 
 function editSource(sourceId) {
@@ -475,6 +519,7 @@ async function toggleSource(sourceId) {
 
   showMessage(result.message || "Đã đổi trạng thái nguồn API.");
   loadSources();
+loadSyncDashboard();
 }
 
 async function deleteSource(sourceId) {
@@ -495,11 +540,116 @@ async function deleteSource(sourceId) {
 
   showMessage(result.message || "Xóa nguồn API thành công.");
   loadSources();
+loadSyncDashboard();
 }
 
 addSourceBtn.addEventListener("click", saveSource);
 cancelSourceBtn.addEventListener("click", resetSourceForm);
 
+
+const syncSourceInput = document.getElementById("syncSource");
+const syncQueryInput = document.getElementById("syncQuery");
+const syncLimitInput = document.getElementById("syncLimit");
+const syncBtn = document.getElementById("syncBtn");
+const syncSourceTable = document.getElementById("syncSourceTable");
+const syncLogTable = document.getElementById("syncLogTable");
+
+async function loadSyncDashboard() {
+  const response = await fetch("../api/admin_sync.php");
+  const result = await response.json();
+
+  if (!result.success) {
+    showMessage(result.message || "Không tải được dữ liệu đồng bộ.", false);
+    return;
+  }
+
+  syncSourceInput.innerHTML = `<option value="">Chọn nguồn API</option>`;
+  syncSourceTable.innerHTML = "";
+
+  result.sources.forEach(source => {
+    const statusText = source.isActive == 1 ? "Đang bật" : "Đang tắt";
+    const disabled = source.isActive == 1 ? "" : "disabled";
+
+    if (source.isActive == 1) {
+      syncSourceInput.innerHTML += `<option value="${source.sourceId}">${escapeHtml(source.sourceName)}</option>`;
+    }
+
+    syncSourceTable.innerHTML += `
+      <tr>
+        <td class="p-3 border">${source.sourceId}</td>
+        <td class="p-3 border">${escapeHtml(source.sourceName)}</td>
+        <td class="p-3 border">${escapeHtml(source.baseUrl)}</td>
+        <td class="p-3 border">${statusText}</td>
+        <td class="p-3 border">
+          <button onclick="runSync(${source.sourceId})" ${disabled} class="px-3 py-1 bg-emerald-600 text-white rounded disabled:bg-slate-300">Đồng bộ</button>
+        </td>
+      </tr>
+    `;
+  });
+
+  syncLogTable.innerHTML = "";
+  result.logs.forEach(log => {
+    const statusClass = log.status === "success" ? "text-emerald-700" : "text-red-700";
+    syncLogTable.innerHTML += `
+      <tr>
+        <td class="p-3 border">${log.syncLogId}</td>
+        <td class="p-3 border">${escapeHtml(log.sourceName || "")}</td>
+        <td class="p-3 border font-semibold ${statusClass}">${escapeHtml(log.status)}</td>
+        <td class="p-3 border">${log.fetchedCount}</td>
+        <td class="p-3 border">${log.insertedCount}</td>
+        <td class="p-3 border">${log.updatedCount}</td>
+        <td class="p-3 border">${escapeHtml(log.message)}</td>
+        <td class="p-3 border">${log.createdAt}</td>
+      </tr>
+    `;
+  });
+}
+
+async function runSync(sourceId = null) {
+  const selectedSourceId = sourceId || syncSourceInput.value;
+  if (!selectedSourceId) {
+    showMessage("Vui lòng chọn nguồn API cần đồng bộ.", false);
+    return;
+  }
+
+  syncBtn.disabled = true;
+  syncBtn.textContent = "Đang đồng bộ...";
+
+  try {
+    const response = await fetch("../api/admin_sync.php", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        sourceId: selectedSourceId,
+        query: syncQueryInput.value.trim() || "science research",
+        limit: syncLimitInput.value || 10
+      })
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+      showMessage(result.message || "Đồng bộ thất bại.", false);
+      await loadSyncDashboard();
+      return;
+    }
+
+    const detail = result.result
+      ? ` Lấy ${result.result.fetched}, thêm ${result.result.inserted}, cập nhật ${result.result.updated}.`
+      : "";
+    showMessage((result.message || "Đồng bộ thành công.") + detail);
+    await loadSyncDashboard();
+    await loadPapers();
+  } catch (error) {
+    console.error(error);
+    showMessage("Không thể gọi chức năng đồng bộ.", false);
+  } finally {
+    syncBtn.disabled = false;
+    syncBtn.textContent = "Đồng bộ hóa";
+  }
+}
+
+syncBtn.addEventListener("click", () => runSync());
 const paperTable = document.getElementById("paperTable");
 const paperTitleInput = document.getElementById("paperTitle");
 const paperTopicInput = document.getElementById("paperTopic");
@@ -768,6 +918,7 @@ addNotificationBtn.addEventListener("click", saveNotification);
 loadUsers();
 loadTopics();
 loadSources();
+loadSyncDashboard();
 loadPaperTopics();
 loadPapers();
 loadNotificationUsers();
