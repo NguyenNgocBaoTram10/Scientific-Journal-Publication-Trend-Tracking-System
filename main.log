@@ -1,46 +1,50 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  2 JUL 2026 19:45
 =======
 This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.18)  2 JUL 2026 15:44
 >>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.27)  2 JUL 2026 19:46
+>>>>>>> c2e222f05f7c6fb0978fb605f9462ae9ee0c92ec
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./main.tex
 (main.tex
-LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-05-26>
+(C:\Program Files\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+(C:\Program Files\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count275
-\c@section=\count276
-\c@subsection=\count277
-\c@subsubsection=\count278
-\c@paragraph=\count279
-\c@subparagraph=\count280
-\c@figure=\count281
-\c@table=\count282
+\c@part=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen148
+\bibindent=\dimen150
 )
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+(C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
+(C:\Program Files\MiKTeX\tex/latex/vntex\t5enc.def
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
 Now handling font encoding T5 ...
 ... processing UTF-8 mapping file for font encoding T5
 
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.dfu
+(C:\Program Files\MiKTeX\tex/latex/vntex\t5enc.dfu
 File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+00AB (decimal 171)
    defining Unicode char U+00BB (decimal 187)
@@ -197,51 +201,49 @@ File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
 LaTeX Font Info:    Trying to load font information for T5+cmr on input line 11
 6.
 
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
+(C:\Program Files\MiKTeX\tex/latex/vntex\t5cmr.fd
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ))
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
-TeX and XeLaTeX
-\babel@savecnt=\count283
+(C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/05/20 v26.8 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
+\babel@savecnt=\count284
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2068.
+ne 2084.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2070.
+ne 2086.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2072.
+e 2088.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2073.
+e 2089.
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2074.
+on input line 2090.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2076.
+on input line 2092.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2101.
-\U@D=\dimen149
+on input line 2117.
+\U@D=\dimen151
 \l@unhyphenated=\language79
 
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+(C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count284
+\bbl@dirlevel=\count285
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
-(babel)             Reported on input line 4196.
+(babel)             Reported on input line 4228.
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+(C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/vi\babel
--vietnamese.tex)
+(C:\Program Files\MiKTeX\tex/generic/babel/locale/vi\babel-vietnamese.tex)
 Package babel Info: Importing font and identification data for vietnamese
-(babel)             from babel-vi.ini. Reported on input line 4320.
+(babel)             from babel-vi.ini. Reported on input line 4356.
 
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/babel-vietnamese\vietna
-mese.ldf
+(C:\Program Files\MiKTeX\tex/latex/babel-vietnamese\vietnamese.ldf
 Language: vietnamese 
 
 
@@ -256,7 +258,7 @@ Package babel Info: Hyphen rules for 'vietnamese' set to \l@english
 Package babel Info: Hyphen rules for 'vietnam' set to \l@english
 (babel)             (\language0). Reported on input line 38.
 Loading definitions for the Vietnamese font encoding
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
+(C:\Program Files\MiKTeX\tex/latex/vntex\t5enc.def
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
 LaTeX Font Info:    Redeclaring font encoding T5 on input line 75.
 LaTeX Encoding Info:    Redeclaring text command \` (encoding T5) on input line
@@ -388,18 +390,18 @@ ine 432.
 )
 Package babel Info: Making " an active character on input line 147.
 ))
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 )
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+(C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -409,88 +411,89 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+)
+(C:\Program Files\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen150
+
+(C:\Program Files\MiKTeX\tex/latex/tools\array.sty
+Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+\col@sep=\dimen152
 \ar@mcellbox=\box53
-\extrarowheight=\dimen151
+\extrarowheight=\dimen153
 \NC@list=\toks19
 \extratabsurround=\skip51
 \backup@length=\skip52
 \ar@cellbox=\box54
 )
-\everycr=\toks20
+new hooks used!!
 \minrowclearance=\skip53
-\rownum=\count285
-)
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+\rownum=\count286
+) (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen152
-\TX@old@table=\dimen153
-\TX@old@col=\dimen154
-\TX@target=\dimen155
-\TX@delta=\dimen156
-\TX@cols=\count286
-\TX@ftn=\toks21
+\TX@col@width=\dimen154
+\TX@old@table=\dimen155
+\TX@old@col=\dimen156
+\TX@target=\dimen157
+\TX@delta=\dimen158
+\TX@cols=\count287
+\TX@ftn=\toks20
 )
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+(C:\Program Files\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen157
-\lightrulewidth=\dimen158
-\cmidrulewidth=\dimen159
-\belowrulesep=\dimen160
-\belowbottomsep=\dimen161
-\aboverulesep=\dimen162
-\abovetopsep=\dimen163
-\cmidrulesep=\dimen164
-\cmidrulekern=\dimen165
-\defaultaddspace=\dimen166
-\@cmidla=\count287
-\@cmidlb=\count288
-\@aboverulesep=\dimen167
-\@belowrulesep=\dimen168
-\@thisruleclass=\count289
-\@lastruleclass=\count290
-\@thisrulewidth=\dimen169
+\heavyrulewidth=\dimen159
+\lightrulewidth=\dimen160
+\cmidrulewidth=\dimen161
+\belowrulesep=\dimen162
+\belowbottomsep=\dimen163
+\aboverulesep=\dimen164
+\abovetopsep=\dimen165
+\cmidrulesep=\dimen166
+\cmidrulekern=\dimen167
+\defaultaddspace=\dimen168
+\@cmidla=\count288
+\@cmidlb=\count289
+\@aboverulesep=\dimen169
+\@belowrulesep=\dimen170
+\@thisruleclass=\count290
+\@lastruleclass=\count291
+\@thisrulewidth=\dimen171
 )
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
-Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+(C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2026-01-28 v4.27 Multi-page Table package (DPC)
 \LTleft=\skip54
 \LTright=\skip55
 \LTpre=\skip56
 \LTpost=\skip57
-\LTchunksize=\count291
-\LTcapwidth=\dimen170
+\LTchunksize=\count292
+\LTcapwidth=\dimen172
 \LT@head=\box55
 \LT@firsthead=\box56
 \LT@foot=\box57
 \LT@lastfoot=\box58
 \LT@gbox=\box59
-\LT@cols=\count292
-\LT@rows=\count293
-\c@LT@tables=\count294
-\c@LT@chunks=\count295
-\LT@p@ftn=\toks22
+\LT@cols=\count293
+\LT@rows=\count294
+\c@LT@tables=\count295
+\c@LT@chunks=\count296
+\LT@p@ftn=\toks21
 )
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks23
+(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
 )
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
+<<<<<<< HEAD
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
 \Gin@req@height=\dimen171
@@ -3846,3 +3849,6 @@ PDF statistics:
  1376 words of extra memory for PDF output out of 10000 (max. 10000000)
 >>>>>>> c0387f526d2b9fb0e8aba12c2145b08b716a0e74
 
+=======
+Package graphics Info: Driver file: p
+>>>>>>> c2e222f05f7c6fb0978fb605f9462ae9ee0c92ec
