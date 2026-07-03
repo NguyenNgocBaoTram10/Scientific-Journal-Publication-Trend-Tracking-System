@@ -1174,68 +1174,43 @@ User opens \textit{``Tìm kiếm''} $\rightarrow$ Enters a keyword $\rightarrow$
 \subsection{System Architecture}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Overview_Diagram.png}
+	\includegraphics[width=0.8\textwidth]{Architecture System.png}
 	\label{fig:Overview_Diagram}
 \end{figure}
 \subsubsection{Frontend App}
 
-\textbf{TypeScript (TS):} Core technology used for frontend development, enabling the implementation of scalable, maintainable, and type-safe user interfaces.
+The frontend application is developed using HTML, CSS, and JavaScript to provide the user interface for interacting with the system. It is responsible for presenting data, handling user interactions, and communicating with the backend system through HTTP requests.
 
-\textbf{Pages:} Responsible for rendering the main user interfaces, including Login Page, Dashboard Page, Publication Search Page, and Trend Analysis Page.
-
-\textbf{Components:} Reusable user interface elements used to construct application pages, such as search bars, filter panels, tables, charts, and publication cards.
-
-\textbf{Services:} Responsible for handling communication between the frontend and backend through HTTP requests and responses.
+\begin{itemize}
+	\item \textbf{Pages}: Responsible for rendering the main user interfaces, including Login Page, Dashboard Page, Publication Search Page, Trend Analysis Page, Bookmark Page, and Notification Page.
+	
+	\item \textbf{Components}: Reusable user interface elements used to build application pages, such as search bars, filter panels, publication cards, charts, tables, and navigation menus.
+	
+	\item \textbf{Service}: Responsible for managing communication between the frontend and backend system through HTTP requests and responses, including sending requests and processing returned data.
+\end{itemize}
 
 \subsubsection{Backend System}
 
-The backend system follows a layered architecture consisting of Controller Layer, Service Layer, and Repository Layer.
+The backend system follows a layered architecture consisting of Controller Layer, Service Layer, and Repository Layer. This architecture improves maintainability, scalability, and separation of concerns.
 
-\textbf{Controller Layer}
-
-
-\textbf{AuthController:} Handles authentication requests such as login, logout, and user authorization.
-
-\textbf{PublicationController:} Processes publication-related requests, including publication searching, filtering, and detailed information retrieval.
-
-\textbf{TrendController:} Handles requests related to publication trend analysis, dashboard visualization, and trend monitoring.
-
-\textbf{Service Layer}
-
-\textbf{AuthService:} Implements authentication logic, including user verification and access control.
-
-\textbf{PublicationService:} Handles publication-related business logic such as processing search queries, filtering publications, and managing publication metadata.
-
-\textbf{TrendAnalysisService:} Responsible for trend analysis, topic identification, dashboard analytics, and report generation.
-
-\textbf{Repository Layer}
-
-\textbf{UserRepository:} Manages data access operations related to user accounts and authentication data.
-
-\textbf{PublicationRepository:} Handles database operations related to publication metadata, authors, and research fields.
-
-\textbf{TrendRepository:} Responsible for storing and retrieving trend-related analytical data.
-
-\subsubsection{Database}
-
-\textbf{MySQL Database:} Relational database management system used to store system data, including user accounts, publication metadata, trend records, and system-generated reports.
-
-\subsubsection{External Services}
-
-\textbf{Academic APIs:} External academic data sources used to retrieve scientific publication metadata, including publication titles, authors, research fields, publication years, and citation-related information.
-
-Examples include:
 \begin{itemize}
-	\item OpenAlex
-	\item Crossref
-	\item Google Scholar
+	\item \textbf{Controller Layer}: Handles incoming HTTP requests from the frontend, processes request validation, and forwards requests to the appropriate service layer.
+	
+	\item \textbf{Service Layer}: Contains business logic for processing publication data, trend analysis, user personalization, and system administration.
+	
+	\item \textbf{Repository Layer}: Responsible for interacting with the database, executing queries, and managing data persistence.
 \end{itemize}
 
-These APIs support publication synchronization and provide up-to-date research data for the system.
+\subsubsection{External Systems}
 
-\subsubsection{Cache Management}
+The system integrates with external services to retrieve academic publication data and store system information.
 
-\textbf{Redis Cache:} In-memory caching system used to store frequently accessed data such as dashboard statistics, publication trends, and popular search results to improve system performance and reduce database workload.
+\begin{itemize}
+	\item \textbf{Academic APIs}: External academic data sources such as Semantic Scholar API, OpenAlex API, and Crossref API are used to retrieve publication metadata.
+	
+	\item \textbf{MySQL Database}: Stores user information, publication metadata, bookmarks, followed topics, notifications, and system configuration data.
+\end{itemize}
+
 \subsection{Package Diagram}
 \subsubsection{Front End }
 \subsubsection{Back End }
