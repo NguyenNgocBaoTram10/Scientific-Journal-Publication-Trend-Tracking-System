@@ -1090,6 +1090,79 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\caption{}
 	\label{fig:erd}
 \end{figure}
+\subsubsection{Search Papers}
+
+\textbf{Role:} User
+
+\textbf{Function Trigger}
+
+User opens \textit{``Tìm kiếm''} $\rightarrow$ Enters a keyword $\rightarrow$ Selects filters (Publication Year, Open Access, Paper Type) $\rightarrow$ Clicks \textbf{Search}.
+
+\textbf{Function Description}
+
+\begin{itemize}
+	\item \textbf{Purpose:}
+	
+	Allow users to search scientific papers from academic databases based on keywords and filtering conditions.
+	
+	\item \textbf{Data Processing:}
+	
+	Validate the search input, send the request to academic databases (e.g., Crossref API), retrieve matching publications, apply selected filters, and display the search results.
+\end{itemize}
+
+\textbf{Function Details}
+
+\begin{itemize}
+	\item \textbf{Validation:}
+	\begin{itemize}
+		\item Keyword cannot be empty.
+		\item Start year must not be greater than End year.
+	\end{itemize}
+	
+	\item \textbf{Business Rules:}
+	\begin{itemize}
+		\item Search supports Title, Keyword and DOI.
+		\item Users may filter by publication year.
+		\item Users may filter by paper type.
+		\item Users may choose to display only Open Access publications.
+		\item Results are displayed with pagination (10 items per page).
+		\item Each result includes Title, Authors, Year, DOI and Citation Count (if available), with the option to save the paper to Favorites.
+	\end{itemize}
+	
+	\item \textbf{Normal Case:}
+	\begin{itemize}
+		\item User enters a keyword and selects filters.
+		\item User clicks the \textbf{Search} button.
+		\item System queries the academic database.
+		\item Matching publications are returned and displayed.
+		\item User can view paper details, open the DOI link, or save the paper to Favorites.
+	\end{itemize}
+	
+	\item \textbf{Abnormal Case:}
+	\begin{itemize}
+		\item No papers found $\rightarrow$ Display \textit{``No matching papers found.''}
+		\item Invalid year range $\rightarrow$ Request the user to correct the input.
+		\item API unavailable $\rightarrow$ Display \textit{``Unable to retrieve publication data. Please try again later.''}
+	\end{itemize}
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{tkm.jpg}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{tkkq.jpg}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{tkml.jpg}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
 \chapter{\centering\Large\bfseries IV. Software Design Description}
 \addcontentsline{toc}{chapter}{ IV. Software Design Description}
 \setcounter{section}{0}
