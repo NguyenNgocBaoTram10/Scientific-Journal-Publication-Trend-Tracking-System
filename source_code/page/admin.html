@@ -5,6 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin - ScholarTrend</title>
   <script src="https://cdn.tailwindcss.com"></script>
+    <style id="admin-button-system">
+    * { box-sizing: border-box; }
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+    main { width: 100%; max-width: 100%; }
+    main section { width: 100%; max-width: 100%; overflow: hidden; }
+    table { width: 100%; min-width: 0; table-layout: fixed; border-collapse: collapse; }
+    th, td { vertical-align: middle; overflow-wrap: anywhere; word-break: break-word; }
+    th { line-height: 1.25; }
+    td { line-height: 1.35; }
+    input, select, textarea { min-width: 0; width: 100%; }
+    .action-cell { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-width: 0; max-width: 100%; }
+    .btn-admin { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; max-width: 100%; padding: 8px 14px; border-radius: 8px; font-weight: 700; white-space: normal; text-align: center; line-height: 1.2; transition: background-color .2s ease, transform .2s ease; }
+    .btn-admin:hover { transform: translateY(-1px); }
+    .btn-primary-admin { background: #2563eb; color: #fff; }
+    .btn-primary-admin:hover { background: #1d4ed8; }
+    .btn-dark-admin { background: #1e293b; color: #fff; }
+    .btn-dark-admin:hover { background: #0f172a; }
+    .btn-warning-admin { background: #d97706; color: #fff; }
+    .btn-warning-admin:hover { background: #b45309; }
+    .btn-danger-admin { background: #dc2626; color: #fff; }
+    .btn-danger-admin:hover { background: #b91c1c; }
+    .btn-success-admin { background: #059669; color: #fff; }
+    .btn-success-admin:hover { background: #047857; }
+    .btn-muted-admin { background: #e2e8f0; color: #1e293b; }
+    .btn-muted-admin:hover { background: #cbd5e1; }
+    .btn-admin:disabled { background: #cbd5e1; color: #64748b; cursor: not-allowed; transform: none; }
+    @media (max-width: 768px) {
+      body { font-size: 14px; }
+      header { flex-direction: column; align-items: flex-start; gap: 12px; padding: 16px; }
+      main { padding: 12px; }
+      main section { padding: 16px; border-radius: 10px; }
+      th, td { padding: 8px !important; }
+      .action-cell { gap: 6px; }
+      .btn-admin { width: 100%; min-height: 38px; padding: 8px 10px; }
+    }
+  </style>
 </head>
 <body class="bg-slate-100 min-h-screen">
   <header class="bg-white border-b px-8 py-4 flex justify-between items-center">
@@ -42,8 +78,8 @@
       </div>
 
       <div class="flex gap-2 mb-4">
-        <button id="addTopicBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold">Thêm chủ đề</button>
-        <button id="cancelTopicBtn" class="hidden px-4 py-2 bg-slate-200 rounded-lg font-semibold">Hủy sửa</button>
+        <button id="addTopicBtn" class="btn-admin btn-primary-admin">Thêm chủ đề</button>
+        <button id="cancelTopicBtn" class="hidden btn-admin btn-muted-admin">Hủy sửa</button>
       </div>
 
       <table class="w-full border-collapse">
@@ -74,8 +110,8 @@
       </div>
 
       <div class="flex gap-2 mb-4">
-        <button id="addSourceBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold">Thêm nguồn API</button>
-        <button id="cancelSourceBtn" class="hidden px-4 py-2 bg-slate-200 rounded-lg font-semibold">Hủy sửa</button>
+        <button id="addSourceBtn" class="btn-admin btn-primary-admin">Thêm nguồn API</button>
+        <button id="cancelSourceBtn" class="hidden btn-admin btn-muted-admin">Hủy sửa</button>
       </div>
 
       <table class="w-full border-collapse">
@@ -103,7 +139,7 @@
         <input id="syncLimit" class="border rounded-lg p-3" placeholder="Số lượng" type="number" min="1" max="25" value="10">
       </div>
 
-      <button id="syncBtn" class="px-4 py-2 bg-emerald-600 text-white rounded-lg font-semibold mb-6">Đồng bộ hóa</button>
+      <button id="syncBtn" class="btn-admin btn-success-admin mb-6">Đồng bộ hóa</button>
 
       <h3 class="text-lg font-bold mb-3">Danh sách API</h3>
       <table class="w-full border-collapse mb-6">
@@ -152,8 +188,8 @@
       </div>
 
       <div class="flex gap-2 mb-4">
-        <button id="addPaperBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold">Thêm bài báo</button>
-        <button id="cancelPaperBtn" class="hidden px-4 py-2 bg-slate-200 rounded-lg font-semibold">Hủy sửa</button>
+        <button id="addPaperBtn" class="btn-admin btn-primary-admin">Thêm bài báo</button>
+        <button id="cancelPaperBtn" class="hidden btn-admin btn-muted-admin">Hủy sửa</button>
       </div>
 
       <table class="w-full border-collapse">
@@ -187,7 +223,7 @@
             <textarea id="notificationContent" class="border rounded-lg p-3 md:col-span-3" placeholder="Nội dung thông báo"></textarea>
         </div>
 
-        <button id="addNotificationBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold mb-4">
+        <button id="addNotificationBtn" class="btn-admin btn-primary-admin mb-4">
             Gửi thông báo
         </button>
 
@@ -256,10 +292,10 @@ async function loadUsers() {
         <td class="p-3 border">${escapeHtml(user.email)}</td>
         <td class="p-3 border">${escapeHtml(user.status)}</td>
         <td class="p-3 border">${roleText}</td>
-        <td class="p-3 border space-x-2">
-          <button onclick="updateUser(${user.userId}, '${lockAction}')" class="px-3 py-1 bg-slate-800 text-white rounded">${lockText}</button>
-          <button onclick="updateUser(${user.userId}, '${roleAction}')" class="px-3 py-1 bg-blue-600 text-white rounded">${roleBtn}</button>
-        </td>
+        <td class="p-3 border"><div class="action-cell">
+          <button onclick="updateUser(${user.userId}, '${lockAction}')" class="btn-admin btn-dark-admin">${lockText}</button>
+          <button onclick="updateUser(${user.userId}, '${roleAction}')" class="btn-admin btn-primary-admin">${roleBtn}</button>
+        </div></td>
       </tr>
     `;
   });
@@ -309,10 +345,10 @@ async function loadTopics() {
         <td class="p-3 border">${topic.topicId}</td>
         <td class="p-3 border">${escapeHtml(topic.topicName)}</td>
         <td class="p-3 border">${escapeHtml(topic.description)}</td>
-        <td class="p-3 border space-x-2">
-          <button onclick="editTopic(${topic.topicId})" class="px-3 py-1 bg-slate-800 text-white rounded">Sửa</button>
-          <button onclick="deleteTopic(${topic.topicId})" class="px-3 py-1 bg-red-600 text-white rounded">Xóa</button>
-        </td>
+        <td class="p-3 border"><div class="action-cell">
+          <button onclick="editTopic(${topic.topicId})" class="btn-admin btn-dark-admin">Sửa</button>
+          <button onclick="deleteTopic(${topic.topicId})" class="btn-admin btn-danger-admin">Xóa</button>
+        </div></td>
       </tr>
     `;
   });
@@ -429,11 +465,11 @@ async function loadSources() {
         <td class="p-3 border">${statusText}</td>
         <td class="p-3 border">${source.priority}</td>
         <td class="p-3 border">${escapeHtml(source.description)}</td>
-        <td class="p-3 border space-x-2">
-          <button onclick="editSource(${source.sourceId})" class="px-3 py-1 bg-slate-800 text-white rounded">Sửa</button>
-          <button onclick="toggleSource(${source.sourceId})" class="px-3 py-1 bg-yellow-600 text-white rounded">${toggleText}</button>
-          <button onclick="deleteSource(${source.sourceId})" class="px-3 py-1 bg-red-600 text-white rounded">Xóa</button>
-        </td>
+        <td class="p-3 border"><div class="action-cell">
+          <button onclick="editSource(${source.sourceId})" class="btn-admin btn-dark-admin">Sửa</button>
+          <button onclick="toggleSource(${source.sourceId})" class="btn-admin btn-warning-admin">${toggleText}</button>
+          <button onclick="deleteSource(${source.sourceId})" class="btn-admin btn-danger-admin">Xóa</button>
+        </div></td>
       </tr>
     `;
   });
@@ -580,9 +616,9 @@ async function loadSyncDashboard() {
         <td class="p-3 border">${escapeHtml(source.sourceName)}</td>
         <td class="p-3 border">${escapeHtml(source.baseUrl)}</td>
         <td class="p-3 border">${statusText}</td>
-        <td class="p-3 border">
-          <button onclick="runSync(${source.sourceId})" ${disabled} class="px-3 py-1 bg-emerald-600 text-white rounded disabled:bg-slate-300">Đồng bộ</button>
-        </td>
+        <td class="p-3 border"><div class="action-cell">
+          <button onclick="runSync(${source.sourceId})" ${disabled} class="btn-admin btn-success-admin">Đồng bộ</button>
+        </div></td>
       </tr>
     `;
   });
@@ -698,10 +734,10 @@ async function loadPapers() {
         <td class="p-3 border">${escapeHtml(paper.journal)}</td>
         <td class="p-3 border">${paper.publishedYear || ""}</td>
         <td class="p-3 border">${escapeHtml(paper.topicName)}</td>
-        <td class="p-3 border space-x-2">
-          <button onclick="editPaper(${paper.articleId})" class="px-3 py-1 bg-slate-800 text-white rounded">Sửa</button>
-          <button onclick="deletePaper(${paper.articleId})" class="px-3 py-1 bg-red-600 text-white rounded">Xóa</button>
-        </td>
+        <td class="p-3 border"><div class="action-cell">
+          <button onclick="editPaper(${paper.articleId})" class="btn-admin btn-dark-admin">Sửa</button>
+          <button onclick="deletePaper(${paper.articleId})" class="btn-admin btn-danger-admin">Xóa</button>
+        </div></td>
       </tr>
     `;
   });
@@ -843,9 +879,9 @@ async function loadNotifications() {
         <td class="p-3 border">${item.fullName || item.username || ""}</td>
         <td class="p-3 border">${item.isRead == 1 ? "Rồi" : "Chưa"}</td>
         <td class="p-3 border">${item.createdAt}</td>
-        <td class="p-3 border">
-          <button onclick="deleteNotification(${item.notificationId})" class="px-3 py-1 bg-red-600 text-white rounded">Xóa</button>
-        </td>
+        <td class="p-3 border"><div class="action-cell">
+          <button onclick="deleteNotification(${item.notificationId})" class="btn-admin btn-danger-admin">Xóa</button>
+        </div></td>
       </tr>
     `;
   });
