@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  4 JUL 2026 17:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  4 JUL 2026 18:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -666,6 +666,30 @@ File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 ) (main.aux
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported on input line 8.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
 
 
 LaTeX Warning: Label `fig:erd' multiply defined.
@@ -1799,386 +1823,290 @@ Package pdftex.def Info: erd.png  used on input line 972.
 <gđk.jpg, id=640, 694.595pt x 779.91376pt>
 File: gđk.jpg Graphic file (type jpg)
 <use gđk.jpg>
-Package pdftex.def Info: gđk.jpg  used on input line 995.
+Package pdftex.def Info: gđk.jpg  used on input line 996.
 (pdftex.def)             Requested size: 452.9679pt x 508.62782pt.
-<dkl.jpg, id=641, 694.595pt x 521.95pt>
+ [20 <./erd.png>]
+<dkl.jpg, id=647, 694.595pt x 521.95pt>
 File: dkl.jpg Graphic file (type jpg)
 <use dkl.jpg>
-Package pdftex.def Info: dkl.jpg  used on input line 1001.
+Package pdftex.def Info: dkl.jpg  used on input line 1005.
 (pdftex.def)             Requested size: 452.9679pt x 340.39441pt.
- [20 <./erd.png>] [21 <./gđk.jpg>]
-<dk.jpg, id=653, 719.68875pt x 789.95125pt>
+ [21 <./gđk.jpg>]
+<tentontai.png, id=653, 208.27812pt x 307.64937pt>
+File: tentontai.png Graphic file (type png)
+<use tentontai.png>
+Package pdftex.def Info: tentontai.png  used on input line 1015.
+(pdftex.def)             Requested size: 452.9679pt x 669.16951pt.
+ [22 <./dkl.jpg>] [23 <./tentontai.png>]
+<matkhaukhac.png, id=665, 279.0425pt x 340.77313pt>
+File: matkhaukhac.png Graphic file (type png)
+<use matkhaukhac.png>
+Package pdftex.def Info: matkhaukhac.png  used on input line 1025.
+(pdftex.def)             Requested size: 452.9679pt x 553.19339pt.
+<dk.jpg, id=666, 719.68875pt x 789.95125pt>
 File: dk.jpg Graphic file (type jpg)
 <use dk.jpg>
-Package pdftex.def Info: dk.jpg  used on input line 1027.
+Package pdftex.def Info: dk.jpg  used on input line 1035.
 (pdftex.def)             Requested size: 452.9679pt x 497.20183pt.
-<dnl.jpg, id=654, 694.595pt x 469.755pt>
+ [24 <./matkhaukhac.png>] [25 <./dk.jpg>]
+File: dk.jpg Graphic file (type jpg)
+<use dk.jpg>
+Package pdftex.def Info: dk.jpg  used on input line 1061.
+(pdftex.def)             Requested size: 452.9679pt x 497.20183pt.
+<dnl.jpg, id=679, 694.595pt x 469.755pt>
 File: dnl.jpg Graphic file (type jpg)
 <use dnl.jpg>
-Package pdftex.def Info: dnl.jpg  used on input line 1033.
+Package pdftex.def Info: dnl.jpg  used on input line 1070.
 (pdftex.def)             Requested size: 452.9679pt x 306.35497pt.
- [22 <./dkl.jpg>]
-<gdc.jpg, id=660, 1346.02875pt x 2392.94pt>
+ [26]
+<gdc.jpg, id=685, 1346.02875pt x 2392.94pt>
 File: gdc.jpg Graphic file (type jpg)
 <use gdc.jpg>
-Package pdftex.def Info: gdc.jpg  used on input line 1039.
+Package pdftex.def Info: gdc.jpg  used on input line 1079.
 (pdftex.def)             Requested size: 452.9679pt x 805.26382pt.
- [23 <./dk.jpg>]
-[24 <./dnl.jpg>]
-Overfull \vbox (129.25696pt too high) has occurred while \output is active []
+ [27 <./dnl.jpg>]
+Overfull \vbox (131.58972pt too high) has occurred while \output is active []
 
 
-[25 <./gdc.jpg>]
-<prof.jpg, id=677, 1346.02875pt x 1194.4625pt>
+[28 <./gdc.jpg>]
+<prof.jpg, id=696, 1346.02875pt x 1194.4625pt>
 File: prof.jpg Graphic file (type jpg)
 <use prof.jpg>
-Package pdftex.def Info: prof.jpg  used on input line 1062.
+Package pdftex.def Info: prof.jpg  used on input line 1102.
 (pdftex.def)             Requested size: 452.9679pt x 401.95634pt.
-<editprof.jpg, id=678, 1368.11125pt x 1194.4625pt>
+<editprof.jpg, id=697, 1368.11125pt x 1194.4625pt>
 File: editprof.jpg Graphic file (type jpg)
 <use editprof.jpg>
-Package pdftex.def Info: editprof.jpg  used on input line 1068.
+Package pdftex.def Info: editprof.jpg  used on input line 1111.
 (pdftex.def)             Requested size: 452.9679pt x 395.46788pt.
- [26 <./prof.jpg>]
-<logout.jpg, id=684, 695.59875pt x 524.96124pt>
+ [29 <./prof.jpg>]
+<tencstontai.png, id=703, 927.465pt x 410.03188pt>
+File: tencstontai.png Graphic file (type png)
+<use tencstontai.png>
+Package pdftex.def Info: tencstontai.png  used on input line 1120.
+(pdftex.def)             Requested size: 452.9679pt x 200.26044pt.
+ [30 <./editprof.jpg> <./tencstontai.png>]
+<emailkhonghople.png, id=711, 927.96687pt x 419.06563pt>
+File: emailkhonghople.png Graphic file (type png)
+<use emailkhonghople.png>
+Package pdftex.def Info: emailkhonghople.png  used on input line 1129.
+(pdftex.def)             Requested size: 452.9679pt x 204.56383pt.
+<chinhsuathanhcong.png, id=712, 920.43875pt x 420.06938pt>
+File: chinhsuathanhcong.png Graphic file (type png)
+<use chinhsuathanhcong.png>
+Package pdftex.def Info: chinhsuathanhcong.png  used on input line 1138.
+(pdftex.def)             Requested size: 452.9679pt x 206.72675pt.
+
+[31 <./emailkhonghople.png> <./chinhsuathanhcong.png>]
+<logout.jpg, id=722, 695.59875pt x 524.96124pt>
 File: logout.jpg Graphic file (type jpg)
 <use logout.jpg>
-Package pdftex.def Info: logout.jpg  used on input line 1089.
+Package pdftex.def Info: logout.jpg  used on input line 1159.
 (pdftex.def)             Requested size: 452.9679pt x 341.84557pt.
- [27 <./editprof.jpg>] [28 <./logout.jpg>]
-<tkm.jpg, id=695, 1212.53pt x 1391.1975pt>
-File: tkm.jpg Graphic file (type jpg)
-<use tkm.jpg>
-Package pdftex.def Info: tkm.jpg  used on input line 1150.
-(pdftex.def)             Requested size: 452.9679pt x 519.72359pt.
-<tkkq.jpg, id=696, 1212.53pt x 3996.9325pt>
-File: tkkq.jpg Graphic file (type jpg)
-<use tkkq.jpg>
-Package pdftex.def Info: tkkq.jpg  used on input line 1156.
-(pdftex.def)             Requested size: 452.9679pt x 1493.17413pt.
-
-[29]
-<sreach.jpg, id=701, 713.66624pt x 881.2925pt>
-File: sreach.jpg Graphic file (type jpg)
-<use sreach.jpg>
-Package pdftex.def Info: sreach.jpg  used on input line 1162.
-(pdftex.def)             Requested size: 452.9679pt x 559.35902pt.
- [30 <./tkm.jpg>]
-Overfull \vbox (817.16727pt too high) has occurred while \output is active []
-
-
-[31 <./tkkq.jpg>] [32 <./sreach.jpg>]
+<trangdangnhap.png, id=723, 915.92188pt x 414.54875pt>
+File: trangdangnhap.png Graphic file (type png)
+<use trangdangnhap.png>
+Package pdftex.def Info: trangdangnhap.png  used on input line 1168.
+(pdftex.def)             Requested size: 452.9679pt x 205.01566pt.
+ [32 <./logout.jpg>]
+[33 <./trangdangnhap.png>]
+<trangtimkiem.png, id=735, 926.46124pt x 421.575pt>
+File: trangtimkiem.png Graphic file (type png)
+<use trangtimkiem.png>
+Package pdftex.def Info: trangtimkiem.png  used on input line 1229.
+(pdftex.def)             Requested size: 452.9679pt x 206.11682pt.
+<nambatdaulon.png, id=736, 921.4425pt x 425.08812pt>
+File: nambatdaulon.png Graphic file (type png)
+<use nambatdaulon.png>
+Package pdftex.def Info: nambatdaulon.png  used on input line 1238.
+(pdftex.def)             Requested size: 452.9679pt x 208.96309pt.
+ [34 <./trangtimkiem.png>] [35 <./nambatdaulon.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 1167.
+(hyperref)                removing `\<let>-command' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 1167.
+(hyperref)                removing `\\' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 1167.
+(hyperref)                removing `\@centercr' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 1167.
+(hyperref)                removing `\rightskip' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 1167.
+(hyperref)                removing `\@flushglue' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 1167.
+(hyperref)                removing `\leftskip' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 1167.
+(hyperref)                removing `\@flushglue' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 1167.
+(hyperref)                removing `\finalhyphendemerits' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1167.
+(hyperref)                removing `\z@' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 1167.
+(hyperref)                removing `\parindent' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1167.
+(hyperref)                removing `\z@' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 1167.
+(hyperref)                removing `\parfillskip' on input line 1242.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 1167.
+(hyperref)                removing `\z@skip' on input line 1242.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1173 \section{System Design}
+l.1248 \section{System Design}
                               
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1174 \subsection{System Architecture}
+l.1249 \subsection{System Architecture}
                                        
-<Architecture System.png, id=718, 1727.45375pt x 944.52875pt>
+<Architecture System.png, id=749, 1727.45375pt x 944.52875pt>
 File: Architecture System.png Graphic file (type png)
 <use Architecture System.png>
-Package pdftex.def Info: Architecture System.png  used on input line 1177.
+Package pdftex.def Info: Architecture System.png  used on input line 1252.
 (pdftex.def)             Requested size: 362.37569pt x 198.1263pt.
- [33
+ [36
 
  <./Architecture System.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1214 \subsection{Package Diagram}
+l.1289 \subsection{Package Diagram}
                                    
-<Backend-package.jpg, id=724, 1541.76pt x 1027.84pt>
+<Backend-package.jpg, id=755, 1541.76pt x 1027.84pt>
 File: Backend-package.jpg Graphic file (type jpg)
 <use Backend-package.jpg>
-Package pdftex.def Info: Backend-package.jpg  used on input line 1219.
+Package pdftex.def Info: Backend-package.jpg  used on input line 1294.
 (pdftex.def)             Requested size: 452.9679pt x 301.97118pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1224 \section{ Database Design}
+l.1299 \section{ Database Design}
                                  
-<database.png, id=725, 1127.21124pt x 732.7375pt>
+<database.png, id=756, 1127.21124pt x 732.7375pt>
 File: database.png Graphic file (type png)
 <use database.png>
-Package pdftex.def Info: database.png  used on input line 1227.
+Package pdftex.def Info: database.png  used on input line 1302.
 (pdftex.def)             Requested size: 452.9679pt x 294.45384pt.
- [34 <./Backend-package.jpg>]
+ [37 <./Backend-package.jpg>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1234 \subsection{Role Table}
+l.1309 \subsection{Role Table}
                               
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1240--1240
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1315--1315
 []|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1241--1241
-[]|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1235--1243
- [] [] [] [] [] 
- []
-
-[35 <./database.png>]
-pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
-2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1246 \subsection{User Table}
-                              
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1252--1252
-[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1253--1253
-[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1254--1254
-[]|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1257--1258
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1247--1259
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1268--1268
-[]|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1269--1269
-[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1263--1272
- [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1280--1280
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1280--1280
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1280--1281
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1281--1281
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1281--1281
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1281--1282
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1276--1283
- [] [] [] [] [] 
- []
-
-[36]
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1292--1292
-[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
- []
-
-
-Overfull \hbox (13.1675pt too wide) in paragraph at lines 1293--1293
-[]|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1294--1295
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1287--1296
- [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1304--1304
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1304--1304
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1305--1305
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1305--1305
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1305--1306
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1300--1307
- [] [] [] [] [] 
  []
 
 
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 1316--1316
-[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1317--1317
-[]|\T5/cmr/m/n/10.95 NVARCHAR(500)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1318--1318
-[]|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1311--1320
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1329--1329
-[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1330--1330
 []|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1324--1332
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1310--1318
  [] [] [] [] [] 
  []
 
-[37]
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1341--1341
-[]|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
+[38 <./database.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
+2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1321 \subsection{User Table}
+                              
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1327--1327
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1336--1343
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1328--1328
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1329--1329
+[]|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1332--1333
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1322--1334
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1352--1352
-[]|\T5/cmr/m/n/10.95 NVARCHAR(500)| 
- []
-
-
-Overfull \hbox (13.1675pt too wide) in paragraph at lines 1353--1353
-[]|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1354--1354
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1343--1343
 []|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1344--1344
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1338--1347
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1355--1355
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1355--1355
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1355--1356
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1356
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1356
+\T5/cmr/m/n/10.95 (Com-
  []
 
 
@@ -2187,277 +2115,402 @@ Underfull \hbox (badness 10000) in paragraph at lines 1356--1357
  []
 
 
-Overfull \hbox (8.59073pt too wide) in paragraph at lines 1356--1357
-\T5/cmr/m/n/10.95 APISource| 
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1347--1358
- [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1367
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1367
-\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1367
-\T5/cmr/m/n/10.95 search-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1367
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1367
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1368
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1362--1369
- [] [] [] [] [] 
- []
-
-[38]
-Underfull \hbox (badness 10000) in paragraph at lines 1377--1377
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1377--1377
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1377--1378
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1377--1378
-\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1377--1378
-\T5/cmr/m/n/10.95 search-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1378--1378
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1378--1378
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1378--1379
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1373--1380
- [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1388
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1388
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1389
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1389
-\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1389
-\T5/cmr/m/n/10.95 search-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1389
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1389
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1389--1390
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1384--1392
- [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1404--1405
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1396--1406
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1351--1358
  [] [] [] [] [] 
  []
 
 [39]
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1415--1415
-[]|\T5/cmr/m/n/10.95 NVARCHAR(300)| 
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1367--1367
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1416--1416
-[]|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1420--1421
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1410--1422
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 1431--1431
-[]|\T5/cmr/m/n/10.95 NVARCHAR(300)| 
- []
-
-
-Overfull \hbox (13.1675pt too wide) in paragraph at lines 1432--1432
+Overfull \hbox (13.1675pt too wide) in paragraph at lines 1368--1368
 []|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1435--1436
+Underfull \hbox (badness 10000) in paragraph at lines 1369--1370
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1426--1437
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1362--1371
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1379
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1379
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1380
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1380--1380
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1380--1380
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1380--1381
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1375--1382
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1391--1391
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1392--1392
+[]|\T5/cmr/m/n/10.95 NVARCHAR(500)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1393--1393
+[]|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1386--1395
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1404--1404
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1405--1405
+[]|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1399--1407
  [] [] [] [] [] 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1445--1445
-[]|\T5/cmr/m/n/10.95 Yes
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1416--1416
+[]|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1445--1445
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1445--1446
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1445--1446
-\T5/cmr/m/n/10.95 No-ti-fi-ca-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1446--1446
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1446--1446
-\T5/cmr/m/n/10.95 (Com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1446--1447
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1446--1447
-\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1446--1447
-\T5/cmr/m/n/10.95 search-
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1441--1448
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1411--1418
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1458--1459
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1427--1427
+[]|\T5/cmr/m/n/10.95 NVARCHAR(500)| 
+ []
+
+
+Overfull \hbox (13.1675pt too wide) in paragraph at lines 1428--1428
+[]|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1429--1429
+[]|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1431--1432
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1459--1460
+Overfull \hbox (8.59073pt too wide) in paragraph at lines 1431--1432
+\T5/cmr/m/n/10.95 APISource| 
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1422--1433
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1441
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1459--1460
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1441
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1442
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1442
 \TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1459--1460
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1442
 \T5/cmr/m/n/10.95 search-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1460--1461
+Underfull \hbox (badness 10000) in paragraph at lines 1442--1442
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1442--1442
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1442--1443
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 1452--1462
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1437--1444
+ [] [] [] [] [] 
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 1452--1452
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1452--1452
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1452--1453
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1452--1453
+\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1452--1453
+\T5/cmr/m/n/10.95 search-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1453--1453
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1453--1453
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1453--1454
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1448--1455
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1463--1463
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1463--1463
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1463--1464
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1463--1464
+\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1463--1464
+\T5/cmr/m/n/10.95 search-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1464--1464
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1464--1464
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1464--1465
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1459--1467
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1479--1480
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1471--1481
+ [] [] [] [] [] 
+ []
+
+[42]
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1490--1490
+[]|\T5/cmr/m/n/10.95 NVARCHAR(300)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1491--1491
+[]|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1495--1496
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1485--1497
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 1506--1506
+[]|\T5/cmr/m/n/10.95 NVARCHAR(300)| 
+ []
+
+
+Overfull \hbox (13.1675pt too wide) in paragraph at lines 1507--1507
+[]|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1510--1511
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1501--1512
+ [] [] [] [] [] 
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1520--1520
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1520--1520
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1520--1521
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1520--1521
+\T5/cmr/m/n/10.95 No-ti-fi-ca-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1521--1521
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1521--1521
+\T5/cmr/m/n/10.95 (Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1521--1522
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1521--1522
+\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1521--1522
+\T5/cmr/m/n/10.95 search-
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1516--1523
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1533--1534
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1534--1535
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1534--1535
+\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1534--1535
+\T5/cmr/m/n/10.95 search-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1535--1536
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Overfull \hbox (36.22336pt too wide) in alignment at lines 1527--1537
  [] [] [] [] [] 
  []
 
@@ -2466,381 +2519,381 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1463 \section{ Detail Design}
+l.1538 \section{ Detail Design}
                                
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1464 \subsection{Register}
+l.1539 \subsection{Register}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1465 \subsubsection{Activity diagram}
+l.1540 \subsubsection{Activity diagram}
                                        
-<ac1.png, id=773, 1286.8075pt x 578.16pt>
+<ac1.png, id=805, 1286.8075pt x 578.16pt>
 File: ac1.png Graphic file (type png)
 <use ac1.png>
-Package pdftex.def Info: ac1.png  used on input line 1468.
+Package pdftex.def Info: ac1.png  used on input line 1543.
 (pdftex.def)             Requested size: 452.9679pt x 203.51471pt.
- [41]
+ [44]
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1472 \subsubsection{Sequence Diagram}
+l.1547 \subsubsection{Sequence Diagram}
                                        
-<tt1.png, id=780, 729.72626pt x 950.55125pt>
+<tt1.png, id=812, 729.72626pt x 950.55125pt>
 File: tt1.png Graphic file (type png)
 <use tt1.png>
-Package pdftex.def Info: tt1.png  used on input line 1475.
+Package pdftex.def Info: tt1.png  used on input line 1550.
 (pdftex.def)             Requested size: 452.9679pt x 590.0464pt.
- [42 <./ac1.png>]
+ [45 <./ac1.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.1.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1479 \subsubsection{State Diagram}
+l.1554 \subsubsection{State Diagram}
                                     
-<sta1.png, id=787, 444.66125pt x 804.00375pt>
+<sta1.png, id=819, 444.66125pt x 804.00375pt>
 File: sta1.png Graphic file (type png)
 <use sta1.png>
-Package pdftex.def Info: sta1.png  used on input line 1482.
+Package pdftex.def Info: sta1.png  used on input line 1557.
 (pdftex.def)             Requested size: 348.6731pt x 630.45189pt.
- [43 <./tt1.png>]
-<CDRegister.png, id=795, 886.31125pt x 733.74126pt>
+ [46 <./tt1.png>]
+<CDRegister.png, id=826, 886.31125pt x 733.74126pt>
 File: CDRegister.png Graphic file (type png)
 <use CDRegister.png>
-Package pdftex.def Info: CDRegister.png  used on input line 1489.
+Package pdftex.def Info: CDRegister.png  used on input line 1564.
 (pdftex.def)             Requested size: 452.9679pt x 374.998pt.
- [44 <./sta1.png>]
+ [47 <./sta1.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1494 \subsection{Login}
+l.1569 \subsection{Login}
                          
-<ac2.png, id=802, 744.7825pt x 612.2875pt>
+<ac2.png, id=833, 744.7825pt x 612.2875pt>
 File: ac2.png Graphic file (type png)
 <use ac2.png>
-Package pdftex.def Info: ac2.png  used on input line 1498.
+Package pdftex.def Info: ac2.png  used on input line 1573.
 (pdftex.def)             Requested size: 452.9679pt x 372.3924pt.
- [45 <./CDRegister.png>]
-<tt2.png, id=809, 653.44125pt x 708.6475pt>
+ [48 <./CDRegister.png>]
+<tt2.png, id=840, 653.44125pt x 708.6475pt>
 File: tt2.png Graphic file (type png)
 <use tt2.png>
-Package pdftex.def Info: tt2.png  used on input line 1505.
+Package pdftex.def Info: tt2.png  used on input line 1580.
 (pdftex.def)             Requested size: 452.9679pt x 491.23805pt.
- [46 <./ac2.png>]
-<sta2.png, id=816, 524.96124pt x 629.35126pt>
+ [49 <./ac2.png>]
+<sta2.png, id=848, 524.96124pt x 629.35126pt>
 File: sta2.png Graphic file (type png)
 <use sta2.png>
-Package pdftex.def Info: sta2.png  used on input line 1512.
+Package pdftex.def Info: sta2.png  used on input line 1587.
 (pdftex.def)             Requested size: 452.9679pt x 543.05612pt.
- [47 <./tt2.png>]
-<CDLogin.png, id=823, 882.29625pt x 745.78625pt>
+ [50 <./tt2.png>]
+<CDLogin.png, id=855, 882.29625pt x 745.78625pt>
 File: CDLogin.png Graphic file (type png)
 <use CDLogin.png>
-Package pdftex.def Info: CDLogin.png  used on input line 1519.
+Package pdftex.def Info: CDLogin.png  used on input line 1594.
 (pdftex.def)             Requested size: 452.9679pt x 382.88365pt.
- [48 <./sta2.png>]
+ [51 <./sta2.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1525 \subsection{Search Research Papers}
+l.1600 \subsection{Search Research Papers}
                                           
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1526 \subsubsection{Activity Diagram}
+l.1601 \subsubsection{Activity Diagram}
                                        
-<ac3.png, id=830, 1102.1175pt x 699.61375pt>
+<ac3.png, id=862, 1102.1175pt x 699.61375pt>
 File: ac3.png Graphic file (type png)
 <use ac3.png>
-Package pdftex.def Info: ac3.png  used on input line 1529.
+Package pdftex.def Info: ac3.png  used on input line 1604.
 (pdftex.def)             Requested size: 452.9679pt x 287.53738pt.
- [49 <./CDLogin.png>]
+ [52 <./CDLogin.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.3.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1533 \subsubsection{Sequence Diagram}
+l.1608 \subsubsection{Sequence Diagram}
                                        
-<tt3.png, id=838, 712.6625pt x 900.36375pt>
+<tt3.png, id=869, 712.6625pt x 900.36375pt>
 File: tt3.png Graphic file (type png)
 <use tt3.png>
-Package pdftex.def Info: tt3.png  used on input line 1536.
+Package pdftex.def Info: tt3.png  used on input line 1611.
 (pdftex.def)             Requested size: 452.9679pt x 572.27417pt.
- [50 <./ac3.png>]
+ [53 <./ac3.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.3.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1540 \subsubsection{State Diagram}
+l.1615 \subsubsection{State Diagram}
                                     
-<sta3.png, id=845, 554.07pt x 915.42pt>
+<sta3.png, id=876, 554.07pt x 915.42pt>
 File: sta3.png Graphic file (type png)
 <use sta3.png>
-Package pdftex.def Info: sta3.png  used on input line 1543.
+Package pdftex.def Info: sta3.png  used on input line 1618.
 (pdftex.def)             Requested size: 381.607pt x 630.45189pt.
- [51 <./tt3.png>]
+ [54 <./tt3.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.3.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1547 \subsubsection{Class Diagram}
+l.1622 \subsubsection{Class Diagram}
                                     
-<CDSearchResearchPaper.png, id=852, 929.4725pt x 722.7pt>
+<CDSearchResearchPaper.png, id=883, 929.4725pt x 722.7pt>
 File: CDSearchResearchPaper.png Graphic file (type png)
 <use CDSearchResearchPaper.png>
-Package pdftex.def Info: CDSearchResearchPaper.png  used on input line 1550.
+Package pdftex.def Info: CDSearchResearchPaper.png  used on input line 1625.
 (pdftex.def)             Requested size: 452.9679pt x 352.19627pt.
- [52 <./sta3.png>]
-<avpd.png, id=859, 2673.99pt x 3043.37pt>
+ [55 <./sta3.png>]
+<avpd.png, id=891, 2673.99pt x 3043.37pt>
 File: avpd.png Graphic file (type png)
 <use avpd.png>
-Package pdftex.def Info: avpd.png  used on input line 1561.
+Package pdftex.def Info: avpd.png  used on input line 1636.
 (pdftex.def)             Requested size: 452.9679pt x 515.50854pt.
- [53 <./CDSearchResearchPaper.png>]
-<sevpd.png, id=866, 4641.34pt x 3276.24pt>
+ [56 <./CDSearchResearchPaper.png>]
+<sevpd.png, id=898, 4641.34pt x 3276.24pt>
 File: sevpd.png Graphic file (type png)
 <use sevpd.png>
-Package pdftex.def Info: sevpd.png  used on input line 1568.
+Package pdftex.def Info: sevpd.png  used on input line 1643.
 (pdftex.def)             Requested size: 452.9679pt x 319.69456pt.
- [54 <./avpd.png>]
-<svpd.png, id=873, 2087.8pt x 2316.655pt>
+ [57 <./avpd.png>]
+<svpd.png, id=905, 2087.8pt x 2316.655pt>
 File: svpd.png Graphic file (type png)
 <use svpd.png>
-Package pdftex.def Info: svpd.png  used on input line 1575.
+Package pdftex.def Info: svpd.png  used on input line 1650.
 (pdftex.def)             Requested size: 452.9679pt x 502.59583pt.
- [55 <./sevpd.png>]
-<CDPaperDetail.png, id=881, 931.48pt x 699.61375pt>
+ [58 <./sevpd.png>]
+<CDPaperDetail.png, id=912, 931.48pt x 699.61375pt>
 File: CDPaperDetail.png Graphic file (type png)
 <use CDPaperDetail.png>
-Package pdftex.def Info: CDPaperDetail.png  used on input line 1582.
+Package pdftex.def Info: CDPaperDetail.png  used on input line 1657.
 (pdftex.def)             Requested size: 452.9679pt x 340.20898pt.
- [56 <./svpd.png>]
-<asb.png, id=888, 3681.755pt x 2710.125pt>
+ [59 <./svpd.png>]
+<asb.png, id=919, 3681.755pt x 2710.125pt>
 File: asb.png Graphic file (type png)
 <use asb.png>
-Package pdftex.def Info: asb.png  used on input line 1593.
+Package pdftex.def Info: asb.png  used on input line 1668.
 (pdftex.def)             Requested size: 452.9679pt x 333.43024pt.
- [57 <./CDPaperDetail.png>]
-<sesb.png, id=895, 4356.275pt x 3304.345pt>
+ [60 <./CDPaperDetail.png>]
+<sesb.png, id=926, 4356.275pt x 3304.345pt>
 File: sesb.png Graphic file (type png)
 <use sesb.png>
-Package pdftex.def Info: sesb.png  used on input line 1600.
+Package pdftex.def Info: sesb.png  used on input line 1675.
 (pdftex.def)             Requested size: 452.9679pt x 343.56311pt.
- [58 <./asb.png>]
-<ssb.png, id=902, 2216.28pt x 2007.5pt>
+ [61 <./asb.png>]
+<ssb.png, id=934, 2216.28pt x 2007.5pt>
 File: ssb.png Graphic file (type png)
 <use ssb.png>
-Package pdftex.def Info: ssb.png  used on input line 1607.
+Package pdftex.def Info: ssb.png  used on input line 1682.
 (pdftex.def)             Requested size: 452.9679pt x 410.28426pt.
- [59 <./sesb.png>]
-<CDBookmark.png, id=909, 936.49875pt x 682.55pt>
+ [62 <./sesb.png>]
+<CDBookmark.png, id=941, 936.49875pt x 682.55pt>
 File: CDBookmark.png Graphic file (type png)
 <use CDBookmark.png>
-Package pdftex.def Info: CDBookmark.png  used on input line 1614.
+Package pdftex.def Info: CDBookmark.png  used on input line 1689.
 (pdftex.def)             Requested size: 452.9679pt x 330.14067pt.
- [60 <./ssb.png>]
-<atpt.png, id=916, 3316.39pt x 5235.56pt>
+ [63 <./ssb.png>]
+<atpt.png, id=948, 3316.39pt x 5235.56pt>
 File: atpt.png Graphic file (type png)
 <use atpt.png>
-Package pdftex.def Info: atpt.png  used on input line 1624.
+Package pdftex.def Info: atpt.png  used on input line 1699.
 (pdftex.def)             Requested size: 385.02547pt x 607.78874pt.
- [61 <./CDBookmark.png>]
-<setpt.png, id=924, 5323.89pt x 4424.53pt>
+ [64 <./CDBookmark.png>]
+<setpt.png, id=955, 5323.89pt x 4424.53pt>
 File: setpt.png Graphic file (type png)
 <use setpt.png>
-Package pdftex.def Info: setpt.png  used on input line 1631.
+Package pdftex.def Info: setpt.png  used on input line 1706.
 (pdftex.def)             Requested size: 452.9679pt x 376.38388pt.
- [62 <./atpt.png>]
-<stpt.png, id=931, 2356.805pt x 4300.065pt>
+ [65 <./atpt.png>]
+<stpt.png, id=962, 2356.805pt x 4300.065pt>
 File: stpt.png Graphic file (type png)
 <use stpt.png>
-Package pdftex.def Info: stpt.png  used on input line 1638.
+Package pdftex.def Info: stpt.png  used on input line 1713.
 (pdftex.def)             Requested size: 345.52196pt x 630.45189pt.
- [63 <./setpt.png>]
-<Track-Publication-Trend_class-diagram.jpg, id=938, 857.2025pt x 1204.5pt>
+ [66 <./setpt.png>]
+<Track-Publication-Trend_class-diagram.jpg, id=969, 857.2025pt x 1204.5pt>
 File: Track-Publication-Trend_class-diagram.jpg Graphic file (type jpg)
 <use Track-Publication-Trend_class-diagram.jpg>
 Package pdftex.def Info: Track-Publication-Trend_class-diagram.jpg  used on inp
-ut line 1645.
+ut line 1720.
 (pdftex.def)             Requested size: 452.9679pt x 636.48892pt.
- [64 <./stpt.png>]
-<ac7.png, id=945, 1075.01625pt x 1577.895pt>
+ [67 <./stpt.png>]
+<ac7.png, id=977, 1075.01625pt x 1577.895pt>
 File: ac7.png Graphic file (type png)
 <use ac7.png>
-Package pdftex.def Info: ac7.png  used on input line 1654.
+Package pdftex.def Info: ac7.png  used on input line 1729.
 (pdftex.def)             Requested size: 407.66833pt x 598.35435pt.
- [65 <./Track-Publication-Trend_class-diagram.jpg>]
-<sevdb.png, id=951, 896.34875pt x 617.30624pt>
+ [68 <./Track-Publication-Trend_class-diagram.jpg>]
+<sevdb.png, id=983, 896.34875pt x 617.30624pt>
 File: sevdb.png Graphic file (type png)
 <use sevdb.png>
-Package pdftex.def Info: sevdb.png  used on input line 1661.
+Package pdftex.def Info: sevdb.png  used on input line 1736.
 (pdftex.def)             Requested size: 452.9679pt x 311.94913pt.
- [66 <./ac7.png (PNG copy)>]
-<sta7.png, id=957, 825.0825pt x 951.555pt>
+ [69 <./ac7.png (PNG copy)>]
+<sta7.png, id=989, 825.0825pt x 951.555pt>
 File: sta7.png Graphic file (type png)
 <use sta7.png>
-Package pdftex.def Info: sta7.png  used on input line 1668.
+Package pdftex.def Info: sta7.png  used on input line 1743.
 (pdftex.def)             Requested size: 452.9679pt x 522.39857pt.
- [67 <./sevdb.png (PNG copy)>]
-<View-Dashboard_class-diagram.jpg, id=964, 925.4575pt x 901.3675pt>
+ [70 <./sevdb.png (PNG copy)>]
+<View-Dashboard_class-diagram.jpg, id=995, 925.4575pt x 901.3675pt>
 File: View-Dashboard_class-diagram.jpg Graphic file (type jpg)
 <use View-Dashboard_class-diagram.jpg>
 Package pdftex.def Info: View-Dashboard_class-diagram.jpg  used on input line 1
-675.
+750.
 (pdftex.def)             Requested size: 452.9679pt x 441.1788pt.
- [68 <./sta7.png (PNG copy)>]
-<activity_Generate-reports.png, id=970, 1445.4pt x 1139.25626pt>
+ [71 <./sta7.png (PNG copy)>]
+<activity_Generate-reports.png, id=1001, 1445.4pt x 1139.25626pt>
 File: activity_Generate-reports.png Graphic file (type png)
 <use activity_Generate-reports.png>
-Package pdftex.def Info: activity_Generate-reports.png  used on input line 1684
+Package pdftex.def Info: activity_Generate-reports.png  used on input line 1759
 .
 (pdftex.def)             Requested size: 452.9679pt x 357.02495pt.
- [69 <./View-Dashboard_class-diagram.jpg>]
-<sequence_Generate-reports.png, id=976, 628.3475pt x 750.805pt>
+ [72 <./View-Dashboard_class-diagram.jpg>]
+<sequence_Generate-reports.png, id=1007, 628.3475pt x 750.805pt>
 File: sequence_Generate-reports.png Graphic file (type png)
 <use sequence_Generate-reports.png>
-Package pdftex.def Info: sequence_Generate-reports.png  used on input line 1691
+Package pdftex.def Info: sequence_Generate-reports.png  used on input line 1766
 .
 (pdftex.def)             Requested size: 527.65489pt x 630.45189pt.
 
-Overfull \hbox (74.687pt too wide) in paragraph at lines 1691--1692
+Overfull \hbox (74.687pt too wide) in paragraph at lines 1766--1767
  [][] 
  []
 
-[70 <./activity_Generate-reports.png (PNG copy)>]
-<state_Generate-reports.png, id=982, 937.5025pt x 1690.315pt>
+[73 <./activity_Generate-reports.png (PNG copy)>]
+<state_Generate-reports.png, id=1014, 937.5025pt x 1690.315pt>
 File: state_Generate-reports.png Graphic file (type png)
 <use state_Generate-reports.png>
-Package pdftex.def Info: state_Generate-reports.png  used on input line 1698.
+Package pdftex.def Info: state_Generate-reports.png  used on input line 1773.
 (pdftex.def)             Requested size: 349.6743pt x 630.45189pt.
- [71 <./sequence_Generate-reports.png (PNG copy)>]
-<Generate-Reports_class-diagram.jpg, id=988, 1146.2825pt x 973.6375pt>
+ [74 <./sequence_Generate-reports.png (PNG copy)>]
+<Generate-Reports_class-diagram.jpg, id=1020, 1146.2825pt x 973.6375pt>
 File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
 <use Generate-Reports_class-diagram.jpg>
 Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
- 1705.
+ 1780.
 (pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
- [72 <./state_Generate-reports.png (PNG copy)>]
-<ac8.png, id=994, 1264.725pt x 2044.63875pt>
+ [75 <./state_Generate-reports.png (PNG copy)>]
+<ac8.png, id=1026, 1264.725pt x 2044.63875pt>
 File: ac8.png Graphic file (type png)
 <use ac8.png>
-Package pdftex.def Info: ac8.png  used on input line 1714.
+Package pdftex.def Info: ac8.png  used on input line 1789.
 (pdftex.def)             Requested size: 362.37569pt x 585.81677pt.
- [73 <./Generate-Reports_class-diagram.jpg>]
-<sevtt.png, id=1001, 993.7125pt x 761.84625pt>
+ [76 <./Generate-Reports_class-diagram.jpg>]
+<sevtt.png, id=1032, 993.7125pt x 761.84625pt>
 File: sevtt.png Graphic file (type png)
 <use sevtt.png>
-Package pdftex.def Info: sevtt.png  used on input line 1721.
+Package pdftex.def Info: sevtt.png  used on input line 1796.
 (pdftex.def)             Requested size: 452.9679pt x 347.27995pt.
- [74 <./ac8.png (PNG copy)>]
-<sta8.png, id=1007, 661.47125pt x 1072.005pt>
+ [77 <./ac8.png (PNG copy)>]
+<sta8.png, id=1038, 661.47125pt x 1072.005pt>
 File: sta8.png Graphic file (type png)
 <use sta8.png>
-Package pdftex.def Info: sta8.png  used on input line 1728.
+Package pdftex.def Info: sta8.png  used on input line 1803.
 (pdftex.def)             Requested size: 362.37569pt x 587.26547pt.
- [75 <./sevtt.png (PNG copy)>]
-<follow topics.png, id=1013, 1387.1825pt x 728.7225pt>
+ [78 <./sevtt.png (PNG copy)>]
+<follow topics.png, id=1044, 1387.1825pt x 728.7225pt>
 File: follow topics.png Graphic file (type png)
 <use follow topics.png>
-Package pdftex.def Info: follow topics.png  used on input line 1738.
+Package pdftex.def Info: follow topics.png  used on input line 1813.
 (pdftex.def)             Requested size: 452.9679pt x 237.95506pt.
- [76 <./sta8.png (PNG copy)>]
-<follow topice 2.png, id=1019, 914.41624pt x 416.55624pt>
+ [79 <./sta8.png (PNG copy)>]
+<follow topice 2.png, id=1051, 914.41624pt x 416.55624pt>
 File: follow topice 2.png Graphic file (type png)
 <use follow topice 2.png>
-Package pdftex.def Info: follow topice 2.png  used on input line 1745.
+Package pdftex.def Info: follow topice 2.png  used on input line 1820.
 (pdftex.def)             Requested size: 452.9679pt x 206.34534pt.
-<follow topice 3.png, id=1020, 262.9825pt x 780.9175pt>
+<follow topice 3.png, id=1052, 262.9825pt x 780.9175pt>
 File: follow topice 3.png Graphic file (type png)
 <use follow topice 3.png>
-Package pdftex.def Info: follow topice 3.png  used on input line 1752.
+Package pdftex.def Info: follow topice 3.png  used on input line 1827.
 (pdftex.def)             Requested size: 203.83417pt x 605.30014pt.
- [77 <./follow topics.png (PNG copy)> <./follow topice 2.png (PNG copy)>]
-<Receive notifications.png, id=1027, 1589.94pt x 837.1275pt>
+ [80 <./follow topics.png (PNG copy)> <./follow topice 2.png (PNG copy)>]
+<Receive notifications.png, id=1059, 1589.94pt x 837.1275pt>
 File: Receive notifications.png Graphic file (type png)
 <use Receive notifications.png>
-Package pdftex.def Info: Receive notifications.png  used on input line 1762.
+Package pdftex.def Info: Receive notifications.png  used on input line 1837.
 (pdftex.def)             Requested size: 452.9679pt x 238.4944pt.
- [78 <./follow topice 3.png (PNG copy)>]
-<Receive notifications 1.png, id=1033, 1128.215pt x 431.6125pt>
+ [81 <./follow topice 3.png (PNG copy)>]
+<Receive notifications 1.png, id=1065, 1128.215pt x 431.6125pt>
 File: Receive notifications 1.png Graphic file (type png)
 <use Receive notifications 1.png>
-Package pdftex.def Info: Receive notifications 1.png  used on input line 1770.
+Package pdftex.def Info: Receive notifications 1.png  used on input line 1845.
 (pdftex.def)             Requested size: 452.9679pt x 173.28735pt.
-<Receive notifications 2.png, id=1034, 400.49625pt x 468.75125pt>
+<Receive notifications 2.png, id=1066, 400.49625pt x 468.75125pt>
 File: Receive notifications 2.png Graphic file (type png)
 <use Receive notifications 2.png>
-Package pdftex.def Info: Receive notifications 2.png  used on input line 1777.
+Package pdftex.def Info: Receive notifications 2.png  used on input line 1852.
 (pdftex.def)             Requested size: 452.9679pt x 530.19772pt.
 
-[79 <./Receive notifications.png (PNG copy)> <./Receive notifications 1.png (PN
+[82 <./Receive notifications.png (PNG copy)> <./Receive notifications 1.png (PN
 G copy)>]
-<activity_Manage-Users.png, id=1042, 1445.4pt x 655.44875pt>
+<activity_Manage-Users.png, id=1073, 1445.4pt x 655.44875pt>
 File: activity_Manage-Users.png Graphic file (type png)
 <use activity_Manage-Users.png>
-Package pdftex.def Info: activity_Manage-Users.png  used on input line 1793.
+Package pdftex.def Info: activity_Manage-Users.png  used on input line 1868.
 (pdftex.def)             Requested size: 452.9679pt x 205.4073pt.
- [80 <./Receive notifications 2.png (PNG copy)>]
-<sequence_Manage-Users.png, id=1048, 529.98pt x 949.5475pt>
+ [83 <./Receive notifications 2.png (PNG copy)>]
+<sequence_Manage-Users.png, id=1079, 529.98pt x 949.5475pt>
 File: sequence_Manage-Users.png Graphic file (type png)
 <use sequence_Manage-Users.png>
-Package pdftex.def Info: sequence_Manage-Users.png  used on input line 1800.
+Package pdftex.def Info: sequence_Manage-Users.png  used on input line 1875.
 (pdftex.def)             Requested size: 362.37569pt x 649.26253pt.
- [81 <./activity_Manage-Users.png>] [82]
+ [84 <./activity_Manage-Users.png>] [85]
 Overfull \vbox (7.99132pt too high) has occurred while \output is active []
 
 
-[83 <./sequence_Manage-Users.png (PNG copy)>]
-<state_Manage-Users.png, id=1064, 1036.87375pt x 1528.71124pt>
+[86 <./sequence_Manage-Users.png (PNG copy)>]
+<state_Manage-Users.png, id=1096, 1036.87375pt x 1528.71124pt>
 File: state_Manage-Users.png Graphic file (type png)
 <use state_Manage-Users.png>
-Package pdftex.def Info: state_Manage-Users.png  used on input line 1807.
+Package pdftex.def Info: state_Manage-Users.png  used on input line 1882.
 (pdftex.def)             Requested size: 427.60495pt x 630.45189pt.
-<con1ac.png, id=1065, 966.61125pt x 660.4675pt>
+<con1ac.png, id=1097, 966.61125pt x 660.4675pt>
 File: con1ac.png Graphic file (type png)
 <use con1ac.png>
-Package pdftex.def Info: con1ac.png  used on input line 1816.
+Package pdftex.def Info: con1ac.png  used on input line 1891.
 (pdftex.def)             Requested size: 452.9679pt x 309.50267pt.
- [84 <./state_Manage-Users.png (PNG copy)>]
-<con1tt.png, id=1071, 867.24pt x 826.08624pt>
+ [87 <./state_Manage-Users.png (PNG copy)>]
+<con1tt.png, id=1103, 867.24pt x 826.08624pt>
 File: con1tt.png Graphic file (type png)
 <use con1tt.png>
-Package pdftex.def Info: con1tt.png  used on input line 1823.
+Package pdftex.def Info: con1tt.png  used on input line 1898.
 (pdftex.def)             Requested size: 452.9679pt x 431.47067pt.
- [85 <./con1ac.png>]
-<con1sta.png, id=1079, 518.93875pt x 829.0975pt>
+ [88 <./con1ac.png>]
+<con1sta.png, id=1110, 518.93875pt x 829.0975pt>
 File: con1sta.png Graphic file (type png)
 <use con1sta.png>
-Package pdftex.def Info: con1sta.png  used on input line 1830.
+Package pdftex.def Info: con1sta.png  used on input line 1905.
 (pdftex.def)             Requested size: 394.61926pt x 630.45189pt.
- [86 <./con1tt.png>]
-<cyac1.png, id=1086, 817.0525pt x 834.11626pt>
+ [89 <./con1tt.png>]
+<cyac1.png, id=1117, 817.0525pt x 834.11626pt>
 File: cyac1.png Graphic file (type png)
 <use cyac1.png>
-Package pdftex.def Info: cyac1.png  used on input line 1840.
+Package pdftex.def Info: cyac1.png  used on input line 1915.
 (pdftex.def)             Requested size: 452.9679pt x 462.43091pt.
- [87 <./con1sta.png>]
-<sytt1.png, id=1093, 904.37875pt x 795.97375pt>
+ [90 <./con1sta.png>]
+<sytt1.png, id=1124, 904.37875pt x 795.97375pt>
 File: sytt1.png Graphic file (type png)
 <use sytt1.png>
-Package pdftex.def Info: sytt1.png  used on input line 1847.
+Package pdftex.def Info: sytt1.png  used on input line 1922.
 (pdftex.def)             Requested size: 452.9679pt x 398.66605pt.
- [88 <./cyac1.png>]
-<systa1.png, id=1100, 647.41875pt x 835.12pt>
+ [91 <./cyac1.png>]
+<systa1.png, id=1132, 647.41875pt x 835.12pt>
 File: systa1.png Graphic file (type png)
 <use systa1.png>
-Package pdftex.def Info: systa1.png  used on input line 1854.
+Package pdftex.def Info: systa1.png  used on input line 1929.
 (pdftex.def)             Requested size: 452.9679pt x 584.29967pt.
- [89 <./sytt1.png>] [90 <./systa1.png>] (main.aux)
+ [92 <./sytt1.png>] [93 <./systa1.png>] (main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
@@ -2849,14 +2902,8 @@ L3 programming layer <2026-05-26>
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: FEAD4FFABEF2EEBED3123FFCC172D6C8;20938
-(rerunfilecheck)             After:  C3B1BE781405466BFBB6916AEE67CAAD;20938.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: C3B1BE781405466BFBB6916AEE67CAAD;20938.
  )
 (\end occurred inside a group at level 2)
 
@@ -2864,13 +2911,13 @@ Package rerunfilecheck Info: Checksums for `main.out':
 ### simple group (level 1) entered at line 500 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13032 strings out of 467509
- 204920 string characters out of 5418889
+ 13076 strings out of 467509
+ 205984 string characters out of 5418889
  667804 words of memory out of 5000000
- 41818 multiletter control sequences out of 15000+600000
+ 41853 multiletter control sequences out of 15000+600000
  642953 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,10n,83p,470b,895s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,10n,83p,470b,920s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\baotr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
 ec/dpi600\tcrm1095.pk> <C:\Users\baotr\AppData\Local\MiKTeX\fonts/pk/ljfour/jkn
 appen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
@@ -2879,9 +2926,9 @@ rogram Files/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Program Files/MiKTeX/f
 onts/type1/vntex/vnr/vnr10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/v
 nr12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (90 pages, 10450567 bytes).
+Output written on main.pdf (93 pages, 10393239 bytes).
 PDF statistics:
- 1219 PDF objects out of 1440 (max. 8388607)
- 295 named destinations out of 1000 (max. 500000)
- 1458 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1252 PDF objects out of 1440 (max. 8388607)
+ 304 named destinations out of 1000 (max. 500000)
+ 1483 words of extra memory for PDF output out of 10000 (max. 10000000)
 

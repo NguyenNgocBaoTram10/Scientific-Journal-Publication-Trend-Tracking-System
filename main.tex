@@ -990,16 +990,50 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\item Display a success message.
 	\item Sign up and check your email.
 \end{itemize}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{gđk.jpg}
-	\caption{}
+	\caption{Registration Page}
 	\label{fig:erd}
 \end{figure}
+\begin{itemize}[label=-]
+	\item Email already exists
+\end{itemize}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{dkl.jpg}
-	\caption{}
+	\caption{Email already exists}
+	\label{fig:erd}
+\end{figure}
+
+\begin{itemize}[label=-]
+	\item Username already exists.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{tentontai.png}
+	\caption{Username already exists.}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=-]
+	\item Password does not meet the required format.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{matkhaukhac.png}
+	\caption{Password does not meet the required format.}
+	\label{fig:erd}
+\end{figure}
+
+\begin{itemize}[label=-]
+	\item Registration successful.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{dk.jpg}
+	\caption{Login Page}
 	\label{fig:erd}
 \end{figure}
 \subsubsection{Login}
@@ -1025,19 +1059,25 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{dk.jpg}
-\caption{}
+\caption{Login Page}
 \label{fig:erd}
 \end{figure}
+\begin{itemize}[label=-]
+	\item Invalid username or password.
+\end{itemize}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{dnl.jpg}
-	\caption{}
+	\caption{Invalid username or password.}
 	\label{fig:erd}
 \end{figure}
+\begin{itemize}[label=-]
+	\item Login successful.
+\end{itemize}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{gdc.jpg}
-	\caption{}
+	\caption{Home Page}
 	\label{fig:erd}
 \end{figure}
 
@@ -1060,13 +1100,43 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{prof.jpg}
-	\caption{}
+	\caption{Profile Page}
 	\label{fig:erd}
 \end{figure}
+\begin{itemize}[label=-]
+	\item Edit Profile
+\end{itemize}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{editprof.jpg}
-	\caption{}
+	\caption{Edit Profile}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=-]
+	\item Username already exists.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{tencstontai.png}
+	\caption{Username already exists.}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=-]
+	\item Invalid email address
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{emailkhonghople.png}
+	\caption{Invalid email address}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=-]
+	\item Update successful.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{chinhsuathanhcong.png}
+	\caption{Update successful}
 	\label{fig:erd}
 \end{figure}
 \subsubsection{ Logout }
@@ -1087,7 +1157,16 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{logout.jpg}
-	\caption{}
+	\caption{Sign Out}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=-]
+	\item Signed out successfully.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{trangdangnhap.png}
+	\caption{Sign In Page}
 	\label{fig:erd}
 \end{figure}
 \subsubsection{Search Papers}
@@ -1147,23 +1226,19 @@ User opens \textit{``Tìm kiếm''} $\rightarrow$ Enters a keyword $\rightarrow$
 \end{itemize}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{tkm.jpg}
-	\caption{}
+	\includegraphics[width=\textwidth]{trangtimkiem.png}
+	\caption{Search Page}
 	\label{fig:erd}
 \end{figure}
+\begin{itemize}[label=-]
+	\item The start year cannot be greater than the end year.
+\end{itemize}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{tkkq.jpg}
-	\caption{}
+	\includegraphics[width=\textwidth]{nambatdaulon.png}
+	\caption{The start year cannot be greater than the end year.}
 	\label{fig:erd}
 \end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{sreach.jpg}
-	\caption{}
-	\label{fig:erd}
-\end{figure}
-
 \chapter{\centering\Large\bfseries IV. Software Design Description}
 \addcontentsline{toc}{chapter}{ IV. Software Design Description}
 \setcounter{section}{0}
