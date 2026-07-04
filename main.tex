@@ -2407,4 +2407,1506 @@ The system integrates with external services to retrieve academic publication da
 	\caption{Sync Academic Data}
 	\label{fig:erd}
 \end{figure}
+
+\chapter{\centering\Large\bfseries V. SOFTWARE TESTING DOCUMENTATION}
+\addcontentsline{toc}{chapter}{ V. SOFTWARE TESTING DOCUMENTATION}
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+
+\section{Testing Scope}
+The testing scope covers all major functionalities of the Scientific Journal
+Publication Trend Tracking System. The following modules and features are included
+within the scope of testing:
+\begin{itemize}
+	\item User Registration
+	\item User Login and Authentication
+	\item Search Scientific Publications
+	\item View Publication Details
+	\item Save and Manage Bookmarks
+	\item Track Publication Trends
+	\item View Statistical Dashboard
+	\item Generate Reports (PDF/CSV)
+	\item View Trending Topics
+	\item Follow Research Topics
+	\item Receive Notifications
+	
+\end{itemize}
+The following features are excluded from the testing scope:
+\begin{itemize}
+	\item Third-party services and external systems that are outside the project scope.
+	\item Real-time publication trend prediction using Artificial Intelligence (AI)
+	or Machine Learning (ML) techniques.
+	\item Performance testing under extremely large-scale environments involving
+	more than 10,000 concurrent users.
+\end{itemize}
+
+\section{Test Strategy}
+\subsection{Testing Types}
+\begin{itemize}
+	\item \textbf{Functional Testing:} Verify that all system functions operate according to the specified requirements.
+	
+	\item \textbf{Integration Testing:} Verify communication and data exchange between the frontend, backend, database, and external APIs.
+	
+	\item \textbf{System Testing:} Validate complete business workflows and end-to-end system functionality.
+	
+	\item \textbf{Performance Testing:} Evaluate system response time and behavior under different workloads.
+\end{itemize}
+\subsection{Testing Levels}
+\begin{itemize}
+	\item \textbf{Unit Testing:}
+	Verify the correctness of individual modules using white-box testing techniques.
+	
+	\item \textbf{Integration Testing:}
+	Verify interactions among integrated components and services.
+	
+	\item \textbf{System Testing:}
+	Validate complete business processes using black-box testing techniques.
+	
+	\item \textbf{Performance Testing:}
+	Observe system behavior and collect performance metrics under different workloads.
+\end{itemize}
+\subsection{Supporting Tools}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{4cm}|p{8cm}|}
+		\hline
+		\textbf{Tool} & \textbf{Purpose} \\ \hline
+		Visual Studio Code & Application development and source code editing \\ \hline
+		MySQL & Database validation and data storage testing \\ \hline
+		phpMyAdmin & Database administration and query verification \\ \hline
+		Google Chrome & User interface and functional testing \\ \hline
+		Postman & API testing and response validation \\ \hline
+		GitHub & Source code version control and collaboration \\ \hline
+	\end{tabular}
+	\label{tab:supporting_tools}
+	\caption{Supporting Tools Used in Testing}
+\end{table}
+
+\section{Test Plan}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{4cm}|p{8cm}|}
+		\hline
+		\textbf{Item} & \textbf{Description} \\ \hline
+		Environment & Windows 11, WampServer, MySQL \\ \hline
+		Browser & Google Chrome \\ \hline
+		Database & MySQL \\ \hline
+		External APIs & OpenAlex, CrossRef \\ \hline
+		Test Period & During system development and before deployment \\ \hline
+	\end{tabular}
+	\caption{Testing Environment}
+\end{table}
+
+\subsection{Entry Criteria}
+\begin{itemize}
+	\item Source code has been completed.
+	\item Database configuration has been completed.
+	\item External APIs are accessible.
+\end{itemize}
+
+\subsection{Exit Criteria}
+
+\begin{itemize}
+	\item All major functionalities have been tested.
+	\item No critical defects remain unresolved.
+\end{itemize}
+
+\section{Test Case}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|}
+		\hline
+		\textbf{Module} & \textbf{Number of Test Cases} \\ \hline
+		User Registration & 5 \\ \hline
+		User Login & 3 \\ \hline
+		Publication Search & 4 \\ \hline
+		Bookmarks & 3 \\ \hline
+		Follow Research Topics & 3 \\ \hline
+		Notifications & 2 \\ \hline
+		Publication Trend Analysis & 2 \\ \hline
+		\textbf{Total} & \textbf{22} \\ \hline
+	\end{tabular}
+	\caption{Test Case Summary}
+\end{table}
+
+\subsection{User Registration}
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		User Registration \\
+		\hline
+		
+		Test Case ID &
+		TC\_REG\_01 \\
+		\hline
+		
+		Test Case Name &
+		Valid Registration \\
+		\hline
+		
+		Objective &
+		Verify that a user can successfully create a new account.\\
+		\hline
+		
+		Preconditions &
+		Email and username do not exist in the database.\\
+		\hline
+		
+		Test Data &
+		\begin{tabular}[t]{@{}l@{}}
+			Full Name: Group Six\\
+			Username: Group6\\
+			Email: group6@gmail.com\\
+			Password: Group654321 
+		\end{tabular}
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Registration page.\\
+			2. Enter all required information.\\
+			3. Click Register.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		Account is created successfully and saved in the database.\\
+		\hline
+		
+		Actual Result &
+		Account created successfully.\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_REG\_01 - Valid Registration}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		User Registration \\
+		\hline
+		
+		Test Case ID &
+		TC\_REG\_02 \\
+		\hline
+		
+		Test Case Name &
+		Empty Required Fields \\
+		\hline
+		
+		Objective &
+		Verify validation for mandatory fields. \\
+		\hline
+		
+		Preconditions &
+		None \\
+		\hline
+		
+		Test Data &
+		All fields are left blank.
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Registration page.\\
+			2. Leave all fields empty.\\
+			3. Click Register.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		System displays a validation message requiring all mandatory fields to be filled.
+		\\
+		\hline
+		
+		Actual Result &
+		Validation message displayed correctly.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_REG\_02 - Empty Required Fields}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		User Registration \\
+		\hline
+		
+		Test Case ID &
+		TC\_REG\_03 \\
+		\hline
+		
+		Test Case Name &
+		Invalid Email Format \\
+		\hline
+		
+		Objective &
+		Verify email format validation.
+		\\
+		\hline
+		
+		Preconditions &
+		None
+		\\
+		\hline
+		
+		Test Data &
+		Email: group6123
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Registration page.\\
+			2. Enter an invalid email address.\\
+			3. Click Register.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		System displays "Invalid email address".
+		\\
+		\hline
+		
+		Actual Result &
+		Validation message displayed correctly.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_REG\_03 - Invalid Email Format}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		User Registration \\
+		\hline
+		
+		Test Case ID &
+		TC\_REG\_04 \\
+		\hline
+		
+		Test Case Name &
+		Weak Password \\
+		\hline
+		
+		Objective &
+		Verify password strength validation.
+		\\
+		\hline
+		
+		Preconditions &
+		None
+		\\
+		\hline
+		
+		Test Data &
+		Password: 123456
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Registration page.\\
+			2. Enter a weak password.\\
+			3. Click Register.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		System displays a password strength validation message.
+		\\
+		\hline
+		
+		Actual Result &
+		Validation message displayed correctly.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_REG\_04 - Weak Password}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		User Registration \\
+		\hline
+		
+		Test Case ID &
+		TC\_REG\_05 \\
+		\hline
+		
+		Test Case Name &
+		Existing Email \\
+		\hline
+		
+		Objective &
+		Verify duplicate email validation.
+		\\
+		\hline
+		
+		Preconditions &
+		The email already exists in the database.
+		\\
+		\hline
+		
+		Test Data &
+		Email: group6@gmail.com
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Registration page.\\
+			2. Enter an existing email.\\
+			3. Click Register.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		System displays "Email already registered".
+		\\
+		\hline
+		
+		Actual Result &
+		Validation message displayed correctly.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_REG\_05 - Existing Email}
+\end{table}
+
+
+\subsection{User Login}
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		User Login \\
+		\hline
+		
+		Test Case ID &
+		TC\_LOG\_01 \\
+		\hline
+		
+		Test Case Name &
+		Successful Login \\
+		\hline
+		
+		Objective &
+		Verify that users can log in with valid credentials. \\
+		\hline
+		
+		Preconditions &
+		User account exists and is active. \\
+		\hline
+		
+		Test Data &
+		\begin{tabular}[t]{@{}l@{}}
+			Username: Group6\\
+			Password: Group654321
+		\end{tabular}
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Login page.\\
+			2. Enter valid username and password.\\
+			3. Click Login.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		User is redirected to the dashboard successfully.
+		\\
+		\hline
+		
+		Actual Result &
+		User logged in successfully.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+	\end{tabular}
+	\caption{TC\_LOG\_01 - Successful Login}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		User Login \\
+		\hline
+		
+		Test Case ID &
+		TC\_LOG\_02 \\
+		\hline
+		
+		Test Case Name &
+		Invalid Login Credentials \\
+		\hline
+		
+		Objective &
+		Verify system behavior when username or password is incorrect.
+		\\
+		\hline
+		
+		Preconditions &
+		User login page is accessible.
+		\\
+		\hline
+		
+		Test Data &
+		\begin{tabular}[t]{@{}l@{}}
+			Scenario 1:\\
+			Username: Group6\\
+			Password: WrongPassword123\\[2mm]
+			
+			Scenario 2:\\
+			Username: UnknownUser\\
+			Password: Group654321
+		\end{tabular}
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Login page.\\
+			2. Enter invalid credentials.\\
+			3. Click Login.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		System displays ``Invalid username or password''.
+		\\
+		\hline
+		
+		Actual Result &
+		Error message displayed correctly.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_LOG\_02 - Invalid Login Credentials}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		User Login \\
+		\hline
+		
+		Test Case ID &
+		TC\_LOG\_03 \\
+		\hline
+		
+		Test Case Name &
+		Empty Credentials \\
+		\hline
+		
+		Objective &
+		Verify validation for empty login fields.
+		\\
+		\hline
+		
+		Preconditions &
+		None.
+		\\
+		\hline
+		
+		Test Data &
+		Username and Password are empty.
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Login page.\\
+			2. Leave all fields blank.\\
+			3. Click Login.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		System displays validation messages for required fields.
+		\\
+		\hline
+		
+		Actual Result &
+		Validation messages displayed correctly.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+	\end{tabular}
+	\caption{TC\_LOG\_03 - Empty Credentials}
+\end{table}
+
+\subsection{Search Scientific Publication}
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Search Publications \\
+		\hline
+		
+		Test Case ID &
+		TC\_SEARCH\_01 \\
+		\hline
+		
+		Test Case Name &
+		Search by Valid Keyword \\
+		\hline
+		
+		Objective &
+		Verify that users can search publications using a valid keyword.
+		\\
+		\hline
+		
+		Preconditions &
+		Publication data exists in the database.
+		\\
+		\hline
+		
+		Test Data &
+		Keyword: Machine Learning
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Enter keyword "Machine Learning".\\
+			2. Click Search.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		A list of relevant publications is displayed.
+		\\
+		\hline
+		
+		Actual Result &
+		Relevant publications displayed successfully.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+	\end{tabular}
+	\caption{TC\_SEARCH\_01 - Search by Valid Keyword}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Search Publications \\
+		\hline
+		
+		Test Case ID &
+		TC\_SEARCH\_02 \\
+		\hline
+		
+		Test Case Name &
+		Search with No Results \\
+		\hline
+		
+		Objective &
+		Verify system behavior when no publication matches the search keyword.
+		\\
+		\hline
+		
+		Preconditions &
+		System is available.
+		\\
+		\hline
+		
+		Test Data &
+		Keyword: abcdeftopic123
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Enter keyword "abcdeftopic123".\\
+			2. Click Search.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		System displays "No publications found".
+		\\
+		\hline
+		
+		Actual Result &
+		No results displayed correctly.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+	\end{tabular}
+	\caption{TC\_SEARCH\_02 - Search with No Results}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Search Publications \\
+		\hline
+		
+		Test Case ID &
+		TC\_SEARCH\_03 \\
+		\hline
+		
+		Test Case Name &
+		Filter by Publication Year \\
+		\hline
+		
+		Objective &
+		Verify filtering publications by publication year.
+		\\
+		\hline
+		
+		Preconditions &
+		Publications from multiple years exist.
+		\\
+		\hline
+		
+		Test Data &
+		Year: 2024
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Search page.\\
+			2. Select publication year = 2024.\\
+			3. Click Apply Filter.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		Only publications published in 2024 are displayed.
+		\\
+		\hline
+		
+		Actual Result &
+		Publications filtered correctly by year.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+	\end{tabular}
+	\caption{TC\_SEARCH\_03 - Filter by Publication Year}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Search Publications \\
+		\hline
+		
+		Test Case ID &
+		TC\_SEARCH\_04 \\
+		\hline
+		
+		Test Case Name &
+		Filter Open Access Publications \\
+		\hline
+		
+		Objective &
+		Verify filtering publications with Open Access status.
+		\\
+		\hline
+		
+		Preconditions &
+		The database contains both Open Access and non-Open Access publications.
+		\\
+		\hline
+		
+		Test Data &
+		Open Access = True
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Search page.\\
+			2. Enable Open Access filter.\\
+			3. Click Apply Filter.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		Only Open Access publications are displayed.
+		\\
+		\hline
+		
+		Actual Result &
+		Open Access publications displayed correctly.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+	\end{tabular}
+	\caption{TC\_SEARCH\_04 - Filter Open Access Publications}
+\end{table}
+
+\subsection{Manage Bookmarks}
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Bookmark (Favorites) \\
+		\hline
+		
+		Test Case ID &
+		TC\_BM\_01 \\
+		\hline
+		
+		Test Case Name &
+		Add Publication to Favorites \\
+		\hline
+		
+		Objective &
+		Verify that a publication can be added to the bookmark list successfully.
+		\\
+		\hline
+		
+		Preconditions &
+		User has logged into the system.
+		\\
+		\hline
+		
+		Test Data &
+		Publication: ``Deep Learning in Healthcare''
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Search for publication ``Deep Learning in Healthcare''.\\
+			2. Open the publication details page.\\
+			3. Click the Bookmark button.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		The publication is added to the bookmark table successfully.
+		\\
+		\hline
+		
+		Actual Result &
+		Bookmark added successfully.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+	\end{tabular}
+	\caption{TC\_BM\_01 - Add Publication to Favorites}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Bookmark (Favorites) \\
+		\hline
+		
+		Test Case ID &
+		TC\_BM\_02 \\
+		\hline
+		
+		Test Case Name &
+		Add Duplicate Bookmark \\
+		\hline
+		
+		Objective &
+		Verify that duplicate bookmarks are not created.
+		\\
+		\hline
+		
+		Preconditions &
+		The publication has already been bookmarked.
+		\\
+		\hline
+		
+		Test Data &
+		Publication: ``Deep Learning in Healthcare''
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open the details page of a bookmarked publication.\\
+			2. Click the Bookmark button again.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		System displays ``This publication is already in your favorites'' and no duplicate record is created.
+		\\
+		\hline
+		
+		Actual Result &
+		Message displayed correctly and no duplicate record created.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+	\end{tabular}
+	\caption{TC\_BM\_02 - Add Duplicate Bookmark}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Bookmark (Favorites) \\
+		\hline
+		
+		Test Case ID &
+		TC\_BM\_03 \\
+		\hline
+		
+		Test Case Name &
+		Remove Bookmark \\
+		\hline
+		
+		Objective &
+		Verify the bookmark removal functionality.
+		\\
+		\hline
+		
+		Preconditions &
+		At least one publication exists in the bookmark list.
+		\\
+		\hline
+		
+		Test Data &
+		Bookmark ID: 2
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open the Favorites page.\\
+			2. Select the publication with Bookmark ID = 2.\\
+			3. Click the Remove button.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		The publication is removed from the bookmark list.
+		\\
+		\hline
+		
+		Actual Result &
+		Bookmark removed successfully.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+	\end{tabular}
+	\caption{TC\_BM\_03 - Remove Bookmark}
+\end{table}
+
+\subsection{View Trending Topics}
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Topic Following \\
+		\hline
+		
+		Test Case ID &
+		TC\_TOPIC\_01 \\
+		\hline
+		
+		Test Case Name &
+		Follow New Topic \\
+		\hline
+		
+		Objective &
+		Verify that users can successfully follow a new research topic.
+		\\
+		\hline
+		
+		Preconditions &
+		User has logged into the system.
+		\\
+		\hline
+		
+		Test Data &
+		Topic: Artificial Intelligence
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open the Trend Topics page.\\
+			2. Select topic "Artificial Intelligence".\\
+			3. Click the Follow button.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		The topic is stored in the UserFollowTopic table and a new notification is created.
+		\\
+		\hline
+		
+		Actual Result &
+		Topic followed successfully and notification created.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_TOPIC\_01 - Follow New Topic}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Topic Following \\
+		\hline
+		
+		Test Case ID &
+		TC\_TOPIC\_02 \\
+		\hline
+		
+		Test Case Name &
+		Follow Existing Topic \\
+		\hline
+		
+		Objective &
+		Verify that duplicate topic subscriptions are not created.
+		\\
+		\hline
+		
+		Preconditions &
+		The topic has already been followed previously.
+		\\
+		\hline
+		
+		Test Data &
+		Topic: Artificial Intelligence
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Select topic "Artificial Intelligence".\\
+			2. Click the Follow button again.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		System displays "You are already following this topic" and no new record is created.
+		\\
+		\hline
+		
+		Actual Result &
+		Correct message displayed and no duplicate record created.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_TOPIC\_02 - Follow Existing Topic}
+\end{table}
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Topic Following \\
+		\hline
+		
+		Test Case ID &
+		TC\_TOPIC\_03 \\
+		\hline
+		
+		Test Case Name &
+		Unfollow Topic \\
+		\hline
+		
+		Objective &
+		Verify that users can successfully unfollow a topic.
+		\\
+		\hline
+		
+		Preconditions &
+		The topic is currently being followed by the user.
+		\\
+		\hline
+		
+		Test Data &
+		Topic: Artificial Intelligence
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open the Followed Topics list.\\
+			2. Select topic "Artificial Intelligence".\\
+			3. Click the Unfollow button.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		The topic is removed from the UserFollowTopic table.
+		\\
+		\hline
+		
+		Actual Result &
+		Topic unfollowed successfully.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_TOPIC\_03 - Unfollow Topic}
+\end{table}
+
+\subsection{Notification Management}
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Notification Management \\
+		\hline
+		
+		Test Case ID &
+		TC\_NOTI\_01 \\
+		\hline
+		
+		Test Case Name &
+		View Notification List \\
+		\hline
+		
+		Objective &
+		Verify that users can view all notifications associated with their account.
+		\\
+		\hline
+		
+		Preconditions &
+		User has logged into the system and has at least one notification.
+		\\
+		\hline
+		
+		Test Data &
+		User ID: 1
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Log in to the system.\\
+			2. Click the Notification icon.\\
+			3. Open the Notification page.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		The system displays all notifications belonging to the user, including title, content, and status.
+		\\
+		\hline
+		
+		Actual Result &
+		Notification list displayed successfully.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_NOTI\_01 - View Notification List}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Notification Management \\
+		\hline
+		
+		Test Case ID &
+		TC\_NOTI\_02 \\
+		\hline
+		
+		Test Case Name &
+		Mark Notification as Read \\
+		\hline
+		
+		Objective &
+		Verify that users can mark a notification as read.
+		\\
+		\hline
+		
+		Preconditions &
+		User has at least one unread notification.
+		\\
+		\hline
+		
+		Test Data &
+		Notification ID: 5
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open the Notification page.\\
+			2. Select an unread notification.\\
+			3. Click the notification to view details.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		The notification status changes from ``Unread'' to ``Read''.
+		\\
+		\hline
+		
+		Actual Result &
+		Notification status updated successfully.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_NOTI\_02 - Mark Notification as Read}
+\end{table}
+
+\subsection{Trend Analysis}
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Trend Analysis \\
+		\hline
+		
+		Test Case ID &
+		TC\_TREND\_01 \\
+		\hline
+		
+		Test Case Name &
+		Successful Trend Analysis \\
+		\hline
+		
+		Objective &
+		Verify that the system correctly generates publication trend analysis for a valid research topic based on synchronized publication metadata stored in the database.
+		\\
+		\hline
+		
+		Preconditions &
+		Publication metadata for the topic "Machine Learning" has been synchronized into the database from Semantic Scholar, OpenAlex, and Crossref.	
+		\\
+		\hline
+		
+		Test Data &
+		\begin{tabular}[t]{@{}l@{}}
+			Topic: Machine Learning\\
+			Year From: 2020\\
+			Year To: 2024
+		\end{tabular}
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Log in to the system.\\
+			2. Access "Track Publication Trends".\\
+			3. Enter topic "Machine Learning".\\
+			4. Select year range from 2020 to 2024.\\
+			5. Click Analyze.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		The system aggregates publication counts by year from the database, calculates growth rate, and displays trend statistics and visual charts showing increasing or decreasing publication activity.
+		\\
+		\hline
+		
+		Actual Result &
+		Trend analysis results displayed correctly.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_TREND\_01 - Successful Trend Analysis}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		Trend Analysis \\
+		\hline
+		
+		Test Case ID &
+		TC\_TREND\_02 \\
+		\hline
+		
+		Test Case Name &
+		Trend Analysis with No Data \\
+		\hline
+		
+		Objective &
+		Verify system behavior when no trend data is available.
+		\\
+		\hline
+		
+		Preconditions &
+		System is available and database contains no matching publication data for the topic
+		\\
+		\hline
+		
+		Test Data &
+		Topic: abcdeftopic
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Enter non-existing topic "abcdeftopic".\\
+			2. Click Analyze.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		An empty result list is displayed and no system error occurs.
+		\\
+		\hline
+		
+		Actual Result &
+		Empty result list displayed correctly.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	\caption{TC\_TREND\_02 - Trend Analysis with No Data}
+\end{table}
+
 \end{document}
+
+
