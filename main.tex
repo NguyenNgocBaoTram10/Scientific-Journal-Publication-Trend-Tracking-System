@@ -974,8 +974,36 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\label{fig:erd}
 \end{figure}
 \subsection{Authentication}
-
+\subsubsection{ Register }
+\textbf{Role:} User \\
+\textbf{Function trigger:} The user clicks Đăng kí. \\
+\textbf{Function description:}
+\begin{itemize}[label=-]
+	\item Purpose: Create a new user account.
+	\item Data processing: Validate user information and store it in the database.
+\end{itemize}
+\textbf{Function Details:}
+\begin{itemize}[label=-]
+	\item Whether the username already exists
+	\item Validate password requirements.
+	\item Create a new account.
+	\item Display a success message.
+	\item Sign up and check your email.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{gđk.jpg}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{dkl.jpg}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
 \subsubsection{Login}
+
 
 \textbf{Role:} User
 
@@ -1012,35 +1040,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\caption{}
 	\label{fig:erd}
 \end{figure}
-\subsubsection{ Register }
 
-\textbf{Role:} User \\
-\textbf{Function trigger:} The user clicks Đăng kí. \\
-\textbf{Function description:}
-\begin{itemize}[label=-]
-	\item Purpose: Create a new user account.
-	\item Data processing: Validate user information and store it in the database.
-\end{itemize}
-\textbf{Function Details:}
-\begin{itemize}[label=-]
-	\item Whether the username already exists
-	\item Validate password requirements.
-	\item Create a new account.
-	\item Display a success message.
-	\item Sign up and check your email.
-\end{itemize}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{gđk.jpg}
-	\caption{}
-	\label{fig:erd}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{dkl.jpg}
-	\caption{}
-	\label{fig:erd}
-\end{figure}
 \subsubsection{ Profile Management }
 
 \textbf{Update Profile}
