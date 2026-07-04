@@ -28,7 +28,7 @@ function writeSyncLog(PDO $conn, ?int $sourceId, string $status, string $message
     $stmt->execute([$sourceId, $status, $message, $fetched, $inserted, $updated]);
 }
 
-function fetchJson(string $url): array {
+function fetchJson(string $url, int $retry = 1): array {
     if (!function_exists('curl_init')) {
         throw new Exception('cURL chưa được bật trên PHP.');
     }
@@ -56,6 +56,13 @@ function fetchJson(string $url): array {
         throw new Exception('Không nhận được phản hồi API: ' . ($error ?: 'unknown error'));
     }
 
+    if ($code === 429) {
+        if ($retry > 0) {
+            sleep(3);
+            return fetchJson($url, $retry - 1);
+        }
+        throw new Exception('API đang giới hạn tần suất gọi. Vui lòng chờ một lúc rồi thử lại hoặc giảm số lượng đồng bộ.');
+    }
     if ($code < 200 || $code >= 300) {
         throw new Exception("API trả về HTTP {$code}");
     }
@@ -66,6 +73,78 @@ function fetchJson(string $url): array {
     }
 
     return $json;
+}
+
+function getDefaultTopicId(PDO $conn): ?int {
+    $topicStmt = $conn->query("SELECT topicId FROM topic ORDER BY topicId ASC LIMIT 1");
+    $firstTopic = $topicStmt->fetch(PDO::FETCH_ASSOC);
+    return $firstTopic ? (int)$firstTopic['topicId'] : null;
+}
+
+function upsertResearchPapers(PDO $conn, array $papers): array {
+    $topicId = getDefaultTopicId($conn);
+    $inserted = 0;
+    $updated = 0;
+
+    foreach ($papers as $paper) {
+        $title = trim($paper['title'] ?? '');
+        if ($title === '') continue;
+
+        $doi = trim($paper['doi'] ?? '');
+        $publishedYear = !empty($paper['publishedYear']) ? (int)$paper['publishedYear'] : null;
+
+        if ($doi !== '') {
+            $find = $conn->prepare("SELECT articleId FROM researchpaper WHERE doi = ? LIMIT 1");
+            $find->execute([$doi]);
+        } else {
+            $find = $conn->prepare("SELECT articleId FROM researchpaper WHERE title = ? AND publishedYear <=> ? LIMIT 1");
+            $find->execute([$title, $publishedYear]);
+        }
+
+        $existing = $find->fetch(PDO::FETCH_ASSOC);
+
+        if ($existing) {
+            $stmt = $conn->prepare("
+                UPDATE researchpaper
+                SET title = ?, authors = ?, journal = ?, publishedYear = ?, doi = ?, abstract = ?, url = ?, topicId = COALESCE(topicId, ?)
+                WHERE articleId = ?
+            ");
+            $stmt->execute([
+                $title,
+                $paper['authors'] ?? '',
+                $paper['journal'] ?? '',
+                $publishedYear,
+                $doi,
+                $paper['abstract'] ?? '',
+                $paper['url'] ?? '',
+                $topicId,
+                $existing['articleId']
+            ]);
+            $updated++;
+        } else {
+            $stmt = $conn->prepare("
+                INSERT INTO researchpaper (title, authors, journal, publishedYear, doi, abstract, url, topicId)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ");
+            $stmt->execute([
+                $title,
+                $paper['authors'] ?? '',
+                $paper['journal'] ?? '',
+                $publishedYear,
+                $doi,
+                $paper['abstract'] ?? '',
+                $paper['url'] ?? '',
+                $topicId
+            ]);
+            $inserted++;
+        }
+    }
+
+    return [
+        'fetched' => count($papers),
+        'inserted' => $inserted,
+        'updated' => $updated
+    ];
 }
 
 function buildOpenAlexAbstract(?array $index): string {
@@ -114,74 +193,49 @@ function syncOpenAlex(PDO $conn, array $source, string $query, int $limit): arra
     ]);
 
     $json = fetchJson($baseUrl . '/works?' . $params);
-    $papers = normalizeOpenAlexWorks($json);
+    return upsertResearchPapers($conn, normalizeOpenAlexWorks($json));
+}
 
-    $topicId = null;
-    $topicStmt = $conn->query("SELECT topicId FROM topic ORDER BY topicId ASC LIMIT 1");
-    $firstTopic = $topicStmt->fetch(PDO::FETCH_ASSOC);
-    if ($firstTopic) {
-        $topicId = (int)$firstTopic['topicId'];
-    }
+function normalizeSemanticScholarPapers(array $json): array {
+    $papers = [];
+    foreach (($json['data'] ?? []) as $paper) {
+        $authors = array_map(
+            fn($author) => $author['name'] ?? '',
+            $paper['authors'] ?? []
+        );
 
-    $inserted = 0;
-    $updated = 0;
+        $externalIds = $paper['externalIds'] ?? [];
+        $doi = $externalIds['DOI'] ?? '';
+        $url = $paper['url'] ?? '';
 
-    foreach ($papers as $paper) {
-        $title = trim($paper['title']);
-        if ($title === '') continue;
-
-        if ($paper['doi'] !== '') {
-            $find = $conn->prepare("SELECT articleId FROM researchpaper WHERE doi = ? LIMIT 1");
-            $find->execute([$paper['doi']]);
-        } else {
-            $find = $conn->prepare("SELECT articleId FROM researchpaper WHERE title = ? AND publishedYear = ? LIMIT 1");
-            $find->execute([$title, $paper['publishedYear'] ?: null]);
+        if ($url === '' && !empty($paper['paperId'])) {
+            $url = 'https://www.semanticscholar.org/paper/' . $paper['paperId'];
         }
 
-        $existing = $find->fetch(PDO::FETCH_ASSOC);
-
-        if ($existing) {
-            $stmt = $conn->prepare("
-                UPDATE researchpaper
-                SET title = ?, authors = ?, journal = ?, publishedYear = ?, doi = ?, abstract = ?, url = ?, topicId = COALESCE(topicId, ?)
-                WHERE articleId = ?
-            ");
-            $stmt->execute([
-                $title,
-                $paper['authors'],
-                $paper['journal'],
-                $paper['publishedYear'] ?: null,
-                $paper['doi'],
-                $paper['abstract'],
-                $paper['url'],
-                $topicId,
-                $existing['articleId']
-            ]);
-            $updated++;
-        } else {
-            $stmt = $conn->prepare("
-                INSERT INTO researchpaper (title, authors, journal, publishedYear, doi, abstract, url, topicId)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-            ");
-            $stmt->execute([
-                $title,
-                $paper['authors'],
-                $paper['journal'],
-                $paper['publishedYear'] ?: null,
-                $paper['doi'],
-                $paper['abstract'],
-                $paper['url'],
-                $topicId
-            ]);
-            $inserted++;
-        }
+        $papers[] = [
+            'title' => $paper['title'] ?? '',
+            'authors' => implode(', ', array_filter($authors)),
+            'journal' => $paper['venue'] ?? '',
+            'publishedYear' => (int)($paper['year'] ?? 0),
+            'doi' => $doi,
+            'abstract' => $paper['abstract'] ?? '',
+            'url' => $url
+        ];
     }
+    return $papers;
+}
 
-    return [
-        'fetched' => count($papers),
-        'inserted' => $inserted,
-        'updated' => $updated
-    ];
+function syncSemanticScholar(PDO $conn, array $source, string $query, int $limit): array {
+    $baseUrl = rtrim($source['baseUrl'], '/');
+    $limit = max(1, min(5, $limit));
+    $params = http_build_query([
+        'query' => $query,
+        'limit' => $limit,
+        'fields' => 'paperId,title,authors,year,venue,abstract,externalIds,url'
+    ]);
+
+    $json = fetchJson($baseUrl . '/graph/v1/paper/search?' . $params);
+    return upsertResearchPapers($conn, normalizeSemanticScholarPapers($json));
 }
 
 function syncSource(PDO $conn, array $source, string $query, int $limit): array {
@@ -192,7 +246,11 @@ function syncSource(PDO $conn, array $source, string $query, int $limit): array 
         return syncOpenAlex($conn, $source, $query, $limit);
     }
 
-    throw new Exception('Nguồn API này chưa có bộ chuyển đổi dữ liệu. Demo hiện hỗ trợ OpenAlex.');
+    if (str_contains($sourceName, 'semantic') || str_contains($baseUrl, 'semanticscholar')) {
+        return syncSemanticScholar($conn, $source, $query, $limit);
+    }
+
+    throw new Exception('Nguồn API này chưa có bộ chuyển đổi dữ liệu. Hiện hỗ trợ OpenAlex và Semantic Scholar.');
 }
 
 ensureSyncLogTable($conn);
