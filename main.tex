@@ -1163,7 +1163,261 @@ User opens \textit{``Tìm kiếm''} $\rightarrow$ Enters a keyword $\rightarrow$
 	\caption{}
 	\label{fig:erd}
 \end{figure}
+\subsubsection{Research Trend Analysis}
 
+\textbf{Function Trigger}
+
+User opens \textit{Research Trend Analysis} from the main menu.
+
+\bigskip
+
+\textbf{Function Description}
+
+\textbf{Actors:}
+Researcher, Lecturer, Student
+
+\medskip
+
+\textbf{Purpose}
+
+Allow users to analyze research trends of a specific research topic within a selected time range.
+
+\medskip
+
+\textbf{Data Processing}
+
+\begin{itemize}
+	\item Validate the input topic and time range.
+	\item Retrieve publication data from the database.
+	\item Aggregate statistical information.
+	\item Calculate research trend metrics.
+	\item Generate analytical charts.
+	\item Display the research trend dashboard.
+\end{itemize}
+
+\medskip
+
+\textbf{Interface}
+
+The \textbf{Research Trend Dashboard} includes:
+
+\begin{itemize}
+	\item Search bar for entering a research topic.
+	\item Time range selector.
+	\item \textbf{Analyze} button.
+	\item Two tabs:
+	\begin{itemize}
+		\item Dashboard
+		\item Trending Topics
+	\end{itemize}
+	\item Dashboard widgets:
+	\begin{itemize}
+		\item Total Publications
+		\item Total Citations
+		\item Open Access Ratio
+		\item Trend Growth
+	\end{itemize}
+	\item Charts:
+	\begin{itemize}
+		\item Publications by Year
+		\item Top Keywords
+		\item Top Journals
+		\item Top Authors
+		\item Featured Publications
+	\end{itemize}
+\end{itemize}
+
+\medskip
+
+\textbf{Function Details}
+
+\textbf{Validation}
+
+\begin{itemize}
+	\item Topic keyword cannot be empty.
+	\item Start Year must not be greater than End Year.
+	\item The selected time range must be within the supported system range.
+\end{itemize}
+
+\medskip
+
+\textbf{Business Rules}
+
+\begin{itemize}
+	\item Statistics are calculated based on publications retrieved by the system.
+	\item Trend Growth is calculated by comparing the selected period with the previous period of the same duration.
+	\item Users can follow or unfollow a trending topic.
+	\item Dashboard data is refreshed whenever the topic or time range changes.
+	\item Trending Topics are ranked according to publication growth and research activity.
+	\item Charts and statistics always correspond to the currently selected topic and time range.
+\end{itemize}
+
+\medskip
+
+\textbf{Normal Flow}
+
+\begin{enumerate}
+	\item User enters a research topic.
+	\item User selects a time range.
+	\item User clicks the \textbf{Analyze} button.
+	\item The system validates the input.
+	\item The system retrieves publication data.
+	\item The system calculates statistics and generates charts.
+	\item The dashboard displays the analysis results.
+	\item User switches to the \textbf{Trending Topics} tab.
+	\item User follows or unfollows a trending topic.
+\end{enumerate}
+
+\medskip
+
+\textbf{Alternative / Exception Flow}
+
+\begin{itemize}
+	\item No matching data found.
+	\begin{itemize}
+		\item Display message:
+		\textit{"No data available."}
+	\end{itemize}
+	
+	\item Invalid time range.
+	\begin{itemize}
+		\item Request the user to correct the selected time range.
+	\end{itemize}
+	
+	\item System or database error.
+	\begin{itemize}
+		\item Display message:
+		\textit{"Unable to load data. Please try again later."}
+	\end{itemize}
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ptxh.png}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ptxh2.png}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ptxh3.jpg}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
+\subsubsection{Export Research Trend Report}
+
+\textbf{Function Trigger}
+
+User opens \textit{Research Trend Analysis} $\rightarrow$ Enters a research topic and selects a time range $\rightarrow$ Clicks \textbf{Analyze} $\rightarrow$ Clicks \textbf{Generate Report} $\rightarrow$ Selects an export option (Preview \& Print / Save PDF, Download PDF, or Download HTML).
+
+\bigskip
+
+\textbf{Function Description}
+
+\textbf{Actors:}
+Researcher, Lecturer, Student
+
+\medskip
+
+\textbf{Purpose}
+
+Allow users to export research trend analysis results into different report formats for printing, sharing, or offline viewing.
+
+\medskip
+
+\textbf{Data Processing}
+
+\begin{itemize}
+	\item Verify that research trend analysis has been completed.
+	\item Validate that report data is available.
+	\item Collect the current analysis results, including:
+	\begin{itemize}
+		\item Statistical summaries
+		\item Charts and visualizations
+		\item Trending Topics
+		\item Top Journals
+		\item Top Authors
+		\item Top Keywords
+		\item Featured Publications
+	\end{itemize}
+	\item Generate the report in the selected format.
+	\item Prepare the report for preview or download.
+\end{itemize}
+
+\medskip
+
+\textbf{Function Details}
+
+\textbf{Validation}
+
+\begin{itemize}
+	\item Research trend analysis must be completed before exporting.
+	\item Report data must be available.
+\end{itemize}
+
+\medskip
+
+\textbf{Business Rules}
+
+\begin{itemize}
+	\item The exported report contains the currently displayed analysis results.
+	\item Users may choose one of the following export options:
+	\begin{itemize}
+		\item Preview \& Print / Save PDF
+		\item Download PDF
+		\item Download HTML
+	\end{itemize}
+	\item Charts, statistical summaries, and publication information are included in the exported report.
+	\item The exported report reflects the currently selected research topic and time range.
+	\item The report preserves the dashboard layout and chart formatting.
+\end{itemize}
+
+\medskip
+
+\textbf{Normal Flow}
+
+\begin{enumerate}
+	\item User completes the research trend analysis.
+	\item User clicks the \textbf{Generate Report} button.
+	\item User selects an export format.
+	\item The system validates the report data.
+	\item The system generates the report.
+	\item The report is previewed or downloaded successfully.
+\end{enumerate}
+
+\medskip
+
+\textbf{Alternative / Exception Flow}
+
+\begin{itemize}
+	\item No analysis data available.
+	\begin{itemize}
+		\item Display message:
+		\textit{"No report data available."}
+	\end{itemize}
+	
+	\item Report generation fails.
+	\begin{itemize}
+		\item Display message:
+		\textit{"Unable to generate report. Please try again later."}
+	\end{itemize}
+	
+	\item Selected export format is unavailable.
+	\begin{itemize}
+		\item Display message:
+		\textit{"Selected export format is unavailable."}
+	\end{itemize}
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{tbc.jpg}
+	\caption{}
+	\label{fig:erd}
+\end{figure}
 \chapter{\centering\Large\bfseries IV. Software Design Description}
 \addcontentsline{toc}{chapter}{ IV. Software Design Description}
 \setcounter{section}{0}
