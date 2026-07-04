@@ -1240,12 +1240,104 @@ User opens \textit{``Tìm kiếm''} $\rightarrow$ Enters a keyword $\rightarrow$
 	\label{fig:erd}
 \end{figure}
 
+
+\begin{itemize}[label=-]
+	\item Search Results
+\end{itemize}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{sreach.jpg}
-	\caption{}
+	\includegraphics[width=\textwidth]{ketquatimkiem.png}
+	\caption{Search Results}
 	\label{fig:erd}
 \end{figure}
+\subsubsection{Bookmark}
+
+The Favorite Papers feature allows users to save publications of interest for future reference and easy access.
+\begin{itemize}
+	\item Users can click the Favorite button on a paper in the Search Results page to add it to their favorite list.
+	
+	\item If the paper is successfully added, the system displays the message "Added to Favorites successfully." and updates the button status to Saved.
+	
+	\item If the selected paper already exists in the favorite list, the system displays the message "This paper is already in your Favorites." and prevents duplicate entries.
+	
+	\item Users can access the Favorites page from the navigation bar to view all saved papers.
+	
+	\item Each saved paper displays the following information:
+	\begin{itemize}
+		\item Publication title.
+		\item Publication year.
+		\item Data source (e.g., OpenAlex).
+		\item Saved date and time.
+		\item DOI button for accessing the original publication.
+		\item Delete button for removing the paper from the favorite list.
+	\end{itemize}
+	
+	\item Users can remove a paper from the favorite list by clicking the Delete button. The system immediately updates the favorite list.
+	
+	\item Users can click the Find More Papers button to return to the search page and continue searching for publications.
+\end{itemize}
+Expected Result
+\begin{itemize}
+	\item Each paper can only be saved once in the favorite list.
+	\item Users can easily manage, review, and access their saved publications.
+	\item All changes to the favorite list are synchronized with the database and reflected immediately in the user interface.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{luuyeuthich.png}
+	\caption{Bookmark}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=--]
+	\item Marked as Favorite.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{dayeuthich.png}
+	\caption{Marked as Favorite.}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=--]
+	\item Bookmarked List
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{trangyeuthich.png}
+	\caption{Bookmarked List}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=--]
+	\item Remove from Bookmarks.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{xoa.png}
+	\caption{Remove from Bookmarks.}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=--]
+	\item Link to the bookmarked paper.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{lienket.png}
+	\caption{ Link to the bookmarked paper.}
+	\label{fig:erd}
+\end{figure}
+\subsubsection{Receive Notifications}
+
+
+
+
+
+
+
+
+
+
+
+
 \subsubsection{Research Trend Analysis}
 
 \textbf{Function Trigger}
@@ -1376,44 +1468,66 @@ The \textbf{Research Trend Dashboard} includes:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{ptxh.png}
-	\caption{}
+	\caption{Trend Analysis Page}
+	\label{fig:erd}
+	
+\end{figure}
+\begin{itemize}[label=-]
+	\item Please enter a search keyword.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{thieu.png}
+	\caption{Please enter a search keyword.}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=-]
+	\item The start year cannot be greater than the end year.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{batdaulonhon.png}
+	\caption{ The start year cannot be greater than the end year.}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=-]
+	\item Analysis Results.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ketquaphantich1.png}
+	\caption{ }
 	\label{fig:erd}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{ptxh2.png}
-	\caption{}
+	\includegraphics[width=\textwidth]{ketquaphantich2.png}
+	\caption{ Analysis Results.}
 	\label{fig:erd}
 \end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{ptxh3.jpg}
-	\caption{}
-	\label{fig:erd}
-\end{figure}
+
+
+
+
+
+
+
+
+
 \subsubsection{Export Research Trend Report}
 
-\textbf{Function Trigger}
-
-User opens \textit{Research Trend Analysis} $\rightarrow$ Enters a research topic and selects a time range $\rightarrow$ Clicks \textbf{Analyze} $\rightarrow$ Clicks \textbf{Generate Report} $\rightarrow$ Selects an export option (Preview \& Print / Save PDF, Download PDF, or Download HTML).
-
+Function Trigger
+User opens \textit{Research Trend Analysis} $\rightarrow$ Enters a research topic and selects a time range $\rightarrow$ Clicks Analyze $\rightarrow$ Clicks Generate Report $\rightarrow$ Selects an export option (Preview \& Print / Save PDF, Download PDF, or Download HTML).
 \bigskip
-
-\textbf{Function Description}
-
-\textbf{Actors:}
+Function Description
+Actors:
 Researcher, Lecturer, Student
-
 \medskip
-
-\textbf{Purpose}
-
+Purpose
 Allow users to export research trend analysis results into different report formats for printing, sharing, or offline viewing.
-
 \medskip
-
-\textbf{Data Processing}
-
+Data Processing
 \begin{itemize}
 	\item Verify that research trend analysis has been completed.
 	\item Validate that report data is available.
@@ -1430,22 +1544,15 @@ Allow users to export research trend analysis results into different report form
 	\item Generate the report in the selected format.
 	\item Prepare the report for preview or download.
 \end{itemize}
-
 \medskip
-
-\textbf{Function Details}
-
-\textbf{Validation}
-
+Function Details
+Validation
 \begin{itemize}
 	\item Research trend analysis must be completed before exporting.
 	\item Report data must be available.
 \end{itemize}
-
 \medskip
-
-\textbf{Business Rules}
-
+Business Rules
 \begin{itemize}
 	\item The exported report contains the currently displayed analysis results.
 	\item Users may choose one of the following export options:
@@ -1458,24 +1565,18 @@ Allow users to export research trend analysis results into different report form
 	\item The exported report reflects the currently selected research topic and time range.
 	\item The report preserves the dashboard layout and chart formatting.
 \end{itemize}
-
 \medskip
-
-\textbf{Normal Flow}
-
+Normal Flow
 \begin{enumerate}
 	\item User completes the research trend analysis.
-	\item User clicks the \textbf{Generate Report} button.
+	\item User clicks the Generate Report button.
 	\item User selects an export format.
 	\item The system validates the report data.
 	\item The system generates the report.
 	\item The report is previewed or downloaded successfully.
 \end{enumerate}
-
 \medskip
-
-\textbf{Alternative / Exception Flow}
-
+Alternative / Exception Flow
 \begin{itemize}
 	\item No analysis data available.
 	\begin{itemize}
@@ -1498,10 +1599,122 @@ Allow users to export research trend analysis results into different report form
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{tbc.jpg}
-	\caption{}
+	\caption{Generate Report}
 	\label{fig:erd}
 \end{figure}
->>>>>>> ae2d08aa93cec6c7f13690e91b433eccd8f11855
+\begin{itemize}[label=-]
+	\item Export Report.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{xuatbaocao.png}
+	\caption{Export Report.}
+	\label{fig:erd}
+\end{figure}
+\subsubsection{Follow Topic}
+
+
+\textbf{Function Activation}
+
+Users open the \textbf{Trend Analysis} page $\rightarrow$ Enter a research topic and select the time range $\rightarrow$ Click \textbf{Analyze} $\rightarrow$ Click the \textbf{Follow} button to follow a research topic.
+
+\textbf{Description}
+
+\textbf{Actors:} Researchers, Lecturers, Students.
+
+\textbf{Purpose}
+
+Allow users to follow research topics of interest for easier management and quick access.
+
+\textbf{Data Processing}
+
+\begin{itemize}[label=-]
+	\item Verify that the user is logged into the system.
+	\item Check whether the selected topic has already been followed.
+	\item If the topic has not been followed, save it to the user's followed topic list and update its status to \textbf{Following}.
+	\item If the topic is already followed, prevent duplicate entries.
+	\item Allow users to view the list of followed topics.
+	\item Allow users to unfollow a topic by clicking the \textbf{Unfollow} button.
+	\item Update the followed topic list after each follow or unfollow operation.
+\end{itemize}
+
+\textbf{Result}
+
+\begin{itemize}[label=-]
+	\item The selected topic is added to the followed topic list.
+	\item The followed topic list is updated correctly.
+	\item Users can follow or unfollow topics at any time.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{theodoi.png}
+	\caption{Follow Research Topics}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=-]
+	\item Follow topics list
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{dstheodoi.png}
+	\caption{Follow topics list}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=-]
+	\item Unfollow topic
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{huytheodoi.png}
+	\caption{Unfollow topic}
+	\label{fig:erd}
+\end{figure}
+\subsubsection{Receive Notifications}
+\textbf{Function Activation}
+
+Users log in to the system. Notifications are automatically displayed when new notifications are available.
+
+\textbf{Description}
+
+\textbf{Actors:} Researchers, Lecturers, Students.
+
+\textbf{Purpose}
+
+Allow users to receive notifications about followed research topics and system announcements from administrators.
+
+\textbf{Data Processing}
+
+\begin{itemize}[label=-]
+	\item Verify that the user is logged into the system.
+	\item Retrieve unread notifications from the database.
+	\item Display notifications related to followed research topics.
+	\item Display announcements and notifications sent by administrators.
+	\item Allow users to mark notifications as read.
+	\item Update the notification status after it has been read.
+\end{itemize}
+
+\textbf{Result}
+
+\begin{itemize}[label=-]
+	\item Users receive notifications about followed topics.
+	\item Users receive announcements from administrators.
+	\item Notification status is updated correctly after being read.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{nhanthongbao.png}
+	\caption{Receive notifications}
+	\label{fig:erd}
+\end{figure}
+\begin{itemize}[label=-]
+	\item Mark as Read.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{dadoc.png}
+	\caption{Mark as Read.}
+	\label{fig:erd}
+\end{figure}
 \chapter{\centering\Large\bfseries IV. Software Design Description}
 \addcontentsline{toc}{chapter}{ IV. Software Design Description}
 \setcounter{section}{0}
