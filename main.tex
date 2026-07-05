@@ -1726,7 +1726,8 @@ Allow users to receive notifications about followed research topics and system a
 \subsection{System Architecture}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Architecture System.png}
+	\includegraphics[width=0.8\textwidth]{ss.png}
+	
 	\label{fig:Overview_Diagram}
 \end{figure}
 \subsubsection{Frontend App}
@@ -1765,24 +1766,105 @@ The system integrates with external services to retrieve academic publication da
 
 \subsection{Package Diagram}
 \subsubsection{Front End }
-\subsubsection{Back End }
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{Backend-package.jpg}
-	\caption{\textbf{Backend package diagram}}
+	\includegraphics[width=\textwidth]{fe.png}
 	\label{fig:backend_package_diagram}
 \end{figure}
 
-\section{ Database Design}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{table}[h!]
+	\centering
+
+	\renewcommand{\arraystretch}{1.4}
+	\small
+	\rowcolors{2}{teal!6}{white}
+	\begin{tabular}{|c|L{2.8cm}|L{8.5cm}|}
+		\hline
+		\rowcolor{teal!70}
+		\textbf{\textcolor{white}{No}} & \textbf{\textcolor{white}{Page}} & \textbf{\textcolor{white}{Description}} \\
+		\hline
+		1 & \texttt{dangnhap.html}, \texttt{dangky.html} & Login and registration pages, calling \texttt{dangnhap.php} / \texttt{dangky.php}. \\
+		\hline
+		2 & \texttt{trangchu.html} & Public landing page (before login) --- hero banner introducing ScholarTrend, a search box for papers/authors/keywords, and a list of trending topics. \\
+		\hline
+		3 & \texttt{trangchu1.html} & Home page for logged-in users --- full navigation bar (Home, Trends, notifications, avatar), with links to profile, trend analysis, and notifications. \\
+		\hline
+		4 & \texttt{xemchitietbaibao.html} & Search page and article detail view --- calls \texttt{timkiem.php} to search, and \texttt{yeuthich.php} to save favorite papers. \\
+		\hline
+		5 & \texttt{phantichxuhuong.html} & Trend analysis page by topic --- calls \texttt{phantichxuhuong.php}, supports following topics and receiving notifications. \\
+		\hline
+		6 & \texttt{hosocanhan.html} & Account information page --- view/edit full name, email, username, email verification status; calls \texttt{hosocanhan.php}, \texttt{capnhathoso.php}, \texttt{dangxuat.php}. \\
+		\hline
+		7 & \texttt{yeuthich.html} & List of favorited papers, calls \texttt{yeuthich.php}. \\
+		\hline
+		8 & \texttt{xemthongbao.html} & Page displaying all notifications, calls \texttt{thongbao.php}. \\
+		\hline
+		9 & \texttt{admin.html} & System administration page --- manages users, topics, API sources, and data synchronization. \\
+		\hline
+	\end{tabular}
+\end{table}
+\subsubsection{Back End }
 \begin{figure}[H]
 	\centering
-\includegraphics[width=\textwidth]{database.png}
-	\caption{Database Design}
-	\label{fig:database}
+	\includegraphics[width=\textwidth]{be.png}
+	\label{fig:backend_package_diagram}
 \end{figure}
-\noindent\textbf{\underline{Entities Description}}
 
-\vspace{200pt}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{table}[h!]
+	\centering
+
+	\renewcommand{\arraystretch}{1.4}
+	\small % giảm cỡ chữ để không bị tràn trang
+	\rowcolors{2}{teal!6}{white}
+	\begin{tabular}{|c|L{3cm}|L{7.8cm}|}
+		\hline
+		\rowcolor{teal!70}
+		\textbf{\textcolor{white}{No}} & \textbf{\textcolor{white}{Group / File}} & \textbf{\textcolor{white}{Description}} \\
+		\hline
+		1 & \texttt{dangnhap.php}, \texttt{dangky.php}, \texttt{dangxuat.php}, \texttt{check\_session.php} & Handles user authentication via PHP sessions, with hashed passwords (\texttt{password\_verify}). \\
+		\hline
+		2 & \texttt{hosocanhan.php}, \texttt{capnhathoso.php} & Retrieves and updates personal profile information. \\
+		\hline
+		3 & \texttt{timkiem.php} & Searches for research papers --- queries both OpenAlex and Crossref, then merges the results. \\
+		\hline
+		4 & \texttt{xuhuongchude.php} & Analyzes trending topics --- uses Crossref as the primary data source. \\
+		\hline
+		5 & \texttt{phantichxuhuong.php} & Processes trend analysis logic for topics already stored in the database. \\
+		\hline
+		6 & \texttt{theodoichude.php}, \texttt{yeuthich.php}, \texttt{thongbao.php} & Handles topic following, favorite papers, and user notifications. \\
+		\hline
+		7 & \texttt{admin\_users.php}, \texttt{admin\_papers.php}, \texttt{admin\_topics.php}, \texttt{admin\_api\_sources.php}, \texttt{admin\_notifications.php}, \texttt{admin\_check.php} & Administrative functions: managing users, papers, topics, API sources, and notifications. \\
+		\hline
+		8 & \texttt{admin\_sync.php} & Synchronizes paper data from OpenAlex and Semantic Scholar into the database. \\
+		\hline
+		9 & \texttt{api\_proxy.php} & Proxy that calls OpenAlex directly for the dashboard, with file-based caching (10-minute TTL) and rate limiting (5 requests/second). \\
+		\hline
+		10 & \texttt{config/database.php} & Establishes a PDO connection to the MySQL database (\texttt{sjptts}), required by most files in \texttt{api} via \texttt{require\_once}. \\
+		\hline
+	\end{tabular}
+\end{table}
+\end{table}
+
+\clearpage
+\section{Database Design}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth,
+height=0.9\textheight,
+keepaspectratio]{database.png}
+
+\label{fig:erd}
+\end{figure}
+
+\clearpage
+\noindent\textbf{Entities Description}
 \subsection{Role Table}
 \begin{longtable}{|p{3cm}|p{3cm}|p{6cm}|p{1.5cm}|p{1.5cm}|}
 	\hline
