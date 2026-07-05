@@ -1715,12 +1715,342 @@ Allow users to receive notifications about followed research topics and system a
 	\caption{Mark as Read.}
 	\label{fig:erd}
 \end{figure}
+\subsubsection{Admin - User Management}
+\textbf{Role:} Admin
+
+\textbf{Function Trigger:}
+The admin opens the Admin page and selects Quan ly
+nguoi dung.
+
+\textbf{Function description:}
+\begin{itemize}[label=-]
+	\item Purpose: Allow the admin to manage user accounts in the system.
+	\item Data processing: Retrieve user information from the database and update user status or role.
+\end{itemize}
+
+\textbf{Function Details:}
+\begin{itemize}[label=-]
+    \item Display the list of users.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ad1.png}
+    \caption{User management interface displaying the list of users.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Lock or unlock a user account.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ad2.png}
+    \caption{Lock or unlock a user account.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Assign admin role to a user.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ad3.png}
+    \caption{Assign admin role to a user.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Change an admin account back to a normal user.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ad4.png}
+    \caption{Change an admin account back to a normal user.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Display a success or error message after each action.
+\end{itemize}
+
+\subsubsection{Admin - Topic Management}
+\textbf{Role:} Admin
+\textbf{Function description:}
+\begin{itemize}[label=-]
+	\item Purpose: Allow the admin to manage research topics.
+	\item Data processing: Add, update, delete, and retrieve topic data from the database.
+\end{itemize}
+\textbf{Function Details:}
+\begin{itemize}[label=-]
+    \item Display the list of research topics
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ad5.png}
+    \caption{Topic management interface displaying the list of research topics.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Add a new topic with name and description
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ad6.png}
+    \caption{Admin can add a new research topic by entering the topic name and description.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Edit an existing topic
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ad7.png}
+    \caption{Admin can edit an existing research topic.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Delete a topic
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad8.png}
+    \caption{Normal State.}
+    \label{fig:admin}
+\end{figure}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad9.png}
+    \caption{Question “Xoa chu de nay?”.}
+    \label{fig:admin}
+\end{figure}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad10.png}
+    \caption{Admin can delete an existing research topic.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Update the topic list after each action
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad11.png}
+    \caption{Topic list is updated after each action.}
+    \label{fig:admin}
+\end{figure}
+
+\subsubsection{Admin - API Source Management}
+\textbf{Role:} Admin
+
+\textbf{Function trigger:}
+The admin opens the Admin page and selects Quan ly nguon API.
+
+\textbf{Function description:}
+\begin{itemize}[label=-]
+    \item Purpose: Allow the admin to manage external API sources used by the system.
+    \item Data processing: Store and update API source information in the database.
+\end{itemize}
+\textbf{Function Details:}
+\begin{itemize}[label=-]
+    \item Display the list of API sources.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad12.png}
+    \caption{API source management interface displaying the list of external API sources.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Add a new API source.
+\end{itemize}
+\begin{itemize}[label=-]
+    \item Edit API source name, base URL, status, priority, and description.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad13.png}
+    \caption{Admin can edit API source information including name, base URL, status, priority, and description.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Enable or disable an API source.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad14.png}
+    \caption{Admin can enable or disable an API source.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Delete an API source.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad15.png}
+    \caption{Admin can delete an external API source from the system.}
+    \label{fig:admin}
+\end{figure}
+
+\subsubsection{Admin - API Data Synchronization}
+\textbf{Role:} Admin
+
+\textbf{Function trigger:}
+The admin clicks Đong bo hoa in the API synchronization section.
+
+\textbf{Function description:}
+\begin{itemize}[label=-]
+    \item Purpose: Synchronize data from external APIs into the system.
+    \item Data processing: Fetch data from the selected API source, process the returned data, update the research paper database, and save the synchronization log.
+\end{itemize}
+\textbf{Function Details:}
+\begin{itemize}[label=-]
+    \item Select an API source.
+\end{itemize}
+\begin{itemize}[label=-]
+    \item Enter a search keyword and the number of records to synchronize.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad16.png}
+    \caption{API data synchronization form where admin selects an API source, enters a keyword, and sets the number of records.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Select an API source.
+    \item The system inserts new research papers or updates existing records.
+    \item Display synchronization results including fetched, inserted, and updated records.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad17.png}
+    \caption{The system displays synchronization results after fetching data from the API.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Save the synchronization history in the synchronization log.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad17.png}
+    \caption{Synchronization log showing the history of API data synchronization activities.}
+    \label{fig:admin}
+\end{figure}
+\subsubsection{Admin - Research Paper Management}
+\textbf{Role:} Admin
+
+\textbf{Function trigger:}
+The admin opens the Admin page and selects Quan ly bai bao.
+
+\textbf{Function description:}
+\begin{itemize}[label=-]
+    \item Purpose: Allow the admin to manage research paper data.
+    \item Data processing: Add, update, delete, and retrieve research paper information from the database.
+\end{itemize}
+\textbf{Function Details:}
+\begin{itemize}[label=-]
+    \item Display the list of research papers.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad18.png}
+    \caption{Research paper management interface displaying the list of research papers.}
+    \label{fig:admin}
+\end{figure}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad19.png}
+    \caption{Research paper management interface displaying the list of research papers.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Add a new research paper.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad19.png}
+    \caption{Admin can add a new research paper by entering paper information.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Edit title, authors, journal, publication year, DOI, URL, abstract, and topic.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad20.png}
+    \caption{Admin can edit research paper details including title, authors, journal, year, DOI, URL, abstract, and topic.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Delete a research paper.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad21.png}
+    \caption{Admin can delete a research paper from the system.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Update the paper list after each action.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad22.png}
+    \caption{The research paper list is updated after adding a new paper.}
+    \label{fig:admin}
+\end{figure}
+\subsubsection{Admin - Notification Management}
+\textbf{Role:} Admin
+
+\textbf{Function trigger:}
+The admin opens the Admin page and selects Quan ly thong bao.
+
+\textbf{Function description:}
+\begin{itemize}[label=-]
+    \item Purpose: Allow the admin to send and manage notifications for users.
+    \item Data processing: Store notification data in the database and retrieve notification history.
+\end{itemize}
+\textbf{Function Details:}
+\begin{itemize}[label=-]
+    \item Create a new notification with title, type, link, and content.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad23.png}
+    \caption{Notification Managment.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Send a notification to one user or all active users.
+    \item Display the list of sent notifications.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad24.png}
+    \caption{Sent notifications are displayed in the notification history list.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Delete a notification.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad25.png}
+    \caption{Admin can delete a sent notification.}
+    \label{fig:admin}
+\end{figure}
+\begin{itemize}[label=-]
+    \item Users can view notifications on the notification page.
+\end{itemize}
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{ad26.png}
+    \caption{User notification page showing notifications sent by the admin.}
+    \label{fig:admin}
+\end{figure}
+
 
 \chapter{\centering\Large\bfseries IV. Software Design Description}
 \addcontentsline{toc}{chapter}{ IV. Software Design Description}
 \setcounter{section}{0}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
+
 
 \section{System Design}
 \subsection{System Architecture}
