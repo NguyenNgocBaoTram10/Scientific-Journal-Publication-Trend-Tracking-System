@@ -149,14 +149,8 @@ INPUT C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstop
 INPUT C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT .\main.out
-INPUT .\main.out
-INPUT main.out
-INPUT main.out
-OUTPUT main.pdf
-INPUT .\main.out
-INPUT .\main.out
 OUTPUT main.out
+OUTPUT main.pdf
 INPUT C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr17.tfm
 INPUT C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
 INPUT C:\Users\ndnqu\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr12.tfm
@@ -308,13 +302,13 @@ INPUT .\chinhsuathanhcong.png
 INPUT .\chinhsuathanhcong.png
 INPUT .\chinhsuathanhcong.png
 INPUT .\chinhsuathanhcong.png
-INPUT .\dx11.png
-INPUT .\dx11.png
-INPUT .\dx11.png
-INPUT .\dx11.png
-INPUT .\dx11.png
-INPUT .\dx11.png
-INPUT .\dx11.png
+INPUT .\logout.jpg
+INPUT .\logout.jpg
+INPUT .\logout.jpg
+INPUT .\logout.jpg
+INPUT .\logout.jpg
+INPUT .\logout.jpg
+INPUT .\logout.jpg
 INPUT .\trangdangnhap.png
 INPUT .\trangdangnhap.png
 INPUT .\trangdangnhap.png
@@ -491,6 +485,20 @@ INPUT .\database.png
 INPUT .\database.png
 INPUT .\database.png
 INPUT .\database.png
+INPUT .\ac1.png
+INPUT .\ac1.png
+INPUT .\ac1.png
+INPUT .\ac1.png
+INPUT .\ac1.png
+INPUT .\ac1.png
+INPUT .\ac1.png
+INPUT .\sta1.png
+INPUT .\sta1.png
+INPUT .\sta1.png
+INPUT .\sta1.png
+INPUT .\sta1.png
+INPUT .\sta1.png
+INPUT .\sta1.png
 INPUT .\CDRegister.png
 INPUT .\CDRegister.png
 INPUT .\CDRegister.png
@@ -498,13 +506,20 @@ INPUT .\CDRegister.png
 INPUT .\CDRegister.png
 INPUT .\CDRegister.png
 INPUT .\CDRegister.png
-INPUT .\re11.png
-INPUT .\re11.png
-INPUT .\re11.png
-INPUT .\re11.png
-INPUT .\re11.png
-INPUT .\re11.png
-INPUT .\re11.png
+INPUT .\ac2.png
+INPUT .\ac2.png
+INPUT .\ac2.png
+INPUT .\ac2.png
+INPUT .\ac2.png
+INPUT .\ac2.png
+INPUT .\ac2.png
+INPUT .\sta2.png
+INPUT .\sta2.png
+INPUT .\sta2.png
+INPUT .\sta2.png
+INPUT .\sta2.png
+INPUT .\sta2.png
+INPUT .\sta2.png
 INPUT .\CDLogin.png
 INPUT .\CDLogin.png
 INPUT .\CDLogin.png
@@ -512,13 +527,20 @@ INPUT .\CDLogin.png
 INPUT .\CDLogin.png
 INPUT .\CDLogin.png
 INPUT .\CDLogin.png
-INPUT .\dn11.png
-INPUT .\dn11.png
-INPUT .\dn11.png
-INPUT .\dn11.png
-INPUT .\dn11.png
-INPUT .\dn11.png
-INPUT .\dn11.png
+INPUT .\ac3.png
+INPUT .\ac3.png
+INPUT .\ac3.png
+INPUT .\ac3.png
+INPUT .\ac3.png
+INPUT .\ac3.png
+INPUT .\ac3.png
+INPUT .\sta3.png
+INPUT .\sta3.png
+INPUT .\sta3.png
+INPUT .\sta3.png
+INPUT .\sta3.png
+INPUT .\sta3.png
+INPUT .\sta3.png
 INPUT .\CDSearchResearchPaper.png
 INPUT .\CDSearchResearchPaper.png
 INPUT .\CDSearchResearchPaper.png
@@ -526,13 +548,27 @@ INPUT .\CDSearchResearchPaper.png
 INPUT .\CDSearchResearchPaper.png
 INPUT .\CDSearchResearchPaper.png
 INPUT .\CDSearchResearchPaper.png
-INPUT .\seach11.png
-INPUT .\seach11.png
-INPUT .\seach11.png
-INPUT .\seach11.png
-INPUT .\seach11.png
-INPUT .\seach11.png
-INPUT .\seach11.png
+INPUT .\avpd.png
+INPUT .\avpd.png
+INPUT .\avpd.png
+INPUT .\avpd.png
+INPUT .\avpd.png
+INPUT .\avpd.png
+INPUT .\avpd.png
+INPUT .\sevpd.png
+INPUT .\sevpd.png
+INPUT .\sevpd.png
+INPUT .\sevpd.png
+INPUT .\sevpd.png
+INPUT .\sevpd.png
+INPUT .\sevpd.png
+INPUT .\svpd.png
+INPUT .\svpd.png
+INPUT .\svpd.png
+INPUT .\svpd.png
+INPUT .\svpd.png
+INPUT .\svpd.png
+INPUT .\svpd.png
 INPUT .\CDPaperDetail.png
 INPUT .\CDPaperDetail.png
 INPUT .\CDPaperDetail.png
@@ -540,13 +576,27 @@ INPUT .\CDPaperDetail.png
 INPUT .\CDPaperDetail.png
 INPUT .\CDPaperDetail.png
 INPUT .\CDPaperDetail.png
-INPUT .\xemtrang11.png
-INPUT .\xemtrang11.png
-INPUT .\xemtrang11.png
-INPUT .\xemtrang11.png
-INPUT .\xemtrang11.png
-INPUT .\xemtrang11.png
-INPUT .\xemtrang11.png
+INPUT .\asb.png
+INPUT .\asb.png
+INPUT .\asb.png
+INPUT .\asb.png
+INPUT .\asb.png
+INPUT .\asb.png
+INPUT .\asb.png
+INPUT .\sesb.png
+INPUT .\sesb.png
+INPUT .\sesb.png
+INPUT .\sesb.png
+INPUT .\sesb.png
+INPUT .\sesb.png
+INPUT .\sesb.png
+INPUT .\ssb.png
+INPUT .\ssb.png
+INPUT .\ssb.png
+INPUT .\ssb.png
+INPUT .\ssb.png
+INPUT .\ssb.png
+INPUT .\ssb.png
 INPUT .\CDBookmark.png
 INPUT .\CDBookmark.png
 INPUT .\CDBookmark.png
@@ -554,20 +604,6 @@ INPUT .\CDBookmark.png
 INPUT .\CDBookmark.png
 INPUT .\CDBookmark.png
 INPUT .\CDBookmark.png
-INPUT .\savebook11.png
-INPUT .\savebook11.png
-INPUT .\savebook11.png
-INPUT .\savebook11.png
-INPUT .\savebook11.png
-INPUT .\savebook11.png
-INPUT .\savebook11.png
-INPUT .\Track-Publication-Trend_class-diagram.jpg
-INPUT .\Track-Publication-Trend_class-diagram.jpg
-INPUT .\Track-Publication-Trend_class-diagram.jpg
-INPUT .\Track-Publication-Trend_class-diagram.jpg
-INPUT .\Track-Publication-Trend_class-diagram.jpg
-INPUT .\Track-Publication-Trend_class-diagram.jpg
-INPUT .\Track-Publication-Trend_class-diagram.jpg
 INPUT .\atpt.png
 INPUT .\atpt.png
 INPUT .\atpt.png
@@ -582,6 +618,41 @@ INPUT .\setpt.png
 INPUT .\setpt.png
 INPUT .\setpt.png
 INPUT .\setpt.png
+INPUT .\stpt.png
+INPUT .\stpt.png
+INPUT .\stpt.png
+INPUT .\stpt.png
+INPUT .\stpt.png
+INPUT .\stpt.png
+INPUT .\stpt.png
+INPUT .\Track-Publication-Trend_class-diagram.jpg
+INPUT .\Track-Publication-Trend_class-diagram.jpg
+INPUT .\Track-Publication-Trend_class-diagram.jpg
+INPUT .\Track-Publication-Trend_class-diagram.jpg
+INPUT .\Track-Publication-Trend_class-diagram.jpg
+INPUT .\Track-Publication-Trend_class-diagram.jpg
+INPUT .\Track-Publication-Trend_class-diagram.jpg
+INPUT .\ac7.png
+INPUT .\ac7.png
+INPUT .\ac7.png
+INPUT .\ac7.png
+INPUT .\ac7.png
+INPUT .\ac7.png
+INPUT .\ac7.png
+INPUT .\sevdb.png
+INPUT .\sevdb.png
+INPUT .\sevdb.png
+INPUT .\sevdb.png
+INPUT .\sevdb.png
+INPUT .\sevdb.png
+INPUT .\sevdb.png
+INPUT .\sta7.png
+INPUT .\sta7.png
+INPUT .\sta7.png
+INPUT .\sta7.png
+INPUT .\sta7.png
+INPUT .\sta7.png
+INPUT .\sta7.png
 INPUT .\View-Dashboard_class-diagram.jpg
 INPUT .\View-Dashboard_class-diagram.jpg
 INPUT .\View-Dashboard_class-diagram.jpg
@@ -589,6 +660,27 @@ INPUT .\View-Dashboard_class-diagram.jpg
 INPUT .\View-Dashboard_class-diagram.jpg
 INPUT .\View-Dashboard_class-diagram.jpg
 INPUT .\View-Dashboard_class-diagram.jpg
+INPUT .\activity_Generate-reports.png
+INPUT .\activity_Generate-reports.png
+INPUT .\activity_Generate-reports.png
+INPUT .\activity_Generate-reports.png
+INPUT .\activity_Generate-reports.png
+INPUT .\activity_Generate-reports.png
+INPUT .\activity_Generate-reports.png
+INPUT .\sequence_Generate-reports.png
+INPUT .\sequence_Generate-reports.png
+INPUT .\sequence_Generate-reports.png
+INPUT .\sequence_Generate-reports.png
+INPUT .\sequence_Generate-reports.png
+INPUT .\sequence_Generate-reports.png
+INPUT .\sequence_Generate-reports.png
+INPUT .\state_Generate-reports.png
+INPUT .\state_Generate-reports.png
+INPUT .\state_Generate-reports.png
+INPUT .\state_Generate-reports.png
+INPUT .\state_Generate-reports.png
+INPUT .\state_Generate-reports.png
+INPUT .\state_Generate-reports.png
 INPUT .\Generate-Reports_class-diagram.jpg
 INPUT .\Generate-Reports_class-diagram.jpg
 INPUT .\Generate-Reports_class-diagram.jpg
@@ -596,10 +688,34 @@ INPUT .\Generate-Reports_class-diagram.jpg
 INPUT .\Generate-Reports_class-diagram.jpg
 INPUT .\Generate-Reports_class-diagram.jpg
 INPUT .\Generate-Reports_class-diagram.jpg
-INPUT .\Generate-Reports_class-diagram.jpg
-INPUT .\Generate-Reports_class-diagram.jpg
-INPUT .\Generate-Reports_class-diagram.jpg
-INPUT .\Generate-Reports_class-diagram.jpg
+INPUT .\ac8.png
+INPUT .\ac8.png
+INPUT .\ac8.png
+INPUT .\ac8.png
+INPUT .\ac8.png
+INPUT .\ac8.png
+INPUT .\ac8.png
+INPUT .\sevtt.png
+INPUT .\sevtt.png
+INPUT .\sevtt.png
+INPUT .\sevtt.png
+INPUT .\sevtt.png
+INPUT .\sevtt.png
+INPUT .\sevtt.png
+INPUT .\sta8.png
+INPUT .\sta8.png
+INPUT .\sta8.png
+INPUT .\sta8.png
+INPUT .\sta8.png
+INPUT .\sta8.png
+INPUT .\sta8.png
+INPUT .\follow topics.png
+INPUT .\follow topics.png
+INPUT .\follow topics.png
+INPUT .\follow topics.png
+INPUT .\follow topics.png
+INPUT .\follow topics.png
+INPUT .\follow topics.png
 INPUT .\follow topice 2.png
 INPUT .\follow topice 2.png
 INPUT .\follow topice 2.png
@@ -607,6 +723,20 @@ INPUT .\follow topice 2.png
 INPUT .\follow topice 2.png
 INPUT .\follow topice 2.png
 INPUT .\follow topice 2.png
+INPUT .\follow topice 3.png
+INPUT .\follow topice 3.png
+INPUT .\follow topice 3.png
+INPUT .\follow topice 3.png
+INPUT .\follow topice 3.png
+INPUT .\follow topice 3.png
+INPUT .\follow topice 3.png
+INPUT .\Receive notifications.png
+INPUT .\Receive notifications.png
+INPUT .\Receive notifications.png
+INPUT .\Receive notifications.png
+INPUT .\Receive notifications.png
+INPUT .\Receive notifications.png
+INPUT .\Receive notifications.png
 INPUT .\Receive notifications 1.png
 INPUT .\Receive notifications 1.png
 INPUT .\Receive notifications 1.png
@@ -614,6 +744,20 @@ INPUT .\Receive notifications 1.png
 INPUT .\Receive notifications 1.png
 INPUT .\Receive notifications 1.png
 INPUT .\Receive notifications 1.png
+INPUT .\Receive notifications 2.png
+INPUT .\Receive notifications 2.png
+INPUT .\Receive notifications 2.png
+INPUT .\Receive notifications 2.png
+INPUT .\Receive notifications 2.png
+INPUT .\Receive notifications 2.png
+INPUT .\Receive notifications 2.png
+INPUT .\activity_Manage-Users.png
+INPUT .\activity_Manage-Users.png
+INPUT .\activity_Manage-Users.png
+INPUT .\activity_Manage-Users.png
+INPUT .\activity_Manage-Users.png
+INPUT .\activity_Manage-Users.png
+INPUT .\activity_Manage-Users.png
 INPUT .\sequence_Manage-Users.png
 INPUT .\sequence_Manage-Users.png
 INPUT .\sequence_Manage-Users.png
@@ -621,6 +765,20 @@ INPUT .\sequence_Manage-Users.png
 INPUT .\sequence_Manage-Users.png
 INPUT .\sequence_Manage-Users.png
 INPUT .\sequence_Manage-Users.png
+INPUT .\state_Manage-Users.png
+INPUT .\state_Manage-Users.png
+INPUT .\state_Manage-Users.png
+INPUT .\state_Manage-Users.png
+INPUT .\state_Manage-Users.png
+INPUT .\state_Manage-Users.png
+INPUT .\state_Manage-Users.png
+INPUT .\con1ac.png
+INPUT .\con1ac.png
+INPUT .\con1ac.png
+INPUT .\con1ac.png
+INPUT .\con1ac.png
+INPUT .\con1ac.png
+INPUT .\con1ac.png
 INPUT .\con1tt.png
 INPUT .\con1tt.png
 INPUT .\con1tt.png
@@ -628,6 +786,20 @@ INPUT .\con1tt.png
 INPUT .\con1tt.png
 INPUT .\con1tt.png
 INPUT .\con1tt.png
+INPUT .\con1sta.png
+INPUT .\con1sta.png
+INPUT .\con1sta.png
+INPUT .\con1sta.png
+INPUT .\con1sta.png
+INPUT .\con1sta.png
+INPUT .\con1sta.png
+INPUT .\cyac1.png
+INPUT .\cyac1.png
+INPUT .\cyac1.png
+INPUT .\cyac1.png
+INPUT .\cyac1.png
+INPUT .\cyac1.png
+INPUT .\cyac1.png
 INPUT .\sytt1.png
 INPUT .\sytt1.png
 INPUT .\sytt1.png
@@ -635,6 +807,13 @@ INPUT .\sytt1.png
 INPUT .\sytt1.png
 INPUT .\sytt1.png
 INPUT .\sytt1.png
+INPUT .\systa1.png
+INPUT .\systa1.png
+INPUT .\systa1.png
+INPUT .\systa1.png
+INPUT .\systa1.png
+INPUT .\systa1.png
+INPUT .\systa1.png
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
