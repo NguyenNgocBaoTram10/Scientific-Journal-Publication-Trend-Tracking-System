@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.27)  5 JUL 2026 14:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.27)  5 JUL 2026 14:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -786,6 +786,9 @@ LaTeX Warning: Label `fig:erd' multiply defined.
 
 
 LaTeX Warning: Label `fig:class-track-publication-trends' multiply defined.
+
+
+LaTeX Warning: Label `fig:erd' multiply defined.
 
 
 LaTeX Warning: Label `fig:class-track-publication-trends' multiply defined.
@@ -2771,11 +2774,11 @@ File: CDLogin.png Graphic file (type png)
 Package pdftex.def Info: CDLogin.png  used on input line 2081.
 (pdftex.def)             Requested size: 452.9679pt x 382.88365pt.
  [65 <./tt1.png>]
-<tt2.png, id=917, 653.44125pt x 708.6475pt>
-File: tt2.png Graphic file (type png)
-<use tt2.png>
-Package pdftex.def Info: tt2.png  used on input line 2087.
-(pdftex.def)             Requested size: 452.9679pt x 491.23805pt.
+<dn11.png, id=917, 410.7345pt x 540.21825pt>
+File: dn11.png Graphic file (type png)
+<use dn11.png>
+Package pdftex.def Info: dn11.png  used on input line 2087.
+(pdftex.def)             Requested size: 452.9679pt x 595.78336pt.
  [66 <./CDLogin.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 3}) has been already used, duplicate ignored
@@ -2794,7 +2797,7 @@ File: CDSearchResearchPaper.png Graphic file (type png)
 <use CDSearchResearchPaper.png>
 Package pdftex.def Info: CDSearchResearchPaper.png  used on input line 2099.
 (pdftex.def)             Requested size: 452.9679pt x 352.19627pt.
- [67 <./tt2.png>]
+ [67 <./dn11.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.3.2}) has been already used, duplicate ignored
 <to be read again> 
@@ -3055,7 +3058,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 ### bottom level 
 Here is how much of TeX's memory you used:
  12971 strings out of 467509
- 203861 string characters out of 5418889
+ 203868 string characters out of 5418889
  667218 words of memory out of 5000000
  41798 multiletter control sequences out of 15000+600000
  643264 words of font info for 67 fonts, out of 8000000 for 9000
@@ -3070,7 +3073,7 @@ onts/type1/vntex/vnr/vnr10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/v
 nr12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Program Files/MiKTeX/fonts/ty
 pe1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (105 pages, 7322311 bytes).
+Output written on main.pdf (105 pages, 7315020 bytes).
 PDF statistics:
  1223 PDF objects out of 1440 (max. 8388607)
  253 named destinations out of 1000 (max. 500000)
