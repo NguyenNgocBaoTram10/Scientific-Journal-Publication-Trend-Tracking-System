@@ -2569,11 +2569,11 @@ The following features are excluded from the testing scope:
 		\hline
 		
 		Test Case Name &
-		Invalid Email Format \\
+		Invalid Registration Information \\
 		\hline
 		
 		Objective &
-		Verify email format validation.
+		Verify that the system validates registration fields and displays appropriate error messages when invalid information is entered.
 		\\
 		\hline
 		
@@ -2583,26 +2583,44 @@ The following features are excluded from the testing scope:
 		\hline
 		
 		Test Data &
-		Email: group6123
+		\begin{tabular}[t]{@{}l@{}}
+			Full Name: Group6 \\
+			Username: Gr6 \\
+			Email: group6123 \\
+			Password: 123456 
+		\end{tabular}
 		\\
 		\hline
 		
 		Test Steps &
 		\begin{tabular}[t]{@{}l@{}}
-			1. Open Registration page.\\
-			2. Enter an invalid email address.\\
-			3. Click Register.
+			1. Open the Registration page.\\
+			2. Enter a Full Name containing only one word or numbers. \\
+			3. Enter a username with fewer than 4 characters. \\
+			4. Enter an invalid email format. \\
+			5. Enter a password that does not meet the requirements. \\
+			6. Click the Register button.
 		\end{tabular}
 		\\
 		\hline
 		
 		Expected Result &
-		System displays "Invalid email address".
+		\begin{tabular}[t]{@{}l@{}}
+		The system rejects the registration request and displays \\
+		the corresponding validation messages: \\
+		• Please enter your full name \\
+		(at least 2 words and letters only). \\
+		• Username must be 4–20 characters long and contain \\
+		only letters, numbers, or underscores \\
+		• Invalid email address. \\
+		• Password must be at least 8 characters long and \\
+		contain both letters and numbers. \\
+		\end{tabular}
 		\\
 		\hline
 		
 		Actual Result &
-		Validation message displayed correctly.
+		The correct validation messages are displayed
 		\\
 		\hline
 		
@@ -2612,7 +2630,6 @@ The following features are excluded from the testing scope:
 		
 	\end{tabular}
 \end{table}
-
 
 \begin{table}[H]
 	\centering
@@ -2628,68 +2645,6 @@ The following features are excluded from the testing scope:
 		
 		Test Case ID &
 		TC\_REG\_04 \\
-		\hline
-		
-		Test Case Name &
-		Weak Password \\
-		\hline
-		
-		Objective &
-		Verify password strength validation.
-		\\
-		\hline
-		
-		Preconditions &
-		None
-		\\
-		\hline
-		
-		Test Data &
-		Password: 123456
-		\\
-		\hline
-		
-		Test Steps &
-		\begin{tabular}[t]{@{}l@{}}
-			1. Open Registration page.\\
-			2. Enter a weak password.\\
-			3. Click Register.
-		\end{tabular}
-		\\
-		\hline
-		
-		Expected Result &
-		System displays a password strength validation message.
-		\\
-		\hline
-		
-		Actual Result &
-		Validation message displayed correctly.
-		\\
-		\hline
-		
-		Status &
-		Pass \\
-		\hline
-		
-	\end{tabular}
-\end{table}
-
-
-\begin{table}[H]
-	\centering
-	\small
-	\begin{tabular}{|p{4cm}|p{10cm}|}
-		\hline
-		\textbf{Field} & \textbf{Description} \\
-		\hline
-		
-		Module &
-		User Registration \\
-		\hline
-		
-		Test Case ID &
-		TC\_REG\_05 \\
 		\hline
 		
 		Test Case Name &
@@ -2737,6 +2692,75 @@ The following features are excluded from the testing scope:
 	\end{tabular}
 \end{table}
 
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		User Registration \\
+		\hline
+		
+		Test Case ID &
+		TC\_REG\_05 \\
+		\hline
+		
+		Test Case Name &
+		 Register with Existing Username\\
+		\hline
+		
+		Objective &
+		Verify that the system does not allow registration with a username that already exists in the database.
+		\\
+		\hline
+		
+		Preconditions &
+		Username already exists in the database.
+		\\
+		\hline
+		
+		Test Data &
+		\begin{tabular}[t]{@{}l@{}}
+		Full Name: Admin User \\
+		Username: Group6 \\
+		Email: admin6@gmail.com \\
+		Password: admin654321 
+		\end{tabular}
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Registration page.\\
+			2. Enter all required information. \\
+			3. Input an existing username (Group6). \\
+			4. Click the Register button.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		\begin{tabular}[t]{@{}l@{}}
+			The system rejects the registration request and message: \\
+			"Username already exists."
+		\end{tabular}
+		\\
+		\hline
+		
+		Actual Result &
+		The correct validation message is displayed.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+\end{table}
 
 \subsection{User Login}
 \begin{table}[H]
@@ -3010,7 +3034,7 @@ The following features are excluded from the testing scope:
 		\hline
 		
 		Objective &
-		Verify system behavior when no publication matches the search keyword.
+		Verify system behavior when the search criteria are invalid or return no matching publications.
 		\\
 		\hline
 		
@@ -3020,14 +3044,23 @@ The following features are excluded from the testing scope:
 		\hline
 		
 		Test Data &
-		Keyword: abcdeftopic123
+		\begin{tabular}[t]{@{}l@{}}
+		Scenario 1: Keyword: abcdeftopic123 \\
+		Scenario 2: Keyword: machine learning \\
+		Year from: 2025; Year to: 2022 
+		\end{tabular}
 		\\
 		\hline
 		
 		Test Steps &
 		\begin{tabular}[t]{@{}l@{}}
-			1. Enter keyword "abcdeftopic123".\\
-			2. Click Search.
+		Scenario 1: \\
+		1. Enter Keyword "abcdeftopic123" \\
+		2. Click Search \\
+		Scenario 2: \\
+		1. Enter Keyword "machine learning" \\
+		2. Select year range from 2025 to 2022\\
+		3. Click Search
 		\end{tabular}
 		\\
 		\hline
@@ -3742,35 +3775,44 @@ The following features are excluded from the testing scope:
 		\hline
 		
 		Objective &
-		Verify system behavior when no trend data is available.
+		Verify system behavior when no trend data is available
 		\\
 		\hline
 		
 		Preconditions &
-		System is available and database contains no matching publication data for the topic
+		System is available 
 		\\
 		\hline
 		
 		Test Data &
-		Topic: abcdeftopic
+		\begin{tabular}[t]{@{}l@{}}
+			Scenario 1: Topic: abcdabcdeftopic \\
+			Scenario 2: Topic: machine learning \\
+			Year from 2025; Year to: 2022
+		\end{tabular}
 		\\
 		\hline
 		
 		Test Steps &
 		\begin{tabular}[t]{@{}l@{}}
-			1. Enter non-existing topic "abcdeftopic".\\
-			2. Click Analyze.
-		\end{tabular}
+		Scenario 1: \\
+		1. Enter non-existing topic "abcdeftopic123" \\
+		2. Click Analyze \\
+		Scenario 2: \\
+		1. Enter topic "machine learning" \\
+		2. Select year range from 2025 to 2022\\
+		3. Click Analyze
+	\end{tabular}
 		\\
 		\hline
 		
 		Expected Result &
-		An empty result list is displayed and no system error occurs.
+		No trend data is available. The system displays "No data available"
 		\\
 		\hline
 		
 		Actual Result &
-		Empty result list displayed correctly.
+		The "No data available" message is displayed correctly in all trend analysis sections.
 		\\
 		\hline
 		

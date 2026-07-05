@@ -1,31 +1,27 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  5 JUL 2026 15:03
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.27)  5 JUL 2026 15:04
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.4)  5 JUL 2026 17:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./main.tex
 (main.tex
-LaTeX2e <2026-06-01>
-L3 programming layer <2026-05-26>
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (C:\Program Files\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count276
-\c@section=\count277
-\c@subsection=\count278
-\c@subsubsection=\count279
-\c@paragraph=\count280
-\c@subparagraph=\count281
-\c@figure=\count282
-\c@table=\count283
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen150
+\bibindent=\dimen148
 )
 (C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
@@ -201,32 +197,32 @@ LaTeX Font Info:    Trying to load font information for T5+cmr on input line 11
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ))
 (C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2026/05/20 v26.8 The multilingual framework for LuaLaTeX, pdfLaT
-eX and XeLaTeX
-\babel@savecnt=\count284
+Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count283
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2084.
+ne 2068.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2086.
+ne 2070.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2088.
+e 2072.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2089.
+e 2073.
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2090.
+on input line 2074.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2092.
+on input line 2076.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2117.
-\U@D=\dimen151
+on input line 2101.
+\U@D=\dimen149
 \l@unhyphenated=\language79
 
 (C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count285
+\bbl@dirlevel=\count284
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
-(babel)             Reported on input line 4228.
+(babel)             Reported on input line 4196.
 
 *************************************
 * Local config file bblopts.cfg used
@@ -237,7 +233,7 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 )
 (C:\Program Files\MiKTeX\tex/generic/babel/locale/vi\babel-vietnamese.tex)
 Package babel Info: Importing font and identification data for vietnamese
-(babel)             from babel-vi.ini. Reported on input line 4356.
+(babel)             from babel-vi.ini. Reported on input line 4320.
 
 (C:\Program Files\MiKTeX\tex/latex/babel-vietnamese\vietnamese.ldf
 Language: vietnamese 
@@ -412,76 +408,77 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
 
 (C:\Program Files\MiKTeX\tex/latex/tools\array.sty
-Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
-\col@sep=\dimen152
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen150
 \ar@mcellbox=\box53
-\extrarowheight=\dimen153
+\extrarowheight=\dimen151
 \NC@list=\toks19
 \extratabsurround=\skip51
 \backup@length=\skip52
 \ar@cellbox=\box54
 )
-new hooks used!!
+\everycr=\toks20
 \minrowclearance=\skip53
-\rownum=\count286
-) (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
+\rownum=\count285
+)
+(C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen154
-\TX@old@table=\dimen155
-\TX@old@col=\dimen156
-\TX@target=\dimen157
-\TX@delta=\dimen158
-\TX@cols=\count287
-\TX@ftn=\toks20
+\TX@col@width=\dimen152
+\TX@old@table=\dimen153
+\TX@old@col=\dimen154
+\TX@target=\dimen155
+\TX@delta=\dimen156
+\TX@cols=\count286
+\TX@ftn=\toks21
 )
 (C:\Program Files\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen159
-\lightrulewidth=\dimen160
-\cmidrulewidth=\dimen161
-\belowrulesep=\dimen162
-\belowbottomsep=\dimen163
-\aboverulesep=\dimen164
-\abovetopsep=\dimen165
-\cmidrulesep=\dimen166
-\cmidrulekern=\dimen167
-\defaultaddspace=\dimen168
-\@cmidla=\count288
-\@cmidlb=\count289
-\@aboverulesep=\dimen169
-\@belowrulesep=\dimen170
-\@thisruleclass=\count290
-\@lastruleclass=\count291
-\@thisrulewidth=\dimen171
+\heavyrulewidth=\dimen157
+\lightrulewidth=\dimen158
+\cmidrulewidth=\dimen159
+\belowrulesep=\dimen160
+\belowbottomsep=\dimen161
+\aboverulesep=\dimen162
+\abovetopsep=\dimen163
+\cmidrulesep=\dimen164
+\cmidrulekern=\dimen165
+\defaultaddspace=\dimen166
+\@cmidla=\count287
+\@cmidlb=\count288
+\@aboverulesep=\dimen167
+\@belowrulesep=\dimen168
+\@thisruleclass=\count289
+\@lastruleclass=\count290
+\@thisrulewidth=\dimen169
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty
-Package: longtable 2026-01-28 v4.27 Multi-page Table package (DPC)
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip54
 \LTright=\skip55
 \LTpre=\skip56
 \LTpost=\skip57
-\LTchunksize=\count292
-\LTcapwidth=\dimen172
+\LTchunksize=\count291
+\LTcapwidth=\dimen170
 \LT@head=\box55
 \LT@firsthead=\box56
 \LT@foot=\box57
 \LT@lastfoot=\box58
 \LT@gbox=\box59
-\LT@cols=\count293
-\LT@rows=\count294
-\c@LT@tables=\count295
-\c@LT@chunks=\count296
-\LT@p@ftn=\toks21
+\LT@cols=\count292
+\LT@rows=\count293
+\c@LT@tables=\count294
+\c@LT@chunks=\count295
+\LT@p@ftn=\toks22
 )
 (C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
 (C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
 )
 (C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
 (C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
@@ -491,169 +488,178 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen173
-\Gin@req@width=\dimen174
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
 )
-(C:\Program Files\MiKTeX\tex/latex/float\float.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count297
-\float@exts=\toks23
+\c@float@type=\count296
+\float@exts=\toks24
 \float@box=\box60
-\@float@everytoks=\toks24
+\@float@everytoks=\toks25
 \@floatcapt=\box61
 )
-(C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.
+sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
-
-(C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
+ (C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
 (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count298
-\Gm@cntv=\count299
-\c@Gm@tempcnt=\count300
-\Gm@bindingoffset=\dimen175
-\Gm@wd@mp=\dimen176
-\Gm@odd@mp=\dimen177
-\Gm@even@mp=\dimen178
-\Gm@layoutwidth=\dimen179
-\Gm@layoutheight=\dimen180
-\Gm@layouthoffset=\dimen181
-\Gm@layoutvoffset=\dimen182
-\Gm@dimlist=\toks25
+\Gm@cnth=\count297
+\Gm@cntv=\count298
+\c@Gm@tempcnt=\count299
+\Gm@bindingoffset=\dimen173
+\Gm@wd@mp=\dimen174
+\Gm@odd@mp=\dimen175
+\Gm@even@mp=\dimen176
+\Gm@layoutwidth=\dimen177
+\Gm@layoutheight=\dimen178
+\Gm@layouthoffset=\dimen179
+\Gm@layoutvoffset=\dimen180
+\Gm@dimlist=\toks26
 
-(C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg))
-(C:\Program Files\MiKTeX\tex/latex/enumitem\enumitem.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.
+cfg))
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/enumitem\enumitem.
+sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip58
-\enit@outerparindent=\dimen183
-\enit@toks=\toks26
+\enit@outerparindent=\dimen181
+\enit@toks=\toks27
 \enit@inbox=\box62
-\enit@count@id=\count301
-\enitdp@description=\count302
-)
-(C:\Program Files\MiKTeX\tex/latex/xurl\xurl.sty
+\enit@count@id=\count300
+\enitdp@description=\count301
+) (C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/xurl\xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
-
 (C:\Program Files\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ))
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
-(C:\Program Files\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/kvsetkeys\kvsetkey
+s.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )
-(C:\Program Files\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/generic/kvdefinekeys\kvd
+efinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(C:\Program Files\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/generic/pdfescape\pdfesc
+ape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 
-(C:\Program Files\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.
+sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+) (C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(C:\Program Files\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwar
+err.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 ))
-(C:\Program Files\MiKTeX\tex/latex/hycolor\hycolor.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/hycolor\hycolor.st
+y
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+) (C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
 
-(C:\Program Files\MiKTeX\tex/latex/refcount\refcount.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/refcount\refcount.
+sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/generic/gettitlestring\g
+ettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 
-(C:\Program Files\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoption
+s.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count303
-)
-(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+\c@section@level=\count302
+) (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count304
+\etb@tempcnta=\count303
 )
-(C:\Program Files\MiKTeX\tex/generic/stringenc\stringenc.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/generic/stringenc\string
+enc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen184
-\Hy@linkcounter=\count305
-\Hy@pagecounter=\count306
-
-(C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+\@linkdim=\dimen182
+\Hy@linkcounter=\count304
+\Hy@pagecounter=\count305
+ (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(C:\Program Files\MiKTeX\tex/generic/intcalc\intcalc.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.
+sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count307
-
-(C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+\Hy@SavedSpaceFactor=\count306
+ (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4199.
-Package hyperref Info: Link nesting OFF on input line 4204.
-Package hyperref Info: Hyper index ON on input line 4207.
-Package hyperref Info: Plain pages OFF on input line 4214.
-Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4466.
-\c@Hy@tempcnt=\count308
-LaTeX Info: Redefining \url on input line 4805.
-\XeTeXLinkMargin=\dimen185
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count307
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen183
 
-(C:\Program Files\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.st
+y
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(C:\Program Files\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/generic/bigintcalc\bigin
+tcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count309
-\Field@Width=\dimen186
-\Fld@charsize=\dimen187
-Package hyperref Info: Hyper figures OFF on input line 6091.
-Package hyperref Info: Link nesting OFF on input line 6096.
-Package hyperref Info: Hyper index ON on input line 6099.
-Package hyperref Info: backreferencing OFF on input line 6106.
-Package hyperref Info: Link coloring OFF on input line 6111.
-Package hyperref Info: Link coloring with OCG OFF on input line 6116.
-Package hyperref Info: PDF/A mode OFF on input line 6121.
-\Hy@abspage=\count310
-\c@Item=\count311
-\c@Hfootnote=\count312
+\Fld@menulength=\count308
+\Field@Width=\dimen184
+\Fld@charsize=\dimen185
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count309
+\c@Item=\count310
+\c@Hfootnote=\count311
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count312
+\c@bookmark@seq@number=\count313
 
-(C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
-\Fld@listcount=\count313
-\c@bookmark@seq@number=\count314
-
-(C:\Program Files\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rer
+unfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 
-(C:\Program Files\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\un
+iquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -661,13 +667,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip59
 )
-(C:\Program Files\MiKTeX\tex/latex/setspace\setspace.sty
+(C:\Users\LE THI HUYEN TRAN\AppData\Roaming\MiKTeX\tex/latex/setspace\setspace.
+sty
 Package: setspace 2022/12/04 v6.7b set line spacing
+) (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count314
 )
-(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count315
-) (main.aux
+(main.aux
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported on input line 8.
 
@@ -849,17 +856,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
 LaTeX Font Info:    ... okay on input line 76.
  (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count316
-\scratchdimen=\dimen188
+\scratchcounter=\count315
+\scratchdimen=\dimen186
 \scratchbox=\box63
-\nofMPsegments=\count317
-\nofMParguments=\count318
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count319
-\MPscratchDim=\dimen189
-\MPnumerator=\count320
-\makeMPintoPDFobject=\count321
-\everyMPtoPDFconversion=\toks28
+\nofMPsegments=\count316
+\nofMParguments=\count317
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count318
+\MPscratchDim=\dimen187
+\MPnumerator=\count319
+\makeMPintoPDFobject=\count320
+\everyMPtoPDFconversion=\toks29
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -909,7 +916,7 @@ Package hyperref Info: Link coloring OFF on input line 76.
 
  [1
 
-{C:/Users/baotr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/LE THI HUYEN TRAN/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\<let>-command' on input line 90.
@@ -1060,7 +1067,7 @@ Overfull \hbox (27.8644pt too wide) in alignment at lines 236--317
  [] [] [] [] 
  []
 
-[4
+ignored error: Infinite glue shrinkage found in box being split [4
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
@@ -1318,7 +1325,7 @@ Underfull \hbox (badness 5756) in paragraph at lines 390--390
 \T5/cmr/m/n/12 the project within
  []
 
-[5]
+ignored error: Infinite glue shrinkage found in box being split [5]
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
@@ -1757,9 +1764,10 @@ Overfull \hbox (74.59341pt too wide) in alignment at lines 696--768
  [] [] [] [] [] 
  []
 
-[12
+ignored error: Infinite glue shrinkage found in box being split [12
 
- <./ucd.png>] [13]
+ <./ucd.png>]
+ignored error: Infinite glue shrinkage found in box being split [13]
 <ad.jpg, id=567, 560.0925pt x 519.1395pt>
 File: ad.jpg Graphic file (type jpg)
 <use ad.jpg>
@@ -1770,7 +1778,10 @@ File: res.jpg Graphic file (type jpg)
 <use res.jpg>
 Package pdftex.def Info: res.jpg  used on input line 780.
 (pdftex.def)             Requested size: 452.9679pt x 210.32986pt.
- [14 <./ad.jpg>] [15 <./res.jpg>] [16]
+ [14 <./ad.jpg>]
+ignored error: Infinite glue shrinkage found in box being split [15 <./res.jpg>
+]
+ignored error: Infinite glue shrinkage found in box being split [16]
 
 Package array Warning: Column L is already defined on input line 887.
 
@@ -1905,217 +1916,123 @@ Package pdftex.def Info: chinhsuathanhcong.png  used on input line 1120.
 (pdftex.def)             Requested size: 452.9679pt x 206.72675pt.
 
 [31 <./emailkhonghople.png> <./chinhsuathanhcong.png>]
-<<<<<<< HEAD
-<logout.jpg, id=665, 695.59875pt x 524.96124pt>
-File: logout.jpg Graphic file (type jpg)
-<use logout.jpg>
-Package pdftex.def Info: logout.jpg  used on input line 1140.
-(pdftex.def)             Requested size: 452.9679pt x 341.84557pt.
-<trangdangnhap.png, id=666, 915.92188pt x 414.54875pt>
-=======
-<dx11.png, id=689, 443.85825pt x 334.851pt>
+<dx11.png, id=665, 443.85825pt x 334.851pt>
 File: dx11.png Graphic file (type png)
 <use dx11.png>
 Package pdftex.def Info: dx11.png  used on input line 1140.
 (pdftex.def)             Requested size: 452.9679pt x 341.73254pt.
-<trangdangnhap.png, id=690, 915.92188pt x 414.54875pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<trangdangnhap.png, id=666, 915.92188pt x 414.54875pt>
 File: trangdangnhap.png Graphic file (type png)
 <use trangdangnhap.png>
 Package pdftex.def Info: trangdangnhap.png  used on input line 1148.
 (pdftex.def)             Requested size: 452.9679pt x 205.01566pt.
-<<<<<<< HEAD
- [32 <./logout.jpg> <./trangdangnhap.png>] [33]
-<trangtimkiem.png, id=676, 926.46124pt x 421.575pt>
-=======
  [32 <./dx11.png> <./trangdangnhap.png>] [33]
-<trangtimkiem.png, id=701, 926.46124pt x 421.575pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<trangtimkiem.png, id=677, 926.46124pt x 421.575pt>
 File: trangtimkiem.png Graphic file (type png)
 <use trangtimkiem.png>
 Package pdftex.def Info: trangtimkiem.png  used on input line 1208.
 (pdftex.def)             Requested size: 452.9679pt x 206.11682pt.
-<<<<<<< HEAD
-<nambatdaulon.png, id=677, 921.4425pt x 425.08812pt>
-=======
-<nambatdaulon.png, id=702, 921.4425pt x 425.08812pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<nambatdaulon.png, id=678, 921.4425pt x 425.08812pt>
 File: nambatdaulon.png Graphic file (type png)
 <use nambatdaulon.png>
 Package pdftex.def Info: nambatdaulon.png  used on input line 1216.
 (pdftex.def)             Requested size: 452.9679pt x 208.96309pt.
-<<<<<<< HEAD
-<ketquatimkiem.png, id=678, 923.45pt x 420.06938pt>
-=======
-<ketquatimkiem.png, id=703, 923.45pt x 420.06938pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<ketquatimkiem.png, id=679, 923.45pt x 420.06938pt>
 File: ketquatimkiem.png Graphic file (type png)
 <use ketquatimkiem.png>
 Package pdftex.def Info: ketquatimkiem.png  used on input line 1226.
 (pdftex.def)             Requested size: 452.9679pt x 206.04732pt.
  [34 <./trangtimkiem.png> <./nambatdaulon.png>] [35 <./ketquatimkiem.png>]
-<<<<<<< HEAD
-<luuyeuthich.png, id=690, 918.93312pt x 422.07687pt>
-=======
-<luuyeuthich.png, id=715, 918.93312pt x 422.07687pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<luuyeuthich.png, id=691, 918.93312pt x 422.07687pt>
 File: luuyeuthich.png Graphic file (type png)
 <use luuyeuthich.png>
 Package pdftex.def Info: luuyeuthich.png  used on input line 1264.
 (pdftex.def)             Requested size: 452.9679pt x 208.05602pt.
-<<<<<<< HEAD
-<dayeuthich.png, id=691, 921.4425pt x 423.5825pt>
-=======
-<dayeuthich.png, id=716, 921.4425pt x 423.5825pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<dayeuthich.png, id=692, 921.4425pt x 423.5825pt>
 File: dayeuthich.png Graphic file (type png)
 <use dayeuthich.png>
 Package pdftex.def Info: dayeuthich.png  used on input line 1272.
 (pdftex.def)             Requested size: 452.9679pt x 208.22296pt.
-<<<<<<< HEAD
-<trangyeuthich.png, id=692, 905.3825pt x 414.54875pt>
-=======
-<trangyeuthich.png, id=717, 905.3825pt x 414.54875pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<trangyeuthich.png, id=693, 905.3825pt x 414.54875pt>
 File: trangyeuthich.png Graphic file (type png)
 <use trangyeuthich.png>
 Package pdftex.def Info: trangyeuthich.png  used on input line 1280.
 (pdftex.def)             Requested size: 452.9679pt x 207.40036pt.
  [36 <./luuyeuthich.png> <./dayeuthich.png>]
-<<<<<<< HEAD
-<xoa.png, id=699, 927.96687pt x 416.05438pt>
-=======
-<xoa.png, id=724, 927.96687pt x 416.05438pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<xoa.png, id=700, 927.96687pt x 416.05438pt>
 File: xoa.png Graphic file (type png)
 <use xoa.png>
 Package pdftex.def Info: xoa.png  used on input line 1288.
 (pdftex.def)             Requested size: 452.9679pt x 203.09392pt.
-<<<<<<< HEAD
-<lienket.png, id=700, 920.43875pt x 423.08063pt>
-=======
-<lienket.png, id=725, 920.43875pt x 423.08063pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<lienket.png, id=701, 920.43875pt x 423.08063pt>
 File: lienket.png Graphic file (type png)
 <use lienket.png>
 Package pdftex.def Info: lienket.png  used on input line 1296.
 (pdftex.def)             Requested size: 452.9679pt x 208.20865pt.
  [37 <./trangyeuthich.png> <./xoa.png>] [38 <./lienket.png>] [39]
-<<<<<<< HEAD
-<ptxh.png, id=717, 1230.5975pt x 914.41624pt>
-=======
-<ptxh.png, id=742, 1230.5975pt x 914.41624pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<ptxh.png, id=718, 1230.5975pt x 914.41624pt>
 File: ptxh.png Graphic file (type png)
 <use ptxh.png>
 Package pdftex.def Info: ptxh.png  used on input line 1441.
 (pdftex.def)             Requested size: 452.9679pt x 336.58461pt.
  [40]
-<<<<<<< HEAD
-<thieu.png, id=731, 929.4725pt x 414.54875pt>
-=======
-<thieu.png, id=756, 929.4725pt x 414.54875pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<thieu.png, id=732, 929.4725pt x 414.54875pt>
 File: thieu.png Graphic file (type png)
 <use thieu.png>
 Package pdftex.def Info: thieu.png  used on input line 1450.
 (pdftex.def)             Requested size: 452.9679pt x 202.0237pt.
-<<<<<<< HEAD
-<batdaulonhon.png, id=732, 924.95563pt x 418.56375pt>
-=======
-<batdaulonhon.png, id=757, 924.95563pt x 418.56375pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<batdaulonhon.png, id=733, 924.95563pt x 418.56375pt>
 File: batdaulonhon.png Graphic file (type png)
 <use batdaulonhon.png>
 Package pdftex.def Info: batdaulonhon.png  used on input line 1459.
 (pdftex.def)             Requested size: 452.9679pt x 204.97667pt.
  [41 <./ptxh.png (PNG copy)> <./thieu.png>]
-<<<<<<< HEAD
-<ketquaphantich1.png, id=738, 276.03125pt x 407.02063pt>
-=======
-<ketquaphantich1.png, id=763, 276.03125pt x 407.02063pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<ketquaphantich1.png, id=739, 276.03125pt x 407.02063pt>
 File: ketquaphantich1.png Graphic file (type png)
 <use ketquaphantich1.png>
 Package pdftex.def Info: ketquaphantich1.png  used on input line 1467.
 (pdftex.def)             Requested size: 452.9679pt x 667.99014pt.
-<<<<<<< HEAD
-<ketquaphantich2.png, id=739, 283.55937pt x 236.885pt>
-=======
-<ketquaphantich2.png, id=764, 283.55937pt x 236.885pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<ketquaphantich2.png, id=740, 283.55937pt x 236.885pt>
 File: ketquaphantich2.png Graphic file (type png)
 <use ketquaphantich2.png>
 Package pdftex.def Info: ketquaphantich2.png  used on input line 1472.
 (pdftex.def)             Requested size: 452.9679pt x 378.44179pt.
-<<<<<<< HEAD
- [42 <./batdaulonhon.png>] [43 <./ketquaphantich1.png>]
-[44 <./ketquaphantich2.png>] [45]
-<tbc.jpg, id=766, 1925.1925pt x 915.42pt>
-=======
  [42 <./batdaulonhon.png>] [43 <./ketquaphantich1.png>] [44 <./ketquaphantich2.
 png>] [45]
-<tbc.jpg, id=791, 1925.1925pt x 915.42pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<tbc.jpg, id=767, 1925.1925pt x 915.42pt>
 File: tbc.jpg Graphic file (type jpg)
 <use tbc.jpg>
 Package pdftex.def Info: tbc.jpg  used on input line 1568.
 (pdftex.def)             Requested size: 452.9679pt x 215.37515pt.
-<<<<<<< HEAD
-<xuatbaocao.png, id=767, 286.06876pt x 391.96437pt>
-=======
-<xuatbaocao.png, id=792, 286.06876pt x 391.96437pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<xuatbaocao.png, id=768, 286.06876pt x 391.96437pt>
 File: xuatbaocao.png Graphic file (type png)
 <use xuatbaocao.png>
 Package pdftex.def Info: xuatbaocao.png  used on input line 1576.
 (pdftex.def)             Requested size: 452.9679pt x 620.65457pt.
  [46 <./tbc.jpg>] [47 <./xuatbaocao.png>]
-<<<<<<< HEAD
-<theodoi.png, id=777, 918.43124pt x 420.57124pt>
-=======
-<theodoi.png, id=802, 918.43124pt x 420.57124pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<theodoi.png, id=778, 918.43124pt x 420.57124pt>
 File: theodoi.png Graphic file (type png)
 <use theodoi.png>
 Package pdftex.def Info: theodoi.png  used on input line 1615.
 (pdftex.def)             Requested size: 452.9679pt x 207.42937pt.
-<<<<<<< HEAD
-<dstheodoi.png, id=778, 923.45pt x 417.56pt>
-=======
-<dstheodoi.png, id=803, 923.45pt x 417.56pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<dstheodoi.png, id=779, 923.45pt x 417.56pt>
 File: dstheodoi.png Graphic file (type png)
 <use dstheodoi.png>
 Package pdftex.def Info: dstheodoi.png  used on input line 1623.
 (pdftex.def)             Requested size: 452.9679pt x 204.81644pt.
-<<<<<<< HEAD
-
-[48 <./theodoi.png>]
-<huytheodoi.png, id=784, 920.43875pt x 410.03188pt>
-=======
  [48 <./theodoi.png>]
-<huytheodoi.png, id=809, 920.43875pt x 410.03188pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<huytheodoi.png, id=785, 920.43875pt x 410.03188pt>
 File: huytheodoi.png Graphic file (type png)
 <use huytheodoi.png>
 Package pdftex.def Info: huytheodoi.png  used on input line 1631.
 (pdftex.def)             Requested size: 452.9679pt x 201.78703pt.
  [49 <./dstheodoi.png> <./huytheodoi.png>]
-<<<<<<< HEAD
-<nhanthongbao.png, id=792, 926.46124pt x 422.07687pt>
-=======
-<nhanthongbao.png, id=817, 926.46124pt x 422.07687pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<nhanthongbao.png, id=793, 926.46124pt x 422.07687pt>
 File: nhanthongbao.png Graphic file (type png)
 <use nhanthongbao.png>
 Package pdftex.def Info: nhanthongbao.png  used on input line 1667.
 (pdftex.def)             Requested size: 452.9679pt x 206.3622pt.
-<<<<<<< HEAD
-<dadoc.png, id=793, 929.4725pt x 414.54875pt>
-=======
-<dadoc.png, id=818, 929.4725pt x 414.54875pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<dadoc.png, id=794, 929.4725pt x 414.54875pt>
 File: dadoc.png Graphic file (type png)
 <use dadoc.png>
 Package pdftex.def Info: dadoc.png  used on input line 1675.
@@ -2187,11 +2104,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
                    \relax 
 l.1686 \subsection{System Architecture}
                                        
-<<<<<<< HEAD
-<ss.png, id=804, 450.18187pt x 402.00188pt>
-=======
-<ss.png, id=829, 450.18187pt x 402.00188pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<ss.png, id=805, 450.18187pt x 402.00188pt>
 File: ss.png Graphic file (type png)
 <use ss.png>
 Package pdftex.def Info: ss.png  used on input line 1689.
@@ -2205,11 +2118,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
                    \relax 
 l.1727 \subsection{Package Diagram}
                                    
-<<<<<<< HEAD
-<fe.png, id=810, 416.05438pt x 146.04562pt>
-=======
-<fe.png, id=835, 416.05438pt x 146.04562pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<fe.png, id=811, 416.05438pt x 146.04562pt>
 File: fe.png Graphic file (type png)
 <use fe.png>
 Package pdftex.def Info: fe.png  used on input line 1731.
@@ -2246,11 +2155,7 @@ Overfull \hbox (12.28947pt too wide) in paragraph at lines 1763--1763
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<<<<<<< HEAD
-<be.png, id=811, 423.5825pt x 307.64937pt>
-=======
-<be.png, id=836, 423.5825pt x 307.64937pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<be.png, id=812, 423.5825pt x 307.64937pt>
 File: be.png Graphic file (type png)
 <use be.png>
 Package pdftex.def Info: be.png  used on input line 1772.
@@ -2329,11 +2234,7 @@ as been already used, duplicate ignored
                    \relax 
 l.1815 \section{Database Design}
                                 
-<<<<<<< HEAD
-<database.png, id=832, 1127.21124pt x 732.7375pt>
-=======
-<database.png, id=857, 1127.21124pt x 732.7375pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<database.png, id=833, 1127.21124pt x 732.7375pt>
 File: database.png Graphic file (type png)
 <use database.png>
 Package pdftex.def Info: database.png  used on input line 1821.
@@ -2519,7 +2420,7 @@ Overfull \hbox (36.22336pt too wide) in alignment at lines 1905--1914
  [] [] [] [] [] 
  []
 
-[59]
+ignored error: Infinite glue shrinkage found in box being split [59]
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 1923--1923
 []|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
  []
@@ -2759,7 +2660,7 @@ Overfull \hbox (36.22336pt too wide) in alignment at lines 2020--2031
  [] [] [] [] [] 
  []
 
-[62]
+ignored error: Infinite glue shrinkage found in box being split [62]
 Underfull \hbox (badness 10000) in paragraph at lines 2039--2039
 []|\T5/cmr/m/n/10.95 Yes
  []
@@ -2858,11 +2759,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2059 \subsubsection{Class Diagram}
                                     
-<<<<<<< HEAD
-<CDRegister.png, id=874, 886.31125pt x 733.74126pt>
-=======
-<CDRegister.png, id=899, 886.31125pt x 733.74126pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<CDRegister.png, id=875, 886.31125pt x 733.74126pt>
 File: CDRegister.png Graphic file (type png)
 <use CDRegister.png>
 Package pdftex.def Info: CDRegister.png  used on input line 2063.
@@ -2874,11 +2771,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2066 \subsubsection{Sequence Diagram}
                                        
-<<<<<<< HEAD
-<re11.png, id=881, 359.54324pt x 512.51476pt>
-=======
-<re11.png, id=906, 359.54324pt x 512.51476pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<re11.png, id=882, 359.54324pt x 512.51476pt>
 File: re11.png Graphic file (type png)
 <use re11.png>
 Package pdftex.def Info: re11.png  used on input line 2069.
@@ -2890,21 +2783,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
                    \relax 
 l.2077 \subsection{Login}
                          
-<<<<<<< HEAD
-<CDLogin.png, id=887, 882.29625pt x 745.78625pt>
-=======
-<CDLogin.png, id=912, 882.29625pt x 745.78625pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<CDLogin.png, id=888, 882.29625pt x 745.78625pt>
 File: CDLogin.png Graphic file (type png)
 <use CDLogin.png>
 Package pdftex.def Info: CDLogin.png  used on input line 2081.
 (pdftex.def)             Requested size: 452.9679pt x 382.88365pt.
  [65 <./re11.png>]
-<<<<<<< HEAD
-<dn11.png, id=893, 410.7345pt x 540.21825pt>
-=======
-<dn11.png, id=918, 410.7345pt x 540.21825pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<dn11.png, id=894, 410.7345pt x 540.21825pt>
 File: dn11.png Graphic file (type png)
 <use dn11.png>
 Package pdftex.def Info: dn11.png  used on input line 2087.
@@ -2922,11 +2807,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2096 \subsubsection{Class Diagram}
                                     
-<<<<<<< HEAD
-<CDSearchResearchPaper.png, id=899, 929.4725pt x 722.7pt>
-=======
-<CDSearchResearchPaper.png, id=924, 929.4725pt x 722.7pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<CDSearchResearchPaper.png, id=900, 929.4725pt x 722.7pt>
 File: CDSearchResearchPaper.png Graphic file (type png)
 <use CDSearchResearchPaper.png>
 Package pdftex.def Info: CDSearchResearchPaper.png  used on input line 2099.
@@ -2938,73 +2819,45 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2103 \subsubsection{Sequence Diagram}
                                        
-<<<<<<< HEAD
-<seach11.png, id=906, 548.64975pt x 564.30824pt>
-=======
-<seach11.png, id=931, 548.64975pt x 564.30824pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<seach11.png, id=907, 548.64975pt x 564.30824pt>
 File: seach11.png Graphic file (type png)
 <use seach11.png>
 Package pdftex.def Info: seach11.png  used on input line 2106.
 (pdftex.def)             Requested size: 452.9679pt x 465.91307pt.
  [68 <./CDSearchResearchPaper.png>]
-<<<<<<< HEAD
-<CDPaperDetail.png, id=913, 931.48pt x 699.61375pt>
-=======
-<CDPaperDetail.png, id=938, 931.48pt x 699.61375pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<CDPaperDetail.png, id=914, 931.48pt x 699.61375pt>
 File: CDPaperDetail.png Graphic file (type png)
 <use CDPaperDetail.png>
 Package pdftex.def Info: CDPaperDetail.png  used on input line 2120.
 (pdftex.def)             Requested size: 452.9679pt x 340.20898pt.
 
 [69 <./seach11.png>]
-<<<<<<< HEAD
-<xemtrang11.png, id=920, 485.4135pt x 322.20375pt>
-=======
-<xemtrang11.png, id=945, 485.4135pt x 322.20375pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<xemtrang11.png, id=921, 485.4135pt x 322.20375pt>
 File: xemtrang11.png Graphic file (type png)
 <use xemtrang11.png>
 Package pdftex.def Info: xemtrang11.png  used on input line 2129.
 (pdftex.def)             Requested size: 452.9679pt x 300.669pt.
  [70 <./CDPaperDetail.png>]
-<<<<<<< HEAD
-<CDBookmark.png, id=926, 936.49875pt x 682.55pt>
-=======
-<CDBookmark.png, id=951, 936.49875pt x 682.55pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<CDBookmark.png, id=927, 936.49875pt x 682.55pt>
 File: CDBookmark.png Graphic file (type png)
 <use CDBookmark.png>
 Package pdftex.def Info: CDBookmark.png  used on input line 2147.
 (pdftex.def)             Requested size: 452.9679pt x 330.14067pt.
  [71 <./xemtrang11.png>]
-<<<<<<< HEAD
-<savebook11.png, id=933, 475.7775pt x 578.16pt>
-=======
-<savebook11.png, id=958, 475.7775pt x 578.16pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<savebook11.png, id=934, 475.7775pt x 578.16pt>
 File: savebook11.png Graphic file (type png)
 <use savebook11.png>
 Package pdftex.def Info: savebook11.png  used on input line 2154.
 (pdftex.def)             Requested size: 452.9679pt x 550.46632pt.
 
 [72 <./CDBookmark.png>]
-<<<<<<< HEAD
-<Track-Publication-Trend_class-diagram.jpg, id=939, 857.2025pt x 1204.5pt>
-=======
-<Track-Publication-Trend_class-diagram.jpg, id=964, 857.2025pt x 1204.5pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<Track-Publication-Trend_class-diagram.jpg, id=940, 857.2025pt x 1204.5pt>
 File: Track-Publication-Trend_class-diagram.jpg Graphic file (type jpg)
 <use Track-Publication-Trend_class-diagram.jpg>
 Package pdftex.def Info: Track-Publication-Trend_class-diagram.jpg  used on inp
 ut line 2168.
 (pdftex.def)             Requested size: 452.9679pt x 636.48892pt.
-<<<<<<< HEAD
-<atpt.png, id=940, 3316.39pt x 5235.56pt>
-=======
-<atpt.png, id=965, 3316.39pt x 5235.56pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<atpt.png, id=941, 3316.39pt x 5235.56pt>
 File: atpt.png Graphic file (type png)
 <use atpt.png>
 Package pdftex.def Info: atpt.png  used on input line 2172.
@@ -3014,102 +2867,43 @@ Overfull \vbox (629.07104pt too high) has occurred while \output is active []
 
 
 [75 <./Track-Publication-Trend_class-diagram.jpg> <./atpt.png>]
-<<<<<<< HEAD
-<setpt.png, id=958, 5323.89pt x 4424.53pt>
-=======
-<setpt.png, id=983, 5323.89pt x 4424.53pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<setpt.png, id=959, 5323.89pt x 4424.53pt>
 File: setpt.png Graphic file (type png)
 <use setpt.png>
 Package pdftex.def Info: setpt.png  used on input line 2179.
 (pdftex.def)             Requested size: 452.9679pt x 376.38388pt.
-<<<<<<< HEAD
-<View-Dashboard_class-diagram.jpg, id=959, 925.4575pt x 901.3675pt>
-=======
-<View-Dashboard_class-diagram.jpg, id=984, 925.4575pt x 901.3675pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<View-Dashboard_class-diagram.jpg, id=960, 925.4575pt x 901.3675pt>
 File: View-Dashboard_class-diagram.jpg Graphic file (type jpg)
 <use View-Dashboard_class-diagram.jpg>
 Package pdftex.def Info: View-Dashboard_class-diagram.jpg  used on input line 2
 190.
 (pdftex.def)             Requested size: 452.9679pt x 441.1788pt.
  [76 <./setpt.png>]
-<<<<<<< HEAD
-<Generate-Reports_class-diagram.jpg, id=965, 1146.2825pt x 973.6375pt>
+<Generate-Reports_class-diagram.jpg, id=966, 1146.2825pt x 973.6375pt>
 File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
 <use Generate-Reports_class-diagram.jpg>
 Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
  2203.
 (pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
  [77 <./View-Dashboard_class-diagram.jpg>]
-=======
-<sevdb.png, id=990, 896.34875pt x 617.30624pt>
-File: sevdb.png Graphic file (type png)
-<use sevdb.png>
-Package pdftex.def Info: sevdb.png  used on input line 2201.
-(pdftex.def)             Requested size: 452.9679pt x 311.94913pt.
- [77 <./View-Dashboard_class-diagram.jpg>]
-<Generate-Reports_class-diagram.jpg, id=996, 1146.2825pt x 973.6375pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
 <use Generate-Reports_class-diagram.jpg>
 Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
  2220.
 (pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
-<<<<<<< HEAD
  [78 <./Generate-Reports_class-diagram.jpg>]
-<follow topice 2.png, id=976, 914.41624pt x 416.55624pt>
-=======
- [78 <./sevdb.png (PNG copy)>]
-<sequence_Generate-reports.png, id=1001, 628.3475pt x 750.805pt>
-File: sequence_Generate-reports.png Graphic file (type png)
-<use sequence_Generate-reports.png>
-Package pdftex.def Info: sequence_Generate-reports.png  used on input line 2223
-.
-(pdftex.def)             Requested size: 527.65489pt x 630.45189pt.
-
-Overfull \hbox (74.687pt too wide) in paragraph at lines 2223--2225
- [][] 
- []
-
-[79 <./Generate-Reports_class-diagram.jpg>] [80]
-Overfull \vbox (1.9125pt too high) has occurred while \output is active []
-
-
-[81 <./sequence_Generate-reports.png (PNG copy)>]
-File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
-<use Generate-Reports_class-diagram.jpg>
-Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
- 2235.
-(pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
-<sevtt.png, id=1016, 993.7125pt x 761.84625pt>
-File: sevtt.png Graphic file (type png)
-<use sevtt.png>
-Package pdftex.def Info: sevtt.png  used on input line 2245.
-(pdftex.def)             Requested size: 452.9679pt x 347.27995pt.
- [82]
-<follow topice 2.png, id=1021, 914.41624pt x 416.55624pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<follow topice 2.png, id=977, 914.41624pt x 416.55624pt>
 File: follow topice 2.png Graphic file (type png)
 <use follow topice 2.png>
 Package pdftex.def Info: follow topice 2.png  used on input line 2235.
 (pdftex.def)             Requested size: 452.9679pt x 206.34534pt.
-<<<<<<< HEAD
  [79]
-<Receive notifications 1.png, id=982, 1128.215pt x 431.6125pt>
-=======
- [83 <./sevtt.png (PNG copy)>]
-<Receive notifications 1.png, id=1026, 1128.215pt x 431.6125pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<Receive notifications 1.png, id=983, 1128.215pt x 431.6125pt>
 File: Receive notifications 1.png Graphic file (type png)
 <use Receive notifications 1.png>
 Package pdftex.def Info: Receive notifications 1.png  used on input line 2253.
 (pdftex.def)             Requested size: 452.9679pt x 173.28735pt.
-<<<<<<< HEAD
-<sequence_Manage-Users.png, id=983, 529.98pt x 949.5475pt>
-=======
-<sequence_Manage-Users.png, id=1027, 529.98pt x 949.5475pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<sequence_Manage-Users.png, id=984, 529.98pt x 949.5475pt>
 File: sequence_Manage-Users.png Graphic file (type png)
 <use sequence_Manage-Users.png>
 Package pdftex.def Info: sequence_Manage-Users.png  used on input line 2272.
@@ -3119,22 +2913,13 @@ y)>] [81]
 Overfull \vbox (35.63123pt too high) has occurred while \output is active []
 
 
-<<<<<<< HEAD
 [82 <./sequence_Manage-Users.png (PNG copy)>]
-<con1tt.png, id=996, 867.24pt x 826.08624pt>
-=======
-[86 <./sequence_Manage-Users.png (PNG copy)>]
-<con1tt.png, id=1041, 867.24pt x 826.08624pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<con1tt.png, id=997, 867.24pt x 826.08624pt>
 File: con1tt.png Graphic file (type png)
 <use con1tt.png>
 Package pdftex.def Info: con1tt.png  used on input line 2288.
 (pdftex.def)             Requested size: 452.9679pt x 431.47067pt.
-<<<<<<< HEAD
-<sytt1.png, id=997, 904.37875pt x 795.97375pt>
-=======
-<sytt1.png, id=1042, 904.37875pt x 795.97375pt>
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+<sytt1.png, id=998, 904.37875pt x 795.97375pt>
 File: sytt1.png Graphic file (type png)
 <use sytt1.png>
 Package pdftex.def Info: sytt1.png  used on input line 2303.
@@ -3242,11 +3027,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 <to be read again> 
                    \relax 
 l.2406 \subsection{Exit Criteria}
-                                  [87] [88] [89] [90] [91] [92] [93] [94]
-[95] [96] [97] [98] [99] [100] [101] (main.aux)
+                                  [87] [88]
+Overfull \hbox (1.805pt too wide) in paragraph at lines 2596--2605
+[]|[]| 
+ []
+
+[89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102]
+[103] (main.aux)
  ***********
-LaTeX2e <2026-06-01>
-L3 programming layer <2026-05-26>
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
  ***********
 
 
@@ -3261,40 +3051,25 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 ### simple group (level 1) entered at line 499 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 12933 strings out of 467509
- 203161 string characters out of 5418889
- 667043 words of memory out of 5000000
- 41768 multiletter control sequences out of 15000+600000
-=======
- 12971 strings out of 467509
- 203892 string characters out of 5418889
- 667110 words of memory out of 5000000
- 41796 multiletter control sequences out of 15000+600000
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
+ 12892 strings out of 467871
+ 202940 string characters out of 5428406
+ 658425 words of memory out of 5000000
+ 41366 multiletter control sequences out of 15000+600000
  643264 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,16n,83p,470b,950s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\baotr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
-ec/dpi600\tcrm1095.pk> <C:\Users\baotr\AppData\Local\MiKTeX\fonts/pk/ljfour/jkn
-appen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/P
-rogram Files/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Program Files/MiKTeX/f
-onts/type1/vntex/vnr/vnr10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/v
-nr12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Program Files/MiKTeX/fonts/ty
-pe1/vntex/vnr/vntt12.pfb>
-<<<<<<< HEAD
-Output written on main.pdf (101 pages, 6139089 bytes).
+ 75i,18n,83p,470b,893s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\LE THI HUYEN TRAN\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\LE THI HUYEN TRAN\AppData\Local\Mi
+KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/vn
+tex/vnr/vnbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C
+:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Program Files/MiKTeX
+/fonts/type1/vntex/vnr/vnr12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr
+/vnti10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on main.pdf (103 pages, 6153466 bytes).
 PDF statistics:
- 1178 PDF objects out of 1200 (max. 8388607)
- 245 named destinations out of 1000 (max. 500000)
+ 1189 PDF objects out of 1200 (max. 8388607)
+ 247 named destinations out of 1000 (max. 500000)
  1364 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
-Output written on main.pdf (105 pages, 6631330 bytes).
-PDF statistics:
- 1226 PDF objects out of 1440 (max. 8388607)
- 255 named destinations out of 1000 (max. 500000)
- 1427 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 
