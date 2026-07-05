@@ -4043,6 +4043,604 @@ The following features are excluded from the testing scope:
 	\end{tabular}
 	\caption{TC\_TREND\_02 - Trend Analysis with No Data}
 \end{table}
+\subsection{Admin Management}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	Module & Admin - User Management \\ \hline
+	Test Case ID & TC\_ADMIN\_01 \\ \hline
+	Test Case Name & Lock User Account \\ \hline
+	Objective & Verify that admin can lock an active user account. \\ \hline
+	Preconditions & Admin is logged in. User account exists and has active status. \\ \hline
+	Test Data & User ID: 2 \newline Action: lock \\ \hline
+	Test Steps &
+	1. Open Admin page. \newline
+	2. Go to User Management. \newline
+	3. Select an active user. \newline
+	4. Click Lock. \\ \hline
+	Expected Result & User status is updated to locked. \\ \hline
+	Actual Result & User account locked successfully. \\ \hline
+	Status & Pass \\ \hline
+\end{longtable}
+\subsection{Add New Topic}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - Topic Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_02 \\ \hline
+	
+	Test Case Name & Add New Topic \\ \hline
+	
+	Objective &
+	Verify that the administrator can successfully add a new topic to the system. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \\ \hline
+	
+	Test Data &
+	Topic Name: Artificial Intelligence \newline
+	Description: Research papers related to artificial intelligence, machine learning, and deep learning.
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Navigate to the \textbf{Topic Management} section. \newline
+	3. Enter ``Artificial Intelligence'' in the \textbf{Topic Name} field. \newline
+	4. Enter ``Research papers related to artificial intelligence, machine learning, and deep learning.'' in the \textbf{Description} field. \newline
+	5. Click the \textbf{Add Topic} button.
+	\\ \hline
+	
+	Expected Result &
+	The new topic is successfully created and displayed in the Topic List with its ID, topic name, description, and available actions. \\ \hline
+	
+	Actual Result &
+	The topic was added successfully and appeared in the Topic List. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Edit Existing Topic}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - Topic Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_03 \\ \hline
+	
+	Test Case Name & Update Topic \\ \hline
+	
+	Objective &
+	Verify that the administrator can update an existing topic with topicId, topicName, and description. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \newline
+	At least one topic exists in the topic list.
+	\\ \hline
+	
+	Test Data &
+	topicId: 1 \newline
+	topicName: Artificial Intelligence and Machine Learning \newline
+	description: Research papers related to AI, machine learning, and deep learning.
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the Topic Management section. \newline
+	3. Select an existing topic. \newline
+	4. Update the topic name. \newline
+	5. Update the topic description. \newline
+	6. Submit the update action.
+	\\ \hline
+	
+	Expected Result &
+	The selected topic is updated successfully. The system returns the message ``Topic updated successfully.'' \\ \hline
+	
+	Actual Result &
+	The topic was updated successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Delete Topic}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - Topic Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_04 \\ \hline
+	
+	Test Case Name & Delete Topic \\ \hline
+	
+	Objective &
+	Verify that the administrator can delete an existing topic with topicId. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \newline
+	At least one topic exists in the topic list.
+	\\ \hline
+	
+	Test Data &
+	topicId: 1
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the Topic Management section. \newline
+	3. Select an existing topic. \newline
+	4. Submit the delete action.
+	\\ \hline
+	
+	Expected Result &
+	The selected topic is deleted successfully. The system returns the message ``Topic deleted successfully.'' \\ \hline
+	
+	Actual Result &
+	The topic was deleted successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Create API Source}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - API Source Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_05 \\ \hline
+	
+	Test Case Name & Add API Source \\ \hline
+	
+	Objective &
+	Verify that the administrator can create a new API source with sourceName, baseUrl, description, isActive, and priority. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully.
+	\\ \hline
+	
+	Test Data &
+	sourceName: OpenAlex \newline
+	baseUrl: https://api.openalex.org \newline
+	description: OpenAlex API source \newline
+	isActive: 1 \newline
+	priority: 1
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the API Source Management section. \newline
+	3. Enter the source name. \newline
+	4. Enter the base URL. \newline
+	5. Enter the description. \newline
+	6. Set the active status. \newline
+	7. Enter the priority. \newline
+	8. Submit the create action.
+	\\ \hline
+	
+	Expected Result &
+	The new API source is created successfully. The system returns the message ``API source added successfully.'' \\ \hline
+	
+	Actual Result &
+	The API source was added successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Update API Source}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - API Source Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_06 \\ \hline
+	
+	Test Case Name & Update API Source \\ \hline
+	
+	Objective &
+	Verify that the administrator can update an existing API source with sourceId, sourceName, baseUrl, description, isActive, and priority. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \newline
+	At least one API source exists in the API source list.
+	\\ \hline
+	
+	Test Data &
+	sourceId: 1 \newline
+	sourceName: OpenAlex \newline
+	baseUrl: https://api.openalex.org \newline
+	description: OpenAlex API source updated \newline
+	isActive: 1 \newline
+	priority: 2
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the API Source Management section. \newline
+	3. Select an existing API source. \newline
+	4. Update the source name. \newline
+	5. Update the base URL. \newline
+	6. Update the description. \newline
+	7. Update the active status. \newline
+	8. Update the priority. \newline
+	9. Submit the update action.
+	\\ \hline
+	
+	Expected Result &
+	The selected API source is updated successfully. The system returns the message ``API source updated successfully.'' \\ \hline
+	
+	Actual Result &
+	The API source was updated successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+
+\subsection{Toggle API Source Status}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - API Source Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_07 \\ \hline
+	
+	Test Case Name & Toggle API Source Status \\ \hline
+	
+	Objective &
+	Verify that the administrator can change the active status of an API source with sourceId. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \newline
+	At least one API source exists in the API source list.
+	\\ \hline
+	
+	Test Data &
+	sourceId: 1
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the API Source Management section. \newline
+	3. Select an existing API source. \newline
+	4. Submit the toggle action.
+	\\ \hline
+	
+	Expected Result &
+	The selected API source status is changed successfully. The system returns the message ``API source status changed successfully.'' \\ \hline
+	
+	Actual Result &
+	The API source status was changed successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Delete API Source}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - API Source Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_08 \\ \hline
+	
+	Test Case Name & Delete API Source \\ \hline
+	
+	Objective &
+	Verify that the administrator can delete an existing API source with sourceId. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \newline
+	At least one API source exists in the API source list.
+	\\ \hline
+	
+	Test Data &
+	sourceId: 1
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the API Source Management section. \newline
+	3. Select an existing API source. \newline
+	4. Submit the delete action.
+	\\ \hline
+	
+	Expected Result &
+	The selected API source is deleted successfully. The system returns the message ``API source deleted successfully.'' \\ \hline
+	
+	Actual Result &
+	The API source was deleted successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Synchronize Data From API}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - API Synchronization \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_09 \\ \hline
+	
+	Test Case Name & Synchronize Data From API \\ \hline
+	
+	Objective &
+	Verify that the administrator can synchronize data from an active API source with sourceId, query, and limit. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \newline
+	At least one active API source exists.
+	\\ \hline
+	
+	Test Data &
+	sourceId: 1 \newline
+	query: science research \newline
+	limit: 10
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the API Synchronization section. \newline
+	3. Select an active API source. \newline
+	4. Enter the query. \newline
+	5. Enter the limit. \newline
+	6. Submit the synchronization action.
+	\\ \hline
+	
+	Expected Result &
+	The data is synchronized successfully. The system returns the message ``Synchronization completed successfully.'' \\ \hline
+	
+	Actual Result &
+	The data was synchronized successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Add Research Paper}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - Paper Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_10 \\ \hline
+	
+	Test Case Name & Add Research Paper \\ \hline
+	
+	Objective &
+	Verify that the administrator can create a new research paper with title, authors, journal, publishedYear, doi, abstract, url, and topicId. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully.
+	\\ \hline
+	
+	Test Data &
+	title: Deep Learning for Scientific Publication Analysis \newline
+	authors: Nguyen Van A \newline
+	journal: AI Journal \newline
+	publishedYear: 2025 \newline
+	doi: 10.1000/test001 \newline
+	abstract: Research paper abstract \newline
+	url: https://example.com/paper \newline
+	topicId: 1
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the Paper Management section. \newline
+	3. Enter the title. \newline
+	4. Enter the authors. \newline
+	5. Enter the journal. \newline
+	6. Enter the published year. \newline
+	7. Enter the DOI. \newline
+	8. Enter the abstract. \newline
+	9. Enter the URL. \newline
+	10. Select the topic. \newline
+	11. Submit the create action.
+	\\ \hline
+	
+	Expected Result &
+	The new research paper is created successfully. The system returns the message ``Research paper added successfully.'' \\ \hline
+	
+	Actual Result &
+	The research paper was added successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Update Research Paper}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - Paper Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_11 \\ \hline
+	
+	Test Case Name & Update Research Paper \\ \hline
+	
+	Objective &
+	Verify that the administrator can update an existing research paper with articleId, title, authors, journal, publishedYear, doi, abstract, url, and topicId. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \newline
+	At least one research paper exists in the paper list.
+	\\ \hline
+	
+	Test Data &
+	articleId: 1 \newline
+	title: Updated Deep Learning for Scientific Publication Analysis \newline
+	authors: Nguyen Van A \newline
+	journal: AI Journal \newline
+	publishedYear: 2025 \newline
+	doi: 10.1000/test001 \newline
+	abstract: Updated research paper abstract \newline
+	url: https://example.com/paper \newline
+	topicId: 1
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the Paper Management section. \newline
+	3. Select an existing research paper. \newline
+	4. Update the title. \newline
+	5. Update the authors. \newline
+	6. Update the journal. \newline
+	7. Update the published year. \newline
+	8. Update the DOI. \newline
+	9. Update the abstract. \newline
+	10. Update the URL. \newline
+	11. Update the topic. \newline
+	12. Submit the update action.
+	\\ \hline
+	
+	Expected Result &
+	The selected research paper is updated successfully. The system returns the message ``Research paper updated successfully.'' \\ \hline
+	
+	Actual Result &
+	The research paper was updated successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Delete Research Paper}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - Paper Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_12 \\ \hline
+	
+	Test Case Name & Delete Research Paper \\ \hline
+	
+	Objective &
+	Verify that the administrator can delete an existing research paper with articleId. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \newline
+	At least one research paper exists in the paper list.
+	\\ \hline
+	
+	Test Data &
+	articleId: 1
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the Paper Management section. \newline
+	3. Select an existing research paper. \newline
+	4. Submit the delete action.
+	\\ \hline
+	
+	Expected Result &
+	The selected research paper is deleted successfully. The system returns the message ``Research paper deleted successfully.'' \\ \hline
+	
+	Actual Result &
+	The research paper was deleted successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Create Notification For One User}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - Notification Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_13 \\ \hline
+	
+	Test Case Name & Create Notification For One User \\ \hline
+	
+	Objective &
+	Verify that the administrator can create a notification for one user with title, content, type, link, and userId. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \newline
+	At least one user exists in the user list.
+	\\ \hline
+	
+	Test Data &
+	title: System Notice \newline
+	content: This is a system notification. \newline
+	type: system \newline
+	link: https://example.com \newline
+	userId: 1 \newline
+	sendAll: 0
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the Notification Management section. \newline
+	3. Enter the title. \newline
+	4. Enter the content. \newline
+	5. Enter the type. \newline
+	6. Enter the link. \newline
+	7. Select a user. \newline
+	8. Submit the create action.
+	\\ \hline
+	
+	Expected Result &
+	The notification is created successfully. The system returns the message ``Notification created successfully.'' \\ \hline
+	
+	Actual Result &
+	The notification was created successfully. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
+\subsection{Create Notification For All Active Users}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+	\hline
+	\textbf{Field} & \textbf{Description} \\ \hline
+	
+	Module & Admin - Notification Management \\ \hline
+	
+	Test Case ID & TC\_ADMIN\_14 \\ \hline
+	
+	Test Case Name & Create Notification For All Active Users \\ \hline
+	
+	Objective &
+	Verify that the administrator can create a notification for all active users with title, content, type, link, and sendAll. \\ \hline
+	
+	Preconditions &
+	Administrator has logged into the Admin page successfully. \newline
+	At least one active user exists in the user list.
+	\\ \hline
+	
+	Test Data &
+	title: System Notice \newline
+	content: This is a system notification for all active users. \newline
+	type: system \newline
+	link: https://example.com \newline
+	sendAll: 1
+	\\ \hline
+	
+	Test Steps &
+	1. Open the Admin page. \newline
+	2. Go to the Notification Management section. \newline
+	3. Enter the title. \newline
+	4. Enter the content. \newline
+	5. Enter the type. \newline
+	6. Enter the link. \newline
+	7. Select send all. \newline
+	8. Submit the create action.
+	\\ \hline
+	
+	Expected Result &
+	The notification is created successfully for all active users. The system returns the message ``Notification sent to all users.'' \\ \hline
+	
+	Actual Result &
+	The notification was created successfully for all active users. \\ \hline
+	
+	Status & Pass \\ \hline
+	
+\end{longtable}
 
 \end{document}
 
