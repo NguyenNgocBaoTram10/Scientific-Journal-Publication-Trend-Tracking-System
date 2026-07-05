@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  5 JUL 2026 15:03
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.27)  5 JUL 2026 15:04
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1901,129 +1905,223 @@ Package pdftex.def Info: chinhsuathanhcong.png  used on input line 1120.
 (pdftex.def)             Requested size: 452.9679pt x 206.72675pt.
 
 [31 <./emailkhonghople.png> <./chinhsuathanhcong.png>]
+<<<<<<< HEAD
 <logout.jpg, id=665, 695.59875pt x 524.96124pt>
 File: logout.jpg Graphic file (type jpg)
 <use logout.jpg>
 Package pdftex.def Info: logout.jpg  used on input line 1140.
 (pdftex.def)             Requested size: 452.9679pt x 341.84557pt.
 <trangdangnhap.png, id=666, 915.92188pt x 414.54875pt>
+=======
+<dx11.png, id=689, 443.85825pt x 334.851pt>
+File: dx11.png Graphic file (type png)
+<use dx11.png>
+Package pdftex.def Info: dx11.png  used on input line 1140.
+(pdftex.def)             Requested size: 452.9679pt x 341.73254pt.
+<trangdangnhap.png, id=690, 915.92188pt x 414.54875pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: trangdangnhap.png Graphic file (type png)
 <use trangdangnhap.png>
 Package pdftex.def Info: trangdangnhap.png  used on input line 1148.
 (pdftex.def)             Requested size: 452.9679pt x 205.01566pt.
+<<<<<<< HEAD
  [32 <./logout.jpg> <./trangdangnhap.png>] [33]
 <trangtimkiem.png, id=676, 926.46124pt x 421.575pt>
+=======
+ [32 <./dx11.png> <./trangdangnhap.png>] [33]
+<trangtimkiem.png, id=701, 926.46124pt x 421.575pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: trangtimkiem.png Graphic file (type png)
 <use trangtimkiem.png>
 Package pdftex.def Info: trangtimkiem.png  used on input line 1208.
 (pdftex.def)             Requested size: 452.9679pt x 206.11682pt.
+<<<<<<< HEAD
 <nambatdaulon.png, id=677, 921.4425pt x 425.08812pt>
+=======
+<nambatdaulon.png, id=702, 921.4425pt x 425.08812pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: nambatdaulon.png Graphic file (type png)
 <use nambatdaulon.png>
 Package pdftex.def Info: nambatdaulon.png  used on input line 1216.
 (pdftex.def)             Requested size: 452.9679pt x 208.96309pt.
+<<<<<<< HEAD
 <ketquatimkiem.png, id=678, 923.45pt x 420.06938pt>
+=======
+<ketquatimkiem.png, id=703, 923.45pt x 420.06938pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: ketquatimkiem.png Graphic file (type png)
 <use ketquatimkiem.png>
 Package pdftex.def Info: ketquatimkiem.png  used on input line 1226.
 (pdftex.def)             Requested size: 452.9679pt x 206.04732pt.
  [34 <./trangtimkiem.png> <./nambatdaulon.png>] [35 <./ketquatimkiem.png>]
+<<<<<<< HEAD
 <luuyeuthich.png, id=690, 918.93312pt x 422.07687pt>
+=======
+<luuyeuthich.png, id=715, 918.93312pt x 422.07687pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: luuyeuthich.png Graphic file (type png)
 <use luuyeuthich.png>
 Package pdftex.def Info: luuyeuthich.png  used on input line 1264.
 (pdftex.def)             Requested size: 452.9679pt x 208.05602pt.
+<<<<<<< HEAD
 <dayeuthich.png, id=691, 921.4425pt x 423.5825pt>
+=======
+<dayeuthich.png, id=716, 921.4425pt x 423.5825pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: dayeuthich.png Graphic file (type png)
 <use dayeuthich.png>
 Package pdftex.def Info: dayeuthich.png  used on input line 1272.
 (pdftex.def)             Requested size: 452.9679pt x 208.22296pt.
+<<<<<<< HEAD
 <trangyeuthich.png, id=692, 905.3825pt x 414.54875pt>
+=======
+<trangyeuthich.png, id=717, 905.3825pt x 414.54875pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: trangyeuthich.png Graphic file (type png)
 <use trangyeuthich.png>
 Package pdftex.def Info: trangyeuthich.png  used on input line 1280.
 (pdftex.def)             Requested size: 452.9679pt x 207.40036pt.
  [36 <./luuyeuthich.png> <./dayeuthich.png>]
+<<<<<<< HEAD
 <xoa.png, id=699, 927.96687pt x 416.05438pt>
+=======
+<xoa.png, id=724, 927.96687pt x 416.05438pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: xoa.png Graphic file (type png)
 <use xoa.png>
 Package pdftex.def Info: xoa.png  used on input line 1288.
 (pdftex.def)             Requested size: 452.9679pt x 203.09392pt.
+<<<<<<< HEAD
 <lienket.png, id=700, 920.43875pt x 423.08063pt>
+=======
+<lienket.png, id=725, 920.43875pt x 423.08063pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: lienket.png Graphic file (type png)
 <use lienket.png>
 Package pdftex.def Info: lienket.png  used on input line 1296.
 (pdftex.def)             Requested size: 452.9679pt x 208.20865pt.
  [37 <./trangyeuthich.png> <./xoa.png>] [38 <./lienket.png>] [39]
+<<<<<<< HEAD
 <ptxh.png, id=717, 1230.5975pt x 914.41624pt>
+=======
+<ptxh.png, id=742, 1230.5975pt x 914.41624pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: ptxh.png Graphic file (type png)
 <use ptxh.png>
 Package pdftex.def Info: ptxh.png  used on input line 1441.
 (pdftex.def)             Requested size: 452.9679pt x 336.58461pt.
  [40]
+<<<<<<< HEAD
 <thieu.png, id=731, 929.4725pt x 414.54875pt>
+=======
+<thieu.png, id=756, 929.4725pt x 414.54875pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: thieu.png Graphic file (type png)
 <use thieu.png>
 Package pdftex.def Info: thieu.png  used on input line 1450.
 (pdftex.def)             Requested size: 452.9679pt x 202.0237pt.
+<<<<<<< HEAD
 <batdaulonhon.png, id=732, 924.95563pt x 418.56375pt>
+=======
+<batdaulonhon.png, id=757, 924.95563pt x 418.56375pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: batdaulonhon.png Graphic file (type png)
 <use batdaulonhon.png>
 Package pdftex.def Info: batdaulonhon.png  used on input line 1459.
 (pdftex.def)             Requested size: 452.9679pt x 204.97667pt.
  [41 <./ptxh.png (PNG copy)> <./thieu.png>]
+<<<<<<< HEAD
 <ketquaphantich1.png, id=738, 276.03125pt x 407.02063pt>
+=======
+<ketquaphantich1.png, id=763, 276.03125pt x 407.02063pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: ketquaphantich1.png Graphic file (type png)
 <use ketquaphantich1.png>
 Package pdftex.def Info: ketquaphantich1.png  used on input line 1467.
 (pdftex.def)             Requested size: 452.9679pt x 667.99014pt.
+<<<<<<< HEAD
 <ketquaphantich2.png, id=739, 283.55937pt x 236.885pt>
+=======
+<ketquaphantich2.png, id=764, 283.55937pt x 236.885pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: ketquaphantich2.png Graphic file (type png)
 <use ketquaphantich2.png>
 Package pdftex.def Info: ketquaphantich2.png  used on input line 1472.
 (pdftex.def)             Requested size: 452.9679pt x 378.44179pt.
+<<<<<<< HEAD
  [42 <./batdaulonhon.png>] [43 <./ketquaphantich1.png>]
 [44 <./ketquaphantich2.png>] [45]
 <tbc.jpg, id=766, 1925.1925pt x 915.42pt>
+=======
+ [42 <./batdaulonhon.png>] [43 <./ketquaphantich1.png>] [44 <./ketquaphantich2.
+png>] [45]
+<tbc.jpg, id=791, 1925.1925pt x 915.42pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: tbc.jpg Graphic file (type jpg)
 <use tbc.jpg>
 Package pdftex.def Info: tbc.jpg  used on input line 1568.
 (pdftex.def)             Requested size: 452.9679pt x 215.37515pt.
+<<<<<<< HEAD
 <xuatbaocao.png, id=767, 286.06876pt x 391.96437pt>
+=======
+<xuatbaocao.png, id=792, 286.06876pt x 391.96437pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: xuatbaocao.png Graphic file (type png)
 <use xuatbaocao.png>
 Package pdftex.def Info: xuatbaocao.png  used on input line 1576.
 (pdftex.def)             Requested size: 452.9679pt x 620.65457pt.
  [46 <./tbc.jpg>] [47 <./xuatbaocao.png>]
+<<<<<<< HEAD
 <theodoi.png, id=777, 918.43124pt x 420.57124pt>
+=======
+<theodoi.png, id=802, 918.43124pt x 420.57124pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: theodoi.png Graphic file (type png)
 <use theodoi.png>
 Package pdftex.def Info: theodoi.png  used on input line 1615.
 (pdftex.def)             Requested size: 452.9679pt x 207.42937pt.
+<<<<<<< HEAD
 <dstheodoi.png, id=778, 923.45pt x 417.56pt>
+=======
+<dstheodoi.png, id=803, 923.45pt x 417.56pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: dstheodoi.png Graphic file (type png)
 <use dstheodoi.png>
 Package pdftex.def Info: dstheodoi.png  used on input line 1623.
 (pdftex.def)             Requested size: 452.9679pt x 204.81644pt.
+<<<<<<< HEAD
 
 [48 <./theodoi.png>]
 <huytheodoi.png, id=784, 920.43875pt x 410.03188pt>
+=======
+ [48 <./theodoi.png>]
+<huytheodoi.png, id=809, 920.43875pt x 410.03188pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: huytheodoi.png Graphic file (type png)
 <use huytheodoi.png>
 Package pdftex.def Info: huytheodoi.png  used on input line 1631.
 (pdftex.def)             Requested size: 452.9679pt x 201.78703pt.
  [49 <./dstheodoi.png> <./huytheodoi.png>]
+<<<<<<< HEAD
 <nhanthongbao.png, id=792, 926.46124pt x 422.07687pt>
+=======
+<nhanthongbao.png, id=817, 926.46124pt x 422.07687pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: nhanthongbao.png Graphic file (type png)
 <use nhanthongbao.png>
 Package pdftex.def Info: nhanthongbao.png  used on input line 1667.
 (pdftex.def)             Requested size: 452.9679pt x 206.3622pt.
+<<<<<<< HEAD
 <dadoc.png, id=793, 929.4725pt x 414.54875pt>
+=======
+<dadoc.png, id=818, 929.4725pt x 414.54875pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: dadoc.png Graphic file (type png)
 <use dadoc.png>
 Package pdftex.def Info: dadoc.png  used on input line 1675.
 (pdftex.def)             Requested size: 452.9679pt x 202.0237pt.
- [50 <./nhanthongbao.png>] [51 <./dadoc.png>]
+ [50 <./nhanthongbao.png>]
+[51 <./dadoc.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\<let>-command' on input line 1679.
@@ -2089,7 +2187,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
                    \relax 
 l.1686 \subsection{System Architecture}
                                        
+<<<<<<< HEAD
 <ss.png, id=804, 450.18187pt x 402.00188pt>
+=======
+<ss.png, id=829, 450.18187pt x 402.00188pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: ss.png Graphic file (type png)
 <use ss.png>
 Package pdftex.def Info: ss.png  used on input line 1689.
@@ -2103,7 +2205,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
                    \relax 
 l.1727 \subsection{Package Diagram}
                                    
+<<<<<<< HEAD
 <fe.png, id=810, 416.05438pt x 146.04562pt>
+=======
+<fe.png, id=835, 416.05438pt x 146.04562pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: fe.png Graphic file (type png)
 <use fe.png>
 Package pdftex.def Info: fe.png  used on input line 1731.
@@ -2140,7 +2246,11 @@ Overfull \hbox (12.28947pt too wide) in paragraph at lines 1763--1763
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<<<<<<< HEAD
 <be.png, id=811, 423.5825pt x 307.64937pt>
+=======
+<be.png, id=836, 423.5825pt x 307.64937pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: be.png Graphic file (type png)
 <use be.png>
 Package pdftex.def Info: be.png  used on input line 1772.
@@ -2219,7 +2329,11 @@ as been already used, duplicate ignored
                    \relax 
 l.1815 \section{Database Design}
                                 
+<<<<<<< HEAD
 <database.png, id=832, 1127.21124pt x 732.7375pt>
+=======
+<database.png, id=857, 1127.21124pt x 732.7375pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: database.png Graphic file (type png)
 <use database.png>
 Package pdftex.def Info: database.png  used on input line 1821.
@@ -2744,7 +2858,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2059 \subsubsection{Class Diagram}
                                     
+<<<<<<< HEAD
 <CDRegister.png, id=874, 886.31125pt x 733.74126pt>
+=======
+<CDRegister.png, id=899, 886.31125pt x 733.74126pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: CDRegister.png Graphic file (type png)
 <use CDRegister.png>
 Package pdftex.def Info: CDRegister.png  used on input line 2063.
@@ -2756,7 +2874,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2066 \subsubsection{Sequence Diagram}
                                        
+<<<<<<< HEAD
 <re11.png, id=881, 359.54324pt x 512.51476pt>
+=======
+<re11.png, id=906, 359.54324pt x 512.51476pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: re11.png Graphic file (type png)
 <use re11.png>
 Package pdftex.def Info: re11.png  used on input line 2069.
@@ -2768,13 +2890,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
                    \relax 
 l.2077 \subsection{Login}
                          
+<<<<<<< HEAD
 <CDLogin.png, id=887, 882.29625pt x 745.78625pt>
+=======
+<CDLogin.png, id=912, 882.29625pt x 745.78625pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: CDLogin.png Graphic file (type png)
 <use CDLogin.png>
 Package pdftex.def Info: CDLogin.png  used on input line 2081.
 (pdftex.def)             Requested size: 452.9679pt x 382.88365pt.
  [65 <./re11.png>]
+<<<<<<< HEAD
 <dn11.png, id=893, 410.7345pt x 540.21825pt>
+=======
+<dn11.png, id=918, 410.7345pt x 540.21825pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: dn11.png Graphic file (type png)
 <use dn11.png>
 Package pdftex.def Info: dn11.png  used on input line 2087.
@@ -2792,7 +2922,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2096 \subsubsection{Class Diagram}
                                     
+<<<<<<< HEAD
 <CDSearchResearchPaper.png, id=899, 929.4725pt x 722.7pt>
+=======
+<CDSearchResearchPaper.png, id=924, 929.4725pt x 722.7pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: CDSearchResearchPaper.png Graphic file (type png)
 <use CDSearchResearchPaper.png>
 Package pdftex.def Info: CDSearchResearchPaper.png  used on input line 2099.
@@ -2804,45 +2938,73 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2103 \subsubsection{Sequence Diagram}
                                        
+<<<<<<< HEAD
 <seach11.png, id=906, 548.64975pt x 564.30824pt>
+=======
+<seach11.png, id=931, 548.64975pt x 564.30824pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: seach11.png Graphic file (type png)
 <use seach11.png>
 Package pdftex.def Info: seach11.png  used on input line 2106.
 (pdftex.def)             Requested size: 452.9679pt x 465.91307pt.
  [68 <./CDSearchResearchPaper.png>]
+<<<<<<< HEAD
 <CDPaperDetail.png, id=913, 931.48pt x 699.61375pt>
+=======
+<CDPaperDetail.png, id=938, 931.48pt x 699.61375pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: CDPaperDetail.png Graphic file (type png)
 <use CDPaperDetail.png>
 Package pdftex.def Info: CDPaperDetail.png  used on input line 2120.
 (pdftex.def)             Requested size: 452.9679pt x 340.20898pt.
 
 [69 <./seach11.png>]
+<<<<<<< HEAD
 <xemtrang11.png, id=920, 485.4135pt x 322.20375pt>
+=======
+<xemtrang11.png, id=945, 485.4135pt x 322.20375pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: xemtrang11.png Graphic file (type png)
 <use xemtrang11.png>
 Package pdftex.def Info: xemtrang11.png  used on input line 2129.
 (pdftex.def)             Requested size: 452.9679pt x 300.669pt.
  [70 <./CDPaperDetail.png>]
+<<<<<<< HEAD
 <CDBookmark.png, id=926, 936.49875pt x 682.55pt>
+=======
+<CDBookmark.png, id=951, 936.49875pt x 682.55pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: CDBookmark.png Graphic file (type png)
 <use CDBookmark.png>
 Package pdftex.def Info: CDBookmark.png  used on input line 2147.
 (pdftex.def)             Requested size: 452.9679pt x 330.14067pt.
  [71 <./xemtrang11.png>]
+<<<<<<< HEAD
 <savebook11.png, id=933, 475.7775pt x 578.16pt>
+=======
+<savebook11.png, id=958, 475.7775pt x 578.16pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: savebook11.png Graphic file (type png)
 <use savebook11.png>
 Package pdftex.def Info: savebook11.png  used on input line 2154.
 (pdftex.def)             Requested size: 452.9679pt x 550.46632pt.
 
 [72 <./CDBookmark.png>]
+<<<<<<< HEAD
 <Track-Publication-Trend_class-diagram.jpg, id=939, 857.2025pt x 1204.5pt>
+=======
+<Track-Publication-Trend_class-diagram.jpg, id=964, 857.2025pt x 1204.5pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: Track-Publication-Trend_class-diagram.jpg Graphic file (type jpg)
 <use Track-Publication-Trend_class-diagram.jpg>
 Package pdftex.def Info: Track-Publication-Trend_class-diagram.jpg  used on inp
 ut line 2168.
 (pdftex.def)             Requested size: 452.9679pt x 636.48892pt.
+<<<<<<< HEAD
 <atpt.png, id=940, 3316.39pt x 5235.56pt>
+=======
+<atpt.png, id=965, 3316.39pt x 5235.56pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: atpt.png Graphic file (type png)
 <use atpt.png>
 Package pdftex.def Info: atpt.png  used on input line 2172.
@@ -2852,18 +3014,27 @@ Overfull \vbox (629.07104pt too high) has occurred while \output is active []
 
 
 [75 <./Track-Publication-Trend_class-diagram.jpg> <./atpt.png>]
+<<<<<<< HEAD
 <setpt.png, id=958, 5323.89pt x 4424.53pt>
+=======
+<setpt.png, id=983, 5323.89pt x 4424.53pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: setpt.png Graphic file (type png)
 <use setpt.png>
 Package pdftex.def Info: setpt.png  used on input line 2179.
 (pdftex.def)             Requested size: 452.9679pt x 376.38388pt.
+<<<<<<< HEAD
 <View-Dashboard_class-diagram.jpg, id=959, 925.4575pt x 901.3675pt>
+=======
+<View-Dashboard_class-diagram.jpg, id=984, 925.4575pt x 901.3675pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: View-Dashboard_class-diagram.jpg Graphic file (type jpg)
 <use View-Dashboard_class-diagram.jpg>
 Package pdftex.def Info: View-Dashboard_class-diagram.jpg  used on input line 2
 190.
 (pdftex.def)             Requested size: 452.9679pt x 441.1788pt.
  [76 <./setpt.png>]
+<<<<<<< HEAD
 <Generate-Reports_class-diagram.jpg, id=965, 1146.2825pt x 973.6375pt>
 File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
 <use Generate-Reports_class-diagram.jpg>
@@ -2871,24 +3042,74 @@ Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
  2203.
 (pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
  [77 <./View-Dashboard_class-diagram.jpg>]
+=======
+<sevdb.png, id=990, 896.34875pt x 617.30624pt>
+File: sevdb.png Graphic file (type png)
+<use sevdb.png>
+Package pdftex.def Info: sevdb.png  used on input line 2201.
+(pdftex.def)             Requested size: 452.9679pt x 311.94913pt.
+ [77 <./View-Dashboard_class-diagram.jpg>]
+<Generate-Reports_class-diagram.jpg, id=996, 1146.2825pt x 973.6375pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
 <use Generate-Reports_class-diagram.jpg>
 Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
  2220.
 (pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
+<<<<<<< HEAD
  [78 <./Generate-Reports_class-diagram.jpg>]
 <follow topice 2.png, id=976, 914.41624pt x 416.55624pt>
+=======
+ [78 <./sevdb.png (PNG copy)>]
+<sequence_Generate-reports.png, id=1001, 628.3475pt x 750.805pt>
+File: sequence_Generate-reports.png Graphic file (type png)
+<use sequence_Generate-reports.png>
+Package pdftex.def Info: sequence_Generate-reports.png  used on input line 2223
+.
+(pdftex.def)             Requested size: 527.65489pt x 630.45189pt.
+
+Overfull \hbox (74.687pt too wide) in paragraph at lines 2223--2225
+ [][] 
+ []
+
+[79 <./Generate-Reports_class-diagram.jpg>] [80]
+Overfull \vbox (1.9125pt too high) has occurred while \output is active []
+
+
+[81 <./sequence_Generate-reports.png (PNG copy)>]
+File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
+<use Generate-Reports_class-diagram.jpg>
+Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
+ 2235.
+(pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
+<sevtt.png, id=1016, 993.7125pt x 761.84625pt>
+File: sevtt.png Graphic file (type png)
+<use sevtt.png>
+Package pdftex.def Info: sevtt.png  used on input line 2245.
+(pdftex.def)             Requested size: 452.9679pt x 347.27995pt.
+ [82]
+<follow topice 2.png, id=1021, 914.41624pt x 416.55624pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: follow topice 2.png Graphic file (type png)
 <use follow topice 2.png>
 Package pdftex.def Info: follow topice 2.png  used on input line 2235.
 (pdftex.def)             Requested size: 452.9679pt x 206.34534pt.
+<<<<<<< HEAD
  [79]
 <Receive notifications 1.png, id=982, 1128.215pt x 431.6125pt>
+=======
+ [83 <./sevtt.png (PNG copy)>]
+<Receive notifications 1.png, id=1026, 1128.215pt x 431.6125pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: Receive notifications 1.png Graphic file (type png)
 <use Receive notifications 1.png>
 Package pdftex.def Info: Receive notifications 1.png  used on input line 2253.
 (pdftex.def)             Requested size: 452.9679pt x 173.28735pt.
+<<<<<<< HEAD
 <sequence_Manage-Users.png, id=983, 529.98pt x 949.5475pt>
+=======
+<sequence_Manage-Users.png, id=1027, 529.98pt x 949.5475pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: sequence_Manage-Users.png Graphic file (type png)
 <use sequence_Manage-Users.png>
 Package pdftex.def Info: sequence_Manage-Users.png  used on input line 2272.
@@ -2898,13 +3119,22 @@ y)>] [81]
 Overfull \vbox (35.63123pt too high) has occurred while \output is active []
 
 
+<<<<<<< HEAD
 [82 <./sequence_Manage-Users.png (PNG copy)>]
 <con1tt.png, id=996, 867.24pt x 826.08624pt>
+=======
+[86 <./sequence_Manage-Users.png (PNG copy)>]
+<con1tt.png, id=1041, 867.24pt x 826.08624pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: con1tt.png Graphic file (type png)
 <use con1tt.png>
 Package pdftex.def Info: con1tt.png  used on input line 2288.
 (pdftex.def)             Requested size: 452.9679pt x 431.47067pt.
+<<<<<<< HEAD
 <sytt1.png, id=997, 904.37875pt x 795.97375pt>
+=======
+<sytt1.png, id=1042, 904.37875pt x 795.97375pt>
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 File: sytt1.png Graphic file (type png)
 <use sytt1.png>
 Package pdftex.def Info: sytt1.png  used on input line 2303.
@@ -3031,10 +3261,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 ### simple group (level 1) entered at line 499 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  12933 strings out of 467509
  203161 string characters out of 5418889
  667043 words of memory out of 5000000
  41768 multiletter control sequences out of 15000+600000
+=======
+ 12971 strings out of 467509
+ 203892 string characters out of 5418889
+ 667110 words of memory out of 5000000
+ 41796 multiletter control sequences out of 15000+600000
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
  643264 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,16n,83p,470b,950s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3047,9 +3284,17 @@ onts/type1/vntex/vnr/vnr10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/v
 nr12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Program Files/MiKTeX/fonts/ty
 pe1/vntex/vnr/vntt12.pfb>
+<<<<<<< HEAD
 Output written on main.pdf (101 pages, 6139089 bytes).
 PDF statistics:
  1178 PDF objects out of 1200 (max. 8388607)
  245 named destinations out of 1000 (max. 500000)
  1364 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+Output written on main.pdf (105 pages, 6631330 bytes).
+PDF statistics:
+ 1226 PDF objects out of 1440 (max. 8388607)
+ 255 named destinations out of 1000 (max. 500000)
+ 1427 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 34394e58a22cba99b432158a7a3ee45f25b1c178
 
