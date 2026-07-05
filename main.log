@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.27)  5 JUL 2026 14:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  5 JUL 2026 15:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -905,7 +905,7 @@ Package hyperref Info: Link coloring OFF on input line 76.
 
  [1
 
-{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/baotr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\<let>-command' on input line 90.
@@ -2863,183 +2863,156 @@ Package pdftex.def Info: View-Dashboard_class-diagram.jpg  used on input line 2
 188.
 (pdftex.def)             Requested size: 452.9679pt x 441.1788pt.
  [76 <./setpt.png>]
-<sevdb.png, id=987, 896.34875pt x 617.30624pt>
-File: sevdb.png Graphic file (type png)
-<use sevdb.png>
-Package pdftex.def Info: sevdb.png  used on input line 2199.
-(pdftex.def)             Requested size: 452.9679pt x 311.94913pt.
+<Generate-Reports_class-diagram.jpg, id=987, 1146.2825pt x 973.6375pt>
+File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
+<use Generate-Reports_class-diagram.jpg>
+Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
+ 2201.
+(pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
  [77 <./View-Dashboard_class-diagram.jpg>]
-<Generate-Reports_class-diagram.jpg, id=993, 1146.2825pt x 973.6375pt>
 File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
 <use Generate-Reports_class-diagram.jpg>
 Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
- 2209.
+ 2218.
 (pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
- [78 <./sevdb.png (PNG copy)>]
-<sequence_Generate-reports.png, id=998, 628.3475pt x 750.805pt>
-File: sequence_Generate-reports.png Graphic file (type png)
-<use sequence_Generate-reports.png>
-Package pdftex.def Info: sequence_Generate-reports.png  used on input line 2221
-.
-(pdftex.def)             Requested size: 527.65489pt x 630.45189pt.
-
-Overfull \hbox (74.687pt too wide) in paragraph at lines 2221--2223
- [][] 
- []
-
-[79 <./Generate-Reports_class-diagram.jpg>] [80]
-Overfull \vbox (1.9125pt too high) has occurred while \output is active []
-
-
-[81 <./sequence_Generate-reports.png (PNG copy)>]
-File: Generate-Reports_class-diagram.jpg Graphic file (type jpg)
-<use Generate-Reports_class-diagram.jpg>
-Package pdftex.def Info: Generate-Reports_class-diagram.jpg  used on input line
- 2233.
-(pdftex.def)             Requested size: 452.9679pt x 384.75345pt.
-<sevtt.png, id=1013, 993.7125pt x 761.84625pt>
-File: sevtt.png Graphic file (type png)
-<use sevtt.png>
-Package pdftex.def Info: sevtt.png  used on input line 2243.
-(pdftex.def)             Requested size: 452.9679pt x 347.27995pt.
- [82]
-<follow topice 2.png, id=1018, 914.41624pt x 416.55624pt>
+ [78 <./Generate-Reports_class-diagram.jpg>]
+<follow topice 2.png, id=998, 914.41624pt x 416.55624pt>
 File: follow topice 2.png Graphic file (type png)
 <use follow topice 2.png>
-Package pdftex.def Info: follow topice 2.png  used on input line 2259.
+Package pdftex.def Info: follow topice 2.png  used on input line 2233.
 (pdftex.def)             Requested size: 452.9679pt x 206.34534pt.
- [83 <./sevtt.png (PNG copy)>]
-<Receive notifications 1.png, id=1023, 1128.215pt x 431.6125pt>
+ [79]
+<Receive notifications 1.png, id=1004, 1128.215pt x 431.6125pt>
 File: Receive notifications 1.png Graphic file (type png)
 <use Receive notifications 1.png>
-Package pdftex.def Info: Receive notifications 1.png  used on input line 2277.
+Package pdftex.def Info: Receive notifications 1.png  used on input line 2251.
 (pdftex.def)             Requested size: 452.9679pt x 173.28735pt.
-<sequence_Manage-Users.png, id=1024, 529.98pt x 949.5475pt>
+<sequence_Manage-Users.png, id=1005, 529.98pt x 949.5475pt>
 File: sequence_Manage-Users.png Graphic file (type png)
 <use sequence_Manage-Users.png>
-Package pdftex.def Info: sequence_Manage-Users.png  used on input line 2296.
+Package pdftex.def Info: sequence_Manage-Users.png  used on input line 2270.
 (pdftex.def)             Requested size: 362.37569pt x 649.26253pt.
- [84 <./follow topice 2.png (PNG copy)> <./Receive notifications 1.png (PNG cop
-y)>] [85]
+ [80 <./follow topice 2.png (PNG copy)> <./Receive notifications 1.png (PNG cop
+y)>] [81]
 Overfull \vbox (35.63123pt too high) has occurred while \output is active []
 
 
-[86 <./sequence_Manage-Users.png (PNG copy)>]
-<con1tt.png, id=1038, 867.24pt x 826.08624pt>
+[82 <./sequence_Manage-Users.png (PNG copy)>]
+<con1tt.png, id=1018, 867.24pt x 826.08624pt>
 File: con1tt.png Graphic file (type png)
 <use con1tt.png>
-Package pdftex.def Info: con1tt.png  used on input line 2312.
+Package pdftex.def Info: con1tt.png  used on input line 2286.
 (pdftex.def)             Requested size: 452.9679pt x 431.47067pt.
-<sytt1.png, id=1039, 904.37875pt x 795.97375pt>
+<sytt1.png, id=1019, 904.37875pt x 795.97375pt>
 File: sytt1.png Graphic file (type png)
 <use sytt1.png>
-Package pdftex.def Info: sytt1.png  used on input line 2327.
+Package pdftex.def Info: sytt1.png  used on input line 2301.
 (pdftex.def)             Requested size: 452.9679pt x 398.66605pt.
- [87 <./con1tt.png>] [88 <./sytt1.png>]
+ [83 <./con1tt.png>] [84 <./sytt1.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 2333.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 2333.
+(hyperref)                removing `\<let>-command' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 2333.
+(hyperref)                removing `\\' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 2333.
+(hyperref)                removing `\@centercr' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 2333.
+(hyperref)                removing `\rightskip' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 2333.
+(hyperref)                removing `\@flushglue' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 2333.
+(hyperref)                removing `\leftskip' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 2333.
+(hyperref)                removing `\@flushglue' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 2333.
+(hyperref)                removing `\finalhyphendemerits' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 2333.
+(hyperref)                removing `\z@' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 2333.
+(hyperref)                removing `\parindent' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 2333.
+(hyperref)                removing `\z@' on input line 2307.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 2333.
+(hyperref)                removing `\parfillskip' on input line 2307.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@skip' on input line 2307.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2339 \section{Testing Scope}
+l.2313 \section{Testing Scope}
                               
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2366 \section{Test Strategy}
+l.2340 \section{Test Strategy}
                               
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2367 \subsection{Testing Types}
-                                  [89
+l.2341 \subsection{Testing Types}
+                                  [85
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2377 \subsection{Testing Levels}
+l.2351 \subsection{Testing Levels}
                                   
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2391 \subsection{Supporting Tools}
+l.2365 \subsection{Supporting Tools}
                                     
 pdfTeX warning (ext4): destination with the same identifier (name{section.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2408 \section{Test Plan}
-                           [90]
+l.2382 \section{Test Plan}
+                           [86]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2423 \subsection{Entry Criteria}
+l.2397 \subsection{Entry Criteria}
                                   
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2430 \subsection{Exit Criteria}
-                                  [91] [92] [93] [94] [95] [96] [97] [98]
-[99] [100] [101] [102] [103] [104] [105] (main.aux)
+l.2404 \subsection{Exit Criteria}
+                                  [87] [88] [89] [90] [91] [92] [93] [94]
+[95] [96] [97] [98] [99] [100] [101] (main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
@@ -3048,8 +3021,14 @@ L3 programming layer <2026-05-26>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F5058438F8D711FEC90721E9F5332396;20838.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: F5058438F8D711FEC90721E9F5332396;20838
+(rerunfilecheck)             After:  52DF8AFC4675192ED5AE965E9EDF7A25;19934.
  )
 (\end occurred inside a group at level 2)
 
@@ -3057,25 +3036,53 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 ### simple group (level 1) entered at line 499 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12971 strings out of 467509
- 203875 string characters out of 5418889
+ 12947 strings out of 467509
+ 203412 string characters out of 5418889
  667218 words of memory out of 5000000
- 41798 multiletter control sequences out of 15000+600000
+ 41777 multiletter control sequences out of 15000+600000
  643264 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,16n,83p,470b,950s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
-ec/dpi600\tcrm1095.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jkn
-appen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/P
-rogram Files/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Program Files/MiKTeX/f
-onts/type1/vntex/vnr/vnr10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/v
-nr12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Program Files/MiKTeX/fonts/ty
-pe1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (105 pages, 7275236 bytes).
+
+pdfTeX warning (dest): name{subsubsection.3.19.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.19} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.3.18.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.18} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.17} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.3.14.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.3.12.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+ <C:\Users\baotr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
+95.pk> <C:\Users\baotr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
+tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Program Files/MiK
+TeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex
+/vnr/vnr10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program Files/MiKTeX/fon
+ts/type1/vntex/vnr/vntt10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vn
+tt12.pfb>
+Output written on main.pdf (101 pages, 6796499 bytes).
 PDF statistics:
- 1223 PDF objects out of 1440 (max. 8388607)
- 253 named destinations out of 1000 (max. 500000)
- 1427 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1202 PDF objects out of 1440 (max. 8388607)
+ 250 named destinations out of 1000 (max. 500000)
+ 1412 words of extra memory for PDF output out of 10000 (max. 10000000)
 
