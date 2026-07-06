@@ -987,7 +987,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{erd.png}
-	\caption{Entity Relationship Diagram (ERD)}
+
 	\label{fig:erd}
 \end{figure}
 \subsection{Authentication}
@@ -1001,17 +1001,17 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \end{itemize}
 \textbf{Function Details:}
 \begin{itemize}[label=-]
-	\item Whether the username already exists
+	\item Whether the username , email already exists
 	\item Validate password requirements.
 	\item Create a new account.
 	\item Display a success message.
-	\item Sign up and check your email.
+
 \end{itemize}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{gđk.jpg}
-	\caption{Registration Page}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1020,7 +1020,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{dkl.jpg}
-	\caption{Email already exists}
+
 	\label{fig:erd}
 \end{figure}
 
@@ -1030,7 +1030,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{tentontai.png}
-	\caption{Username already exists.}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1040,7 +1040,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{matkhaukhac.png}
-	\caption{Password does not meet the required format.}
+	
 	\label{fig:erd}
 \end{figure}
 
@@ -1076,7 +1076,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{dk.jpg}
-\caption{Login Page}
+
 \label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1085,7 +1085,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{dnl.jpg}
-	\caption{Invalid username or password.}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1094,7 +1094,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{gdc.jpg}
-	\caption{Home Page}
+	
 	\label{fig:erd}
 \end{figure}
 
@@ -1117,7 +1117,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{prof.jpg}
-	\caption{Profile Page}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1126,7 +1126,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{editprof.jpg}
-	\caption{Edit Profile}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1135,7 +1135,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{tencstontai.png}
-	\caption{Username already exists.}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1144,7 +1144,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{emailkhonghople.png}
-	\caption{Invalid email address}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1153,7 +1153,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{chinhsuathanhcong.png}
-	\caption{Update successful}
+
 	\label{fig:erd}
 \end{figure}
 \subsubsection{ Logout }
@@ -1174,7 +1174,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{logout.jpg}
-	\caption{Sign Out}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1183,68 +1183,40 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{trangdangnhap.png}
-	\caption{Sign In Page}
+
 	\label{fig:erd}
 \end{figure}
 \subsubsection{Search Papers}
 
+
+\subsubsection{Search Papers}
+
 \textbf{Role:} User
 
-\textbf{Function Trigger}
+\textbf{Function trigger:} The user opens the search page, enters a keyword, selects filters (Publication Year, Open Access, Paper Type), and clicks Search.
 
-User opens \textit{``Tìm kiếm''} $\rightarrow$ Enters a keyword $\rightarrow$ Selects filters (Publication Year, Open Access, Paper Type) $\rightarrow$ Clicks \textbf{Search}.
+\textbf{Function description:}
 
-\textbf{Function Description}
-
-\begin{itemize}
-	\item \textbf{Purpose:}
-	
-	Allow users to search scientific papers from academic databases based on keywords and filtering conditions.
-	
-	\item \textbf{Data Processing:}
-	
-	Validate the search input, send the request to academic databases (e.g., Crossref API), retrieve matching publications, apply selected filters, and display the search results.
+\begin{itemize}[label=-]
+	\item Purpose: Allow the user to search scientific papers by keyword and filters.
+	\item Data processing: Send the keyword to the search API, query OpenAlex (fallback to Crossref if it fails), apply the selected filters, and return the matching results.
 \end{itemize}
 
-\textbf{Function Details}
+\textbf{Function Details:}
 
-\begin{itemize}
-	\item \textbf{Validation:}
-	\begin{itemize}
-		\item Keyword cannot be empty.
-		\item Start year must not be greater than End year.
-	\end{itemize}
+\begin{itemize}[label=-]
+	\item Display a search box and filters: Publication Year (from--to), Open Access toggle, Paper Type (All, Article, Review, Book-chapter, Preprint, Dataset).
+	\item If Open Access is selected, only open-access papers are returned.
+	\item Each result shows title (with keyword highlighted), authors, year, type, abstract, citation count, DOI link, and a Favorite button.
+	\item If no results are found, display a "No matching papers found." message.
+	\item If both OpenAlex and Crossref fail, display a data error message.
+\end{itemize}
 	
-	\item \textbf{Business Rules:}
-	\begin{itemize}
-		\item Search supports Title, Keyword and DOI.
-		\item Users may filter by publication year.
-		\item Users may filter by paper type.
-		\item Users may choose to display only Open Access publications.
-		\item Results are displayed with pagination (10 items per page).
-		\item Each result includes Title, Authors, Year, DOI and Citation Count (if available), with the option to save the paper to Favorites.
-	\end{itemize}
-	
-	\item \textbf{Normal Case:}
-	\begin{itemize}
-		\item User enters a keyword and selects filters.
-		\item User clicks the \textbf{Search} button.
-		\item System queries the academic database.
-		\item Matching publications are returned and displayed.
-		\item User can view paper details, open the DOI link, or save the paper to Favorites.
-	\end{itemize}
-	
-	\item \textbf{Abnormal Case:}
-	\begin{itemize}
-		\item No papers found $\rightarrow$ Display \textit{``No matching papers found.''}
-		\item Invalid year range $\rightarrow$ Request the user to correct the input.
-		\item API unavailable $\rightarrow$ Display \textit{``Unable to retrieve publication data. Please try again later.''}
-	\end{itemize}
 \end{itemize}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{trangtimkiem.png}
-	\caption{Search Page}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1253,7 +1225,7 @@ User opens \textit{``Tìm kiếm''} $\rightarrow$ Enters a keyword $\rightarrow$
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{nambatdaulon.png}
-	\caption{The start year cannot be greater than the end year.}
+
 	\label{fig:erd}
 \end{figure}
 
@@ -1264,23 +1236,21 @@ User opens \textit{``Tìm kiếm''} $\rightarrow$ Enters a keyword $\rightarrow$
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{ketquatimkiem.png}
-	\caption{Search Results}
+
 	\label{fig:erd}
 \end{figure}
 \subsubsection{Bookmark}
 
+
 The Favorite Papers feature allows users to save publications of interest for future reference and easy access.
-\begin{itemize}
+
+\begin{itemize}[label=-]
 	\item Users can click the Favorite button on a paper in the Search Results page to add it to their favorite list.
-	
 	\item If the paper is successfully added, the system displays the message "Added to Favorites successfully." and updates the button status to Saved.
-	
 	\item If the selected paper already exists in the favorite list, the system displays the message "This paper is already in your Favorites." and prevents duplicate entries.
-	
 	\item Users can access the Favorites page from the navigation bar to view all saved papers.
-	
 	\item Each saved paper displays the following information:
-	\begin{itemize}
+	\begin{itemize}[label=-]
 		\item Publication title.
 		\item Publication year.
 		\item Data source (e.g., OpenAlex).
@@ -1288,13 +1258,13 @@ The Favorite Papers feature allows users to save publications of interest for fu
 		\item DOI button for accessing the original publication.
 		\item Delete button for removing the paper from the favorite list.
 	\end{itemize}
-	
 	\item Users can remove a paper from the favorite list by clicking the Delete button. The system immediately updates the favorite list.
-	
 	\item Users can click the Find More Papers button to return to the search page and continue searching for publications.
 \end{itemize}
-Expected Result
-\begin{itemize}
+
+\textbf{Expected Result}
+
+\begin{itemize}[label=-]
 	\item Each paper can only be saved once in the favorite list.
 	\item Users can easily manage, review, and access their saved publications.
 	\item All changes to the favorite list are synchronized with the database and reflected immediately in the user interface.
@@ -1342,15 +1312,6 @@ Expected Result
 	\caption{ Link to the bookmarked paper.}
 	\label{fig:erd}
 \end{figure}
-\subsubsection{Receive Notifications}
-
-
-
-
-
-
-
-
 
 
 
@@ -1358,134 +1319,69 @@ Expected Result
 \subsubsection{Research Trend Analysis}
 
 \textbf{Function Trigger}
-
 User opens \textit{Research Trend Analysis} from the main menu.
-
-\bigskip
+\medskip
 
 \textbf{Function Description}
-
-\textbf{Actors:}
-Researcher, Lecturer, Student
-
+\textbf{Actors:} Researcher, Lecturer, Student
 \medskip
 
 \textbf{Purpose}
-
-Allow users to analyze research trends of a specific research topic within a selected time range.
-
+Allow users to analyze research trends of a topic within a selected time range.
 \medskip
 
 \textbf{Data Processing}
-
-\begin{itemize}
-	\item Validate the input topic and time range.
-	\item Retrieve publication data from the database.
-	\item Aggregate statistical information.
-	\item Calculate research trend metrics.
-	\item Generate analytical charts.
-	\item Display the research trend dashboard.
+\begin{itemize}[label=-]
+	\item Validate the topic and time range.
+	\item Retrieve publication data from the Crossref API.
+	\item Calculate statistics and generate charts.
+	\item Display the trend dashboard.
 \end{itemize}
-
 \medskip
 
 \textbf{Interface}
-
-The \textbf{Research Trend Dashboard} includes:
-
-\begin{itemize}
-	\item Search bar for entering a research topic.
-	\item Time range selector.
-	\item \textbf{Analyze} button.
-	\item Two tabs:
-	\begin{itemize}
-		\item Dashboard
-		\item Trending Topics
-	\end{itemize}
-	\item Dashboard widgets:
-	\begin{itemize}
-		\item Total Publications
-		\item Total Citations
-		\item Open Access Ratio
-		\item Trend Growth
-	\end{itemize}
-	\item Charts:
-	\begin{itemize}
-		\item Publications by Year
-		\item Top Keywords
-		\item Top Journals
-		\item Top Authors
-		\item Featured Publications
-	\end{itemize}
+\begin{itemize}[label=-]
+	\item Topic search bar, time range selector, \textbf{Analyze} button.
+	\item Two tabs: Dashboard, Trending Topics.
+	\item Widgets: Total Publications, Total Citations, Open Access Ratio, Trend Growth.
+	\item Charts: Publications by Year, Top Keywords, Top Journals, Top Authors, Featured Publications.
 \end{itemize}
-
 \medskip
 
-\textbf{Function Details}
-
 \textbf{Validation}
-
-\begin{itemize}
-	\item Topic keyword cannot be empty.
+\begin{itemize}[label=-]
+	\item Keyword cannot be empty.
 	\item Start Year must not be greater than End Year.
-	\item The selected time range must be within the supported system range.
 \end{itemize}
-
 \medskip
 
 \textbf{Business Rules}
-
-\begin{itemize}
-	\item Statistics are calculated based on publications retrieved by the system.
-	\item Trend Growth is calculated by comparing the selected period with the previous period of the same duration.
-	\item Users can follow or unfollow a trending topic.
-	\item Dashboard data is refreshed whenever the topic or time range changes.
-	\item Trending Topics are ranked according to publication growth and research activity.
-	\item Charts and statistics always correspond to the currently selected topic and time range.
+\begin{itemize}[label=-]
+	\item Statistics are calculated from data retrieved via the Crossref API.
+	\item Trend Growth is compared with the previous period of the same duration.
+	\item Users can follow/unfollow a trending topic.
+	\item The dashboard refreshes when the topic or time range changes.
 \end{itemize}
-
 \medskip
 
 \textbf{Normal Flow}
-
 \begin{enumerate}
-	\item User enters a research topic.
-	\item User selects a time range.
-	\item User clicks the \textbf{Analyze} button.
-	\item The system validates the input.
-	\item The system retrieves publication data.
-	\item The system calculates statistics and generates charts.
-	\item The dashboard displays the analysis results.
-	\item User switches to the \textbf{Trending Topics} tab.
-	\item User follows or unfollows a trending topic.
+	\item Enter a topic, select a time range, click Analyze.
+	\item The system validates input and retrieves data from the API.
+	\item Statistics are calculated and results shown on the dashboard.
 \end{enumerate}
-
 \medskip
 
-\textbf{Alternative / Exception Flow}
-
-\begin{itemize}
-	\item No matching data found.
-	\begin{itemize}
-		\item Display message:
-		\textit{"No data available."}
-	\end{itemize}
-	
-	\item Invalid time range.
-	\begin{itemize}
-		\item Request the user to correct the selected time range.
-	\end{itemize}
-	
-	\item System or database error.
-	\begin{itemize}
-		\item Display message:
-		\textit{"Unable to load data. Please try again later."}
-	\end{itemize}
+\textbf{Exceptions}
+\begin{itemize}[label=-]
+	\item No data found $\rightarrow$ \textit{"No data available."}
+	\item Invalid time range $\rightarrow$ request the user to correct it.
+	\item API error $\rightarrow$ \textit{"Unable to load data. Please try again later."}
 \end{itemize}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{ptxh.png}
-	\caption{Trend Analysis Page}
+
 	\label{fig:erd}
 	
 \end{figure}
@@ -1495,7 +1391,7 @@ The \textbf{Research Trend Dashboard} includes:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{thieu.png}
-	\caption{Please enter a search keyword.}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1505,7 +1401,7 @@ The \textbf{Research Trend Dashboard} includes:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{batdaulonhon.png}
-	\caption{ The start year cannot be greater than the end year.}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1514,13 +1410,13 @@ The \textbf{Research Trend Dashboard} includes:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{ketquaphantich1.png}
-	\caption{ }
+
 	\label{fig:erd}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{ketquaphantich2.png}
-	\caption{ Analysis Results.}
+
 	\label{fig:erd}
 \end{figure}
 
@@ -1534,85 +1430,50 @@ The \textbf{Research Trend Dashboard} includes:
 
 \subsubsection{Export Research Trend Report}
 
-Function Trigger
-User opens \textit{Research Trend Analysis} $\rightarrow$ Enters a research topic and selects a time range $\rightarrow$ Clicks Analyze $\rightarrow$ Clicks Generate Report $\rightarrow$ Selects an export option (Preview \& Print / Save PDF, Download PDF, or Download HTML).
-\bigskip
-Function Description
-Actors:
-Researcher, Lecturer, Student
+\textbf{Function Trigger}
+User opens \textit{Research Trend Analysis} $\rightarrow$ enters a topic and time range $\rightarrow$ clicks Analyze $\rightarrow$ clicks Generate Report $\rightarrow$ selects an export option (Preview \& Print / Save PDF, Download PDF, Download HTML).
 \medskip
-Purpose
-Allow users to export research trend analysis results into different report formats for printing, sharing, or offline viewing.
+
+\textbf{Function Description}
+\textbf{Actors:} Researcher, Lecturer, Student
 \medskip
-Data Processing
-\begin{itemize}
-	\item Verify that research trend analysis has been completed.
-	\item Validate that report data is available.
-	\item Collect the current analysis results, including:
-	\begin{itemize}
-		\item Statistical summaries
-		\item Charts and visualizations
-		\item Trending Topics
-		\item Top Journals
-		\item Top Authors
-		\item Top Keywords
-		\item Featured Publications
-	\end{itemize}
-	\item Generate the report in the selected format.
-	\item Prepare the report for preview or download.
+
+\textbf{Purpose}
+Allow users to export the trend analysis results into different report formats for printing, sharing, or offline viewing.
+\medskip
+
+\textbf{Data Processing}
+\begin{itemize}[label=-]
+	\item Verify the analysis is completed and data is available.
+	\item Collect current results: statistics, charts, Trending Topics, Top Journals/Authors/Keywords, Featured Publications.
+	\item Generate the report in the selected format and prepare it for preview or download.
 \end{itemize}
 \medskip
-Function Details
-Validation
-\begin{itemize}
-	\item Research trend analysis must be completed before exporting.
-	\item Report data must be available.
+
+\textbf{Validation}
+\begin{itemize}[label=-]
+	\item Analysis must be completed and report data must be available before exporting.
 \end{itemize}
 \medskip
-Business Rules
-\begin{itemize}
-	\item The exported report contains the currently displayed analysis results.
-	\item Users may choose one of the following export options:
-	\begin{itemize}
-		\item Preview \& Print / Save PDF
-		\item Download PDF
-		\item Download HTML
-	\end{itemize}
-	\item Charts, statistical summaries, and publication information are included in the exported report.
-	\item The exported report reflects the currently selected research topic and time range.
-	\item The report preserves the dashboard layout and chart formatting.
+
+\textbf{Business Rules}
+\begin{itemize}[label=-]
+	\item The report contains the currently displayed analysis results.
+	\item Export options: Preview \& Print / Save PDF, Download PDF, Download HTML.
+	\item The report reflects the selected topic/time range and preserves dashboard layout and chart formatting.
 \end{itemize}
 \medskip
-Normal Flow
+
+\textbf{Normal Flow}
 \begin{enumerate}
-	\item User completes the research trend analysis.
-	\item User clicks the Generate Report button.
-	\item User selects an export format.
-	\item The system validates the report data.
-	\item The system generates the report.
-	\item The report is previewed or downloaded successfully.
+	\item Complete the analysis, click Generate Report, select an export format.
+	\item The system validates data, generates the report.
+	\item The report is previewed or downloaded.
 \end{enumerate}
 \medskip
-Alternative / Exception Flow
-\begin{itemize}
-	\item No analysis data available.
-	\begin{itemize}
-		\item Display message:
-		\textit{"No report data available."}
-	\end{itemize}
-	
-	\item Report generation fails.
-	\begin{itemize}
-		\item Display message:
-		\textit{"Unable to generate report. Please try again later."}
-	\end{itemize}
-	
-	\item Selected export format is unavailable.
-	\begin{itemize}
-		\item Display message:
-		\textit{"Selected export format is unavailable."}
-	\end{itemize}
-\end{itemize}
+
+\textbf{Exceptions}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{tbc.jpg}
@@ -1632,40 +1493,37 @@ Alternative / Exception Flow
 
 
 \textbf{Function Activation}
-
-Users open the \textbf{Trend Analysis} page $\rightarrow$ Enter a research topic and select the time range $\rightarrow$ Click \textbf{Analyze} $\rightarrow$ Click the \textbf{Follow} button to follow a research topic.
+User opens \textit{Trend Analysis} $\rightarrow$ enters a topic and time range $\rightarrow$ clicks Analyze $\rightarrow$ clicks Follow.
+\medskip
 
 \textbf{Description}
-
-\textbf{Actors:} Researchers, Lecturers, Students.
+\textbf{Actors:} Researcher, Lecturer, Student
+\medskip
 
 \textbf{Purpose}
-
-Allow users to follow research topics of interest for easier management and quick access.
+Allow users to follow topics of interest for easier management and quick access.
+\medskip
 
 \textbf{Data Processing}
-
 \begin{itemize}[label=-]
-	\item Verify that the user is logged into the system.
-	\item Check whether the selected topic has already been followed.
-	\item If the topic has not been followed, save it to the user's followed topic list and update its status to \textbf{Following}.
-	\item If the topic is already followed, prevent duplicate entries.
-	\item Allow users to view the list of followed topics.
-	\item Allow users to unfollow a topic by clicking the \textbf{Unfollow} button.
-	\item Update the followed topic list after each follow or unfollow operation.
+	\item Verify the user is logged in.
+	\item Check if the topic is already followed; if not, save it and update status to Following.
+	\item Prevent duplicate entries if already followed.
+	\item Allow viewing and unfollowing topics from the followed list.
+	\item Update the list after each follow/unfollow action.
 \end{itemize}
+\medskip
 
 \textbf{Result}
-
 \begin{itemize}[label=-]
-	\item The selected topic is added to the followed topic list.
-	\item The followed topic list is updated correctly.
-	\item Users can follow or unfollow topics at any time.
+	\item The topic is added to the followed list.
+	\item The list is updated correctly.
+	\item Users can follow/unfollow topics at any time.
 \end{itemize}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{theodoi.png}
-	\caption{Follow Research Topics}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1674,7 +1532,7 @@ Allow users to follow research topics of interest for easier management and quic
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{dstheodoi.png}
-	\caption{Follow topics list}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1683,44 +1541,40 @@ Allow users to follow research topics of interest for easier management and quic
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{huytheodoi.png}
-	\caption{Unfollow topic}
+
 	\label{fig:erd}
 \end{figure}
 \subsubsection{Receive Notifications}
 \textbf{Function Activation}
-
-Users log in to the system. Notifications are automatically displayed when new notifications are available.
+User logs into the system. Notifications automatically appear when new ones are available.
+\medskip
 
 \textbf{Description}
-
-\textbf{Actors:} Researchers, Lecturers, Students.
+\textbf{Actors:} Researcher, Lecturer, Student
+\medskip
 
 \textbf{Purpose}
-
-Allow users to receive notifications about followed research topics and system announcements from administrators.
+Allow users to receive notifications about followed topics and system announcements from administrators.
+\medskip
 
 \textbf{Data Processing}
-
 \begin{itemize}[label=-]
-	\item Verify that the user is logged into the system.
+	\item Verify the user is logged in.
 	\item Retrieve unread notifications from the database.
-	\item Display notifications related to followed research topics.
-	\item Display announcements and notifications sent by administrators.
-	\item Allow users to mark notifications as read.
-	\item Update the notification status after it has been read.
+	\item Display notifications for followed topics and admin announcements.
+	\item Allow users to mark notifications as read and update their status.
 \end{itemize}
+\medskip
 
 \textbf{Result}
-
 \begin{itemize}[label=-]
-	\item Users receive notifications about followed topics.
-	\item Users receive announcements from administrators.
-	\item Notification status is updated correctly after being read.
+	\item Users receive notifications about followed topics and admin announcements.
+	\item Notification status updates correctly after being read.
 \end{itemize}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{nhanthongbao.png}
-	\caption{Receive notifications}
+
 	\label{fig:erd}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1729,7 +1583,7 @@ Allow users to receive notifications about followed research topics and system a
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{dadoc.png}
-	\caption{Mark as Read.}
+
 	\label{fig:erd}
 \end{figure}
 \subsubsection{Admin - User Management}
@@ -1752,7 +1606,7 @@ nguoi dung.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{ad1.png}
-    \caption{User management interface displaying the list of users.}
+   
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1761,7 +1615,7 @@ nguoi dung.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{ad2.png}
-    \caption{Lock or unlock a user account.}
+  
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1770,7 +1624,7 @@ nguoi dung.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{ad3.png}
-    \caption{Assign admin role to a user.}
+   
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1779,7 +1633,7 @@ nguoi dung.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{ad4.png}
-    \caption{Change an admin account back to a normal user.}
+  
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1800,7 +1654,7 @@ nguoi dung.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{ad5.png}
-    \caption{Topic management interface displaying the list of research topics.}
+  
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1809,7 +1663,7 @@ nguoi dung.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{ad6.png}
-    \caption{Admin can add a new research topic by entering the topic name and description.}
+  
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1818,7 +1672,7 @@ nguoi dung.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{ad7.png}
-    \caption{Admin can edit an existing research topic.}
+   
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1827,13 +1681,13 @@ nguoi dung.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad8.png}
-    \caption{Normal State.}
+  
     \label{fig:admin}
 \end{figure}
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad9.png}
-    \caption{Question “Xoa chu de nay?”.}
+
     \label{fig:admin}
 \end{figure}
 \begin{figure}[H]
@@ -1848,7 +1702,7 @@ nguoi dung.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad11.png}
-    \caption{Topic list is updated after each action.}
+   
     \label{fig:admin}
 \end{figure}
 
@@ -1870,7 +1724,7 @@ The admin opens the Admin page and selects Quan ly nguon API.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad12.png}
-    \caption{API source management interface displaying the list of external API sources.}
+   
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1882,7 +1736,7 @@ The admin opens the Admin page and selects Quan ly nguon API.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad13.png}
-    \caption{Admin can edit API source information including name, base URL, status, priority, and description.}
+   
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1891,7 +1745,7 @@ The admin opens the Admin page and selects Quan ly nguon API.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad14.png}
-    \caption{Admin can enable or disable an API source.}
+  
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1900,7 +1754,7 @@ The admin opens the Admin page and selects Quan ly nguon API.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad15.png}
-    \caption{Admin can delete an external API source from the system.}
+   
     \label{fig:admin}
 \end{figure}
 
@@ -1925,7 +1779,7 @@ The admin clicks Đong bo hoa in the API synchronization section.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad16.png}
-    \caption{API data synchronization form where admin selects an API source, enters a keyword, and sets the number of records.}
+  
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1936,7 +1790,7 @@ The admin clicks Đong bo hoa in the API synchronization section.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad17.png}
-    \caption{The system displays synchronization results after fetching data from the API.}
+   
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1945,7 +1799,7 @@ The admin clicks Đong bo hoa in the API synchronization section.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad17.png}
-    \caption{Synchronization log showing the history of API data synchronization activities.}
+    
     \label{fig:admin}
 \end{figure}
 \subsubsection{Admin - Research Paper Management}
@@ -1966,14 +1820,12 @@ The admin opens the Admin page and selects Quan ly bai bao.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad18.png}
-    \caption{Research paper management interface displaying the list of research papers.}
-    \label{fig:admin}
+   
 \end{figure}
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad19.png}
-    \caption{Research paper management interface displaying the list of research papers.}
-    \label{fig:admin}
+   
 \end{figure}
 \begin{itemize}[label=-]
     \item Add a new research paper.
@@ -1981,7 +1833,7 @@ The admin opens the Admin page and selects Quan ly bai bao.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad19.png}
-    \caption{Admin can add a new research paper by entering paper information.}
+   
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1990,7 +1842,7 @@ The admin opens the Admin page and selects Quan ly bai bao.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad20.png}
-    \caption{Admin can edit research paper details including title, authors, journal, year, DOI, URL, abstract, and topic.}
+   
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -1999,7 +1851,7 @@ The admin opens the Admin page and selects Quan ly bai bao.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad21.png}
-    \caption{Admin can delete a research paper from the system.}
+   
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -2008,7 +1860,7 @@ The admin opens the Admin page and selects Quan ly bai bao.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad22.png}
-    \caption{The research paper list is updated after adding a new paper.}
+   
     \label{fig:admin}
 \end{figure}
 \subsubsection{Admin - Notification Management}
@@ -2029,7 +1881,7 @@ The admin opens the Admin page and selects Quan ly thong bao.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad23.png}
-    \caption{Notification Managment.}
+   
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -2039,7 +1891,7 @@ The admin opens the Admin page and selects Quan ly thong bao.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad24.png}
-    \caption{Sent notifications are displayed in the notification history list.}
+    
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -2048,7 +1900,7 @@ The admin opens the Admin page and selects Quan ly thong bao.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad25.png}
-    \caption{Admin can delete a sent notification.}
+    
     \label{fig:admin}
 \end{figure}
 \begin{itemize}[label=-]
@@ -2057,7 +1909,7 @@ The admin opens the Admin page and selects Quan ly thong bao.
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{ad26.png}
-    \caption{User notification page showing notifications sent by the admin.}
+   
     \label{fig:admin}
 \end{figure}
 
@@ -2442,321 +2294,195 @@ keepaspectratio]{database.png}
 \end{longtable}
 \section{ Detail Design}
 \subsection{Register}
-\subsubsection{Activity diagram}
+\subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{ac1.png}
-	\caption{Activity diagram}
-	\label{fig:erd}
+	\includegraphics[width=\textwidth]{dk.png}
+
+	\label{fig:class-track-publication-trends}
 \end{figure}
+
 \subsubsection{Sequence Diagram} 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{re11.png}
-	\caption{Sequence Diagram }
+
 	\label{fig:erd}
 \end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[height=0.9\textheight,keepaspectratio]{sta1.png}
-	\caption{State diagram}
-	\label{fig:erd}
-\end{figure}
+
+
+
+\subsection{Login}
 \subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{CDRegister.png}
-	\caption{Class Diagram: Register}
-	\label{fig:class-track-publication-trends}
-\end{figure}
+	\includegraphics[width=\textwidth]{CDLogin.png}
 
-\subsection{Login}
-\subsubsection{Activity Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{ac2.png}
-	\caption{Activity diagram}
-	\label{fig:erd}
+	\label{fig:class-track-publication-trends}
 \end{figure}
 \subsubsection{Sequence Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{dn11.png}
-	\caption{Sequence Diagram }
+
 	\label{fig:erd}
 \end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{sta2.png}
-	\caption{State diagram}
-	\label{fig:erd}
-\end{figure}
-\subsubsection{Class Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{CDLogin.png}
-	\caption{Class Diagram: Login}
-	\label{fig:class-track-publication-trends}
-\end{figure}
+
+
 
 %-------------------------------------------------
 \subsection{Search Research Papers}
-\subsubsection{Activity Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{ac3.png}
-	\caption{Activity diagram}
-	\label{fig:erd}
-\end{figure}
-\subsubsection{Sequence Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{seach11.png}
-	\caption{Sequence Diagram }
-	\label{fig:erd}
-\end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[height=0.9\textheight,keepaspectratio]{sta3.png}
-	\caption{State diagram}
-	\label{fig:erd}
-\end{figure}
 \subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{CDSearchResearchPaper.png}
-	\caption{Class Diagram: Search Research Papers}
+
 	\label{fig:class-track-publication-trends}
 \end{figure}
+
+\subsubsection{Sequence Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{seach11.png}
+
+	\label{fig:erd}
+\end{figure}
+
 
 
 %-------------------------------------------------
 \subsection{View Paper Details}
-\subsubsection{Activity Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{avpd.png}
-	\caption{Activity Diagram: View Paper Details}
-	\label{fig:activity-view-paper-details}
-\end{figure}
-\subsubsection{Sequence Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{sevpd.png}
-	\caption{Sequence Diagram: View Paper Details}
-	\label{fig:sequence-view-paper-details}
-\end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{svpd.png}
-	\caption{State Diagram: View Paper Details}
-	\label{fig:state-view-paper-details}
-\end{figure}
 \subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{CDViewPaperDetail.png}
-	\caption{Class Diagram: View Paper Detail}
+	\includegraphics[width=0.6\textwidth]{chitiet.png}
+
 	\label{fig:class-track-publication-trends}
 \end{figure}
+
+\subsubsection{Sequence Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{tt.png}
+
+	\label{fig:sequence-view-paper-details}
+\end{figure}
+
 
 
 %-------------------------------------------------
 \subsection{Save Bookmarks}
-\subsubsection{Activity Diagram}
+\subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{asb.png}
-	\caption{Activity Diagram: Save Bookmarks}
-	\label{fig:activity-save-bookmarks}
+	\includegraphics[width=0.6\textwidth]{CDBookmark.png}
+
+	\label{fig:class-track-publication-trends}
 \end{figure}
 \subsubsection{Sequence Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{sesb.png}
-	\caption{Sequence Diagram: Save Bookmarks}
+
 	\label{fig:sequence-save-bookmarks}
 \end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{ssb.png}
-	\caption{State Diagram: Save Bookmarks}
-	\label{fig:state-save-bookmarks}
-\end{figure}
-\subsubsection{Class Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{CDBookmark.png}
-	\caption{Class Diagram: Save Bookmarks}
-	\label{fig:class-track-publication-trends}
-\end{figure}
+
+
 
 %-------------------------------------------------
 \subsection{Track Publication Trends}
-\subsubsection{Activity Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\textwidth]{atpt.png}
-	\caption{Activity Diagram: Track Publication Trends}
-	\label{fig:activity-track-publication-trends}
-\end{figure}
-\subsubsection{Sequence Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{setpt.png}
-	\caption{Sequence Diagram: Track Publication Trends}
-	\label{fig:sequence-track-publication-trends}
-\end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[height=0.9\textheight,keepaspectratio]{stpt.png}
-	\caption{State Diagram: Track Publication Trends}
-	\label{fig:state-track-publication-trends}
-\end{figure}
 \subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{CDTrackPublicationTrends.png}
-	\caption{Class Diagram: Track Publication Trends}
+
 	\label{fig:class-track-publication-trends}
 \end{figure}
-%-------------------------------------------------
-\subsection{View Dashboard}
-\subsubsection{Activity Diagram}
+%---------------
+\subsubsection{Sequence Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{ac7.png}
-	\caption{Activity Diagram: View Dashboard}
-	\label{fig:erd}
+	\includegraphics[width=\textwidth]{setpt.png}
+
+	\label{fig:sequence-track-publication-trends}
+\end{figure}
+
+----------------------------------
+\subsection{View Dashboard}
+\subsubsection{Class Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{CDViewDashboard.png}
+
+	\label{fig:class-view-dashboard}
 \end{figure}
 \subsubsection{Sequence Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{sevdb.png}
-	\caption{Sequence Diagram: View Dashboard}
+
 	\label{fig:erd}
 \end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{sta7.png}
-	\caption{State Diagram: View Dashboard}
-	\label{fig:erd}
-\end{figure}
+
+
+%-------------------------------------------------
+\subsection{Generate Reports}
 \subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{CDViewDashboard.png}
-	\caption{Class Diagram: View Dashboard}
-	\label{fig:class-view-dashboard}
-\end{figure}
-%-------------------------------------------------
-\subsection{Generate Reports}
-\subsubsection{Activity Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{activity_Generate-reports.png}
-	\caption{Activity Diagram - Generate reports}
-	\label{fig:activity_generate_reports}
+	\includegraphics[width=\textwidth]{CDReportGenerate.png}
+	
+	\label{fig:class-generate-reports}
 \end{figure}
 \subsubsection{Sequence Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=0.9\textheight,keepaspectratio]{sequence_Generate-reports.png}
-	\caption{Sequence diagram - Generate reports}
+
 	\label{fig:sequence_generate_repoclearpagerts}
 \end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[height=0.9\textheight,keepaspectratio]{state_Generate-reports.png}
-	\caption{State diagram - Generate reports}
-	\label{fig:state_generate_reports}
-\end{figure}
-\subsubsection{Class Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{CDReportGenerate.png}
-	\caption{Class Diagram - Generate Reports}
-	\label{fig:class-generate-reports}
-\end{figure}
+
+
 %-------------------------------------------------
 \subsection{View Trending Topics}
-\subsubsection{Activity Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{ac8.png}
-	\caption{Activity Diagram - View Trending Topics}
-	\label{fig:activity_view_trending_topics}
-\end{figure}
-\subsubsection{Sequence Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{sevtt.png}
-	\caption{Sequence diagram}
-	\label{fig:erd}
-\end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{sta8.png}
-	\caption{State diagram}
-	\label{fig:erd}
-\end{figure}
 \subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{CDViewTrendingTopics.png}
-	\caption{Class Diagram - View Trending Topics}
+
 	\label{fig:class-view-trending-topics}
 \end{figure}
 
-%-------------------------------------------------
-\subsection{Follow Topics}
-\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{follow topics.png}
-	\caption{Activity diagram}
+	\includegraphics[width=\textwidth]{sevtt.png}
+
 	\label{fig:erd}
+\end{figure}
+
+
+%-------------------------------------------------
+\subsection{Follow Topics}
+\subsubsection{Class Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{CDFollowTopics.png}
+
+	\label{fig:class-follow-topics}
 \end{figure}
 \subsubsection{Sequence Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{follow topice 2.png}
-	\caption{Sequence diagram}
+
 	\label{fig:erd}
 \end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.45\textwidth]{follow topice 3.png}
-	\caption{State diagram}
-	\label{fig:erd}
-\end{figure}
-\subsubsection{Class Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{CDFollowTopics.png}
-	\caption{Class Diagram - Follow Topics}
-	\label{fig:class-follow-topics}
-\end{figure}
+
+
 
 %-------------------------------------------------
 \subsection{Receive Notifications}
-\subsubsection{Activity Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Receive notifications.png}
-	\caption{Activity diagram}
-	\label{fig:erd}
-\end{figure}
 
 \subsubsection{Sequence Diagram}
 \begin{figure}[H]
@@ -2765,21 +2491,15 @@ keepaspectratio]{database.png}
 	\caption{Sequence diagram}
 	\label{fig:erd}
 \end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Receive notifications 2.png}
-	\caption{State diagram}
-	\label{fig:erd}
-\end{figure}
+
 
 %-------------------------------------------------
 \subsection{Manage System}
-\subsubsection{Activity Diagram}
+\subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{acms.png}
-	\caption{Activity diagram}
+	\includegraphics[width=0.9\textwidth]{CDManageSystem.png}
+	\caption{Class Diagram}
 	\label{fig:erd}
 \end{figure}
 \subsubsection{Sequence Diagram}
@@ -2789,107 +2509,65 @@ keepaspectratio]{database.png}
 	\caption{Sequence diagram}
 	\label{fig:erd}
 \end{figure}
-\subsubsection{Class Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{CDManageSystem.png}
-	\caption{Class Diagram}
-	\label{fig:erd}
-\end{figure}
+
 
 
 %-------------------------------------------------
 \subsection{Manage User}
-\subsubsection{Activity Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{activity_Manage-Users.png}
-	\caption{Activity Diagram - Manage Users}
-	\label{fig:activity_manage_users}
-\end{figure}
-\subsubsection{Sequence Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\textwidth]{sequence_Manage-Users.png}
-	\caption{Sequence diagram - Manage Users}
-	\label{fig:sequence_manage_users}
-\end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{state_Manage-Users.png}
-	\caption{State diagram - Manage Users}
-	\label{fig:state_manage_users}
-\end{figure}
 \subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{CDManageUser.png}
-	\caption{Class Diagram}
+
 	\label{fig:erd}
 \end{figure}
 
-%-------------------------------------------------
-\subsection{Configure API Sources}
-\subsubsection{Activity Diagram}
+\subsubsection{Sequence Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{con1ac.png}
-	\caption{Configure API Sources}
+	\includegraphics[width=0.7\textwidth]{sequence_Manage-Users.png}
+
+	\label{fig:sequence_manage_users}
+\end{figure}
+
+
+%-------------------------------------------------
+\subsection{Configure API Sources}
+\subsubsection{Class Diagram}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{CDManageAPI.png}
+
 	\label{fig:erd}
 \end{figure}
 \subsubsection{Sequence Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{con1tt.png}
-	\caption{Configure API Sources}
-	\label{fig:erd}
-\end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[height=0.9\textheight,keepaspectratio]{con1sta.png}
-	\caption{State diagram}
-	\label{fig:erd}
-\end{figure}
-\subsubsection{Class Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{CDManageAPI.png}
-	\caption{Class Diagram}
+
 	\label{fig:erd}
 \end{figure}
 
+
+
 %-------------------------------------------------
 \subsection{Sync Academic Data}
-\subsubsection{Activity Diagram}
+\subsubsection{Class Diagram}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{cyac1.png}
-	\caption{Sync Academic Data}
+	\includegraphics[width=0.8\textwidth]{CDSyncData.png}
+
 	\label{fig:erd}
 \end{figure}
 \subsubsection{Sequence Diagram}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{sytt1.png}
-	\caption{Sync Academic Data}
+
 	\label{fig:erd}
 \end{figure}
-\subsubsection{State Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{systa1.png}
-	\caption{Sync Academic Data}
-	\label{fig:erd}
-\end{figure}
-\subsubsection{Class Diagram}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{CDSyncData.png}
-	\caption{Class Diagram}
-	\label{fig:erd}
-\end{figure}
+
+
 
 
 \chapter{\centering\Large\bfseries V. SOFTWARE TESTING DOCUMENTATION}
