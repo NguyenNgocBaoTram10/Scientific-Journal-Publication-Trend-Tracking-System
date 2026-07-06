@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  6 JUL 2026 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  6 JUL 2026 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2986,11 +2986,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2305 \subsubsection{Sequence Diagram}
                                        
-<re11.png, id=1085, 359.54324pt x 512.51476pt>
-File: re11.png Graphic file (type png)
-<use re11.png>
-Package pdftex.def Info: re11.png  used on input line 2308.
-(pdftex.def)             Requested size: 452.9679pt x 645.70161pt.
+<ttdk.png, id=1085, 319.69438pt x 425.08812pt>
+File: ttdk.png Graphic file (type png)
+<use ttdk.png>
+Package pdftex.def Info: ttdk.png  used on input line 2308.
+(pdftex.def)             Requested size: 452.9679pt x 602.30615pt.
  [73 <./dk.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 2}) has been already used, duplicate ignored
@@ -3003,12 +3003,12 @@ File: CDLogin.png Graphic file (type png)
 <use CDLogin.png>
 Package pdftex.def Info: CDLogin.png  used on input line 2319.
 (pdftex.def)             Requested size: 452.9679pt x 380.37483pt.
- [74 <./re11.png>]
-<dn11.png, id=1098, 410.7345pt x 540.21825pt>
-File: dn11.png Graphic file (type png)
-<use dn11.png>
-Package pdftex.def Info: dn11.png  used on input line 2326.
-(pdftex.def)             Requested size: 452.9679pt x 595.78336pt.
+ [74 <./ttdk.png>]
+<ttdn.png, id=1098, 397.98688pt x 423.5825pt>
+File: ttdn.png Graphic file (type png)
+<use ttdn.png>
+Package pdftex.def Info: ttdn.png  used on input line 2326.
+(pdftex.def)             Requested size: 452.9679pt x 482.11993pt.
  [75 <./CDLogin.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 3}) has been already used, duplicate ignored
@@ -3027,7 +3027,7 @@ File: CDSearchResearchPaper.png Graphic file (type png)
 <use CDSearchResearchPaper.png>
 Package pdftex.def Info: CDSearchResearchPaper.png  used on input line 2338.
 (pdftex.def)             Requested size: 452.9679pt x 643.47487pt.
- [76 <./dn11.png>]
+ [76 <./ttdn.png>]
 Overfull \vbox (1.79144pt too high) has occurred while \output is active []
 
 
@@ -3061,11 +3061,11 @@ File: CDBookmark.png Graphic file (type png)
 Package pdftex.def Info: CDBookmark.png  used on input line 2378.
 (pdftex.def)             Requested size: 271.7835pt x 620.80426pt.
  [80 <./tt.png>]
-<sesb.png, id=1135, 4356.275pt x 3304.345pt>
-File: sesb.png Graphic file (type png)
-<use sesb.png>
-Package pdftex.def Info: sesb.png  used on input line 2385.
-(pdftex.def)             Requested size: 452.9679pt x 343.56311pt.
+<n.png, id=1135, 464.23438pt x 370.88562pt>
+File: n.png Graphic file (type png)
+<use n.png>
+Package pdftex.def Info: n.png  used on input line 2385.
+(pdftex.def)             Requested size: 452.9679pt x 361.89217pt.
  [81 <./CDBookmark.png>]
 <CDTrackPublicationTrends.png, id=1141, 1365.1pt x 722.7pt>
 File: CDTrackPublicationTrends.png Graphic file (type png)
@@ -3073,31 +3073,32 @@ File: CDTrackPublicationTrends.png Graphic file (type png)
 Package pdftex.def Info: CDTrackPublicationTrends.png  used on input line 2397.
 
 (pdftex.def)             Requested size: 452.9679pt x 239.804pt.
-<setpt.png, id=1142, 5323.89pt x 4424.53pt>
+ [82 <./n.png>]
+<setpt.png, id=1147, 5323.89pt x 4424.53pt>
 File: setpt.png Graphic file (type png)
 <use setpt.png>
 Package pdftex.def Info: setpt.png  used on input line 2405.
 (pdftex.def)             Requested size: 452.9679pt x 376.38388pt.
- [82 <./sesb.png> <./CDTrackPublicationTrends.png>]
-<CDViewDashboard.png, id=1149, 573.14125pt x 1004.75375pt>
+ [83 <./CDTrackPublicationTrends.png>]
+<CDViewDashboard.png, id=1153, 573.14125pt x 1004.75375pt>
 File: CDViewDashboard.png Graphic file (type png)
 <use CDViewDashboard.png>
 Package pdftex.def Info: CDViewDashboard.png  used on input line 2415.
 (pdftex.def)             Requested size: 271.7835pt x 476.46577pt.
- [83 <./setpt.png>]
-<sevdb.png, id=1155, 896.34875pt x 617.30624pt>
+ [84 <./setpt.png>]
+<sevdb.png, id=1159, 896.34875pt x 617.30624pt>
 File: sevdb.png Graphic file (type png)
 <use sevdb.png>
 Package pdftex.def Info: sevdb.png  used on input line 2422.
 (pdftex.def)             Requested size: 452.9679pt x 311.94913pt.
- [84 <./CDViewDashboard.png>]
-<CDReportGenerate.png, id=1161, 730.73pt x 806.01125pt>
+ [85 <./CDViewDashboard.png>]
+<CDReportGenerate.png, id=1166, 730.73pt x 806.01125pt>
 File: CDReportGenerate.png Graphic file (type png)
 <use CDReportGenerate.png>
 Package pdftex.def Info: CDReportGenerate.png  used on input line 2433.
 (pdftex.def)             Requested size: 452.9679pt x 499.63571pt.
- [85 <./sevdb.png (PNG copy)>]
-<sequence_Generate-reports.png, id=1167, 628.3475pt x 750.805pt>
+ [86 <./sevdb.png (PNG copy)>]
+<sequence_Generate-reports.png, id=1171, 628.3475pt x 750.805pt>
 File: sequence_Generate-reports.png Graphic file (type png)
 <use sequence_Generate-reports.png>
 Package pdftex.def Info: sequence_Generate-reports.png  used on input line 2440
@@ -3108,85 +3109,85 @@ Overfull \hbox (74.687pt too wide) in paragraph at lines 2440--2441
  [][] 
  []
 
-[86 <./CDReportGenerate.png>]
-<CDViewTrendingTopics.png, id=1173, 1365.1pt x 722.7pt>
+[87 <./CDReportGenerate.png>]
+<CDViewTrendingTopics.png, id=1177, 1365.1pt x 722.7pt>
 File: CDViewTrendingTopics.png Graphic file (type png)
 <use CDViewTrendingTopics.png>
 Package pdftex.def Info: CDViewTrendingTopics.png  used on input line 2451.
 (pdftex.def)             Requested size: 452.9679pt x 239.804pt.
- [87 <./sequence_Generate-reports.png (PNG copy)>]
-<sevtt.png, id=1178, 993.7125pt x 761.84625pt>
+ [88 <./sequence_Generate-reports.png (PNG copy)>]
+<sevtt.png, id=1182, 993.7125pt x 761.84625pt>
 File: sevtt.png Graphic file (type png)
 <use sevtt.png>
 Package pdftex.def Info: sevtt.png  used on input line 2459.
 (pdftex.def)             Requested size: 452.9679pt x 347.27995pt.
-<CDFollowTopics.png, id=1179, 1214.5375pt x 1104.125pt>
+<CDFollowTopics.png, id=1183, 1214.5375pt x 1104.125pt>
 File: CDFollowTopics.png Graphic file (type png)
 <use CDFollowTopics.png>
 Package pdftex.def Info: CDFollowTopics.png  used on input line 2470.
 (pdftex.def)             Requested size: 452.9679pt x 411.78828pt.
-[88 <./CDViewTrendingTopics.png> <./sevtt.png (PNG copy)>]
-<follow topice 2.png, id=1185, 914.41624pt x 416.55624pt>
+[89 <./CDViewTrendingTopics.png> <./sevtt.png (PNG copy)>]
+<follow topice 2.png, id=1189, 914.41624pt x 416.55624pt>
 File: follow topice 2.png Graphic file (type png)
 <use follow topice 2.png>
 Package pdftex.def Info: follow topice 2.png  used on input line 2477.
 (pdftex.def)             Requested size: 452.9679pt x 206.34534pt.
- [89 <./CDFollowTopics.png>]
-<Receive notifications 1.png, id=1191, 1128.215pt x 431.6125pt>
+ [90 <./CDFollowTopics.png>]
+<Receive notifications 1.png, id=1195, 1128.215pt x 431.6125pt>
 File: Receive notifications 1.png Graphic file (type png)
 <use Receive notifications 1.png>
 Package pdftex.def Info: Receive notifications 1.png  used on input line 2490.
 (pdftex.def)             Requested size: 452.9679pt x 173.28735pt.
-<CDManageSystem.png, id=1192, 2338.7375pt x 918.43124pt>
+<CDManageSystem.png, id=1196, 2338.7375pt x 918.43124pt>
 File: CDManageSystem.png Graphic file (type png)
 <use CDManageSystem.png>
 Package pdftex.def Info: CDManageSystem.png  used on input line 2501.
 (pdftex.def)             Requested size: 407.66833pt x 160.08322pt.
- [90 <./follow topice 2.png (PNG copy)> <./Receive notifications 1.png (PNG cop
+ [91 <./follow topice 2.png (PNG copy)> <./Receive notifications 1.png (PNG cop
 y)>]
-<sems.png, id=1198, 746.79pt x 1071.00125pt>
+<sems.png, id=1203, 746.79pt x 1071.00125pt>
 File: sems.png Graphic file (type png)
 <use sems.png>
 Package pdftex.def Info: sems.png  used on input line 2508.
 (pdftex.def)             Requested size: 407.66833pt x 584.65648pt.
- [91 <./CDManageSystem.png>]
-<CDManageUser.png, id=1206, 667.49374pt x 955.57pt>
+ [92 <./CDManageSystem.png>]
+<CDManageUser.png, id=1210, 667.49374pt x 955.57pt>
 File: CDManageUser.png Graphic file (type png)
 <use CDManageUser.png>
 Package pdftex.def Info: CDManageUser.png  used on input line 2520.
 (pdftex.def)             Requested size: 362.37569pt x 518.78505pt.
- [92 <./sems.png>]
-<sequence_Manage-Users.png, id=1213, 529.98pt x 949.5475pt>
+ [93 <./sems.png>]
+<sequence_Manage-Users.png, id=1217, 529.98pt x 949.5475pt>
 File: sequence_Manage-Users.png Graphic file (type png)
 <use sequence_Manage-Users.png>
 Package pdftex.def Info: sequence_Manage-Users.png  used on input line 2528.
 (pdftex.def)             Requested size: 317.07614pt x 568.09566pt.
- [93 <./CDManageUser.png>]
-<CDManageAPI.png, id=1219, 761.84625pt x 1037.8775pt>
+ [94 <./CDManageUser.png>]
+<CDManageAPI.png, id=1223, 761.84625pt x 1037.8775pt>
 File: CDManageAPI.png Graphic file (type png)
 <use CDManageAPI.png>
 Package pdftex.def Info: CDManageAPI.png  used on input line 2539.
 (pdftex.def)             Requested size: 362.37569pt x 493.6621pt.
- [94 <./sequence_Manage-Users.png (PNG copy)>]
-<con1tt.png, id=1224, 867.24pt x 826.08624pt>
+ [95 <./sequence_Manage-Users.png (PNG copy)>]
+<con1tt.png, id=1228, 867.24pt x 826.08624pt>
 File: con1tt.png Graphic file (type png)
 <use con1tt.png>
 Package pdftex.def Info: con1tt.png  used on input line 2546.
 (pdftex.def)             Requested size: 452.9679pt x 431.47067pt.
- [95 <./CDManageAPI.png>]
-<CDSyncData.png, id=1230, 1700.3525pt x 994.71625pt>
+ [96 <./CDManageAPI.png>]
+<CDSyncData.png, id=1234, 1700.3525pt x 994.71625pt>
 File: CDSyncData.png Graphic file (type png)
 <use CDSyncData.png>
 Package pdftex.def Info: CDSyncData.png  used on input line 2558.
 (pdftex.def)             Requested size: 362.37569pt x 211.97774pt.
 
-[96 <./con1tt.png>]
-<sytt1.png, id=1236, 904.37875pt x 795.97375pt>
+[97 <./con1tt.png>]
+<sytt1.png, id=1241, 904.37875pt x 795.97375pt>
 File: sytt1.png Graphic file (type png)
 <use sytt1.png>
 Package pdftex.def Info: sytt1.png  used on input line 2565.
 (pdftex.def)             Requested size: 452.9679pt x 398.66605pt.
- [97 <./CDSyncData.png>] [98 <./sytt1.png>]
+ [98 <./CDSyncData.png>] [99 <./sytt1.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\<let>-command' on input line 2573.
@@ -3257,7 +3258,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 <to be read again> 
                    \relax 
 l.2607 \subsection{Testing Types}
-                                  [99
+                                  [100
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
@@ -3277,7 +3278,7 @@ as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2649 \section{Test Plan}
-                           [100]
+                           [101]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
@@ -3289,9 +3290,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 <to be read again> 
                    \relax 
 l.2671 \subsection{Exit Criteria}
-                                  [101] [102] [103] [104] [105] [106] [107]
-[108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119]
-[120] [121] [122] [123] [124] [125] (main.aux)
+                                  [102] [103] [104] [105] [106] [107] [108]
+[109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
+[121] [122] [123] [124] [125] [126] (main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
@@ -3304,8 +3305,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A943D5D375D91A12BAA3C05C88304032;24768.
  ) 
 Here is how much of TeX's memory you used:
- 13321 strings out of 467509
- 208708 string characters out of 5418889
+ 13322 strings out of 467509
+ 208695 string characters out of 5418889
  667757 words of memory out of 5000000
  42067 multiletter control sequences out of 15000+600000
  644085 words of font info for 68 fonts, out of 8000000 for 9000
@@ -3320,9 +3321,9 @@ ex/vnr/vnr10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/P
 rogram Files/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program Files/MiKTeX/f
 onts/type1/vntex/vnr/vnti12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/
 vntt10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (125 pages, 8163970 bytes).
+Output written on main.pdf (126 pages, 7819103 bytes).
 PDF statistics:
- 1521 PDF objects out of 1728 (max. 8388607)
- 333 named destinations out of 1000 (max. 500000)
+ 1525 PDF objects out of 1728 (max. 8388607)
+ 334 named destinations out of 1000 (max. 500000)
  1763 words of extra memory for PDF output out of 10000 (max. 10000000)
 
