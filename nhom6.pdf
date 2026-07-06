@@ -160,7 +160,7 @@ bottom=2.5cm
 			
 		\end{tabularx}
 		
-	
+		\caption{Project Team Information}
 	\end{table}
 	
 \section{Project Scope and Limitations}
@@ -183,12 +183,12 @@ bottom=2.5cm
 \subsubsection{Major Features for Administrator}
 
 \begin{itemize}
-	\item Log in 
+	\item Log in and log out.
 	\item Manage user accounts.
 	\item Configure academic API sources (Semantic Scholar, OpenAlex, and Crossref).
 	\item Monitor the data synchronization process.
 	\item Manage system notifications.
-
+	\item Generate system reports.
 
 \end{itemize}
 \subsection{Project Limitations}
@@ -586,7 +586,7 @@ bottom=2.5cm
 			Database Administration & phpMyAdmin \\
 			
 			\rowcolor{rowwhite}
-			Academic APIs &  OpenAlex API, Crossref REST API,Semantic Scholar API \\
+			Academic APIs &  OpenAlex API, Crossref REST API \\
 			
 			\rowcolor{rowblue}
 			API Testing & Postman \\
@@ -618,15 +618,15 @@ bottom=2.5cm
 	
 
 
-The Scientific Journal Publication Trend Tracking System (SJPTTS) is a web-based application developed to help researchers, students, lecturers, and academic institutions search, monitor, and analyze scientific publication trends. The system integrates academic data from Semantic Scholar API,  OpenAlex, and Crossref to provide comprehensive and up-to-date publication information.
+The Scientific Journal Publication Trend Tracking System (SJPTTS) is a web-based application developed to help researchers, students, lecturers, and academic institutions search, monitor, and analyze scientific publication trends. The system integrates academic data from  OpenAlex, and Crossref to provide comprehensive and up-to-date publication information.
 
-The system allows users to search scientific publications using keywords, authors, journals, research fields. Users can view detailed publication information, bookmark publications, follow research topics, receive notifications about newly published papers, analyze publication trends through interactive dashboards, and export reports in PDF or HTMl format.
+The system allows users to search scientific publications using keywords, authors, journals, research fields. Users can view detailed publication information, bookmark publications, follow research topics, receive notifications about newly published papers, analyze publication trends through interactive dashboards, and export reports in PDF or CSV format.
 
 Administrators can manage user accounts, configure academic API sources, synchronize publication data, monitor system operations, and maintain the overall performance of the platform. The system aims to provide an efficient solution for discovering scientific literature and supporting research through publication trend analysis.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.95\textwidth]{Context_Diagram.png}
-
+	\caption{Publication Trend Tracking System}
 	\label{fig: usecase}
 \end{figure}
 
@@ -651,7 +651,7 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\hline
 	
 	2 & Administrator &
-	System administrator responsible for managing users, configuring the system, setting up and validating academic data sources (OpenAlex, Crossref,Semantic Scholar API), synchronizing data, and monitoring system operations. \\
+	System administrator responsible for managing users, configuring the system, setting up and validating academic data sources (OpenAlex, Crossref), synchronizing data, and monitoring system operations. \\
 	\hline
 	
 	3 & Publication Trend Tracking System &
@@ -678,14 +678,9 @@ Administrators can manage user accounts, configure academic API sources, synchro
 
 \subsubsection{Use Case Descriptions}
 \small
-% Đặt 2 dòng định nghĩa màu này TRƯỚC bảng (chỉ cần định nghĩa 1 lần trong toàn bộ file,
-% nếu đã có \definecolor{mintheader} / \definecolor{mintrow} ở chỗ khác rồi thì bỏ qua 2 dòng dưới)
-\definecolor{mintheader}{HTML}{7DCEA0}
-\definecolor{mintrow}{HTML}{EAFBF1}
 
-\begin{longtable}{|>{\raggedright\arraybackslash}p{2cm}|>{\raggedright\arraybackslash}p{1.8cm}|>{\raggedright\arraybackslash}p{2.7cm}|>{\raggedright\arraybackslash}p{4.7cm}|>{\raggedright\arraybackslash}p{2.8cm}|}
+\begin{longtable}{|p{2.3cm}|p{2.3cm}|p{3.3cm}|p{5.5cm}|p{3.3cm}|}
 	\hline
-	\rowcolor{mintheader}
 	\textbf{Main UC Group} &
 	\textbf{Main Agent (Actor)} &
 	\textbf{Sub-UCs} &
@@ -695,7 +690,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\endfirsthead
 	
 	\hline
-	\rowcolor{mintheader}
 	\textbf{Main UC Group} &
 	\textbf{Main Agent (Actor)} &
 	\textbf{Sub-UCs} &
@@ -704,7 +698,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	\hline
 	\endhead
 	
-	\rowcolor{mintrow}
 	Manage Account &
 	User &
 	Register, Login &
@@ -712,7 +705,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	A registered account is created and a secure user session is established. \\
 	\hline
 	
-	\rowcolor{mintrow}
 	Search Publications &
 	User &
 	Search Research Papers, View Paper Details &
@@ -720,7 +712,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	Matching publications and detailed publication information are displayed. \\
 	\hline
 	
-	\rowcolor{mintrow}
 	Manage Bookmarks &
 	User &
 	Save Bookmarks &
@@ -728,7 +719,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	The selected publication is stored in the user's bookmark list. \\
 	\hline
 	
-	\rowcolor{mintrow}
 	Track Publication Trends &
 	User &
 	Track Publication Trends, View Dashboard, View Trending Topics &
@@ -736,7 +726,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	Trend statistics, dashboards and trending topics are displayed. \\
 	\hline
 	
-	\rowcolor{mintrow}
 	Follow Topics &
 	User &
 	Follow Topics, Receive Notifications &
@@ -744,7 +733,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	The selected topic is added to the user's followed-topic list and notifications become available. \\
 	\hline
 	
-	\rowcolor{mintrow}
 	Generate Reports &
 	User &
 	Generate Reports &
@@ -752,7 +740,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	An analytical report summarizing publication trends is generated. \\
 	\hline
 	
-	\rowcolor{mintrow}
 	Manage System &
 	Administrator &
 	Manage System, Configure API Sources, Synchronize Academic Data &
@@ -760,7 +747,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	System settings and publication metadata are successfully updated. \\
 	\hline
 	
-	\rowcolor{mintrow}
 	Manage Users &
 	Administrator &
 	Manage Users &
@@ -768,7 +754,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	User information and access permissions are updated. \\
 	\hline
 	
-	\rowcolor{mintrow}
 	Configure API Sources &
 	Administrator &
 	Configure API Sources &
@@ -776,7 +761,6 @@ Administrators can manage user accounts, configure academic API sources, synchro
 	API configuration settings are successfully validated and stored. \\
 	\hline
 	
-	\rowcolor{mintrow}
 	Synchronize Academic Data &
 	Administrator &
 	Synchronize Academic Data &
@@ -788,18 +772,17 @@ Administrators can manage user accounts, configure academic API sources, synchro
 \section{Functional Requirement}
 \subsection{System Functional Overview}
 \subsubsection{Screens Flow}
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ad.jpg}
+	\caption{Screens Flow}
+	\label{fig:Screens Flow-view-paper-details}
+\end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{res.jpg}
-
-	\label{fig:Screen Description-view-paper-details}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{admin.png}
-
+	\caption{Screen Description}
 	\label{fig:Screen Description-view-paper-details}
 \end{figure}
 
