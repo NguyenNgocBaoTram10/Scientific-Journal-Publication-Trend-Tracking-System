@@ -4989,6 +4989,295 @@ The following features are excluded from the testing scope:
 	
 \end{longtable}
 
+\chapter{\centering\Large\bfseries VI. RELEASE PACKAGE AND USER GUIDES}
+\addcontentsline{toc}{chapter}{VI. RELEASE PACKAGE AND USER GUIDES}
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+
+This chapter describes the final release package, installation guide, deployment steps, and user guide for the Scientific Journal Publication Trend Tracking System. The system is a web-based application developed with HTML, CSS, JavaScript, PHP, and MySQL. It supports two main roles: normal users and administrators.
+
+\section{Deliverable Package}
+
+The deliverable package includes the source code, database scripts, technical documentation, test evidence, and user guide required to install, operate, and maintain the system.
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|p{0.08\textwidth}|p{0.26\textwidth}|p{0.56\textwidth}|}
+\hline
+\textbf{No.} & \textbf{Deliverable Item} & \textbf{Description} \\
+\hline
+1 & Source code & The complete application source code, including front-end pages, PHP API files, configuration files, and report source files. \\
+\hline
+2 & Database scripts & SQL scripts and database structure used to create users, roles, topics, research papers, API sources, synchronization logs, and notifications. \\
+\hline
+3 & Final report & The final project report prepared in LaTeX format. \\
+\hline
+4 & Test evidence & Screenshots showing registration, login, profile management, admin functions, API synchronization, and notification viewing. \\
+\hline
+5 & User guide & Instructions for installing, running, and using the system for both normal users and administrators. \\
+\hline
+\end{tabular}
+\caption{Deliverable package of the system}
+\end{table}
+
+\section{Installation Guides}
+
+\subsection{System Requirements}
+
+The system can run locally on a Windows computer using XAMPP. The recommended environment is shown in Table \ref{tab:system-requirements}.
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|p{0.28\textwidth}|p{0.28\textwidth}|p{0.34\textwidth}|}
+\hline
+\textbf{Component} & \textbf{Minimum} & \textbf{Recommended} \\
+\hline
+Operating system & Windows 10 & Windows 10/11 \\
+\hline
+Web server & Apache from XAMPP & Latest stable XAMPP version \\
+\hline
+Database & MySQL or MariaDB & MariaDB from XAMPP \\
+\hline
+PHP & PHP 8.0 or later & PHP 8.0 or later with PDO enabled \\
+\hline
+Browser & Microsoft Edge or Chrome & Latest Chrome, Edge, or Firefox \\
+\hline
+Tools & Git and VS Code & Git, VS Code, TeXstudio, and MiKTeX \\
+\hline
+\end{tabular}
+\caption{System requirements}
+\label{tab:system-requirements}
+\end{table}
+
+\subsection{Installation Steps}
+
+\textbf{Step 1: Clone or download the project source code.}
+
+Open PowerShell and clone the repository into the XAMPP \texttt{htdocs} directory.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{gitclone.png}
+	\caption{Clone project source code}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\begin{verbatim}
+cd C:\xampp\htdocs
+git clone https://github.com/NguyenNgocBaoTram10/Scientific-Journal-Publication-Trend-Tracking-System.git
+\end{verbatim}
+
+\textbf{Step 2: Start Apache and MySQL in XAMPP.}
+
+Open XAMPP Control Panel and start both Apache and MySQL modules. The modules must show the running status before accessing the website.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{Xampp.png}
+	\caption{Start Apache and MySQL services}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\textbf{Step 3: Create the database.}
+
+Open phpMyAdmin at \texttt{http://localhost/phpmyadmin}, create the database named \texttt{sjptts}, and execute the SQL scripts required by the system.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{databasesjptts.png}
+	\caption{Create database and required table}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\textbf{Step 4: Configure the database connection.}
+
+Open \texttt{source\_code/config/database.php} and confirm that the database name, username, and password match the local XAMPP environment.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{databasephp.png}
+	\caption{Database connection configuration}
+	\label{fig: ChapterVI}
+\end{figure}
+
+
+\begin{verbatim}
+$host = "localhost";
+$dbname = "sjptts";
+$username = "root";
+$password = "";
+\end{verbatim}
+
+\textbf{Step 5: Run the website.}
+
+Access the login page through the browser.
+
+\begin{verbatim}
+http://localhost/Scientific-Journal-Publication-Trend-Tracking-System/source_code/page/dangnhap.html
+\end{verbatim}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{trangchulogin.png}
+	\caption{Run application on localhost}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\section{User Manual}
+
+\subsection{Overview}
+
+The system provides two main workflows. Normal users can register, log in, view the home page, manage their personal profile, view research information, and read notifications. Administrators can manage users, topics, API sources, research papers, notifications, and API data synchronization.
+
+\subsection{Normal User Workflow}
+
+\textbf{Register a new account.}
+
+The user opens the registration page, enters full name, username, email, and password, then submits the form. The system validates the input and stores the new account in the database.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{dangkyacc.png}
+	\caption{User registration page}
+	\label{fig: ChapterVI}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{dangkythanhcong.png}
+	\caption{User registration successful}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\textbf{Log in to the system.}
+
+The user enters username and password on the login page. After successful authentication, the system redirects the user to the home page.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{trangchulogin.png}
+	\caption{User login successfully}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\textbf{View and update personal profile.}
+
+The user opens the personal profile page to view account information such as full name, email, username, user ID, and email status. The user can update editable information and save the changes.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{hosocanhan.png}
+	\caption{User profile management}
+	\label{fig: ChapterVI}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{hosocanhanedit.png}
+	\caption{User profile details editing}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\textbf{View notifications.}
+
+The user clicks the notification icon and opens the notification page. The system displays notification title, content, type, link, and read status.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{noti.png}
+	\caption{User notification page}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\subsection{Administrator Workflow}
+
+\textbf{Access the Admin page.}
+
+An administrator logs in with an account that has the Admin role. The system checks the session and role before allowing access to the Admin page.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{admana.png}
+	\caption{Admin page access}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\textbf{Manage users.}
+
+The administrator can view all user accounts, lock or unlock accounts, and change the role between User and Admin. This function supports account control and role-based access management.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{quanlyad.png}
+	\caption{User management}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\textbf{Manage research topics.}
+
+The administrator can add, edit, delete, and retrieve research topics. Each topic contains a topic name and description. The topic list is refreshed after each action.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{topic.png}
+	\caption{Research topic management}
+	\label{fig: ChapterVI}
+\end{figure}
+\textbf{Manage API sources.}
+
+The administrator manages external API sources used by the system. Each API source includes name, base URL, status, priority, and description. The administrator can enable, disable, edit, or delete API sources.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{API.png}
+	\caption{API source management}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\textbf{Synchronize API data.}
+
+The administrator selects an API source, enters a search keyword and record limit, then clicks the synchronization button. The system fetches data from the selected API, converts the returned data, inserts new research papers, updates existing records, and saves the synchronization log.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{dongbo.png}
+	\caption{API data synchronization}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{nhatkydongbo.png}
+	\caption{API data synchronization log}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\textbf{Manage research papers.}
+
+The administrator can add, edit, delete, and retrieve research paper records. Paper information includes title, authors, journal, publication year, DOI, URL, abstract, and topic.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{quanlybao.png}
+	\caption{Research paper management}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\textbf{Manage notifications.}
+
+The administrator can create a notification with title, type, link, and content. The notification can be sent to one user or all active users. Sent notifications are stored in the database and displayed in the notification history table.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{formnoti.png}
+	\caption{Notification management}
+	\label{fig: ChapterVI}
+\end{figure}
+
+\section{Release Notes}
+
+The released version provides the core functions required for the Scientific Journal Publication Trend Tracking System, including user authentication, profile management, admin management modules, API source management, API data synchronization, research paper management, and notification management. The system is ready for local deployment and functional demonstration through XAMPP.
 \end{document}
+
 
 
