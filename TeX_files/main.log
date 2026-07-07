@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  7 JUL 2026 19:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.25)  7 JUL 2026 19:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1509,12 +1509,25 @@ as been already used, duplicate ignored
                    \relax 
 l.619 \section{Product Overview}
                                 
-<Context_Diagram.png, id=695, 1109.14375pt x 679.53876pt>
-File: Context_Diagram.png Graphic file (type png)
-<use Context_Diagram.png>
-Package pdftex.def Info: Context_Diagram.png  used on input line 630.
-(pdftex.def)             Requested size: 430.31812pt x 263.63998pt.
 
+LaTeX Warning: File `Context_Diagram.png' not found on input line 630.
+
+
+! Package pdftex.def Error: File `Context_Diagram.png' not found: using draft s
+etting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.630 ...idth=0.95\textwidth]{Context_Diagram.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[10
+
+]
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
@@ -1531,9 +1544,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 659--659
 []|\T5/cmr/m/n/12 Publication Trend
  []
 
-[10
-
- <./Context_Diagram.png>] [11]
+[11] [12]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
@@ -1546,11 +1557,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.673 \subsubsection{Diagram}
                              
-<ucd.png, id=705, 1035.87pt x 849.1725pt>
-File: ucd.png Graphic file (type png)
-<use ucd.png>
-Package pdftex.def Info: ucd.png  used on input line 676.
-(pdftex.def)             Requested size: 452.9679pt x 371.33066pt.
+
+LaTeX Warning: File `ucd.png' not found on input line 676.
+
+
+! Package pdftex.def Error: File `ucd.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.676 	\includegraphics[width=\textwidth]{ucd.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .2.2.2}) has been already used, duplicate ignored
@@ -1577,26 +1598,46 @@ Overfull \hbox (16.41492pt too wide) in paragraph at lines 783--783
 []|\T5/cmr/m/n/10.95 Administrator|  
  []
 
-[12
+[13
 
- <./ucd.png>] [13]
+] [14]
 pdfTeX warning (ext4): destination with the same identifier (name{section.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.790 \section{Functional Requirement}
                                       
-<res.jpg, id=719, 844.3545pt x 392.06474pt>
-File: res.jpg Graphic file (type jpg)
-<use res.jpg>
-Package pdftex.def Info: res.jpg  used on input line 797.
-(pdftex.def)             Requested size: 452.9679pt x 210.32986pt.
-<admin.png, id=720, 2730.2pt x 4207.72pt>
-File: admin.png Graphic file (type png)
-<use admin.png>
-Package pdftex.def Info: admin.png  used on input line 803.
-(pdftex.def)             Requested size: 452.9679pt x 698.09613pt.
- [14] [15 <./res.jpg>] [16 <./admin.png>] [17] [18]
+
+LaTeX Warning: File `res.jpg' not found on input line 797.
+
+
+! Package pdftex.def Error: File `res.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.797 	\includegraphics[width=\textwidth]{res.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `admin.png' not found on input line 803.
+
+
+! Package pdftex.def Error: File `admin.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.803 ...ludegraphics[width=\textwidth]{admin.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[15] [16] [17] [18] [19]
 
 Package array Warning: Column L is already defined on input line 911.
 
@@ -1639,376 +1680,1056 @@ Overfull \hbox (21.82341pt too wide) in alignment at lines 934--957
  [] [] [] [] 
  []
 
-[19]
+[20]
 
 Package array Warning: Column L is already defined on input line 961.
 
 
 Package array Warning: Column C is already defined on input line 962.
 
-[20]
-<erd.png, id=753, 541.27219pt x 371.13657pt>
-File: erd.png Graphic file (type png)
-<use erd.png>
-Package pdftex.def Info: erd.png  used on input line 991.
-(pdftex.def)             Requested size: 452.9679pt x 310.5973pt.
- [21]
-<gđk.jpg, id=758, 694.595pt x 779.91376pt>
-File: gđk.jpg Graphic file (type jpg)
-<use gđk.jpg>
-Package pdftex.def Info: gđk.jpg  used on input line 1015.
-(pdftex.def)             Requested size: 452.9679pt x 508.62782pt.
- [22 <./erd.png>]
-<dkl.jpg, id=764, 694.595pt x 521.95pt>
-File: dkl.jpg Graphic file (type jpg)
-<use dkl.jpg>
-Package pdftex.def Info: dkl.jpg  used on input line 1024.
-(pdftex.def)             Requested size: 452.9679pt x 340.39441pt.
- [23 <./gđk.jpg>]
-<tentontai.png, id=769, 208.27812pt x 307.64937pt>
-File: tentontai.png Graphic file (type png)
-<use tentontai.png>
-Package pdftex.def Info: tentontai.png  used on input line 1034.
-(pdftex.def)             Requested size: 452.9679pt x 669.16951pt.
- [24 <./dkl.jpg>]
-<matkhaukhac.png, id=774, 279.0425pt x 340.77313pt>
-File: matkhaukhac.png Graphic file (type png)
-<use matkhaukhac.png>
-Package pdftex.def Info: matkhaukhac.png  used on input line 1044.
-(pdftex.def)             Requested size: 452.9679pt x 553.19339pt.
- [25 <./tentontai.png>]
-<dk.jpg, id=781, 719.68875pt x 789.95125pt>
-File: dk.jpg Graphic file (type jpg)
-<use dk.jpg>
-Package pdftex.def Info: dk.jpg  used on input line 1054.
-(pdftex.def)             Requested size: 452.9679pt x 497.20183pt.
- [26 <./matkhaukhac.png>] [27 <./dk.jpg>]
-File: dk.jpg Graphic file (type jpg)
-<use dk.jpg>
-Package pdftex.def Info: dk.jpg  used on input line 1080.
-(pdftex.def)             Requested size: 452.9679pt x 497.20183pt.
-<dnl.jpg, id=792, 694.595pt x 469.755pt>
-File: dnl.jpg Graphic file (type jpg)
-<use dnl.jpg>
-Package pdftex.def Info: dnl.jpg  used on input line 1089.
-(pdftex.def)             Requested size: 452.9679pt x 306.35497pt.
- [28]
-<gdc.jpg, id=797, 1346.02875pt x 2392.94pt>
-File: gdc.jpg Graphic file (type jpg)
-<use gdc.jpg>
-Package pdftex.def Info: gdc.jpg  used on input line 1098.
-(pdftex.def)             Requested size: 452.9679pt x 805.26382pt.
- [29 <./dnl.jpg>]
-Overfull \vbox (104.75696pt too high) has occurred while \output is active []
+
+LaTeX Warning: File `erd.png' not found on input line 991.
 
 
-[30 <./gdc.jpg>]
-<prof.jpg, id=806, 1346.02875pt x 1194.4625pt>
-File: prof.jpg Graphic file (type jpg)
-<use prof.jpg>
-Package pdftex.def Info: prof.jpg  used on input line 1121.
-(pdftex.def)             Requested size: 452.9679pt x 401.95634pt.
-<editprof.jpg, id=807, 1368.11125pt x 1194.4625pt>
-File: editprof.jpg Graphic file (type jpg)
-<use editprof.jpg>
-Package pdftex.def Info: editprof.jpg  used on input line 1130.
-(pdftex.def)             Requested size: 452.9679pt x 395.46788pt.
- [31 <./prof.jpg>]
-<tencstontai.png, id=813, 927.465pt x 410.03188pt>
-File: tencstontai.png Graphic file (type png)
-<use tencstontai.png>
-Package pdftex.def Info: tencstontai.png  used on input line 1139.
-(pdftex.def)             Requested size: 452.9679pt x 200.26044pt.
-<emailkhonghople.png, id=814, 927.96687pt x 419.06563pt>
-File: emailkhonghople.png Graphic file (type png)
-<use emailkhonghople.png>
-Package pdftex.def Info: emailkhonghople.png  used on input line 1148.
-(pdftex.def)             Requested size: 452.9679pt x 204.56383pt.
- [32 <./editprof.jpg> <./tencstontai.png>]
-<chinhsuathanhcong.png, id=820, 920.43875pt x 420.06938pt>
-File: chinhsuathanhcong.png Graphic file (type png)
-<use chinhsuathanhcong.png>
-Package pdftex.def Info: chinhsuathanhcong.png  used on input line 1157.
-(pdftex.def)             Requested size: 452.9679pt x 206.72675pt.
-<logout.jpg, id=821, 695.59875pt x 524.96124pt>
-File: logout.jpg Graphic file (type jpg)
-<use logout.jpg>
-Package pdftex.def Info: logout.jpg  used on input line 1178.
-(pdftex.def)             Requested size: 452.9679pt x 341.84557pt.
+! Package pdftex.def Error: File `erd.png' not found: using draft setting.
 
-[33 <./emailkhonghople.png> <./chinhsuathanhcong.png>]
-<trangdangnhap.png, id=828, 915.92188pt x 414.54875pt>
-File: trangdangnhap.png Graphic file (type png)
-<use trangdangnhap.png>
-Package pdftex.def Info: trangdangnhap.png  used on input line 1187.
-(pdftex.def)             Requested size: 452.9679pt x 205.01566pt.
- [34 <./logout.jpg> <./trangdangnhap.png>]
-<trangtimkiem.png, id=834, 926.46124pt x 421.575pt>
-File: trangtimkiem.png Graphic file (type png)
-<use trangtimkiem.png>
-Package pdftex.def Info: trangtimkiem.png  used on input line 1220.
-(pdftex.def)             Requested size: 452.9679pt x 206.11682pt.
-<nambatdaulon.png, id=835, 921.4425pt x 425.08812pt>
-File: nambatdaulon.png Graphic file (type png)
-<use nambatdaulon.png>
-Package pdftex.def Info: nambatdaulon.png  used on input line 1229.
-(pdftex.def)             Requested size: 452.9679pt x 208.96309pt.
- [35 <./trangtimkiem.png>]
-<ketquatimkiem.png, id=841, 923.45pt x 420.06938pt>
-File: ketquatimkiem.png Graphic file (type png)
-<use ketquatimkiem.png>
-Package pdftex.def Info: ketquatimkiem.png  used on input line 1240.
-(pdftex.def)             Requested size: 452.9679pt x 206.04732pt.
- [36 <./nambatdaulon.png> <./ketquatimkiem.png>]
-<luuyeuthich.png, id=848, 918.93312pt x 422.07687pt>
-File: luuyeuthich.png Graphic file (type png)
-<use luuyeuthich.png>
-Package pdftex.def Info: luuyeuthich.png  used on input line 1277.
-(pdftex.def)             Requested size: 452.9679pt x 208.05602pt.
-<dayeuthich.png, id=849, 921.4425pt x 423.5825pt>
-File: dayeuthich.png Graphic file (type png)
-<use dayeuthich.png>
-Package pdftex.def Info: dayeuthich.png  used on input line 1286.
-(pdftex.def)             Requested size: 452.9679pt x 208.22296pt.
- [37 <./luuyeuthich.png>]
-<trangyeuthich.png, id=857, 905.3825pt x 414.54875pt>
-File: trangyeuthich.png Graphic file (type png)
-<use trangyeuthich.png>
-Package pdftex.def Info: trangyeuthich.png  used on input line 1295.
-(pdftex.def)             Requested size: 452.9679pt x 207.40036pt.
-<xoa.png, id=858, 927.96687pt x 416.05438pt>
-File: xoa.png Graphic file (type png)
-<use xoa.png>
-Package pdftex.def Info: xoa.png  used on input line 1304.
-(pdftex.def)             Requested size: 452.9679pt x 203.09392pt.
- [38 <./dayeuthich.png> <./trangyeuthich.png>]
-<lienket.png, id=867, 920.43875pt x 423.08063pt>
-File: lienket.png Graphic file (type png)
-<use lienket.png>
-Package pdftex.def Info: lienket.png  used on input line 1313.
-(pdftex.def)             Requested size: 452.9679pt x 208.20865pt.
- [39 <./xoa.png> <./lienket.png>]
-<ptxh.png, id=876, 1230.5975pt x 914.41624pt>
-File: ptxh.png Graphic file (type png)
-<use ptxh.png>
-Package pdftex.def Info: ptxh.png  used on input line 1385.
-(pdftex.def)             Requested size: 452.9679pt x 336.58461pt.
- [40]
-<thieu.png, id=884, 929.4725pt x 414.54875pt>
-File: thieu.png Graphic file (type png)
-<use thieu.png>
-Package pdftex.def Info: thieu.png  used on input line 1395.
-(pdftex.def)             Requested size: 452.9679pt x 202.0237pt.
-<batdaulonhon.png, id=885, 924.95563pt x 418.56375pt>
-File: batdaulonhon.png Graphic file (type png)
-<use batdaulonhon.png>
-Package pdftex.def Info: batdaulonhon.png  used on input line 1405.
-(pdftex.def)             Requested size: 452.9679pt x 204.97667pt.
- [41 <./ptxh.png (PNG copy)> <./thieu.png>]
-<ketquaphantich1.png, id=891, 276.03125pt x 407.02063pt>
-File: ketquaphantich1.png Graphic file (type png)
-<use ketquaphantich1.png>
-Package pdftex.def Info: ketquaphantich1.png  used on input line 1414.
-(pdftex.def)             Requested size: 452.9679pt x 667.99014pt.
-<ketquaphantich2.png, id=892, 283.55937pt x 236.885pt>
-File: ketquaphantich2.png Graphic file (type png)
-<use ketquaphantich2.png>
-Package pdftex.def Info: ketquaphantich2.png  used on input line 1420.
-(pdftex.def)             Requested size: 452.9679pt x 378.44179pt.
- [42 <./batdaulonhon.png>] [43 <./ketquaphantich1.png>]
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.991 	\includegraphics[width=\textwidth]{erd.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[21] [22]
+
+LaTeX Warning: File `gđk.jpg' not found on input line 1015.
+
+
+! Package pdftex.def Error: File `gđk.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1015 ...ludegraphics[width=\textwidth]{gđk.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `dkl.jpg' not found on input line 1024.
+
+
+! Package pdftex.def Error: File `dkl.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1024 ...cludegraphics[width=\textwidth]{dkl.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[23]
+
+LaTeX Warning: File `tentontai.png' not found on input line 1034.
+
+
+! Package pdftex.def Error: File `tentontai.png' not found: using draft setting
+.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1034 ...raphics[width=\textwidth]{tentontai.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[24]
+
+LaTeX Warning: File `matkhaukhac.png' not found on input line 1044.
+
+
+! Package pdftex.def Error: File `matkhaukhac.png' not found: using draft setti
+ng.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1044 ...phics[width=\textwidth]{matkhaukhac.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[25]
+
+LaTeX Warning: File `dk.jpg' not found on input line 1054.
+
+
+! Package pdftex.def Error: File `dk.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1054 	\includegraphics[width=\textwidth]{dk.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[26]
+
+LaTeX Warning: File `dk.jpg' not found on input line 1080.
+
+
+! Package pdftex.def Error: File `dk.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1080 \includegraphics[width=\textwidth]{dk.jpg}
+                                                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[27]
+
+LaTeX Warning: File `dnl.jpg' not found on input line 1089.
+
+
+! Package pdftex.def Error: File `dnl.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1089 ...cludegraphics[width=\textwidth]{dnl.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[28]
+
+LaTeX Warning: File `gdc.jpg' not found on input line 1098.
+
+
+! Package pdftex.def Error: File `gdc.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1098 ...cludegraphics[width=\textwidth]{gdc.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[29]
+
+LaTeX Warning: File `prof.jpg' not found on input line 1121.
+
+
+! Package pdftex.def Error: File `prof.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1121 ...ludegraphics[width=\textwidth]{prof.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[30]
+
+LaTeX Warning: File `editprof.jpg' not found on input line 1130.
+
+
+! Package pdftex.def Error: File `editprof.jpg' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1130 ...graphics[width=\textwidth]{editprof.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[31]
+
+LaTeX Warning: File `tencstontai.png' not found on input line 1139.
+
+
+! Package pdftex.def Error: File `tencstontai.png' not found: using draft setti
+ng.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1139 ...phics[width=\textwidth]{tencstontai.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[32]
+
+LaTeX Warning: File `emailkhonghople.png' not found on input line 1148.
+
+
+! Package pdftex.def Error: File `emailkhonghople.png' not found: using draft s
+etting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1148 ...s[width=\textwidth]{emailkhonghople.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[33]
+
+LaTeX Warning: File `chinhsuathanhcong.png' not found on input line 1157.
+
+
+! Package pdftex.def Error: File `chinhsuathanhcong.png' not found: using draft
+ setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1157 ...width=\textwidth]{chinhsuathanhcong.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[34]
+
+LaTeX Warning: File `logout.jpg' not found on input line 1178.
+
+
+! Package pdftex.def Error: File `logout.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1178 ...degraphics[width=\textwidth]{logout.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[35]
+
+LaTeX Warning: File `trangdangnhap.png' not found on input line 1187.
+
+
+! Package pdftex.def Error: File `trangdangnhap.png' not found: using draft set
+ting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1187 ...ics[width=\textwidth]{trangdangnhap.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[36] [37]
+
+LaTeX Warning: File `trangtimkiem.png' not found on input line 1220.
+
+
+! Package pdftex.def Error: File `trangtimkiem.png' not found: using draft sett
+ing.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1220 ...hics[width=\textwidth]{trangtimkiem.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `nambatdaulon.png' not found on input line 1229.
+
+
+! Package pdftex.def Error: File `nambatdaulon.png' not found: using draft sett
+ing.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1229 ...hics[width=\textwidth]{nambatdaulon.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[38]
+
+LaTeX Warning: File `ketquatimkiem.png' not found on input line 1240.
+
+
+! Package pdftex.def Error: File `ketquatimkiem.png' not found: using draft set
+ting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1240 ...ics[width=\textwidth]{ketquatimkiem.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[39] [40]
+
+LaTeX Warning: File `luuyeuthich.png' not found on input line 1277.
+
+
+! Package pdftex.def Error: File `luuyeuthich.png' not found: using draft setti
+ng.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1277 ...phics[width=\textwidth]{luuyeuthich.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[41]
+
+LaTeX Warning: File `dayeuthich.png' not found on input line 1286.
+
+
+! Package pdftex.def Error: File `dayeuthich.png' not found: using draft settin
+g.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1286 ...aphics[width=\textwidth]{dayeuthich.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[42]
+
+LaTeX Warning: File `trangyeuthich.png' not found on input line 1295.
+
+
+! Package pdftex.def Error: File `trangyeuthich.png' not found: using draft set
+ting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1295 ...ics[width=\textwidth]{trangyeuthich.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[43]
+
+LaTeX Warning: File `xoa.png' not found on input line 1304.
+
+
+! Package pdftex.def Error: File `xoa.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1304 ...cludegraphics[width=\textwidth]{xoa.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[44]
+
+LaTeX Warning: File `lienket.png' not found on input line 1313.
+
+
+! Package pdftex.def Error: File `lienket.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1313 ...egraphics[width=\textwidth]{lienket.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[45] [46]
+
+LaTeX Warning: File `ptxh.png' not found on input line 1385.
+
+
+! Package pdftex.def Error: File `ptxh.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1385 ...ludegraphics[width=\textwidth]{ptxh.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[47]
+
+LaTeX Warning: File `thieu.png' not found on input line 1395.
+
+
+! Package pdftex.def Error: File `thieu.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1395 ...udegraphics[width=\textwidth]{thieu.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[48]
+
+LaTeX Warning: File `batdaulonhon.png' not found on input line 1405.
+
+
+! Package pdftex.def Error: File `batdaulonhon.png' not found: using draft sett
+ing.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1405 ...hics[width=\textwidth]{batdaulonhon.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[49]
+
+LaTeX Warning: File `ketquaphantich1.png' not found on input line 1414.
+
+
+! Package pdftex.def Error: File `ketquaphantich1.png' not found: using draft s
+etting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1414 ...s[width=\textwidth]{ketquaphantich1.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `ketquaphantich2.png' not found on input line 1420.
+
+
+! Package pdftex.def Error: File `ketquaphantich2.png' not found: using draft s
+etting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1420 ...s[width=\textwidth]{ketquaphantich2.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[50] [51]
 Overfull \hbox (10.43666pt too wide) in paragraph at lines 1450--1451
 []\T5/cmr/m/n/10.95 Collect cur-rent re-sults: statis-tics, charts, Trend-ing T
 op-ics, Top Jour-nals/Authors/Keywords,
  []
 
-[44 <./ketquaphantich2.png>]
-<tbc.jpg, id=909, 1925.1925pt x 915.42pt>
-File: tbc.jpg Graphic file (type jpg)
-<use tbc.jpg>
-Package pdftex.def Info: tbc.jpg  used on input line 1481.
-(pdftex.def)             Requested size: 452.9679pt x 215.37515pt.
-<xuatbaocao.png, id=910, 286.06876pt x 391.96437pt>
-File: xuatbaocao.png Graphic file (type png)
-<use xuatbaocao.png>
-Package pdftex.def Info: xuatbaocao.png  used on input line 1490.
-(pdftex.def)             Requested size: 452.9679pt x 620.65457pt.
- [45 <./tbc.jpg>] [46 <./xuatbaocao.png>]
-<theodoi.png, id=925, 918.43124pt x 420.57124pt>
-File: theodoi.png Graphic file (type png)
-<use theodoi.png>
-Package pdftex.def Info: theodoi.png  used on input line 1527.
-(pdftex.def)             Requested size: 452.9679pt x 207.42937pt.
-<dstheodoi.png, id=926, 923.45pt x 417.56pt>
-File: dstheodoi.png Graphic file (type png)
-<use dstheodoi.png>
-Package pdftex.def Info: dstheodoi.png  used on input line 1536.
-(pdftex.def)             Requested size: 452.9679pt x 204.81644pt.
- [47 <./theodoi.png>]
-<huytheodoi.png, id=932, 920.43875pt x 410.03188pt>
-File: huytheodoi.png Graphic file (type png)
-<use huytheodoi.png>
-Package pdftex.def Info: huytheodoi.png  used on input line 1545.
-(pdftex.def)             Requested size: 452.9679pt x 201.78703pt.
- [48 <./dstheodoi.png> <./huytheodoi.png>]
-<nhanthongbao.png, id=939, 926.46124pt x 422.07687pt>
-File: nhanthongbao.png Graphic file (type png)
-<use nhanthongbao.png>
-Package pdftex.def Info: nhanthongbao.png  used on input line 1578.
-(pdftex.def)             Requested size: 452.9679pt x 206.3622pt.
-<dadoc.png, id=940, 929.4725pt x 414.54875pt>
-File: dadoc.png Graphic file (type png)
-<use dadoc.png>
-Package pdftex.def Info: dadoc.png  used on input line 1587.
-(pdftex.def)             Requested size: 452.9679pt x 202.0237pt.
- [49 <./nhanthongbao.png> <./dadoc.png>]
-<ad1.png, id=948, 1088.26575pt x 545.6385pt>
-File: ad1.png Graphic file (type png)
-<use ad1.png>
-Package pdftex.def Info: ad1.png  used on input line 1610.
-(pdftex.def)             Requested size: 452.9679pt x 227.11014pt.
-<ad2.png, id=949, 1081.641pt x 374.5995pt>
-File: ad2.png Graphic file (type png)
-<use ad2.png>
-Package pdftex.def Info: ad2.png  used on input line 1619.
-(pdftex.def)             Requested size: 452.9679pt x 156.87344pt.
-<ad3.png, id=950, 1066.58475pt x 136.71075pt>
-File: ad3.png Graphic file (type png)
-<use ad3.png>
-Package pdftex.def Info: ad3.png  used on input line 1628.
-(pdftex.def)             Requested size: 452.9679pt x 58.06061pt.
-<ad4.png, id=951, 1082.24326pt x 284.262pt>
-File: ad4.png Graphic file (type png)
-<use ad4.png>
-Package pdftex.def Info: ad4.png  used on input line 1637.
-(pdftex.def)             Requested size: 452.9679pt x 118.97716pt.
- [50 <./ad1.png> <./ad2.png> <./ad3.png>]
-<ad5.png, id=959, 1090.67474pt x 446.8695pt>
-File: ad5.png Graphic file (type png)
-<use ad5.png>
-Package pdftex.def Info: ad5.png  used on input line 1658.
-(pdftex.def)             Requested size: 452.9679pt x 185.59058pt.
-<ad6.png, id=960, 1085.2545pt x 139.722pt>
-File: ad6.png Graphic file (type png)
-<use ad6.png>
-Package pdftex.def Info: ad6.png  used on input line 1667.
-(pdftex.def)             Requested size: 452.9679pt x 58.31613pt.
-<ad7.png, id=961, 1087.6635pt x 224.037pt>
-File: ad7.png Graphic file (type png)
-<use ad7.png>
-Package pdftex.def Info: ad7.png  used on input line 1676.
-(pdftex.def)             Requested size: 452.9679pt x 93.30179pt.
- [51 <./ad4.png> <./ad5.png> <./ad6.png>]
-<ad8.png, id=969, 1065.9825pt x 335.45325pt>
-File: ad8.png Graphic file (type png)
-<use ad8.png>
-Package pdftex.def Info: ad8.png  used on input line 1685.
-(pdftex.def)             Requested size: 452.9679pt x 142.5427pt.
-<ad9.png, id=970, 1091.277pt x 458.9145pt>
-File: ad9.png Graphic file (type png)
-<use ad9.png>
-Package pdftex.def Info: ad9.png  used on input line 1691.
-(pdftex.def)             Requested size: 452.9679pt x 190.48798pt.
-<ad10.png, id=971, 1087.6635pt x 440.24475pt>
-File: ad10.png Graphic file (type png)
-<use ad10.png>
-Package pdftex.def Info: ad10.png  used on input line 1697.
-(pdftex.def)             Requested size: 452.9679pt x 183.34305pt.
- [52 <./ad7.png> <./ad8.png> <./ad9.png>]
-<ad11.png, id=979, 1079.232pt x 489.027pt>
-File: ad11.png Graphic file (type png)
-<use ad11.png>
-Package pdftex.def Info: ad11.png  used on input line 1706.
-(pdftex.def)             Requested size: 452.9679pt x 205.24815pt.
-<ad12.png, id=980, 1085.2545pt x 540.21825pt>
-File: ad12.png Graphic file (type png)
-<use ad12.png>
-Package pdftex.def Info: ad12.png  used on input line 1728.
-(pdftex.def)             Requested size: 452.9679pt x 225.4723pt.
- [53 <./ad10.png> <./ad11.png>]
-<ad13.png, id=988, 1090.0725pt x 392.06474pt>
-File: ad13.png Graphic file (type png)
-<use ad13.png>
-Package pdftex.def Info: ad13.png  used on input line 1740.
-(pdftex.def)             Requested size: 452.9679pt x 162.91919pt.
-<ad14.png, id=989, 1075.01625pt x 377.0085pt>
-File: ad14.png Graphic file (type png)
-<use ad14.png>
-Package pdftex.def Info: ad14.png  used on input line 1749.
-(pdftex.def)             Requested size: 452.9679pt x 158.85446pt.
-<ad15.png, id=990, 1085.2545pt x 479.99326pt>
-File: ad15.png Graphic file (type png)
-<use ad15.png>
-Package pdftex.def Info: ad15.png  used on input line 1758.
-(pdftex.def)             Requested size: 452.9679pt x 200.33604pt.
- [54 <./ad12.png> <./ad13.png> <./ad14.png>]
-<ad16.png, id=998, 1079.232pt x 446.8695pt>
-File: ad16.png Graphic file (type png)
-<use ad16.png>
-Package pdftex.def Info: ad16.png  used on input line 1783.
-(pdftex.def)             Requested size: 452.9679pt x 187.55435pt.
- [55 <./ad15.png> <./ad16.png>]
-<ad17.png, id=1006, 1085.2545pt x 233.07076pt>
-File: ad17.png Graphic file (type png)
-<use ad17.png>
-Package pdftex.def Info: ad17.png  used on input line 1794.
-(pdftex.def)             Requested size: 452.9679pt x 97.27734pt.
-File: ad17.png Graphic file (type png)
-<use ad17.png>
-Package pdftex.def Info: ad17.png  used on input line 1803.
-(pdftex.def)             Requested size: 452.9679pt x 97.27734pt.
-<ad18.png, id=1007, 1070.19826pt x 491.436pt>
-File: ad18.png Graphic file (type png)
-<use ad18.png>
-Package pdftex.def Info: ad18.png  used on input line 1824.
-(pdftex.def)             Requested size: 452.9679pt x 207.99893pt.
-<ad19.png, id=1008, 1085.2545pt x 349.90726pt>
-File: ad19.png Graphic file (type png)
-<use ad19.png>
-Package pdftex.def Info: ad19.png  used on input line 1829.
-(pdftex.def)             Requested size: 452.9679pt x 146.0417pt.
- [56 <./ad17.png>]
-File: ad19.png Graphic file (type png)
-<use ad19.png>
-Package pdftex.def Info: ad19.png  used on input line 1837.
-(pdftex.def)             Requested size: 452.9679pt x 146.0417pt.
-<ad20.png, id=1014, 1085.2545pt x 380.622pt>
-File: ad20.png Graphic file (type png)
-<use ad20.png>
-Package pdftex.def Info: ad20.png  used on input line 1846.
-(pdftex.def)             Requested size: 452.9679pt x 158.86119pt.
- [57 <./ad18.png> <./ad19.png>]
-<ad21.png, id=1021, 1075.01625pt x 289.08pt>
-File: ad21.png Graphic file (type png)
-<use ad21.png>
-Package pdftex.def Info: ad21.png  used on input line 1855.
-(pdftex.def)             Requested size: 452.9679pt x 121.80534pt.
-<ad22.png, id=1022, 1064.17575pt x 335.45325pt>
-File: ad22.png Graphic file (type png)
-<use ad22.png>
-Package pdftex.def Info: ad22.png  used on input line 1864.
-(pdftex.def)             Requested size: 452.9679pt x 142.78839pt.
-<ad23.png, id=1023, 1090.67474pt x 264.99pt>
-File: ad23.png Graphic file (type png)
-<use ad23.png>
-Package pdftex.def Info: ad23.png  used on input line 1885.
-(pdftex.def)             Requested size: 452.9679pt x 110.05371pt.
- [58 <./ad20.png> <./ad21.png> <./ad22.png>]
-<ad24.png, id=1031, 1079.232pt x 260.172pt>
-File: ad24.png Graphic file (type png)
-<use ad24.png>
-Package pdftex.def Info: ad24.png  used on input line 1895.
-(pdftex.def)             Requested size: 452.9679pt x 109.19604pt.
-<ad25.png, id=1032, 1075.6185pt x 317.38576pt>
-File: ad25.png Graphic file (type png)
-<use ad25.png>
-Package pdftex.def Info: ad25.png  used on input line 1904.
-(pdftex.def)             Requested size: 452.9679pt x 133.65948pt.
-<ad26.png, id=1033, 717.882pt x 455.301pt>
-File: ad26.png Graphic file (type png)
-<use ad26.png>
-Package pdftex.def Info: ad26.png  used on input line 1913.
-(pdftex.def)             Requested size: 452.9679pt x 287.28577pt.
- [59 <./ad23.png> <./ad24.png> <./ad25.png>] [60 <./ad26.png>]
+[52]
+
+LaTeX Warning: File `tbc.jpg' not found on input line 1481.
+
+
+! Package pdftex.def Error: File `tbc.jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1481 ...cludegraphics[width=\textwidth]{tbc.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[53]
+
+LaTeX Warning: File `xuatbaocao.png' not found on input line 1490.
+
+
+! Package pdftex.def Error: File `xuatbaocao.png' not found: using draft settin
+g.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1490 ...aphics[width=\textwidth]{xuatbaocao.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[54] [55]
+
+LaTeX Warning: File `theodoi.png' not found on input line 1527.
+
+
+! Package pdftex.def Error: File `theodoi.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1527 ...egraphics[width=\textwidth]{theodoi.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `dstheodoi.png' not found on input line 1536.
+
+
+! Package pdftex.def Error: File `dstheodoi.png' not found: using draft setting
+.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1536 ...raphics[width=\textwidth]{dstheodoi.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[56]
+
+LaTeX Warning: File `huytheodoi.png' not found on input line 1545.
+
+
+! Package pdftex.def Error: File `huytheodoi.png' not found: using draft settin
+g.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1545 ...aphics[width=\textwidth]{huytheodoi.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[57] [58]
+
+LaTeX Warning: File `nhanthongbao.png' not found on input line 1578.
+
+
+! Package pdftex.def Error: File `nhanthongbao.png' not found: using draft sett
+ing.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1578 ...hics[width=\textwidth]{nhanthongbao.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `dadoc.png' not found on input line 1587.
+
+
+! Package pdftex.def Error: File `dadoc.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1587 ...udegraphics[width=\textwidth]{dadoc.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[59]
+
+LaTeX Warning: File `ad1.png' not found on input line 1610.
+
+
+! Package pdftex.def Error: File `ad1.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1610 ...cludegraphics[width=\textwidth]{ad1.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[60]
+
+LaTeX Warning: File `ad2.png' not found on input line 1619.
+
+
+! Package pdftex.def Error: File `ad2.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1619 ...cludegraphics[width=\textwidth]{ad2.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[61]
+
+LaTeX Warning: File `ad3.png' not found on input line 1628.
+
+
+! Package pdftex.def Error: File `ad3.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1628 ...cludegraphics[width=\textwidth]{ad3.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[62]
+
+LaTeX Warning: File `ad4.png' not found on input line 1637.
+
+
+! Package pdftex.def Error: File `ad4.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1637 ...cludegraphics[width=\textwidth]{ad4.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[63]
+
+LaTeX Warning: File `ad5.png' not found on input line 1658.
+
+
+! Package pdftex.def Error: File `ad5.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1658 ...cludegraphics[width=\textwidth]{ad5.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[64]
+
+LaTeX Warning: File `ad6.png' not found on input line 1667.
+
+
+! Package pdftex.def Error: File `ad6.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1667 ...cludegraphics[width=\textwidth]{ad6.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[65]
+
+LaTeX Warning: File `ad7.png' not found on input line 1676.
+
+
+! Package pdftex.def Error: File `ad7.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1676 ...cludegraphics[width=\textwidth]{ad7.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[66]
+
+LaTeX Warning: File `ad8.png' not found on input line 1685.
+
+
+! Package pdftex.def Error: File `ad8.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1685 ...cludegraphics[width=\textwidth]{ad8.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `ad9.png' not found on input line 1691.
+
+
+! Package pdftex.def Error: File `ad9.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1691 ...cludegraphics[width=\textwidth]{ad9.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[67]
+
+LaTeX Warning: File `ad10.png' not found on input line 1697.
+
+
+! Package pdftex.def Error: File `ad10.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1697 ...ludegraphics[width=\textwidth]{ad10.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[68] [69]
+
+LaTeX Warning: File `ad11.png' not found on input line 1706.
+
+
+! Package pdftex.def Error: File `ad11.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1706 ...ludegraphics[width=\textwidth]{ad11.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[70]
+
+LaTeX Warning: File `ad12.png' not found on input line 1728.
+
+
+! Package pdftex.def Error: File `ad12.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1728 ...ludegraphics[width=\textwidth]{ad12.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[71]
+
+LaTeX Warning: File `ad13.png' not found on input line 1740.
+
+
+! Package pdftex.def Error: File `ad13.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1740 ...ludegraphics[width=\textwidth]{ad13.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[72]
+
+LaTeX Warning: File `ad14.png' not found on input line 1749.
+
+
+! Package pdftex.def Error: File `ad14.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1749 ...ludegraphics[width=\textwidth]{ad14.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[73]
+
+LaTeX Warning: File `ad15.png' not found on input line 1758.
+
+
+! Package pdftex.def Error: File `ad15.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1758 ...ludegraphics[width=\textwidth]{ad15.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[74]
+
+LaTeX Warning: File `ad16.png' not found on input line 1783.
+
+
+! Package pdftex.def Error: File `ad16.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1783 ...ludegraphics[width=\textwidth]{ad16.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[75]
+
+LaTeX Warning: File `ad17.png' not found on input line 1794.
+
+
+! Package pdftex.def Error: File `ad17.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1794 ...ludegraphics[width=\textwidth]{ad17.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[76]
+
+LaTeX Warning: File `ad17.png' not found on input line 1803.
+
+
+! Package pdftex.def Error: File `ad17.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1803 ...ludegraphics[width=\textwidth]{ad17.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[77]
+
+LaTeX Warning: File `ad18.png' not found on input line 1824.
+
+
+! Package pdftex.def Error: File `ad18.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1824 ...ludegraphics[width=\textwidth]{ad18.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `ad19.png' not found on input line 1829.
+
+
+! Package pdftex.def Error: File `ad19.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1829 ...ludegraphics[width=\textwidth]{ad19.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[78] [79]
+
+LaTeX Warning: File `ad19.png' not found on input line 1837.
+
+
+! Package pdftex.def Error: File `ad19.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1837 ...ludegraphics[width=\textwidth]{ad19.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[80]
+
+LaTeX Warning: File `ad20.png' not found on input line 1846.
+
+
+! Package pdftex.def Error: File `ad20.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1846 ...ludegraphics[width=\textwidth]{ad20.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[81]
+
+LaTeX Warning: File `ad21.png' not found on input line 1855.
+
+
+! Package pdftex.def Error: File `ad21.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1855 ...ludegraphics[width=\textwidth]{ad21.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[82]
+
+LaTeX Warning: File `ad22.png' not found on input line 1864.
+
+
+! Package pdftex.def Error: File `ad22.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1864 ...ludegraphics[width=\textwidth]{ad22.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[83]
+
+LaTeX Warning: File `ad23.png' not found on input line 1885.
+
+
+! Package pdftex.def Error: File `ad23.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1885 ...ludegraphics[width=\textwidth]{ad23.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[84]
+
+LaTeX Warning: File `ad24.png' not found on input line 1895.
+
+
+! Package pdftex.def Error: File `ad24.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1895 ...ludegraphics[width=\textwidth]{ad24.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[85]
+
+LaTeX Warning: File `ad25.png' not found on input line 1904.
+
+
+! Package pdftex.def Error: File `ad25.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1904 ...ludegraphics[width=\textwidth]{ad25.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[86]
+
+LaTeX Warning: File `ad26.png' not found on input line 1913.
+
+
+! Package pdftex.def Error: File `ad26.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1913 ...ludegraphics[width=\textwidth]{ad26.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[87] [88]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\<let>-command' on input line 1919.
@@ -2074,26 +2795,46 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
                    \relax 
 l.1927 \subsection{System Architecture}
                                        
-<ss.png, id=1046, 450.18187pt x 402.00188pt>
-File: ss.png Graphic file (type png)
-<use ss.png>
-Package pdftex.def Info: ss.png  used on input line 1930.
-(pdftex.def)             Requested size: 362.37569pt x 323.60776pt.
- [61
 
- <./ss.png>]
+LaTeX Warning: File `ss.png' not found on input line 1930.
+
+
+! Package pdftex.def Error: File `ss.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1930 ...udegraphics[width=0.8\textwidth]{ss.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[89
+
+]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1968 \subsection{Package Diagram}
                                    
-<fe.png, id=1054, 416.05438pt x 146.04562pt>
-File: fe.png Graphic file (type png)
-<use fe.png>
-Package pdftex.def Info: fe.png  used on input line 1972.
-(pdftex.def)             Requested size: 452.9679pt x 159.0105pt.
 
+LaTeX Warning: File `fe.png' not found on input line 1972.
+
+
+! Package pdftex.def Error: File `fe.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1972 	\includegraphics[width=\textwidth]{fe.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[90]
 
 Package array Warning: Column L is already defined on input line 1977.
 
@@ -2125,12 +2866,22 @@ Overfull \hbox (12.28947pt too wide) in paragraph at lines 2004--2004
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<be.png, id=1055, 423.5825pt x 307.64937pt>
-File: be.png Graphic file (type png)
-<use be.png>
-Package pdftex.def Info: be.png  used on input line 2013.
-(pdftex.def)             Requested size: 452.9679pt x 329.00317pt.
-[62 <./fe.png>] [63]
+
+LaTeX Warning: File `be.png' not found on input line 2013.
+
+
+! Package pdftex.def Error: File `be.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2013 	\includegraphics[width=\textwidth]{be.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[91] [92]
 
 Package array Warning: Column L is already defined on input line 2018.
 
@@ -2197,21 +2948,32 @@ Overfull \hbox (23.841pt too wide) in paragraph at lines 2049--2049
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[64 <./be.png>] [65]
+[93] [94]
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2055 \section{Database Design}
                                 
-<database.png, id=1075, 1127.21124pt x 732.7375pt>
-File: database.png Graphic file (type png)
-<use database.png>
-Package pdftex.def Info: database.png  used on input line 2061.
-(pdftex.def)             Requested size: 452.97488pt x 294.45384pt.
- [66
 
- <./database.png>]
+LaTeX Warning: File `database.png' not found on input line 2061.
+
+
+! Package pdftex.def Error: File `database.png' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2061 keepaspectratio]{database.png}
+                                     
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[95
+
+]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
@@ -2313,7 +3075,7 @@ Overfull \hbox (36.22336pt too wide) in alignment at lines 2110--2117
  [] [] [] [] [] 
  []
 
-[67
+[96
 
 ]
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 2126--2126
@@ -2390,7 +3152,7 @@ Overfull \hbox (36.22336pt too wide) in alignment at lines 2145--2154
  [] [] [] [] [] 
  []
 
-[68]
+[97]
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 2163--2163
 []|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
  []
@@ -2490,7 +3252,7 @@ Overfull \hbox (36.22336pt too wide) in alignment at lines 2196--2203
  [] [] [] [] [] 
  []
 
-[69]
+[98]
 Underfull \hbox (badness 10000) in paragraph at lines 2211--2211
 []|\T5/cmr/m/n/10.95 Yes
  []
@@ -2590,7 +3352,7 @@ Overfull \hbox (36.22336pt too wide) in alignment at lines 2230--2240
  [] [] [] [] [] 
  []
 
-[70]
+[99]
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 2249--2249
 []|\T5/cmr/m/n/10.95 NVARCHAR(300)| 
  []
@@ -2630,7 +3392,7 @@ Overfull \hbox (36.22336pt too wide) in alignment at lines 2260--2271
  [] [] [] [] [] 
  []
 
-[71]
+[100]
 Underfull \hbox (badness 10000) in paragraph at lines 2279--2279
 []|\T5/cmr/m/n/10.95 Yes
  []
@@ -2729,42 +3491,82 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2299 \subsubsection{Class Diagram}
                                     
-<dk.png, id=1117, 291.0875pt x 364.36125pt>
-File: dk.png Graphic file (type png)
-<use dk.png>
-Package pdftex.def Info: dk.png  used on input line 2302.
-(pdftex.def)             Requested size: 452.9679pt x 567.03357pt.
- [72]
+
+LaTeX Warning: File `dk.png' not found on input line 2302.
+
+
+! Package pdftex.def Error: File `dk.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2302 	\includegraphics[width=\textwidth]{dk.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[101]
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2307 \subsubsection{Sequence Diagram}
                                        
-<ttdk.png, id=1124, 319.69438pt x 425.08812pt>
-File: ttdk.png Graphic file (type png)
-<use ttdk.png>
-Package pdftex.def Info: ttdk.png  used on input line 2310.
-(pdftex.def)             Requested size: 452.9679pt x 602.30615pt.
- [73 <./dk.png>]
+
+LaTeX Warning: File `ttdk.png' not found on input line 2310.
+
+
+! Package pdftex.def Error: File `ttdk.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2310 ...ludegraphics[width=\textwidth]{ttdk.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[102]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2317 \subsection{Login}
                          
-<CDLogin.png, id=1131, 1020.81375pt x 857.2025pt>
-File: CDLogin.png Graphic file (type png)
-<use CDLogin.png>
-Package pdftex.def Info: CDLogin.png  used on input line 2321.
-(pdftex.def)             Requested size: 452.9679pt x 380.37483pt.
- [74 <./ttdk.png>]
-<ttdn.png, id=1137, 397.98688pt x 423.5825pt>
-File: ttdn.png Graphic file (type png)
-<use ttdn.png>
-Package pdftex.def Info: ttdn.png  used on input line 2328.
-(pdftex.def)             Requested size: 452.9679pt x 482.11993pt.
- [75 <./CDLogin.png>]
+
+LaTeX Warning: File `CDLogin.png' not found on input line 2321.
+
+
+! Package pdftex.def Error: File `CDLogin.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2321 ...egraphics[width=\textwidth]{CDLogin.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[103]
+
+LaTeX Warning: File `ttdn.png' not found on input line 2328.
+
+
+! Package pdftex.def Error: File `ttdn.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2328 ...ludegraphics[width=\textwidth]{ttdn.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[104]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 3}) has been already used, duplicate ignored
 <to be read again> 
@@ -2777,166 +3579,429 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
                    \relax 
 l.2337 \subsubsection{Class Diagram}
                                     
-<CDSearchResearchPaper.png, id=1143, 789.95125pt x 1122.1925pt>
-File: CDSearchResearchPaper.png Graphic file (type png)
-<use CDSearchResearchPaper.png>
-Package pdftex.def Info: CDSearchResearchPaper.png  used on input line 2340.
-(pdftex.def)             Requested size: 452.9679pt x 643.47487pt.
- [76 <./ttdn.png>]
-Overfull \vbox (0.43549pt too high) has occurred while \output is active []
+
+LaTeX Warning: File `CDSearchResearchPaper.png' not found on input line 2340.
 
 
-[77 <./CDSearchResearchPaper.png>]
+! Package pdftex.def Error: File `CDSearchResearchPaper.png' not found: using d
+raft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2340 ...h=\textwidth]{CDSearchResearchPaper.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[105]
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.3.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2345 \subsubsection{Sequence Diagram}
                                        
-<tk.png, id=1154, 424.58624pt x 239.39438pt>
-File: tk.png Graphic file (type png)
-<use tk.png>
-Package pdftex.def Info: tk.png  used on input line 2348.
-(pdftex.def)             Requested size: 452.9679pt x 255.40791pt.
-<chitiet.png, id=1155, 450.68375pt x 386.94562pt>
-File: chitiet.png Graphic file (type png)
-<use chitiet.png>
-Package pdftex.def Info: chitiet.png  used on input line 2360.
-(pdftex.def)             Requested size: 271.7835pt x 233.35593pt.
-<ct.png, id=1156, 560.0925pt x 315.1775pt>
-File: ct.png Graphic file (type png)
-<use ct.png>
-Package pdftex.def Info: ct.png  used on input line 2368.
-(pdftex.def)             Requested size: 452.9679pt x 254.90764pt.
- [78 <./tk.png> <./chitiet.png>]
-<CDBookmark.png, id=1163, 462.72874pt x 1056.94875pt>
-File: CDBookmark.png Graphic file (type png)
-<use CDBookmark.png>
-Package pdftex.def Info: CDBookmark.png  used on input line 2380.
-(pdftex.def)             Requested size: 271.7835pt x 620.80426pt.
 
-[79 <./ct.png>]
-<yttt.png, id=1170, 291.0875pt x 385.94188pt>
-File: yttt.png Graphic file (type png)
-<use yttt.png>
-Package pdftex.def Info: yttt.png  used on input line 2387.
-(pdftex.def)             Requested size: 452.9679pt x 600.61821pt.
- [80 <./CDBookmark.png>]
-<CDTrackPublicationTrends.png, id=1176, 1365.1pt x 722.7pt>
-File: CDTrackPublicationTrends.png Graphic file (type png)
-<use CDTrackPublicationTrends.png>
-Package pdftex.def Info: CDTrackPublicationTrends.png  used on input line 2399.
+LaTeX Warning: File `tk.png' not found on input line 2348.
 
-(pdftex.def)             Requested size: 452.9679pt x 239.804pt.
- [81 <./yttt.png>]
-<xh.png, id=1182, 351.3125pt x 247.42438pt>
-File: xh.png Graphic file (type png)
-<use xh.png>
-Package pdftex.def Info: xh.png  used on input line 2407.
-(pdftex.def)             Requested size: 452.9679pt x 319.04285pt.
-<CDViewDashboard.png, id=1183, 573.14125pt x 1004.75375pt>
-File: CDViewDashboard.png Graphic file (type png)
-<use CDViewDashboard.png>
-Package pdftex.def Info: CDViewDashboard.png  used on input line 2417.
-(pdftex.def)             Requested size: 271.7835pt x 476.46577pt.
- [82 <./CDTrackPublicationTrends.png> <./xh.png>]
-<dkk.png, id=1190, 382.93062pt x 301.125pt>
-File: dkk.png Graphic file (type png)
-<use dkk.png>
-Package pdftex.def Info: dkk.png  used on input line 2424.
-(pdftex.def)             Requested size: 452.9679pt x 356.22038pt.
- [83 <./CDViewDashboard.png>]
-<CDReportGenerate.png, id=1196, 730.73pt x 806.01125pt>
-File: CDReportGenerate.png Graphic file (type png)
-<use CDReportGenerate.png>
-Package pdftex.def Info: CDReportGenerate.png  used on input line 2435.
-(pdftex.def)             Requested size: 452.9679pt x 499.63571pt.
- [84 <./dkk.png>]
-<bc.png, id=1202, 277.53688pt x 400.99812pt>
-File: bc.png Graphic file (type png)
-<use bc.png>
-Package pdftex.def Info: bc.png  used on input line 2442.
-(pdftex.def)             Requested size: 436.4072pt x 630.45189pt.
 
-[85 <./CDReportGenerate.png>]
-<CDViewTrendingTopics.png, id=1209, 1365.1pt x 722.7pt>
-File: CDViewTrendingTopics.png Graphic file (type png)
-<use CDViewTrendingTopics.png>
-Package pdftex.def Info: CDViewTrendingTopics.png  used on input line 2453.
-(pdftex.def)             Requested size: 452.9679pt x 239.804pt.
- [86 <./bc.png>]
-<cdxh.png, id=1215, 405.515pt x 321.2pt>
-File: cdxh.png Graphic file (type png)
-<use cdxh.png>
-Package pdftex.def Info: cdxh.png  used on input line 2461.
-(pdftex.def)             Requested size: 452.9679pt x 358.79564pt.
- [87 <./CDViewTrendingTopics.png>]
-<CDFollowTopics.png, id=1221, 1214.5375pt x 1104.125pt>
-File: CDFollowTopics.png Graphic file (type png)
-<use CDFollowTopics.png>
-Package pdftex.def Info: CDFollowTopics.png  used on input line 2472.
-(pdftex.def)             Requested size: 452.9679pt x 411.78828pt.
-[88 <./cdxh.png>]
-<td.png, id=1227, 278.54062pt x 320.69812pt>
-File: td.png Graphic file (type png)
-<use td.png>
-Package pdftex.def Info: td.png  used on input line 2479.
-(pdftex.def)             Requested size: 452.9679pt x 521.5393pt.
- [89 <./CDFollowTopics.png>]
-<tb.png, id=1233, 382.42876pt x 370.88562pt>
-File: tb.png Graphic file (type png)
-<use tb.png>
-Package pdftex.def Info: tb.png  used on input line 2492.
-(pdftex.def)             Requested size: 452.9679pt x 439.31639pt.
- [90 <./td.png>]
-<CDManageSystem.png, id=1239, 2338.7375pt x 918.43124pt>
-File: CDManageSystem.png Graphic file (type png)
-<use CDManageSystem.png>
-Package pdftex.def Info: CDManageSystem.png  used on input line 2503.
-(pdftex.def)             Requested size: 407.66833pt x 160.08322pt.
- [91 <./tb.png>]
-<ht.png, id=1246, 451.6875pt x 332.74312pt>
-File: ht.png Graphic file (type png)
-<use ht.png>
-Package pdftex.def Info: ht.png  used on input line 2510.
-(pdftex.def)             Requested size: 407.66833pt x 300.33423pt.
-<CDManageUser.png, id=1247, 667.49374pt x 955.57pt>
-File: CDManageUser.png Graphic file (type png)
-<use CDManageUser.png>
-Package pdftex.def Info: CDManageUser.png  used on input line 2522.
-(pdftex.def)             Requested size: 362.37569pt x 518.78505pt.
+! Package pdftex.def Error: File `tk.png' not found: using draft setting.
 
-[92 <./CDManageSystem.png> <./ht.png>]
-<nd.png, id=1254, 316.18124pt x 391.96437pt>
-File: nd.png Graphic file (type png)
-<use nd.png>
-Package pdftex.def Info: nd.png  used on input line 2530.
-(pdftex.def)             Requested size: 317.07614pt x 393.09978pt.
- [93 <./CDManageUser.png>]
-<CDManageAPI.png, id=1260, 761.84625pt x 1037.8775pt>
-File: CDManageAPI.png Graphic file (type png)
-<use CDManageAPI.png>
-Package pdftex.def Info: CDManageAPI.png  used on input line 2541.
-(pdftex.def)             Requested size: 362.37569pt x 493.6621pt.
- [94 <./nd.png>]
-<apii.png, id=1266, 330.23375pt x 382.42876pt>
-File: apii.png Graphic file (type png)
-<use apii.png>
-Package pdftex.def Info: apii.png  used on input line 2548.
-(pdftex.def)             Requested size: 452.9679pt x 524.58362pt.
- [95 <./CDManageAPI.png>]
-<CDSyncData.png, id=1272, 1700.3525pt x 994.71625pt>
-File: CDSyncData.png Graphic file (type png)
-<use CDSyncData.png>
-Package pdftex.def Info: CDSyncData.png  used on input line 2560.
-(pdftex.def)             Requested size: 362.37569pt x 211.97774pt.
- [96 <./apii.png>]
-<db.png, id=1278, 398.99063pt x 280.54813pt>
-File: db.png Graphic file (type png)
-<use db.png>
-Package pdftex.def Info: db.png  used on input line 2567.
-(pdftex.def)             Requested size: 452.9679pt x 318.51823pt.
- [97 <./CDSyncData.png> <./db.png>]
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2348 	\includegraphics[width=\textwidth]{tk.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[106]
+
+LaTeX Warning: File `chitiet.png' not found on input line 2360.
+
+
+! Package pdftex.def Error: File `chitiet.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2360 ...aphics[width=0.6\textwidth]{chitiet.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[107]
+
+LaTeX Warning: File `ct.png' not found on input line 2368.
+
+
+! Package pdftex.def Error: File `ct.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2368 	\includegraphics[width=\textwidth]{ct.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[108]
+
+LaTeX Warning: File `CDBookmark.png' not found on input line 2380.
+
+
+! Package pdftex.def Error: File `CDBookmark.png' not found: using draft settin
+g.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2380 ...ics[width=0.6\textwidth]{CDBookmark.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[109]
+
+LaTeX Warning: File `yttt.png' not found on input line 2387.
+
+
+! Package pdftex.def Error: File `yttt.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2387 ...ludegraphics[width=\textwidth]{yttt.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[110]
+
+LaTeX Warning: File `CDTrackPublicationTrends.png' not found on input line 2399
+.
+
+
+! Package pdftex.def Error: File `CDTrackPublicationTrends.png' not found: usin
+g draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2399 ...textwidth]{CDTrackPublicationTrends.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[111]
+
+LaTeX Warning: File `xh.png' not found on input line 2407.
+
+
+! Package pdftex.def Error: File `xh.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2407 	\includegraphics[width=\textwidth]{xh.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[112]
+
+LaTeX Warning: File `CDViewDashboard.png' not found on input line 2417.
+
+
+! Package pdftex.def Error: File `CDViewDashboard.png' not found: using draft s
+etting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2417 ...idth=0.6\textwidth]{CDViewDashboard.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[113]
+
+LaTeX Warning: File `dkk.png' not found on input line 2424.
+
+
+! Package pdftex.def Error: File `dkk.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2424 ...cludegraphics[width=\textwidth]{dkk.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[114]
+
+LaTeX Warning: File `CDReportGenerate.png' not found on input line 2435.
+
+
+! Package pdftex.def Error: File `CDReportGenerate.png' not found: using draft 
+setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2435 ...[width=\textwidth]{CDReportGenerate.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[115]
+
+LaTeX Warning: File `bc.png' not found on input line 2442.
+
+
+! Package pdftex.def Error: File `bc.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2442 ...=0.9\textheight,keepaspectratio]{bc.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (177.65767pt too wide) in paragraph at lines 2442--2443
+ [][] 
+ []
+
+[116]
+
+LaTeX Warning: File `CDViewTrendingTopics.png' not found on input line 2453.
+
+
+! Package pdftex.def Error: File `CDViewTrendingTopics.png' not found: using dr
+aft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2453 ...th=\textwidth]{CDViewTrendingTopics.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[117]
+
+LaTeX Warning: File `cdxh.png' not found on input line 2461.
+
+
+! Package pdftex.def Error: File `cdxh.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2461 ...ludegraphics[width=\textwidth]{cdxh.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[118]
+
+LaTeX Warning: File `CDFollowTopics.png' not found on input line 2472.
+
+
+! Package pdftex.def Error: File `CDFollowTopics.png' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2472 ...cs[width=\textwidth]{CDFollowTopics.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[119]
+
+LaTeX Warning: File `td.png' not found on input line 2479.
+
+
+! Package pdftex.def Error: File `td.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2479 	\includegraphics[width=\textwidth]{td.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[120]
+
+LaTeX Warning: File `tb.png' not found on input line 2492.
+
+
+! Package pdftex.def Error: File `tb.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2492 	\includegraphics[width=\textwidth]{tb.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[121]
+
+LaTeX Warning: File `CDManageSystem.png' not found on input line 2503.
+
+
+! Package pdftex.def Error: File `CDManageSystem.png' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2503 ...width=0.9\textwidth]{CDManageSystem.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[122]
+
+LaTeX Warning: File `ht.png' not found on input line 2510.
+
+
+! Package pdftex.def Error: File `ht.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2510 ...udegraphics[width=0.9\textwidth]{ht.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[123]
+
+LaTeX Warning: File `CDManageUser.png' not found on input line 2522.
+
+
+! Package pdftex.def Error: File `CDManageUser.png' not found: using draft sett
+ing.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2522 ...s[width=0.8\textwidth]{CDManageUser.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[124]
+
+LaTeX Warning: File `nd.png' not found on input line 2530.
+
+
+! Package pdftex.def Error: File `nd.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2530 ...udegraphics[width=0.7\textwidth]{nd.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[125]
+
+LaTeX Warning: File `CDManageAPI.png' not found on input line 2541.
+
+
+! Package pdftex.def Error: File `CDManageAPI.png' not found: using draft setti
+ng.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2541 ...cs[width=0.8\textwidth]{CDManageAPI.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[126]
+
+LaTeX Warning: File `apii.png' not found on input line 2548.
+
+
+! Package pdftex.def Error: File `apii.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2548 ...ludegraphics[width=\textwidth]{apii.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[127]
+
+LaTeX Warning: File `CDSyncData.png' not found on input line 2560.
+
+
+! Package pdftex.def Error: File `CDSyncData.png' not found: using draft settin
+g.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2560 ...ics[width=0.8\textwidth]{CDSyncData.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[128]
+
+LaTeX Warning: File `db.png' not found on input line 2567.
+
+
+! Package pdftex.def Error: File `db.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2567 	\includegraphics[width=\textwidth]{db.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[129] [130]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\<let>-command' on input line 2573.
@@ -3007,7 +4072,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 <to be read again> 
                    \relax 
 l.2611 \subsection{Testing Types}
-                                  [98
+                                  [131
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
@@ -3027,7 +4092,7 @@ as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2653 \section{Test Plan}
-                           [99]
+                           [132]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
@@ -3045,14 +4110,14 @@ as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.2682 \section{Test Case}
-                           [100] [101]
+                           [133] [134]
 Overfull \hbox (7.27864pt too wide) in paragraph at lines 2848--2857
 []|[]| 
  []
 
-[102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
-[114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125]
-[126] [127]
+[135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146]
+[147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158]
+[159] [160]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\<let>-command' on input line 4672.
@@ -3148,7 +4213,7 @@ Underfull \hbox (badness 4072) in paragraph at lines 4787--4787
 2 C:\xampp\htdocs \T5/cmr/m/n/12 or
  []
 
-[128
+[161
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
@@ -3162,7 +4227,7 @@ as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.4832 \section{  User manual}
-                               [129] [130] [131] (main.aux)
+                               [162] [163] [164] (main.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
@@ -3171,14 +4236,8 @@ L3 programming layer <2026-05-26>
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 872225C60D9BC1F1A51334462D36BF64;27043
-(rerunfilecheck)             After:  F52F3AAB29B1B0A5E8BAF6591550A9CD;26871.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: F52F3AAB29B1B0A5E8BAF6591550A9CD;26871.
  )
 (\end occurred inside a group at level 2)
 
@@ -3186,10 +4245,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 ### simple group (level 1) entered at line 503 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13310 strings out of 467509
- 208173 string characters out of 5418889
- 668269 words of memory out of 5000000
- 42078 multiletter control sequences out of 15000+600000
+ 15597 strings out of 467509
+ 257674 string characters out of 5418889
+ 668281 words of memory out of 5000000
+ 44332 multiletter control sequences out of 15000+600000
  643264 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,16n,83p,470b,972s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3202,9 +4261,9 @@ onts/type1/vntex/vnr/vnr10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/v
 nr12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Program Files/MiKTeX/fonts/ty
 pe1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (131 pages, 6387883 bytes).
+Output written on main.pdf (164 pages, 434796 bytes).
 PDF statistics:
- 1578 PDF objects out of 1728 (max. 8388607)
- 312 named destinations out of 1000 (max. 500000)
- 1867 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1540 PDF objects out of 1728 (max. 8388607)
+ 345 named destinations out of 1000 (max. 500000)
+ 1377 words of extra memory for PDF output out of 10000 (max. 10000000)
 
