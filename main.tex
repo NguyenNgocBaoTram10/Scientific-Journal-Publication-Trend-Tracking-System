@@ -2594,7 +2594,9 @@ within the scope of testing:
 	\item View Trending Topics
 	\item Follow Research Topics
 	\item Receive Notifications
-	
+	\item Manage Users
+	\item Configure Academic API Sources
+	\item Synchronize Academic Data from External APIs
 \end{itemize}
 The following features are excluded from the testing scope:
 \begin{itemize}
@@ -2678,23 +2680,6 @@ The following features are excluded from the testing scope:
 \end{itemize}
 
 \section{Test Case}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|l|c|}
-		\hline
-		\textbf{Module} & \textbf{Number of Test Cases} \\ \hline
-		User Registration & 5 \\ \hline
-		User Login & 3 \\ \hline
-		Publication Search & 4 \\ \hline
-		Bookmarks & 3 \\ \hline
-		Follow Research Topics & 3 \\ \hline
-		Notifications & 2 \\ \hline
-		Publication Trend Analysis & 2 \\ \hline
-		\textbf{Total} & \textbf{22} \\ \hline
-	\end{tabular}
-	
-\end{table}
 
 \subsection{User Registration}
 \begin{table}[H]
@@ -2956,6 +2941,74 @@ The following features are excluded from the testing scope:
 	
 \end{table}
 
+\begin{table}[H]
+	\centering
+	\small
+	\begin{tabular}{|p{4cm}|p{10cm}|}
+		\hline
+		\textbf{Field} & \textbf{Description} \\
+		\hline
+		
+		Module &
+		User Registration \\
+		\hline
+		
+		Test Case ID &
+		TC\_REG\_05 \\
+		\hline
+		
+		Test Case Name &
+	 	Register with Existing Username\\
+		\hline
+		
+		Objective &
+		Verify that the system does not allow registration with a username that already exists in the database.
+		\\
+		\hline
+		
+		Preconditions &
+		Username already exists in the database.
+		\\
+		\hline
+		
+		Test Data &
+		\begin{tabular}[t]{@{}l@{}}
+		Full Name: Admin User\\
+		Username: Group6\\
+		Email: admin6@gmail.com\\
+		Password: admin654321
+		\end{tabular}
+		\\
+		\hline
+		
+		Test Steps &
+		\begin{tabular}[t]{@{}l@{}}
+			1. Open Registration page.\\
+			2. Enter all required information.\\
+			3. Input an existing username (Group6).
+			4. Click Register.
+		\end{tabular}
+		\\
+		\hline
+		
+		Expected Result &
+		The system rejects the registration request and displays the message:
+		"Username already exists."
+		\\
+		\hline
+		
+		Actual Result &
+		The correct validation message is displayed.
+		\\
+		\hline
+		
+		Status &
+		Pass \\
+		\hline
+		
+	\end{tabular}
+	
+\end{table}
 
 \subsection{User Login}
 \begin{table}[H]

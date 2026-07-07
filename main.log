@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.4)  7 JUL 2026 17:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.4)  7 JUL 2026 18:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3014,13 +3014,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2608 \section{Test Strategy}
+l.2610 \section{Test Strategy}
                               
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2609 \subsection{Testing Types}
+l.2611 \subsection{Testing Types}
                                   [98
 
 ]
@@ -3028,44 +3028,44 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2619 \subsection{Testing Levels}
+l.2621 \subsection{Testing Levels}
                                   
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2633 \subsection{Supporting Tools}
+l.2635 \subsection{Supporting Tools}
                                     
 pdfTeX warning (ext4): destination with the same identifier (name{section.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2651 \section{Test Plan}
+l.2653 \section{Test Plan}
                            [99]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2666 \subsection{Entry Criteria}
+l.2668 \subsection{Entry Criteria}
                                   
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2673 \subsection{Exit Criteria}
+l.2675 \subsection{Exit Criteria}
                                  
 pdfTeX warning (ext4): destination with the same identifier (name{section.4}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2680 \section{Test Case}
+l.2682 \section{Test Case}
                            [100] [101]
-Overfull \hbox (7.27864pt too wide) in paragraph at lines 2863--2872
+Overfull \hbox (7.27864pt too wide) in paragraph at lines 2848--2857
 []|[]| 
  []
 
 [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
-ignored error: Infinite glue shrinkage found in box being split [114]
+[114]
 ignored error: Infinite glue shrinkage found in box being split [115]
 ignored error: Infinite glue shrinkage found in box being split [116]
 ignored error: Infinite glue shrinkage found in box being split [117]
@@ -3076,81 +3076,82 @@ ignored error: Infinite glue shrinkage found in box being split [121]
 ignored error: Infinite glue shrinkage found in box being split [122]
 ignored error: Infinite glue shrinkage found in box being split [123]
 ignored error: Infinite glue shrinkage found in box being split [124]
-ignored error: Infinite glue shrinkage found in box being split [125] [126]
+ignored error: Infinite glue shrinkage found in box being split [125]
+ignored error: Infinite glue shrinkage found in box being split [126] [127]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 4619.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 4619.
+(hyperref)                removing `\<let>-command' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 4619.
+(hyperref)                removing `\\' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 4619.
+(hyperref)                removing `\@centercr' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 4619.
+(hyperref)                removing `\rightskip' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 4619.
+(hyperref)                removing `\@flushglue' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 4619.
+(hyperref)                removing `\leftskip' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 4619.
+(hyperref)                removing `\@flushglue' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 4619.
+(hyperref)                removing `\finalhyphendemerits' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 4619.
+(hyperref)                removing `\z@' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 4619.
+(hyperref)                removing `\parindent' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 4619.
+(hyperref)                removing `\z@' on input line 4672.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 4619.
+(hyperref)                removing `\parfillskip' on input line 4672.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@skip' on input line 4672.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4622 \section{ Deliverable Package}
+l.4675 \section{ Deliverable Package}
                                      
 
-Package array Warning: Column L is already defined on input line 4632.
+Package array Warning: Column L is already defined on input line 4685.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4686--4686
+Underfull \hbox (badness 10000) in paragraph at lines 4739--4739
 []|\T5/cmr/m/n/12 A doc-u-ment that con-sol-i-dates the project re-port
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4686--4686
+Underfull \hbox (badness 10000) in paragraph at lines 4739--4739
 \T5/cmr/m/n/12 (re-quire-ment spec-i-fi-ca-tion, anal-y-sis and de-sign, use
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4686--4686
+Underfull \hbox (badness 10000) in paragraph at lines 4739--4739
 \T5/cmr/m/n/12 case/class/sequence/ERD di-a-grams, etc.), au-thored in
  []
 
@@ -3159,34 +3160,34 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4691 \section{  Installation Guide}
+l.4744 \section{  Installation Guide}
                                      
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4693 \subsection{Back end}
+l.4746 \subsection{Back end}
                             
-Underfull \hbox (badness 4072) in paragraph at lines 4734--4734
+Underfull \hbox (badness 4072) in paragraph at lines 4787--4787
 []|\T5/cmr/m/n/12 Navigate to the server's web root folder (e.g. \T5/cmtt/m/n/1
 2 C:\xampp\htdocs \T5/cmr/m/n/12 or
  []
 
-[127
+[128
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4739 \subsection{Frontend}
+l.4792 \subsection{Frontend}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{section.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4779 \section{  User manual}
-                               [128] [129] [130] (main.aux)
+l.4832 \section{  User manual}
+                               [129] [130] [131] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -3204,10 +3205,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 ### simple group (level 1) entered at line 503 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13263 strings out of 467871
- 207799 string characters out of 5428406
+ 13265 strings out of 467871
+ 207826 string characters out of 5428406
  659651 words of memory out of 5000000
- 41673 multiletter control sequences out of 15000+600000
+ 41674 multiletter control sequences out of 15000+600000
  643264 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,18n,83p,470b,915s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3220,9 +3221,9 @@ tex/vnr/vnbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C
 /fonts/type1/vntex/vnr/vnr12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr
 /vnti10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Progr
 am Files/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (130 pages, 6386552 bytes).
+Output written on main.pdf (131 pages, 6387812 bytes).
 PDF statistics:
- 1574 PDF objects out of 1728 (max. 8388607)
- 311 named destinations out of 1000 (max. 500000)
+ 1578 PDF objects out of 1728 (max. 8388607)
+ 312 named destinations out of 1000 (max. 500000)
  1867 words of extra memory for PDF output out of 10000 (max. 10000000)
 
