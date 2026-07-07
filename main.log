@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.4)  7 JUL 2026 17:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.4)  7 JUL 2026 17:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1437,109 +1437,109 @@ Package array Warning: Column L is already defined on input line 456.
 Package array Warning: Column C is already defined on input line 457.
 
 [6]
-Overfull \hbox (69.7582pt too wide) in paragraph at lines 469--509
+Overfull \hbox (69.7582pt too wide) in paragraph at lines 469--508
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--509
+Underfull \hbox (badness 10000) in paragraph at lines 469--508
 
  []
 
 [7]
-Overfull \hbox (1.54361pt too wide) in paragraph at lines 519--519
-[]|\T5/cmr/bx/n/10.95 Communication 
+Overfull \hbox (7.80649pt too wide) in paragraph at lines 518--518
+[]|\T5/cmr/bx/n/12 Communication 
  []
 
 
-Overfull \hbox (55.67459pt too wide) in paragraph at lines 516--558
-[][] 
+Overfull \hbox (38.04977pt too wide) in paragraph at lines 515--557
+[] 
  []
 
 [8]
 
-Package array Warning: Column L is already defined on input line 573.
+Package array Warning: Column L is already defined on input line 571.
 
 [9]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 615.
+(hyperref)                removing `\<let>-command' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 615.
+(hyperref)                removing `\\' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 615.
+(hyperref)                removing `\@centercr' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 615.
+(hyperref)                removing `\rightskip' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 615.
+(hyperref)                removing `\@flushglue' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 615.
+(hyperref)                removing `\leftskip' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 615.
+(hyperref)                removing `\@flushglue' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 615.
+(hyperref)                removing `\finalhyphendemerits' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 615.
+(hyperref)                removing `\z@' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 615.
+(hyperref)                removing `\parindent' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 615.
+(hyperref)                removing `\z@' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 615.
+(hyperref)                removing `\parfillskip' on input line 613.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 615.
+(hyperref)                removing `\z@skip' on input line 613.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.621 \section{Product Overview}
+l.619 \section{Product Overview}
                                 
-<Context_Diagram.png, id=678, 1109.14375pt x 679.53876pt>
+<Context_Diagram.png, id=695, 1109.14375pt x 679.53876pt>
 File: Context_Diagram.png Graphic file (type png)
 <use Context_Diagram.png>
-Package pdftex.def Info: Context_Diagram.png  used on input line 632.
+Package pdftex.def Info: Context_Diagram.png  used on input line 630.
 (pdftex.def)             Requested size: 430.31812pt x 263.63998pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.637 \section{User Requirements}
+l.635 \section{User Requirements}
                                  
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.639 \subsection{Actors}
+l.637 \subsection{Actors}
                          
-Underfull \hbox (badness 10000) in paragraph at lines 661--661
-[]|\T5/cmr/m/n/10.95 Publication Trend
+Underfull \hbox (badness 10000) in paragraph at lines 659--659
+[]|\T5/cmr/m/n/12 Publication Trend
  []
 
 [10
@@ -1549,42 +1549,42 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.674 \subsection{Use Case Diagrams}
+l.672 \subsection{Use Case Diagrams}
                                     
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .2.2.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.675 \subsubsection{Diagram}
+l.673 \subsubsection{Diagram}
                              
-<ucd.png, id=688, 1035.87pt x 849.1725pt>
+<ucd.png, id=705, 1035.87pt x 849.1725pt>
 File: ucd.png Graphic file (type png)
 <use ucd.png>
-Package pdftex.def Info: ucd.png  used on input line 678.
+Package pdftex.def Info: ucd.png  used on input line 676.
 (pdftex.def)             Requested size: 452.9679pt x 371.33066pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .2.2.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.683 \subsubsection{Use Case Descriptions}
+l.681 \subsubsection{Use Case Descriptions}
                                            
-Overfull \hbox (16.41492pt too wide) in paragraph at lines 761--761
+Overfull \hbox (16.41492pt too wide) in paragraph at lines 759--759
 []|\T5/cmr/m/n/10.95 Administrator|  
  []
 
 
-Overfull \hbox (16.41492pt too wide) in paragraph at lines 769--769
+Overfull \hbox (16.41492pt too wide) in paragraph at lines 767--767
 []|\T5/cmr/m/n/10.95 Administrator|  
  []
 
 
-Overfull \hbox (16.41492pt too wide) in paragraph at lines 777--777
+Overfull \hbox (16.41492pt too wide) in paragraph at lines 775--775
 []|\T5/cmr/m/n/10.95 Administrator|  
  []
 
 
-Overfull \hbox (16.41492pt too wide) in paragraph at lines 785--785
+Overfull \hbox (16.41492pt too wide) in paragraph at lines 783--783
 []|\T5/cmr/m/n/10.95 Administrator|  
  []
 
@@ -1592,501 +1592,506 @@ ignored error: Infinite glue shrinkage found in box being split [12
 
  <./ucd.png>]
 ignored error: Infinite glue shrinkage found in box being split [13]
-<res.jpg, id=702, 844.3545pt x 392.06474pt>
+pdfTeX warning (ext4): destination with the same identifier (name{section.3}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.790 \section{Functional Requirement}
+                                      
+<res.jpg, id=719, 844.3545pt x 392.06474pt>
 File: res.jpg Graphic file (type jpg)
 <use res.jpg>
-Package pdftex.def Info: res.jpg  used on input line 799.
+Package pdftex.def Info: res.jpg  used on input line 797.
 (pdftex.def)             Requested size: 452.9679pt x 210.32986pt.
-<admin.png, id=703, 2730.2pt x 4207.72pt>
+<admin.png, id=720, 2730.2pt x 4207.72pt>
 File: admin.png Graphic file (type png)
 <use admin.png>
-Package pdftex.def Info: admin.png  used on input line 805.
+Package pdftex.def Info: admin.png  used on input line 803.
 (pdftex.def)             Requested size: 452.9679pt x 698.09613pt.
- [14]
-[15 <./res.jpg>] [16 <./admin.png>]
+ [14] [15 <./res.jpg>] [16 <./admin.png>]
 ignored error: Infinite glue shrinkage found in box being split [17]
 ignored error: Infinite glue shrinkage found in box being split [18]
 
-Package array Warning: Column L is already defined on input line 913.
+Package array Warning: Column L is already defined on input line 911.
 
 
-Package array Warning: Column C is already defined on input line 914.
+Package array Warning: Column C is already defined on input line 912.
 
 
-Package array Warning: Column L is already defined on input line 921.
+Package array Warning: Column L is already defined on input line 919.
 
 
-Package array Warning: Column C is already defined on input line 922.
+Package array Warning: Column C is already defined on input line 920.
 
 
-Overfull \hbox (5.40158pt too wide) in paragraph at lines 926--926
+Overfull \hbox (5.40158pt too wide) in paragraph at lines 924--924
  []|[]\T5/cmr/bx/n/10.95 Lecturer/Student[]| 
  []
 
 
-Overfull \hbox (21.82341pt too wide) in alignment at lines 924--928
+Overfull \hbox (21.82341pt too wide) in alignment at lines 922--926
  [] [] [] [] 
  []
 
 
-Overfull \hbox (5.40158pt too wide) in paragraph at lines 931--931
+Overfull \hbox (5.40158pt too wide) in paragraph at lines 929--929
  []|[]\T5/cmr/bx/n/10.95 Lecturer/Student[]| 
  []
 
 
-Overfull \hbox (21.82341pt too wide) in alignment at lines 928--933
+Overfull \hbox (21.82341pt too wide) in alignment at lines 926--931
  [] [] [] [] 
  []
 
 
-Overfull \hbox (21.82341pt too wide) in alignment at lines 933--936
+Overfull \hbox (21.82341pt too wide) in alignment at lines 931--934
  [] [] [] [] 
  []
 
 
-Overfull \hbox (21.82341pt too wide) in alignment at lines 936--959
+Overfull \hbox (21.82341pt too wide) in alignment at lines 934--957
  [] [] [] [] 
  []
 
 ignored error: Infinite glue shrinkage found in box being split [19]
 
-Package array Warning: Column L is already defined on input line 963.
+Package array Warning: Column L is already defined on input line 961.
 
 
-Package array Warning: Column C is already defined on input line 964.
+Package array Warning: Column C is already defined on input line 962.
 
 [20]
-<erd.png, id=736, 541.27219pt x 371.13657pt>
+<erd.png, id=753, 541.27219pt x 371.13657pt>
 File: erd.png Graphic file (type png)
 <use erd.png>
-Package pdftex.def Info: erd.png  used on input line 993.
+Package pdftex.def Info: erd.png  used on input line 991.
 (pdftex.def)             Requested size: 452.9679pt x 310.5973pt.
  [21]
-<gđk.jpg, id=741, 694.595pt x 779.91376pt>
+<gđk.jpg, id=758, 694.595pt x 779.91376pt>
 File: gđk.jpg Graphic file (type jpg)
 <use gđk.jpg>
-Package pdftex.def Info: gđk.jpg  used on input line 1017.
+Package pdftex.def Info: gđk.jpg  used on input line 1015.
 (pdftex.def)             Requested size: 452.9679pt x 508.62782pt.
  [22 <./erd.png>]
-<dkl.jpg, id=747, 694.595pt x 521.95pt>
+<dkl.jpg, id=764, 694.595pt x 521.95pt>
 File: dkl.jpg Graphic file (type jpg)
 <use dkl.jpg>
-Package pdftex.def Info: dkl.jpg  used on input line 1026.
+Package pdftex.def Info: dkl.jpg  used on input line 1024.
 (pdftex.def)             Requested size: 452.9679pt x 340.39441pt.
  [23 <./gđk.jpg>]
-<tentontai.png, id=752, 208.27812pt x 307.64937pt>
+<tentontai.png, id=769, 208.27812pt x 307.64937pt>
 File: tentontai.png Graphic file (type png)
 <use tentontai.png>
-Package pdftex.def Info: tentontai.png  used on input line 1036.
+Package pdftex.def Info: tentontai.png  used on input line 1034.
 (pdftex.def)             Requested size: 452.9679pt x 669.16951pt.
  [24 <./dkl.jpg>]
-<matkhaukhac.png, id=757, 279.0425pt x 340.77313pt>
+<matkhaukhac.png, id=774, 279.0425pt x 340.77313pt>
 File: matkhaukhac.png Graphic file (type png)
 <use matkhaukhac.png>
-Package pdftex.def Info: matkhaukhac.png  used on input line 1046.
+Package pdftex.def Info: matkhaukhac.png  used on input line 1044.
 (pdftex.def)             Requested size: 452.9679pt x 553.19339pt.
  [25 <./tentontai.png>]
-<dk.jpg, id=764, 719.68875pt x 789.95125pt>
+<dk.jpg, id=781, 719.68875pt x 789.95125pt>
 File: dk.jpg Graphic file (type jpg)
 <use dk.jpg>
-Package pdftex.def Info: dk.jpg  used on input line 1056.
+Package pdftex.def Info: dk.jpg  used on input line 1054.
 (pdftex.def)             Requested size: 452.9679pt x 497.20183pt.
  [26 <./matkhaukhac.png>] [27 <./dk.jpg>]
 File: dk.jpg Graphic file (type jpg)
 <use dk.jpg>
-Package pdftex.def Info: dk.jpg  used on input line 1082.
+Package pdftex.def Info: dk.jpg  used on input line 1080.
 (pdftex.def)             Requested size: 452.9679pt x 497.20183pt.
-<dnl.jpg, id=775, 694.595pt x 469.755pt>
+<dnl.jpg, id=792, 694.595pt x 469.755pt>
 File: dnl.jpg Graphic file (type jpg)
 <use dnl.jpg>
-Package pdftex.def Info: dnl.jpg  used on input line 1091.
+Package pdftex.def Info: dnl.jpg  used on input line 1089.
 (pdftex.def)             Requested size: 452.9679pt x 306.35497pt.
  [28]
-<gdc.jpg, id=780, 1346.02875pt x 2392.94pt>
+<gdc.jpg, id=797, 1346.02875pt x 2392.94pt>
 File: gdc.jpg Graphic file (type jpg)
 <use gdc.jpg>
-Package pdftex.def Info: gdc.jpg  used on input line 1100.
+Package pdftex.def Info: gdc.jpg  used on input line 1098.
 (pdftex.def)             Requested size: 452.9679pt x 805.26382pt.
  [29 <./dnl.jpg>]
 Overfull \vbox (104.75696pt too high) has occurred while \output is active []
 
 
 [30 <./gdc.jpg>]
-<prof.jpg, id=789, 1346.02875pt x 1194.4625pt>
+<prof.jpg, id=806, 1346.02875pt x 1194.4625pt>
 File: prof.jpg Graphic file (type jpg)
 <use prof.jpg>
-Package pdftex.def Info: prof.jpg  used on input line 1123.
+Package pdftex.def Info: prof.jpg  used on input line 1121.
 (pdftex.def)             Requested size: 452.9679pt x 401.95634pt.
-<editprof.jpg, id=790, 1368.11125pt x 1194.4625pt>
+<editprof.jpg, id=807, 1368.11125pt x 1194.4625pt>
 File: editprof.jpg Graphic file (type jpg)
 <use editprof.jpg>
-Package pdftex.def Info: editprof.jpg  used on input line 1132.
+Package pdftex.def Info: editprof.jpg  used on input line 1130.
 (pdftex.def)             Requested size: 452.9679pt x 395.46788pt.
  [31 <./prof.jpg>]
-<tencstontai.png, id=796, 927.465pt x 410.03188pt>
+<tencstontai.png, id=813, 927.465pt x 410.03188pt>
 File: tencstontai.png Graphic file (type png)
 <use tencstontai.png>
-Package pdftex.def Info: tencstontai.png  used on input line 1141.
+Package pdftex.def Info: tencstontai.png  used on input line 1139.
 (pdftex.def)             Requested size: 452.9679pt x 200.26044pt.
-<emailkhonghople.png, id=797, 927.96687pt x 419.06563pt>
+<emailkhonghople.png, id=814, 927.96687pt x 419.06563pt>
 File: emailkhonghople.png Graphic file (type png)
 <use emailkhonghople.png>
-Package pdftex.def Info: emailkhonghople.png  used on input line 1150.
+Package pdftex.def Info: emailkhonghople.png  used on input line 1148.
 (pdftex.def)             Requested size: 452.9679pt x 204.56383pt.
  [32 <./editprof.jpg> <./tencstontai.png>]
-<chinhsuathanhcong.png, id=803, 920.43875pt x 420.06938pt>
+<chinhsuathanhcong.png, id=820, 920.43875pt x 420.06938pt>
 File: chinhsuathanhcong.png Graphic file (type png)
 <use chinhsuathanhcong.png>
-Package pdftex.def Info: chinhsuathanhcong.png  used on input line 1159.
+Package pdftex.def Info: chinhsuathanhcong.png  used on input line 1157.
 (pdftex.def)             Requested size: 452.9679pt x 206.72675pt.
-<logout.jpg, id=804, 695.59875pt x 524.96124pt>
+<logout.jpg, id=821, 695.59875pt x 524.96124pt>
 File: logout.jpg Graphic file (type jpg)
 <use logout.jpg>
-Package pdftex.def Info: logout.jpg  used on input line 1180.
+Package pdftex.def Info: logout.jpg  used on input line 1178.
 (pdftex.def)             Requested size: 452.9679pt x 341.84557pt.
 
 [33 <./emailkhonghople.png> <./chinhsuathanhcong.png>]
-<trangdangnhap.png, id=811, 915.92188pt x 414.54875pt>
+<trangdangnhap.png, id=828, 915.92188pt x 414.54875pt>
 File: trangdangnhap.png Graphic file (type png)
 <use trangdangnhap.png>
-Package pdftex.def Info: trangdangnhap.png  used on input line 1189.
+Package pdftex.def Info: trangdangnhap.png  used on input line 1187.
 (pdftex.def)             Requested size: 452.9679pt x 205.01566pt.
  [34 <./logout.jpg> <./trangdangnhap.png>]
-<trangtimkiem.png, id=817, 926.46124pt x 421.575pt>
+<trangtimkiem.png, id=834, 926.46124pt x 421.575pt>
 File: trangtimkiem.png Graphic file (type png)
 <use trangtimkiem.png>
-Package pdftex.def Info: trangtimkiem.png  used on input line 1222.
+Package pdftex.def Info: trangtimkiem.png  used on input line 1220.
 (pdftex.def)             Requested size: 452.9679pt x 206.11682pt.
-<nambatdaulon.png, id=818, 921.4425pt x 425.08812pt>
+<nambatdaulon.png, id=835, 921.4425pt x 425.08812pt>
 File: nambatdaulon.png Graphic file (type png)
 <use nambatdaulon.png>
-Package pdftex.def Info: nambatdaulon.png  used on input line 1231.
+Package pdftex.def Info: nambatdaulon.png  used on input line 1229.
 (pdftex.def)             Requested size: 452.9679pt x 208.96309pt.
  [35 <./trangtimkiem.png>]
-<ketquatimkiem.png, id=824, 923.45pt x 420.06938pt>
+<ketquatimkiem.png, id=841, 923.45pt x 420.06938pt>
 File: ketquatimkiem.png Graphic file (type png)
 <use ketquatimkiem.png>
-Package pdftex.def Info: ketquatimkiem.png  used on input line 1242.
+Package pdftex.def Info: ketquatimkiem.png  used on input line 1240.
 (pdftex.def)             Requested size: 452.9679pt x 206.04732pt.
  [36 <./nambatdaulon.png> <./ketquatimkiem.png>]
-<luuyeuthich.png, id=831, 918.93312pt x 422.07687pt>
+<luuyeuthich.png, id=848, 918.93312pt x 422.07687pt>
 File: luuyeuthich.png Graphic file (type png)
 <use luuyeuthich.png>
-Package pdftex.def Info: luuyeuthich.png  used on input line 1279.
+Package pdftex.def Info: luuyeuthich.png  used on input line 1277.
 (pdftex.def)             Requested size: 452.9679pt x 208.05602pt.
-<dayeuthich.png, id=832, 921.4425pt x 423.5825pt>
+<dayeuthich.png, id=849, 921.4425pt x 423.5825pt>
 File: dayeuthich.png Graphic file (type png)
 <use dayeuthich.png>
-Package pdftex.def Info: dayeuthich.png  used on input line 1288.
+Package pdftex.def Info: dayeuthich.png  used on input line 1286.
 (pdftex.def)             Requested size: 452.9679pt x 208.22296pt.
  [37 <./luuyeuthich.png>]
-<trangyeuthich.png, id=840, 905.3825pt x 414.54875pt>
+<trangyeuthich.png, id=857, 905.3825pt x 414.54875pt>
 File: trangyeuthich.png Graphic file (type png)
 <use trangyeuthich.png>
-Package pdftex.def Info: trangyeuthich.png  used on input line 1297.
+Package pdftex.def Info: trangyeuthich.png  used on input line 1295.
 (pdftex.def)             Requested size: 452.9679pt x 207.40036pt.
-<xoa.png, id=841, 927.96687pt x 416.05438pt>
+<xoa.png, id=858, 927.96687pt x 416.05438pt>
 File: xoa.png Graphic file (type png)
 <use xoa.png>
-Package pdftex.def Info: xoa.png  used on input line 1306.
+Package pdftex.def Info: xoa.png  used on input line 1304.
 (pdftex.def)             Requested size: 452.9679pt x 203.09392pt.
  [38 <./dayeuthich.png> <./trangyeuthich.png>]
-<lienket.png, id=850, 920.43875pt x 423.08063pt>
+<lienket.png, id=867, 920.43875pt x 423.08063pt>
 File: lienket.png Graphic file (type png)
 <use lienket.png>
-Package pdftex.def Info: lienket.png  used on input line 1315.
+Package pdftex.def Info: lienket.png  used on input line 1313.
 (pdftex.def)             Requested size: 452.9679pt x 208.20865pt.
  [39 <./xoa.png> <./lienket.png>]
-<ptxh.png, id=859, 1230.5975pt x 914.41624pt>
+<ptxh.png, id=876, 1230.5975pt x 914.41624pt>
 File: ptxh.png Graphic file (type png)
 <use ptxh.png>
-Package pdftex.def Info: ptxh.png  used on input line 1387.
+Package pdftex.def Info: ptxh.png  used on input line 1385.
 (pdftex.def)             Requested size: 452.9679pt x 336.58461pt.
  [40]
-<thieu.png, id=867, 929.4725pt x 414.54875pt>
+<thieu.png, id=884, 929.4725pt x 414.54875pt>
 File: thieu.png Graphic file (type png)
 <use thieu.png>
-Package pdftex.def Info: thieu.png  used on input line 1397.
+Package pdftex.def Info: thieu.png  used on input line 1395.
 (pdftex.def)             Requested size: 452.9679pt x 202.0237pt.
-<batdaulonhon.png, id=868, 924.95563pt x 418.56375pt>
+<batdaulonhon.png, id=885, 924.95563pt x 418.56375pt>
 File: batdaulonhon.png Graphic file (type png)
 <use batdaulonhon.png>
-Package pdftex.def Info: batdaulonhon.png  used on input line 1407.
+Package pdftex.def Info: batdaulonhon.png  used on input line 1405.
 (pdftex.def)             Requested size: 452.9679pt x 204.97667pt.
  [41 <./ptxh.png (PNG copy)> <./thieu.png>]
-<ketquaphantich1.png, id=874, 276.03125pt x 407.02063pt>
+<ketquaphantich1.png, id=891, 276.03125pt x 407.02063pt>
 File: ketquaphantich1.png Graphic file (type png)
 <use ketquaphantich1.png>
-Package pdftex.def Info: ketquaphantich1.png  used on input line 1416.
+Package pdftex.def Info: ketquaphantich1.png  used on input line 1414.
 (pdftex.def)             Requested size: 452.9679pt x 667.99014pt.
-<ketquaphantich2.png, id=875, 283.55937pt x 236.885pt>
+<ketquaphantich2.png, id=892, 283.55937pt x 236.885pt>
 File: ketquaphantich2.png Graphic file (type png)
 <use ketquaphantich2.png>
-Package pdftex.def Info: ketquaphantich2.png  used on input line 1422.
+Package pdftex.def Info: ketquaphantich2.png  used on input line 1420.
 (pdftex.def)             Requested size: 452.9679pt x 378.44179pt.
  [42 <./batdaulonhon.png>] [43 <./ketquaphantich1.png>]
-Overfull \hbox (10.43666pt too wide) in paragraph at lines 1452--1453
+Overfull \hbox (10.43666pt too wide) in paragraph at lines 1450--1451
 []\T5/cmr/m/n/10.95 Collect cur-rent re-sults: statis-tics, charts, Trend-ing T
 op-ics, Top Jour-nals/Authors/Keywords,
  []
 
 [44 <./ketquaphantich2.png>]
-<tbc.jpg, id=892, 1925.1925pt x 915.42pt>
+<tbc.jpg, id=909, 1925.1925pt x 915.42pt>
 File: tbc.jpg Graphic file (type jpg)
 <use tbc.jpg>
-Package pdftex.def Info: tbc.jpg  used on input line 1483.
+Package pdftex.def Info: tbc.jpg  used on input line 1481.
 (pdftex.def)             Requested size: 452.9679pt x 215.37515pt.
-<xuatbaocao.png, id=893, 286.06876pt x 391.96437pt>
+<xuatbaocao.png, id=910, 286.06876pt x 391.96437pt>
 File: xuatbaocao.png Graphic file (type png)
 <use xuatbaocao.png>
-Package pdftex.def Info: xuatbaocao.png  used on input line 1492.
+Package pdftex.def Info: xuatbaocao.png  used on input line 1490.
 (pdftex.def)             Requested size: 452.9679pt x 620.65457pt.
  [45 <./tbc.jpg>] [46 <./xuatbaocao.png>]
-<theodoi.png, id=908, 918.43124pt x 420.57124pt>
+<theodoi.png, id=925, 918.43124pt x 420.57124pt>
 File: theodoi.png Graphic file (type png)
 <use theodoi.png>
-Package pdftex.def Info: theodoi.png  used on input line 1529.
+Package pdftex.def Info: theodoi.png  used on input line 1527.
 (pdftex.def)             Requested size: 452.9679pt x 207.42937pt.
-<dstheodoi.png, id=909, 923.45pt x 417.56pt>
+<dstheodoi.png, id=926, 923.45pt x 417.56pt>
 File: dstheodoi.png Graphic file (type png)
 <use dstheodoi.png>
-Package pdftex.def Info: dstheodoi.png  used on input line 1538.
+Package pdftex.def Info: dstheodoi.png  used on input line 1536.
 (pdftex.def)             Requested size: 452.9679pt x 204.81644pt.
  [47 <./theodoi.png>]
-<huytheodoi.png, id=915, 920.43875pt x 410.03188pt>
+<huytheodoi.png, id=932, 920.43875pt x 410.03188pt>
 File: huytheodoi.png Graphic file (type png)
 <use huytheodoi.png>
-Package pdftex.def Info: huytheodoi.png  used on input line 1547.
+Package pdftex.def Info: huytheodoi.png  used on input line 1545.
 (pdftex.def)             Requested size: 452.9679pt x 201.78703pt.
  [48 <./dstheodoi.png> <./huytheodoi.png>]
-<nhanthongbao.png, id=922, 926.46124pt x 422.07687pt>
+<nhanthongbao.png, id=939, 926.46124pt x 422.07687pt>
 File: nhanthongbao.png Graphic file (type png)
 <use nhanthongbao.png>
-Package pdftex.def Info: nhanthongbao.png  used on input line 1580.
+Package pdftex.def Info: nhanthongbao.png  used on input line 1578.
 (pdftex.def)             Requested size: 452.9679pt x 206.3622pt.
-<dadoc.png, id=923, 929.4725pt x 414.54875pt>
+<dadoc.png, id=940, 929.4725pt x 414.54875pt>
 File: dadoc.png Graphic file (type png)
 <use dadoc.png>
-Package pdftex.def Info: dadoc.png  used on input line 1589.
+Package pdftex.def Info: dadoc.png  used on input line 1587.
 (pdftex.def)             Requested size: 452.9679pt x 202.0237pt.
  [49 <./nhanthongbao.png> <./dadoc.png>]
-<ad1.png, id=931, 1088.26575pt x 545.6385pt>
+<ad1.png, id=948, 1088.26575pt x 545.6385pt>
 File: ad1.png Graphic file (type png)
 <use ad1.png>
-Package pdftex.def Info: ad1.png  used on input line 1612.
+Package pdftex.def Info: ad1.png  used on input line 1610.
 (pdftex.def)             Requested size: 452.9679pt x 227.11014pt.
-<ad2.png, id=932, 1081.641pt x 374.5995pt>
+<ad2.png, id=949, 1081.641pt x 374.5995pt>
 File: ad2.png Graphic file (type png)
 <use ad2.png>
-Package pdftex.def Info: ad2.png  used on input line 1621.
+Package pdftex.def Info: ad2.png  used on input line 1619.
 (pdftex.def)             Requested size: 452.9679pt x 156.87344pt.
-<ad3.png, id=933, 1066.58475pt x 136.71075pt>
+<ad3.png, id=950, 1066.58475pt x 136.71075pt>
 File: ad3.png Graphic file (type png)
 <use ad3.png>
-Package pdftex.def Info: ad3.png  used on input line 1630.
+Package pdftex.def Info: ad3.png  used on input line 1628.
 (pdftex.def)             Requested size: 452.9679pt x 58.06061pt.
-<ad4.png, id=934, 1082.24326pt x 284.262pt>
+<ad4.png, id=951, 1082.24326pt x 284.262pt>
 File: ad4.png Graphic file (type png)
 <use ad4.png>
-Package pdftex.def Info: ad4.png  used on input line 1639.
+Package pdftex.def Info: ad4.png  used on input line 1637.
 (pdftex.def)             Requested size: 452.9679pt x 118.97716pt.
  [50 <./ad1.png> <./ad2.png> <./ad3.png>]
-<ad5.png, id=942, 1090.67474pt x 446.8695pt>
+<ad5.png, id=959, 1090.67474pt x 446.8695pt>
 File: ad5.png Graphic file (type png)
 <use ad5.png>
-Package pdftex.def Info: ad5.png  used on input line 1660.
+Package pdftex.def Info: ad5.png  used on input line 1658.
 (pdftex.def)             Requested size: 452.9679pt x 185.59058pt.
-<ad6.png, id=943, 1085.2545pt x 139.722pt>
+<ad6.png, id=960, 1085.2545pt x 139.722pt>
 File: ad6.png Graphic file (type png)
 <use ad6.png>
-Package pdftex.def Info: ad6.png  used on input line 1669.
+Package pdftex.def Info: ad6.png  used on input line 1667.
 (pdftex.def)             Requested size: 452.9679pt x 58.31613pt.
-<ad7.png, id=944, 1087.6635pt x 224.037pt>
+<ad7.png, id=961, 1087.6635pt x 224.037pt>
 File: ad7.png Graphic file (type png)
 <use ad7.png>
-Package pdftex.def Info: ad7.png  used on input line 1678.
+Package pdftex.def Info: ad7.png  used on input line 1676.
 (pdftex.def)             Requested size: 452.9679pt x 93.30179pt.
  [51 <./ad4.png> <./ad5.png> <./ad6.png>]
-<ad8.png, id=952, 1065.9825pt x 335.45325pt>
+<ad8.png, id=969, 1065.9825pt x 335.45325pt>
 File: ad8.png Graphic file (type png)
 <use ad8.png>
-Package pdftex.def Info: ad8.png  used on input line 1687.
+Package pdftex.def Info: ad8.png  used on input line 1685.
 (pdftex.def)             Requested size: 452.9679pt x 142.5427pt.
-<ad9.png, id=953, 1091.277pt x 458.9145pt>
+<ad9.png, id=970, 1091.277pt x 458.9145pt>
 File: ad9.png Graphic file (type png)
 <use ad9.png>
-Package pdftex.def Info: ad9.png  used on input line 1693.
+Package pdftex.def Info: ad9.png  used on input line 1691.
 (pdftex.def)             Requested size: 452.9679pt x 190.48798pt.
-<ad10.png, id=954, 1087.6635pt x 440.24475pt>
+<ad10.png, id=971, 1087.6635pt x 440.24475pt>
 File: ad10.png Graphic file (type png)
 <use ad10.png>
-Package pdftex.def Info: ad10.png  used on input line 1699.
+Package pdftex.def Info: ad10.png  used on input line 1697.
 (pdftex.def)             Requested size: 452.9679pt x 183.34305pt.
  [52 <./ad7.png> <./ad8.png> <./ad9.png>]
-<ad11.png, id=962, 1079.232pt x 489.027pt>
+<ad11.png, id=979, 1079.232pt x 489.027pt>
 File: ad11.png Graphic file (type png)
 <use ad11.png>
-Package pdftex.def Info: ad11.png  used on input line 1708.
+Package pdftex.def Info: ad11.png  used on input line 1706.
 (pdftex.def)             Requested size: 452.9679pt x 205.24815pt.
-<ad12.png, id=963, 1085.2545pt x 540.21825pt>
+<ad12.png, id=980, 1085.2545pt x 540.21825pt>
 File: ad12.png Graphic file (type png)
 <use ad12.png>
-Package pdftex.def Info: ad12.png  used on input line 1730.
+Package pdftex.def Info: ad12.png  used on input line 1728.
 (pdftex.def)             Requested size: 452.9679pt x 225.4723pt.
  [53 <./ad10.png> <./ad11.png>]
-<ad13.png, id=971, 1090.0725pt x 392.06474pt>
+<ad13.png, id=988, 1090.0725pt x 392.06474pt>
 File: ad13.png Graphic file (type png)
 <use ad13.png>
-Package pdftex.def Info: ad13.png  used on input line 1742.
+Package pdftex.def Info: ad13.png  used on input line 1740.
 (pdftex.def)             Requested size: 452.9679pt x 162.91919pt.
-<ad14.png, id=972, 1075.01625pt x 377.0085pt>
+<ad14.png, id=989, 1075.01625pt x 377.0085pt>
 File: ad14.png Graphic file (type png)
 <use ad14.png>
-Package pdftex.def Info: ad14.png  used on input line 1751.
+Package pdftex.def Info: ad14.png  used on input line 1749.
 (pdftex.def)             Requested size: 452.9679pt x 158.85446pt.
-<ad15.png, id=973, 1085.2545pt x 479.99326pt>
+<ad15.png, id=990, 1085.2545pt x 479.99326pt>
 File: ad15.png Graphic file (type png)
 <use ad15.png>
-Package pdftex.def Info: ad15.png  used on input line 1760.
+Package pdftex.def Info: ad15.png  used on input line 1758.
 (pdftex.def)             Requested size: 452.9679pt x 200.33604pt.
  [54 <./ad12.png> <./ad13.png> <./ad14.png>]
-<ad16.png, id=981, 1079.232pt x 446.8695pt>
+<ad16.png, id=998, 1079.232pt x 446.8695pt>
 File: ad16.png Graphic file (type png)
 <use ad16.png>
-Package pdftex.def Info: ad16.png  used on input line 1785.
+Package pdftex.def Info: ad16.png  used on input line 1783.
 (pdftex.def)             Requested size: 452.9679pt x 187.55435pt.
  [55 <./ad15.png> <./ad16.png>]
-<ad17.png, id=989, 1085.2545pt x 233.07076pt>
+<ad17.png, id=1006, 1085.2545pt x 233.07076pt>
 File: ad17.png Graphic file (type png)
 <use ad17.png>
-Package pdftex.def Info: ad17.png  used on input line 1796.
+Package pdftex.def Info: ad17.png  used on input line 1794.
 (pdftex.def)             Requested size: 452.9679pt x 97.27734pt.
 File: ad17.png Graphic file (type png)
 <use ad17.png>
-Package pdftex.def Info: ad17.png  used on input line 1805.
+Package pdftex.def Info: ad17.png  used on input line 1803.
 (pdftex.def)             Requested size: 452.9679pt x 97.27734pt.
-<ad18.png, id=990, 1070.19826pt x 491.436pt>
+<ad18.png, id=1007, 1070.19826pt x 491.436pt>
 File: ad18.png Graphic file (type png)
 <use ad18.png>
-Package pdftex.def Info: ad18.png  used on input line 1826.
+Package pdftex.def Info: ad18.png  used on input line 1824.
 (pdftex.def)             Requested size: 452.9679pt x 207.99893pt.
-<ad19.png, id=991, 1085.2545pt x 349.90726pt>
+<ad19.png, id=1008, 1085.2545pt x 349.90726pt>
 File: ad19.png Graphic file (type png)
 <use ad19.png>
-Package pdftex.def Info: ad19.png  used on input line 1831.
+Package pdftex.def Info: ad19.png  used on input line 1829.
 (pdftex.def)             Requested size: 452.9679pt x 146.0417pt.
  [56 <./ad17.png>]
 File: ad19.png Graphic file (type png)
 <use ad19.png>
-Package pdftex.def Info: ad19.png  used on input line 1839.
+Package pdftex.def Info: ad19.png  used on input line 1837.
 (pdftex.def)             Requested size: 452.9679pt x 146.0417pt.
-<ad20.png, id=997, 1085.2545pt x 380.622pt>
+<ad20.png, id=1014, 1085.2545pt x 380.622pt>
 File: ad20.png Graphic file (type png)
 <use ad20.png>
-Package pdftex.def Info: ad20.png  used on input line 1848.
+Package pdftex.def Info: ad20.png  used on input line 1846.
 (pdftex.def)             Requested size: 452.9679pt x 158.86119pt.
  [57 <./ad18.png> <./ad19.png>]
-<ad21.png, id=1004, 1075.01625pt x 289.08pt>
+<ad21.png, id=1021, 1075.01625pt x 289.08pt>
 File: ad21.png Graphic file (type png)
 <use ad21.png>
-Package pdftex.def Info: ad21.png  used on input line 1857.
+Package pdftex.def Info: ad21.png  used on input line 1855.
 (pdftex.def)             Requested size: 452.9679pt x 121.80534pt.
-<ad22.png, id=1005, 1064.17575pt x 335.45325pt>
+<ad22.png, id=1022, 1064.17575pt x 335.45325pt>
 File: ad22.png Graphic file (type png)
 <use ad22.png>
-Package pdftex.def Info: ad22.png  used on input line 1866.
+Package pdftex.def Info: ad22.png  used on input line 1864.
 (pdftex.def)             Requested size: 452.9679pt x 142.78839pt.
-<ad23.png, id=1006, 1090.67474pt x 264.99pt>
+<ad23.png, id=1023, 1090.67474pt x 264.99pt>
 File: ad23.png Graphic file (type png)
 <use ad23.png>
-Package pdftex.def Info: ad23.png  used on input line 1887.
+Package pdftex.def Info: ad23.png  used on input line 1885.
 (pdftex.def)             Requested size: 452.9679pt x 110.05371pt.
  [58 <./ad20.png> <./ad21.png> <./ad22.png>]
-<ad24.png, id=1014, 1079.232pt x 260.172pt>
+<ad24.png, id=1031, 1079.232pt x 260.172pt>
 File: ad24.png Graphic file (type png)
 <use ad24.png>
-Package pdftex.def Info: ad24.png  used on input line 1897.
+Package pdftex.def Info: ad24.png  used on input line 1895.
 (pdftex.def)             Requested size: 452.9679pt x 109.19604pt.
-<ad25.png, id=1015, 1075.6185pt x 317.38576pt>
+<ad25.png, id=1032, 1075.6185pt x 317.38576pt>
 File: ad25.png Graphic file (type png)
 <use ad25.png>
-Package pdftex.def Info: ad25.png  used on input line 1906.
+Package pdftex.def Info: ad25.png  used on input line 1904.
 (pdftex.def)             Requested size: 452.9679pt x 133.65948pt.
-<ad26.png, id=1016, 717.882pt x 455.301pt>
+<ad26.png, id=1033, 717.882pt x 455.301pt>
 File: ad26.png Graphic file (type png)
 <use ad26.png>
-Package pdftex.def Info: ad26.png  used on input line 1915.
+Package pdftex.def Info: ad26.png  used on input line 1913.
 (pdftex.def)             Requested size: 452.9679pt x 287.28577pt.
  [59 <./ad23.png> <./ad24.png> <./ad25.png>] [60 <./ad26.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 1921.
+(hyperref)                removing `\<let>-command' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 1921.
+(hyperref)                removing `\\' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 1921.
+(hyperref)                removing `\@centercr' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 1921.
+(hyperref)                removing `\rightskip' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 1921.
+(hyperref)                removing `\@flushglue' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 1921.
+(hyperref)                removing `\leftskip' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 1921.
+(hyperref)                removing `\@flushglue' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 1921.
+(hyperref)                removing `\finalhyphendemerits' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1921.
+(hyperref)                removing `\z@' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 1921.
+(hyperref)                removing `\parindent' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1921.
+(hyperref)                removing `\z@' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 1921.
+(hyperref)                removing `\parfillskip' on input line 1919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 1921.
+(hyperref)                removing `\z@skip' on input line 1919.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1928 \section{System Design}
+l.1926 \section{System Design}
                               
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1929 \subsection{System Architecture}
+l.1927 \subsection{System Architecture}
                                        
-<ss.png, id=1029, 450.18187pt x 402.00188pt>
+<ss.png, id=1046, 450.18187pt x 402.00188pt>
 File: ss.png Graphic file (type png)
 <use ss.png>
-Package pdftex.def Info: ss.png  used on input line 1932.
+Package pdftex.def Info: ss.png  used on input line 1930.
 (pdftex.def)             Requested size: 362.37569pt x 323.60776pt.
  [61
 
@@ -2095,111 +2100,111 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1970 \subsection{Package Diagram}
+l.1968 \subsection{Package Diagram}
                                    
-<fe.png, id=1036, 416.05438pt x 146.04562pt>
+<fe.png, id=1054, 416.05438pt x 146.04562pt>
 File: fe.png Graphic file (type png)
 <use fe.png>
-Package pdftex.def Info: fe.png  used on input line 1974.
+Package pdftex.def Info: fe.png  used on input line 1972.
 (pdftex.def)             Requested size: 452.9679pt x 159.0105pt.
 
 
-Package array Warning: Column L is already defined on input line 1979.
+Package array Warning: Column L is already defined on input line 1977.
 
 
-Overfull \hbox (0.79482pt too wide) in paragraph at lines 1996--1996
+Overfull \hbox (0.79482pt too wide) in paragraph at lines 1994--1994
 []|\T5/cmtt/m/n/10.95 trangchu1.html|  
  []
 
 
-Overfull \hbox (41.02612pt too wide) in paragraph at lines 1998--1998
+Overfull \hbox (41.02612pt too wide) in paragraph at lines 1996--1996
 []|\T5/cmtt/m/n/10.95 xemchitietbaibao.html|  
  []
 
 
-Overfull \hbox (35.2788pt too wide) in paragraph at lines 2000--2000
+Overfull \hbox (35.2788pt too wide) in paragraph at lines 1998--1998
 []|\T5/cmtt/m/n/10.95 phantichxuhuong.html|  
  []
 
 
-Overfull \hbox (6.54214pt too wide) in paragraph at lines 2002--2002
+Overfull \hbox (6.54214pt too wide) in paragraph at lines 2000--2000
 []|\T5/cmtt/m/n/10.95 hosocanhan.html|  
  []
 
 
-Overfull \hbox (12.28947pt too wide) in paragraph at lines 2006--2006
+Overfull \hbox (12.28947pt too wide) in paragraph at lines 2004--2004
 []|\T5/cmtt/m/n/10.95 xemthongbao.html|  
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<be.png, id=1037, 423.5825pt x 307.64937pt>
+<be.png, id=1055, 423.5825pt x 307.64937pt>
 File: be.png Graphic file (type png)
 <use be.png>
-Package pdftex.def Info: be.png  used on input line 2015.
+Package pdftex.def Info: be.png  used on input line 2013.
 (pdftex.def)             Requested size: 452.9679pt x 329.00317pt.
 [62 <./fe.png>] [63]
 
-Package array Warning: Column L is already defined on input line 2020.
+Package array Warning: Column L is already defined on input line 2018.
 
 
-Overfull \hbox (12.34634pt too wide) in paragraph at lines 2033--2033
+Overfull \hbox (12.34634pt too wide) in paragraph at lines 2031--2031
 \T5/cmtt/m/n/10.95 check_session.php|  
  []
 
 
-Overfull \hbox (0.85168pt too wide) in paragraph at lines 2035--2035
+Overfull \hbox (0.85168pt too wide) in paragraph at lines 2033--2033
 \T5/cmtt/m/n/10.95 capnhathoso.php|  
  []
 
 
-Overfull \hbox (6.59901pt too wide) in paragraph at lines 2039--2039
+Overfull \hbox (6.59901pt too wide) in paragraph at lines 2037--2037
 []|\T5/cmtt/m/n/10.95 xuhuongchude.php|  
  []
 
 
-Overfull \hbox (23.841pt too wide) in paragraph at lines 2041--2041
+Overfull \hbox (23.841pt too wide) in paragraph at lines 2039--2039
 []|\T5/cmtt/m/n/10.95 phantichxuhuong.php|  
  []
 
 
-Overfull \hbox (9.63992pt too wide) in paragraph at lines 2043--2043
+Overfull \hbox (9.63992pt too wide) in paragraph at lines 2041--2041
 []|\T5/cmtt/m/n/10.95 theodoichude.php\T5/cmr/m/n/10.95 , 
  []
 
 
-Overfull \hbox (3.8926pt too wide) in paragraph at lines 2045--2045
+Overfull \hbox (3.8926pt too wide) in paragraph at lines 2043--2043
 []|\T5/cmtt/m/n/10.95 admin_users.php\T5/cmr/m/n/10.95 , 
  []
 
 
-Overfull \hbox (9.63992pt too wide) in paragraph at lines 2045--2045
+Overfull \hbox (9.63992pt too wide) in paragraph at lines 2043--2043
 \T5/cmtt/m/n/10.95 admin_papers.php\T5/cmr/m/n/10.95 , 
  []
 
 
-Overfull \hbox (9.63992pt too wide) in paragraph at lines 2045--2045
+Overfull \hbox (9.63992pt too wide) in paragraph at lines 2043--2043
 \T5/cmtt/m/n/10.95 admin_topics.php\T5/cmr/m/n/10.95 , 
  []
 
 
-Overfull \hbox (38.37657pt too wide) in paragraph at lines 2045--2045
+Overfull \hbox (38.37657pt too wide) in paragraph at lines 2043--2043
 \T5/cmtt/m/n/10.95 admin_api_sources.php\T5/cmr/m/n/10.95 , 
  []
 
 
-Overfull \hbox (49.87123pt too wide) in paragraph at lines 2045--2045
+Overfull \hbox (49.87123pt too wide) in paragraph at lines 2043--2043
 \T5/cmtt/m/n/10.95 admin_notifications.php\T5/cmr/m/n/10.95 , 
  []
 
 
-Overfull \hbox (0.85168pt too wide) in paragraph at lines 2045--2045
+Overfull \hbox (0.85168pt too wide) in paragraph at lines 2043--2043
 \T5/cmtt/m/n/10.95 admin_check.php|  
  []
 
 
-Overfull \hbox (23.841pt too wide) in paragraph at lines 2051--2051
+Overfull \hbox (23.841pt too wide) in paragraph at lines 2049--2049
 []|\T5/cmtt/m/n/10.95 config/database.php|  
  []
 
@@ -2211,12 +2216,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2057 \section{Database Design}
+l.2055 \section{Database Design}
                                 
-<database.png, id=1057, 1127.21124pt x 732.7375pt>
+<database.png, id=1075, 1127.21124pt x 732.7375pt>
 File: database.png Graphic file (type png)
 <use database.png>
-Package pdftex.def Info: database.png  used on input line 2063.
+Package pdftex.def Info: database.png  used on input line 2061.
 (pdftex.def)             Requested size: 452.97488pt x 294.45384pt.
  [66
 
@@ -2225,19 +2230,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2070 \subsection{Role Table}
+l.2068 \subsection{Role Table}
                               
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2076--2076
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2074--2074
 []|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2077--2077
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2075--2075
 []|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2071--2079
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2069--2077
  [] [] [] [] [] 
  []
 
@@ -2246,447 +2251,467 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2082 \subsection{User Table}
+l.2080 \subsection{User Table}
                               
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2086--2086
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2087--2087
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 2088--2088
-[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2089--2089
-[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2090--2090
 []|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2093--2094
+Underfull \hbox (badness 10000) in paragraph at lines 2091--2092
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2083--2095
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2081--2093
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2104--2104
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2102--2102
 []|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2105--2105
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2103--2103
 []|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2099--2108
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2097--2106
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2116--2116
+Underfull \hbox (badness 10000) in paragraph at lines 2114--2114
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2116--2116
+Underfull \hbox (badness 10000) in paragraph at lines 2114--2114
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2116--2117
+Underfull \hbox (badness 10000) in paragraph at lines 2114--2115
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2117--2117
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2115
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2117--2117
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2115
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2117--2118
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2116
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2112--2119
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2110--2117
  [] [] [] [] [] 
  []
 
 [67
 
 ]
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2128--2128
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2126--2126
 []|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
  []
 
 
-Overfull \hbox (13.1675pt too wide) in paragraph at lines 2129--2129
+Overfull \hbox (13.1675pt too wide) in paragraph at lines 2127--2127
 []|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2130--2131
+Underfull \hbox (badness 10000) in paragraph at lines 2128--2129
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2123--2132
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2121--2130
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2140--2140
+Underfull \hbox (badness 10000) in paragraph at lines 2138--2138
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2140--2140
+Underfull \hbox (badness 10000) in paragraph at lines 2138--2138
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2140--2141
+Underfull \hbox (badness 10000) in paragraph at lines 2138--2139
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2141--2141
+Underfull \hbox (badness 10000) in paragraph at lines 2139--2139
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2141--2141
+Underfull \hbox (badness 10000) in paragraph at lines 2139--2139
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2141--2142
+Underfull \hbox (badness 10000) in paragraph at lines 2139--2140
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2136--2143
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2134--2141
  [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2150--2150
+[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
+ []
+
+
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2151--2151
+[]|\T5/cmr/m/n/10.95 NVARCHAR(500)| 
  []
 
 
 Overfull \hbox (3.13245pt too wide) in paragraph at lines 2152--2152
-[]|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2153--2153
-[]|\T5/cmr/m/n/10.95 NVARCHAR(500)| 
- []
-
-
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2154--2154
 []|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2147--2156
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2145--2154
  [] [] [] [] [] 
  []
 
 ignored error: Infinite glue shrinkage found in box being split [68]
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2165--2165
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2163--2163
 []|\T5/cmr/m/n/10.95 NVARCHAR(150)| 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2166--2166
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2164--2164
 []|\T5/cmr/m/n/10.95 NVARCHAR(255)| 
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2160--2168
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2158--2166
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2177--2177
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2175--2175
 []|\T5/cmr/m/n/10.95 NVARCHAR(100)| 
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2172--2179
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2170--2177
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2188--2188
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2186--2186
 []|\T5/cmr/m/n/10.95 NVARCHAR(500)| 
  []
 
 
-Overfull \hbox (13.1675pt too wide) in paragraph at lines 2189--2189
+Overfull \hbox (13.1675pt too wide) in paragraph at lines 2187--2187
 []|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2190--2190
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2188--2188
 []|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2192--2193
+Underfull \hbox (badness 10000) in paragraph at lines 2190--2191
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (8.59073pt too wide) in paragraph at lines 2192--2193
+Overfull \hbox (8.59073pt too wide) in paragraph at lines 2190--2191
 \T5/cmr/m/n/10.95 APISource| 
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2183--2194
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2181--2192
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2202--2202
+Underfull \hbox (badness 10000) in paragraph at lines 2200--2200
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2202--2202
+Underfull \hbox (badness 10000) in paragraph at lines 2200--2200
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2202--2203
+Underfull \hbox (badness 10000) in paragraph at lines 2200--2201
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2202--2203
+Underfull \hbox (badness 10000) in paragraph at lines 2200--2201
 \TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2202--2203
+Underfull \hbox (badness 10000) in paragraph at lines 2200--2201
 \T5/cmr/m/n/10.95 search-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2203--2203
+Underfull \hbox (badness 10000) in paragraph at lines 2201--2201
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2203--2203
+Underfull \hbox (badness 10000) in paragraph at lines 2201--2201
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2203--2204
+Underfull \hbox (badness 10000) in paragraph at lines 2201--2202
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2198--2205
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2196--2203
  [] [] [] [] [] 
  []
 
 [69]
-Underfull \hbox (badness 10000) in paragraph at lines 2213--2213
+Underfull \hbox (badness 10000) in paragraph at lines 2211--2211
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2213--2213
+Underfull \hbox (badness 10000) in paragraph at lines 2211--2211
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2213--2214
+Underfull \hbox (badness 10000) in paragraph at lines 2211--2212
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2213--2214
+Underfull \hbox (badness 10000) in paragraph at lines 2211--2212
 \TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2213--2214
+Underfull \hbox (badness 10000) in paragraph at lines 2211--2212
 \T5/cmr/m/n/10.95 search-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2214--2214
+Underfull \hbox (badness 10000) in paragraph at lines 2212--2212
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2214--2214
+Underfull \hbox (badness 10000) in paragraph at lines 2212--2212
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2214--2215
+Underfull \hbox (badness 10000) in paragraph at lines 2212--2213
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2209--2216
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2207--2214
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2224--2224
+Underfull \hbox (badness 10000) in paragraph at lines 2222--2222
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2224--2224
+Underfull \hbox (badness 10000) in paragraph at lines 2222--2222
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2224--2225
+Underfull \hbox (badness 10000) in paragraph at lines 2222--2223
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2224--2225
+Underfull \hbox (badness 10000) in paragraph at lines 2222--2223
 \TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2224--2225
+Underfull \hbox (badness 10000) in paragraph at lines 2222--2223
 \T5/cmr/m/n/10.95 search-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2225--2225
+Underfull \hbox (badness 10000) in paragraph at lines 2223--2223
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2225--2225
+Underfull \hbox (badness 10000) in paragraph at lines 2223--2223
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2225--2226
+Underfull \hbox (badness 10000) in paragraph at lines 2223--2224
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2220--2228
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2218--2226
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2240--2241
+Underfull \hbox (badness 10000) in paragraph at lines 2238--2239
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2232--2242
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2230--2240
  [] [] [] [] [] 
  []
 
 [70]
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2251--2251
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2249--2249
 []|\T5/cmr/m/n/10.95 NVARCHAR(300)| 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2252--2252
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2250--2250
 []|\T5/cmr/m/n/10.95 NVARCHAR(200)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2256--2257
+Underfull \hbox (badness 10000) in paragraph at lines 2254--2255
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2246--2258
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2244--2256
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (3.13245pt too wide) in paragraph at lines 2267--2267
+Overfull \hbox (3.13245pt too wide) in paragraph at lines 2265--2265
 []|\T5/cmr/m/n/10.95 NVARCHAR(300)| 
  []
 
 
-Overfull \hbox (13.1675pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (13.1675pt too wide) in paragraph at lines 2266--2266
 []|\T5/cmr/m/n/10.95 NVARCHAR(MAX)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2271--2272
+Underfull \hbox (badness 10000) in paragraph at lines 2269--2270
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2262--2273
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2260--2271
  [] [] [] [] [] 
  []
 
 ignored error: Infinite glue shrinkage found in box being split [71]
-Underfull \hbox (badness 10000) in paragraph at lines 2281--2281
+Underfull \hbox (badness 10000) in paragraph at lines 2279--2279
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2281--2281
+Underfull \hbox (badness 10000) in paragraph at lines 2279--2279
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2281--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2279--2280
 []|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2281--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2279--2280
 \T5/cmr/m/n/10.95 No-ti-fi-ca-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2280
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2282
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2280
 \T5/cmr/m/n/10.95 (Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2281
 []|\T5/cmr/m/n/10.95 Yes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2281
 \TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2281
 \T5/cmr/m/n/10.95 search-
  []
 
 
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2277--2284
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2275--2282
  [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2292--2293
+[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2293--2294
+[]|\T5/cmr/m/n/10.95 Yes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2293--2294
+\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2293--2294
+\T5/cmr/m/n/10.95 search-
  []
 
 
@@ -2695,27 +2720,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2294--2295
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2295--2296
-[]|\T5/cmr/m/n/10.95 Yes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2295--2296
-\TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2295--2296
-\T5/cmr/m/n/10.95 search-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2296--2297
-[]|\T5/cmr/m/n/10.95 Yes \TS1/cmr/m/n/10.95 ^^Y
- []
-
-
-Overfull \hbox (36.22336pt too wide) in alignment at lines 2288--2298
+Overfull \hbox (36.22336pt too wide) in alignment at lines 2286--2296
  [] [] [] [] [] 
  []
 
@@ -2724,72 +2729,72 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2299 \section{ Detail Design}
+l.2297 \section{ Detail Design}
                                
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2300 \subsection{Register}
+l.2298 \subsection{Register}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.1.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2301 \subsubsection{Class Diagram}
+l.2299 \subsubsection{Class Diagram}
                                     
-<dk.png, id=1099, 291.0875pt x 364.36125pt>
+<dk.png, id=1117, 291.0875pt x 364.36125pt>
 File: dk.png Graphic file (type png)
 <use dk.png>
-Package pdftex.def Info: dk.png  used on input line 2304.
+Package pdftex.def Info: dk.png  used on input line 2302.
 (pdftex.def)             Requested size: 452.9679pt x 567.03357pt.
  [72]
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.1.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2309 \subsubsection{Sequence Diagram}
+l.2307 \subsubsection{Sequence Diagram}
                                        
-<ttdk.png, id=1106, 319.69438pt x 425.08812pt>
+<ttdk.png, id=1124, 319.69438pt x 425.08812pt>
 File: ttdk.png Graphic file (type png)
 <use ttdk.png>
-Package pdftex.def Info: ttdk.png  used on input line 2312.
+Package pdftex.def Info: ttdk.png  used on input line 2310.
 (pdftex.def)             Requested size: 452.9679pt x 602.30615pt.
  [73 <./dk.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2319 \subsection{Login}
+l.2317 \subsection{Login}
                          
-<CDLogin.png, id=1113, 1020.81375pt x 857.2025pt>
+<CDLogin.png, id=1131, 1020.81375pt x 857.2025pt>
 File: CDLogin.png Graphic file (type png)
 <use CDLogin.png>
-Package pdftex.def Info: CDLogin.png  used on input line 2323.
+Package pdftex.def Info: CDLogin.png  used on input line 2321.
 (pdftex.def)             Requested size: 452.9679pt x 380.37483pt.
  [74 <./ttdk.png>]
-<ttdn.png, id=1119, 397.98688pt x 423.5825pt>
+<ttdn.png, id=1137, 397.98688pt x 423.5825pt>
 File: ttdn.png Graphic file (type png)
 <use ttdn.png>
-Package pdftex.def Info: ttdn.png  used on input line 2330.
+Package pdftex.def Info: ttdn.png  used on input line 2328.
 (pdftex.def)             Requested size: 452.9679pt x 482.11993pt.
  [75 <./CDLogin.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2338 \subsection{Search Research Papers}
+l.2336 \subsection{Search Research Papers}
                                           
 pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2339 \subsubsection{Class Diagram}
+l.2337 \subsubsection{Class Diagram}
                                     
-<CDSearchResearchPaper.png, id=1125, 789.95125pt x 1122.1925pt>
+<CDSearchResearchPaper.png, id=1143, 789.95125pt x 1122.1925pt>
 File: CDSearchResearchPaper.png Graphic file (type png)
 <use CDSearchResearchPaper.png>
-Package pdftex.def Info: CDSearchResearchPaper.png  used on input line 2342.
+Package pdftex.def Info: CDSearchResearchPaper.png  used on input line 2340.
 (pdftex.def)             Requested size: 452.9679pt x 643.47487pt.
  [76 <./ttdn.png>]
 Overfull \vbox (0.43549pt too high) has occurred while \output is active []
@@ -2800,222 +2805,222 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsubsection
 .3.3.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2347 \subsubsection{Sequence Diagram}
+l.2345 \subsubsection{Sequence Diagram}
                                        
-<tk.png, id=1136, 424.58624pt x 239.39438pt>
+<tk.png, id=1154, 424.58624pt x 239.39438pt>
 File: tk.png Graphic file (type png)
 <use tk.png>
-Package pdftex.def Info: tk.png  used on input line 2350.
+Package pdftex.def Info: tk.png  used on input line 2348.
 (pdftex.def)             Requested size: 452.9679pt x 255.40791pt.
-<chitiet.png, id=1137, 450.68375pt x 386.94562pt>
+<chitiet.png, id=1155, 450.68375pt x 386.94562pt>
 File: chitiet.png Graphic file (type png)
 <use chitiet.png>
-Package pdftex.def Info: chitiet.png  used on input line 2362.
+Package pdftex.def Info: chitiet.png  used on input line 2360.
 (pdftex.def)             Requested size: 271.7835pt x 233.35593pt.
-<ct.png, id=1138, 560.0925pt x 315.1775pt>
+<ct.png, id=1156, 560.0925pt x 315.1775pt>
 File: ct.png Graphic file (type png)
 <use ct.png>
-Package pdftex.def Info: ct.png  used on input line 2370.
+Package pdftex.def Info: ct.png  used on input line 2368.
 (pdftex.def)             Requested size: 452.9679pt x 254.90764pt.
  [78 <./tk.png> <./chitiet.png>]
-<CDBookmark.png, id=1145, 462.72874pt x 1056.94875pt>
+<CDBookmark.png, id=1163, 462.72874pt x 1056.94875pt>
 File: CDBookmark.png Graphic file (type png)
 <use CDBookmark.png>
-Package pdftex.def Info: CDBookmark.png  used on input line 2382.
+Package pdftex.def Info: CDBookmark.png  used on input line 2380.
 (pdftex.def)             Requested size: 271.7835pt x 620.80426pt.
 
 [79 <./ct.png>]
-<yttt.png, id=1152, 291.0875pt x 385.94188pt>
+<yttt.png, id=1170, 291.0875pt x 385.94188pt>
 File: yttt.png Graphic file (type png)
 <use yttt.png>
-Package pdftex.def Info: yttt.png  used on input line 2389.
+Package pdftex.def Info: yttt.png  used on input line 2387.
 (pdftex.def)             Requested size: 452.9679pt x 600.61821pt.
  [80 <./CDBookmark.png>]
-<CDTrackPublicationTrends.png, id=1158, 1365.1pt x 722.7pt>
+<CDTrackPublicationTrends.png, id=1176, 1365.1pt x 722.7pt>
 File: CDTrackPublicationTrends.png Graphic file (type png)
 <use CDTrackPublicationTrends.png>
-Package pdftex.def Info: CDTrackPublicationTrends.png  used on input line 2401.
+Package pdftex.def Info: CDTrackPublicationTrends.png  used on input line 2399.
 
 (pdftex.def)             Requested size: 452.9679pt x 239.804pt.
  [81 <./yttt.png>]
-<xh.png, id=1164, 351.3125pt x 247.42438pt>
+<xh.png, id=1182, 351.3125pt x 247.42438pt>
 File: xh.png Graphic file (type png)
 <use xh.png>
-Package pdftex.def Info: xh.png  used on input line 2409.
+Package pdftex.def Info: xh.png  used on input line 2407.
 (pdftex.def)             Requested size: 452.9679pt x 319.04285pt.
-<CDViewDashboard.png, id=1165, 573.14125pt x 1004.75375pt>
+<CDViewDashboard.png, id=1183, 573.14125pt x 1004.75375pt>
 File: CDViewDashboard.png Graphic file (type png)
 <use CDViewDashboard.png>
-Package pdftex.def Info: CDViewDashboard.png  used on input line 2419.
+Package pdftex.def Info: CDViewDashboard.png  used on input line 2417.
 (pdftex.def)             Requested size: 271.7835pt x 476.46577pt.
  [82 <./CDTrackPublicationTrends.png> <./xh.png>]
-<dkk.png, id=1172, 382.93062pt x 301.125pt>
+<dkk.png, id=1190, 382.93062pt x 301.125pt>
 File: dkk.png Graphic file (type png)
 <use dkk.png>
-Package pdftex.def Info: dkk.png  used on input line 2426.
+Package pdftex.def Info: dkk.png  used on input line 2424.
 (pdftex.def)             Requested size: 452.9679pt x 356.22038pt.
  [83 <./CDViewDashboard.png>]
-<CDReportGenerate.png, id=1178, 730.73pt x 806.01125pt>
+<CDReportGenerate.png, id=1196, 730.73pt x 806.01125pt>
 File: CDReportGenerate.png Graphic file (type png)
 <use CDReportGenerate.png>
-Package pdftex.def Info: CDReportGenerate.png  used on input line 2437.
+Package pdftex.def Info: CDReportGenerate.png  used on input line 2435.
 (pdftex.def)             Requested size: 452.9679pt x 499.63571pt.
  [84 <./dkk.png>]
-<bc.png, id=1184, 277.53688pt x 400.99812pt>
+<bc.png, id=1202, 277.53688pt x 400.99812pt>
 File: bc.png Graphic file (type png)
 <use bc.png>
-Package pdftex.def Info: bc.png  used on input line 2444.
+Package pdftex.def Info: bc.png  used on input line 2442.
 (pdftex.def)             Requested size: 436.4072pt x 630.45189pt.
 
 [85 <./CDReportGenerate.png>]
-<CDViewTrendingTopics.png, id=1191, 1365.1pt x 722.7pt>
+<CDViewTrendingTopics.png, id=1209, 1365.1pt x 722.7pt>
 File: CDViewTrendingTopics.png Graphic file (type png)
 <use CDViewTrendingTopics.png>
-Package pdftex.def Info: CDViewTrendingTopics.png  used on input line 2455.
+Package pdftex.def Info: CDViewTrendingTopics.png  used on input line 2453.
 (pdftex.def)             Requested size: 452.9679pt x 239.804pt.
  [86 <./bc.png>]
-<cdxh.png, id=1197, 405.515pt x 321.2pt>
+<cdxh.png, id=1215, 405.515pt x 321.2pt>
 File: cdxh.png Graphic file (type png)
 <use cdxh.png>
-Package pdftex.def Info: cdxh.png  used on input line 2463.
+Package pdftex.def Info: cdxh.png  used on input line 2461.
 (pdftex.def)             Requested size: 452.9679pt x 358.79564pt.
  [87 <./CDViewTrendingTopics.png>]
-<CDFollowTopics.png, id=1203, 1214.5375pt x 1104.125pt>
+<CDFollowTopics.png, id=1221, 1214.5375pt x 1104.125pt>
 File: CDFollowTopics.png Graphic file (type png)
 <use CDFollowTopics.png>
-Package pdftex.def Info: CDFollowTopics.png  used on input line 2474.
+Package pdftex.def Info: CDFollowTopics.png  used on input line 2472.
 (pdftex.def)             Requested size: 452.9679pt x 411.78828pt.
 [88 <./cdxh.png>]
-<td.png, id=1209, 278.54062pt x 320.69812pt>
+<td.png, id=1227, 278.54062pt x 320.69812pt>
 File: td.png Graphic file (type png)
 <use td.png>
-Package pdftex.def Info: td.png  used on input line 2481.
+Package pdftex.def Info: td.png  used on input line 2479.
 (pdftex.def)             Requested size: 452.9679pt x 521.5393pt.
  [89 <./CDFollowTopics.png>]
-<tb.png, id=1215, 382.42876pt x 370.88562pt>
+<tb.png, id=1233, 382.42876pt x 370.88562pt>
 File: tb.png Graphic file (type png)
 <use tb.png>
-Package pdftex.def Info: tb.png  used on input line 2494.
+Package pdftex.def Info: tb.png  used on input line 2492.
 (pdftex.def)             Requested size: 452.9679pt x 439.31639pt.
  [90 <./td.png>]
-<CDManageSystem.png, id=1221, 2338.7375pt x 918.43124pt>
+<CDManageSystem.png, id=1239, 2338.7375pt x 918.43124pt>
 File: CDManageSystem.png Graphic file (type png)
 <use CDManageSystem.png>
-Package pdftex.def Info: CDManageSystem.png  used on input line 2505.
+Package pdftex.def Info: CDManageSystem.png  used on input line 2503.
 (pdftex.def)             Requested size: 407.66833pt x 160.08322pt.
  [91 <./tb.png>]
-<ht.png, id=1228, 451.6875pt x 332.74312pt>
+<ht.png, id=1246, 451.6875pt x 332.74312pt>
 File: ht.png Graphic file (type png)
 <use ht.png>
-Package pdftex.def Info: ht.png  used on input line 2512.
+Package pdftex.def Info: ht.png  used on input line 2510.
 (pdftex.def)             Requested size: 407.66833pt x 300.33423pt.
-<CDManageUser.png, id=1229, 667.49374pt x 955.57pt>
+<CDManageUser.png, id=1247, 667.49374pt x 955.57pt>
 File: CDManageUser.png Graphic file (type png)
 <use CDManageUser.png>
-Package pdftex.def Info: CDManageUser.png  used on input line 2524.
+Package pdftex.def Info: CDManageUser.png  used on input line 2522.
 (pdftex.def)             Requested size: 362.37569pt x 518.78505pt.
 
 [92 <./CDManageSystem.png> <./ht.png>]
-<nd.png, id=1236, 316.18124pt x 391.96437pt>
+<nd.png, id=1254, 316.18124pt x 391.96437pt>
 File: nd.png Graphic file (type png)
 <use nd.png>
-Package pdftex.def Info: nd.png  used on input line 2532.
+Package pdftex.def Info: nd.png  used on input line 2530.
 (pdftex.def)             Requested size: 317.07614pt x 393.09978pt.
  [93 <./CDManageUser.png>]
-<CDManageAPI.png, id=1242, 761.84625pt x 1037.8775pt>
+<CDManageAPI.png, id=1260, 761.84625pt x 1037.8775pt>
 File: CDManageAPI.png Graphic file (type png)
 <use CDManageAPI.png>
-Package pdftex.def Info: CDManageAPI.png  used on input line 2543.
+Package pdftex.def Info: CDManageAPI.png  used on input line 2541.
 (pdftex.def)             Requested size: 362.37569pt x 493.6621pt.
  [94 <./nd.png>]
-<apii.png, id=1248, 330.23375pt x 382.42876pt>
+<apii.png, id=1266, 330.23375pt x 382.42876pt>
 File: apii.png Graphic file (type png)
 <use apii.png>
-Package pdftex.def Info: apii.png  used on input line 2550.
+Package pdftex.def Info: apii.png  used on input line 2548.
 (pdftex.def)             Requested size: 452.9679pt x 524.58362pt.
  [95 <./CDManageAPI.png>]
-<CDSyncData.png, id=1254, 1700.3525pt x 994.71625pt>
+<CDSyncData.png, id=1272, 1700.3525pt x 994.71625pt>
 File: CDSyncData.png Graphic file (type png)
 <use CDSyncData.png>
-Package pdftex.def Info: CDSyncData.png  used on input line 2562.
+Package pdftex.def Info: CDSyncData.png  used on input line 2560.
 (pdftex.def)             Requested size: 362.37569pt x 211.97774pt.
  [96 <./apii.png>]
-<db.png, id=1260, 398.99063pt x 280.54813pt>
+<db.png, id=1278, 398.99063pt x 280.54813pt>
 File: db.png Graphic file (type png)
 <use db.png>
-Package pdftex.def Info: db.png  used on input line 2569.
+Package pdftex.def Info: db.png  used on input line 2567.
 (pdftex.def)             Requested size: 452.9679pt x 318.51823pt.
  [97 <./CDSyncData.png> <./db.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 2575.
+(hyperref)                removing `\<let>-command' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 2575.
+(hyperref)                removing `\\' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 2575.
+(hyperref)                removing `\@centercr' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 2575.
+(hyperref)                removing `\rightskip' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 2575.
+(hyperref)                removing `\@flushglue' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 2575.
+(hyperref)                removing `\leftskip' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 2575.
+(hyperref)                removing `\@flushglue' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 2575.
+(hyperref)                removing `\finalhyphendemerits' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 2575.
+(hyperref)                removing `\z@' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 2575.
+(hyperref)                removing `\parindent' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 2575.
+(hyperref)                removing `\z@' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 2575.
+(hyperref)                removing `\parfillskip' on input line 2573.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 2575.
+(hyperref)                removing `\z@skip' on input line 2573.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2583 \section{Testing Scope}
+l.2581 \section{Testing Scope}
                               
 pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2610 \section{Test Strategy}
+l.2608 \section{Test Strategy}
                               
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2611 \subsection{Testing Types}
+l.2609 \subsection{Testing Types}
                                   [98
 
 ]
@@ -3023,33 +3028,39 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2621 \subsection{Testing Levels}
+l.2619 \subsection{Testing Levels}
                                   
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2635 \subsection{Supporting Tools}
+l.2633 \subsection{Supporting Tools}
                                     
 pdfTeX warning (ext4): destination with the same identifier (name{section.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2653 \section{Test Plan}
+l.2651 \section{Test Plan}
                            [99]
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2668 \subsection{Entry Criteria}
+l.2666 \subsection{Entry Criteria}
                                   
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.3.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2675 \subsection{Exit Criteria}
-                                  [100] [101]
-Overfull \hbox (7.27864pt too wide) in paragraph at lines 2865--2874
+l.2673 \subsection{Exit Criteria}
+                                 
+pdfTeX warning (ext4): destination with the same identifier (name{section.4}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2680 \section{Test Case}
+                           [100] [101]
+Overfull \hbox (7.27864pt too wide) in paragraph at lines 2863--2872
 []|[]| 
  []
 
@@ -3068,78 +3079,78 @@ ignored error: Infinite glue shrinkage found in box being split [124]
 ignored error: Infinite glue shrinkage found in box being split [125] [126]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 4621.
+(hyperref)                removing `\<let>-command' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 4621.
+(hyperref)                removing `\\' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 4621.
+(hyperref)                removing `\@centercr' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 4621.
+(hyperref)                removing `\rightskip' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 4621.
+(hyperref)                removing `\@flushglue' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 4621.
+(hyperref)                removing `\leftskip' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 4621.
+(hyperref)                removing `\@flushglue' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 4621.
+(hyperref)                removing `\finalhyphendemerits' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 4621.
+(hyperref)                removing `\z@' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 4621.
+(hyperref)                removing `\parindent' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 4621.
+(hyperref)                removing `\z@' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parfillskip' on input line 4621.
+(hyperref)                removing `\parfillskip' on input line 4619.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 4621.
+(hyperref)                removing `\z@skip' on input line 4619.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{section.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4624 \section{ Deliverable Package}
+l.4622 \section{ Deliverable Package}
                                      
 
-Package array Warning: Column L is already defined on input line 4634.
+Package array Warning: Column L is already defined on input line 4632.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4688--4688
+Underfull \hbox (badness 10000) in paragraph at lines 4686--4686
 []|\T5/cmr/m/n/12 A doc-u-ment that con-sol-i-dates the project re-port
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4688--4688
+Underfull \hbox (badness 10000) in paragraph at lines 4686--4686
 \T5/cmr/m/n/12 (re-quire-ment spec-i-fi-ca-tion, anal-y-sis and de-sign, use
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4688--4688
+Underfull \hbox (badness 10000) in paragraph at lines 4686--4686
 \T5/cmr/m/n/12 case/class/sequence/ERD di-a-grams, etc.), au-thored in
  []
 
@@ -3148,15 +3159,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4693 \section{  Installation Guide}
+l.4691 \section{  Installation Guide}
                                      
 pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4695 \subsection{Back end}
+l.4693 \subsection{Back end}
                             
-Underfull \hbox (badness 4072) in paragraph at lines 4736--4736
+Underfull \hbox (badness 4072) in paragraph at lines 4734--4734
 []|\T5/cmr/m/n/12 Navigate to the server's web root folder (e.g. \T5/cmtt/m/n/1
 2 C:\xampp\htdocs \T5/cmr/m/n/12 or
  []
@@ -3168,13 +3179,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.2.
 2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4741 \subsection{Frontend}
+l.4739 \subsection{Frontend}
                             
 pdfTeX warning (ext4): destination with the same identifier (name{section.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.4781 \section{  User manual}
+l.4779 \section{  User manual}
                                [128] [129] [130] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -3185,18 +3196,18 @@ L3 programming layer <2025-12-24>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0374D1725CE853795679583EC8F545AF;25837.
+(rerunfilecheck)             Checksum: F52F3AAB29B1B0A5E8BAF6591550A9CD;26871.
  )
 (\end occurred inside a group at level 2)
 
-### simple group (level 2) entered at line 912 ({)
-### simple group (level 1) entered at line 504 ({)
+### simple group (level 2) entered at line 910 ({)
+### simple group (level 1) entered at line 503 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 13259 strings out of 467871
- 207731 string characters out of 5428406
- 659648 words of memory out of 5000000
- 41669 multiletter control sequences out of 15000+600000
+ 13263 strings out of 467871
+ 207799 string characters out of 5428406
+ 659651 words of memory out of 5000000
+ 41673 multiletter control sequences out of 15000+600000
  643264 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,18n,83p,470b,915s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3209,9 +3220,9 @@ tex/vnr/vnbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C
 /fonts/type1/vntex/vnr/vnr12.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr
 /vnti10.pfb><C:/Program Files/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Progr
 am Files/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (130 pages, 6384770 bytes).
+Output written on main.pdf (130 pages, 6386552 bytes).
 PDF statistics:
- 1556 PDF objects out of 1728 (max. 8388607)
+ 1574 PDF objects out of 1728 (max. 8388607)
  311 named destinations out of 1000 (max. 500000)
- 1819 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1867 words of extra memory for PDF output out of 10000 (max. 10000000)
 
