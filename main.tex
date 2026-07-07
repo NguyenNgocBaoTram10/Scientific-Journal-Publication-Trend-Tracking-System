@@ -2823,7 +2823,6 @@ The following features are excluded from the testing scope:
 
 \end{table}
 
-
 \begin{table}[H]
 	\centering
 	\small
@@ -2841,51 +2840,61 @@ The following features are excluded from the testing scope:
 		\hline
 		
 		Test Case Name &
-		Invalid Email Format \\
+	 	Invalid Registration Information\\
 		\hline
 		
 		Objective &
-		Verify email format validation.
-		\\
+		Verify that the system validates registration fields and displays appropriate error messages when invalid information is entered.\\
 		\hline
 		
 		Preconditions &
-		None
-		\\
+		None \\
 		\hline
 		
 		Test Data &
-		Email: group6123
+		\begin{tabular}[t]{@{}l@{}}
+			Full Name: Group6\\
+			Username: Gr6\\
+			Email: group6123\\
+			Password: 123456
+		\end{tabular}
 		\\
 		\hline
 		
 		Test Steps &
 		\begin{tabular}[t]{@{}l@{}}
 			1. Open Registration page.\\
-			2. Enter an invalid email address.\\
-			3. Click Register.
+			2. Enter a Full Name containing only one word or numbers.6\\
+			3. Enter a username with fewer than 4 characters.\\
+			4. Enter an invalid email format.\\
+			5. Enter a password that does not meet the requirements.\\
+			6. Click Register.
 		\end{tabular}
 		\\
 		\hline
 		
 		Expected Result &
-		System displays "Invalid email address".
+		The system rejects the registration request and displays the corresponding validation messages:
+		\begin{itemize}
+		\item Please enter your full name (at least 2 words and letters only).
+		\item Username must be 4--20 characters long and contain only letters, numbers, or underscores.
+		\item Invalid email address.
+		\item Password must be at least 8 characters long and contain both letters and numbers.
+		\end{itemize}
 		\\
 		\hline
 		
 		Actual Result &
-		Validation message displayed correctly.
+		The correct validation messages are displayed.
 		\\
 		\hline
 		
 		Status &
 		Pass \\
 		\hline
-		
-	\end{tabular}
-
+	
+	\end{tabular}	
 \end{table}
-
 
 \begin{table}[H]
 	\centering
@@ -2901,69 +2910,6 @@ The following features are excluded from the testing scope:
 		
 		Test Case ID &
 		TC\_REG\_04 \\
-		\hline
-		
-		Test Case Name &
-		Weak Password \\
-		\hline
-		
-		Objective &
-		Verify password strength validation.
-		\\
-		\hline
-		
-		Preconditions &
-		None
-		\\
-		\hline
-		
-		Test Data &
-		Password: 123456
-		\\
-		\hline
-		
-		Test Steps &
-		\begin{tabular}[t]{@{}l@{}}
-			1. Open Registration page.\\
-			2. Enter a weak password.\\
-			3. Click Register.
-		\end{tabular}
-		\\
-		\hline
-		
-		Expected Result &
-		System displays a password strength validation message.
-		\\
-		\hline
-		
-		Actual Result &
-		Validation message displayed correctly.
-		\\
-		\hline
-		
-		Status &
-		Pass \\
-		\hline
-		
-	\end{tabular}
-
-\end{table}
-
-
-\begin{table}[H]
-	\centering
-	\small
-	\begin{tabular}{|p{4cm}|p{10cm}|}
-		\hline
-		\textbf{Field} & \textbf{Description} \\
-		\hline
-		
-		Module &
-		User Registration \\
-		\hline
-		
-		Test Case ID &
-		TC\_REG\_05 \\
 		\hline
 		
 		Test Case Name &
