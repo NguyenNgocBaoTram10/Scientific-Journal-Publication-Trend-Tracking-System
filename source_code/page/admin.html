@@ -45,6 +45,7 @@
 <body class="bg-slate-100 min-h-screen">
   <header class="bg-white border-b px-8 py-4 flex justify-between items-center">
     <h1 class="text-2xl font-bold">ScholarTrend Admin</h1>
+    <button id="logoutBtn" class="btn-admin btn-dark-admin">Đăng xuất</button>
   </header>
 
   <main class="p-8 space-y-8">
@@ -950,6 +951,23 @@ async function deleteNotification(notificationId) {
 }
 
 addNotificationBtn.addEventListener("click", saveNotification);
+
+const logoutBtn = document.getElementById("logoutBtn");
+logoutBtn.addEventListener("click", async () => {
+  if (!confirm("Bạn có chắc muốn đăng xuất khỏi trang admin?")) return;
+
+  try {
+    await fetch("../api/dangxuat.php", {
+      method: "POST",
+      credentials: "include"
+    });
+  } catch (error) {
+    console.error("Logout error:", error);
+  }
+
+  window.location.href = "dangnhap.html";
+});
+
 loadUsers();
 loadTopics();
 loadSources();
@@ -961,4 +979,5 @@ loadNotifications();
 </script>
 </body>
 </html>
+
 
